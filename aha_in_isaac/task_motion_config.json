@@ -1,0 +1,40 @@
+{
+  "_README": [
+    "Per-task arm-motion configuration for run_scene.py.",
+    "WHERE the arm goes comes entirely from each task's scene-context .md (the",
+    "waypoints); the robot simply follows those waypoint positions in order.",
+    "This file ONLY sets how many sim steps the arm spends reaching each named",
+    "waypoint - more steps = slower, smoother motion. A waypoint not listed here",
+    "uses a built-in default. Tasks fall back to '_default' for anything unset.",
+    "  waypoint_steps : { waypoint-name: sim steps to spend reaching it }",
+    "  gripper_closed : per-finger close target (m). Lower = closes more (smaller",
+    "                   objects); raise if it crushes/shoves. Fully open is fixed",
+    "                   at 0.04 (the Franka finger limit), so only this is tunable."
+  ],
+  "_default": {
+    "waypoint_steps": {},
+    "gripper_closed": 0.02
+  },
+  "wipe_desk": {
+    "waypoint_steps": {
+      "waypoint0": 250,
+      "waypoint1": 220,
+      "waypoint2": 260,
+      "waypoint3": 750,
+      "waypoint4": 200
+    }
+  },
+  "basketball_in_hoop": {
+    "waypoint_steps": {
+      "waypoint0": 200,
+      "waypoint1": 180,
+      "waypoint2": 320,
+      "waypoint3": 260
+    },
+    "gripper_closed": 0.01
+  },
+  "beat_the_buzz": {
+    "waypoint_steps": {},
+    "gripper_closed": 0.0
+  }
+}

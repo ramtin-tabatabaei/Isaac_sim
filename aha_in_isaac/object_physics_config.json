@@ -1,0 +1,4768 @@
+{
+  "_README": [
+    "Per-task, per-object physics configuration for add_physics_to_usds.py.",
+    "Run the baker with --task <name> and it bakes every USD in --input-dir",
+    "according to the object entry whose key matches the file name's suffix",
+    "(e.g. key 'ball' matches basketball_in_hoop_ball.usd, 'ball_stop' matches",
+    "..._ball_stop.usd; the longest matching key wins). Each object entry is",
+    "merged over '_defaults', so you only list what differs.",
+    "",
+    "Fields:",
+    "  type     : rigid      - movable rigid body the gripper can grasp",
+    "             kinematic  - static collider that never moves (tables, hoops)",
+    "             visual     - copied through with NO physics (decoration skins)",
+    "             deformable - FEM soft body (EXPERIMENTAL, untested)",
+    "  density  : kg/m^3; body weight = density * collider volume (used if mass null)",
+    "  mass     : explicit mass (kg); set to override density. null = use density",
+    "  static_friction, dynamic_friction, restitution : contact material",
+    "  collider : dynamic collider shape (convexHull / convexDecomposition /",
+    "             boundingCube / boundingSphere / sdf). Kinematic always uses the",
+    "             exact mesh. Use 'sdf' for an accurate CONCAVE dynamic collider that",
+    "             keeps holes (e.g. a ring threading onto a rod); convex hulls fill",
+    "             the hole and eject. 'sdf_resolution' (default 256) tunes its detail.",
+    "  collision : false authors NO collider (default true) so the robot passes",
+    "             straight through the object. Use it to clear a base/holder out",
+    "             of the arm's path while keeping the graspable object collidable.",
+    "  compliant_stiffness, compliant_damping : >0 gives soft/springy contact",
+    "  youngs_modulus, poissons_ratio : deformable stiffness (only type=deformable)",
+    "  uv       : generate texture coords on a mesh that lacks them so an image",
+    "             texture can map. 'auto' detects the shape (flat->planar,",
+    "             ball->spherical, else box); or force 'spherical'/'box'/'planar'/'none'.",
+    "  disable_gravity : true pins a pre-positioned rigid body in place (no fall/eject",
+    "                    before it is grasped). Only applies to rigid (non-kinematic).",
+    "  ccd      : true enables continuous collision detection so a fast-falling thin",
+    "             body cannot tunnel through a thin collider (e.g. the table top) and",
+    "             explode out. Needs scene CCD on (run_scene enables it). Rigid only."
+  ],
+  "_defaults": {
+    "type": "rigid",
+    "density": 50.0,
+    "mass": null,
+    "static_friction": 1.2,
+    "dynamic_friction": 1.0,
+    "restitution": 0.0,
+    "collider": "convexHull",
+    "collision": true,
+    "ccd": false,
+    "compliant_stiffness": 0.0,
+    "compliant_damping": 0.0,
+    "youngs_modulus": 50000.0,
+    "poissons_ratio": 0.4,
+    "uv": "none"
+  },
+  "basketball_in_hoop": {
+    "ball": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "ball_stop": {
+      "type": "kinematic"
+    },
+    "basket_ball_hoop_respondable": {
+      "type": "kinematic"
+    },
+    "basket_boundary_root": {
+      "type": "kinematic"
+    },
+    "basket_ball_hoop_visual": {
+      "type": "visual"
+    }
+  },
+  "wipe_desk": {
+    "sponge": {
+      "type": "rigid",
+      "density": 50.0
+    },
+    "sponge_visual": {
+      "type": "visual"
+    },
+    "dirt_boundary": {
+      "type": "kinematic"
+    }
+  },
+  "beat_the_buzz": {
+    "Cuboid": {
+      "type": "kinematic",
+      "collision": true,
+      "uv": "auto"
+    },
+    "wand": {
+      "type": "rigid",
+      "mass": 0.2,
+      "collider": "sdf",
+      "sdf_resolution": 320,
+      "static_friction": 1.6,
+      "dynamic_friction": 1.3,
+      "disable_gravity": true,
+      "uv": "auto"
+    },
+    "wand_visual": {
+      "type": "visual"
+    },
+    "wand_visual_sub": {
+      "type": "visual"
+    }
+  },
+  "block_pyramid": {
+    "block_pyramid_block0": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "block_pyramid_block1": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "block_pyramid_block2": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "block_pyramid_block3": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "block_pyramid_block4": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "block_pyramid_block5": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "block_pyramid_distractor_block0": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "block_pyramid_distractor_block1": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "block_pyramid_distractor_block2": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "block_pyramid_distractor_block3": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "block_pyramid_distractor_block4": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "block_pyramid_distractor_block5": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "block_pyramid_boundary0": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "block_pyramid_boundary1": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "block_pyramid_boundary2": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "block_pyramid_boundary3": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "block_pyramid_plane": {
+      "type": "kinematic",
+      "uv": "auto"
+    }
+  },
+  "change_channel": {
+    "tv_frame": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "tv_remote": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "spawn_boundary": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "target_button_topPlate0": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "target_button_topPlate1": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "target_button_topPlate2": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "target_button_wrap0": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "power_visual": {
+      "type": "visual"
+    },
+    "target_button_wrap1": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "plus_visual": {
+      "type": "visual"
+    },
+    "target_button_wrap2": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "minus_visual": {
+      "type": "visual"
+    }
+  },
+  "change_clock": {
+    "clock": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "clock_visual": {
+      "type": "visual"
+    },
+    "clock_needle_hour": {
+      "type": "rigid",
+      "density": 1200.0,
+      "uv": "auto"
+    },
+    "clock_stand": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "clock_needle_crank": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "clock_needle_minute": {
+      "type": "rigid",
+      "density": 1200.0,
+      "uv": "auto"
+    },
+    "clock_needle_crank_visual": {
+      "type": "visual"
+    }
+  },
+  "close_box": {
+    "box_base": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "box_lid": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    }
+  },
+  "close_door": {
+    "boundary_root": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "door_frame": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "door_main": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "door_main_visible": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "open_door_handle": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "door_handle_visible": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    }
+  },
+  "close_drawer": {
+    "drawer_frame": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "drawer_legs": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "drawer_bottom": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "drawer_middle": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "drawer_top": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    }
+  },
+  "close_fridge": {
+    "fridge_root": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "fridge_base": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "fridge_base_visual": {
+      "type": "visual"
+    },
+    "shelf0": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "door_bottom": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "door_top": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "shelf1": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "shelf2": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "door_bottom_visual": {
+      "type": "visual"
+    },
+    "door_top_visual": {
+      "type": "visual"
+    }
+  },
+  "close_grill": {
+    "grill_root": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "grill": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "grill_visual": {
+      "type": "visual"
+    },
+    "Shape1": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "lid": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "lid_visual": {
+      "type": "visual"
+    },
+    "handle_visual": {
+      "type": "visual"
+    }
+  },
+  "close_jar": {
+    "jar0": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "jar1": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "spawn_boundary": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "jar_lid0": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    }
+  },
+  "close_laptop_lid": {
+    "base": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "laptop_holder": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "base_visual": {
+      "type": "visual"
+    },
+    "lid": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "lid_visual": {
+      "type": "visual"
+    }
+  },
+  "close_microwave": {
+    "boundary_root": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "microwave_frame_resp": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "microwave_frame_vis": {
+      "type": "visual"
+    },
+    "microwave_door_resp": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "microwave_door": {
+      "type": "kinematic",
+      "uv": "auto"
+    }
+  },
+  "cut_vegetables": {
+    "cut_vegetables_knife1": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "knife_block_resp": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "Carrot_base": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "Banana": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "cut_vegetables_knife_visual": {
+      "type": "visual"
+    },
+    "knife_block_vis": {
+      "type": "visual"
+    },
+    "objknifes__001_sub4": {
+      "type": "rigid",
+      "density": 1200.0,
+      "uv": "auto"
+    },
+    "Carrot_leaves": {
+      "type": "rigid",
+      "density": 150.0,
+      "uv": "auto"
+    },
+    "Banana0": {
+      "type": "rigid",
+      "density": 150.0,
+      "uv": "auto"
+    }
+  },
+  "empty_container": {
+    "large_container": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "small_container0": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "small_container1": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "spawn_boundary": {
+      "type": "kinematic",
+      "uv": "auto"
+    }
+  },
+  "empty_dishwasher": {
+    "boundary_root": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "dishwasher": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "dishwasher_base_visual": {
+      "type": "visual"
+    },
+    "dishwasher_door": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "dishwasher_tray": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "dishwasher_door_visual": {
+      "type": "visual"
+    },
+    "dishwasher_tray_visual": {
+      "type": "visual"
+    },
+    "dishwasher_plate": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "dishwasher_plate_visual": {
+      "type": "visual"
+    }
+  },
+  "get_ice_from_fridge": {
+    "fridge_root": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "fridge_base": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "cup": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "fridge_visual": {
+      "type": "visual"
+    },
+    "Plane": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "cup_visual": {
+      "type": "visual"
+    },
+    "tongue": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "tongue_visual": {
+      "type": "visual"
+    }
+  },
+  "hang_frame_on_hanger": {
+    "frame": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "task_wall": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "frame_visual": {
+      "type": "visual"
+    },
+    "frame_detector": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "Cuboid2": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "picture": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "hanger": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    }
+  },
+  "hit_ball_with_queue": {
+    "queue": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "hit_ball_with_queue_stopper1": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "hit_ball_with_queue_stopper2": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "queue_visual": {
+      "type": "visual"
+    },
+    "ball": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "hit_ball_with_queue_pocket1": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "hit_ball_with_queue_pocket0": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "hit_ball_with_queue_pocket": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    }
+  },
+  "hockey": {
+    "hockey_goal": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "hockey_goal_visual": {
+      "type": "visual"
+    },
+    "hockey_stick": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "hockey_ball": {
+      "type": "rigid",
+      "density": 1200.0,
+      "uv": "auto"
+    }
+  },
+  "insert_onto_square_peg": {
+    "square_base": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "pillar0": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "pillar1": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "pillar2": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "boundary0": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "boundary1": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "boundary3": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "boundary2": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "square_ring": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    }
+  },
+  "insert_usb_in_computer": {
+    "Cuboid": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "computer": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "usb": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "computer_visual": {
+      "type": "visual"
+    },
+    "usb_visual0": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "tip": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Plane": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Plane0": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Plane1": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Plane2": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "usb_visual1": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    }
+  },
+  "lamp_off": {
+    "lamp_base": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "push_button_target": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "lamp_screw": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "lampshade": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "cable": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "bulb_phys": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "target_button_topPlate": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "light_bulb": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "target_button_wrap": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "bulb": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    }
+  },
+  "lamp_on": {
+    "lamp_base": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "lamp_screw": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "lampshade": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "push_button_target": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "cable": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "bulb_phys": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "light_bulb": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "target_button_topPlate": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "bulb": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "target_button_wrap": {
+      "type": "kinematic",
+      "uv": "auto"
+    }
+  },
+  "light_bulb_in": {
+    "lamp_base": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "bulb_holder1": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "bulb_holder0": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "spawn_boundary": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "lamp_screw": {
+      "type": "rigid",
+      "density": 1200.0,
+      "uv": "auto"
+    },
+    "bulb_phys1": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "bulb_phys0": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "light_bulb1": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "light_bulb0": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "bulb1": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "bulb0": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    }
+  },
+  "light_bulb_out": {
+    "lamp_base": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "bulb_holder1": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "bulb_holder0": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "spawn_boundary": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "lamp_screw": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "bulb_phys": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "light_bulb": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "bulb": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    }
+  },
+  "meat_off_grill": {
+    "grill": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "chicken": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "grill_visual": {
+      "type": "visual"
+    },
+    "steak": {
+      "type": "rigid",
+      "density": 150.0,
+      "uv": "auto"
+    },
+    "chicken_visual": {
+      "type": "visual"
+    },
+    "steak_visual": {
+      "type": "visual"
+    }
+  },
+  "meat_on_grill": {
+    "grill": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "chicken": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "grill_visual": {
+      "type": "visual"
+    },
+    "steak": {
+      "type": "rigid",
+      "density": 150.0,
+      "uv": "auto"
+    },
+    "chicken_visual": {
+      "type": "visual"
+    },
+    "steak_visual": {
+      "type": "visual"
+    }
+  },
+  "move_hanger": {
+    "clothes_rack": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "clothes_rack0": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "clothes_rack_sub1": {
+      "type": "rigid",
+      "density": 60.0,
+      "uv": "auto"
+    },
+    "clothes_rack_sub0": {
+      "type": "rigid",
+      "density": 60.0,
+      "uv": "auto"
+    },
+    "clothes_rack_sub2": {
+      "type": "rigid",
+      "density": 60.0,
+      "uv": "auto"
+    },
+    "clothes_rack_sub3": {
+      "type": "rigid",
+      "density": 60.0,
+      "uv": "auto"
+    },
+    "clothes_hanger0": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "clothes_hanger_visual0": {
+      "type": "rigid",
+      "density": 60.0,
+      "uv": "auto"
+    }
+  },
+  "open_box": {
+    "box_base": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "box_lid": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    }
+  },
+  "open_door": {
+    "boundary_root": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "door_frame": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "door_main": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "door_main_visible": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "open_door_handle": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "door_handle_visible": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    }
+  },
+  "open_drawer": {
+    "drawer_frame": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "drawer_legs": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "drawer_bottom": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "drawer_middle": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "drawer_top": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    }
+  },
+  "open_fridge": {
+    "fridge_root": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "fridge_base": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "fridge_base_visual": {
+      "type": "visual"
+    },
+    "shelf0": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "door_bottom": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "door_top": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "shelf1": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "shelf2": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "door_bottom_visual": {
+      "type": "visual"
+    },
+    "door_top_visual": {
+      "type": "visual"
+    }
+  },
+  "open_grill": {
+    "grill_root": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "grill": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "grill_visual": {
+      "type": "visual"
+    },
+    "Shape1": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "lid": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "lid_visual": {
+      "type": "visual"
+    },
+    "handle_visual": {
+      "type": "visual"
+    }
+  },
+  "open_jar": {
+    "jar0": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "jar1": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "spawn_boundary": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "jar_lid0": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "jar_lid1": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "target": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    }
+  },
+  "open_microwave": {
+    "boundary_root": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "microwave_frame_resp": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "microwave_frame_vis": {
+      "type": "visual"
+    },
+    "microwave_door_resp": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "microwave_door": {
+      "type": "kinematic",
+      "uv": "auto"
+    }
+  },
+  "open_oven": {
+    "oven_boundary_root": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "oven_frame0": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "oven_base": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "oven_knob_8": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_stove_top0": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_gas_source0": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_knob_10": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_knob_11": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_knob_12": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_knob_13": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_knob_14": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_door": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "oven_knob": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_tray": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_door_visual": {
+      "type": "visual"
+    },
+    "oven_knob_visual": {
+      "type": "visual"
+    },
+    "oven_tray_visual": {
+      "type": "visual"
+    }
+  },
+  "open_window": {
+    "boundary_root": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "window_main": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "right_frame": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "window_wall0": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "window_main_visual": {
+      "type": "visual"
+    },
+    "right_frame_visual": {
+      "type": "visual"
+    },
+    "left_frame": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "window_left": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "left_frame_visual": {
+      "type": "visual"
+    },
+    "left_handle": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "left_handle_visual": {
+      "type": "visual"
+    }
+  },
+  "open_wine_bottle": {
+    "bottle": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "bottle_visual": {
+      "type": "visual"
+    },
+    "label": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "dummy": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "cap": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "cap_visual": {
+      "type": "visual"
+    }
+  },
+  "phone_on_base": {
+    "phone_case": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "phone_case_visual": {
+      "type": "visual"
+    },
+    "phone": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "phone_visual": {
+      "type": "visual"
+    }
+  },
+  "pick_and_lift": {
+    "pick_and_lift_target": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "pick_and_lift_boundary": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "success_visual": {
+      "type": "visual"
+    },
+    "stack_blocks_distractor1": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "stack_blocks_distractor0": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    }
+  },
+  "pick_up_cup": {
+    "cup2": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "boundary": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "cup1": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "cup2_visual": {
+      "type": "visual"
+    },
+    "cup1_visual": {
+      "type": "visual"
+    }
+  },
+  "place_cups": {
+    "place_cups_holder_base": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "mug_boundary": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "place_cups_holder_spoke3": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "place_cups_holder_spoke1": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "place_cups_holder_spoke2": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "mug3": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "place_cups_holder_spoke0": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "mug0": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "mug1": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "mug2": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "mug_visual3": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "mug_visual0": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "mug_visual1": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "mug_visual2": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    }
+  },
+  "place_hanger_on_rack": {
+    "hanger_holder": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "clothes_rack": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "hanger_holder0": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "hanger_holder_visual": {
+      "type": "visual"
+    },
+    "clothes_hanger": {
+      "type": "rigid",
+      "density": 60.0,
+      "uv": "auto"
+    },
+    "clothes_rack_sub2": {
+      "type": "rigid",
+      "density": 60.0,
+      "uv": "auto"
+    },
+    "clothes_rack_sub3": {
+      "type": "rigid",
+      "density": 60.0,
+      "uv": "auto"
+    },
+    "clothes_hanger_visual": {
+      "type": "visual"
+    }
+  },
+  "place_shape_in_shape_sorter": {
+    "shape_sorter": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "triangular_prism": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "star": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "moon": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "cube": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "cylinder": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "boundary": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "shape_sorter_visual": {
+      "type": "visual"
+    },
+    "shape_sorter_top": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "star_visual": {
+      "type": "visual"
+    },
+    "moon_visual": {
+      "type": "visual"
+    }
+  },
+  "place_wine_at_rack_location": {
+    "wine_bottle": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "rack_bottom": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "rack_top": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "wine_bottle_visual": {
+      "type": "visual"
+    },
+    "rack_bottom_visual": {
+      "type": "visual"
+    },
+    "rack_top_visual": {
+      "type": "visual"
+    }
+  },
+  "play_jenga": {
+    "Cuboid": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Cuboid0": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Cuboid1": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Cuboid2": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Cuboid3": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Cuboid4": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Cuboid5": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Cuboid6": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Cuboid7": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Cuboid8": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Cuboid9": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Cuboid10": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Cuboid11": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Cuboid12": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "target_cuboid": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    }
+  },
+  "plug_charger_in_power_supply": {
+    "plug": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "task_wall": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "charger_boundary": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "hole0": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "hole1": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "charger": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "hole_visual0": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "hole_visual1": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "charger_visual": {
+      "type": "visual"
+    },
+    "detector1": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "detector2": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    }
+  },
+  "pour_from_cup_to_cup": {
+    "cup_distractor1": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "cup_distractor2": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "cup_target": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "cup_source": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "boundary": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "cup_distractor0": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "cup_distractor_visual1": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "cup_distractor_visual2": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "cup_target_visual": {
+      "type": "visual"
+    },
+    "cup_source_visual": {
+      "type": "visual"
+    },
+    "cup_distractor_visual0": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    }
+  },
+  "press_switch": {
+    "task_wall": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "switch_main": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "Shape_sub": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Shape_sub0": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Shape_sub1": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "switch": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "switch_visual": {
+      "type": "visual"
+    }
+  },
+  "push_button": {
+    "push_button_target": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "target_button_topPlate": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "target_button_wrap": {
+      "type": "kinematic",
+      "uv": "auto"
+    }
+  },
+  "push_buttons": {
+    "push_buttons_boundary": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "push_buttons_target0": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "push_buttons_target1": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "push_buttons_target2": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "target_button_topPlate0": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "target_button_topPlate1": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "target_button_topPlate2": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "target_button_wrap0": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "target_button_wrap1": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "target_button_wrap2": {
+      "type": "kinematic",
+      "uv": "auto"
+    }
+  },
+  "put_all_groceries_in_cupboard": {
+    "chocolate_jello": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "strawberry_jello": {
+      "type": "rigid",
+      "density": 150.0,
+      "uv": "auto"
+    },
+    "spam": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "sugar": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "crackers": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "mustard": {
+      "type": "rigid",
+      "density": 150.0,
+      "uv": "auto"
+    },
+    "boundary_root": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "groceries_boundary": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "soup": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "chocolate_jello_visual": {
+      "type": "visual"
+    },
+    "strawberry_jello_visual": {
+      "type": "visual"
+    },
+    "spam_visual": {
+      "type": "visual"
+    },
+    "sugar_visual": {
+      "type": "visual"
+    },
+    "crackers_visual": {
+      "type": "visual"
+    },
+    "mustard_visual": {
+      "type": "visual"
+    },
+    "cupboard": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "soup_visual": {
+      "type": "visual"
+    }
+  },
+  "put_books_at_shelf_location": {
+    "bookshelf": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "bookshelf_visual": {
+      "type": "visual"
+    },
+    "book1": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book2": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book0": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book1_visual": {
+      "type": "visual"
+    },
+    "book2_visual": {
+      "type": "visual"
+    },
+    "book0_visual": {
+      "type": "visual"
+    },
+    "book1_front": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book1_back": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book1_side": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book1_bottom": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book1_top": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book1_side_page": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book2_front": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book2_side": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book2_back": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book2_bottom": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book2_side_page": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book2_top": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book0_front": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book0_back": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book0_bottom": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book0_front1": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book0_top": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book0_side_page": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    }
+  },
+  "put_books_on_bookshelf": {
+    "bookshelf": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "bookshelf_visual": {
+      "type": "visual"
+    },
+    "book1": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book2": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book0": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book1_visual": {
+      "type": "visual"
+    },
+    "book2_visual": {
+      "type": "visual"
+    },
+    "book0_visual": {
+      "type": "visual"
+    },
+    "book1_front": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book1_back": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book1_side": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book1_bottom": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book1_top": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book1_side_page": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book2_front": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book2_side": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book2_back": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book2_bottom": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book2_side_page": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book2_top": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book0_front": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book0_back": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book0_bottom": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book0_front1": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book0_top": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "book0_side_page": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    }
+  },
+  "put_bottle_in_fridge": {
+    "fridge_root": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "fridge_base": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "fridge_base_visual": {
+      "type": "visual"
+    },
+    "shelf0": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "bottle": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "door_bottom": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "door_top": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "shelf1": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "shelf2": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "bottle_visual": {
+      "type": "visual"
+    },
+    "cap_visual": {
+      "type": "visual"
+    },
+    "label": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "door_bottom_visual": {
+      "type": "visual"
+    },
+    "door_top_visual": {
+      "type": "visual"
+    }
+  },
+  "put_groceries_in_cupboard": {
+    "boundary_root": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "cupboard": {
+      "type": "kinematic",
+      "uv": "auto"
+    }
+  },
+  "put_item_in_drawer": {
+    "drawer_frame": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "item": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "drawer_legs": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "drawer_bottom": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "drawer_middle": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "drawer_top": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    }
+  },
+  "put_knife_in_knife_block": {
+    "chopping_board": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "knife_block": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "boundary": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "chopping_board_visual": {
+      "type": "visual"
+    },
+    "knife_boundary": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "knife_block_visual": {
+      "type": "visual"
+    },
+    "knife": {
+      "type": "rigid",
+      "density": 1200.0,
+      "uv": "auto"
+    },
+    "knife_visual": {
+      "type": "visual"
+    }
+  },
+  "put_knife_on_chopping_board": {
+    "chopping_board": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "knife_block": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "boundary": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "chopping_board_visual": {
+      "type": "visual"
+    },
+    "knife": {
+      "type": "rigid",
+      "density": 1200.0,
+      "uv": "auto"
+    },
+    "knife_block_visual": {
+      "type": "visual"
+    },
+    "knife_visual": {
+      "type": "visual"
+    }
+  },
+  "put_money_in_safe": {
+    "safe_body": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "dollar_stack_boundary": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "dollar_stack": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "safe_door": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "dollar_back_visual": {
+      "type": "visual"
+    },
+    "dollar_front_visual": {
+      "type": "visual"
+    }
+  },
+  "put_plate_in_colored_dish_rack": {
+    "plate_stand": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "dish_rack": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "boundary": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "plate": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "dish_rack_pillar3": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "dish_rack_pillar4": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "dish_rack_pillar2": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "dish_rack_pillar1": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "dish_rack_pillar0": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "dish_rack_pillar5": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "plate_visual": {
+      "type": "visual"
+    }
+  },
+  "put_rubbish_in_bin": {
+    "bin": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "rubbish": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "tomato1": {
+      "type": "rigid",
+      "density": 150.0,
+      "uv": "auto"
+    },
+    "tomato2": {
+      "type": "rigid",
+      "density": 150.0,
+      "uv": "auto"
+    },
+    "bin_visual": {
+      "type": "visual"
+    },
+    "rubbish_visual": {
+      "type": "visual"
+    },
+    "tomato1_visual": {
+      "type": "visual"
+    },
+    "tomato2_visual": {
+      "type": "visual"
+    }
+  },
+  "put_rubbish_in_color_bin": {
+    "bin1": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "bin2": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "light_bulb": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "rubbish": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "bin_visual1": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "bin_visual2": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "color_bulb": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "bulb_holder": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "rubbish_visual": {
+      "type": "visual"
+    }
+  },
+  "put_shoes_in_box": {
+    "shoe2": {
+      "type": "rigid",
+      "density": 60.0,
+      "uv": "auto"
+    },
+    "box_base": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "shoe1": {
+      "type": "rigid",
+      "density": 60.0,
+      "uv": "auto"
+    },
+    "shoe2_visual": {
+      "type": "visual"
+    },
+    "shoe1_visual": {
+      "type": "visual"
+    },
+    "box_lid": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    }
+  },
+  "put_toilet_roll_on_stand": {
+    "toilet_roll_box": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "stand_base": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "boundary_roll": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "boundary_stand": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "toilet_roll": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "toilet_roll_holder": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "toilet_roll_visual": {
+      "type": "visual"
+    },
+    "holder_visual": {
+      "type": "visual"
+    }
+  },
+  "put_tray_in_oven": {
+    "oven_boundary_root": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "tray": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_frame0": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "oven_base": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "oven_tray_boundary": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "tray_visual": {
+      "type": "visual"
+    },
+    "oven_knob_8": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_stove_top0": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_gas_source0": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_knob_10": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_knob_11": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_knob_12": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_knob_13": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_knob_14": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_door": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "oven_knob": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_tray": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_door_visual": {
+      "type": "visual"
+    },
+    "oven_knob_visual": {
+      "type": "visual"
+    },
+    "oven_tray_visual": {
+      "type": "visual"
+    }
+  },
+  "put_umbrella_in_umbrella_stand": {
+    "stand": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "umbrella": {
+      "type": "rigid",
+      "density": 60.0,
+      "uv": "auto"
+    },
+    "stand_visual": {
+      "type": "visual"
+    },
+    "umbrella_visual": {
+      "type": "visual"
+    }
+  },
+  "reach_and_drag": {
+    "cube": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "stick": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "target0": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "distractor1": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "distractor2": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "distractor3": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    }
+  },
+  "reach_target": {
+    "target": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "boundary": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "distractor0": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "distractor1": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    }
+  },
+  "remove_cups": {
+    "tree_boundary": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "place_cups_holder_base": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "place_cups_holder_spoke2": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "place_cups_holder_spoke3": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "place_cups_holder_spoke1": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "place_cups_holder_spoke0": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "mug2": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "mug3": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "mug1": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "mug0": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "mug_visual2": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "mug_visual3": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "mug_visual1": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "mug_visual0": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    }
+  },
+  "scoop_with_spatula": {
+    "scoop_with_spatula_spatula": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Cuboid": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "spatula_visual": {
+      "type": "visual"
+    }
+  },
+  "screw_nail": {
+    "block": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "screw_driver": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "screw": {
+      "type": "rigid",
+      "density": 1200.0,
+      "uv": "auto"
+    },
+    "screw_driver_visual": {
+      "type": "visual"
+    },
+    "screwdriver2": {
+      "type": "rigid",
+      "density": 1200.0,
+      "uv": "auto"
+    },
+    "screw_visual": {
+      "type": "visual"
+    },
+    "screw_visual_strip": {
+      "type": "visual"
+    }
+  },
+  "set_clock_to_time": {
+    "clock": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "clock_visual": {
+      "type": "visual"
+    },
+    "clock_needle_hour": {
+      "type": "rigid",
+      "density": 1200.0,
+      "uv": "auto"
+    },
+    "clock_stand": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "clock_needle_crank": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "clock_needle_minute": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "clock_needle_crank_visual": {
+      "type": "visual"
+    },
+    "clock_minute_head": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    }
+  },
+  "set_the_table": {
+    "spoon": {
+      "type": "rigid",
+      "density": 1200.0,
+      "uv": "auto"
+    },
+    "fork": {
+      "type": "rigid",
+      "density": 1200.0,
+      "uv": "auto"
+    },
+    "knife": {
+      "type": "rigid",
+      "density": 1200.0,
+      "uv": "auto"
+    },
+    "glass": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "plate": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "holder": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "spoon_visual": {
+      "type": "visual"
+    },
+    "fork_visual": {
+      "type": "visual"
+    },
+    "knife_visual": {
+      "type": "visual"
+    },
+    "glass_visual": {
+      "type": "visual"
+    },
+    "plate_visual": {
+      "type": "visual"
+    }
+  },
+  "setup_checkers": {
+    "chess_board_base": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "chess_board_base_visual": {
+      "type": "visual"
+    },
+    "checker9": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "checker8": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "checker7": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "checker6": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "checker5": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "checker4": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "checker3": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "checker23": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "checker22": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "checker21": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "checker20": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "checker2": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "checker19": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "checker18": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "checker17": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "checker16": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "checker13": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "checker15": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "checker14": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "checker12": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "checker11": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "checker10": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "checker1": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "checker0": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "chess_board_surface": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "squares_black": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "squares_white": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    }
+  },
+  "setup_chess": {
+    "chess_board_base": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "chess_board_surface": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "chess_board_base_visual": {
+      "type": "visual"
+    },
+    "white_squares": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "black_squares": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "white_queenside_knight_dynamic": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "white_kingside_knight_dynamic": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "white_pawn_a_dynamic": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "white_pawn_b_dynamic": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "white_pawn_c_dynamic": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "white_pawn_d_dynamic": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "white_pawn_e_dynamic": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "white_pawn_f_dynamic": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "white_pawn_g_dynamic": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "white_pawn_h_dynamic": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "white_queenside_rook_dynamic": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "white_kingside_rook_dynamic": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "white_queenside_bishop_dynamic": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "white_kingside_bishop_dynamic": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "white_queen_dynamic": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "white_king_dynamic": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "black_queenside_knight_dynamic": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "black_kingside_knight_dynamic": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "black_pawn_f_dynamic": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "black_pawn_a_dynamic": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "black_pawn_b_dynamic": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "black_pawn_c_dynamic": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "black_pawn_d_dynamic": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "black_pawn_e_dynamic": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "black_pawn_g_dynamic": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "black_pawn_h_dynamic": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "black_queenside_rook_dynamic": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "black_kingside_rook_dynamic": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "black_queenside_bishop_dynamic": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "black_kingside_bishop_dynamic": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "black_king_dynamic": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "black_queen_dynamic": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "white_queenside_knight": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "white_kingside_knight": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "white_pawn_a": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "white_pawn_b": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "white_pawn_c": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "white_pawn_d": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "white_pawn_e": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "white_pawn_f": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "white_pawn_g": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "white_pawn_h": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "white_queenside_rook": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "white_kingside_rook": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "white_queenside_bishop": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "white_kingside_bishop": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "white_queen": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "white_king": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "black_queenside_knight": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "black_kingside_knight": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "black_pawn_f": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "black_pawn_a": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "black_pawn_b": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "black_pawn_c": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "black_pawn_d": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "black_pawn_e": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "black_pawn_g": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "black_pawn_h": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "black_queenside_rook": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "black_kingside_rook": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "black_queenside_bishop": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "black_kingside_bishop": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "black_king": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "black_queen": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    }
+  },
+  "slide_block_to_color_target": {
+    "target1": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "block": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "target2": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "target3": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "target4": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    }
+  },
+  "slide_block_to_target": {
+    "target": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "block": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    }
+  },
+  "slide_cabinet_open": {
+    "cabinet_base": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "left_board0": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "right_board": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "left_handle_visual": {
+      "type": "visual"
+    },
+    "left_board_visual": {
+      "type": "visual"
+    },
+    "right_handle_visual": {
+      "type": "visual"
+    },
+    "right_board_visual": {
+      "type": "visual"
+    }
+  },
+  "slide_cabinet_open_and_place_cups": {
+    "cup": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "cabinet_base": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "cup_visual": {
+      "type": "visual"
+    },
+    "left_board": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "right_board": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "left_handle_visual": {
+      "type": "visual"
+    },
+    "left_board_visual": {
+      "type": "visual"
+    },
+    "right_handle_visual": {
+      "type": "visual"
+    },
+    "right_board_visual": {
+      "type": "visual"
+    }
+  },
+  "solve_puzzle": {
+    "solve_puzzle_frame": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "solve_puzzle_piece1": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "solve_puzzle_piece3": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "solve_puzzle_piece4": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "solve_puzzle_piece5": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "solve_puzzle_piece6": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "solve_puzzle_piece7": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "solve_puzzle_piece8": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "solve_puzzle_piece9": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "solve_puzzle_piece10": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "solve_puzzle_piece11": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "solve_puzzle_piece12": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "solve_puzzle_piece13": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "solve_puzzle_piece14": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "solve_puzzle_piece15": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "solve_puzzle_piece16": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "solve_puzzle_piece17": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "solve_puzzle_piece18": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "solve_puzzle_piece19": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "solve_puzzle_piece20": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "solve_puzzle_piece21": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "solve_puzzle_piece22": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "solve_puzzle_piece23": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "solve_puzzle_piece24": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "solve_puzzle_piece2": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "solve_puzzle_piece_visual2": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    }
+  },
+  "stack_blocks": {
+    "stack_blocks_target0": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "stack_blocks_target1": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "stack_blocks_target3": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "stack_blocks_distractor0": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "stack_blocks_distractor1": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "stack_blocks_distractor2": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "stack_blocks_distractor3": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "stack_blocks_boundary0": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "stack_blocks_target_plane": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "stack_blocks_target2": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "stack_blocks_boundary1": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "stack_blocks_boundary2": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "stack_blocks_boundary3": {
+      "type": "kinematic",
+      "uv": "auto"
+    }
+  },
+  "stack_cups": {
+    "cup1": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "cup2": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "cup3": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "boundary": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "cup1_visual": {
+      "type": "visual"
+    },
+    "cup2_visual": {
+      "type": "visual"
+    },
+    "cup3_visual": {
+      "type": "visual"
+    }
+  },
+  "stack_wine": {
+    "wine_bottle": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "wine_bottle_visual": {
+      "type": "visual"
+    },
+    "rack_bottom": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "rack_top": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "rack_bottom_visual": {
+      "type": "visual"
+    },
+    "rack_top_visual": {
+      "type": "visual"
+    }
+  },
+  "straighten_rope": {
+    "tail": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "head_target": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "head_tail": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Cylinder16": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Cylinder15": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Cylinder14": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Cylinder13": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Cylinder12": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Cylinder11": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Cylinder10": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Cylinder9": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Cylinder8": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Cylinder7": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Cylinder6": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Cylinder5": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Cylinder4": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Cylinder3": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Cylinder2": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Cylinder1": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "head": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    }
+  },
+  "sweep_to_dustpan": {
+    "Dustpan_4": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "dirt0": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "broom_holder": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "Dustpan_3": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "dirt1": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "dirt2": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "dirt3": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "dirt4": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "broom": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "Dustpan_5": {
+      "type": "rigid",
+      "density": 1200.0,
+      "uv": "auto"
+    },
+    "sweep_to_dustpan_broom_visual": {
+      "type": "visual"
+    }
+  },
+  "sweep_to_dustpan_of_size": {
+    "dustpan_tall": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "dirt0": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "broom_holder": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "boundary_root": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "dustpan_short": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "Dustpan_3": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "dirt1": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "dirt2": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "dirt3": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "dirt4": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "broom": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "Dustpan_4": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "Dustpan_5": {
+      "type": "rigid",
+      "density": 1200.0,
+      "uv": "auto"
+    },
+    "sweep_to_dustpan_broom_visual": {
+      "type": "visual"
+    },
+    "Dustpan_6": {
+      "type": "rigid",
+      "density": 1200.0,
+      "uv": "auto"
+    }
+  },
+  "take_cup_out_from_cabinet": {
+    "cup": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "cabinet_base": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "Plane": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "cup_visual": {
+      "type": "visual"
+    },
+    "left_board0": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "right_board": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "left_handle_visual": {
+      "type": "visual"
+    },
+    "left_board_visual": {
+      "type": "visual"
+    },
+    "right_handle_visual": {
+      "type": "visual"
+    },
+    "right_board_visual": {
+      "type": "visual"
+    }
+  },
+  "take_frame_off_hanger": {
+    "frame": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "task_wall": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "frame_visual": {
+      "type": "visual"
+    },
+    "frame_detector": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "head": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "picture": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "hanger": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    }
+  },
+  "take_item_out_of_drawer": {
+    "item": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "drawer_frame": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "drawer_legs": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "drawer_bottom": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "drawer_middle": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "drawer_top": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    }
+  },
+  "take_lid_off_saucepan": {
+    "saucepan": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "saucepan_lid_grasp_point": {
+      "type": "rigid",
+      "density": 1200.0,
+      "uv": "auto"
+    },
+    "saucepan_visual": {
+      "type": "visual"
+    },
+    "saucepan_lid": {
+      "type": "rigid",
+      "density": 1200.0,
+      "uv": "auto"
+    },
+    "saucepan_lid_visual": {
+      "type": "visual"
+    }
+  },
+  "take_money_out_safe": {
+    "safe_body": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "placement_boundary": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "dollar_stack2": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "dollar_stack1": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "dollar_stack0": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "money_boundary": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "safe_door": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "dollar_back_visual2": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "dollar_front_visual2": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "dollar_back_visual1": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "dollar_front_visual1": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "dollar_back_visual0": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "dollar_front_visual0": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    }
+  },
+  "take_off_weighing_scales": {
+    "scales_body": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "scales_body_visual": {
+      "type": "visual"
+    },
+    "SpringDamper": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "scales_meter": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "peppers_boundary": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "pepper2": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "pepper0": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "pepper1": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "scales_meter_pivot": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "pepper_visual2": {
+      "type": "rigid",
+      "density": 150.0,
+      "uv": "auto"
+    },
+    "pepper_visual0": {
+      "type": "rigid",
+      "density": 150.0,
+      "uv": "auto"
+    },
+    "pepper_visual1": {
+      "type": "rigid",
+      "density": 150.0,
+      "uv": "auto"
+    },
+    "scales_tray_physical": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "scales_meter_needle": {
+      "type": "rigid",
+      "density": 1200.0,
+      "uv": "auto"
+    },
+    "scales_tray_visual": {
+      "type": "visual"
+    }
+  },
+  "take_plate_off_colored_dish_rack": {
+    "plate": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "dish_rack": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "plate_target": {
+      "type": "rigid",
+      "density": 200.0,
+      "uv": "auto"
+    },
+    "plate_visual": {
+      "type": "visual"
+    },
+    "dish_rack_pillar3": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "dish_rack_pillar4": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "dish_rack_pillar2": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "dish_rack_pillar1": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "dish_rack_pillar0": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "dish_rack_pillar5": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    }
+  },
+  "take_shoes_out_of_box": {
+    "shoe1": {
+      "type": "rigid",
+      "density": 60.0,
+      "uv": "auto"
+    },
+    "box_base": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "shoe2": {
+      "type": "rigid",
+      "density": 60.0,
+      "uv": "auto"
+    },
+    "shoe1_visual": {
+      "type": "visual"
+    },
+    "shoe2_visual": {
+      "type": "visual"
+    },
+    "box_lid": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    }
+  },
+  "take_toilet_roll_off_stand": {
+    "toilet_roll": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "stand_base": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "toilet_roll_visual": {
+      "type": "visual"
+    },
+    "toilet_roll_holder": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "holder_visual": {
+      "type": "visual"
+    }
+  },
+  "take_tray_out_of_oven": {
+    "oven_boundary_root": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "tray": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_frame0": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "oven_base": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "tray_visual": {
+      "type": "visual"
+    },
+    "oven_knob_8": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_stove_top0": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_gas_source0": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_knob_10": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_knob_11": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_knob_12": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_knob_13": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_knob_14": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_door": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "oven_knob": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_tray": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_door_visual": {
+      "type": "visual"
+    },
+    "oven_knob_visual": {
+      "type": "visual"
+    },
+    "oven_tray_visual": {
+      "type": "visual"
+    }
+  },
+  "take_umbrella_out_of_umbrella_stand": {
+    "stand": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "umbrella": {
+      "type": "rigid",
+      "density": 60.0,
+      "uv": "auto"
+    },
+    "stand_visual": {
+      "type": "visual"
+    },
+    "umbrella_visual": {
+      "type": "visual"
+    }
+  },
+  "take_usb_out_of_computer": {
+    "usb": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "computer": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "usb_visual": {
+      "type": "visual"
+    },
+    "tip": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "computer_visual": {
+      "type": "visual"
+    },
+    "Plane": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Plane0": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Plane1": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "Plane2": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    }
+  },
+  "toilet_seat_down": {
+    "toilet_seat_up_toilet": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "toilet": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "toilet_seat_up_respondable": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "toilet_seat_up_seat": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    }
+  },
+  "toilet_seat_up": {
+    "toilet_seat_up_toilet": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "toilet_seat_up_respondable": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "toilet_seat_up_seat": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    }
+  },
+  "turn_oven_on": {
+    "turn_oven_on_boundary_root": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "oven_frame": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "oven_base_resp": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "oven_knob_8": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_stove_top0": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_gas_source0": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_knob_10": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_knob_11": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_knob_12": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_knob_13": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_knob_14": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_door_resp": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "oven_knob": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "oven_tray_repondable": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "oven_door": {
+      "type": "rigid",
+      "density": 400.0,
+      "uv": "auto"
+    },
+    "oven_knob_9": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "oven_tray": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    }
+  },
+  "turn_tap": {
+    "tap_main": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "tap_main_visual": {
+      "type": "visual"
+    },
+    "tap_left": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "tap_right": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "tap_left_visual": {
+      "type": "visual"
+    },
+    "tap_right_visual": {
+      "type": "visual"
+    }
+  },
+  "tv_on": {
+    "tv_frame": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "tv_remote": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "spawn_boundary": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "target_button_topPlate0": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "target_button_topPlate1": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "target_button_topPlate2": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "target_button_wrap0": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "power_visual": {
+      "type": "visual"
+    },
+    "target_button_wrap1": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "plus_visual": {
+      "type": "visual"
+    },
+    "target_button_wrap2": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "minus_visual": {
+      "type": "visual"
+    }
+  },
+  "unplug_charger": {
+    "plug": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "task_wall": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "charger": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "hole1": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "hole2": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "charger_visual": {
+      "type": "visual"
+    },
+    "hole_visual1": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "hole_visual2": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    }
+  },
+  "water_plants": {
+    "plant": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "waterer": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "base_visual": {
+      "type": "visual"
+    },
+    "plant_visual": {
+      "type": "visual"
+    },
+    "waterer_visual": {
+      "type": "visual"
+    },
+    "head": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    }
+  },
+  "weighing_scales": {
+    "scales_body": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "peppers_boundary": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "scales_body_visual": {
+      "type": "visual"
+    },
+    "SpringDamper": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "scales_meter": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "pepper2": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "pepper0": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "pepper1": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "scales_meter_pivot": {
+      "type": "kinematic",
+      "uv": "auto"
+    },
+    "pepper_visual2": {
+      "type": "rigid",
+      "density": 150.0,
+      "uv": "auto"
+    },
+    "pepper_visual0": {
+      "type": "rigid",
+      "density": 150.0,
+      "uv": "auto"
+    },
+    "pepper_visual1": {
+      "type": "rigid",
+      "density": 150.0,
+      "uv": "auto"
+    },
+    "scales_tray_physical": {
+      "type": "rigid",
+      "density": 80.0,
+      "uv": "auto"
+    },
+    "scales_meter_needle": {
+      "type": "rigid",
+      "density": 1200.0,
+      "uv": "auto"
+    },
+    "scales_tray_visual": {
+      "type": "visual"
+    }
+  }
+}
