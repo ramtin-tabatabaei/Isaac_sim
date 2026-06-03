@@ -46,11 +46,19 @@ def build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument(
         "--planner",
-        choices=("diffik", "rmpflow", "curobo"),
+        choices=("diffik", "rmpflow", "curobo", "rrt"),
         default="diffik",
         help="Arm controller: 'diffik' (default straight-line differential IK), 'rmpflow' "
-        "(reactive Lula avoidance), or 'curobo' (global collision-free planner). The last two "
-        "avoid the scene's static objects and are EXPERIMENTAL.",
+        "(reactive Lula avoidance), 'curobo' (global collision-free planner), or 'rrt' "
+        "(AHA-style: EVERY segment is planned collision-free around the whole obstacle with "
+        "Lula RRT, like RLBench's arm.get_path; in-place dwells fall back to differential IK).",
+    )
+    parser.add_argument(
+        "--rrt-max-iter",
+        type=int,
+        default=80000,
+        help="For --planner rrt: maximum Lula RRT iterations per segment before it gives up "
+        "(then the straight line runs as a fallback). Default 80000.",
     )
     parser.add_argument(
         "--curobo-obstacles",
@@ -95,14 +103,14 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--carry-lift",
         type=float,
-        default=0.0,
+        default=None,
         metavar="DZ",
         help="Metres to raise the grasped object during transit so it clears a tall "
-        "obstacle (e.g. lift the wand's ring up and OVER the buzz-wire arch instead of "
-        "dragging it through). When >0, the arm: hovers above the grasp, descends, grasps, "
-        "lifts straight up by DZ, traverses the remaining waypoints at that clearance "
-        "height, then releases. A deterministic, planner-free collision-free path. "
-        "Recommended ~0.2 for beat_the_buzz; leave 0 to follow waypoints as recorded.",
+        "obstacle (e.g. lift the wand's ring up and around the buzz-wire arch instead of "
+        "dragging it through). When >0, the arm uses the recorded side grasp, lifts "
+        "by DZ, follows a circular clearance arc around the Cuboid, then releases. "
+        "If omitted, beat_the_buzz automatically uses 0.35 m; pass 0 to force "
+        "the recorded path.",
     )
     parser.add_argument(
         "--collision-watch",
@@ -113,6 +121,42 @@ def build_parser() -> argparse.ArgumentParser:
         "object (ring) and each obstacle (the wire/base), and between the wrist/hand/fingers and "
         "each obstacle. Writes a per-step trace CSV here and prints the global minima (a value near "
         "0 mm means the geometry is touching/penetrating). Headless-friendly way to 'see' a collision.",
+    )
+    parser.add_argument(
+        "--settle-probe",
+        type=int,
+        default=0,
+        metavar="N",
+        help="Diagnostic: skip the pre-grasp pin and the gripper attachment, then after reset step "
+        "the sim N times under pure gravity (arm idle) and log the wand's TRUE rigid-body pose each "
+        "step. Used to check whether the ring settles and hangs on the rod (gravity, no hacks) or "
+        "falls off. Writes the trace to the --collision-watch path (or /tmp/settle_probe.csv) and exits.",
+    )
+    parser.add_argument(
+        "--slide-along-rod", type=float, default=None, metavar="DIST",
+        help="beat_the_buzz: after grasping, slide the captive ring ALONG the rod (world -Y, "
+        "between the posts) by DIST metres instead of dragging it sideways off the frame (which "
+        "is geometrically impossible for a captive ring and ejects/tunnels it). Keeps the ring "
+        "threaded the whole time (the real 'beat the buzz' motion), forcing carry-lift 0. "
+        "Omitted = auto 0.12 m for beat_the_buzz; pass 0 to force the (broken) recorded carry.",
+    )
+    parser.add_argument(
+        "--pull-test", type=float, default=0.0, metavar="SPEED",
+        help="Diagnostic (beat_the_buzz, no grasp): settle the wand on the rod, then drive the "
+        "bare wand along the RECORDED carry direction (waypoint1->waypoint3) at SPEED m/s and log, "
+        "each step, whether the rod is still threaded through the ring's hole and the min ring-tube "
+        "<-> rod surface distance. Decides whether the rod BLOCKS the ring (real collision) or the "
+        "ring tunnels straight through it (collider defect). Writes a CSV + .summary.txt and exits.",
+    )
+    parser.add_argument(
+        "--screenshot-dir", type=Path, default=None, metavar="DIR",
+        help="Save a viewport screenshot into DIR every --screenshot-interval seconds (wall clock) "
+        "while the arm runs, so you get a frame-by-frame record of the scene as it goes. Needs the "
+        "GUI/renderer running (do NOT pass --headless).",
+    )
+    parser.add_argument(
+        "--screenshot-interval", type=float, default=2.0, metavar="SEC",
+        help="Seconds between screenshots for --screenshot-dir (default 2.0).",
     )
     parser.add_argument("--no-waypoints", action="store_true", help="Do not spawn waypoint marker spheres.")
     parser.add_argument("--hide-root", action="store_true", help="Hide inferred task-root objects.")

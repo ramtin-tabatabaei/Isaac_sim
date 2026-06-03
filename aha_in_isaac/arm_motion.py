@@ -138,78 +138,10 @@ def _grasp_index(
     return min(range(len(positions)), key=lambda i: positions[i][2])
 
 
-def _build_lift_over_motion(
-    positions: list[tuple[float, float, float]],
-    quats: list[tuple[float, float, float, float]],
-    names: list[str],
-    motion_config: dict,
-    carry_lift: float,
-    grasp_index: int,
-) -> list[Waypoint]:
-    """A deterministic collision-free carry that lifts the grasped object OVER a tall
-    obstacle instead of dragging it through.
-
-    Beat-the-buzz is the motivating case: the recorded carry waypoints keep the hand
-    at arch height the whole way, so the ring (rigidly mounted above the hand) sweeps
-    straight through the wire. Here we instead: approach from straight above, grasp,
-    lift vertically by ``carry_lift`` so the ring clears the arch top, traverse the
-    remaining waypoints at that raised height (holding the grasp orientation so the
-    object does not tilt back down into the obstacle), then release - still clear.
-
-    No external planner: plain diff-IK tracks these straight segments reliably and the
-    eased motion keeps the friction grasp.
-    """
-    gx, gy, gz = positions[grasp_index]
-    grasp_quat = quats[grasp_index]
-    hover = (gx, gy, gz + carry_lift)
-
-    def _raise(p: tuple[float, float, float]) -> tuple[float, float, float]:
-        return (p[0], p[1], p[2] + carry_lift)
-
-    motion: list[Waypoint] = []
-    # Any waypoints before the grasp are open-gripper approach moves; keep them.
-    for i in range(grasp_index):
-        motion.append(
-            Waypoint(names[i], positions[i], quat_w=quats[i], gripper="open",
-                     duration_steps=_waypoint_steps(motion_config, names[i]))
-        )
-    # Come down onto the grasp from straight above (no sideways swing into the arch).
-    motion.append(
-        Waypoint(f"Hover above {names[grasp_index]}", hover, quat_w=grasp_quat, gripper="open",
-                 duration_steps=_waypoint_steps(motion_config, names[grasp_index]))
-    )
-    motion.append(
-        Waypoint(f"Descend to {names[grasp_index]}", (gx, gy, gz), quat_w=grasp_quat, gripper="open",
-                 duration_steps=GRASP_DWELL_STEPS)
-    )
-    motion.append(
-        Waypoint(f"Grasp at {names[grasp_index]}", (gx, gy, gz), quat_w=grasp_quat, gripper="closed",
-                 duration_steps=GRASP_DWELL_STEPS)
-    )
-    # Curved carry: ONE smooth Catmull-Rom arc that rises off the grasp, up OVER the
-    # obstacle, and across to the (raised) remaining waypoints - swept as a single
-    # continuous via-point motion so the arm traces a curve, not straight segments.
-    # ``hover`` (straight above the grasp) is the first arc control point, so the arc
-    # climbs vertically clear of the arch before any horizontal travel over it.
-    control = [(gx, gy, gz), hover]
-    control += [_raise(positions[i]) for i in range(grasp_index + 1, len(positions))]
-    arc = _smooth_polyline(control, samples_per_segment=10) or [hover]
-    motion.append(
-        Waypoint("Carry over rod (curved)", arc[-1], quat_w=grasp_quat, gripper="closed",
-                 duration_steps=max(len(arc) * STEPS_PER_SWEEP_SAMPLE, DEFAULT_WAYPOINT_STEPS),
-                 via_points_w=arc)
-    )
-    # Release at the final position, still raised clear of the obstacle.
-    motion.append(
-        Waypoint("Release", _raise(positions[-1]), quat_w=grasp_quat, gripper="open",
-                 duration_steps=RELEASE_DWELL_STEPS)
-    )
-    return motion
-
-
 def build_arm_motion(
     waypoints: list[dict], motion_config: dict, force_down: bool = False, curvy: bool = True,
     carry_lift: float = 0.0, graspable_name: str | None = None,
+    slide_along_rod: float = 0.0, slide_axis_w: tuple[float, float, float] = (0.0, -1.0, 0.0),
 ) -> list[Waypoint]:
     if not waypoints:
         return []
@@ -223,11 +155,6 @@ def build_arm_motion(
     # waypoint1 rather than closing on air at the pre-grasp waypoint0.
     grasp_index = _grasp_index(waypoints, positions, graspable_name)
 
-    # Lift-over carry: a planner-free, collision-free path that raises the grasped
-    # object clear of a tall obstacle (e.g. the buzz-wire arch) during transit.
-    if carry_lift and carry_lift > 0.0:
-        return _build_lift_over_motion(positions, quats, names, motion_config, carry_lift, grasp_index)
-
     def _curve_to(index: int) -> list[tuple[float, float, float]]:
         """Curved via points from the previous waypoint to ``index`` (the controller
         prepends the live EE pose, so we omit the start point)."""
@@ -237,55 +164,93 @@ def build_arm_motion(
         return _catmull_rom_segment(p0, p1, p2, p3, CURVE_SAMPLES_PER_SEGMENT)
 
     motion: list[Waypoint] = []
-    grip = "open"
-    for index, waypoint in enumerate(waypoints):
+
+    def _append_follow(index: int, grip: str) -> None:
+        """Append one recorded waypoint at gripper ``grip``: its predefined cartesian
+        sweep, a smooth curve from the previous waypoint, or a plain straight segment."""
+        waypoint = waypoints[index]
         name = waypoint.get("name", f"waypoint{index}")
         pos = positions[index]
         quat = quats[index]
-
         path_samples = waypoint.get("cartesian_path_samples") or []
         if path_samples:
-            # Sweep the whole predefined cartesian path as ONE continuous, eased
-            # motion (no stop-and-go at each sample), to keep the stroke smooth.
+            # Sweep the whole predefined cartesian path as ONE continuous, eased motion.
             via_points = [tuple(float(c) for c in s["position_xyz_m"]) for s in path_samples]
             sweep_default = max(len(via_points) * STEPS_PER_SWEEP_SAMPLE, DEFAULT_WAYPOINT_STEPS)
             motion.append(
-                Waypoint(
-                    f"{name} sweep ({len(via_points)} pts)",
-                    via_points[-1],
-                    quat_w=quat,
-                    gripper=grip,
-                    duration_steps=_waypoint_steps(motion_config, name, sweep_default),
-                    via_points_w=via_points,
-                )
+                Waypoint(f"{name} sweep ({len(via_points)} pts)", via_points[-1], quat_w=quat, gripper=grip,
+                         duration_steps=_waypoint_steps(motion_config, name, sweep_default), via_points_w=via_points)
             )
         elif curvy and index > 0:
             # Curve smoothly from the previous waypoint through this one.
-            via_points = _curve_to(index)
             motion.append(
-                Waypoint(
-                    name,
-                    pos,
-                    quat_w=quat,
-                    gripper=grip,
-                    duration_steps=_waypoint_steps(motion_config, name),
-                    via_points_w=via_points,
-                )
+                Waypoint(name, pos, quat_w=quat, gripper=grip,
+                         duration_steps=_waypoint_steps(motion_config, name), via_points_w=_curve_to(index))
             )
         else:
             motion.append(
                 Waypoint(name, pos, quat_w=quat, gripper=grip, duration_steps=_waypoint_steps(motion_config, name))
             )
 
-        # Close the gripper in place once we have descended onto the grasp waypoint.
-        if index == grasp_index:
-            motion.append(
-                Waypoint(f"Grasp at {name}", pos, quat_w=quat, gripper="closed", duration_steps=GRASP_DWELL_STEPS)
-            )
-            grip = "closed"
-
-    # Release the object in place at the final waypoint (no lift, just follow).
+    # Approach + grasp: follow the recorded waypoints up to and including the grasp,
+    # then close in place. This is the path proven to reach the object; a lift only
+    # changes the CARRY (below), never the approach.
+    for index in range(grasp_index + 1):
+        _append_follow(index, "open")
     motion.append(
-        Waypoint("Release", positions[-1], quat_w=quats[-1], gripper="open", duration_steps=RELEASE_DWELL_STEPS)
+        Waypoint(f"Grasp at {names[grasp_index]}", positions[grasp_index], quat_w=quats[grasp_index],
+                 gripper="closed", duration_steps=GRASP_DWELL_STEPS)
+    )
+
+    carry_positions = positions[grasp_index + 1:]
+    release_pos = positions[-1]
+    release_quat = quats[-1]
+    if slide_along_rod and slide_along_rod > 0.0:
+        # The ring is topologically CAPTIVE on the frame's rod, so the recorded sideways carry
+        # (waypoint3) is impossible - it can only tunnel/eject the ring. Instead slide the grasp
+        # pose along the rod axis by slide_along_rod (one slow straight diff-IK sweep, orientation
+        # + grip fixed), so the ring stays threaded the whole time (the real beat-the-buzz motion).
+        gx, gy, gz = positions[grasp_index]
+        ax, ay, az = slide_axis_w
+        end = (gx + ax * slide_along_rod, gy + ay * slide_along_rod, gz + az * slide_along_rod)
+        n = 24
+        via = [
+            (gx + ax * slide_along_rod * t / n,
+             gy + ay * slide_along_rod * t / n,
+             gz + az * slide_along_rod * t / n)
+            for t in range(1, n + 1)
+        ]
+        motion.append(
+            Waypoint("Slide ring along rod", end, quat_w=quats[grasp_index], gripper="closed",
+                     duration_steps=max(n * STEPS_PER_SWEEP_SAMPLE, DEFAULT_WAYPOINT_STEPS), via_points_w=via)
+        )
+        release_pos = end
+        release_quat = quats[grasp_index]
+    elif carry_lift and carry_lift > 0.0 and carry_positions:
+        # Up-and-over carry: lift the grasped object straight UP clear of a tall
+        # obstacle, traverse at that raised height over the remaining waypoints' XY,
+        # then descend onto the final one - one smooth eased diff-IK sweep. The
+        # recorded flat carry instead drags across at obstacle height (e.g. the
+        # buzz-wire), clipping it; a pure vertical lift stays within the arm's reach.
+        gx, gy, gz = positions[grasp_index]
+        final = positions[-1]
+        over_path = (
+            [(gx, gy, gz + carry_lift)]
+            + [(p[0], p[1], p[2] + carry_lift) for p in carry_positions]
+            + [final]
+        )
+        motion.append(
+            Waypoint("Lift over obstacle (curved)", over_path[-1], quat_w=quats[grasp_index], gripper="closed",
+                     duration_steps=max(len(over_path) * STEPS_PER_SWEEP_SAMPLE * 4, DEFAULT_WAYPOINT_STEPS),
+                     via_points_w=over_path)
+        )
+    else:
+        # Flat carry: follow the remaining recorded waypoints in place.
+        for index in range(grasp_index + 1, len(waypoints)):
+            _append_follow(index, "closed")
+
+    # Release the object in place at the final carry position.
+    motion.append(
+        Waypoint("Release", release_pos, quat_w=release_quat, gripper="open", duration_steps=RELEASE_DWELL_STEPS)
     )
     return motion

@@ -12,6 +12,19 @@ cd ~/IsaacLab
     --usd-dir .../task_usds/wipe_desk --hide-root
 ```
 
+For `beat_the_buzz`, this command auto-selects the deterministic lift-over carry
+path (`--carry-lift 0.35`) so the wand is carried clear of the cuboid. The wand is
+also pinned in its authored pose until the gripper closes, so gravity stays on
+without letting it fall before grasp:
+
+```bash
+./isaaclab.sh -p scripts/aha_in_isaac/run_scene.py \
+    --scene-context /home/ramtin/AHA/portable_scene_reports/beat_the_buzz.scene_context.md \
+    --usd-dir task_usds/beat_the_buzz_physics --hide-root
+```
+
+Pass `--carry-lift 0` to force the recorded, non-lifted path for diagnostics.
+
 ## Files (one responsibility each)
 
 | File | Responsibility |

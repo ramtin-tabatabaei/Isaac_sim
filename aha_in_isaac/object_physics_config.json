@@ -24,6 +24,7 @@
     "             straight through the object. Use it to clear a base/holder out",
     "             of the arm's path while keeping the graspable object collidable.",
     "  compliant_stiffness, compliant_damping : >0 gives soft/springy contact",
+    "             combine modes (average/min/multiply/max).",
     "  youngs_modulus, poissons_ratio : deformable stiffness (only type=deformable)",
     "  uv       : generate texture coords on a mesh that lacks them so an image",
     "             texture can map. 'auto' detects the shape (flat->planar,",
@@ -32,7 +33,9 @@
     "                    before it is grasped). Only applies to rigid (non-kinematic).",
     "  ccd      : true enables continuous collision detection so a fast-falling thin",
     "             body cannot tunnel through a thin collider (e.g. the table top) and",
-    "             explode out. Needs scene CCD on (run_scene enables it). Rigid only."
+    "             explode out. Needs scene CCD on (run_scene enables it). Rigid only.",
+    "             null = PhysX default (uncapped). A small value (~0.5) stops a thin",
+    "             the collision shape and can push a threaded ring off its rod."
   ],
   "_defaults": {
     "type": "rigid",
@@ -91,10 +94,10 @@
       "type": "rigid",
       "mass": 0.2,
       "collider": "sdf",
-      "sdf_resolution": 320,
-      "static_friction": 1.6,
-      "dynamic_friction": 1.3,
-      "disable_gravity": true,
+      "sdf_resolution": 256,
+      "static_friction": 5.0,
+      "dynamic_friction": 5.0,
+      "disable_gravity": false,
       "uv": "auto"
     },
     "wand_visual": {

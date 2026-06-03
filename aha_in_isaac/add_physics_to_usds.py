@@ -270,7 +270,6 @@ def _bake_rigid(stage: Usd.Stage, spec: dict, kinematic: bool) -> int:
             # exploding out of a deep penetration. Needs scene CCD on too.
             if spec.get("ccd") and not kinematic:
                 physx_rigid.CreateEnableCCDAttr(True)
-
         mass_api = UsdPhysics.MassAPI.Apply(root)
         if spec.get("density") and float(spec["density"]) > 0.0:
             mass_api.CreateDensityAttr(float(spec["density"]))
@@ -278,14 +277,28 @@ def _bake_rigid(stage: Usd.Stage, spec: dict, kinematic: bool) -> int:
             mass_api.CreateMassAttr(float(spec.get("mass") or 0.05))
 
     material = _make_physics_material(stage, root, spec) if want_collision else None
-    # Dynamic bodies need a convex collider; static bodies can use the exact mesh.
-    collider = "none" if kinematic else str(spec.get("collider", "convexHull"))
+    # Static (kinematic) bodies default to the EXACT mesh, but honour an explicit collider so a
+    # hollow base box can be made SOLID: an exact triangle mesh is a one-sided shell, and a thin
+    # dynamic body (e.g. the wand handle) can tunnel through a face and then sit INSIDE it with
+    # no contact to push it out. 'convexDecomposition' makes the base a solid hull while keeping
+    # the thin bent wire as separate thin hulls (a plain convexHull would fill the wire's arch).
+    # Dynamic bodies need a convex/SDF collider.
+    if kinematic:
+        collider = str(spec.get("collider", "none"))
+    else:
+        collider = str(spec.get("collider", "convexHull"))
     # 'sdf' gives a DYNAMIC body an accurate *concave* collider via a signed-distance
     # field: it keeps holes/cavities (e.g. a ring that must thread onto a rod), where
-    # a convex hull would fill the hole and eject the body. PhysX builds the SDF from
-    # the real triangle mesh, so the USD approximation stays 'none'.
-    use_sdf = collider == "sdf" and not kinematic
-    approximation = APPROXIMATION_TOKENS.get("none" if use_sdf else collider, APPROXIMATION_TOKENS["convexHull"])
+    # a convex hull would fill the hole and eject the body. The mesh collision
+    # approximation attribute MUST be the 'sdf' token (PhysxSchema.Tokens.sdf); merely
+    # applying PhysxSDFMeshCollisionAPI while leaving approximation 'none' makes PhysX
+    # treat it as a raw triangle mesh, which is INVALID for a dynamic body and silently
+    # falls back to convexHull (which fills the hole and ejects the grasped body).
+    use_sdf = collider == "sdf" and not kinematic and _HAS_PHYSX
+    if use_sdf:
+        approximation = PhysxSchema.Tokens.sdf
+    else:
+        approximation = APPROXIMATION_TOKENS.get(collider, APPROXIMATION_TOKENS["convexHull"])
 
     uv_mode = str(spec.get("uv") or "none")
     uv_used = set()
@@ -297,12 +310,20 @@ def _bake_rigid(stage: Usd.Stage, spec: dict, kinematic: bool) -> int:
             UsdPhysics.CollisionAPI.Apply(prim)
             mesh_collision = UsdPhysics.MeshCollisionAPI.Apply(prim)
             mesh_collision.CreateApproximationAttr(approximation)
-            if _HAS_PHYSX and not kinematic:
+            if _HAS_PHYSX:
                 if use_sdf:
                     sdf_api = PhysxSchema.PhysxSDFMeshCollisionAPI.Apply(prim)
                     sdf_api.CreateSdfResolutionAttr(int(spec.get("sdf_resolution", 256)))
-                elif collider == "convexHull":
+                elif collider == "convexHull" and not kinematic:
                     PhysxSchema.PhysxConvexHullCollisionAPI.Apply(prim)
+                elif collider == "convexDecomposition":
+                    # Many thin hulls so a bent wire is decomposed piece-by-piece (kept thin)
+                    # rather than bridged into a solid blob that would fill the ring's path.
+                    cd = PhysxSchema.PhysxConvexDecompositionCollisionAPI.Apply(prim)
+                    cd.CreateMaxConvexHullsAttr(int(spec.get("max_convex_hulls", 64)))
+                    cd.CreateHullVertexLimitAttr(int(spec.get("hull_vertex_limit", 64)))
+                    cd.CreateVoxelResolutionAttr(int(spec.get("voxel_resolution", 500000)))
+                    cd.CreateShrinkWrapAttr(True)
             binding = UsdShade.MaterialBindingAPI.Apply(prim)
             binding.Bind(material, UsdShade.Tokens.weakerThanDescendants, "physics")
         # Only synthesise UVs when the mesh has none, so we never clobber good ones.

@@ -19,6 +19,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+import numpy as np
 import torch
 
 import isaaclab.sim as sim_utils
@@ -39,6 +40,34 @@ EE_QUAT_DOWN = (0.0, 1.0, 0.0, 0.0)
 # panda_hand->fingertip ~0.112, ->grasp-center ~0.085).
 TIP_TO_HAND_Z = 0.10
 
+# Planner obstacle budget: the obstacle mesh is downsampled to at most this many
+# sphere centres for RRT (planning cost grows with the count). The sphere RADIUS
+# is then DERIVED from the resulting spacing (see ``_derive_obstacle_spheres``) so
+# the spheres tile the surface with no hand-tuned radius.
+MAX_OBSTACLE_SPHERES = 450
+
+
+def _derive_obstacle_spheres(points: np.ndarray, max_spheres: int = MAX_OBSTACLE_SPHERES):
+    """Downsample obstacle mesh ``points`` (M,3) to <= ``max_spheres`` centres and
+    derive the sphere radius from their spacing, so adjacent spheres overlap and
+    cover the surface (no gap the thin wire can leak through) without any
+    hand-tuned radius. Returns ``(centers list, radius float)`` or ``(None, 0.0)``.
+
+    The radius is half the 90th-percentile nearest-neighbour distance among the
+    centres: large enough that ~90% of neighbouring spheres touch (robust to a few
+    outlying points), small enough that the planner is not needlessly inflated."""
+    if points is None or len(points) == 0:
+        return None, 0.0
+    stride = max(1, points.shape[0] // max_spheres)
+    centers = points[::stride]
+    if centers.shape[0] < 2:
+        return centers.tolist(), 0.0
+    d = np.linalg.norm(centers[:, None, :] - centers[None, :, :], axis=2)
+    np.fill_diagonal(d, np.inf)
+    nn = d.min(axis=1)  # nearest-neighbour distance per centre
+    radius = 0.5 * float(np.percentile(nn, 90.0))
+    return centers.tolist(), radius
+
 
 @dataclass
 class Waypoint:
@@ -52,7 +81,7 @@ class Waypoint:
     label: str
     pos_w: tuple[float, float, float]
     quat_w: tuple[float, float, float, float] = EE_QUAT_DOWN
-    gripper: str = "open"  # "open" or "closed"
+    gripper: str | float = "open"  # "open", "narrow", "closed", or an explicit finger width
     duration_steps: int = 180
     via_points_w: list[tuple[float, float, float]] | None = None
 
@@ -96,6 +125,9 @@ class FrankaWaypointController:
         settle_steps: int = 30,
         tip_offset_z: float = TIP_TO_HAND_Z,
         planner=None,
+        on_grasp_complete=None,
+        on_release=None,
+        obstacle_points=None,
     ):
         self.robot = robot
         self.sim = sim
@@ -104,9 +136,24 @@ class FrankaWaypointController:
         self.gripper_closed = gripper_closed
         self.settle_steps = settle_steps
         self.tip_offset_z = tip_offset_z
+        # World-frame obstacle mesh points (M,3); downsampled into the sphere set the
+        # RRT planner routes every segment around (see ``_derive_obstacle_spheres``).
+        self.obstacle_points = (
+            np.asarray(obstacle_points, dtype=float) if obstacle_points is not None and len(obstacle_points) else None
+        )
+        # Full-obstacle (Cuboid) sphere set for AHA-style collision-free planning of EVERY
+        # segment (like RLBench's arm.get_path RRTConnect): a downsampled obstacle point
+        # cloud, each point a sphere for RRT. Both the count (budget) and the radius (from
+        # the resulting spacing) are derived, not hand-tuned.
+        self.obstacle_centers, self.cuboid_sphere_radius = _derive_obstacle_spheres(self.obstacle_points)
+        if self.obstacle_centers is not None:
+            print(f"[INFO]: RRT obstacle: {len(self.obstacle_centers)} spheres, "
+                  f"derived radius {self.cuboid_sphere_radius * 1000.0:.1f} mm.")
         # Optional external planner (e.g. RMPFlow). When set, follow() drives the
         # arm with it instead of differential IK; the gripper schedule is unchanged.
         self.planner = planner
+        self.on_grasp_complete = on_grasp_complete
+        self.on_release = on_release
         self.device = robot.device
         self.num_envs = robot.num_instances
 
@@ -134,6 +181,9 @@ class FrankaWaypointController:
         self._current_grip = gripper_open
         self._hold_arm_target = robot.data.joint_pos[:, self.arm_joint_ids].clone()
         self._nan_warned = False
+        self._grasp_callback_done = False
+        self._release_done = False
+        self._active_label = ""
 
     # ------------------------------------------------------------------
     # Low-level helpers.
@@ -149,8 +199,14 @@ class FrankaWaypointController:
                   "collider, e.g. an object). The arm will not move correctly. Check object physics.")
             self._nan_warned = True
 
-    def _grip_width(self, state: str) -> float:
-        return self.gripper_open if state == "open" else self.gripper_closed
+    def _grip_width(self, state: str | float) -> float:
+        if isinstance(state, (int, float)):
+            return float(min(max(state, self.gripper_closed), self.gripper_open))
+        if state == "open":
+            return self.gripper_open
+        if state == "narrow":
+            return float(min(self.gripper_open, max(self.gripper_closed, 0.012)))
+        return self.gripper_closed
 
     def _set_gripper(self, width: float):
         target = torch.full(
@@ -241,6 +297,14 @@ class FrankaWaypointController:
             self.planner.reset()
         self._hold_arm_target = robot.data.joint_pos[:, self.arm_joint_ids].clone()
 
+    def settle(self, steps: int):
+        """Step physics with the arm held at its current (home) posture so a free object
+        can settle into its resting contact before the motion begins - e.g. the wand's
+        ring dropping from its authored placement onto the buzz-wire rod under gravity.
+        The joint position targets persist across steps, so the arm stays put."""
+        for _ in range(int(steps)):
+            self._step()
+
     def _apply_planner_targets(self, target_w, quat_w):
         """One RMPFlow step toward (target_w, quat_w); writes arm joint targets."""
         self.planner.set_target(target_w, quat_w)
@@ -256,6 +320,7 @@ class FrankaWaypointController:
         """Drive the arm through waypoints with the external planner (RMPFlow)."""
         current_grip = self._current_grip
         for wp in waypoints:
+            self._active_label = wp.label
             targets = wp.via_points_w if wp.via_points_w else [wp.pos_w]
             target_grip = self._grip_width(wp.gripper)
             steps_each = max(wp.duration_steps // len(targets), 1)
@@ -301,6 +366,38 @@ class FrankaWaypointController:
             frac = (step_index + 1) / steps
             self._set_gripper(current_grip + (target_grip - current_grip) * frac)
             self._step()
+        return True
+
+    def _finish_planned_waypoint(self, wp: Waypoint, current_grip: float, target_grip: float) -> bool:
+        """After a planner-produced joint path, verify the hand actually reached the
+        waypoint and run the same grasp/release hooks used by differential IK.
+
+        Joint trajectory tracking can finish a few centimetres away from the Cartesian
+        target. The waypoint is still the contract, so add a short local IK correction
+        before advancing to the next recorded waypoint.
+        """
+        target_pos_b, _ = self._world_to_base(self._hand_target(wp.pos_w, wp.quat_w), wp.quat_w)
+        end_pos_b, end_quat_b = self._ee_pose_b()
+        hand_err = torch.linalg.norm(end_pos_b - target_pos_b, dim=-1).max().item()
+        if hand_err > 0.005:
+            print(
+                f"[INFO]: Planned waypoint '{wp.label}' ended {hand_err * 1000.0:.1f} mm off target; "
+                "running final differential-IK alignment."
+            )
+            align_wp = Waypoint(
+                f"{wp.label} final align",
+                wp.pos_w,
+                quat_w=wp.quat_w,
+                gripper=target_grip,
+                duration_steps=max(40, min(100, int(wp.duration_steps * 0.35))),
+            )
+            if self._diffik_segment(align_wp, end_pos_b.clone(), end_quat_b.clone(), target_grip) is None:
+                return False
+        else:
+            print(f"[INFO]: Planned waypoint '{wp.label}': final hand error = {hand_err * 1000.0:.1f} mm")
+
+        self._maybe_grasp(wp, current_grip, target_grip)
+        self._maybe_release(wp, current_grip, target_grip)
         return True
 
     def _follow_with_batch_planner(self, waypoints: list[Waypoint]):
@@ -357,16 +454,20 @@ class FrankaWaypointController:
                 continue
             positions, traj_names = segment
             print(f"[INFO]: [cuRobo] '{wp.label}': executing {positions.shape[0]}-point trajectory.")
+            self._active_label = wp.label
             if not self._execute_arm_trajectory(positions, traj_names, current_grip, target_grip, wp.duration_steps):
+                return
+            if not self._finish_planned_waypoint(wp, current_grip, target_grip):
                 return
             current_grip = target_grip
         print("[INFO]: [cuRobo] carry complete.")
 
     def _diffik_segment(self, wp: Waypoint, start_pos_b, start_quat_b, current_grip: float):
-        """Drive one waypoint with differential IK (shared by the default path and
-        the cuRobo fallback). Returns (target_pos_b, target_quat_b, target_grip), or
-        None if the app stopped mid-segment."""
+        """Drive one waypoint with differential IK (shared by the default path, the
+        RRT in-place/fallback path, and the cuRobo fallback). Returns
+        (target_pos_b, target_quat_b, target_grip), or None if the app stopped."""
         robot = self.robot
+        self._active_label = wp.label
         # Waypoints are gripper-tip targets; command the panda_hand above them.
         target_pos_b, target_quat_b = self._world_to_base(self._hand_target(wp.pos_w, wp.quat_w), wp.quat_w)
         target_grip = self._grip_width(wp.gripper)
@@ -400,12 +501,94 @@ class FrankaWaypointController:
             robot.set_joint_position_target(joint_pos_des, joint_ids=self.arm_joint_ids)
             self._set_gripper(current_grip + (target_grip - current_grip) * t)
             self._step()
-        return target_pos_b, target_quat_b, target_grip
+        end_pos_b, end_quat_b = self._ee_pose_b()
+        hand_err = torch.linalg.norm(end_pos_b - target_pos_b, dim=-1).max().item()
+        print(f"[INFO]: Waypoint tracking '{wp.label}': final hand error = {hand_err * 1000.0:.1f} mm")
+        self._maybe_grasp(wp, current_grip, target_grip)
+        # Detach AFTER the fingers have fully opened: while the grasp joint still holds the
+        # wand we open the fingers (so they stop pushing the rigidly-held handle), THEN drop
+        # the joint, so the wand falls/settles cleanly instead of popping out from the
+        # finger force stored against the immovable (joint-held) handle.
+        self._maybe_release(wp, current_grip, target_grip)
+        return end_pos_b, end_quat_b, target_grip
+
+    # ------------------------------------------------------------------
+    # Grasp / release hooks + AHA-style collision-free planning (Lula RRT).
+    # ------------------------------------------------------------------
+    def _maybe_grasp(self, wp, current_grip, target_grip):
+        if (
+            self.on_grasp_complete is not None
+            and not self._grasp_callback_done
+            and target_grip <= self.gripper_closed + 1.0e-4
+            and current_grip > self.gripper_closed + 1.0e-4
+        ):
+            self.on_grasp_complete(wp)
+            self._grasp_callback_done = True
+
+    def _maybe_release(self, wp, current_grip, target_grip):
+        """Fire ``on_release`` once, at the END of the segment that re-opens the gripper
+        after a grasp - i.e. AFTER the fingers have fully opened. The grasp ATTACHMENT
+        (gripper->object fixed joint) holds the object while the fingers open (so they stop
+        pushing the rigidly-held handle), then it is removed and the object falls/settles
+        cleanly instead of being flung out by the stored finger force."""
+        if (
+            self.on_release is not None
+            and self._grasp_callback_done
+            and not self._release_done
+            and current_grip <= self.gripper_closed + 1.0e-3
+            and target_grip > current_grip + 1.0e-4
+        ):
+            self.on_release(wp)
+            self._release_done = True
+
+    def _follow_planned(self, waypoints: list[Waypoint]):
+        """Plan EVERY segment collision-free against the whole obstacle (the Cuboid), the
+        way AHA/RLBench moves between waypoints (``arm.get_path`` with RRTConnect). This is
+        not linear-first: each move is routed around the full structure. A segment RRT cannot
+        plan (e.g. an in-place dwell, or a goal the conservative robot spheres treat as
+        touching the wand-on-structure - RLBench's ``ignore_collision`` case) falls back to a
+        straight differential-IK move."""
+        current_grip = self._current_grip
+        centers = self.obstacle_centers
+        for wp in waypoints:
+            target_grip = self._grip_width(wp.gripper)
+            hand_target_w = self._hand_target(wp.pos_w, wp.quat_w)
+            cur_hand = self.robot.data.body_pose_w[0, self.ee_body_id, 0:3].detach().cpu().numpy()
+            in_place = float(np.linalg.norm(np.array(hand_target_w) - cur_hand)) < 0.015
+            segment = None
+            if centers is not None and not in_place:
+                start_joints = self.robot.data.joint_pos[:, self.arm_joint_ids][0].detach().cpu().tolist()
+                print(f"[INFO]: [RRT] planning '{wp.label}' collision-free vs the Cuboid "
+                      f"({len(centers)} obstacle spheres)...")
+                segment = self.planner.plan_segment(
+                    start_joints, list(self._arm_names), hand_target_w, wp.quat_w,
+                    centers, self.cuboid_sphere_radius,
+                )
+            if segment is not None:
+                positions, names = segment
+                self._active_label = wp.label
+                steps = max(int(wp.duration_steps), positions.shape[0])
+                if not self._execute_arm_trajectory(positions, names, current_grip, target_grip, steps):
+                    return
+                if not self._finish_planned_waypoint(wp, current_grip, target_grip):
+                    return
+                current_grip = target_grip
+                continue
+            if not in_place:
+                print(f"[WARN]: [RRT] no plan for '{wp.label}'; straight differential-IK fallback.")
+            cur_pos_b, cur_quat_b = self._ee_pose_b()
+            result = self._diffik_segment(wp, cur_pos_b, cur_quat_b, current_grip)
+            if result is None:
+                return
+            current_grip = result[2]
+        print("[INFO]: [RRT] planned motion complete.")
 
     def follow(self, waypoints: list[Waypoint]):
         """Move the end-effector through ``waypoints`` (world frame), in order."""
         if self.planner is not None:
-            if hasattr(self.planner, "plan_all"):
+            if hasattr(self.planner, "plan_segment"):
+                self._follow_planned(waypoints)  # Lula RRT, collision-free every segment (AHA-style)
+            elif hasattr(self.planner, "plan_all"):
                 self._follow_with_batch_planner(waypoints)  # cuRobo (out-of-process)
             else:
                 self._follow_with_planner(waypoints)  # reactive (RMPFlow)
