@@ -1235,6 +1235,7 @@ def main():
         on_grasp_complete=on_grasp,
         on_release=on_release,
         obstacle_points=obstacle_points,
+        obstacle_margin=args_cli.rrt_safety_margin,
     )
     controller.apply_gripper_friction()
     watch_state = (

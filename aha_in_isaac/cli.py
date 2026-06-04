@@ -61,6 +61,16 @@ def build_parser() -> argparse.ArgumentParser:
         "(then the straight line runs as a fallback). Default 80000.",
     )
     parser.add_argument(
+        "--rrt-safety-margin",
+        type=float,
+        default=0.0,
+        metavar="METRES",
+        help="For --planner rrt: extra clearance the planner keeps from the obstacle (Cuboid). "
+        "It inflates every obstacle sphere by this much, so the planned arm path stays further "
+        "from the frame. Larger = safer but can make tight goals fall back to the straight line. "
+        "Try 0.02-0.05.",
+    )
+    parser.add_argument(
         "--curobo-obstacles",
         choices=("mesh", "bbox"),
         default="mesh",

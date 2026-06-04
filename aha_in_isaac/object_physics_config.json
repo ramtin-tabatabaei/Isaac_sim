@@ -88,16 +88,25 @@
     "Cuboid": {
       "type": "kinematic",
       "collision": true,
+      "collider": "convexDecomposition",
+      "max_convex_hulls": 96,
+      "static_friction": 5.0,
+      "dynamic_friction": 5.0,
       "uv": "auto"
     },
     "wand": {
       "type": "rigid",
-      "mass": 0.2,
+      "mass": 0.05,
+      "density": 0.0,
       "collider": "sdf",
       "sdf_resolution": 256,
       "static_friction": 5.0,
       "dynamic_friction": 5.0,
       "disable_gravity": false,
+      "ccd": true,
+      "max_depenetration_velocity": 3.0,
+      "contact_offset": 0.012,
+      "rest_offset": 0.0,
       "uv": "auto"
     },
     "wand_visual": {

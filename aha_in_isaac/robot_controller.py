@@ -128,6 +128,7 @@ class FrankaWaypointController:
         on_grasp_complete=None,
         on_release=None,
         obstacle_points=None,
+        obstacle_margin: float = 0.0,
     ):
         self.robot = robot
         self.sim = sim
@@ -146,9 +147,14 @@ class FrankaWaypointController:
         # cloud, each point a sphere for RRT. Both the count (budget) and the radius (from
         # the resulting spacing) are derived, not hand-tuned.
         self.obstacle_centers, self.cuboid_sphere_radius = _derive_obstacle_spheres(self.obstacle_points)
+        # Safety margin: inflate the obstacle spheres so the planner keeps the arm this much
+        # FURTHER from the frame (extra clearance). 0 = the bare derived radius.
+        if self.obstacle_centers is not None and obstacle_margin > 0.0:
+            self.cuboid_sphere_radius += float(obstacle_margin)
         if self.obstacle_centers is not None:
             print(f"[INFO]: RRT obstacle: {len(self.obstacle_centers)} spheres, "
-                  f"derived radius {self.cuboid_sphere_radius * 1000.0:.1f} mm.")
+                  f"radius {self.cuboid_sphere_radius * 1000.0:.1f} mm "
+                  f"(derived + {obstacle_margin * 1000.0:.0f} mm safety margin).")
         # Optional external planner (e.g. RMPFlow). When set, follow() drives the
         # arm with it instead of differential IK; the gripper schedule is unchanged.
         self.planner = planner

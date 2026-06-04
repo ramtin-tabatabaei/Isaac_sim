@@ -270,6 +270,10 @@ def _bake_rigid(stage: Usd.Stage, spec: dict, kinematic: bool) -> int:
             # exploding out of a deep penetration. Needs scene CCD on too.
             if spec.get("ccd") and not kinematic:
                 physx_rigid.CreateEnableCCDAttr(True)
+            # Cap the depenetration velocity so an SDF-vs-thin-rod contact resolves a deep
+            # overlap gently instead of explosively ejecting the body (the ring-on-rod case).
+            if spec.get("max_depenetration_velocity") is not None:
+                physx_rigid.CreateMaxDepenetrationVelocityAttr(float(spec["max_depenetration_velocity"]))
         mass_api = UsdPhysics.MassAPI.Apply(root)
         if spec.get("density") and float(spec["density"]) > 0.0:
             mass_api.CreateDensityAttr(float(spec["density"]))
@@ -324,6 +328,17 @@ def _bake_rigid(stage: Usd.Stage, spec: dict, kinematic: bool) -> int:
                     cd.CreateHullVertexLimitAttr(int(spec.get("hull_vertex_limit", 64)))
                     cd.CreateVoxelResolutionAttr(int(spec.get("voxel_resolution", 500000)))
                     cd.CreateShrinkWrapAttr(True)
+                # Widen the contact offset so a thin collider (the wand) registers contact
+                # EARLY - before a fast/stiff gripper or a drop can penetrate it. rest_offset
+                # keeps the resting separation at ~0 so it still sits flush on the rod.
+                co = spec.get("contact_offset")
+                ro = spec.get("rest_offset")
+                if co is not None or ro is not None:
+                    pc = PhysxSchema.PhysxCollisionAPI.Apply(prim)
+                    if co is not None:
+                        pc.CreateContactOffsetAttr(float(co))
+                    if ro is not None:
+                        pc.CreateRestOffsetAttr(float(ro))
             binding = UsdShade.MaterialBindingAPI.Apply(prim)
             binding.Bind(material, UsdShade.Tokens.weakerThanDescendants, "physics")
         # Only synthesise UVs when the mesh has none, so we never clobber good ones.
