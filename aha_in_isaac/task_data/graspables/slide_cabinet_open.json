@@ -1,0 +1,137 @@
+{
+  "graspable_objects": [],
+  "other_scene_objects": [
+    {
+      "fixed_offset_from_reference_local_xyz_m": null,
+      "fixed_offset_from_reference_xyz_m": null,
+      "fixed_orientation_from_reference_rpy_rad": null,
+      "has_separate_distribution": false,
+      "name": "cabinet_base",
+      "reference_graspable_object": null,
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.570795,
+          0.771657,
+          -4e-06
+        ],
+        "position_xyz_m": [
+          0.373095,
+          -0.010697,
+          0.844998
+        ],
+        "quaternion_xyzw": [
+          -0.655125,
+          0.266102,
+          -0.266104,
+          0.655125
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.520004,
+        "x_uniform_min_m": 0.002725,
+        "y_uniform_max_m": 0.376095,
+        "y_uniform_min_m": -0.376678,
+        "z_fixed_m": 0.844998
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": null,
+      "fixed_offset_from_reference_xyz_m": null,
+      "fixed_orientation_from_reference_rpy_rad": null,
+      "has_separate_distribution": false,
+      "name": "left_board0",
+      "reference_graspable_object": null,
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.570599,
+          0.771612,
+          9.2e-05
+        ],
+        "position_xyz_m": [
+          0.381161,
+          0.07214,
+          0.855998
+        ],
+        "quaternion_xyzw": [
+          -0.655054,
+          0.266145,
+          -0.266032,
+          0.655208
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.50032,
+        "x_uniform_min_m": -0.07999,
+        "y_uniform_max_m": 0.386208,
+        "y_uniform_min_m": -0.293956,
+        "z_fixed_m": 0.855998
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": null,
+      "fixed_offset_from_reference_xyz_m": null,
+      "fixed_orientation_from_reference_rpy_rad": null,
+      "has_separate_distribution": false,
+      "name": "right_board",
+      "reference_graspable_object": null,
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.570989,
+          -0.771628,
+          -3.141442
+        ],
+        "position_xyz_m": [
+          0.293367,
+          -0.023809,
+          0.855999
+        ],
+        "quaternion_xyzw": [
+          0.266117,
+          0.655172,
+          -0.655086,
+          -0.26607
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.501726,
+        "x_uniform_min_m": -0.075763,
+        "y_uniform_max_m": 0.29619,
+        "y_uniform_min_m": -0.389086,
+        "z_fixed_m": 0.855999
+      }
+    }
+  ],
+  "task_base_rotation_rz_bounds_rad": [
+    -0.785,
+    0.785
+  ],
+  "task_boundary_root": "slide_cabinet_open",
+  "task_boundary_root_world_pose_after_reset": {
+    "kind": "exact",
+    "orientation_rpy_rad": [
+      0.0,
+      0.0,
+      -0.771657
+    ],
+    "position_xyz_m": [
+      0.30001,
+      0.059018,
+      0.752
+    ],
+    "quaternion_xyzw": [
+      0.0,
+      0.0,
+      -0.376327,
+      0.926487
+    ],
+    "source": "exact_after_one_rlbench_reset"
+  },
+  "type": "Uniform for x/y; fixed z",
+  "units": "meters"
+}

@@ -1,0 +1,172 @@
+{
+  "graspable_objects": [],
+  "other_scene_objects": [
+    {
+      "fixed_offset_from_reference_local_xyz_m": null,
+      "fixed_offset_from_reference_xyz_m": null,
+      "fixed_orientation_from_reference_rpy_rad": null,
+      "has_separate_distribution": false,
+      "name": "toilet_seat_up_toilet",
+      "reference_graspable_object": null,
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.021179,
+          -0.012505,
+          1.777907
+        ],
+        "position_xyz_m": [
+          0.170109,
+          -0.210436,
+          0.981921
+        ],
+        "quaternion_xyzw": [
+          0.001819,
+          -0.012162,
+          0.776312,
+          0.630229
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.49688,
+        "x_uniform_min_m": 0.007908,
+        "y_uniform_max_m": 0.295382,
+        "y_uniform_min_m": -0.250217,
+        "z_fixed_m": 0.981921
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": null,
+      "fixed_offset_from_reference_xyz_m": null,
+      "fixed_orientation_from_reference_rpy_rad": null,
+      "has_separate_distribution": false,
+      "name": "toilet",
+      "reference_graspable_object": null,
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -3.141579,
+          5.4e-05,
+          2.935006
+        ],
+        "position_xyz_m": [
+          0.339265,
+          -0.174795,
+          1.114224
+        ],
+        "quaternion_xyzw": [
+          -0.10311,
+          0.99467,
+          4e-06,
+          2.7e-05
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.555276,
+        "x_uniform_min_m": -0.050226,
+        "y_uniform_max_m": 0.162802,
+        "y_uniform_min_m": -0.406641,
+        "z_fixed_m": 1.114224
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": null,
+      "fixed_offset_from_reference_xyz_m": null,
+      "fixed_orientation_from_reference_rpy_rad": null,
+      "has_separate_distribution": false,
+      "name": "toilet_seat_up_respondable",
+      "reference_graspable_object": null,
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1e-05,
+          4.9e-05,
+          1.77739
+        ],
+        "position_xyz_m": [
+          0.205063,
+          -0.203942,
+          0.951838
+        ],
+        "quaternion_xyzw": [
+          1.6e-05,
+          2e-05,
+          0.77625,
+          0.630425
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.471171,
+        "x_uniform_min_m": 0.032465,
+        "y_uniform_max_m": 0.261027,
+        "y_uniform_min_m": -0.275925,
+        "z_fixed_m": 0.951838
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": null,
+      "fixed_offset_from_reference_xyz_m": null,
+      "fixed_orientation_from_reference_rpy_rad": null,
+      "has_separate_distribution": false,
+      "name": "toilet_seat_up_seat",
+      "reference_graspable_object": null,
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.105409,
+          -0.17092,
+          2.931909
+        ],
+        "position_xyz_m": [
+          0.269162,
+          -0.190737,
+          1.11162
+        ],
+        "quaternion_xyzw": [
+          -0.102715,
+          0.990879,
+          -0.008995,
+          -0.08676
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.503583,
+        "x_uniform_min_m": -0.000263,
+        "y_uniform_max_m": 0.214495,
+        "y_uniform_min_m": -0.334969,
+        "z_fixed_m": 1.11162
+      }
+    }
+  ],
+  "task_base_rotation_rz_bounds_rad": [
+    -0.785398,
+    0.785398
+  ],
+  "task_boundary_root": "toilet_seat_down",
+  "task_boundary_root_world_pose_after_reset": {
+    "kind": "exact",
+    "orientation_rpy_rad": [
+      -0.0,
+      0.0,
+      1.777382
+    ],
+    "position_xyz_m": [
+      0.213433,
+      -0.196625,
+      0.752
+    ],
+    "quaternion_xyzw": [
+      0.0,
+      0.0,
+      0.776247,
+      0.630428
+    ],
+    "source": "exact_after_one_rlbench_reset"
+  },
+  "type": "Uniform for x/y; fixed z",
+  "units": "meters"
+}

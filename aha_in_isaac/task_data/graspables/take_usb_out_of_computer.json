@@ -1,0 +1,355 @@
+{
+  "graspable_objects": [
+    {
+      "fixed_offset_from_task_boundary_root_xyz_m": [
+        -0.089149,
+        0.068079,
+        0.124067
+      ],
+      "fixed_orientation_from_task_boundary_root_rpy_rad": [
+        -1.569549,
+        -0.00608,
+        -1.487448
+      ],
+      "name": "usb",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.569548,
+          0.038983,
+          -1.487504
+        ],
+        "position_xyz_m": [
+          0.112716,
+          0.273833,
+          0.876067
+        ],
+        "quaternion_xyzw": [
+          -0.529296,
+          -0.468211,
+          -0.489093,
+          0.511284
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_distribution": {
+        "x_uniform_max_m": 0.68217,
+        "x_uniform_min_m": 0.021838,
+        "y_uniform_max_m": 0.438316,
+        "y_uniform_min_m": -0.126165,
+        "z_fixed_m": 0.876067
+      }
+    }
+  ],
+  "other_scene_objects": [
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        0.041564,
+        -0.034014,
+        -0.259847
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        -0.040542,
+        -0.258518,
+        0.043927
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        -0.006163,
+        -0.000735,
+        1.487426
+      ],
+      "has_separate_distribution": false,
+      "name": "computer",
+      "reference_graspable_object": "usb",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.570795,
+          0.045063,
+          -2.4e-05
+        ],
+        "position_xyz_m": [
+          0.072173,
+          0.015315,
+          0.919994
+        ],
+        "quaternion_xyzw": [
+          -0.706927,
+          0.015923,
+          -0.015939,
+          0.706928
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.795365,
+        "x_uniform_min_m": -0.091357,
+        "y_uniform_max_m": 0.551512,
+        "y_uniform_min_m": -0.239359,
+        "z_fixed_m": 0.919994
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        -0.000506,
+        0.00015,
+        -0.018713
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        -0.000622,
+        -0.018702,
+        -0.00054
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        0.0,
+        1.570451,
+        -1e-06
+      ],
+      "has_separate_distribution": false,
+      "name": "tip",
+      "reference_graspable_object": "usb",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.004675,
+          0.08322,
+          -1.60993
+        ],
+        "position_xyz_m": [
+          0.112093,
+          0.255131,
+          0.875527
+        ],
+        "quaternion_xyzw": [
+          -0.028365,
+          0.030517,
+          -0.720113,
+          0.692605
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.671712,
+        "x_uniform_min_m": 0.032297,
+        "y_uniform_max_m": 0.427857,
+        "y_uniform_min_m": -0.115706,
+        "z_fixed_m": 0.875527
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        0.03872,
+        -0.028254,
+        -0.011878
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        -0.025379,
+        -0.010949,
+        0.040923
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        -0.006161,
+        -0.00071,
+        -1.65417
+      ],
+      "has_separate_distribution": false,
+      "name": "Plane",
+      "reference_graspable_object": "usb",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.57077,
+          0.045063,
+          3.141564
+        ],
+        "position_xyz_m": [
+          0.087337,
+          0.262884,
+          0.91699
+        ],
+        "quaternion_xyzw": [
+          0.015921,
+          0.706918,
+          0.706937,
+          0.015941
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.697019,
+        "x_uniform_min_m": 0.00699,
+        "y_uniform_max_m": 0.453164,
+        "y_uniform_min_m": -0.141012,
+        "z_fixed_m": 0.91699
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        0.029176,
+        -0.122384,
+        -0.27431
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        -0.130133,
+        -0.269492,
+        0.03892
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        -1.576898,
+        0.083373,
+        3.140854
+      ],
+      "has_separate_distribution": false,
+      "name": "Plane0",
+      "reference_graspable_object": "usb",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.570205,
+          1.525735,
+          -1.570205
+        ],
+        "position_xyz_m": [
+          -0.017417,
+          0.004341,
+          0.914987
+        ],
+        "quaternion_xyzw": [
+          0.015931,
+          0.706918,
+          -0.015931,
+          0.706937
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.862749,
+        "x_uniform_min_m": -0.158739,
+        "y_uniform_max_m": 0.618895,
+        "y_uniform_min_m": -0.306742,
+        "z_fixed_m": 0.914987
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        0.048235,
+        0.057651,
+        -0.275406
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        0.050684,
+        -0.277646,
+        0.042925
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        -1.576898,
+        0.083373,
+        3.140854
+      ],
+      "has_separate_distribution": false,
+      "name": "Plane1",
+      "reference_graspable_object": "usb",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.570202,
+          1.525733,
+          -1.570202
+        ],
+        "position_xyz_m": [
+          0.163399,
+          -0.003813,
+          0.918992
+        ],
+        "quaternion_xyzw": [
+          0.015931,
+          0.706918,
+          -0.015931,
+          0.706937
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.778628,
+        "x_uniform_min_m": -0.07462,
+        "y_uniform_max_m": 0.534775,
+        "y_uniform_min_m": -0.222623,
+        "z_fixed_m": 0.918992
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        0.039002,
+        -0.032314,
+        -0.508863
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        -0.048767,
+        -0.507399,
+        0.040922
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        3.135431,
+        0.00071,
+        -1.487423
+      ],
+      "has_separate_distribution": false,
+      "name": "Plane2",
+      "reference_graspable_object": "usb",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.570823,
+          -0.045063,
+          2.8e-05
+        ],
+        "position_xyz_m": [
+          0.063949,
+          -0.233566,
+          0.916989
+        ],
+        "quaternion_xyzw": [
+          0.706936,
+          -0.015941,
+          -0.015921,
+          0.706918
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 1.025748,
+        "x_uniform_min_m": -0.321743,
+        "y_uniform_max_m": 0.781897,
+        "y_uniform_min_m": -0.469744,
+        "z_fixed_m": 0.916989
+      }
+    }
+  ],
+  "task_base_rotation_rz_bounds_rad": [
+    -3.14,
+    3.14
+  ],
+  "task_boundary_root": "take_usb_out_of_computer",
+  "task_boundary_root_world_pose_after_reset": {
+    "kind": "exact",
+    "orientation_rpy_rad": [
+      0.0,
+      0.0,
+      -0.045063
+    ],
+    "position_xyz_m": [
+      0.198707,
+      0.201807,
+      0.752
+    ],
+    "quaternion_xyzw": [
+      0.0,
+      0.0,
+      -0.02253,
+      0.999746
+    ],
+    "source": "exact_after_one_rlbench_reset"
+  },
+  "type": "Uniform for x/y; fixed z",
+  "units": "meters"
+}

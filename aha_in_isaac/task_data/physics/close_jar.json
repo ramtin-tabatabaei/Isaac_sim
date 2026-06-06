@@ -1,0 +1,33 @@
+{
+  "shapes": {
+    "jar0": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.09007201343774796,
+      "friction": 0.7099999785423279
+    },
+    "jar1": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.09007201343774796,
+      "friction": 0.7099999785423279
+    },
+    "spawn_boundary": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.12404656410217285,
+      "friction": 0.5
+    },
+    "jar_lid0": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 1.0,
+      "friction": 0.7099999785423279
+    }
+  },
+  "joints": {}
+}

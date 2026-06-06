@@ -1,0 +1,50 @@
+{
+  "plug": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "task_wall": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "charger_boundary": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "hole0": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "hole1": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "charger": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "hole_visual0": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "hole_visual1": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "charger_visual": {
+    "type": "visual"
+  },
+  "detector1": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "detector2": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  }
+}

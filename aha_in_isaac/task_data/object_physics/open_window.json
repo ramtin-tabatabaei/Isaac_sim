@@ -1,0 +1,46 @@
+{
+  "boundary_root": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "window_main": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "right_frame": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "window_wall0": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "window_main_visual": {
+    "type": "visual"
+  },
+  "right_frame_visual": {
+    "type": "visual"
+  },
+  "left_frame": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "window_left": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "left_frame_visual": {
+    "type": "visual"
+  },
+  "left_handle": {
+    "type": "rigid",
+    "density": 400.0,
+    "uv": "auto"
+  },
+  "left_handle_visual": {
+    "type": "visual"
+  }
+}

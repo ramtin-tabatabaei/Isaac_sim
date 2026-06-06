@@ -1,0 +1,36 @@
+{
+  "shapes": {
+    "box_base": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 1.8875000476837158,
+      "friction": 0,
+      "collider": "convexDecomposition"
+    },
+    "box_lid": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "density": 600.0,
+      "material": "wood",
+      "friction": 0,
+      "collider": "convexHull",
+      "contact_offset": 0.01,
+      "ccd": true,
+      "hinge_collision_trim_m": 0.09
+    }
+  },
+  "joints": {
+    "box_joint": {
+      "type": "revolute",
+      "cyclic": false,
+      "lower": -180.0,
+      "upper": -27.5,
+      "position": -27.5,
+      "damping": 0.01,
+      "friction": 0,
+      "collision": true
+    }
+  }
+}

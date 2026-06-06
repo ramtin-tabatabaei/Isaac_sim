@@ -1,0 +1,287 @@
+[
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": null,
+    "end_effector_relative_to_waypoint_after_waypoint": null,
+    "fixed_offset_xyz_m": [
+      -0.0,
+      -1e-06,
+      -0.083017
+    ],
+    "fixed_orientation_rpy_rad": [
+      -0.0,
+      0.0,
+      -0.0
+    ],
+    "motion_type": "point",
+    "name": "waypoint0",
+    "parent": "waypoint1",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "position_xyz_m": [
+          -0.0,
+          -1e-06,
+          -0.083017
+        ],
+        "quaternion_xyzw": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "waypoint",
+      "reference_name": "waypoint1"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.570806,
+          0.0,
+          0.0
+        ],
+        "position_xyz_m": [
+          0.011999,
+          0.169016,
+          0.113003
+        ],
+        "quaternion_xyzw": [
+          0.70711,
+          -0.0,
+          0.0,
+          0.707103
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "play_jenga"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570806,
+        0.167167,
+        -2e-06
+      ],
+      "position_xyz_m": [
+        0.391121,
+        0.054881,
+        0.865003
+      ],
+      "quaternion_xyzw": [
+        0.704642,
+        0.059034,
+        0.059033,
+        0.704635
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      1.570806,
+      0.167167,
+      -2e-06
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": null,
+    "end_effector_relative_to_waypoint_after_waypoint": null,
+    "fixed_offset_xyz_m": [
+      0.011999,
+      0.085999,
+      0.113003
+    ],
+    "fixed_orientation_rpy_rad": [
+      1.570806,
+      0.0,
+      0.0
+    ],
+    "motion_type": "point",
+    "name": "waypoint1",
+    "parent": "play_jenga",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.570806,
+          0.0,
+          0.0
+        ],
+        "position_xyz_m": [
+          0.011999,
+          0.085999,
+          0.113003
+        ],
+        "quaternion_xyzw": [
+          0.70711,
+          0.0,
+          0.0,
+          0.707103
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "play_jenga"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.570806,
+          0.0,
+          0.0
+        ],
+        "position_xyz_m": [
+          0.011999,
+          0.085999,
+          0.113003
+        ],
+        "quaternion_xyzw": [
+          0.70711,
+          0.0,
+          0.0,
+          0.707103
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "play_jenga"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570806,
+        0.167167,
+        -2e-06
+      ],
+      "position_xyz_m": [
+        0.404934,
+        -0.026978,
+        0.865003
+      ],
+      "quaternion_xyzw": [
+        0.704642,
+        0.059034,
+        0.059033,
+        0.704635
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      1.570806,
+      0.167167,
+      -2e-06
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": null,
+    "end_effector_relative_to_waypoint_after_waypoint": null,
+    "fixed_offset_xyz_m": [
+      -0.0,
+      -2e-06,
+      -0.178011
+    ],
+    "fixed_orientation_rpy_rad": [
+      -0.0,
+      0.0,
+      -0.0
+    ],
+    "motion_type": "point",
+    "name": "waypoint2",
+    "parent": "waypoint1",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "position_xyz_m": [
+          -0.0,
+          -2e-06,
+          -0.178011
+        ],
+        "quaternion_xyzw": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "waypoint",
+      "reference_name": "waypoint1"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.570806,
+          0.0,
+          0.0
+        ],
+        "position_xyz_m": [
+          0.011999,
+          0.26401,
+          0.113003
+        ],
+        "quaternion_xyzw": [
+          0.70711,
+          -0.0,
+          0.0,
+          0.707103
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "play_jenga"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570806,
+        0.167167,
+        -2e-06
+      ],
+      "position_xyz_m": [
+        0.375315,
+        0.148551,
+        0.865003
+      ],
+      "quaternion_xyzw": [
+        0.704642,
+        0.059034,
+        0.059033,
+        0.704635
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      1.570806,
+      0.167167,
+      -2e-06
+    ]
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "task_name": "open_wine_bottle",
+  "root_object": "open_wine_bottle",
+  "placement_ranges": {
+    "meaning": "Only objects with placement_range are randomized by RLBench. Objects without placement_range are exact in the sampled reset, usually fixed relative to their parent or nearest graspable.",
+    "task_root_x_uniform_range_m": [
+      0.044529,
+      0.57
+    ],
+    "task_root_y_uniform_range_m": [
+      -0.436545,
+      0.369929
+    ],
+    "task_root_z_fixed_m": 0.752
+  },
+  "units_and_conventions": {
+    "exact_location_meaning": "A measured pose from the imported .ttm, one RLBench reset, or after reaching one waypoint.",
+    "orientation_rpy_order": [
+      "roll_x",
+      "pitch_y",
+      "yaw_z"
+    ],
+    "position_order": [
+      "x",
+      "y",
+      "z"
+    ],
+    "position_units": "meters",
+    "quaternion_order": "xyzw for PyRep pose fields",
+    "range_location_meaning": "A RLBench placement distribution; sample x/y uniformly in the listed bounds and keep z fixed.",
+    "rotation_units": "radians"
+  },
+  "schema_name": "scene_objects_robot_base_waypoint_end_effector",
+  "schema_version": 5,
+  "source_ttm_path": "/home/ramtin/RLBench/rlbench/task_ttms/open_wine_bottle.ttm",
+  "runtime_generated_scene_objects_excluded": [],
+  "end_effector_collection_error": null
+}

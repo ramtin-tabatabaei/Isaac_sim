@@ -1,0 +1,54 @@
+{
+  "shapes": {
+    "frame": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.02543305978178978,
+      "friction": 0.7099999785423279
+    },
+    "task_wall": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.08000001311302185,
+      "friction": 0.5
+    },
+    "frame_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.010433061048388481,
+      "friction": 0.7099999785423279
+    },
+    "frame_detector": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.015999997034668922,
+      "friction": 0.5
+    },
+    "Cuboid2": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.014999997802078724,
+      "friction": 0.7099999785423279
+    },
+    "picture": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.03200000151991844,
+      "friction": 0.5
+    },
+    "hanger": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.01178097166121006,
+      "friction": 0.5
+    }
+  },
+  "joints": {}
+}

@@ -1,0 +1,60 @@
+{
+  "shapes": {
+    "tap_main": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 10.0,
+      "friction": 0.7099999785423279
+    },
+    "tap_main_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 5.0,
+      "friction": 0.7099999785423279
+    },
+    "tap_left": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 2.0,
+      "friction": 0.7099999785423279
+    },
+    "tap_right": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 2.0,
+      "friction": 0.7099999785423279
+    },
+    "tap_left_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 6.0,
+      "friction": 0.7099999785423279
+    },
+    "tap_right_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 6.0,
+      "friction": 0.7099999785423279
+    }
+  },
+  "joints": {
+    "left_joint": {
+      "type": "revolute",
+      "cyclic": true,
+      "lower": -180.00000500895632,
+      "upper": 180.00000500895632
+    },
+    "right_joint": {
+      "type": "revolute",
+      "cyclic": true,
+      "lower": -180.00000500895632,
+      "upper": 180.00000500895632
+    }
+  }
+}

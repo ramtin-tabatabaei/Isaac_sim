@@ -1,0 +1,445 @@
+[
+  {
+    "handle": 81,
+    "hierarchy_path": "close_door/boundary_root",
+    "name": "boundary_root",
+    "parent": "close_door",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        0.0,
+        -0.55446
+      ],
+      "position_xyz_m": [
+        -0.006863,
+        0.054393,
+        1e-06
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        -0.273692,
+        0.961817
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": null,
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        0.0,
+        -0.55446
+      ],
+      "position_xyz_m": [
+        0.243137,
+        0.054393,
+        0.752001
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        -0.273692,
+        0.961817
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.3725,
+      "x_uniform_min_m": 0.1275,
+      "y_uniform_max_m": 0.239,
+      "y_uniform_min_m": -0.239,
+      "z_fixed_m": 0.752
+    }
+  },
+  {
+    "handle": 82,
+    "hierarchy_path": "close_door/boundary_root/door_frame",
+    "name": "door_frame",
+    "parent": "boundary_root",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.141584,
+        -2.3e-05,
+        3.141579
+      ],
+      "position_xyz_m": [
+        0.204991,
+        -0.006292,
+        0.469592
+      ],
+      "quaternion_xyzw": [
+        -7e-06,
+        1.0,
+        4e-06,
+        -1.2e-05
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.141584,
+        -2.3e-05,
+        3.141579
+      ],
+      "position_xyz_m": [
+        0.204991,
+        -0.006292,
+        0.469592
+      ],
+      "quaternion_xyzw": [
+        -7e-06,
+        1.0,
+        4e-06,
+        -1.2e-05
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.141573,
+        -1.5e-05,
+        -2.587146
+      ],
+      "position_xyz_m": [
+        0.414105,
+        -0.058881,
+        1.221593
+      ],
+      "quaternion_xyzw": [
+        0.273686,
+        0.961819,
+        7e-06,
+        -1e-05
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.577588,
+      "x_uniform_min_m": 0.268001,
+      "y_uniform_max_m": 0.379501,
+      "y_uniform_min_m": -0.3884,
+      "z_fixed_m": 1.221592
+    }
+  },
+  {
+    "handle": 84,
+    "hierarchy_path": "close_door/boundary_root/door_frame/door_frame_joint/door_main",
+    "name": "door_main",
+    "parent": "door_frame_joint",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570796,
+        -0.0,
+        -1.570766
+      ],
+      "position_xyz_m": [
+        -0.197328,
+        3.5e-05,
+        1e-06
+      ],
+      "quaternion_xyzw": [
+        -0.500008,
+        -0.499992,
+        0.499992,
+        -0.500008
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570812,
+        1.047209,
+        1.570789
+      ],
+      "position_xyz_m": [
+        0.313537,
+        -0.033272,
+        0.463213
+      ],
+      "quaternion_xyzw": [
+        0.683016,
+        -0.183012,
+        0.683012,
+        0.183006
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570805,
+        0.492749,
+        1.570798
+      ],
+      "position_xyz_m": [
+        0.492184,
+        -0.138966,
+        1.215214
+      ],
+      "quaternion_xyzw": [
+        0.606848,
+        -0.36296,
+        0.606845,
+        0.362953
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.687797,
+      "x_uniform_min_m": 0.325677,
+      "y_uniform_max_m": 0.437177,
+      "y_uniform_min_m": -0.484231,
+      "z_fixed_m": 1.215213
+    }
+  },
+  {
+    "handle": 91,
+    "hierarchy_path": "close_door/boundary_root/door_frame/door_frame_joint/door_main/door_main_visible",
+    "name": "door_main_visible",
+    "parent": "door_main",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570796,
+        -9e-06
+      ],
+      "position_xyz_m": [
+        -0.008545,
+        0.001535,
+        0.000274
+      ],
+      "quaternion_xyzw": [
+        -4.8e-05,
+        0.707106,
+        4.1e-05,
+        0.707108
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.00012,
+        -5.7e-05,
+        2.617996
+      ],
+      "position_xyz_m": [
+        0.313006,
+        -0.034738,
+        0.454668
+      ],
+      "quaternion_xyzw": [
+        -1.2e-05,
+        -6.5e-05,
+        0.965926,
+        0.258818
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        7.2e-05,
+        -0.000111,
+        2.063537
+      ],
+      "position_xyz_m": [
+        0.490961,
+        -0.139933,
+        1.206669
+      ],
+      "quaternion_xyzw": [
+        -2.9e-05,
+        -5.9e-05,
+        0.858208,
+        0.513302
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.687428,
+      "x_uniform_min_m": 0.324265,
+      "y_uniform_max_m": 0.435765,
+      "y_uniform_min_m": -0.484892,
+      "z_fixed_m": 1.206668
+    }
+  },
+  {
+    "handle": 86,
+    "hierarchy_path": "close_door/boundary_root/door_frame/door_frame_joint/door_main/door_handle_joint/open_door_handle",
+    "name": "open_door_handle",
+    "parent": "door_handle_joint",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.019918,
+        -6.7e-05,
+        1.571066
+      ],
+      "position_xyz_m": [
+        -0.029158,
+        -2e-06,
+        0.012499
+      ],
+      "quaternion_xyzw": [
+        0.007017,
+        -0.007066,
+        0.707167,
+        0.706977
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.610618,
+        1.047696,
+        1.585267
+      ],
+      "position_xyz_m": [
+        0.387477,
+        0.094915,
+        0.473757
+      ],
+      "quaternion_xyzw": [
+        0.685124,
+        -0.201368,
+        0.680489,
+        0.164288
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.593381,
+        0.493473,
+        1.609068
+      ],
+      "position_xyz_m": [
+        0.622535,
+        -0.068912,
+        1.225758
+      ],
+      "quaternion_xyzw": [
+        0.603851,
+        -0.381192,
+        0.609542,
+        0.34426
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.771433,
+      "x_uniform_min_m": 0.334373,
+      "y_uniform_max_m": 0.580103,
+      "y_uniform_min_m": -0.445873,
+      "z_fixed_m": 1.225757
+    }
+  },
+  {
+    "handle": 88,
+    "hierarchy_path": "close_door/boundary_root/door_frame/door_frame_joint/door_main/door_handle_joint/open_door_handle/door_handle_visible",
+    "name": "door_handle_visible",
+    "parent": "open_door_handle",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.141458,
+        -0.019922,
+        0.000249
+      ],
+      "position_xyz_m": [
+        0.003196,
+        -0.001048,
+        0.000272
+      ],
+      "quaternion_xyzw": [
+        -0.99995,
+        0.000124,
+        0.009961,
+        6.6e-05
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570827,
+        -1.047198,
+        -1.619538
+      ],
+      "position_xyz_m": [
+        0.388213,
+        0.095518,
+        0.476995
+      ],
+      "quaternion_xyzw": [
+        -0.166325,
+        -0.687273,
+        -0.199592,
+        0.678348
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570814,
+        -0.492739,
+        -1.61952
+      ],
+      "position_xyz_m": [
+        0.623479,
+        -0.068787,
+        1.228995
+      ],
+      "quaternion_xyzw": [
+        -0.348075,
+        -0.615509,
+        -0.377629,
+        0.59782
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.772292,
+      "x_uniform_min_m": 0.334467,
+      "y_uniform_max_m": 0.58105,
+      "y_uniform_min_m": -0.445967,
+      "z_fixed_m": 1.228994
+    }
+  }
+]

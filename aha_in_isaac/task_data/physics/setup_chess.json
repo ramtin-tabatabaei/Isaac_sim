@@ -1,0 +1,488 @@
+{
+  "shapes": {
+    "chess_board_base": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 3.7967171669006348,
+      "friction": 0.5
+    },
+    "chess_board_surface": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 3.830699643003754e-05,
+      "friction": 0.5
+    },
+    "chess_board_base_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.001237940276041627,
+      "friction": 0.7099999785423279
+    },
+    "white_squares": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 31.999996185302734,
+      "friction": 0.7099999785423279
+    },
+    "black_squares": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 31.999998092651367,
+      "friction": 0.7099999785423279
+    },
+    "white_queenside_knight_dynamic": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.0960383489727974,
+      "friction": 0.5
+    },
+    "white_kingside_knight_dynamic": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.0960383489727974,
+      "friction": 0.5
+    },
+    "white_pawn_a_dynamic": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.07990869134664536,
+      "friction": 0.5
+    },
+    "white_pawn_b_dynamic": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.07990869134664536,
+      "friction": 0.5
+    },
+    "white_pawn_c_dynamic": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.07990869134664536,
+      "friction": 0.5
+    },
+    "white_pawn_d_dynamic": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.07990869134664536,
+      "friction": 0.5
+    },
+    "white_pawn_e_dynamic": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.07990869134664536,
+      "friction": 0.5
+    },
+    "white_pawn_f_dynamic": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.07990869134664536,
+      "friction": 0.5
+    },
+    "white_pawn_g_dynamic": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.07990869134664536,
+      "friction": 0.5
+    },
+    "white_pawn_h_dynamic": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.07990869134664536,
+      "friction": 0.5
+    },
+    "white_queenside_rook_dynamic": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.06951330602169037,
+      "friction": 0.5
+    },
+    "white_kingside_rook_dynamic": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.06951329857110977,
+      "friction": 0.5
+    },
+    "white_queenside_bishop_dynamic": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.10272461920976639,
+      "friction": 0.5
+    },
+    "white_kingside_bishop_dynamic": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.10272461920976639,
+      "friction": 0.5
+    },
+    "white_queen_dynamic": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.10691852867603302,
+      "friction": 0.5
+    },
+    "white_king_dynamic": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.113239586353302,
+      "friction": 0.5
+    },
+    "black_queenside_knight_dynamic": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.0960383489727974,
+      "friction": 0.5
+    },
+    "black_kingside_knight_dynamic": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.0960383489727974,
+      "friction": 0.5
+    },
+    "black_pawn_f_dynamic": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.07990869879722595,
+      "friction": 0.5
+    },
+    "black_pawn_a_dynamic": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.07990869879722595,
+      "friction": 0.5
+    },
+    "black_pawn_b_dynamic": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.07990869879722595,
+      "friction": 0.5
+    },
+    "black_pawn_c_dynamic": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.07990869879722595,
+      "friction": 0.5
+    },
+    "black_pawn_d_dynamic": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.07990869879722595,
+      "friction": 0.5
+    },
+    "black_pawn_e_dynamic": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.07990869879722595,
+      "friction": 0.5
+    },
+    "black_pawn_g_dynamic": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.07990869879722595,
+      "friction": 0.5
+    },
+    "black_pawn_h_dynamic": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.07990869879722595,
+      "friction": 0.5
+    },
+    "black_queenside_rook_dynamic": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.06951330602169037,
+      "friction": 0.5
+    },
+    "black_kingside_rook_dynamic": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.06951329857110977,
+      "friction": 0.5
+    },
+    "black_queenside_bishop_dynamic": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.10272461920976639,
+      "friction": 0.5
+    },
+    "black_kingside_bishop_dynamic": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.10272461920976639,
+      "friction": 0.5
+    },
+    "black_king_dynamic": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.113239586353302,
+      "friction": 0.5
+    },
+    "black_queen_dynamic": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.10691852867603302,
+      "friction": 0.5
+    },
+    "white_queenside_knight": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.0010690095368772745,
+      "friction": 0.7099999785423279
+    },
+    "white_kingside_knight": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.0010690095368772745,
+      "friction": 0.7099999785423279
+    },
+    "white_pawn_a": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 1.980217348318547e-06,
+      "friction": 0.7099999785423279
+    },
+    "white_pawn_b": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 1.980217348318547e-06,
+      "friction": 0.7099999785423279
+    },
+    "white_pawn_c": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 1.980217348318547e-06,
+      "friction": 0.7099999785423279
+    },
+    "white_pawn_d": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 1.980217348318547e-06,
+      "friction": 0.7099999785423279
+    },
+    "white_pawn_e": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 1.980217348318547e-06,
+      "friction": 0.7099999785423279
+    },
+    "white_pawn_f": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 1.980217348318547e-06,
+      "friction": 0.7099999785423279
+    },
+    "white_pawn_g": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 1.980217348318547e-06,
+      "friction": 0.7099999785423279
+    },
+    "white_pawn_h": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 1.980217348318547e-06,
+      "friction": 0.7099999785423279
+    },
+    "white_queenside_rook": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.001024775323458016,
+      "friction": 0.7099999785423279
+    },
+    "white_kingside_rook": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.001024775323458016,
+      "friction": 0.7099999785423279
+    },
+    "white_queenside_bishop": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.001058993861079216,
+      "friction": 0.7099999785423279
+    },
+    "white_kingside_bishop": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.001058993861079216,
+      "friction": 0.7099999785423279
+    },
+    "white_queen": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.00068720179842785,
+      "friction": 0.7099999785423279
+    },
+    "white_king": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.000687316816765815,
+      "friction": 0.7099999785423279
+    },
+    "black_queenside_knight": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.0010690095368772745,
+      "friction": 0.7099999785423279
+    },
+    "black_kingside_knight": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.0010690095368772745,
+      "friction": 0.7099999785423279
+    },
+    "black_pawn_f": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 1.980217348318547e-06,
+      "friction": 0.7099999785423279
+    },
+    "black_pawn_a": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 1.980217348318547e-06,
+      "friction": 0.7099999785423279
+    },
+    "black_pawn_b": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 1.980217348318547e-06,
+      "friction": 0.7099999785423279
+    },
+    "black_pawn_c": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 1.980217348318547e-06,
+      "friction": 0.7099999785423279
+    },
+    "black_pawn_d": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 1.980217348318547e-06,
+      "friction": 0.7099999785423279
+    },
+    "black_pawn_e": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 1.980217348318547e-06,
+      "friction": 0.7099999785423279
+    },
+    "black_pawn_g": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 1.980217348318547e-06,
+      "friction": 0.7099999785423279
+    },
+    "black_pawn_h": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 1.980217348318547e-06,
+      "friction": 0.7099999785423279
+    },
+    "black_queenside_rook": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.001024775323458016,
+      "friction": 0.7099999785423279
+    },
+    "black_kingside_rook": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.001024775323458016,
+      "friction": 0.7099999785423279
+    },
+    "black_queenside_bishop": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.001058993861079216,
+      "friction": 0.7099999785423279
+    },
+    "black_kingside_bishop": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.001058993861079216,
+      "friction": 0.7099999785423279
+    },
+    "black_king": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.000687316816765815,
+      "friction": 0.7099999785423279
+    },
+    "black_queen": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.00068720179842785,
+      "friction": 0.7099999785423279
+    }
+  },
+  "joints": {}
+}

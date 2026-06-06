@@ -1,0 +1,731 @@
+{
+  "graspable_objects": [
+    {
+      "fixed_offset_from_task_boundary_root_xyz_m": [
+        0.230259,
+        0.123842,
+        0.598426
+      ],
+      "fixed_orientation_from_task_boundary_root_rpy_rad": [
+        -1.8e-05,
+        -4.2e-05,
+        -0.0
+      ],
+      "name": "tray",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -4.1e-05,
+          -1.9e-05,
+          -0.73144
+        ],
+        "position_xyz_m": [
+          0.533243,
+          -0.040423,
+          1.350426
+        ],
+        "quaternion_xyzw": [
+          -1.6e-05,
+          -1.6e-05,
+          -0.357622,
+          0.933866
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_distribution": {
+        "x_uniform_max_m": 0.68645,
+        "x_uniform_min_m": 0.150348,
+        "y_uniform_max_m": 0.430357,
+        "y_uniform_min_m": -0.255148,
+        "z_fixed_m": 1.350426
+      }
+    }
+  ],
+  "other_scene_objects": [
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        0.144562,
+        -0.130482,
+        -0.263955
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        0.020436,
+        -0.193676,
+        -0.263947
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        1.8e-05,
+        -1.4e-05,
+        2.6e-05
+      ],
+      "has_separate_distribution": false,
+      "name": "oven_frame0",
+      "reference_graspable_object": "tray",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -3.8e-05,
+          -4.2e-05,
+          -0.731415
+        ],
+        "position_xyz_m": [
+          0.553679,
+          -0.2341,
+          1.086479
+        ],
+        "quaternion_xyzw": [
+          -1e-05,
+          -2.6e-05,
+          -0.35761,
+          0.933871
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.799891,
+        "x_uniform_min_m": 0.335456,
+        "y_uniform_max_m": 0.440241,
+        "y_uniform_min_m": -0.449641,
+        "z_fixed_m": 1.086479
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        0.148152,
+        -0.131535,
+        -0.302999
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        0.022405,
+        -0.19686,
+        -0.30299
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        -3.141513,
+        -3e-05,
+        -1.5e-05
+      ],
+      "has_separate_distribution": false,
+      "name": "oven_base",
+      "reference_graspable_object": "tray",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -3.141554,
+          5e-05,
+          0.731426
+        ],
+        "position_xyz_m": [
+          0.555648,
+          -0.237283,
+          1.047435
+        ],
+        "quaternion_xyzw": [
+          0.933869,
+          -0.357615,
+          1.6e-05,
+          -2.7e-05
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.803502,
+        "x_uniform_min_m": 0.337251,
+        "y_uniform_max_m": 0.442034,
+        "y_uniform_min_m": -0.452925,
+        "z_fixed_m": 1.047435
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        -0.005262,
+        -0.123839,
+        0.001572
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        -0.086633,
+        -0.088648,
+        0.001574
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        1.8e-05,
+        4.2e-05,
+        0.0
+      ],
+      "has_separate_distribution": false,
+      "name": "oven_tray_boundary",
+      "reference_graspable_object": "tray",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          0.0,
+          -0.73144
+        ],
+        "position_xyz_m": [
+          0.44661,
+          -0.129071,
+          1.352
+        ],
+        "quaternion_xyzw": [
+          0.0,
+          0.0,
+          -0.357622,
+          0.933867
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.649997,
+        "x_uniform_min_m": 0.234158,
+        "y_uniform_max_m": 0.339036,
+        "y_uniform_min_m": -0.339031,
+        "z_fixed_m": 1.352
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        -0.077702,
+        -0.07805,
+        -0.109727
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        -0.109957,
+        -0.00619,
+        -0.109729
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        0.70675,
+        -0.000449,
+        0.000417
+      ],
+      "has_separate_distribution": false,
+      "name": "oven_knob_8",
+      "reference_graspable_object": "tray",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.565782,
+          -0.449025,
+          -0.598604
+        ],
+        "position_xyz_m": [
+          0.423286,
+          -0.046614,
+          1.240697
+        ],
+        "quaternion_xyzw": [
+          0.323064,
+          -0.12404,
+          -0.335409,
+          0.876211
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.584285,
+        "x_uniform_min_m": 0.150555,
+        "y_uniform_max_m": 0.320226,
+        "y_uniform_min_m": -0.255443,
+        "z_fixed_m": 1.240697
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        0.168989,
+        -0.130042,
+        -0.019568
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        0.038904,
+        -0.209655,
+        -0.019558
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        1.570818,
+        2.6e-05,
+        1.570755
+      ],
+      "has_separate_distribution": false,
+      "name": "oven_stove_top0",
+      "reference_graspable_object": "tray",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.570803,
+          -0.731414,
+          1.570801
+        ],
+        "position_xyz_m": [
+          0.572147,
+          -0.250078,
+          1.330867
+        ],
+        "quaternion_xyzw": [
+          0.288131,
+          -0.645742,
+          0.28813,
+          0.645739
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.824297,
+        "x_uniform_min_m": 0.353041,
+        "y_uniform_max_m": 0.457813,
+        "y_uniform_min_m": -0.466585,
+        "z_fixed_m": 1.330867
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        0.165964,
+        -0.132811,
+        -0.047736
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        0.034803,
+        -0.209695,
+        -0.047727
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        -1.55952,
+        0.011238,
+        -1.564212
+      ],
+      "has_separate_distribution": false,
+      "name": "oven_gas_source0",
+      "reference_graspable_object": "tray",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.555514,
+          0.742621,
+          -1.574462
+        ],
+        "position_xyz_m": [
+          0.568046,
+          -0.250119,
+          1.302699
+        ],
+        "quaternion_xyzw": [
+          0.644638,
+          0.280735,
+          0.650029,
+          -0.288255
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.821326,
+        "x_uniform_min_m": 0.348945,
+        "y_uniform_max_m": 0.453716,
+        "y_uniform_min_m": -0.466406,
+        "z_fixed_m": 1.302699
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        -0.077698,
+        -0.228314,
+        -0.127608
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        -0.210322,
+        -0.118022,
+        -0.127608
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        1.806559,
+        0.000168,
+        0.00059
+      ],
+      "has_separate_distribution": false,
+      "name": "oven_knob_10",
+      "reference_graspable_object": "tray",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.882964,
+          -0.70671,
+          0.207237
+        ],
+        "position_xyz_m": [
+          0.322921,
+          -0.158445,
+          1.222818
+        ],
+        "quaternion_xyzw": [
+          -0.733348,
+          0.28104,
+          0.221137,
+          -0.5782
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.609909,
+        "x_uniform_min_m": 0.109078,
+        "y_uniform_max_m": 0.213934,
+        "y_uniform_min_m": -0.361742,
+        "z_fixed_m": 1.222818
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        -0.078076,
+        -0.157538,
+        -0.108879
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        -0.16333,
+        -0.065096,
+        -0.108879
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        0.078432,
+        -0.00061,
+        7.4e-05
+      ],
+      "has_separate_distribution": false,
+      "name": "oven_knob_11",
+      "reference_graspable_object": "tray",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.057975,
+          -0.052832,
+          -0.729856
+        ],
+        "position_xyz_m": [
+          0.369913,
+          -0.10552,
+          1.241546
+        ],
+        "quaternion_xyzw": [
+          0.036488,
+          -0.014323,
+          -0.357323,
+          0.933158
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.580873,
+        "x_uniform_min_m": 0.158837,
+        "y_uniform_max_m": 0.263732,
+        "y_uniform_min_m": -0.311408,
+        "z_fixed_m": 1.241546
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        -0.077703,
+        0.004064,
+        -0.10833
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        -0.055111,
+        0.054922,
+        -0.108333
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        -0.078397,
+        -0.000612,
+        -2.2e-05
+      ],
+      "has_separate_distribution": false,
+      "name": "oven_knob_12",
+      "reference_graspable_object": "tray",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.058847,
+          0.051859,
+          -0.729913
+        ],
+        "position_xyz_m": [
+          0.478132,
+          0.014498,
+          1.242092
+        ],
+        "quaternion_xyzw": [
+          -0.036722,
+          0.013712,
+          -0.357347,
+          0.933149
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.624083,
+        "x_uniform_min_m": 0.092513,
+        "y_uniform_max_m": 0.378311,
+        "y_uniform_min_m": -0.197355,
+        "z_fixed_m": 1.242092
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        -0.076165,
+        -0.362359,
+        -0.109349
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        -0.298715,
+        -0.218803,
+        -0.109346
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        -0.235726,
+        -0.000604,
+        -0.000118
+      ],
+      "has_separate_distribution": false,
+      "name": "oven_knob_13",
+      "reference_graspable_object": "tray",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.177328,
+          0.156163,
+          -0.717581
+        ],
+        "position_xyz_m": [
+          0.234527,
+          -0.259227,
+          1.24108
+        ],
+        "quaternion_xyzw": [
+          -0.109939,
+          0.04175,
+          -0.355164,
+          0.927377
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.702599,
+        "x_uniform_min_m": 0.015417,
+        "y_uniform_max_m": 0.120196,
+        "y_uniform_min_m": -0.463968,
+        "z_fixed_m": 1.24108
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        -0.08071,
+        -0.291117,
+        -0.108658
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        -0.254512,
+        -0.162748,
+        -0.108656
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        -0.235726,
+        -0.000604,
+        -0.000118
+      ],
+      "has_separate_distribution": false,
+      "name": "oven_knob_14",
+      "reference_graspable_object": "tray",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.177328,
+          0.156163,
+          -0.717581
+        ],
+        "position_xyz_m": [
+          0.278731,
+          -0.203171,
+          1.241769
+        ],
+        "quaternion_xyzw": [
+          -0.109939,
+          0.04175,
+          -0.355164,
+          0.927377
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.649028,
+        "x_uniform_min_m": 0.062557,
+        "y_uniform_max_m": 0.167379,
+        "y_uniform_min_m": -0.404383,
+        "z_fixed_m": 1.241769
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        -0.066595,
+        -0.132325,
+        -0.329988
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        -0.13794,
+        -0.05401,
+        -0.329988
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        -1.570903,
+        -2.1e-05,
+        1.2e-05
+      ],
+      "has_separate_distribution": false,
+      "name": "oven_door",
+      "reference_graspable_object": "tray",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.570963,
+          0.73142,
+          8.1e-05
+        ],
+        "position_xyz_m": [
+          0.395303,
+          -0.094433,
+          1.020437
+        ],
+        "quaternion_xyzw": [
+          -0.660391,
+          0.252876,
+          -0.252864,
+          0.660301
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.588898,
+        "x_uniform_min_m": 0.184784,
+        "y_uniform_max_m": 0.289687,
+        "y_uniform_min_m": -0.301696,
+        "z_fixed_m": 1.020437
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        -0.078909,
+        0.094405,
+        -0.107236
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        0.004334,
+        0.12296,
+        -0.107242
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        0.0,
+        -1.570796,
+        -1.8e-05
+      ],
+      "has_separate_distribution": false,
+      "name": "oven_knob",
+      "reference_graspable_object": "tray",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.570797,
+          -0.839357,
+          -1.570797
+        ],
+        "position_xyz_m": [
+          0.537577,
+          0.082536,
+          1.243184
+        ],
+        "quaternion_xyzw": [
+          -0.252877,
+          -0.660344,
+          -0.252877,
+          0.660343
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.686327,
+        "x_uniform_min_m": 0.027805,
+        "y_uniform_max_m": 0.445592,
+        "y_uniform_min_m": -0.132597,
+        "z_fixed_m": 1.243184
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        0.172992,
+        -0.133849,
+        -0.310445
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        0.039345,
+        -0.215174,
+        -0.310436
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        1.8e-05,
+        3.1e-05,
+        0.0
+      ],
+      "has_separate_distribution": false,
+      "name": "oven_tray",
+      "reference_graspable_object": "tray",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -8e-06,
+          -8e-06,
+          -0.73144
+        ],
+        "position_xyz_m": [
+          0.572588,
+          -0.255597,
+          1.03999
+        ],
+        "quaternion_xyzw": [
+          -2e-06,
+          -5e-06,
+          -0.357622,
+          0.933867
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.828388,
+        "x_uniform_min_m": 0.353186,
+        "y_uniform_max_m": 0.457954,
+        "y_uniform_min_m": -0.47212,
+        "z_fixed_m": 1.03999
+      }
+    }
+  ],
+  "task_base_rotation_rz_bounds_rad": [
+    -0.785,
+    0.785
+  ],
+  "task_boundary_root": "oven_boundary_root",
+  "task_boundary_root_world_pose_after_reset": {
+    "kind": "exact",
+    "orientation_rpy_rad": [
+      0.0,
+      0.0,
+      -0.73144
+    ],
+    "position_xyz_m": [
+      0.279162,
+      0.021211,
+      0.752
+    ],
+    "quaternion_xyzw": [
+      0.0,
+      0.0,
+      -0.357622,
+      0.933867
+    ],
+    "source": "exact_after_one_rlbench_reset"
+  },
+  "type": "Uniform for x/y; fixed z",
+  "units": "meters"
+}

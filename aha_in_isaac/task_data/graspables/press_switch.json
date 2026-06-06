@@ -1,0 +1,242 @@
+{
+  "graspable_objects": [],
+  "other_scene_objects": [
+    {
+      "fixed_offset_from_reference_local_xyz_m": null,
+      "fixed_offset_from_reference_xyz_m": null,
+      "fixed_orientation_from_reference_rpy_rad": null,
+      "has_separate_distribution": false,
+      "name": "task_wall",
+      "reference_graspable_object": null,
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.57083,
+          0.713427,
+          1.570819
+        ],
+        "position_xyz_m": [
+          0.45341,
+          0.340008,
+          1.0
+        ],
+        "quaternion_xyzw": [
+          -0.29393,
+          0.643131,
+          0.293923,
+          0.643115
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.615252,
+        "x_uniform_min_m": -0.230077,
+        "y_uniform_max_m": 0.490078,
+        "y_uniform_min_m": -0.240078,
+        "z_fixed_m": 1.0
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": null,
+      "fixed_offset_from_reference_xyz_m": null,
+      "fixed_orientation_from_reference_rpy_rad": null,
+      "has_separate_distribution": false,
+      "name": "switch_main",
+      "reference_graspable_object": null,
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.570796,
+          -0.85737,
+          -3.141593
+        ],
+        "position_xyz_m": [
+          0.461226,
+          0.339869,
+          1.013356
+        ],
+        "quaternion_xyzw": [
+          -0.293927,
+          0.643123,
+          0.643123,
+          -0.293927
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.623067,
+        "x_uniform_min_m": -0.237892,
+        "y_uniform_max_m": 0.497893,
+        "y_uniform_min_m": -0.247893,
+        "z_fixed_m": 1.013356
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": null,
+      "fixed_offset_from_reference_xyz_m": null,
+      "fixed_orientation_from_reference_rpy_rad": null,
+      "has_separate_distribution": false,
+      "name": "Shape_sub",
+      "reference_graspable_object": null,
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.289369,
+          -0.837458,
+          -2.930021
+        ],
+        "position_xyz_m": [
+          0.502092,
+          0.288096,
+          1.013474
+        ],
+        "quaternion_xyzw": [
+          0.265203,
+          -0.580274,
+          -0.700354,
+          0.320083
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.671753,
+        "x_uniform_min_m": -0.286579,
+        "y_uniform_max_m": 0.546578,
+        "y_uniform_min_m": -0.296579,
+        "z_fixed_m": 1.013474
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": null,
+      "fixed_offset_from_reference_xyz_m": null,
+      "fixed_orientation_from_reference_rpy_rad": null,
+      "has_separate_distribution": false,
+      "name": "Shape_sub0",
+      "reference_graspable_object": null,
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -3.016726,
+          -0.142915,
+          2.293173
+        ],
+        "position_xyz_m": [
+          0.404381,
+          0.372665,
+          1.013474
+        ],
+        "quaternion_xyzw": [
+          -0.41381,
+          0.905434,
+          0.086047,
+          -0.039326
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.569217,
+        "x_uniform_min_m": -0.184043,
+        "y_uniform_max_m": 0.444042,
+        "y_uniform_min_m": -0.194043,
+        "z_fixed_m": 1.013474
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": null,
+      "fixed_offset_from_reference_xyz_m": null,
+      "fixed_orientation_from_reference_rpy_rad": null,
+      "has_separate_distribution": false,
+      "name": "Shape_sub1",
+      "reference_graspable_object": null,
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.570796,
+          -0.85737,
+          -3.141593
+        ],
+        "position_xyz_m": [
+          0.461274,
+          0.339558,
+          1.013467
+        ],
+        "quaternion_xyzw": [
+          -0.293927,
+          0.643123,
+          0.643123,
+          -0.293927
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.623127,
+        "x_uniform_min_m": -0.237952,
+        "y_uniform_max_m": 0.497953,
+        "y_uniform_min_m": -0.247952,
+        "z_fixed_m": 1.013467
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": null,
+      "fixed_offset_from_reference_xyz_m": null,
+      "fixed_orientation_from_reference_rpy_rad": null,
+      "has_separate_distribution": false,
+      "name": "switch",
+      "reference_graspable_object": null,
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.556832,
+          -1.128149,
+          1.599626
+        ],
+        "position_xyz_m": [
+          0.447737,
+          0.335605,
+          1.013669
+        ],
+        "quaternion_xyzw": [
+          -0.686519,
+          0.160317,
+          0.693161,
+          0.150062
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.609821,
+        "x_uniform_min_m": -0.224648,
+        "y_uniform_max_m": 0.484647,
+        "y_uniform_min_m": -0.234647,
+        "z_fixed_m": 1.013669
+      }
+    }
+  ],
+  "task_base_rotation_rz_bounds_rad": [
+    -3.14,
+    3.14
+  ],
+  "task_boundary_root": "press_switch",
+  "task_boundary_root_world_pose_after_reset": {
+    "kind": "exact",
+    "orientation_rpy_rad": [
+      -0.0,
+      0.0,
+      0.857369
+    ],
+    "position_xyz_m": [
+      0.293452,
+      0.346199,
+      0.752
+    ],
+    "quaternion_xyzw": [
+      0.0,
+      0.0,
+      0.415675,
+      0.909513
+    ],
+    "source": "exact_after_one_rlbench_reset"
+  },
+  "type": "Uniform for x/y; fixed z",
+  "units": "meters"
+}

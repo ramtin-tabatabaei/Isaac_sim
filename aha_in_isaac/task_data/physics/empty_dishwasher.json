@@ -1,0 +1,81 @@
+{
+  "shapes": {
+    "boundary_root": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.0860000029206276,
+      "friction": 0.5
+    },
+    "dishwasher": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 40.133365631103516,
+      "friction": 0.5
+    },
+    "dishwasher_base_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 92.24766540527344,
+      "friction": 0.7099999785423279
+    },
+    "dishwasher_door": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.10000000149011612,
+      "friction": 0.5
+    },
+    "dishwasher_tray": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.8490010499954224,
+      "friction": 0.5
+    },
+    "dishwasher_door_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 2.0,
+      "friction": 0.7099999785423279
+    },
+    "dishwasher_tray_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 34.37263488769531,
+      "friction": 0.7099999785423279
+    },
+    "dishwasher_plate": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.5,
+      "friction": 0.7099999785423279
+    },
+    "dishwasher_plate_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 1.074144721031189,
+      "friction": 0.7099999785423279
+    }
+  },
+  "joints": {
+    "dishwasher_door_joint": {
+      "type": "revolute",
+      "cyclic": false,
+      "lower": 0.0,
+      "upper": 90.00000250447816
+    },
+    "dishwasher_tray_joint": {
+      "type": "prismatic",
+      "cyclic": false,
+      "lower": 0.0,
+      "upper": 0.36000001430511475
+    }
+  }
+}

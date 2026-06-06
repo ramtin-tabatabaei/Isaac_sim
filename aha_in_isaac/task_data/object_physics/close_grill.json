@@ -1,0 +1,29 @@
+{
+  "grill_root": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "grill": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "grill_visual": {
+    "type": "visual"
+  },
+  "Shape1": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "lid": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "lid_visual": {
+    "type": "visual"
+  },
+  "handle_visual": {
+    "type": "visual"
+  }
+}

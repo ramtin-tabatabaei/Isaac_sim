@@ -1,0 +1,82 @@
+{
+  "shapes": {
+    "spoon": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 1.346778117294889e-05,
+      "friction": 1.0
+    },
+    "fork": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 1.2788123967766296e-05,
+      "friction": 1.0
+    },
+    "knife": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 1.6065505406004377e-05,
+      "friction": 1.0
+    },
+    "glass": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 1.7497880458831787,
+      "friction": 0.7099999785423279
+    },
+    "plate": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.000527010764926672,
+      "friction": 1.0
+    },
+    "holder": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.8999999165534973,
+      "friction": 0.5
+    },
+    "spoon_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.00043096899753436446,
+      "friction": 0.7099999785423279
+    },
+    "fork_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 5.1152495871065184e-05,
+      "friction": 0.7099999785423279
+    },
+    "knife_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.06580431014299393,
+      "friction": 0.7099999785423279
+    },
+    "glass_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 1.7497880458831787,
+      "friction": 0.7099999785423279
+    },
+    "plate_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.000527010764926672,
+      "friction": 0.7099999785423279
+    }
+  },
+  "joints": {}
+}

@@ -1,0 +1,61 @@
+{
+  "shapes": {
+    "toilet_roll_box": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 1.0,
+      "friction": 0.5
+    },
+    "stand_base": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.11623892933130264,
+      "friction": 0.5
+    },
+    "boundary_roll": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.07999999076128006,
+      "friction": 0.5
+    },
+    "boundary_stand": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.07999999076128006,
+      "friction": 0.5
+    },
+    "toilet_roll": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.10000000149011612,
+      "friction": 0.7099999785423279
+    },
+    "toilet_roll_holder": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 72.0,
+      "friction": 0.7099999785423279
+    },
+    "toilet_roll_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.00018665887182578444,
+      "friction": 0.7099999785423279
+    },
+    "holder_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.00013109651627019048,
+      "friction": 0.7099999785423279
+    }
+  },
+  "joints": {}
+}

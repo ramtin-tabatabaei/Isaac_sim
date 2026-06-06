@@ -1,0 +1,829 @@
+[
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.570849,
+          0.000831,
+          1.550819
+        ],
+        "position_xyz_m": [
+          -0.001626,
+          0.000245,
+          -0.030716
+        ],
+        "quaternion_xyzw": [
+          0.505188,
+          -0.494784,
+          0.495178,
+          0.50475
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "charger",
+      "world_offset_xyz_m": [
+        0.02488,
+        -0.01806,
+        -0.001013
+      ]
+    },
+    "handle": 81,
+    "hierarchy_path": "unplug_charger/plug",
+    "name": "plug",
+    "parent": "unplug_charger",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.569841,
+        7.5e-05,
+        3.141546
+      ],
+      "position_xyz_m": [
+        0.132046,
+        -0.021762,
+        0.217318
+      ],
+      "quaternion_xyzw": [
+        4.3e-05,
+        -0.706769,
+        0.707444,
+        -1e-05
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.569841,
+        7.5e-05,
+        3.141546
+      ],
+      "position_xyz_m": [
+        0.132046,
+        -0.021762,
+        0.217318
+      ],
+      "quaternion_xyzw": [
+        4.3e-05,
+        -0.706769,
+        0.707444,
+        -1e-05
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.569609,
+        -0.635816,
+        3.140841
+      ],
+      "position_xyz_m": [
+        0.310732,
+        -0.072551,
+        0.969318
+      ],
+      "quaternion_xyzw": [
+        -0.220906,
+        -0.671359,
+        0.67199,
+        0.221149
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.535781,
+      "x_uniform_min_m": 0.067651,
+      "y_uniform_max_m": 0.332938,
+      "y_uniform_min_m": -0.363729,
+      "z_fixed_m": 0.969318
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -3.9e-05,
+          0.019905,
+          -0.000122
+        ],
+        "position_xyz_m": [
+          -0.01916,
+          0.02201,
+          -0.040314
+        ],
+        "quaternion_xyzw": [
+          -2e-05,
+          0.009952,
+          -6.1e-05,
+          0.999951
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "charger",
+      "world_offset_xyz_m": [
+        0.045805,
+        -0.006456,
+        -0.018355
+      ]
+    },
+    "handle": 88,
+    "hierarchy_path": "unplug_charger/task_wall",
+    "name": "task_wall",
+    "parent": "unplug_charger",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.141991,
+        2e-06,
+        0.199976
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.707116,
+        0.0,
+        0.707098
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.141991,
+        2e-06,
+        0.199976
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.707116,
+        0.0,
+        0.707098
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.57084,
+        -0.934905,
+        -1.570832
+      ],
+      "position_xyz_m": [
+        0.331658,
+        -0.060948,
+        0.951976
+      ],
+      "quaternion_xyzw": [
+        -0.221056,
+        -0.671675,
+        -0.22105,
+        0.671658
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.543944,
+      "x_uniform_min_m": 0.090066,
+      "y_uniform_max_m": 0.355362,
+      "y_uniform_min_m": -0.355363,
+      "z_fixed_m": 0.951976
+    }
+  },
+  {
+    "handle": 91,
+    "hierarchy_path": "unplug_charger/charger",
+    "name": "charger",
+    "parent": "unplug_charger",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.139502,
+        -1.550872,
+        3.139625
+      ],
+      "position_xyz_m": [
+        0.101304,
+        -0.022008,
+        0.218331
+      ],
+      "quaternion_xyzw": [
+        -2.9e-05,
+        -0.714118,
+        5.8e-05,
+        0.700025
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.50562,
+      "x_uniform_min_m": 0.04573,
+      "y_uniform_max_m": 0.311035,
+      "y_uniform_min_m": -0.342174,
+      "z_fixed_m": 0.970331
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.139502,
+        -1.550872,
+        3.139625
+      ],
+      "position_xyz_m": [
+        0.101304,
+        -0.022008,
+        0.218331
+      ],
+      "quaternion_xyzw": [
+        -2.9e-05,
+        -0.714118,
+        5.8e-05,
+        0.700025
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.604349,
+        -0.934677,
+        -1.597667
+      ],
+      "position_xyz_m": [
+        0.285853,
+        -0.054491,
+        0.970331
+      ],
+      "quaternion_xyzw": [
+        -0.223272,
+        -0.678317,
+        -0.218784,
+        0.664958
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.50562,
+      "x_uniform_min_m": 0.04573,
+      "y_uniform_max_m": 0.311035,
+      "y_uniform_min_m": -0.342174,
+      "z_fixed_m": 0.970331
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -3.9e-05,
+          0.019931,
+          -0.000123
+        ],
+        "position_xyz_m": [
+          -0.000248,
+          -0.011959,
+          -0.046733
+        ],
+        "quaternion_xyzw": [
+          2e-05,
+          -0.009965,
+          6.1e-05,
+          -0.99995
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "charger",
+      "world_offset_xyz_m": [
+        0.030494,
+        -0.037372,
+        0.000685
+      ]
+    },
+    "handle": 84,
+    "hierarchy_path": "unplug_charger/plug/hole1",
+    "name": "hole1",
+    "parent": "plug",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570796,
+        -1.571752
+      ],
+      "position_xyz_m": [
+        -0.015986,
+        -0.001687,
+        0.012206
+      ],
+      "quaternion_xyzw": [
+        0.500269,
+        -0.499768,
+        0.500208,
+        -0.499754
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.148033,
+        -0.033965,
+        0.219016
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        0.707107,
+        0.0,
+        -0.707107
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570797,
+        -0.934905,
+        -1.570797
+      ],
+      "position_xyz_m": [
+        0.316347,
+        -0.091864,
+        0.971016
+      ],
+      "quaternion_xyzw": [
+        0.221053,
+        0.671666,
+        0.221053,
+        -0.671666
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.553833,
+      "x_uniform_min_m": 0.070334,
+      "y_uniform_max_m": 0.335606,
+      "y_uniform_min_m": -0.383661,
+      "z_fixed_m": 0.971016
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -3.9e-05,
+          0.019931,
+          -0.000123
+        ],
+        "position_xyz_m": [
+          -0.000248,
+          0.013061,
+          -0.046745
+        ],
+        "quaternion_xyzw": [
+          2e-05,
+          -0.009965,
+          6.1e-05,
+          -0.99995
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "charger",
+      "world_offset_xyz_m": [
+        0.045362,
+        -0.017249,
+        0.000682
+      ]
+    },
+    "handle": 86,
+    "hierarchy_path": "unplug_charger/plug/hole2",
+    "name": "hole2",
+    "parent": "plug",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570796,
+        -1.571752
+      ],
+      "position_xyz_m": [
+        -0.015999,
+        -0.001708,
+        -0.012814
+      ],
+      "quaternion_xyzw": [
+        0.500269,
+        -0.499768,
+        0.500208,
+        -0.499754
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.148044,
+        -0.008945,
+        0.219013
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        0.707107,
+        0.0,
+        -0.707107
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570797,
+        -0.934905,
+        -1.570797
+      ],
+      "position_xyz_m": [
+        0.331215,
+        -0.07174,
+        0.971013
+      ],
+      "quaternion_xyzw": [
+        0.221053,
+        0.671666,
+        0.221053,
+        -0.671666
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.550267,
+      "x_uniform_min_m": 0.088026,
+      "y_uniform_max_m": 0.353312,
+      "y_uniform_min_m": -0.36597,
+      "z_fixed_m": 0.971013
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.002171,
+          -0.000158,
+          0.000115
+        ],
+        "position_xyz_m": [
+          -0.0,
+          1.9e-05,
+          -0.000963
+        ],
+        "quaternion_xyzw": [
+          -0.001085,
+          7.9e-05,
+          -5.7e-05,
+          -0.999999
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "charger",
+      "world_offset_xyz_m": [
+        0.000786,
+        -0.000557,
+        1.9e-05
+      ]
+    },
+    "handle": 92,
+    "hierarchy_path": "unplug_charger/charger/charger_visual",
+    "name": "charger_visual",
+    "parent": "charger",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.002171,
+        -0.000158,
+        0.000115
+      ],
+      "position_xyz_m": [
+        -0.0,
+        1.9e-05,
+        -0.000963
+      ],
+      "quaternion_xyzw": [
+        -0.001085,
+        7.9e-05,
+        -5.7e-05,
+        -0.999999
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.031895,
+        -1.550593,
+        3.032154
+      ],
+      "position_xyz_m": [
+        0.102267,
+        -0.021989,
+        0.21835
+      ],
+      "quaternion_xyzw": [
+        -0.00069,
+        0.714173,
+        -0.000873,
+        -0.699968
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.604715,
+        -0.936843,
+        -1.597847
+      ],
+      "position_xyz_m": [
+        0.286639,
+        -0.055048,
+        0.97035
+      ],
+      "quaternion_xyzw": [
+        0.222607,
+        0.678594,
+        0.217992,
+        -0.665158
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.506558,
+      "x_uniform_min_m": 0.046425,
+      "y_uniform_max_m": 0.311729,
+      "y_uniform_min_m": -0.342841,
+      "z_fixed_m": 0.97035
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.141553,
+          -0.019947,
+          -3.14147
+        ],
+        "position_xyz_m": [
+          0.000248,
+          -0.008949,
+          -0.02174
+        ],
+        "quaternion_xyzw": [
+          6.1e-05,
+          0.99995,
+          -2e-05,
+          -0.009973
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "charger",
+      "world_offset_xyz_m": [
+        0.012169,
+        -0.020105,
+        0.000683
+      ]
+    },
+    "handle": 85,
+    "hierarchy_path": "unplug_charger/plug/hole1/hole_visual1",
+    "name": "hole_visual1",
+    "parent": "hole1",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.141593,
+        -1.6e-05,
+        3.141593
+      ],
+      "position_xyz_m": [
+        -2e-06,
+        0.00301,
+        0.024998
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -1.0,
+        -0.0,
+        8e-06
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570796,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.123035,
+        -0.030955,
+        0.219014
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        0.707112,
+        0.0,
+        0.707101
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570823,
+        0.934905,
+        -1.570818
+      ],
+      "position_xyz_m": [
+        0.298022,
+        -0.074596,
+        0.971014
+      ],
+      "quaternion_xyzw": [
+        0.221055,
+        0.671672,
+        -0.221051,
+        0.671661
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.528823,
+      "x_uniform_min_m": 0.054778,
+      "y_uniform_max_m": 0.320065,
+      "y_uniform_min_m": -0.363863,
+      "z_fixed_m": 0.971014
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.141554,
+          -0.019956,
+          -3.14147
+        ],
+        "position_xyz_m": [
+          0.000253,
+          0.016066,
+          -0.021753
+        ],
+        "quaternion_xyzw": [
+          6.1e-05,
+          0.99995,
+          -2e-05,
+          -0.009978
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "charger",
+      "world_offset_xyz_m": [
+        0.027035,
+        1.3e-05,
+        0.000685
+      ]
+    },
+    "handle": 87,
+    "hierarchy_path": "unplug_charger/plug/hole2/hole_visual2",
+    "name": "hole_visual2",
+    "parent": "hole2",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.141593,
+        -2.6e-05,
+        3.141593
+      ],
+      "position_xyz_m": [
+        3e-06,
+        0.003004,
+        0.024997
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -1.0,
+        -0.0,
+        1.3e-05
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570796,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.123047,
+        -0.005941,
+        0.219016
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        0.707116,
+        0.0,
+        0.707098
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570839,
+        0.934905,
+        -1.570831
+      ],
+      "position_xyz_m": [
+        0.312888,
+        -0.054478,
+        0.971016
+      ],
+      "quaternion_xyzw": [
+        0.221056,
+        0.671675,
+        -0.22105,
+        0.671658
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.525144,
+      "x_uniform_min_m": 0.072467,
+      "y_uniform_max_m": 0.337768,
+      "y_uniform_min_m": -0.346177,
+      "z_fixed_m": 0.971016
+    }
+  }
+]

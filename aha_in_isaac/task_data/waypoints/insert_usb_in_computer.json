@@ -1,0 +1,667 @@
+[
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141588,
+        0.241528,
+        -3.141585
+      ],
+      "position_xyz_m": [
+        0.278652,
+        -0.008158,
+        1.471581
+      ],
+      "quaternion_xyzw": [
+        4e-06,
+        0.992717,
+        -2e-06,
+        0.120471
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.329637,
+        2.2e-05,
+        -1.570779
+      ],
+      "position_xyz_m": [
+        -0.324385,
+        0.617621,
+        0.038555
+      ],
+      "quaternion_xyzw": [
+        0.436223,
+        0.436228,
+        -0.556504,
+        0.556523
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      -8.2e-05,
+      -1e-06,
+      0.121016
+    ],
+    "fixed_orientation_rpy_rad": [
+      -3.14159,
+      0.000516,
+      -1.570824
+    ],
+    "motion_type": "point",
+    "name": "waypoint0",
+    "parent": "usb",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -3.14159,
+          0.000516,
+          -1.570824
+        ],
+        "position_xyz_m": [
+          -8.2e-05,
+          -1e-06,
+          0.121016
+        ],
+        "quaternion_xyzw": [
+          0.707097,
+          0.707117,
+          0.000183,
+          0.000181
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "usb"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -3.14159,
+          0.000516,
+          -1.570824
+        ],
+        "position_xyz_m": [
+          -8.2e-05,
+          -1e-06,
+          0.121016
+        ],
+        "quaternion_xyzw": [
+          0.707097,
+          0.707117,
+          0.000183,
+          0.000181
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "usb"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570796,
+        1.570769
+      ],
+      "position_xyz_m": [
+        0.240324,
+        0.31621,
+        0.853937
+      ],
+      "quaternion_xyzw": [
+        0.4999,
+        0.499915,
+        0.500086,
+        0.500098
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      0.0,
+      1.570796,
+      1.570769
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141581,
+        0.241696,
+        -3.141587
+      ],
+      "position_xyz_m": [
+        0.278607,
+        -0.008168,
+        1.47165
+      ],
+      "quaternion_xyzw": [
+        2e-06,
+        0.992707,
+        -6e-06,
+        0.120554
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.329468,
+        1.3e-05,
+        -1.570783
+      ],
+      "position_xyz_m": [
+        -0.324394,
+        0.617726,
+        -0.078484
+      ],
+      "quaternion_xyzw": [
+        0.436178,
+        0.436179,
+        -0.556544,
+        0.556557
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      -5.8e-05,
+      -1e-06,
+      0.004024
+    ],
+    "fixed_orientation_rpy_rad": [
+      -3.141589,
+      0.000514,
+      -1.570823
+    ],
+    "motion_type": "point",
+    "name": "waypoint1",
+    "parent": "usb",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -3.141589,
+          0.000514,
+          -1.570823
+        ],
+        "position_xyz_m": [
+          -5.8e-05,
+          -1e-06,
+          0.004024
+        ],
+        "quaternion_xyzw": [
+          0.707097,
+          0.707116,
+          0.000183,
+          0.000181
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "usb"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -3.141589,
+          0.000514,
+          -1.570823
+        ],
+        "position_xyz_m": [
+          -5.8e-05,
+          -1e-06,
+          0.004024
+        ],
+        "quaternion_xyzw": [
+          0.707097,
+          0.707116,
+          0.000183,
+          0.000181
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "usb"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570308,
+        1.57077
+      ],
+      "position_xyz_m": [
+        0.357316,
+        0.31621,
+        0.853944
+      ],
+      "quaternion_xyzw": [
+        0.499901,
+        0.499916,
+        0.500086,
+        0.500098
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      0.0,
+      1.570308,
+      1.57077
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141572,
+        0.241442,
+        -3.14159
+      ],
+      "position_xyz_m": [
+        0.278674,
+        -0.008163,
+        1.471533
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        0.992722,
+        -1e-05,
+        0.120428
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570803,
+        0.240924,
+        -3.14159
+      ],
+      "position_xyz_m": [
+        0.205934,
+        0.595023,
+        0.143389
+      ],
+      "quaternion_xyzw": [
+        -0.084972,
+        0.701985,
+        -0.70198,
+        0.084975
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      -0.088,
+      0.106849,
+      0.1244
+    ],
+    "fixed_orientation_rpy_rad": [
+      1.570769,
+      0.0,
+      0.000518
+    ],
+    "motion_type": "point",
+    "name": "waypoint2",
+    "parent": "insert_usb_in_computer",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.570769,
+          0.0,
+          0.000518
+        ],
+        "position_xyz_m": [
+          -0.088,
+          0.106849,
+          0.1244
+        ],
+        "quaternion_xyzw": [
+          0.707097,
+          -0.000183,
+          0.000183,
+          0.707116
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "insert_usb_in_computer"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.570769,
+          0.0,
+          0.000518
+        ],
+        "position_xyz_m": [
+          -0.088,
+          0.106849,
+          0.1244
+        ],
+        "quaternion_xyzw": [
+          0.707097,
+          -0.000183,
+          0.000183,
+          0.707116
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "insert_usb_in_computer"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570769,
+        0.0,
+        0.000518
+      ],
+      "position_xyz_m": [
+        0.073049,
+        0.13521,
+        0.8764
+      ],
+      "quaternion_xyzw": [
+        0.707097,
+        -0.000183,
+        0.000183,
+        0.707116
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      1.570769,
+      0.0,
+      0.000518
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141579,
+        0.241531,
+        3.141591
+      ],
+      "position_xyz_m": [
+        0.278606,
+        -0.008165,
+        1.471606
+      ],
+      "quaternion_xyzw": [
+        -2e-06,
+        0.992717,
+        -7e-06,
+        0.120472
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.57081,
+        0.241013,
+        3.141592
+      ],
+      "position_xyz_m": [
+        0.206866,
+        0.595096,
+        0.112391
+      ],
+      "quaternion_xyzw": [
+        -0.085005,
+        0.701983,
+        -0.701974,
+        0.085005
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      -0.001,
+      -0.0,
+      0.031
+    ],
+    "fixed_orientation_rpy_rad": [
+      0.0,
+      -0.0,
+      0.0
+    ],
+    "motion_type": "point",
+    "name": "waypoint3",
+    "parent": "waypoint2",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "position_xyz_m": [
+          -0.001,
+          -0.0,
+          0.031
+        ],
+        "quaternion_xyzw": [
+          0.0,
+          -0.0,
+          0.0,
+          1.0
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "waypoint",
+      "reference_name": "waypoint2"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.570769,
+          0.0,
+          0.000518
+        ],
+        "position_xyz_m": [
+          -0.089,
+          0.075849,
+          0.1244
+        ],
+        "quaternion_xyzw": [
+          0.707097,
+          -0.000183,
+          0.000183,
+          0.707116
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "insert_usb_in_computer"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570769,
+        0.0,
+        0.000518
+      ],
+      "position_xyz_m": [
+        0.072049,
+        0.10421,
+        0.8764
+      ],
+      "quaternion_xyzw": [
+        0.707097,
+        -0.000183,
+        0.000183,
+        0.707116
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      1.570769,
+      0.0,
+      0.000518
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141584,
+        0.24139,
+        -3.14159
+      ],
+      "position_xyz_m": [
+        0.27866,
+        -0.008166,
+        1.471532
+      ],
+      "quaternion_xyzw": [
+        1e-06,
+        0.992725,
+        -4e-06,
+        0.120402
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570815,
+        0.240872,
+        -3.141589
+      ],
+      "position_xyz_m": [
+        0.20592,
+        0.595021,
+        0.143393
+      ],
+      "quaternion_xyzw": [
+        -0.084954,
+        0.701991,
+        -0.701978,
+        0.084957
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "fixed_orientation_rpy_rad": [
+      0.0,
+      -0.0,
+      0.0
+    ],
+    "motion_type": "point",
+    "name": "waypoint4",
+    "parent": "waypoint2",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "position_xyz_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "quaternion_xyzw": [
+          0.0,
+          -0.0,
+          0.0,
+          1.0
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "waypoint",
+      "reference_name": "waypoint2"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.570769,
+          0.0,
+          0.000518
+        ],
+        "position_xyz_m": [
+          -0.088,
+          0.106849,
+          0.1244
+        ],
+        "quaternion_xyzw": [
+          0.707097,
+          -0.000183,
+          0.000183,
+          0.707116
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "insert_usb_in_computer"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570769,
+        0.0,
+        0.000518
+      ],
+      "position_xyz_m": [
+        0.073049,
+        0.13521,
+        0.8764
+      ],
+      "quaternion_xyzw": [
+        0.707097,
+        -0.000183,
+        0.000183,
+        0.707116
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      1.570769,
+      0.0,
+      0.000518
+    ]
+  }
+]

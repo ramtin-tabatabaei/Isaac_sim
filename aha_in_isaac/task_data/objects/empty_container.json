@@ -1,0 +1,270 @@
+[
+  {
+    "handle": 80,
+    "hierarchy_path": "empty_container/large_container",
+    "name": "large_container",
+    "parent": "empty_container",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.000345,
+        -0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        -8e-06,
+        0.024001
+      ],
+      "quaternion_xyzw": [
+        -0.000173,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.000345,
+        -0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        -8e-06,
+        0.024001
+      ],
+      "quaternion_xyzw": [
+        -0.000173,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.000345,
+        -0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.25,
+        -8e-06,
+        0.776001
+      ],
+      "quaternion_xyzw": [
+        -0.000173,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 86,
+    "hierarchy_path": "empty_container/small_container0",
+    "name": "small_container0",
+    "parent": "empty_container",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        -0.25,
+        0.024625
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.70711,
+        0.0,
+        0.707104
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        -0.25,
+        0.024625
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.70711,
+        0.0,
+        0.707104
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.25,
+        -0.25,
+        0.776625
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.70711,
+        0.0,
+        0.707104
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 88,
+    "hierarchy_path": "empty_container/small_container1",
+    "name": "small_container1",
+    "parent": "empty_container",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        0.25,
+        0.024625
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.70711,
+        0.0,
+        0.707104
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        0.25,
+        0.024625
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.70711,
+        0.0,
+        0.707104
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.25,
+        0.25,
+        0.776625
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.70711,
+        0.0,
+        0.707104
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 85,
+    "hierarchy_path": "empty_container/large_container/spawn_boundary",
+    "name": "spawn_boundary",
+    "parent": "large_container",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.000345,
+        0.0,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "quaternion_xyzw": [
+        0.000173,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        -8e-06,
+        0.024001
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.25,
+        -8e-06,
+        0.776001
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  }
+]

@@ -1,0 +1,89 @@
+{
+  "task_name": "wipe_desk",
+  "root_object": "wipe_desk",
+  "placement_ranges": {
+    "meaning": "Only objects with placement_range are randomized by RLBench. Objects without placement_range are exact in the sampled reset, usually fixed relative to their parent or nearest graspable.",
+    "task_root_x_uniform_range_m": [
+      0.024299,
+      0.375701
+    ],
+    "task_root_y_uniform_range_m": [
+      -0.280701,
+      0.226103
+    ],
+    "task_root_z_fixed_m": 0.752
+  },
+  "units_and_conventions": {
+    "exact_location_meaning": "A measured pose from the imported .ttm, one RLBench reset, or after reaching one waypoint.",
+    "orientation_rpy_order": [
+      "roll_x",
+      "pitch_y",
+      "yaw_z"
+    ],
+    "position_order": [
+      "x",
+      "y",
+      "z"
+    ],
+    "position_units": "meters",
+    "quaternion_order": "xyzw for PyRep pose fields",
+    "range_location_meaning": "A RLBench placement distribution; sample x/y uniformly in the listed bounds and keep z fixed.",
+    "rotation_units": "radians"
+  },
+  "schema_name": "scene_objects_robot_base_waypoint_end_effector",
+  "schema_version": 5,
+  "source_ttm_path": "/home/ramtin/RLBench/rlbench/task_ttms/wipe_desk.ttm",
+  "runtime_generated_scene_objects_excluded": [
+    "Cuboid",
+    "Cuboid0",
+    "Cuboid1",
+    "Cuboid10",
+    "Cuboid11",
+    "Cuboid12",
+    "Cuboid13",
+    "Cuboid14",
+    "Cuboid15",
+    "Cuboid16",
+    "Cuboid17",
+    "Cuboid18",
+    "Cuboid19",
+    "Cuboid2",
+    "Cuboid20",
+    "Cuboid21",
+    "Cuboid22",
+    "Cuboid23",
+    "Cuboid24",
+    "Cuboid25",
+    "Cuboid26",
+    "Cuboid27",
+    "Cuboid28",
+    "Cuboid29",
+    "Cuboid3",
+    "Cuboid30",
+    "Cuboid31",
+    "Cuboid32",
+    "Cuboid33",
+    "Cuboid34",
+    "Cuboid35",
+    "Cuboid36",
+    "Cuboid37",
+    "Cuboid38",
+    "Cuboid39",
+    "Cuboid4",
+    "Cuboid40",
+    "Cuboid41",
+    "Cuboid42",
+    "Cuboid43",
+    "Cuboid44",
+    "Cuboid45",
+    "Cuboid46",
+    "Cuboid47",
+    "Cuboid48",
+    "Cuboid5",
+    "Cuboid6",
+    "Cuboid7",
+    "Cuboid8",
+    "Cuboid9"
+  ],
+  "end_effector_collection_error": null
+}

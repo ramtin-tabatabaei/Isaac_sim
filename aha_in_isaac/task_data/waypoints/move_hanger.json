@@ -1,0 +1,803 @@
+[
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": null,
+    "end_effector_relative_to_waypoint_after_waypoint": null,
+    "fixed_offset_xyz_m": [
+      0.007847,
+      0.00705,
+      0.215375
+    ],
+    "fixed_orientation_rpy_rad": [
+      3.054501,
+      -0.063975,
+      1.624745
+    ],
+    "motion_type": "point",
+    "name": "waypoint0",
+    "parent": "clothes_hanger0",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.054501,
+          -0.063975,
+          1.624745
+        ],
+        "position_xyz_m": [
+          0.007847,
+          0.00705,
+          0.215375
+        ],
+        "quaternion_xyzw": [
+          0.685764,
+          -0.725819,
+          0.009609,
+          0.05312
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "clothes_hanger0"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.054501,
+          -0.063975,
+          1.624745
+        ],
+        "position_xyz_m": [
+          0.007847,
+          0.00705,
+          0.215375
+        ],
+        "quaternion_xyzw": [
+          0.685764,
+          -0.725819,
+          0.009609,
+          0.05312
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "clothes_hanger0"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.752354,
+        -0.513388,
+        -2.931183
+      ],
+      "position_xyz_m": [
+        0.534929,
+        -0.230259,
+        0.787934
+      ],
+      "quaternion_xyzw": [
+        0.239647,
+        0.72195,
+        -0.636181,
+        -0.128966
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      1.752354,
+      -0.513388,
+      -2.931183
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": null,
+    "end_effector_relative_to_waypoint_after_waypoint": null,
+    "fixed_offset_xyz_m": [
+      0.0,
+      -0.0,
+      0.081
+    ],
+    "fixed_orientation_rpy_rad": [
+      -0.0,
+      0.0,
+      -0.0
+    ],
+    "motion_type": "point",
+    "name": "waypoint1",
+    "parent": "waypoint0",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "position_xyz_m": [
+          0.0,
+          -0.0,
+          0.081
+        ],
+        "quaternion_xyzw": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "waypoint",
+      "reference_name": "waypoint0"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.054501,
+          -0.063975,
+          1.624745
+        ],
+        "position_xyz_m": [
+          0.002668,
+          1.9e-05,
+          0.134847
+        ],
+        "quaternion_xyzw": [
+          0.685764,
+          -0.725819,
+          0.009609,
+          0.05312
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "clothes_hanger0"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.752354,
+        -0.513388,
+        -2.931183
+      ],
+      "position_xyz_m": [
+        0.495147,
+        -0.299657,
+        0.775194
+      ],
+      "quaternion_xyzw": [
+        0.239647,
+        0.72195,
+        -0.636181,
+        -0.128966
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      1.752354,
+      -0.513388,
+      -2.931183
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": null,
+    "end_effector_relative_to_waypoint_after_waypoint": null,
+    "fixed_offset_xyz_m": [
+      0.0,
+      -0.0,
+      0.0
+    ],
+    "fixed_orientation_rpy_rad": [
+      -0.0,
+      0.0,
+      -0.0
+    ],
+    "motion_type": "point",
+    "name": "waypoint2",
+    "parent": "waypoint0",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "position_xyz_m": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "quaternion_xyzw": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "waypoint",
+      "reference_name": "waypoint0"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.054501,
+          -0.063975,
+          1.624745
+        ],
+        "position_xyz_m": [
+          0.007847,
+          0.00705,
+          0.215375
+        ],
+        "quaternion_xyzw": [
+          0.685764,
+          -0.725819,
+          0.009609,
+          0.05312
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "clothes_hanger0"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.752354,
+        -0.513388,
+        -2.931183
+      ],
+      "position_xyz_m": [
+        0.534929,
+        -0.230259,
+        0.787934
+      ],
+      "quaternion_xyzw": [
+        0.239647,
+        0.72195,
+        -0.636181,
+        -0.128966
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      1.752354,
+      -0.513388,
+      -2.931183
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": null,
+    "end_effector_relative_to_waypoint_after_waypoint": null,
+    "fixed_offset_xyz_m": [
+      -0.186044,
+      0.123001,
+      0.418525
+    ],
+    "fixed_orientation_rpy_rad": [
+      -3.141473,
+      0.785399,
+      3.141431
+    ],
+    "motion_type": "point",
+    "name": "waypoint3",
+    "parent": "clothes_rack",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -3.141473,
+          0.785399,
+          3.141431
+        ],
+        "position_xyz_m": [
+          -0.186044,
+          0.123001,
+          0.418525
+        ],
+        "quaternion_xyzw": [
+          5.2e-05,
+          -0.923879,
+          -2.4e-05,
+          -0.382684
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "clothes_rack"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -3.141473,
+          0.785399,
+          3.141431
+        ],
+        "position_xyz_m": [
+          -0.186044,
+          0.123001,
+          0.418525
+        ],
+        "quaternion_xyzw": [
+          5.2e-05,
+          -0.923879,
+          -2.4e-05,
+          -0.382684
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "clothes_rack"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -2.405306,
+        0.303469,
+        1.889285
+      ],
+      "position_xyz_m": [
+        0.408936,
+        0.307648,
+        1.168491
+      ],
+      "quaternion_xyzw": [
+        0.496407,
+        -0.779189,
+        -0.205614,
+        -0.322751
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      -2.405306,
+      0.303469,
+      1.889285
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 25,
+    "cartesian_path_samples": [
+      {
+        "orientation_rpy_rad": [
+          -2.393131,
+          0.307278,
+          1.88564
+        ],
+        "position_xyz_m": [
+          0.44274,
+          0.380103,
+          1.16551
+        ],
+        "relative_distance": 0.0
+      },
+      {
+        "orientation_rpy_rad": [
+          -2.393131,
+          0.307278,
+          1.88564
+        ],
+        "position_xyz_m": [
+          0.443607,
+          0.381954,
+          1.163014
+        ],
+        "relative_distance": 0.041667
+      },
+      {
+        "orientation_rpy_rad": [
+          -2.393131,
+          0.307278,
+          1.88564
+        ],
+        "position_xyz_m": [
+          0.444474,
+          0.383805,
+          1.160518
+        ],
+        "relative_distance": 0.083333
+      },
+      {
+        "orientation_rpy_rad": [
+          -2.393131,
+          0.307278,
+          1.88564
+        ],
+        "position_xyz_m": [
+          0.445342,
+          0.385656,
+          1.158022
+        ],
+        "relative_distance": 0.125
+      },
+      {
+        "orientation_rpy_rad": [
+          -2.393131,
+          0.307278,
+          1.88564
+        ],
+        "position_xyz_m": [
+          0.446209,
+          0.387508,
+          1.155526
+        ],
+        "relative_distance": 0.166667
+      },
+      {
+        "orientation_rpy_rad": [
+          -2.393131,
+          0.307278,
+          1.88564
+        ],
+        "position_xyz_m": [
+          0.447034,
+          0.389279,
+          1.152961
+        ],
+        "relative_distance": 0.208333
+      },
+      {
+        "orientation_rpy_rad": [
+          -2.393131,
+          0.307278,
+          1.88564
+        ],
+        "position_xyz_m": [
+          0.447832,
+          0.390997,
+          1.150349
+        ],
+        "relative_distance": 0.25
+      },
+      {
+        "orientation_rpy_rad": [
+          -2.393131,
+          0.307278,
+          1.88564
+        ],
+        "position_xyz_m": [
+          0.44863,
+          0.392714,
+          1.147738
+        ],
+        "relative_distance": 0.291667
+      },
+      {
+        "orientation_rpy_rad": [
+          -2.393131,
+          0.307278,
+          1.88564
+        ],
+        "position_xyz_m": [
+          0.449427,
+          0.394432,
+          1.145126
+        ],
+        "relative_distance": 0.333333
+      },
+      {
+        "orientation_rpy_rad": [
+          -2.409769,
+          0.302065,
+          1.890631
+        ],
+        "position_xyz_m": [
+          0.450172,
+          0.396032,
+          1.142433
+        ],
+        "relative_distance": 0.375
+      },
+      {
+        "orientation_rpy_rad": [
+          -2.454183,
+          0.287682,
+          1.903541
+        ],
+        "position_xyz_m": [
+          0.450828,
+          0.397435,
+          1.139602
+        ],
+        "relative_distance": 0.416667
+      },
+      {
+        "orientation_rpy_rad": [
+          -2.498214,
+          0.272767,
+          1.915721
+        ],
+        "position_xyz_m": [
+          0.451483,
+          0.398837,
+          1.136772
+        ],
+        "relative_distance": 0.458333
+      },
+      {
+        "orientation_rpy_rad": [
+          -2.541873,
+          0.257353,
+          1.92716
+        ],
+        "position_xyz_m": [
+          0.452139,
+          0.400239,
+          1.133941
+        ],
+        "relative_distance": 0.5
+      },
+      {
+        "orientation_rpy_rad": [
+          -2.564341,
+          0.249186,
+          1.93279
+        ],
+        "position_xyz_m": [
+          0.452385,
+          0.400771,
+          1.130935
+        ],
+        "relative_distance": 0.541667
+      },
+      {
+        "orientation_rpy_rad": [
+          -2.564341,
+          0.249186,
+          1.93279
+        ],
+        "position_xyz_m": [
+          0.45219,
+          0.400368,
+          1.12774
+        ],
+        "relative_distance": 0.583333
+      },
+      {
+        "orientation_rpy_rad": [
+          -2.564341,
+          0.249186,
+          1.93279
+        ],
+        "position_xyz_m": [
+          0.451676,
+          0.399278,
+          1.125222
+        ],
+        "relative_distance": 0.625
+      },
+      {
+        "orientation_rpy_rad": [
+          -2.564341,
+          0.249186,
+          1.93279
+        ],
+        "position_xyz_m": [
+          0.450357,
+          0.396445,
+          1.124419
+        ],
+        "relative_distance": 0.666667
+      },
+      {
+        "orientation_rpy_rad": [
+          -2.564341,
+          0.249186,
+          1.93279
+        ],
+        "position_xyz_m": [
+          0.449039,
+          0.393613,
+          1.123615
+        ],
+        "relative_distance": 0.708333
+      },
+      {
+        "orientation_rpy_rad": [
+          -2.564341,
+          0.249186,
+          1.93279
+        ],
+        "position_xyz_m": [
+          0.44772,
+          0.39078,
+          1.122812
+        ],
+        "relative_distance": 0.75
+      },
+      {
+        "orientation_rpy_rad": [
+          -2.564341,
+          0.249186,
+          1.93279
+        ],
+        "position_xyz_m": [
+          0.446401,
+          0.387948,
+          1.122009
+        ],
+        "relative_distance": 0.791667
+      },
+      {
+        "orientation_rpy_rad": [
+          -2.564341,
+          0.249186,
+          1.93279
+        ],
+        "position_xyz_m": [
+          0.445082,
+          0.385115,
+          1.121206
+        ],
+        "relative_distance": 0.833333
+      },
+      {
+        "orientation_rpy_rad": [
+          -2.564341,
+          0.249186,
+          1.93279
+        ],
+        "position_xyz_m": [
+          0.443763,
+          0.382282,
+          1.120403
+        ],
+        "relative_distance": 0.875
+      },
+      {
+        "orientation_rpy_rad": [
+          -2.564341,
+          0.249186,
+          1.93279
+        ],
+        "position_xyz_m": [
+          0.442444,
+          0.37945,
+          1.1196
+        ],
+        "relative_distance": 0.916667
+      },
+      {
+        "orientation_rpy_rad": [
+          -2.564341,
+          0.249186,
+          1.93279
+        ],
+        "position_xyz_m": [
+          0.441125,
+          0.376617,
+          1.118796
+        ],
+        "relative_distance": 0.958333
+      },
+      {
+        "orientation_rpy_rad": [
+          -2.564341,
+          0.249186,
+          1.93279
+        ],
+        "position_xyz_m": [
+          0.439806,
+          0.373785,
+          1.117993
+        ],
+        "relative_distance": 1.0
+      }
+    ],
+    "end_effector_location_after_waypoint": null,
+    "end_effector_relative_to_waypoint_after_waypoint": null,
+    "fixed_offset_xyz_m": [
+      -0.043409,
+      -2.5e-05,
+      0.084049
+    ],
+    "fixed_orientation_rpy_rad": [
+      3.14158,
+      -0.785395,
+      1.570774
+    ],
+    "motion_type": "predefined_cartesian_path",
+    "name": "waypoint4",
+    "parent": "waypoint3",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.14158,
+          -0.785395,
+          1.570774
+        ],
+        "position_xyz_m": [
+          -0.043409,
+          -2.5e-05,
+          0.084049
+        ],
+        "quaternion_xyzw": [
+          -0.653288,
+          0.653276,
+          0.270596,
+          -0.270598
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "waypoint",
+      "reference_name": "waypoint3"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.4e-05,
+          -4e-06,
+          -1.570695
+        ],
+        "position_xyz_m": [
+          -0.095918,
+          0.122986,
+          0.389788
+        ],
+        "quaternion_xyzw": [
+          6e-06,
+          3e-06,
+          -0.707071,
+          0.707142
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "clothes_rack"
+    },
+    "type": "PATH",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.436332
+      ],
+      "position_xyz_m": [
+        0.447047,
+        0.38932,
+        1.139755
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        0.0,
+        -0.21644,
+        0.976296
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      -0.0,
+      0.0,
+      -0.436332
+    ]
+  }
+]

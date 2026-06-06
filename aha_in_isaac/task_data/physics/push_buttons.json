@@ -1,0 +1,94 @@
+{
+  "shapes": {
+    "push_buttons_boundary": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.34984806180000305,
+      "friction": 0.5
+    },
+    "push_buttons_target0": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.21000011265277863,
+      "friction": 1.0
+    },
+    "push_buttons_target1": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.2100002020597458,
+      "friction": 1.0
+    },
+    "push_buttons_target2": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.2100002020597458,
+      "friction": 1.0
+    },
+    "target_button_topPlate0": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.06852196902036667,
+      "friction": 0.5
+    },
+    "target_button_topPlate1": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.06852196902036667,
+      "friction": 0.5
+    },
+    "target_button_topPlate2": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.06852196902036667,
+      "friction": 0.5
+    },
+    "target_button_wrap0": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.049000006169080734,
+      "friction": 0.5
+    },
+    "target_button_wrap1": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.049000006169080734,
+      "friction": 0.5
+    },
+    "target_button_wrap2": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.049000002443790436,
+      "friction": 0.5
+    }
+  },
+  "joints": {
+    "target_button_joint0": {
+      "type": "prismatic",
+      "cyclic": false,
+      "lower": -0.007000000216066837,
+      "upper": 0.0029999995604157448
+    },
+    "target_button_joint1": {
+      "type": "prismatic",
+      "cyclic": false,
+      "lower": -0.007000000216066837,
+      "upper": 0.0029999995604157448
+    },
+    "target_button_joint2": {
+      "type": "prismatic",
+      "cyclic": false,
+      "lower": -0.007000000216066837,
+      "upper": 0.0029999995604157448
+    }
+  }
+}

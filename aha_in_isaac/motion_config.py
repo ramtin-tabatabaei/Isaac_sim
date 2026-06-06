@@ -3,9 +3,10 @@ motion_config.py
 
 Load the per-task arm-motion configuration (``task_motion_config.json``).
 
-The config only controls HOW MANY sim steps the arm spends reaching each named
-waypoint - WHERE it goes comes entirely from the scene-context report. Each task
-block is merged over the file's ``_default`` block.
+The scene-context report still defines WHERE the arm goes. This config controls
+execution policy around those waypoints, such as waypoint durations, default
+planner, gripper close width, and release timing. Each task block is merged over
+the file's ``_default`` block.
 """
 
 from __future__ import annotations

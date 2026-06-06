@@ -19,6 +19,8 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+import math
+
 import numpy as np
 import torch
 
@@ -45,6 +47,12 @@ TIP_TO_HAND_Z = 0.10
 # is then DERIVED from the resulting spacing (see ``_derive_obstacle_spheres``) so
 # the spheres tile the surface with no hand-tuned radius.
 MAX_OBSTACLE_SPHERES = 450
+
+# Max change in any arm joint target per physics step (rad). At 120 Hz, 0.06 is ~7.2 rad/s -- far
+# above normal smooth tracking (which is well under this, so it never slows the arm) but a hard cap
+# on transient differential-IK spikes near singularities, so the stiff arm can't snap/fly (the wipe
+# blow-up was the arm flung at ~15 m/s). It is a pure safety net, not a speed limit.
+MAX_JOINT_STEP = 0.06
 
 
 def _derive_obstacle_spheres(points: np.ndarray, max_spheres: int = MAX_OBSTACLE_SPHERES):
@@ -76,6 +84,11 @@ class Waypoint:
     If ``via_points_w`` is set, the end-effector sweeps continuously through that
     ordered list of world points (one smooth, eased motion over ``duration_steps``
     with no stop at each point) instead of a single straight segment to ``pos_w``.
+
+    If ``via_quats_w`` is also set (one world ``(w,x,y,z)`` per via point), the gripper
+    ORIENTATION is interpolated through those quaternions along the sweep, so it
+    reorients gradually with the path; otherwise the orientation just slerps from the
+    segment's start to ``quat_w``.
     """
 
     label: str
@@ -84,6 +97,7 @@ class Waypoint:
     gripper: str | float = "open"  # "open", "narrow", "closed", or an explicit finger width
     duration_steps: int = 180
     via_points_w: list[tuple[float, float, float]] | None = None
+    via_quats_w: list[tuple[float, float, float, float]] | None = None
 
 
 def _smoothstep(t: float) -> float:
@@ -146,15 +160,17 @@ class FrankaWaypointController:
         # segment (like RLBench's arm.get_path RRTConnect): a downsampled obstacle point
         # cloud, each point a sphere for RRT. Both the count (budget) and the radius (from
         # the resulting spacing) are derived, not hand-tuned.
-        self.obstacle_centers, self.cuboid_sphere_radius = _derive_obstacle_spheres(self.obstacle_points)
+        self.obstacle_centers, self.derived_sphere_radius = _derive_obstacle_spheres(self.obstacle_points)
         # Safety margin: inflate the obstacle spheres so the planner keeps the arm this much
-        # FURTHER from the frame (extra clearance). 0 = the bare derived radius.
-        if self.obstacle_centers is not None and obstacle_margin > 0.0:
-            self.cuboid_sphere_radius += float(obstacle_margin)
+        # FURTHER from the frame. If a segment can't be planned at the full margin, the planner
+        # AUTO-REDUCES it (see _plan_segment_with_margin) and only falls back to a straight line
+        # if even margin 0 fails. cuboid_sphere_radius is the full-margin radius (kept for compat).
+        self.obstacle_margin = max(0.0, float(obstacle_margin))
+        self.cuboid_sphere_radius = self.derived_sphere_radius + self.obstacle_margin
         if self.obstacle_centers is not None:
-            print(f"[INFO]: RRT obstacle: {len(self.obstacle_centers)} spheres, "
-                  f"radius {self.cuboid_sphere_radius * 1000.0:.1f} mm "
-                  f"(derived + {obstacle_margin * 1000.0:.0f} mm safety margin).")
+            print(f"[INFO]: RRT obstacle: {len(self.obstacle_centers)} spheres, derived radius "
+                  f"{self.derived_sphere_radius * 1000.0:.1f} mm + {self.obstacle_margin * 1000.0:.0f} mm "
+                  f"safety margin (auto-reduced per segment if no plan).")
         # Optional external planner (e.g. RMPFlow). When set, follow() drives the
         # arm with it instead of differential IK; the gripper schedule is unchanged.
         self.planner = planner
@@ -178,8 +194,16 @@ class FrankaWaypointController:
         # index, because the root body is not part of the returned Jacobians.
         self.ee_jacobi_idx = self.ee_body_id - 1 if robot.is_fixed_base else self.ee_body_id
 
+        # DLS at the 0.01 default = normal tracking speed; higher damping (0.05) over-damped the arm
+        # so it lagged and never reached the waypoints (grasp short of the sponge). The wipe blow-up
+        # (~15 m/s) came from the sponge dragging on a high-friction desk, not the damping -- the
+        # frictionless desk material removes that resistance, and the MAX_JOINT_STEP clamp in
+        # _diffik_segment is the hard safety cap on any residual singularity spike.
         self.controller = DifferentialIKController(
-            DifferentialIKControllerCfg(command_type="pose", use_relative_mode=False, ik_method="dls"),
+            DifferentialIKControllerCfg(
+                command_type="pose", use_relative_mode=False, ik_method="dls",
+                ik_params={"lambda_val": 0.01},
+            ),
             num_envs=self.num_envs,
             device=self.device,
         )
@@ -221,6 +245,22 @@ class FrankaWaypointController:
         self.robot.set_joint_position_target(target, joint_ids=self.gripper_joint_ids)
         self._current_grip = width
 
+    def _actuate_gripper(self, from_grip: float, to_grip: float, steps: int = 18) -> bool:
+        """Open/close the gripper AFTER the arm has finished moving: ramp from->to over a few
+        steps while HOLDING the current arm pose, so the gripper never changes mid-move. Kept short
+        (~0.15 s at 120 Hz) so it actuates promptly the moment the arm reaches the waypoint instead
+        of lingering. Returns False if the app stopped. No-op when there's no change."""
+        if abs(to_grip - from_grip) < 1.0e-6:
+            return True
+        for i in range(int(steps)):
+            if not self.simulation_app.is_running():
+                return False
+            t = (i + 1) / steps
+            self.robot.set_joint_position_target(self._hold_arm_target, joint_ids=self.arm_joint_ids)
+            self._set_gripper(from_grip + (to_grip - from_grip) * t)
+            self._step()
+        return True
+
     def _ee_pose_b(self) -> tuple[torch.Tensor, torch.Tensor]:
         ee_pose_w = self.robot.data.body_pose_w[:, self.ee_body_id]
         root_pose_w = self.robot.data.root_pose_w
@@ -249,6 +289,17 @@ class FrankaWaypointController:
 
     def _slerp_batch(self, q0: torch.Tensor, q1: torch.Tensor, t: float) -> torch.Tensor:
         return torch.stack([quat_slerp(a, b, t) for a, b in zip(q0, q1)])
+
+    def _slerp_along(self, quats: list[torch.Tensor], t: float) -> torch.Tensor:
+        """Orientation at fraction ``t`` along an ordered list of quaternions: pick the
+        sub-segment and slerp within it, so the gripper reorients smoothly through every
+        recorded sample instead of snapping or holding one orientation for the whole path."""
+        n = len(quats)
+        if n == 1:
+            return quats[0]
+        f = max(0.0, min(1.0, t)) * (n - 1)
+        i = min(int(f), n - 2)
+        return self._slerp_batch(quats[i], quats[i + 1], f - i)
 
     # ------------------------------------------------------------------
     # Public API.
@@ -341,11 +392,14 @@ class FrankaWaypointController:
                         return
                     t = _smoothstep((phase_step + 1) / steps_each)
                     self._apply_planner_targets(tgt, wp.quat_w)
-                    self._set_gripper(current_grip + (target_grip - current_grip) * t)
+                    self._set_gripper(current_grip)  # HOLD; change the gripper only after the move
                     self._step()
             end_ee = self._ee_pos_w()
             moved = sum((end_ee[i] - start_ee[i]) ** 2 for i in range(3)) ** 0.5
             print(f"[INFO]: [RMPFlow] '{wp.label}' done: ee_now={tuple(round(v, 3) for v in end_ee)} (moved {moved:.3f} m)")
+            # Movement finished -> NOW open/close the gripper.
+            if not self._actuate_gripper(current_grip, target_grip):
+                return
             current_grip = target_grip
         print("[INFO]: [RMPFlow] motion complete.")
 
@@ -369,8 +423,7 @@ class FrankaWaypointController:
             q = (traj[i0] * (1.0 - alpha) + traj[i1] * alpha).unsqueeze(0)
             self.robot.set_joint_position_target(q, joint_ids=self.arm_joint_ids)
             self._hold_arm_target = q.clone()
-            frac = (step_index + 1) / steps
-            self._set_gripper(current_grip + (target_grip - current_grip) * frac)
+            self._set_gripper(current_grip)  # HOLD the gripper; it changes AFTER the move (in _finish_planned_waypoint)
             self._step()
         return True
 
@@ -394,14 +447,17 @@ class FrankaWaypointController:
                 f"{wp.label} final align",
                 wp.pos_w,
                 quat_w=wp.quat_w,
-                gripper=target_grip,
+                gripper=current_grip,  # hold the gripper through the align; change only after
                 duration_steps=max(40, min(100, int(wp.duration_steps * 0.35))),
             )
-            if self._diffik_segment(align_wp, end_pos_b.clone(), end_quat_b.clone(), target_grip) is None:
+            if self._diffik_segment(align_wp, end_pos_b.clone(), end_quat_b.clone(), current_grip) is None:
                 return False
         else:
             print(f"[INFO]: Planned waypoint '{wp.label}': final hand error = {hand_err * 1000.0:.1f} mm")
 
+        # All arm movement for this waypoint is done -> NOW open/close the gripper.
+        if not self._actuate_gripper(current_grip, target_grip):
+            return False
         self._maybe_grasp(wp, current_grip, target_grip)
         self._maybe_release(wp, current_grip, target_grip)
         return True
@@ -487,6 +543,17 @@ class FrankaWaypointController:
             ee_w = robot.data.body_pose_w[:, self.ee_body_id][0, 0:3].tolist()
             polyline = [tuple(float(c) for c in ee_w)] + [self._hand_target(p, wp.quat_w) for p in wp.via_points_w]
 
+        # If the path records a per-via-point orientation, reorient the gripper gradually
+        # through those quaternions (in the base frame) instead of holding one orientation
+        # for the whole sweep. Prepend the segment's start orientation so it eases in from
+        # wherever the arm currently is.
+        quat_poly_b = None
+        if wp.via_quats_w:
+            quat_poly_b = [start_quat_b]
+            for q_w in wp.via_quats_w:
+                _, q_b = self._world_to_base(wp.pos_w, q_w)
+                quat_poly_b.append(q_b)
+
         for phase_step in range(duration):
             if not self.simulation_app.is_running():
                 return None
@@ -495,21 +562,43 @@ class FrankaWaypointController:
                 command_pos, _ = self._world_to_base(_point_along_polyline(polyline, t), wp.quat_w)
             else:
                 command_pos = start_pos_b + (target_pos_b - start_pos_b) * t
-            command_quat = self._slerp_batch(start_quat_b, target_quat_b, t)
+            if quat_poly_b is not None:
+                command_quat = self._slerp_along(quat_poly_b, t)
+            else:
+                command_quat = self._slerp_batch(start_quat_b, target_quat_b, t)
             self.controller.set_command(torch.cat((command_pos, command_quat), dim=-1))
 
             jacobian = robot.root_physx_view.get_jacobians()[:, self.ee_jacobi_idx, :, self.arm_joint_ids]
             ee_pos_b, ee_quat_b = self._ee_pose_b()
             joint_pos = robot.data.joint_pos[:, self.arm_joint_ids]
             joint_pos_des = self.controller.compute(ee_pos_b, ee_quat_b, jacobian, joint_pos)
+            # Hard safety: cap how far the TARGET moves per physics step, measured against the
+            # PREVIOUS target (not the actual joint pos). Clamping vs. the actual position fights the
+            # high-PD controller's normal tracking lag -- it pulls the target back toward the lagging
+            # actual and throttles the whole descent (the arm then grasps ~7 cm short of the object).
+            # Measuring vs. the previous target leaves smooth tracking untouched and only clips a
+            # genuine IK spike (the target jumping > MAX_JOINT_STEP in one step, e.g. at a
+            # singularity), so the stiff arm can never snap/fly.
+            joint_pos_des = self._hold_arm_target + torch.clamp(
+                joint_pos_des - self._hold_arm_target, -MAX_JOINT_STEP, MAX_JOINT_STEP
+            )
             self._hold_arm_target = joint_pos_des.clone()
 
             robot.set_joint_position_target(joint_pos_des, joint_ids=self.arm_joint_ids)
-            self._set_gripper(current_grip + (target_grip - current_grip) * t)
+            self._set_gripper(current_grip)  # HOLD the gripper; only change it AFTER the move
             self._step()
         end_pos_b, end_quat_b = self._ee_pose_b()
         hand_err = torch.linalg.norm(end_pos_b - target_pos_b, dim=-1).max().item()
-        print(f"[INFO]: Waypoint tracking '{wp.label}': final hand error = {hand_err * 1000.0:.1f} mm")
+        # Orientation tracking error: angle between the ACHIEVED and the COMMANDED EE quaternion
+        # (both in the base frame, so it is the true gripper-orientation error -- no report/task-root
+        # transform to reconcile). 2*acos(|q.q|) is the geodesic angle on the unit quaternion sphere.
+        dotq = torch.abs(torch.sum(end_quat_b * target_quat_b, dim=-1)).clamp(max=1.0)
+        orient_err = float((2.0 * torch.acos(dotq)).max().item() * 180.0 / math.pi)
+        print(f"[INFO]: Waypoint tracking '{wp.label}': final hand error = {hand_err * 1000.0:.1f} mm, "
+              f"orientation error = {orient_err:.1f} deg")
+        # Movement finished -> NOW open/close the gripper (holding the arm pose).
+        if not self._actuate_gripper(current_grip, target_grip):
+            return None
         self._maybe_grasp(wp, current_grip, target_grip)
         # Detach AFTER the fingers have fully opened: while the grasp joint still holds the
         # wand we open the fingers (so they stop pushing the rigidly-held handle), THEN drop
@@ -547,6 +636,29 @@ class FrankaWaypointController:
             self.on_release(wp)
             self._release_done = True
 
+    def _plan_segment_with_margin(self, start_joints, hand_target_w, quat_w, centers):
+        """Plan one segment with the safety margin, AUTO-REDUCING it on failure so we keep the
+        LARGEST margin that still yields a collision-free plan. Tries the full margin first, then
+        smaller ones, down to 0 (bare derived radius). Returns (segment, margin_used) or
+        (None, 0.0) if even margin 0 fails (caller then uses the straight-line fallback)."""
+        base = self.derived_sphere_radius
+        margin = self.obstacle_margin
+        # Descending margins to try (fractions of the requested margin, ending at 0).
+        if margin > 0.0:
+            margins = sorted({margin, 0.75 * margin, 0.5 * margin, 0.25 * margin, 0.0}, reverse=True)
+        else:
+            margins = [0.0]
+        for m in margins:
+            segment = self.planner.plan_segment(
+                start_joints, list(self._arm_names), hand_target_w, quat_w, centers, base + m,
+            )
+            if segment is not None:
+                if m < margin:
+                    print(f"[INFO]: [RRT] full {margin*1000:.0f} mm margin had no plan; "
+                          f"succeeded at {m*1000:.0f} mm.")
+                return segment, m
+        return None, 0.0
+
     def _follow_planned(self, waypoints: list[Waypoint]):
         """Plan EVERY segment collision-free against the whole obstacle (the Cuboid), the
         way AHA/RLBench moves between waypoints (``arm.get_path`` with RRTConnect). This is
@@ -558,6 +670,21 @@ class FrankaWaypointController:
         centers = self.obstacle_centers
         for wp in waypoints:
             target_grip = self._grip_width(wp.gripper)
+            # A waypoint carrying via points is a RECORDED/constructed trajectory to execute
+            # EXACTLY - e.g. close_box's lid-closing cartesian sweep (the yellow path) or a
+            # beat_the_buzz slide/lift. RRT plans only a collision-free route to the END point,
+            # which would skip the path and route AROUND the very object the sweep must push
+            # (the box). So follow such a waypoint directly with differential IK through its via
+            # points; RRT free-space planning is reserved for the discrete point-to-point moves.
+            if wp.via_points_w:
+                print(f"[INFO]: [RRT] following recorded path '{wp.label}' exactly "
+                      f"({len(wp.via_points_w)} via points, no reroute).")
+                cur_pos_b, cur_quat_b = self._ee_pose_b()
+                result = self._diffik_segment(wp, cur_pos_b, cur_quat_b, current_grip)
+                if result is None:
+                    return
+                current_grip = result[2]
+                continue
             hand_target_w = self._hand_target(wp.pos_w, wp.quat_w)
             cur_hand = self.robot.data.body_pose_w[0, self.ee_body_id, 0:3].detach().cpu().numpy()
             in_place = float(np.linalg.norm(np.array(hand_target_w) - cur_hand)) < 0.015
@@ -565,11 +692,9 @@ class FrankaWaypointController:
             if centers is not None and not in_place:
                 start_joints = self.robot.data.joint_pos[:, self.arm_joint_ids][0].detach().cpu().tolist()
                 print(f"[INFO]: [RRT] planning '{wp.label}' collision-free vs the Cuboid "
-                      f"({len(centers)} obstacle spheres)...")
-                segment = self.planner.plan_segment(
-                    start_joints, list(self._arm_names), hand_target_w, wp.quat_w,
-                    centers, self.cuboid_sphere_radius,
-                )
+                      f"({len(centers)} obstacle spheres, up to {self.obstacle_margin*1000:.0f} mm margin)...")
+                segment, _margin_used = self._plan_segment_with_margin(
+                    start_joints, hand_target_w, wp.quat_w, centers)
             if segment is not None:
                 positions, names = segment
                 self._active_label = wp.label

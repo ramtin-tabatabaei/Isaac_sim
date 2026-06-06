@@ -47,8 +47,9 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--planner",
         choices=("diffik", "rmpflow", "curobo", "rrt"),
-        default="diffik",
-        help="Arm controller: 'diffik' (default straight-line differential IK), 'rmpflow' "
+        default=None,
+        help="Arm controller. If omitted, uses the task's motion config planner, falling back to diffik. "
+        "'diffik' is straight-line differential IK, 'rmpflow' "
         "(reactive Lula avoidance), 'curobo' (global collision-free planner), or 'rrt' "
         "(AHA-style: EVERY segment is planned collision-free around the whole obstacle with "
         "Lula RRT, like RLBench's arm.get_path; in-place dwells fall back to differential IK).",
@@ -63,12 +64,13 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--rrt-safety-margin",
         type=float,
-        default=0.0,
+        default=0.05,
         metavar="METRES",
         help="For --planner rrt: extra clearance the planner keeps from the obstacle (Cuboid). "
         "It inflates every obstacle sphere by this much, so the planned arm path stays further "
-        "from the frame. Larger = safer but can make tight goals fall back to the straight line. "
-        "Try 0.02-0.05.",
+        "from the frame. If a segment can't be planned at this margin, the planner AUTO-REDUCES "
+        "it (down to 0) and only falls back to the straight line if even 0 fails. Default 0.05; "
+        "pass 0 to disable the margin.",
     )
     parser.add_argument(
         "--curobo-obstacles",
@@ -205,6 +207,16 @@ def build_parser() -> argparse.ArgumentParser:
         help=(
             "Use 'task-root' for exported AHA task USDs, 'baked' for files already at final world poses, "
             "or 'scene-context' for USDs exported around local object origins."
+        ),
+    )
+    parser.add_argument(
+        "--match-graspable-to-report",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help=(
+            "In task-root mode, move graspable objects (e.g. weights/peppers) onto the "
+            "sampled world pose recorded in the scene-context report, instead of the pose "
+            "baked into their USD. Pass --no-match-graspable-to-report to keep the baked pose."
         ),
     )
     return parser

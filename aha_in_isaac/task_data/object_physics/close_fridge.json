@@ -1,0 +1,43 @@
+{
+  "fridge_root": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "fridge_base": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "fridge_base_visual": {
+    "type": "visual"
+  },
+  "shelf0": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "door_bottom": {
+    "type": "rigid",
+    "density": 400.0,
+    "uv": "auto"
+  },
+  "door_top": {
+    "type": "rigid",
+    "density": 400.0,
+    "uv": "auto"
+  },
+  "shelf1": {
+    "type": "rigid",
+    "density": 400.0,
+    "uv": "auto"
+  },
+  "shelf2": {
+    "type": "rigid",
+    "density": 400.0,
+    "uv": "auto"
+  },
+  "door_bottom_visual": {
+    "type": "visual"
+  },
+  "door_top_visual": {
+    "type": "visual"
+  }
+}

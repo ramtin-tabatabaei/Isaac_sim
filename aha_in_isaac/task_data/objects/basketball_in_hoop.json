@@ -1,0 +1,492 @@
+[
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.023461,
+          -0.023814,
+          -0.000376
+        ],
+        "position_xyz_m": [
+          0.150143,
+          -0.035152,
+          -0.024951
+        ],
+        "quaternion_xyzw": [
+          -0.011727,
+          -0.011908,
+          -4.8e-05,
+          0.99986
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "ball",
+      "world_offset_xyz_m": [
+        0.097742,
+        -0.118266,
+        -0.029337
+      ]
+    },
+    "handle": 81,
+    "hierarchy_path": "basketball_in_hoop/basket_boundary_root",
+    "name": "basket_boundary_root",
+    "parent": "basketball_in_hoop",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        0.0,
+        -0.653328
+      ],
+      "position_xyz_m": [
+        0.035638,
+        -0.129803,
+        0.0
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        -0.320885,
+        0.947118
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": null,
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        0.0,
+        -0.653328
+      ],
+      "position_xyz_m": [
+        0.285638,
+        -0.129803,
+        0.752
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        -0.320885,
+        0.947118
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.425,
+      "x_uniform_min_m": 0.075,
+      "y_uniform_max_m": 0.18,
+      "y_uniform_min_m": -0.18,
+      "z_fixed_m": 0.752
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.118199,
+          0.004476,
+          -3.141202
+        ],
+        "position_xyz_m": [
+          0.268828,
+          0.001932,
+          0.230875
+        ],
+        "quaternion_xyzw": [
+          0.000169,
+          0.999929,
+          -0.011696,
+          0.00224
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "ball",
+      "world_offset_xyz_m": [
+        0.215717,
+        -0.169383,
+        0.22439
+      ]
+    },
+    "handle": 82,
+    "hierarchy_path": "basketball_in_hoop/basket_boundary_root/basket_ball_hoop_respondable",
+    "name": "basket_ball_hoop_respondable",
+    "parent": "basket_boundary_root",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.141533,
+        -0.019338,
+        -3.141576
+      ],
+      "position_xyz_m": [
+        0.12475,
+        0.031119,
+        0.253726
+      ],
+      "quaternion_xyzw": [
+        8e-06,
+        0.999953,
+        3e-05,
+        -0.009669
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.141533,
+        -0.019338,
+        -3.141576
+      ],
+      "position_xyz_m": [
+        0.12475,
+        0.031119,
+        0.253726
+      ],
+      "quaternion_xyzw": [
+        8e-06,
+        0.999953,
+        3e-05,
+        -0.009669
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.12979,
+        -0.015319,
+        -2.488158
+      ],
+      "position_xyz_m": [
+        0.403614,
+        -0.18092,
+        1.005726
+      ],
+      "quaternion_xyzw": [
+        0.320878,
+        0.947071,
+        0.003131,
+        -0.009148
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.553573,
+      "x_uniform_min_m": 0.141207,
+      "y_uniform_max_m": 0.290216,
+      "y_uniform_min_m": -0.246207,
+      "z_fixed_m": 1.005726
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.133906,
+          -1.546985,
+          -3.125823
+        ],
+        "position_xyz_m": [
+          0.000584,
+          -0.000575,
+          -0.02452
+        ],
+        "quaternion_xyzw": [
+          -0.008326,
+          -0.715428,
+          0.008258,
+          0.698588
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "ball",
+      "world_offset_xyz_m": [
+        -0.0,
+        0.0,
+        -0.024534
+      ]
+    },
+    "handle": 86,
+    "hierarchy_path": "basketball_in_hoop/basket_boundary_root/ball_stop",
+    "name": "ball_stop",
+    "parent": "basket_boundary_root",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        0.0
+      ],
+      "position_xyz_m": [
+        -0.1495,
+        0.0345,
+        0.004803
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.707107,
+        -0.0,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        0.0
+      ],
+      "position_xyz_m": [
+        -0.1495,
+        0.0345,
+        0.004803
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.707107,
+        -0.0,
+        0.707107
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        -0.917468,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        0.187896,
+        -0.011536,
+        0.756803
+      ],
+      "quaternion_xyzw": [
+        -0.2269,
+        -0.669714,
+        -0.2269,
+        0.669714
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.343683,
+      "x_uniform_min_m": -0.078429,
+      "y_uniform_max_m": 0.310108,
+      "y_uniform_min_m": -0.261317,
+      "z_fixed_m": 0.756803
+    }
+  },
+  {
+    "handle": 87,
+    "hierarchy_path": "basketball_in_hoop/basket_boundary_root/ball",
+    "name": "ball",
+    "parent": "basket_boundary_root",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.023459,
+        0.023816,
+        -0.000183
+      ],
+      "position_xyz_m": [
+        -0.1495,
+        0.0345,
+        0.029337
+      ],
+      "quaternion_xyzw": [
+        0.011727,
+        0.011908,
+        4.8e-05,
+        0.99986
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.343683,
+      "x_uniform_min_m": -0.078429,
+      "y_uniform_max_m": 0.310108,
+      "y_uniform_min_m": -0.261317,
+      "z_fixed_m": 0.781336
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.023459,
+        0.023816,
+        -0.000183
+      ],
+      "position_xyz_m": [
+        -0.1495,
+        0.0345,
+        0.029337
+      ],
+      "quaternion_xyzw": [
+        0.011727,
+        0.011908,
+        4.8e-05,
+        0.99986
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.033102,
+        0.004656,
+        -0.653309
+      ],
+      "position_xyz_m": [
+        0.187896,
+        -0.011537,
+        0.781336
+      ],
+      "quaternion_xyzw": [
+        0.014928,
+        0.007515,
+        -0.320795,
+        0.947001
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.343683,
+      "x_uniform_min_m": -0.078429,
+      "y_uniform_max_m": 0.310108,
+      "y_uniform_min_m": -0.261317,
+      "z_fixed_m": 0.781336
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          2.017245,
+          1.085645,
+          -0.398917
+        ],
+        "position_xyz_m": [
+          0.477598,
+          -0.054919,
+          0.248307
+        ],
+        "quaternion_xyzw": [
+          0.655557,
+          0.413425,
+          0.33796,
+          0.533955
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "ball",
+      "world_offset_xyz_m": [
+        0.347021,
+        -0.341884,
+        0.235508
+      ]
+    },
+    "handle": 83,
+    "hierarchy_path": "basketball_in_hoop/basket_boundary_root/basket_ball_hoop_respondable/basket_ball_hoop_visual",
+    "name": "basket_ball_hoop_visual",
+    "parent": "basket_ball_hoop_respondable",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.093078,
+        -1.083951,
+        2.733768
+      ],
+      "position_xyz_m": [
+        -0.208862,
+        -0.057162,
+        -0.015163
+      ],
+      "quaternion_xyzw": [
+        -0.341393,
+        -0.525267,
+        0.662443,
+        0.41075
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        2.08038,
+        1.074772,
+        -0.443898
+      ],
+      "position_xyz_m": [
+        0.333865,
+        -0.026047,
+        0.264844
+      ],
+      "quaternion_xyzw": [
+        0.665732,
+        0.415794,
+        0.33498,
+        0.521253
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.833166,
+        0.462105,
+        -0.106268
+      ],
+      "position_xyz_m": [
+        0.534917,
+        -0.353421,
+        1.016844
+      ],
+      "quaternion_xyzw": [
+        0.763949,
+        0.180182,
+        0.150003,
+        0.601179
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.75988,
+      "x_uniform_min_m": 0.29266,
+      "y_uniform_max_m": 0.39766,
+      "y_uniform_min_m": -0.434497,
+      "z_fixed_m": 1.016844
+    }
+  }
+]

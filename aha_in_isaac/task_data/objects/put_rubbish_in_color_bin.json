@@ -1,0 +1,605 @@
+[
+  {
+    "handle": 80,
+    "hierarchy_path": "put_rubbish_in_color_bin/bin1",
+    "name": "bin1",
+    "parent": "put_rubbish_in_color_bin",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570451,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.0867,
+        -0.28045,
+        0.09378
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.707116,
+        0.0,
+        0.707098
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570451,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.0867,
+        -0.28045,
+        0.09378
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.707116,
+        0.0,
+        0.707098
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570451,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.3367,
+        -0.28045,
+        0.84578
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.707116,
+        0.0,
+        0.707098
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 84,
+    "hierarchy_path": "put_rubbish_in_color_bin/bin2",
+    "name": "bin2",
+    "parent": "put_rubbish_in_color_bin",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570451,
+        0.0
+      ],
+      "position_xyz_m": [
+        -0.1413,
+        0.28455,
+        0.09378
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.707116,
+        0.0,
+        0.707098
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570451,
+        0.0
+      ],
+      "position_xyz_m": [
+        -0.1413,
+        0.28455,
+        0.09378
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.707116,
+        0.0,
+        0.707098
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570451,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.1087,
+        0.28455,
+        0.84578
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.707116,
+        0.0,
+        0.707098
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 88,
+    "hierarchy_path": "put_rubbish_in_color_bin/light_bulb",
+    "name": "light_bulb",
+    "parent": "put_rubbish_in_color_bin",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.14154,
+        -5.6e-05,
+        3.141592
+      ],
+      "position_xyz_m": [
+        -0.139997,
+        -0.227,
+        0.069127
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        1.0,
+        -2.6e-05,
+        -2.8e-05
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.14154,
+        -5.6e-05,
+        3.141592
+      ],
+      "position_xyz_m": [
+        -0.139997,
+        -0.227,
+        0.069127
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        1.0,
+        -2.6e-05,
+        -2.8e-05
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.14154,
+        -5.6e-05,
+        3.141592
+      ],
+      "position_xyz_m": [
+        0.110003,
+        -0.227,
+        0.821127
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        1.0,
+        -2.6e-05,
+        -2.8e-05
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 91,
+    "hierarchy_path": "put_rubbish_in_color_bin/rubbish",
+    "name": "rubbish",
+    "parent": "put_rubbish_in_color_bin",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.491027,
+        -1.018761,
+        1.431173
+      ],
+      "position_xyz_m": [
+        0.086217,
+        0.103488,
+        0.017222
+      ],
+      "quaternion_xyzw": [
+        0.211904,
+        -0.65894,
+        0.171189,
+        0.701134
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.491027,
+        -1.018761,
+        1.431173
+      ],
+      "position_xyz_m": [
+        0.086217,
+        0.103488,
+        0.017222
+      ],
+      "quaternion_xyzw": [
+        0.211904,
+        -0.65894,
+        0.171189,
+        0.701134
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.491027,
+        -1.018761,
+        1.431173
+      ],
+      "position_xyz_m": [
+        0.336217,
+        0.103488,
+        0.769222
+      ],
+      "quaternion_xyzw": [
+        0.211904,
+        -0.65894,
+        0.171189,
+        0.701134
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 81,
+    "hierarchy_path": "put_rubbish_in_color_bin/bin1/bin_visual1",
+    "name": "bin_visual1",
+    "parent": "bin1",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.336275,
+        -0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.000624,
+        -2e-06,
+        -9e-06
+      ],
+      "quaternion_xyzw": [
+        -0.167346,
+        -0.0,
+        0.0,
+        0.985898
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570871,
+        -1.234522,
+        -1.570875
+      ],
+      "position_xyz_m": [
+        0.086709,
+        -0.280452,
+        0.094404
+      ],
+      "quaternion_xyzw": [
+        -0.11833,
+        -0.697144,
+        -0.118333,
+        0.697126
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570871,
+        -1.234522,
+        -1.570875
+      ],
+      "position_xyz_m": [
+        0.336709,
+        -0.280452,
+        0.846404
+      ],
+      "quaternion_xyzw": [
+        -0.11833,
+        -0.697144,
+        -0.118333,
+        0.697126
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 85,
+    "hierarchy_path": "put_rubbish_in_color_bin/bin2/bin_visual2",
+    "name": "bin_visual2",
+    "parent": "bin2",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.336275,
+        -0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.000624,
+        -2e-06,
+        -9e-06
+      ],
+      "quaternion_xyzw": [
+        -0.167346,
+        -0.0,
+        0.0,
+        0.985898
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570871,
+        -1.234522,
+        -1.570875
+      ],
+      "position_xyz_m": [
+        -0.14129,
+        0.284548,
+        0.094404
+      ],
+      "quaternion_xyzw": [
+        -0.11833,
+        -0.697144,
+        -0.118333,
+        0.697126
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570871,
+        -1.234522,
+        -1.570875
+      ],
+      "position_xyz_m": [
+        0.10871,
+        0.284548,
+        0.846404
+      ],
+      "quaternion_xyzw": [
+        -0.11833,
+        -0.697144,
+        -0.118333,
+        0.697126
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 89,
+    "hierarchy_path": "put_rubbish_in_color_bin/light_bulb/color_bulb",
+    "name": "color_bulb",
+    "parent": "light_bulb",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        -0.0,
+        -2e-06,
+        -0.007784
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.14154,
+        -5.6e-05,
+        3.141592
+      ],
+      "position_xyz_m": [
+        -0.139997,
+        -0.227002,
+        0.076911
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        1.0,
+        -2.6e-05,
+        -2.8e-05
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.14154,
+        -5.6e-05,
+        3.141592
+      ],
+      "position_xyz_m": [
+        0.110003,
+        -0.227002,
+        0.828911
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        1.0,
+        -2.6e-05,
+        -2.8e-05
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 90,
+    "hierarchy_path": "put_rubbish_in_color_bin/light_bulb/bulb_holder",
+    "name": "bulb_holder",
+    "parent": "light_bulb",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.14154,
+        5.6e-05,
+        3.141592
+      ],
+      "position_xyz_m": [
+        -3e-06,
+        3e-06,
+        0.04104
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        1.0,
+        -2.6e-05,
+        2.8e-05
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        -0.139996,
+        -0.226999,
+        0.028086
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.110004,
+        -0.226999,
+        0.780086
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 92,
+    "hierarchy_path": "put_rubbish_in_color_bin/rubbish/rubbish_visual",
+    "name": "rubbish_visual",
+    "parent": "rubbish",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1e-06,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        -0.0,
+        -0.0
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.491029,
+        -1.018762,
+        1.431175
+      ],
+      "position_xyz_m": [
+        0.086218,
+        0.103488,
+        0.017223
+      ],
+      "quaternion_xyzw": [
+        0.211904,
+        -0.658941,
+        0.171189,
+        0.701133
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.491029,
+        -1.018762,
+        1.431175
+      ],
+      "position_xyz_m": [
+        0.336218,
+        0.103488,
+        0.769223
+      ],
+      "quaternion_xyzw": [
+        0.211904,
+        -0.658941,
+        0.171189,
+        0.701133
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  }
+]

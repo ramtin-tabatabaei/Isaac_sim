@@ -1,0 +1,47 @@
+{
+  "shapes": {
+    "grill": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 54.70529556274414,
+      "friction": 0.5
+    },
+    "chicken": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.25600001215934753,
+      "friction": 0.7099999785423279
+    },
+    "grill_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 26.74831199645996,
+      "friction": 0.7099999785423279
+    },
+    "steak": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.02584124729037285,
+      "friction": 0.7099999785423279
+    },
+    "chicken_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.0002500000118743628,
+      "friction": 0.7099999785423279
+    },
+    "steak_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.0002754989545792341,
+      "friction": 0.7099999785423279
+    }
+  },
+  "joints": {}
+}

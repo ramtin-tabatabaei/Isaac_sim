@@ -1,0 +1,1542 @@
+[
+  {
+    "handle": 81,
+    "hierarchy_path": "straighten_rope/tail",
+    "name": "tail",
+    "parent": "straighten_rope",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570796,
+        0.003893
+      ],
+      "position_xyz_m": [
+        -0.047444,
+        0.082605,
+        0.003
+      ],
+      "quaternion_xyzw": [
+        -0.001322,
+        -0.707164,
+        -0.001431,
+        -0.707047
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570796,
+        0.003893
+      ],
+      "position_xyz_m": [
+        -0.047444,
+        0.082605,
+        0.003
+      ],
+      "quaternion_xyzw": [
+        -0.001322,
+        -0.707164,
+        -0.001431,
+        -0.707047
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.571949,
+        -1.426965,
+        -1.565764
+      ],
+      "position_xyz_m": [
+        0.307826,
+        -0.320063,
+        0.755
+      ],
+      "quaternion_xyzw": [
+        0.705435,
+        0.049439,
+        -0.705121,
+        0.052177
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.66526,
+      "x_uniform_min_m": 0.006744,
+      "y_uniform_max_m": 0.36626,
+      "y_uniform_min_m": -0.227259,
+      "z_fixed_m": 0.755
+    }
+  },
+  {
+    "handle": 123,
+    "hierarchy_path": "straighten_rope/success_tail/head_target",
+    "name": "head_target",
+    "parent": "success_tail",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.141593,
+        -0.0,
+        1.570796
+      ],
+      "position_xyz_m": [
+        0.387999,
+        4e-06,
+        0.017998
+      ],
+      "quaternion_xyzw": [
+        -0.707107,
+        0.707107,
+        0.0,
+        0.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        -0.127004,
+        -0.292999,
+        2e-06
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        0.0,
+        -2.997917
+      ],
+      "position_xyz_m": [
+        0.332786,
+        0.063063,
+        0.752002
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        0.0,
+        -0.997421,
+        0.071776
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.88934,
+      "x_uniform_min_m": -0.217333,
+      "y_uniform_max_m": 0.590339,
+      "y_uniform_min_m": -0.451339,
+      "z_fixed_m": 0.752002
+    }
+  },
+  {
+    "handle": 125,
+    "hierarchy_path": "straighten_rope/success_head/head_tail",
+    "name": "head_tail",
+    "parent": "success_head",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.141593,
+        0.0,
+        1.570796
+      ],
+      "position_xyz_m": [
+        -0.388,
+        0.0,
+        0.017999
+      ],
+      "quaternion_xyzw": [
+        0.707107,
+        -0.707107,
+        0.0,
+        -0.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        -0.127,
+        0.095,
+        2e-06
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -2.997916
+      ],
+      "position_xyz_m": [
+        0.388337,
+        -0.320939,
+        0.752001
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        -0.0,
+        -0.997421,
+        0.071776
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.728599,
+      "x_uniform_min_m": -0.056596,
+      "y_uniform_max_m": 0.4296,
+      "y_uniform_min_m": -0.2906,
+      "z_fixed_m": 0.752001
+    }
+  },
+  {
+    "handle": 83,
+    "hierarchy_path": "straighten_rope/tail/Joint16/Cylinder16",
+    "name": "Cylinder16",
+    "parent": "Joint16",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.2618,
+        0.0,
+        0.0
+      ],
+      "position_xyz_m": [
+        8e-06,
+        -0.002,
+        -0.01125
+      ],
+      "quaternion_xyzw": [
+        -0.130526,
+        0.0,
+        0.0,
+        0.991445
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.571139,
+        1.309025,
+        1.576468
+      ],
+      "position_xyz_m": [
+        -0.069944,
+        0.080604,
+        0.003
+      ],
+      "quaternion_xyzw": [
+        0.090418,
+        -0.701334,
+        -0.094154,
+        -0.700779
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.571021,
+        -1.165349,
+        -1.565249
+      ],
+      "position_xyz_m": [
+        0.329807,
+        -0.314861,
+        0.755
+      ],
+      "quaternion_xyzw": [
+        0.693035,
+        0.140524,
+        -0.692213,
+        0.14421
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.67672,
+      "x_uniform_min_m": -0.004715,
+      "y_uniform_max_m": 0.377719,
+      "y_uniform_min_m": -0.238719,
+      "z_fixed_m": 0.755
+    }
+  },
+  {
+    "handle": 85,
+    "hierarchy_path": "straighten_rope/tail/Joint16/Cylinder16/Joint15/Cylinder15",
+    "name": "Cylinder15",
+    "parent": "Joint15",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.261799,
+        -0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        4e-06,
+        -0.002,
+        -0.01125
+      ],
+      "quaternion_xyzw": [
+        -0.130526,
+        -0.0,
+        -0.0,
+        0.991445
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.571128,
+        1.048569,
+        1.574826
+      ],
+      "position_xyz_m": [
+        -0.091166,
+        0.072863,
+        0.003003
+      ],
+      "quaternion_xyzw": [
+        0.181281,
+        -0.683535,
+        -0.183807,
+        -0.682739
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.571064,
+        -0.904893,
+        -1.566844
+      ],
+      "position_xyz_m": [
+        0.349703,
+        -0.304161,
+        0.755003
+      ],
+      "quaternion_xyzw": [
+        0.66876,
+        0.229875,
+        -0.667785,
+        0.232337
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.686706,
+      "x_uniform_min_m": -0.014702,
+      "y_uniform_max_m": 0.387706,
+      "y_uniform_min_m": -0.248705,
+      "z_fixed_m": 0.755003
+    }
+  },
+  {
+    "handle": 87,
+    "hierarchy_path": "straighten_rope/tail/Joint16/Cylinder16/Joint15/Cylinder15/Joint14/Cylinder14",
+    "name": "Cylinder14",
+    "parent": "Joint14",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.296706,
+        1e-06,
+        0.0
+      ],
+      "position_xyz_m": [
+        5e-06,
+        -0.003,
+        -0.011243
+      ],
+      "quaternion_xyzw": [
+        -0.147809,
+        0.0,
+        0.0,
+        0.989016
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.571064,
+        0.750037,
+        1.574508
+      ],
+      "position_xyz_m": [
+        -0.10915,
+        0.059029,
+        0.003004
+      ],
+      "quaternion_xyzw": [
+        0.280988,
+        -0.648956,
+        -0.283222,
+        -0.647833
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.571035,
+        -0.60636,
+        -1.567131
+      ],
+      "position_xyz_m": [
+        0.36552,
+        -0.287894,
+        0.755004
+      ],
+      "quaternion_xyzw": [
+        0.627113,
+        0.326843,
+        -0.625833,
+        0.32899
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.694088,
+      "x_uniform_min_m": -0.022085,
+      "y_uniform_max_m": 0.395088,
+      "y_uniform_min_m": -0.256089,
+      "z_fixed_m": 0.755004
+    }
+  },
+  {
+    "handle": 89,
+    "hierarchy_path": "straighten_rope/tail/Joint16/Cylinder16/Joint15/Cylinder15/Joint14/Cylinder14/Joint13/Cylinder13",
+    "name": "Cylinder13",
+    "parent": "Joint13",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.279253,
+        0.0,
+        0.0
+      ],
+      "position_xyz_m": [
+        2e-06,
+        -0.002,
+        -0.011249
+      ],
+      "quaternion_xyzw": [
+        -0.139173,
+        0.0,
+        0.0,
+        0.990268
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570777,
+        0.470317,
+        1.56948
+      ],
+      "position_xyz_m": [
+        -0.123019,
+        0.041201,
+        0.003002
+      ],
+      "quaternion_xyzw": [
+        -0.370131,
+        0.60249,
+        0.369349,
+        0.602984
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570778,
+        -0.326641,
+        -1.57211
+      ],
+      "position_xyz_m": [
+        0.376693,
+        -0.268264,
+        0.755002
+      ],
+      "quaternion_xyzw": [
+        -0.57437,
+        -0.412421,
+        0.574918,
+        -0.411677
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.699734,
+      "x_uniform_min_m": -0.027729,
+      "y_uniform_max_m": 0.400734,
+      "y_uniform_min_m": -0.261734,
+      "z_fixed_m": 0.755002
+    }
+  },
+  {
+    "handle": 91,
+    "hierarchy_path": "straighten_rope/tail/Joint16/Cylinder16/Joint15/Cylinder15/Joint14/Cylinder14/Joint13/Cylinder13/Joint12/Cylinder12",
+    "name": "Cylinder12",
+    "parent": "Joint12",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.349066,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        4e-06,
+        -0.003,
+        -0.011247
+      ],
+      "quaternion_xyzw": [
+        -0.173648,
+        0.0,
+        -0.0,
+        0.984808
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570841,
+        0.123437,
+        1.574616
+      ],
+      "position_xyz_m": [
+        -0.130564,
+        0.019792,
+        0.003002
+      ],
+      "quaternion_xyzw": [
+        0.467207,
+        -0.530791,
+        -0.469208,
+        -0.528982
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570841,
+        0.02024,
+        -1.566983
+      ],
+      "position_xyz_m": [
+        0.381095,
+        -0.245996,
+        0.755002
+      ],
+      "quaternion_xyzw": [
+        0.495888,
+        0.504101,
+        -0.49394,
+        0.505966
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.702055,
+      "x_uniform_min_m": -0.030051,
+      "y_uniform_max_m": 0.403055,
+      "y_uniform_min_m": -0.264054,
+      "z_fixed_m": 0.755002
+    }
+  },
+  {
+    "handle": 93,
+    "hierarchy_path": "straighten_rope/tail/Joint16/Cylinder16/Joint15/Cylinder15/Joint14/Cylinder14/Joint13/Cylinder13/Joint12/Cylinder12/Joint11/Cylinder11",
+    "name": "Cylinder11",
+    "parent": "Joint11",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.349067,
+        -0.0,
+        0.0
+      ],
+      "position_xyz_m": [
+        1e-06,
+        -0.003,
+        -0.011246
+      ],
+      "quaternion_xyzw": [
+        -0.173649,
+        -0.0,
+        0.0,
+        0.984808
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.57079,
+        -0.226322,
+        1.571854
+      ],
+      "position_xyz_m": [
+        -0.130348,
+        -0.002901,
+        0.003003
+      ],
+      "quaternion_xyzw": [
+        0.553027,
+        -0.440633,
+        -0.553496,
+        -0.440051
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.57079,
+        0.369998,
+        -1.569737
+      ],
+      "position_xyz_m": [
+        0.377633,
+        -0.223567,
+        0.755002
+      ],
+      "quaternion_xyzw": [
+        0.399803,
+        0.583228,
+        -0.399188,
+        0.583654
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.70038,
+      "x_uniform_min_m": -0.028377,
+      "y_uniform_max_m": 0.40138,
+      "y_uniform_min_m": -0.26238,
+      "z_fixed_m": 0.755002
+    }
+  },
+  {
+    "handle": 95,
+    "hierarchy_path": "straighten_rope/tail/Joint16/Cylinder16/Joint15/Cylinder15/Joint14/Cylinder14/Joint13/Cylinder13/Joint12/Cylinder12/Joint11/Cylinder11/Joint10/Cylinder10",
+    "name": "Cylinder10",
+    "parent": "Joint10",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.349065,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        1e-06,
+        -0.003,
+        -0.011247
+      ],
+      "quaternion_xyzw": [
+        -0.173648,
+        0.0,
+        -0.0,
+        0.984808
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570775,
+        -0.575864,
+        1.571487
+      ],
+      "position_xyz_m": [
+        -0.122371,
+        -0.024148,
+        0.003002
+      ],
+      "quaternion_xyzw": [
+        0.621281,
+        -0.33764,
+        -0.621522,
+        -0.337224
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570773,
+        0.71954,
+        -1.570102
+      ],
+      "position_xyz_m": [
+        0.366696,
+        -0.203681,
+        0.755002
+      ],
+      "quaternion_xyzw": [
+        0.292176,
+        0.643914,
+        -0.291743,
+        0.644123
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.694731,
+      "x_uniform_min_m": -0.022727,
+      "y_uniform_max_m": 0.395731,
+      "y_uniform_min_m": -0.256731,
+      "z_fixed_m": 0.755002
+    }
+  },
+  {
+    "handle": 97,
+    "hierarchy_path": "straighten_rope/tail/Joint16/Cylinder16/Joint15/Cylinder15/Joint14/Cylinder14/Joint13/Cylinder13/Joint12/Cylinder12/Joint11/Cylinder11/Joint10/Cylinder10/Joint9/Cylinder9",
+    "name": "Cylinder9",
+    "parent": "Joint9",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.2618,
+        -1e-06,
+        0.0
+      ],
+      "position_xyz_m": [
+        -1e-06,
+        -0.002,
+        -0.01125
+      ],
+      "quaternion_xyzw": [
+        0.130526,
+        0.0,
+        -0.0,
+        -0.991445
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570771,
+        -0.838707,
+        1.570086
+      ],
+      "position_xyz_m": [
+        -0.108433,
+        -0.041922,
+        0.003002
+      ],
+      "quaternion_xyzw": [
+        0.660348,
+        -0.252848,
+        -0.660174,
+        -0.253334
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570766,
+        0.982384,
+        -1.571501
+      ],
+      "position_xyz_m": [
+        0.350356,
+        -0.188086,
+        0.755002
+      ],
+      "quaternion_xyzw": [
+        0.204799,
+        0.676793,
+        -0.205296,
+        0.676655
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.686255,
+      "x_uniform_min_m": -0.01425,
+      "y_uniform_max_m": 0.387254,
+      "y_uniform_min_m": -0.248255,
+      "z_fixed_m": 0.755002
+    }
+  },
+  {
+    "handle": 99,
+    "hierarchy_path": "straighten_rope/tail/Joint16/Cylinder16/Joint15/Cylinder15/Joint14/Cylinder14/Joint13/Cylinder13/Joint12/Cylinder12/Joint11/Cylinder11/Joint10/Cylinder10/Joint9/Cylinder9/Joint8/Cylinder8",
+    "name": "Cylinder8",
+    "parent": "Joint8",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        0.0,
+        -0.011254
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570767,
+        -0.838138,
+        1.572616
+      ],
+      "position_xyz_m": [
+        -0.091699,
+        -0.056969,
+        0.003001
+      ],
+      "quaternion_xyzw": [
+        0.659955,
+        -0.25387,
+        -0.660423,
+        -0.252688
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570761,
+        0.981814,
+        -1.568969
+      ],
+      "position_xyz_m": [
+        0.331641,
+        -0.17559,
+        0.755001
+      ],
+      "quaternion_xyzw": [
+        0.205846,
+        0.676474,
+        -0.204633,
+        0.676857
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.677954,
+      "x_uniform_min_m": -0.005951,
+      "y_uniform_max_m": 0.378955,
+      "y_uniform_min_m": -0.239954,
+      "z_fixed_m": 0.755001
+    }
+  },
+  {
+    "handle": 101,
+    "hierarchy_path": "straighten_rope/tail/Joint16/Cylinder16/Joint15/Cylinder15/Joint14/Cylinder14/Joint13/Cylinder13/Joint12/Cylinder12/Joint11/Cylinder11/Joint10/Cylinder10/Joint9/Cylinder9/Joint8/Cylinder8/Joint7/Cylinder7",
+    "name": "Cylinder7",
+    "parent": "Joint7",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.261799,
+        -0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        -2e-06,
+        0.002,
+        -0.011248
+      ],
+      "quaternion_xyzw": [
+        0.130526,
+        -0.0,
+        -0.0,
+        0.991445
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570807,
+        -0.574658,
+        1.572827
+      ],
+      "position_xyz_m": [
+        -0.076327,
+        -0.073516,
+        0.003001
+      ],
+      "quaternion_xyzw": [
+        0.620857,
+        -0.33844,
+        -0.621539,
+        -0.337172
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570809,
+        0.718335,
+        -1.568768
+      ],
+      "position_xyz_m": [
+        0.314058,
+        -0.161414,
+        0.755001
+      ],
+      "quaternion_xyzw": [
+        0.293004,
+        0.643547,
+        -0.29169,
+        0.644137
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.675973,
+      "x_uniform_min_m": -0.00397,
+      "y_uniform_max_m": 0.376974,
+      "y_uniform_min_m": -0.237973,
+      "z_fixed_m": 0.755001
+    }
+  },
+  {
+    "handle": 103,
+    "hierarchy_path": "straighten_rope/tail/Joint16/Cylinder16/Joint15/Cylinder15/Joint14/Cylinder14/Joint13/Cylinder13/Joint12/Cylinder12/Joint11/Cylinder11/Joint10/Cylinder10/Joint9/Cylinder9/Joint8/Cylinder8/Joint7/Cylinder7/Joint6/Cylinder6",
+    "name": "Cylinder6",
+    "parent": "Joint6",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.349066,
+        1e-06,
+        -0.0
+      ],
+      "position_xyz_m": [
+        2e-06,
+        0.003,
+        -0.011248
+      ],
+      "quaternion_xyzw": [
+        -0.173648,
+        -0.0,
+        0.0,
+        -0.984808
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570779,
+        -0.227659,
+        1.569145
+      ],
+      "position_xyz_m": [
+        -0.066594,
+        -0.094023,
+        0.003
+      ],
+      "quaternion_xyzw": [
+        0.553915,
+        -0.43951,
+        -0.553197,
+        -0.440434
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570778,
+        0.371336,
+        -1.572445
+      ],
+      "position_xyz_m": [
+        0.301488,
+        -0.142512,
+        0.755
+      ],
+      "quaternion_xyzw": [
+        0.398619,
+        0.584033,
+        -0.399592,
+        0.583383
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.685218,
+      "x_uniform_min_m": -0.013214,
+      "y_uniform_max_m": 0.386217,
+      "y_uniform_min_m": -0.247218,
+      "z_fixed_m": 0.755
+    }
+  },
+  {
+    "handle": 105,
+    "hierarchy_path": "straighten_rope/tail/Joint16/Cylinder16/Joint15/Cylinder15/Joint14/Cylinder14/Joint13/Cylinder13/Joint12/Cylinder12/Joint11/Cylinder11/Joint10/Cylinder10/Joint9/Cylinder9/Joint8/Cylinder8/Joint7/Cylinder7/Joint6/Cylinder6/Joint5/Cylinder5",
+    "name": "Cylinder5",
+    "parent": "Joint5",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.349066,
+        0.0,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        0.003,
+        -0.011243
+      ],
+      "quaternion_xyzw": [
+        -0.173648,
+        0.0,
+        -0.0,
+        -0.984808
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570799,
+        0.122204,
+        1.570844
+      ],
+      "position_xyz_m": [
+        -0.064449,
+        -0.116613,
+        0.003
+      ],
+      "quaternion_xyzw": [
+        0.468523,
+        -0.529611,
+        -0.468547,
+        -0.529587
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570799,
+        0.021473,
+        -1.570749
+      ],
+      "position_xyz_m": [
+        0.296131,
+        -0.120462,
+        0.755
+      ],
+      "quaternion_xyzw": [
+        0.494616,
+        0.505328,
+        -0.494591,
+        0.50535
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.703237,
+      "x_uniform_min_m": -0.031233,
+      "y_uniform_max_m": 0.404237,
+      "y_uniform_min_m": -0.265237,
+      "z_fixed_m": 0.755
+    }
+  },
+  {
+    "handle": 107,
+    "hierarchy_path": "straighten_rope/tail/Joint16/Cylinder16/Joint15/Cylinder15/Joint14/Cylinder14/Joint13/Cylinder13/Joint12/Cylinder12/Joint11/Cylinder11/Joint10/Cylinder10/Joint9/Cylinder9/Joint8/Cylinder8/Joint7/Cylinder7/Joint6/Cylinder6/Joint5/Cylinder5/Joint4/Cylinder4",
+    "name": "Cylinder4",
+    "parent": "Joint4",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.349066,
+        0.0,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        0.003,
+        -0.011251
+      ],
+      "quaternion_xyzw": [
+        0.173648,
+        0.0,
+        0.0,
+        0.984808
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570825,
+        0.47082,
+        1.570871
+      ],
+      "position_xyz_m": [
+        -0.070164,
+        -0.138583,
+        0.003
+      ],
+      "quaternion_xyzw": [
+        0.369574,
+        -0.602849,
+        -0.369602,
+        -0.602811
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570823,
+        -0.327144,
+        -1.570726
+      ],
+      "position_xyz_m": [
+        0.298642,
+        -0.097901,
+        0.755
+      ],
+      "quaternion_xyzw": [
+        0.574768,
+        0.411892,
+        -0.574728,
+        0.411917
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.725333,
+      "x_uniform_min_m": -0.053328,
+      "y_uniform_max_m": 0.426331,
+      "y_uniform_min_m": -0.287332,
+      "z_fixed_m": 0.755
+    }
+  },
+  {
+    "handle": 109,
+    "hierarchy_path": "straighten_rope/tail/Joint16/Cylinder16/Joint15/Cylinder15/Joint14/Cylinder14/Joint13/Cylinder13/Joint12/Cylinder12/Joint11/Cylinder11/Joint10/Cylinder10/Joint9/Cylinder9/Joint8/Cylinder8/Joint7/Cylinder7/Joint6/Cylinder6/Joint5/Cylinder5/Joint4/Cylinder4/Joint3/Cylinder3",
+    "name": "Cylinder3",
+    "parent": "Joint3",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.349066,
+        -0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        -0.0,
+        0.003,
+        -0.011248
+      ],
+      "quaternion_xyzw": [
+        0.173648,
+        -0.0,
+        -0.0,
+        0.984808
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.571337,
+        0.820887,
+        1.57231
+      ],
+      "position_xyz_m": [
+        -0.083052,
+        -0.157265,
+        0.003004
+      ],
+      "quaternion_xyzw": [
+        0.258644,
+        -0.658246,
+        -0.259284,
+        -0.657714
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.571269,
+        -0.677211,
+        -1.569383
+      ],
+      "position_xyz_m": [
+        0.308722,
+        -0.077566,
+        0.755004
+      ],
+      "quaternion_xyzw": [
+        0.637984,
+        0.305223,
+        -0.637407,
+        0.305824
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.747848,
+      "x_uniform_min_m": -0.075843,
+      "y_uniform_max_m": 0.448846,
+      "y_uniform_min_m": -0.309847,
+      "z_fixed_m": 0.755004
+    }
+  },
+  {
+    "handle": 111,
+    "hierarchy_path": "straighten_rope/tail/Joint16/Cylinder16/Joint15/Cylinder15/Joint14/Cylinder14/Joint13/Cylinder13/Joint12/Cylinder12/Joint11/Cylinder11/Joint10/Cylinder10/Joint9/Cylinder9/Joint8/Cylinder8/Joint7/Cylinder7/Joint6/Cylinder6/Joint5/Cylinder5/Joint4/Cylinder4/Joint3/Cylinder3/Joint2/Cylinder2",
+    "name": "Cylinder2",
+    "parent": "Joint2",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.436332,
+        1e-06,
+        -0.0
+      ],
+      "position_xyz_m": [
+        1e-05,
+        0.004,
+        -0.011242
+      ],
+      "quaternion_xyzw": [
+        -0.21644,
+        -1e-06,
+        -0.0,
+        -0.976296
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570908,
+        1.257282,
+        1.56848
+      ],
+      "position_xyz_m": [
+        -0.102237,
+        -0.169667,
+        0.003001
+      ],
+      "quaternion_xyzw": [
+        -0.111238,
+        0.698315,
+        0.109543,
+        0.698558
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570874,
+        -1.113606,
+        -1.573149
+      ],
+      "position_xyz_m": [
+        0.325934,
+        -0.062544,
+        0.755001
+      ],
+      "quaternion_xyzw": [
+        -0.688529,
+        -0.161074,
+        0.688894,
+        -0.1594
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.768088,
+      "x_uniform_min_m": -0.096085,
+      "y_uniform_max_m": 0.469089,
+      "y_uniform_min_m": -0.330088,
+      "z_fixed_m": 0.755001
+    }
+  },
+  {
+    "handle": 113,
+    "hierarchy_path": "straighten_rope/tail/Joint16/Cylinder16/Joint15/Cylinder15/Joint14/Cylinder14/Joint13/Cylinder13/Joint12/Cylinder12/Joint11/Cylinder11/Joint10/Cylinder10/Joint9/Cylinder9/Joint8/Cylinder8/Joint7/Cylinder7/Joint6/Cylinder6/Joint5/Cylinder5/Joint4/Cylinder4/Joint3/Cylinder3/Joint2/Cylinder2/Joint1/Cylinder1",
+    "name": "Cylinder1",
+    "parent": "Joint1",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.436333,
+        1e-06,
+        -0.0
+      ],
+      "position_xyz_m": [
+        1e-06,
+        0.004,
+        -0.011236
+      ],
+      "quaternion_xyzw": [
+        0.21644,
+        0.0,
+        0.0,
+        0.976296
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570844,
+        1.449661,
+        -1.571882
+      ],
+      "position_xyz_m": [
+        -0.124861,
+        -0.172816,
+        0.003002
+      ],
+      "quaternion_xyzw": [
+        0.042435,
+        0.705834,
+        -0.043169,
+        0.705786
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.57105,
+        -1.548263,
+        -1.57159
+      ],
+      "position_xyz_m": [
+        0.347874,
+        -0.056188,
+        0.755001
+      ],
+      "quaternion_xyzw": [
+        -0.70706,
+        -0.008336,
+        0.707064,
+        -0.007601
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.783204,
+      "x_uniform_min_m": -0.111199,
+      "y_uniform_max_m": 0.484202,
+      "y_uniform_min_m": -0.345204,
+      "z_fixed_m": 0.755001
+    }
+  },
+  {
+    "handle": 115,
+    "hierarchy_path": "straighten_rope/tail/Joint16/Cylinder16/Joint15/Cylinder15/Joint14/Cylinder14/Joint13/Cylinder13/Joint12/Cylinder12/Joint11/Cylinder11/Joint10/Cylinder10/Joint9/Cylinder9/Joint8/Cylinder8/Joint7/Cylinder7/Joint6/Cylinder6/Joint5/Cylinder5/Joint4/Cylinder4/Joint3/Cylinder3/Joint2/Cylinder2/Joint1/Cylinder1/Joint0/head",
+    "name": "head",
+    "parent": "Joint0",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.349066,
+        1e-06,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        0.004,
+        -0.011245
+      ],
+      "quaternion_xyzw": [
+        0.173648,
+        0.0,
+        -0.0,
+        0.984808
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570879,
+        1.100027,
+        -1.570225
+      ],
+      "position_xyz_m": [
+        -0.146705,
+        -0.166122,
+        0.003002
+      ],
+      "quaternion_xyzw": [
+        0.165134,
+        0.687568,
+        -0.164684,
+        0.687648
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570913,
+        -1.243704,
+        1.571332
+      ],
+      "position_xyz_m": [
+        0.370451,
+        -0.059686,
+        0.755002
+      ],
+      "quaternion_xyzw": [
+        -0.697647,
+        0.115357,
+        0.697695,
+        0.114903
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.791627,
+      "x_uniform_min_m": -0.119622,
+      "y_uniform_max_m": 0.492627,
+      "y_uniform_min_m": -0.353627,
+      "z_fixed_m": 0.755002
+    }
+  }
+]

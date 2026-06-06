@@ -1,0 +1,81 @@
+{
+  "shapes": {
+    "cup": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.10000000149011612,
+      "friction": 0.7099999785423279
+    },
+    "cabinet_base": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 2.071159839630127,
+      "friction": 0.5
+    },
+    "cup_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.0020000000949949026,
+      "friction": 0.7099999785423279
+    },
+    "left_board": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.04791857674717903,
+      "friction": 0.5
+    },
+    "right_board": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.04791858419775963,
+      "friction": 0.5
+    },
+    "left_handle_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.00037067668745294213,
+      "friction": 0.7099999785423279
+    },
+    "left_board_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.044999998062849045,
+      "friction": 0.5
+    },
+    "right_handle_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.00037067668745294213,
+      "friction": 0.7099999785423279
+    },
+    "right_board_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.04500000178813934,
+      "friction": 0.5
+    }
+  },
+  "joints": {
+    "left_joint": {
+      "type": "prismatic",
+      "cyclic": false,
+      "lower": 0.0,
+      "upper": 0.12999999523162842
+    },
+    "right_joint": {
+      "type": "prismatic",
+      "cyclic": false,
+      "lower": -0.10999999940395355,
+      "upper": 0.0
+    }
+  }
+}

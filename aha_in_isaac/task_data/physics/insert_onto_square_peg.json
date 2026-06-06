@@ -1,0 +1,68 @@
+{
+  "shapes": {
+    "square_base": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.800000011920929,
+      "friction": 0.5
+    },
+    "pillar0": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.07500000298023224,
+      "friction": 0.5
+    },
+    "pillar1": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.07500000298023224,
+      "friction": 0.5
+    },
+    "pillar2": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.07500000298023224,
+      "friction": 0.5
+    },
+    "boundary0": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.08000001311302185,
+      "friction": 0.5
+    },
+    "boundary1": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.010000001639127731,
+      "friction": 0.5
+    },
+    "boundary3": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.010000001639127731,
+      "friction": 0.5
+    },
+    "boundary2": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.010000001639127731,
+      "friction": 0.5
+    },
+    "square_ring": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.01999584585428238,
+      "friction": 0.5
+    }
+  },
+  "joints": {}
+}

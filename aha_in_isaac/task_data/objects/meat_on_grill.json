@@ -1,0 +1,596 @@
+[
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.547327,
+          4.8e-05,
+          -3.139959
+        ],
+        "position_xyz_m": [
+          0.043506,
+          -0.12998,
+          -0.100166
+        ],
+        "quaternion_xyzw": [
+          0.000554,
+          0.698761,
+          -0.715355,
+          0.000601
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "chicken",
+      "world_offset_xyz_m": [
+        -0.03346,
+        0.130532,
+        -0.103259
+      ]
+    },
+    "handle": 81,
+    "hierarchy_path": "meat_on_grill/grill",
+    "name": "grill",
+    "parent": "meat_on_grill",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570797,
+        -5.1e-05,
+        -3.141592
+      ],
+      "position_xyz_m": [
+        0.0,
+        -0.035952,
+        0.231133
+      ],
+      "quaternion_xyzw": [
+        1.8e-05,
+        0.707107,
+        -0.707107,
+        -1.8e-05
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570797,
+        -5.1e-05,
+        -3.141592
+      ],
+      "position_xyz_m": [
+        0.0,
+        -0.035952,
+        0.231133
+      ],
+      "quaternion_xyzw": [
+        1.8e-05,
+        0.707107,
+        -0.707107,
+        -1.8e-05
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570797,
+        0.07644,
+        1e-06
+      ],
+      "position_xyz_m": [
+        0.267003,
+        0.101834,
+        0.983133
+      ],
+      "quaternion_xyzw": [
+        -0.706591,
+        0.027019,
+        -0.027019,
+        0.70659
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.442295,
+      "x_uniform_min_m": 0.057705,
+      "y_uniform_max_m": 0.24986,
+      "y_uniform_min_m": -0.177956,
+      "z_fixed_m": 0.983133
+    }
+  },
+  {
+    "handle": 82,
+    "hierarchy_path": "meat_on_grill/grill/chicken",
+    "name": "chicken",
+    "parent": "grill",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.547327,
+        -0.001632,
+        3.141507
+      ],
+      "position_xyz_m": [
+        0.043331,
+        -0.103259,
+        -0.127596
+      ],
+      "quaternion_xyzw": [
+        -0.000554,
+        -0.698761,
+        0.715355,
+        0.000601
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.507714,
+      "x_uniform_min_m": -0.007714,
+      "y_uniform_max_m": 0.315279,
+      "y_uniform_min_m": -0.243374,
+      "z_fixed_m": 1.086392
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.023469,
+        0.00163,
+        -0.000136
+      ],
+      "position_xyz_m": [
+        -0.043325,
+        0.091646,
+        0.334393
+      ],
+      "quaternion_xyzw": [
+        0.011734,
+        0.000816,
+        -5.9e-05,
+        0.999931
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.023525,
+        0.000165,
+        3.065088
+      ],
+      "position_xyz_m": [
+        0.300464,
+        -0.028699,
+        1.086392
+      ],
+      "quaternion_xyzw": [
+        -0.000367,
+        0.011757,
+        0.999199,
+        0.038241
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.507714,
+      "x_uniform_min_m": -0.007714,
+      "y_uniform_max_m": 0.315279,
+      "y_uniform_min_m": -0.243374,
+      "z_fixed_m": 1.086392
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.02347,
+          -0.001633,
+          -1.570722
+        ],
+        "position_xyz_m": [
+          0.060239,
+          -0.130961,
+          -0.123989
+        ],
+        "quaternion_xyzw": [
+          0.007721,
+          0.008875,
+          0.707025,
+          -0.707091
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "chicken",
+      "world_offset_xyz_m": [
+        -0.050074,
+        0.132228,
+        -0.127126
+      ]
+    },
+    "handle": 84,
+    "hierarchy_path": "meat_on_grill/grill/grill_visual",
+    "name": "grill_visual",
+    "parent": "grill",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570797,
+        -1e-06,
+        1.570824
+      ],
+      "position_xyz_m": [
+        -0.016694,
+        0.023867,
+        0.000422
+      ],
+      "quaternion_xyzw": [
+        -0.499993,
+        0.500007,
+        -0.500006,
+        -0.499993
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        -0.0,
+        -1.57082
+      ],
+      "position_xyz_m": [
+        0.016694,
+        -0.036375,
+        0.207267
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.707115,
+        -0.707099
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        0.0,
+        1.494384
+      ],
+      "position_xyz_m": [
+        0.25039,
+        0.103529,
+        0.959267
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        0.0,
+        -0.679581,
+        -0.7336
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.446366,
+      "x_uniform_min_m": 0.053635,
+      "y_uniform_max_m": 0.253931,
+      "y_uniform_min_m": -0.182027,
+      "z_fixed_m": 0.959267
+    }
+  },
+  {
+    "handle": 88,
+    "hierarchy_path": "meat_on_grill/grill/steak",
+    "name": "steak",
+    "parent": "grill",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.596861,
+        0.033107,
+        3.138812
+      ],
+      "position_xyz_m": [
+        0.045044,
+        -0.090237,
+        -0.24473
+      ],
+      "quaternion_xyzw": [
+        0.012547,
+        -0.716147,
+        0.697752,
+        -0.010886
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.619923,
+      "x_uniform_min_m": -0.119924,
+      "y_uniform_max_m": 0.427489,
+      "y_uniform_min_m": -0.355585,
+      "z_fixed_m": 1.07337
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.026066,
+        -0.033106,
+        -0.002832
+      ],
+      "position_xyz_m": [
+        -0.045032,
+        0.20878,
+        0.32137
+      ],
+      "quaternion_xyzw": [
+        -0.013007,
+        -0.016569,
+        -0.0012,
+        0.999777
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.028516,
+        0.031021,
+        3.062361
+      ],
+      "position_xyz_m": [
+        0.293227,
+        -0.145621,
+        1.07337
+      ],
+      "quaternion_xyzw": [
+        0.016061,
+        -0.013631,
+        0.999002,
+        0.039376
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.619923,
+      "x_uniform_min_m": -0.119924,
+      "y_uniform_max_m": 0.427489,
+      "y_uniform_min_m": -0.355585,
+      "z_fixed_m": 1.07337
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.032567,
+          -0.147946,
+          1.484692
+        ],
+        "position_xyz_m": [
+          0.000893,
+          0.002955,
+          -0.005443
+        ],
+        "quaternion_xyzw": [
+          -0.061921,
+          -0.043475,
+          0.674967,
+          0.733958
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "chicken",
+      "world_offset_xyz_m": [
+        -0.001117,
+        -0.003005,
+        -0.005374
+      ]
+    },
+    "handle": 83,
+    "hierarchy_path": "meat_on_grill/grill/chicken/chicken_visual",
+    "name": "chicken_visual",
+    "parent": "chicken",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.032567,
+        -0.147946,
+        1.484692
+      ],
+      "position_xyz_m": [
+        0.000893,
+        0.002955,
+        -0.005443
+      ],
+      "quaternion_xyzw": [
+        -0.061921,
+        -0.043475,
+        0.674967,
+        0.733958
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.00911,
+        -0.146312,
+        1.484608
+      ],
+      "position_xyz_m": [
+        -0.04244,
+        0.094728,
+        0.329019
+      ],
+      "quaternion_xyzw": [
+        -0.052756,
+        -0.05079,
+        0.674418,
+        0.734709
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.020328,
+        0.145187,
+        -1.734185
+      ],
+      "position_xyz_m": [
+        0.299346,
+        -0.031704,
+        1.081019
+      ],
+      "quaternion_xyzw": [
+        0.048739,
+        -0.054657,
+        0.759926,
+        -0.645871
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.510143,
+      "x_uniform_min_m": -0.010143,
+      "y_uniform_max_m": 0.317708,
+      "y_uniform_min_m": -0.245805,
+      "z_fixed_m": 1.081019
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.141593,
+          -0.0,
+          -3.141593
+        ],
+        "position_xyz_m": [
+          -0.000124,
+          2.4e-05,
+          8.4e-05
+        ],
+        "quaternion_xyzw": [
+          0.0,
+          1.0,
+          -0.0,
+          -0.0
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "steak",
+      "world_offset_xyz_m": [
+        0.000124,
+        -3.6e-05,
+        8e-05
+      ]
+    },
+    "handle": 89,
+    "hierarchy_path": "meat_on_grill/grill/steak/steak_visual",
+    "name": "steak_visual",
+    "parent": "steak",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141593,
+        -0.0,
+        -3.141593
+      ],
+      "position_xyz_m": [
+        -0.000124,
+        2.4e-05,
+        8.4e-05
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        1.0,
+        -0.0,
+        -0.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.115526,
+        0.033106,
+        -3.138761
+      ],
+      "position_xyz_m": [
+        -0.045158,
+        0.208806,
+        0.32145
+      ],
+      "quaternion_xyzw": [
+        0.0012,
+        0.999777,
+        -0.013007,
+        0.016569
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.113076,
+        -0.031021,
+        0.079232
+      ],
+      "position_xyz_m": [
+        0.293351,
+        -0.145657,
+        1.07345
+      ],
+      "quaternion_xyzw": [
+        -0.999002,
+        0.039376,
+        0.016061,
+        0.013631
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.619976,
+      "x_uniform_min_m": -0.119976,
+      "y_uniform_max_m": 0.427541,
+      "y_uniform_min_m": -0.355637,
+      "z_fixed_m": 1.07345
+    }
+  }
+]

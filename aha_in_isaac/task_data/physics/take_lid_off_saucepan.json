@@ -1,0 +1,40 @@
+{
+  "shapes": {
+    "saucepan": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.4433608055114746,
+      "friction": 0.5
+    },
+    "saucepan_lid_grasp_point": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.05654867738485336,
+      "friction": 0.5
+    },
+    "saucepan_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.0012656246544793248,
+      "friction": 0.7099999785423279
+    },
+    "saucepan_lid": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.05654999986290932,
+      "friction": 0.7099999785423279
+    },
+    "saucepan_lid_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.0016874994616955519,
+      "friction": 0.7099999785423279
+    }
+  },
+  "joints": {}
+}

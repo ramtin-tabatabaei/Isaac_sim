@@ -1,0 +1,33 @@
+{
+  "shapes": {
+    "hockey_goal": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.25120672583580017,
+      "friction": 0.5
+    },
+    "hockey_goal_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.0007193232886493206,
+      "friction": 0.7099999785423279
+    },
+    "hockey_stick": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.00550217367708683,
+      "friction": 0.7099999785423279
+    },
+    "hockey_ball": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.10000000149011612,
+      "friction": 0.5
+    }
+  },
+  "joints": {}
+}

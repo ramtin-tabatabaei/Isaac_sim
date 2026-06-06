@@ -1,0 +1,68 @@
+{
+  "shapes": {
+    "bin1": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 3.0,
+      "friction": 0.7099999785423279
+    },
+    "bin2": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 3.0,
+      "friction": 0.7099999785423279
+    },
+    "light_bulb": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.125,
+      "friction": 0.7099999785423279
+    },
+    "rubbish": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.421875,
+      "friction": 0.7099999785423279
+    },
+    "bin_visual1": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 3.0,
+      "friction": 0.7099999785423279
+    },
+    "bin_visual2": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 3.0,
+      "friction": 0.7099999785423279
+    },
+    "color_bulb": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.002205794909968972,
+      "friction": 0.7099999785423279
+    },
+    "bulb_holder": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.031791891902685165,
+      "friction": 0.5
+    },
+    "rubbish_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.421875,
+      "friction": 0.7099999785423279
+    }
+  },
+  "joints": {}
+}

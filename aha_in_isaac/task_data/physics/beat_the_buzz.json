@@ -1,0 +1,33 @@
+{
+  "shapes": {
+    "Cuboid": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 3.5510506629943848,
+      "friction": 0.5
+    },
+    "wand": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.029584866017103195,
+      "friction": 0.7099999785423279
+    },
+    "wand_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 1.0,
+      "friction": 0.7099999785423279
+    },
+    "wand_visual_sub": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 1.0,
+      "friction": 0.7099999785423279
+    }
+  },
+  "joints": {}
+}

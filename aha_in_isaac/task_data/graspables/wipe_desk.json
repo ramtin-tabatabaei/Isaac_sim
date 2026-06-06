@@ -1,0 +1,120 @@
+{
+  "graspable_objects": [
+    {
+      "fixed_offset_from_task_boundary_root_xyz_m": [
+        0.046903,
+        0.175,
+        0.014385
+      ],
+      "fixed_orientation_from_task_boundary_root_rpy_rad": [
+        2e-06,
+        -2.7e-05,
+        1.570813
+      ],
+      "name": "sponge",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1e-06,
+          -2.7e-05,
+          1.467548
+        ],
+        "position_xyz_m": [
+          0.306057,
+          0.254494,
+          0.766384
+        ],
+        "quaternion_xyzw": [
+          -9e-06,
+          -1e-05,
+          0.669677,
+          0.742652
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_distribution": {
+        "x_uniform_max_m": 0.556876,
+        "x_uniform_min_m": -0.156876,
+        "y_uniform_max_m": 0.407278,
+        "y_uniform_min_m": -0.461877,
+        "z_fixed_m": 0.766384
+      }
+    }
+  ],
+  "other_scene_objects": [
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        -0.2,
+        -0.003094,
+        -0.014384
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        -0.017535,
+        -0.199254,
+        -0.014384
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        2.7e-05,
+        2e-06,
+        -1.570813
+      ],
+      "has_separate_distribution": false,
+      "name": "dirt_boundary",
+      "reference_graspable_object": "sponge",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          0.0,
+          -0.103265
+        ],
+        "position_xyz_m": [
+          0.288522,
+          0.05524,
+          0.752
+        ],
+        "quaternion_xyzw": [
+          0.0,
+          0.0,
+          -0.05161,
+          0.998667
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.431602,
+        "x_uniform_min_m": -0.031602,
+        "y_uniform_max_m": 0.282004,
+        "y_uniform_min_m": -0.336602,
+        "z_fixed_m": 0.752
+      }
+    }
+  ],
+  "task_base_rotation_rz_bounds_rad": [
+    -3.14,
+    3.14
+  ],
+  "task_boundary_root": "wipe_desk",
+  "task_boundary_root_world_pose_after_reset": {
+    "kind": "exact",
+    "orientation_rpy_rad": [
+      0.0,
+      0.0,
+      -0.103265
+    ],
+    "position_xyz_m": [
+      0.241365,
+      0.085261,
+      0.752
+    ],
+    "quaternion_xyzw": [
+      0.0,
+      0.0,
+      -0.05161,
+      0.998667
+    ],
+    "source": "exact_after_one_rlbench_reset"
+  },
+  "type": "Uniform for x/y; fixed z",
+  "units": "meters"
+}

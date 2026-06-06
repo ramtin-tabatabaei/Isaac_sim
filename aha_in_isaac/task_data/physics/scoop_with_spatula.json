@@ -1,0 +1,26 @@
+{
+  "shapes": {
+    "scoop_with_spatula_spatula": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.06866183876991272,
+      "friction": 0.7099999785423279
+    },
+    "Cuboid": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 1.0,
+      "friction": 0.5
+    },
+    "spatula_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 1.0,
+      "friction": 0.7099999785423279
+    }
+  },
+  "joints": {}
+}

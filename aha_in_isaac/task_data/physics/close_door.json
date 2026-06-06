@@ -1,0 +1,60 @@
+{
+  "shapes": {
+    "boundary_root": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.17496004700660706,
+      "friction": 0.5
+    },
+    "door_frame": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.5371803045272827,
+      "friction": 0.5
+    },
+    "door_main": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 1.0681521892547607,
+      "friction": 0.5
+    },
+    "door_main_visible": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.3822774291038513,
+      "friction": 0.7099999785423279
+    },
+    "open_door_handle": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.10000000149011612,
+      "friction": 0.5
+    },
+    "door_handle_visible": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.09556935727596283,
+      "friction": 0.7099999785423279
+    }
+  },
+  "joints": {
+    "door_frame_joint": {
+      "type": "revolute",
+      "cyclic": false,
+      "lower": 0.0,
+      "upper": 30.000000834826057
+    },
+    "door_handle_joint": {
+      "type": "revolute",
+      "cyclic": false,
+      "lower": 0.0,
+      "upper": 30.000000834826057
+    }
+  }
+}

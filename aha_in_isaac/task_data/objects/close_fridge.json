@@ -1,0 +1,753 @@
+[
+  {
+    "handle": 81,
+    "hierarchy_path": "close_fridge/fridge_root",
+    "name": "fridge_root",
+    "parent": "close_fridge",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        0.0,
+        -0.539655
+      ],
+      "position_xyz_m": [
+        0.068133,
+        -0.037799,
+        0.0
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        -0.266565,
+        0.963817
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": null,
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        0.0,
+        -0.539655
+      ],
+      "position_xyz_m": [
+        0.318133,
+        -0.037799,
+        0.752
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        -0.266565,
+        0.963817
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.35,
+      "x_uniform_min_m": 0.15,
+      "y_uniform_max_m": 0.3425,
+      "y_uniform_min_m": -0.3425,
+      "z_fixed_m": 0.752
+    }
+  },
+  {
+    "handle": 82,
+    "hierarchy_path": "close_fridge/fridge_root/fridge_base",
+    "name": "fridge_base",
+    "parent": "fridge_root",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.000118,
+        1.7e-05,
+        2.7e-05
+      ],
+      "position_xyz_m": [
+        0.376975,
+        -1e-06,
+        0.475975
+      ],
+      "quaternion_xyzw": [
+        5.9e-05,
+        8e-06,
+        1.4e-05,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.000118,
+        1.7e-05,
+        2.7e-05
+      ],
+      "position_xyz_m": [
+        0.376975,
+        -1e-06,
+        0.475975
+      ],
+      "quaternion_xyzw": [
+        5.9e-05,
+        8e-06,
+        1.4e-05,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.000109,
+        -4.6e-05,
+        -0.539628
+      ],
+      "position_xyz_m": [
+        0.641534,
+        -0.231504,
+        1.227975
+      ],
+      "quaternion_xyzw": [
+        5.9e-05,
+        -8e-06,
+        -0.266552,
+        0.963821
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.726974,
+      "x_uniform_min_m": 0.416561,
+      "y_uniform_max_m": 0.609061,
+      "y_uniform_min_m": -0.609062,
+      "z_fixed_m": 1.227975
+    }
+  },
+  {
+    "handle": 86,
+    "hierarchy_path": "close_fridge/fridge_root/fridge_base/fridge_base_visual",
+    "name": "fridge_base_visual",
+    "parent": "fridge_base",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.000142,
+        5.8e-05,
+        3.141557
+      ],
+      "position_xyz_m": [
+        -0.021995,
+        -1e-06,
+        -0.000341
+      ],
+      "quaternion_xyzw": [
+        2.9e-05,
+        7.1e-05,
+        1.0,
+        1.8e-05
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -2.4e-05,
+        7.5e-05,
+        3.141584
+      ],
+      "position_xyz_m": [
+        0.354979,
+        -3e-06,
+        0.475634
+      ],
+      "quaternion_xyzw": [
+        3.7e-05,
+        1.2e-05,
+        1.0,
+        4e-06
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.8e-05,
+        7.7e-05,
+        2.601929
+      ],
+      "position_xyz_m": [
+        0.622663,
+        -0.220204,
+        1.227634
+      ],
+      "quaternion_xyzw": [
+        3.9e-05,
+        2e-06,
+        0.963816,
+        0.266569
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.704979,
+      "x_uniform_min_m": 0.401006,
+      "y_uniform_max_m": 0.593506,
+      "y_uniform_min_m": -0.59351,
+      "z_fixed_m": 1.227634
+    }
+  },
+  {
+    "handle": 93,
+    "hierarchy_path": "close_fridge/fridge_root/fridge_base/shelf0",
+    "name": "shelf0",
+    "parent": "fridge_base",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        -0.000118,
+        1.570771
+      ],
+      "position_xyz_m": [
+        0.0248,
+        0.000573,
+        0.200782
+      ],
+      "quaternion_xyzw": [
+        -4.2e-05,
+        -4.2e-05,
+        0.707098,
+        0.707116
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.000117,
+        -0.000101,
+        1.570799
+      ],
+      "position_xyz_m": [
+        0.401778,
+        0.00055,
+        0.676756
+      ],
+      "quaternion_xyzw": [
+        6e-06,
+        -7.7e-05,
+        0.707108,
+        0.707106
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        4.9e-05,
+        -0.000147,
+        1.031144
+      ],
+      "position_xyz_m": [
+        0.663095,
+        -0.243777,
+        1.428756
+      ],
+      "quaternion_xyzw": [
+        -1.5e-05,
+        -7.6e-05,
+        0.493032,
+        0.870011
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.751778,
+      "x_uniform_min_m": 0.433711,
+      "y_uniform_max_m": 0.626989,
+      "y_uniform_min_m": -0.626211,
+      "z_fixed_m": 1.428756
+    }
+  },
+  {
+    "handle": 88,
+    "hierarchy_path": "close_fridge/fridge_root/fridge_base/bottom_joint/door_bottom",
+    "name": "door_bottom",
+    "parent": "bottom_joint",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.000143,
+        0.0,
+        2e-06
+      ],
+      "position_xyz_m": [
+        -0.02599,
+        0.169496,
+        -0.00069
+      ],
+      "quaternion_xyzw": [
+        -7.1e-05,
+        0.0,
+        1e-06,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.000167,
+        1.9e-05,
+        1e-06
+      ],
+      "position_xyz_m": [
+        0.227336,
+        -0.001361,
+        0.212598
+      ],
+      "quaternion_xyzw": [
+        -8.3e-05,
+        9e-06,
+        1e-06,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.000133,
+        0.000102,
+        -0.539654
+      ],
+      "position_xyz_m": [
+        0.512461,
+        -0.155781,
+        0.964598
+      ],
+      "quaternion_xyzw": [
+        -7.8e-05,
+        3.1e-05,
+        -0.266565,
+        0.963817
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.57734,
+      "x_uniform_min_m": 0.309788,
+      "y_uniform_max_m": 0.502288,
+      "y_uniform_min_m": -0.504213,
+      "z_fixed_m": 0.964598
+    }
+  },
+  {
+    "handle": 91,
+    "hierarchy_path": "close_fridge/fridge_root/fridge_base/top_joint/door_top",
+    "name": "door_top",
+    "parent": "top_joint",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.000249,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        -0.029175,
+        0.169514,
+        0.005438
+      ],
+      "quaternion_xyzw": [
+        0.000125,
+        0.0,
+        -0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.000167,
+        0.000179,
+        0.698131
+      ],
+      "position_xyz_m": [
+        0.121953,
+        -0.059769,
+        0.675305
+      ],
+      "quaternion_xyzw": [
+        0.000109,
+        5.6e-05,
+        0.34202,
+        0.939693
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.000235,
+        6.8e-05,
+        0.158476
+      ],
+      "position_xyz_m": [
+        0.392043,
+        -0.151739,
+        1.427305
+      ],
+      "quaternion_xyzw": [
+        0.00012,
+        2.5e-05,
+        0.079155,
+        0.996862
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.485812,
+      "x_uniform_min_m": 0.193971,
+      "y_uniform_max_m": 0.386471,
+      "y_uniform_min_m": -0.470997,
+      "z_fixed_m": 1.427305
+    }
+  },
+  {
+    "handle": 94,
+    "hierarchy_path": "close_fridge/fridge_root/fridge_base/shelf0/shelf1",
+    "name": "shelf1",
+    "parent": "shelf0",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        -0.001242,
+        0.017784,
+        -0.302172
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        -0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.000117,
+        -0.000101,
+        1.570799
+      ],
+      "position_xyz_m": [
+        0.384025,
+        -0.000657,
+        0.374582
+      ],
+      "quaternion_xyzw": [
+        6e-06,
+        -7.7e-05,
+        0.707108,
+        0.707106
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        4.9e-05,
+        -0.000147,
+        1.031144
+      ],
+      "position_xyz_m": [
+        0.647245,
+        -0.23569,
+        1.126582
+      ],
+      "quaternion_xyzw": [
+        -1.5e-05,
+        -7.6e-05,
+        0.493032,
+        0.870011
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.734025,
+      "x_uniform_min_m": 0.421082,
+      "y_uniform_max_m": 0.613582,
+      "y_uniform_min_m": -0.614511,
+      "z_fixed_m": 1.126582
+    }
+  },
+  {
+    "handle": 95,
+    "hierarchy_path": "close_fridge/fridge_root/fridge_base/shelf0/shelf2",
+    "name": "shelf2",
+    "parent": "shelf0",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        -0.001283,
+        0.017821,
+        -0.642186
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.000117,
+        -0.000101,
+        1.570799
+      ],
+      "position_xyz_m": [
+        0.384022,
+        -0.000658,
+        0.034568
+      ],
+      "quaternion_xyzw": [
+        6e-06,
+        -7.7e-05,
+        0.707108,
+        0.707106
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        4.9e-05,
+        -0.000147,
+        1.031144
+      ],
+      "position_xyz_m": [
+        0.647242,
+        -0.235689,
+        0.786568
+      ],
+      "quaternion_xyzw": [
+        -1.5e-05,
+        -7.6e-05,
+        0.493032,
+        0.870011
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.734022,
+      "x_uniform_min_m": 0.42108,
+      "y_uniform_max_m": 0.61358,
+      "y_uniform_min_m": -0.61451,
+      "z_fixed_m": 0.786568
+    }
+  },
+  {
+    "handle": 89,
+    "hierarchy_path": "close_fridge/fridge_root/fridge_base/bottom_joint/door_bottom/door_bottom_visual",
+    "name": "door_bottom_visual",
+    "parent": "door_bottom",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.000111,
+        -0.010764,
+        0.020766
+      ],
+      "position_xyz_m": [
+        0.002231,
+        -1e-06,
+        0.0051
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        -0.005382,
+        0.010382,
+        0.999932
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -5.5e-05,
+        -0.010745,
+        0.020767
+      ],
+      "position_xyz_m": [
+        0.229567,
+        -0.001362,
+        0.217698
+      ],
+      "quaternion_xyzw": [
+        -8.3e-05,
+        -0.005372,
+        0.010383,
+        0.999932
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.005569,
+        -0.00919,
+        -0.518914
+      ],
+      "position_xyz_m": [
+        0.514375,
+        -0.156928,
+        0.969698
+      ],
+      "quaternion_xyzw": [
+        -0.001512,
+        -0.005155,
+        -0.256539,
+        0.966519
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.579571,
+      "x_uniform_min_m": 0.311366,
+      "y_uniform_max_m": 0.503866,
+      "y_uniform_min_m": -0.505791,
+      "z_fixed_m": 0.969698
+    }
+  },
+  {
+    "handle": 92,
+    "hierarchy_path": "close_fridge/fridge_root/fridge_base/top_joint/door_top/door_top_visual",
+    "name": "door_top_visual",
+    "parent": "door_top",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.00028,
+        -0.010764,
+        0.020767
+      ],
+      "position_xyz_m": [
+        0.006433,
+        7e-06,
+        -0.001244
+      ],
+      "quaternion_xyzw": [
+        -0.000196,
+        -0.00538,
+        0.010384,
+        0.999932
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.006871,
+        -0.008247,
+        0.718927
+      ],
+      "position_xyz_m": [
+        0.126877,
+        -0.055628,
+        0.674061
+      ],
+      "quaternion_xyzw": [
+        0.001766,
+        -0.005069,
+        0.351754,
+        0.936077
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.001657,
+        -0.010606,
+        0.179252
+      ],
+      "position_xyz_m": [
+        0.398394,
+        -0.150716,
+        1.426061
+      ],
+      "quaternion_xyzw": [
+        0.000351,
+        -0.005356,
+        0.089501,
+        0.995972
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.488536,
+      "x_uniform_min_m": 0.20038,
+      "y_uniform_max_m": 0.39288,
+      "y_uniform_min_m": -0.47155,
+      "z_fixed_m": 1.426061
+    }
+  }
+]

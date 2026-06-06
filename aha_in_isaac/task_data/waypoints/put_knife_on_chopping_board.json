@@ -1,0 +1,534 @@
+[
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141587,
+        0.241468,
+        -3.141574
+      ],
+      "position_xyz_m": [
+        0.278679,
+        -0.008162,
+        1.471556
+      ],
+      "quaternion_xyzw": [
+        9e-06,
+        0.992721,
+        -1e-06,
+        0.120441
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -2.926584,
+        -1.230302,
+        -2.86334
+      ],
+      "position_xyz_m": [
+        0.443552,
+        -0.27894,
+        -0.150909
+      ],
+      "quaternion_xyzw": [
+        -0.051281,
+        -0.812713,
+        -0.007215,
+        0.580359
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      0.016388,
+      0.032371,
+      0.194667
+    ],
+    "fixed_orientation_rpy_rad": [
+      -0.000228,
+      -1.483475,
+      -0.000227
+    ],
+    "motion_type": "point",
+    "name": "waypoint0",
+    "parent": "knife_block",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.000228,
+          -1.483475,
+          -0.000227
+        ],
+        "position_xyz_m": [
+          0.016388,
+          0.032371,
+          0.194667
+        ],
+        "quaternion_xyzw": [
+          7e-06,
+          0.675569,
+          7e-06,
+          -0.737296
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "knife_block"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.000228,
+          -1.483475,
+          -0.000227
+        ],
+        "position_xyz_m": [
+          0.016388,
+          0.032371,
+          0.194667
+        ],
+        "quaternion_xyzw": [
+          7e-06,
+          0.675569,
+          7e-06,
+          -0.737296
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "knife_block"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.483268,
+        -1.467795,
+        0.573048
+      ],
+      "position_xyz_m": [
+        0.074699,
+        0.221387,
+        1.020979
+      ],
+      "quaternion_xyzw": [
+        0.013345,
+        0.674017,
+        -0.050033,
+        -0.736898
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      0.483268,
+      -1.467795,
+      0.573048
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141592,
+        0.241803,
+        -3.141591
+      ],
+      "position_xyz_m": [
+        0.278558,
+        -0.008147,
+        1.471724
+      ],
+      "quaternion_xyzw": [
+        1e-06,
+        0.9927,
+        -0.0,
+        0.120607
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -2.926847,
+        -1.229978,
+        -2.863604
+      ],
+      "position_xyz_m": [
+        0.51871,
+        -0.278934,
+        -0.150774
+      ],
+      "quaternion_xyzw": [
+        -0.051277,
+        -0.812811,
+        -0.007213,
+        0.580222
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      0.009848,
+      0.032371,
+      0.119952
+    ],
+    "fixed_orientation_rpy_rad": [
+      -0.000229,
+      -1.483473,
+      -0.000228
+    ],
+    "motion_type": "point",
+    "name": "waypoint1",
+    "parent": "knife_block",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.000229,
+          -1.483473,
+          -0.000228
+        ],
+        "position_xyz_m": [
+          0.009848,
+          0.032371,
+          0.119952
+        ],
+        "quaternion_xyzw": [
+          7e-06,
+          0.675569,
+          7e-06,
+          -0.737296
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "knife_block"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.000229,
+          -1.483473,
+          -0.000228
+        ],
+        "position_xyz_m": [
+          0.009848,
+          0.032371,
+          0.119952
+        ],
+        "quaternion_xyzw": [
+          7e-06,
+          0.675569,
+          7e-06,
+          -0.737296
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "knife_block"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.483269,
+        -1.467796,
+        0.573048
+      ],
+      "position_xyz_m": [
+        0.068219,
+        0.214508,
+        0.946576
+      ],
+      "quaternion_xyzw": [
+        0.013345,
+        0.674018,
+        -0.050033,
+        -0.736898
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      0.483269,
+      -1.467796,
+      0.573048
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141583,
+        0.241478,
+        -3.141589
+      ],
+      "position_xyz_m": [
+        0.278664,
+        -0.008168,
+        1.471565
+      ],
+      "quaternion_xyzw": [
+        1e-06,
+        0.99272,
+        -5e-06,
+        0.120446
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -2.92661,
+        -1.230293,
+        -2.863381
+      ],
+      "position_xyz_m": [
+        0.368557,
+        -0.278938,
+        -0.150894
+      ],
+      "quaternion_xyzw": [
+        -0.051273,
+        -0.812716,
+        -0.007217,
+        0.580354
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      0.022929,
+      0.032362,
+      0.269384
+    ],
+    "fixed_orientation_rpy_rad": [
+      -0.00023,
+      -1.483473,
+      -0.00023
+    ],
+    "motion_type": "point",
+    "name": "waypoint2",
+    "parent": "knife_block",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.00023,
+          -1.483473,
+          -0.00023
+        ],
+        "position_xyz_m": [
+          0.022929,
+          0.032362,
+          0.269384
+        ],
+        "quaternion_xyzw": [
+          7e-06,
+          0.675569,
+          7e-06,
+          -0.737297
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "knife_block"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.00023,
+          -1.483473,
+          -0.00023
+        ],
+        "position_xyz_m": [
+          0.022929,
+          0.032362,
+          0.269384
+        ],
+        "quaternion_xyzw": [
+          7e-06,
+          0.675569,
+          7e-06,
+          -0.737297
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "knife_block"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.483265,
+        -1.467795,
+        0.573043
+      ],
+      "position_xyz_m": [
+        0.081178,
+        0.228258,
+        1.095385
+      ],
+      "quaternion_xyzw": [
+        0.013345,
+        0.674017,
+        -0.050032,
+        -0.736898
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      0.483265,
+      -1.467795,
+      0.573043
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141587,
+        0.241491,
+        3.141591
+      ],
+      "position_xyz_m": [
+        0.27865,
+        -0.008163,
+        1.471575
+      ],
+      "quaternion_xyzw": [
+        -1e-06,
+        0.992719,
+        -3e-06,
+        0.120452
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.241484,
+        -0.001877,
+        -1.563201
+      ],
+      "position_xyz_m": [
+        -0.034441,
+        0.071612,
+        -0.682278
+      ],
+      "quaternion_xyzw": [
+        -0.084837,
+        -0.085507,
+        -0.699207,
+        0.704699
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      -0.057533,
+      0.042165,
+      0.031082
+    ],
+    "fixed_orientation_rpy_rad": [
+      3.141592,
+      0.000345,
+      -1.570797
+    ],
+    "motion_type": "point",
+    "name": "waypoint3",
+    "parent": "chopping_board",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.141592,
+          0.000345,
+          -1.570797
+        ],
+        "position_xyz_m": [
+          -0.057533,
+          0.042165,
+          0.031082
+        ],
+        "quaternion_xyzw": [
+          0.707107,
+          0.707107,
+          0.000122,
+          0.000122
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "chopping_board"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.141592,
+          0.000345,
+          -1.570797
+        ],
+        "position_xyz_m": [
+          -0.057533,
+          0.042165,
+          0.031082
+        ],
+        "quaternion_xyzw": [
+          0.707107,
+          0.707107,
+          0.000122,
+          0.000122
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "chopping_board"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141592,
+        -0.0,
+        -1.578623
+      ],
+      "position_xyz_m": [
+        0.206771,
+        0.025716,
+        0.789297
+      ],
+      "quaternion_xyzw": [
+        0.704334,
+        0.709868,
+        -0.0,
+        0.0
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      3.141592,
+      -0.0,
+      -1.578623
+    ]
+  }
+]

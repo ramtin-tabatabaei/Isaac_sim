@@ -1,0 +1,617 @@
+[
+  {
+    "handle": 81,
+    "hierarchy_path": "stack_wine/wine_bottle",
+    "name": "wine_bottle",
+    "parent": "stack_wine",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.14158,
+        7.1e-05,
+        -6.6e-05
+      ],
+      "position_xyz_m": [
+        0.098965,
+        -0.284237,
+        0.12123
+      ],
+      "quaternion_xyzw": [
+        -1.0,
+        -3.3e-05,
+        -3.5e-05,
+        6e-06
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.622462,
+      "x_uniform_min_m": -0.089851,
+      "y_uniform_max_m": -0.07779,
+      "y_uniform_min_m": -0.43693,
+      "z_fixed_m": 0.87323
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.14158,
+        7.1e-05,
+        -6.6e-05
+      ],
+      "position_xyz_m": [
+        0.098965,
+        -0.284237,
+        0.12123
+      ],
+      "quaternion_xyzw": [
+        -1.0,
+        -3.3e-05,
+        -3.5e-05,
+        6e-06
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.141591,
+        7.2e-05,
+        0.158855
+      ],
+      "position_xyz_m": [
+        0.174336,
+        -0.317322,
+        0.87323
+      ],
+      "quaternion_xyzw": [
+        -0.996847,
+        0.079344,
+        -3.6e-05,
+        4e-06
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.622462,
+      "x_uniform_min_m": -0.089851,
+      "y_uniform_max_m": -0.07779,
+      "y_uniform_min_m": -0.43693,
+      "z_fixed_m": 0.87323
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -3.141569,
+          -3.8e-05,
+          0.190519
+        ],
+        "position_xyz_m": [
+          -3e-06,
+          -0.0,
+          -0.000767
+        ],
+        "quaternion_xyzw": [
+          0.995466,
+          -0.095115,
+          -2e-05,
+          -1e-05
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "wine_bottle",
+      "world_offset_xyz_m": [
+        -3e-06,
+        1e-06,
+        0.000767
+      ]
+    },
+    "handle": 82,
+    "hierarchy_path": "stack_wine/wine_bottle/wine_bottle_visual",
+    "name": "wine_bottle_visual",
+    "parent": "wine_bottle",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.141569,
+        -3.8e-05,
+        0.190519
+      ],
+      "position_xyz_m": [
+        -3e-06,
+        -0.0,
+        -0.000767
+      ],
+      "quaternion_xyzw": [
+        0.995466,
+        -0.095115,
+        -2e-05,
+        -1e-05
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.7e-05,
+        -0.000108,
+        0.190585
+      ],
+      "position_xyz_m": [
+        0.098962,
+        -0.284237,
+        0.121997
+      ],
+      "quaternion_xyzw": [
+        1.3e-05,
+        -5.6e-05,
+        0.095148,
+        0.995463
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.9e-05,
+        -0.000113,
+        0.031664
+      ],
+      "position_xyz_m": [
+        0.174333,
+        -0.317322,
+        0.873997
+      ],
+      "quaternion_xyzw": [
+        9e-06,
+        -5.7e-05,
+        0.015831,
+        0.999875
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.622459,
+      "x_uniform_min_m": -0.089853,
+      "y_uniform_max_m": -0.077793,
+      "y_uniform_min_m": -0.436928,
+      "z_fixed_m": 0.873997
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          -1.570796,
+          -3.14158
+        ],
+        "position_xyz_m": [
+          -0.048746,
+          -0.559239,
+          0.087117
+        ],
+        "quaternion_xyzw": [
+          0.707123,
+          1.9e-05,
+          -0.707091,
+          2.8e-05
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "wine_bottle",
+      "world_offset_xyz_m": [
+        0.040339,
+        0.559909,
+        -0.087113
+      ]
+    },
+    "handle": 87,
+    "hierarchy_path": "stack_wine/rack/rack_bottom",
+    "name": "rack_bottom",
+    "parent": "rack",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570451,
+        -0.0
+      ],
+      "position_xyz_m": [
+        4e-06,
+        0.0,
+        0.024997
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.707116,
+        0.0,
+        0.707098
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570451,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.050188,
+        0.275,
+        0.034117
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.707116,
+        0.0,
+        0.707098
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570959,
+        -1.411875,
+        -1.570958
+      ],
+      "position_xyz_m": [
+        0.214675,
+        0.242587,
+        0.786116
+      ],
+      "quaternion_xyzw": [
+        -0.056129,
+        -0.704885,
+        -0.056127,
+        0.704867
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.58144,
+      "x_uniform_min_m": -0.11781,
+      "y_uniform_max_m": 0.332759,
+      "y_uniform_min_m": 0.02301,
+      "z_fixed_m": 0.786116
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          -1.570796,
+          -3.14158
+        ],
+        "position_xyz_m": [
+          -0.048741,
+          -0.55924,
+          0.016117
+        ],
+        "quaternion_xyzw": [
+          0.707123,
+          1.9e-05,
+          -0.707091,
+          2.8e-05
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "wine_bottle",
+      "world_offset_xyz_m": [
+        0.040339,
+        0.559909,
+        -0.016113
+      ]
+    },
+    "handle": 89,
+    "hierarchy_path": "stack_wine/rack/rack_top",
+    "name": "rack_top",
+    "parent": "rack",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570451,
+        -0.0
+      ],
+      "position_xyz_m": [
+        4e-06,
+        0.0,
+        0.095997
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.707116,
+        0.0,
+        0.707098
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570451,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.050188,
+        0.275,
+        0.105117
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.707116,
+        0.0,
+        0.707098
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570959,
+        -1.411875,
+        -1.570958
+      ],
+      "position_xyz_m": [
+        0.214675,
+        0.242587,
+        0.857116
+      ],
+      "quaternion_xyzw": [
+        -0.056129,
+        -0.704885,
+        -0.056127,
+        0.704867
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.58144,
+      "x_uniform_min_m": -0.11781,
+      "y_uniform_max_m": 0.332759,
+      "y_uniform_min_m": 0.02301,
+      "z_fixed_m": 0.857116
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          -1.570796,
+          -3.14158
+        ],
+        "position_xyz_m": [
+          -0.04526,
+          -0.559239,
+          0.085472
+        ],
+        "quaternion_xyzw": [
+          0.70711,
+          1.9e-05,
+          -0.707104,
+          2.8e-05
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "wine_bottle",
+      "world_offset_xyz_m": [
+        0.04378,
+        0.559358,
+        -0.085468
+      ]
+    },
+    "handle": 88,
+    "hierarchy_path": "stack_wine/rack/rack_bottom/rack_bottom_visual",
+    "name": "rack_bottom_visual",
+    "parent": "rack_bottom",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -3.7e-05,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.001645,
+        -0.0,
+        -0.003486
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -1.8e-05,
+        -0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.053674,
+        0.275,
+        0.035761
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        -0.707129,
+        0.0,
+        0.707085
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.571191,
+        -1.411875,
+        -1.571187
+      ],
+      "position_xyz_m": [
+        0.218117,
+        0.242035,
+        0.787761
+      ],
+      "quaternion_xyzw": [
+        -0.05613,
+        -0.704898,
+        -0.056126,
+        0.704854
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.583904,
+      "x_uniform_min_m": -0.115346,
+      "y_uniform_max_m": 0.333406,
+      "y_uniform_min_m": 0.020545,
+      "z_fixed_m": 0.787761
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          -1.570796,
+          -3.14158
+        ],
+        "position_xyz_m": [
+          -0.045255,
+          -0.55924,
+          0.014472
+        ],
+        "quaternion_xyzw": [
+          0.70711,
+          1.9e-05,
+          -0.707104,
+          2.8e-05
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "wine_bottle",
+      "world_offset_xyz_m": [
+        0.04378,
+        0.559358,
+        -0.014468
+      ]
+    },
+    "handle": 90,
+    "hierarchy_path": "stack_wine/rack/rack_top/rack_top_visual",
+    "name": "rack_top_visual",
+    "parent": "rack_top",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -3.7e-05,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.001645,
+        -0.0,
+        -0.003486
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -1.8e-05,
+        -0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.053674,
+        0.275,
+        0.106762
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        -0.707129,
+        0.0,
+        0.707085
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.571191,
+        -1.411875,
+        -1.571187
+      ],
+      "position_xyz_m": [
+        0.218117,
+        0.242035,
+        0.858761
+      ],
+      "quaternion_xyzw": [
+        -0.05613,
+        -0.704898,
+        -0.056126,
+        0.704854
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.583904,
+      "x_uniform_min_m": -0.115346,
+      "y_uniform_max_m": 0.333406,
+      "y_uniform_min_m": 0.020545,
+      "z_fixed_m": 0.858761
+    }
+  }
+]

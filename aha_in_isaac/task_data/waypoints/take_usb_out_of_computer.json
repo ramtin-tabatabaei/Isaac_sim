@@ -1,0 +1,268 @@
+[
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.141587,
+        0.241637,
+        3.141572
+      ],
+      "position_xyz_m": [
+        0.278592,
+        -0.008147,
+        1.471649
+      ],
+      "quaternion_xyzw": [
+        -1e-05,
+        0.99271,
+        1e-06,
+        0.120525
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.581887,
+        0.241386,
+        3.095162
+      ],
+      "position_xyz_m": [
+        0.177972,
+        0.595154,
+        0.283983
+      ],
+      "quaternion_xyzw": [
+        -0.101025,
+        0.703689,
+        -0.699859,
+        0.06938
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      -0.08871,
+      0.07785,
+      0.1245
+    ],
+    "fixed_orientation_rpy_rad": [
+      1.570813,
+      0.0,
+      -0.0
+    ],
+    "motion_type": "point",
+    "name": "waypoint0",
+    "parent": "take_usb_out_of_computer",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.570813,
+          0.0,
+          -0.0
+        ],
+        "position_xyz_m": [
+          -0.08871,
+          0.07785,
+          0.1245
+        ],
+        "quaternion_xyzw": [
+          0.707113,
+          0.0,
+          0.0,
+          0.707101
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "take_usb_out_of_computer"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.570813,
+          0.0,
+          -0.0
+        ],
+        "position_xyz_m": [
+          -0.08871,
+          0.07785,
+          0.1245
+        ],
+        "quaternion_xyzw": [
+          0.707113,
+          0.0,
+          0.0,
+          0.707101
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "take_usb_out_of_computer"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570813,
+        -0.045063,
+        1e-06
+      ],
+      "position_xyz_m": [
+        0.113594,
+        0.283574,
+        0.8765
+      ],
+      "quaternion_xyzw": [
+        0.706933,
+        -0.015931,
+        -0.015931,
+        0.706922
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      1.570813,
+      -0.045063,
+      1e-06
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141587,
+        0.241641,
+        -3.141587
+      ],
+      "position_xyz_m": [
+        0.278605,
+        -0.008164,
+        1.471645
+      ],
+      "quaternion_xyzw": [
+        2e-06,
+        0.99271,
+        -2e-06,
+        0.120527
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.581877,
+        0.241391,
+        3.095188
+      ],
+      "position_xyz_m": [
+        0.177985,
+        0.59515,
+        0.330003
+      ],
+      "quaternion_xyzw": [
+        -0.101017,
+        0.703687,
+        -0.699861,
+        0.06939
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      0.0,
+      -1e-06,
+      -0.046004
+    ],
+    "fixed_orientation_rpy_rad": [
+      -0.0,
+      0.0,
+      -0.0
+    ],
+    "motion_type": "point",
+    "name": "waypoint1",
+    "parent": "waypoint0",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "position_xyz_m": [
+          0.0,
+          -1e-06,
+          -0.046004
+        ],
+        "quaternion_xyzw": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "waypoint",
+      "reference_name": "waypoint0"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.570813,
+          0.0,
+          -0.0
+        ],
+        "position_xyz_m": [
+          -0.08871,
+          0.123854,
+          0.1245
+        ],
+        "quaternion_xyzw": [
+          0.707113,
+          0.0,
+          0.0,
+          0.707101
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "take_usb_out_of_computer"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570813,
+        -0.045063,
+        1e-06
+      ],
+      "position_xyz_m": [
+        0.115667,
+        0.329532,
+        0.8765
+      ],
+      "quaternion_xyzw": [
+        0.706933,
+        -0.015931,
+        -0.015931,
+        0.706922
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      1.570813,
+      -0.045063,
+      1e-06
+    ]
+  }
+]

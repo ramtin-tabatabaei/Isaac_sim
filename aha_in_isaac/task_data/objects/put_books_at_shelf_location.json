@@ -1,0 +1,1744 @@
+[
+  {
+    "handle": 80,
+    "hierarchy_path": "put_books_at_shelf_location/bookshelf",
+    "name": "bookshelf",
+    "parent": "put_books_at_shelf_location",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -5.6e-05,
+        -0.0,
+        -1e-06
+      ],
+      "position_xyz_m": [
+        0.159564,
+        0.05,
+        0.244996
+      ],
+      "quaternion_xyzw": [
+        -2.8e-05,
+        -0.0,
+        -1e-06,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -5.6e-05,
+        -0.0,
+        -1e-06
+      ],
+      "position_xyz_m": [
+        0.159564,
+        0.05,
+        0.244996
+      ],
+      "quaternion_xyzw": [
+        -2.8e-05,
+        -0.0,
+        -1e-06,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -5.6e-05,
+        -0.0,
+        -1e-06
+      ],
+      "position_xyz_m": [
+        0.409564,
+        0.05,
+        0.996996
+      ],
+      "quaternion_xyzw": [
+        -2.8e-05,
+        -0.0,
+        -1e-06,
+        1.0
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 81,
+    "hierarchy_path": "put_books_at_shelf_location/bookshelf/bookshelf_visual",
+    "name": "bookshelf_visual",
+    "parent": "bookshelf",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        5.6e-05,
+        -2.4e-05
+      ],
+      "position_xyz_m": [
+        0.001137,
+        0.001306,
+        3e-06
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        2.8e-05,
+        -1.2e-05,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -5.6e-05,
+        5.6e-05,
+        -2.6e-05
+      ],
+      "position_xyz_m": [
+        0.160701,
+        0.051306,
+        0.244999
+      ],
+      "quaternion_xyzw": [
+        -2.8e-05,
+        2.8e-05,
+        -1.3e-05,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -5.6e-05,
+        5.6e-05,
+        -2.6e-05
+      ],
+      "position_xyz_m": [
+        0.410701,
+        0.051306,
+        0.996999
+      ],
+      "quaternion_xyzw": [
+        -2.8e-05,
+        2.8e-05,
+        -1.3e-05,
+        1.0
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 94,
+    "hierarchy_path": "put_books_at_shelf_location/bookshelf/book1",
+    "name": "book1",
+    "parent": "bookshelf",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        5.6e-05,
+        0.0,
+        2e-06
+      ],
+      "position_xyz_m": [
+        -0.08426,
+        -0.13903,
+        0.237901
+      ],
+      "quaternion_xyzw": [
+        2.8e-05,
+        0.0,
+        1e-06,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        -0.0,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.075303,
+        -0.089016,
+        0.482904
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        -0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        -0.0,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.325303,
+        -0.089016,
+        1.234904
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        -0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 102,
+    "hierarchy_path": "put_books_at_shelf_location/bookshelf/book2",
+    "name": "book2",
+    "parent": "bookshelf",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        5.6e-05,
+        0.0,
+        2e-06
+      ],
+      "position_xyz_m": [
+        -0.073231,
+        -0.169017,
+        0.252974
+      ],
+      "quaternion_xyzw": [
+        2.8e-05,
+        0.0,
+        1e-06,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        -0.0,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.086333,
+        -0.119003,
+        0.497979
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        -0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        -0.0,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.336333,
+        -0.119003,
+        1.249979
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        -0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 116,
+    "hierarchy_path": "put_books_at_shelf_location/bookshelf/book0",
+    "name": "book0",
+    "parent": "bookshelf",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        5.6e-05,
+        0.0,
+        2e-06
+      ],
+      "position_xyz_m": [
+        -0.040252,
+        -0.105026,
+        0.219917
+      ],
+      "quaternion_xyzw": [
+        2.8e-05,
+        0.0,
+        1e-06,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        -0.0,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.119312,
+        -0.055013,
+        0.464919
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        -0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        -0.0,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.369312,
+        -0.055013,
+        1.216918
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        -0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 95,
+    "hierarchy_path": "put_books_at_shelf_location/bookshelf/book1/book1_visual",
+    "name": "book1_visual",
+    "parent": "book1",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        -0.0,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.075303,
+        -0.089016,
+        0.482904
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        -0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        -0.0,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.325303,
+        -0.089016,
+        1.234904
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        -0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 103,
+    "hierarchy_path": "put_books_at_shelf_location/bookshelf/book2/book2_visual",
+    "name": "book2_visual",
+    "parent": "book2",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570797,
+        -0.0,
+        1.570796
+      ],
+      "position_xyz_m": [
+        0.0,
+        0.0,
+        -0.001
+      ],
+      "quaternion_xyzw": [
+        0.5,
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570797,
+        -0.0,
+        1.570796
+      ],
+      "position_xyz_m": [
+        0.086333,
+        -0.119003,
+        0.496979
+      ],
+      "quaternion_xyzw": [
+        0.5,
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570797,
+        -0.0,
+        1.570796
+      ],
+      "position_xyz_m": [
+        0.336333,
+        -0.119003,
+        1.248979
+      ],
+      "quaternion_xyzw": [
+        0.5,
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 117,
+    "hierarchy_path": "put_books_at_shelf_location/bookshelf/book0/book0_visual",
+    "name": "book0_visual",
+    "parent": "book0",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570797,
+        -0.0,
+        1.570796
+      ],
+      "position_xyz_m": [
+        1e-06,
+        0.0,
+        -0.001001
+      ],
+      "quaternion_xyzw": [
+        0.5,
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570797,
+        -0.0,
+        1.570796
+      ],
+      "position_xyz_m": [
+        0.119313,
+        -0.055013,
+        0.463918
+      ],
+      "quaternion_xyzw": [
+        0.5,
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570797,
+        -0.0,
+        1.570796
+      ],
+      "position_xyz_m": [
+        0.369313,
+        -0.055013,
+        1.215918
+      ],
+      "quaternion_xyzw": [
+        0.5,
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 96,
+    "hierarchy_path": "put_books_at_shelf_location/bookshelf/book1/book1_visual/book1_front",
+    "name": "book1_front",
+    "parent": "book1_visual",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        0.0,
+        -3.141593
+      ],
+      "position_xyz_m": [
+        -0.000304,
+        1.6e-05,
+        0.010095
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.0,
+        1.0,
+        -0.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        -0.0,
+        -3.141592
+      ],
+      "position_xyz_m": [
+        0.075,
+        -0.089,
+        0.492999
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        -0.0,
+        -3.141592
+      ],
+      "position_xyz_m": [
+        0.325,
+        -0.089,
+        1.244999
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 97,
+    "hierarchy_path": "put_books_at_shelf_location/bookshelf/book1/book1_visual/book1_back",
+    "name": "book1_back",
+    "parent": "book1_visual",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        0.0,
+        -3.141593
+      ],
+      "position_xyz_m": [
+        -0.000304,
+        1.6e-05,
+        -0.010105
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.0,
+        1.0,
+        -0.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        -0.0,
+        -3.141592
+      ],
+      "position_xyz_m": [
+        0.075,
+        -0.089,
+        0.472799
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        -0.0,
+        -3.141592
+      ],
+      "position_xyz_m": [
+        0.325,
+        -0.089,
+        1.224799
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 98,
+    "hierarchy_path": "put_books_at_shelf_location/bookshelf/book1/book1_visual/book1_side",
+    "name": "book1_side",
+    "parent": "book1_visual",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570796,
+        3.141593
+      ],
+      "position_xyz_m": [
+        0.042596,
+        1.6e-05,
+        9.5e-05
+      ],
+      "quaternion_xyzw": [
+        0.707107,
+        0.0,
+        0.707107,
+        -0.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570796,
+        3.141593
+      ],
+      "position_xyz_m": [
+        0.1179,
+        -0.089,
+        0.482999
+      ],
+      "quaternion_xyzw": [
+        0.707107,
+        0.0,
+        0.707107,
+        -0.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570796,
+        3.141593
+      ],
+      "position_xyz_m": [
+        0.3679,
+        -0.089,
+        1.234999
+      ],
+      "quaternion_xyzw": [
+        0.707107,
+        0.0,
+        0.707107,
+        -0.0
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 99,
+    "hierarchy_path": "put_books_at_shelf_location/bookshelf/book1/book1_visual/book1_bottom",
+    "name": "book1_bottom",
+    "parent": "book1_visual",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        -0.0,
+        -3.141593
+      ],
+      "position_xyz_m": [
+        0.000296,
+        0.048616,
+        -0.000905
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        0.707107,
+        0.707107,
+        -0.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        -0.0,
+        -3.141593
+      ],
+      "position_xyz_m": [
+        0.0756,
+        -0.0404,
+        0.481999
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        0.707107,
+        0.707107,
+        -0.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        -0.0,
+        -3.141593
+      ],
+      "position_xyz_m": [
+        0.3256,
+        -0.0404,
+        1.233999
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        0.707107,
+        0.707107,
+        -0.0
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 100,
+    "hierarchy_path": "put_books_at_shelf_location/bookshelf/book1/book1_visual/book1_top",
+    "name": "book1_top",
+    "parent": "book1_visual",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        -0.0,
+        -3.141593
+      ],
+      "position_xyz_m": [
+        0.000296,
+        -0.048584,
+        -0.000905
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        0.707107,
+        0.707107,
+        -0.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        -0.0,
+        -3.141593
+      ],
+      "position_xyz_m": [
+        0.0756,
+        -0.1376,
+        0.481999
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        0.707107,
+        0.707107,
+        -0.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        -0.0,
+        -3.141593
+      ],
+      "position_xyz_m": [
+        0.3256,
+        -0.1376,
+        1.233999
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        0.707107,
+        0.707107,
+        -0.0
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 101,
+    "hierarchy_path": "put_books_at_shelf_location/bookshelf/book1/book1_visual/book1_side_page",
+    "name": "book1_side_page",
+    "parent": "book1_visual",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -1.570797
+      ],
+      "position_xyz_m": [
+        -0.041104,
+        1.6e-05,
+        -0.000905
+      ],
+      "quaternion_xyzw": [
+        0.5,
+        -0.5,
+        -0.5,
+        0.5
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -1.570797
+      ],
+      "position_xyz_m": [
+        0.0342,
+        -0.089,
+        0.481999
+      ],
+      "quaternion_xyzw": [
+        0.5,
+        -0.5,
+        -0.5,
+        0.5
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -1.570797
+      ],
+      "position_xyz_m": [
+        0.2842,
+        -0.089,
+        1.233999
+      ],
+      "quaternion_xyzw": [
+        0.5,
+        -0.5,
+        -0.5,
+        0.5
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 104,
+    "hierarchy_path": "put_books_at_shelf_location/bookshelf/book2/book2_visual/book2_front",
+    "name": "book2_front",
+    "parent": "book2_visual",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        1.570796
+      ],
+      "position_xyz_m": [
+        -0.00502,
+        0.000333,
+        3e-06
+      ],
+      "quaternion_xyzw": [
+        -0.5,
+        -0.5,
+        0.5,
+        0.5
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        0.0,
+        -3.141593
+      ],
+      "position_xyz_m": [
+        0.086,
+        -0.119001,
+        0.501999
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        0.0,
+        -3.141593
+      ],
+      "position_xyz_m": [
+        0.336,
+        -0.119001,
+        1.253999
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 105,
+    "hierarchy_path": "put_books_at_shelf_location/bookshelf/book2/book2_visual/book2_side",
+    "name": "book2_side",
+    "parent": "book2_visual",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570797,
+        -2e-06,
+        3.141584
+      ],
+      "position_xyz_m": [
+        -4.1e-05,
+        -0.042677,
+        -1.7e-05
+      ],
+      "quaternion_xyzw": [
+        -3e-06,
+        0.707107,
+        -0.707107,
+        -4e-06
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570796,
+        3.141583
+      ],
+      "position_xyz_m": [
+        0.12901,
+        -0.11902,
+        0.49702
+      ],
+      "quaternion_xyzw": [
+        0.707106,
+        3e-06,
+        0.707107,
+        3e-06
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570796,
+        3.141583
+      ],
+      "position_xyz_m": [
+        0.37901,
+        -0.11902,
+        1.24902
+      ],
+      "quaternion_xyzw": [
+        0.707106,
+        3e-06,
+        0.707107,
+        3e-06
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 106,
+    "hierarchy_path": "put_books_at_shelf_location/bookshelf/book2/book2_visual/book2_back",
+    "name": "book2_back",
+    "parent": "book2_visual",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        1.570796
+      ],
+      "position_xyz_m": [
+        0.00508,
+        0.00032,
+        -3.3e-05
+      ],
+      "quaternion_xyzw": [
+        -0.5,
+        -0.5,
+        0.5,
+        0.5
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        0.0,
+        -3.141593
+      ],
+      "position_xyz_m": [
+        0.086013,
+        -0.119036,
+        0.491899
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        0.0,
+        -3.141593
+      ],
+      "position_xyz_m": [
+        0.336013,
+        -0.119036,
+        1.243899
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 107,
+    "hierarchy_path": "put_books_at_shelf_location/bookshelf/book2/book2_visual/book2_bottom",
+    "name": "book2_bottom",
+    "parent": "book2_visual",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -2e-06,
+        1e-06,
+        1.570796
+      ],
+      "position_xyz_m": [
+        -6.7e-05,
+        -0.000167,
+        0.058492
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        1e-06,
+        0.707107,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570797,
+        -2e-06,
+        3.141593
+      ],
+      "position_xyz_m": [
+        0.0865,
+        -0.060511,
+        0.497046
+      ],
+      "quaternion_xyzw": [
+        1e-06,
+        -0.707107,
+        -0.707107,
+        1e-06
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570797,
+        -2e-06,
+        3.141593
+      ],
+      "position_xyz_m": [
+        0.3365,
+        -0.060511,
+        1.249046
+      ],
+      "quaternion_xyzw": [
+        1e-06,
+        -0.707107,
+        -0.707107,
+        1e-06
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 108,
+    "hierarchy_path": "put_books_at_shelf_location/bookshelf/book2/book2_visual/book2_side_page",
+    "name": "book2_side_page",
+    "parent": "book2_visual",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570798,
+        1e-06,
+        1.570796
+      ],
+      "position_xyz_m": [
+        -0.000131,
+        0.041327,
+        -9.7e-05
+      ],
+      "quaternion_xyzw": [
+        -0.5,
+        0.5,
+        0.499999,
+        0.5
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        0.045006,
+        -0.1191,
+        0.49711
+      ],
+      "quaternion_xyzw": [
+        0.500001,
+        -0.5,
+        -0.499999,
+        0.5
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        0.295006,
+        -0.1191,
+        1.24911
+      ],
+      "quaternion_xyzw": [
+        0.500001,
+        -0.5,
+        -0.499999,
+        0.5
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 109,
+    "hierarchy_path": "put_books_at_shelf_location/bookshelf/book2/book2_visual/book2_top",
+    "name": "book2_top",
+    "parent": "book2_visual",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -2e-06,
+        1e-06,
+        1.570796
+      ],
+      "position_xyz_m": [
+        -8.2e-05,
+        -0.000171,
+        -0.058518
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        1e-06,
+        0.707107,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570797,
+        -2e-06,
+        3.141593
+      ],
+      "position_xyz_m": [
+        0.086504,
+        -0.177521,
+        0.497061
+      ],
+      "quaternion_xyzw": [
+        1e-06,
+        -0.707107,
+        -0.707107,
+        1e-06
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570797,
+        -2e-06,
+        3.141593
+      ],
+      "position_xyz_m": [
+        0.336504,
+        -0.177521,
+        1.249061
+      ],
+      "quaternion_xyzw": [
+        1e-06,
+        -0.707107,
+        -0.707107,
+        1e-06
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 118,
+    "hierarchy_path": "put_books_at_shelf_location/bookshelf/book0/book0_visual/book0_front",
+    "name": "book0_front",
+    "parent": "book0_visual",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        1.570796
+      ],
+      "position_xyz_m": [
+        -0.007582,
+        0.000313,
+        1.3e-05
+      ],
+      "quaternion_xyzw": [
+        -0.5,
+        -0.5,
+        0.5,
+        0.5
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        0.0,
+        -3.141593
+      ],
+      "position_xyz_m": [
+        0.119,
+        -0.055001,
+        0.471499
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        0.0,
+        -3.141593
+      ],
+      "position_xyz_m": [
+        0.369,
+        -0.055001,
+        1.223499
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 119,
+    "hierarchy_path": "put_books_at_shelf_location/bookshelf/book0/book0_visual/book0_back",
+    "name": "book0_back",
+    "parent": "book0_visual",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        1.570796
+      ],
+      "position_xyz_m": [
+        0.007518,
+        0.000313,
+        1.3e-05
+      ],
+      "quaternion_xyzw": [
+        0.5,
+        0.5,
+        -0.5,
+        -0.5
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -3.141593
+      ],
+      "position_xyz_m": [
+        0.119,
+        -0.055,
+        0.456399
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -3.141593
+      ],
+      "position_xyz_m": [
+        0.369,
+        -0.055,
+        1.208399
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 120,
+    "hierarchy_path": "put_books_at_shelf_location/bookshelf/book0/book0_visual/book0_bottom",
+    "name": "book0_bottom",
+    "parent": "book0_visual",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -0.0,
+        3.141593
+      ],
+      "position_xyz_m": [
+        -8.2e-05,
+        -0.000887,
+        0.073013
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        -0.0,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        0.1202,
+        0.018,
+        0.463999
+      ],
+      "quaternion_xyzw": [
+        0.5,
+        0.5,
+        0.5,
+        -0.5
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        -0.0,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        0.3702,
+        0.018,
+        1.215999
+      ],
+      "quaternion_xyzw": [
+        0.5,
+        0.5,
+        0.5,
+        -0.5
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 121,
+    "hierarchy_path": "put_books_at_shelf_location/bookshelf/book0/book0_visual/book0_front1",
+    "name": "book0_front1",
+    "parent": "book0_visual",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570797,
+        -0.0,
+        -3.141592
+      ],
+      "position_xyz_m": [
+        -8.1e-05,
+        -0.063887,
+        1.3e-05
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        -0.707107,
+        0.707107,
+        -0.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570796,
+        -3.141593
+      ],
+      "position_xyz_m": [
+        0.1832,
+        -0.055,
+        0.463999
+      ],
+      "quaternion_xyzw": [
+        -0.707107,
+        -0.0,
+        -0.707107,
+        0.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570796,
+        -3.141593
+      ],
+      "position_xyz_m": [
+        0.4332,
+        -0.055,
+        1.215999
+      ],
+      "quaternion_xyzw": [
+        -0.707107,
+        -0.0,
+        -0.707107,
+        0.0
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 122,
+    "hierarchy_path": "put_books_at_shelf_location/bookshelf/book0/book0_visual/book0_top",
+    "name": "book0_top",
+    "parent": "book0_visual",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -0.0,
+        3.141593
+      ],
+      "position_xyz_m": [
+        -8.2e-05,
+        -0.000887,
+        -0.072987
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        -0.0,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        0.1202,
+        -0.128,
+        0.463999
+      ],
+      "quaternion_xyzw": [
+        0.5,
+        0.5,
+        0.5,
+        -0.5
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        -0.0,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        0.3702,
+        -0.128,
+        1.215999
+      ],
+      "quaternion_xyzw": [
+        0.5,
+        0.5,
+        0.5,
+        -0.5
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 123,
+    "hierarchy_path": "put_books_at_shelf_location/bookshelf/book0/book0_visual/book0_side_page",
+    "name": "book0_side_page",
+    "parent": "book0_visual",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        2.6e-05,
+        3.141592
+      ],
+      "position_xyz_m": [
+        -8.2e-05,
+        0.062113,
+        1.3e-05
+      ],
+      "quaternion_xyzw": [
+        9e-06,
+        0.707107,
+        0.707107,
+        9e-06
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.0572,
+        -0.055,
+        0.463999
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.707116,
+        0.0,
+        0.707098
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.3072,
+        -0.055,
+        1.215999
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.707116,
+        0.0,
+        0.707098
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  }
+]

@@ -16,6 +16,8 @@ must only be imported after ``AppLauncher`` has started the simulator.
 
 from __future__ import annotations
 
+import math
+
 from robot_controller import EE_QUAT_DOWN, Waypoint
 
 # Built-in fallbacks (sim steps). DEFAULT_WAYPOINT_STEPS is used for any waypoint
@@ -86,6 +88,29 @@ def _waypoint_world_quat(waypoint: dict, force_down: bool) -> tuple[float, float
     return (qw, qx, qy, qz)
 
 
+def _rpy_to_quat_wxyz(rpy) -> tuple[float, float, float, float]:
+    """Convert a report ``orientation_rpy_rad`` [roll_x, pitch_y, yaw_z] to Isaac
+    ``(w, x, y, z)``. Matches the report's own xyzw quaternion: q = qx(roll) * qy(pitch)
+    * qz(yaw) (verified against waypoint world_location entries that carry both)."""
+
+    def _qmul(a, b):  # a * b, both (x, y, z, w)
+        ax, ay, az, aw = a
+        bx, by, bz, bw = b
+        return (
+            aw * bx + ax * bw + ay * bz - az * by,
+            aw * by - ax * bz + ay * bw + az * bx,
+            aw * bz + ax * by - ay * bx + az * bw,
+            aw * bw - ax * bx - ay * by - az * bz,
+        )
+
+    r, p, y = (float(v) for v in rpy)
+    qx = (math.sin(r / 2.0), 0.0, 0.0, math.cos(r / 2.0))
+    qy = (0.0, math.sin(p / 2.0), 0.0, math.cos(p / 2.0))
+    qz = (0.0, 0.0, math.sin(y / 2.0), math.cos(y / 2.0))
+    x, yy, z, w = _qmul(qx, _qmul(qy, qz))
+    return (w, x, yy, z)
+
+
 def _waypoint_steps(motion_config: dict, name: str, default: int = DEFAULT_WAYPOINT_STEPS) -> int:
     return int(motion_config.get("waypoint_steps", {}).get(name, default))
 
@@ -126,11 +151,23 @@ def _grasp_index(
     if graspable_name:
         best = None
         for i, w in enumerate(waypoints):
-            rel = (w.get("relative_to") or {}).get("reference_name")
-            if rel != graspable_name:
+            # Offset to the graspable via the DIRECT relation (relative_to) AND/OR the
+            # nearest-object relation. The waypoint sitting ON the object has the smallest
+            # offset by either path. wipe_desk's grasp (waypoint1) is relative_to waypoint0,
+            # not the sponge, so it's only found via its nearest-object relation - without
+            # this we'd wrongly grasp at waypoint0 (42 mm ABOVE the sponge), missing it.
+            mags = []
+            if (w.get("relative_to") or {}).get("reference_name") == graspable_name:
+                off = w.get("fixed_offset_xyz_m") or (0.0, 0.0, 0.0)
+                mags.append(sum(float(v) ** 2 for v in off) ** 0.5)
+            near = w.get("relative_to_nearest_object") or {}
+            if near.get("reference_name") == graspable_name:
+                pos = (near.get("location_in_reference_frame") or {}).get("position_xyz_m")
+                if pos:
+                    mags.append(sum(float(v) ** 2 for v in pos) ** 0.5)
+            if not mags:
                 continue
-            off = w.get("fixed_offset_xyz_m") or (0.0, 0.0, 0.0)
-            mag = sum(float(v) ** 2 for v in off) ** 0.5
+            mag = min(mags)
             if best is None or mag < best[1]:
                 best = (i, mag)
         if best is not None:
@@ -147,6 +184,16 @@ def build_arm_motion(
         return []
 
     positions = [_waypoint_world_pos(w) for w in waypoints]
+    # A predefined cartesian-path waypoint's recorded "position" is a nominal reference that does
+    # NOT coincide with where its sweep actually ENDS, so use the last path sample as that
+    # waypoint's effective position. The sweep itself already targets that sample; the fix is for
+    # the NEXT segment, whose smooth curve is built from this waypoint's position -- using the stale
+    # nominal point makes the arm detour out to it after the sweep (wipe_desk swung ~28 cm to
+    # mid-table and back after the wipe) instead of continuing smoothly from where the sweep ended.
+    for i, w in enumerate(waypoints):
+        samples = w.get("cartesian_path_samples") or []
+        if samples:
+            positions[i] = tuple(float(c) for c in samples[-1]["position_xyz_m"])
     quats = [_waypoint_world_quat(w, force_down) for w in waypoints]
     names = [w.get("name", f"waypoint{i}") for i, w in enumerate(waypoints)]
 
@@ -177,9 +224,24 @@ def build_arm_motion(
             # Sweep the whole predefined cartesian path as ONE continuous, eased motion.
             via_points = [tuple(float(c) for c in s["position_xyz_m"]) for s in path_samples]
             sweep_default = max(len(via_points) * STEPS_PER_SWEEP_SAMPLE, DEFAULT_WAYPOINT_STEPS)
+            # When the task opts in (follow_path_orientation), reorient the gripper GRADUALLY
+            # through the path's own per-sample orientations, so it tracks a path that turns the
+            # wrist (e.g. close_box swinging the lid shut). Otherwise HOLD the entry orientation:
+            # a surface drag (wipe_desk) must keep a fixed orientation, and slerping to the path
+            # waypoint's recorded quaternion (often in a different frame) would flip the wrist
+            # ~180 deg through a singularity and blow the IK arm up.
+            via_quats = None
+            if motion_config.get("follow_path_orientation") and not force_down and all(
+                s.get("orientation_rpy_rad") for s in path_samples
+            ):
+                via_quats = [_rpy_to_quat_wxyz(s["orientation_rpy_rad"]) for s in path_samples]
+                sweep_quat = via_quats[-1]  # final orientation, for the tracking-error report
+            else:
+                sweep_quat = quats[index - 1] if index > 0 else quat
             motion.append(
-                Waypoint(f"{name} sweep ({len(via_points)} pts)", via_points[-1], quat_w=quat, gripper=grip,
-                         duration_steps=_waypoint_steps(motion_config, name, sweep_default), via_points_w=via_points)
+                Waypoint(f"{name} sweep ({len(via_points)} pts)", via_points[-1], quat_w=sweep_quat, gripper=grip,
+                         duration_steps=_waypoint_steps(motion_config, name, sweep_default),
+                         via_points_w=via_points, via_quats_w=via_quats)
             )
         elif curvy and index > 0:
             # Curve smoothly from the previous waypoint through this one.
@@ -191,6 +253,16 @@ def build_arm_motion(
             motion.append(
                 Waypoint(name, pos, quat_w=quat, gripper=grip, duration_steps=_waypoint_steps(motion_config, name))
             )
+
+    # Push / press / close tasks grasp nothing: just follow every recorded waypoint in order
+    # with a fixed gripper, so the arm traces the demonstrated motion exactly (e.g. close_box
+    # swinging the lid shut) with no grasp dwell, carry lift, or release detour. Opt in with
+    # "no_grasp": true; "gripper_state" (default "closed") sets the fixed finger pose.
+    if motion_config.get("no_grasp"):
+        grip = str(motion_config.get("gripper_state", "closed"))
+        for index in range(len(waypoints)):
+            _append_follow(index, grip)
+        return motion
 
     # Approach + grasp: follow the recorded waypoints up to and including the grasp,
     # then close in place. This is the path proven to reach the object; a lift only
@@ -205,6 +277,7 @@ def build_arm_motion(
     carry_positions = positions[grasp_index + 1:]
     release_pos = positions[-1]
     release_quat = quats[-1]
+    released_during_carry = False
     if slide_along_rod and slide_along_rod > 0.0:
         # The ring is topologically CAPTIVE on the frame's rod, so the recorded sideways carry
         # (waypoint3) is impossible - it can only tunnel/eject the ring. Instead slide the grasp
@@ -245,12 +318,29 @@ def build_arm_motion(
                      via_points_w=over_path)
         )
     else:
-        # Flat carry: follow the remaining recorded waypoints in place.
+        # Flat carry: follow the remaining recorded waypoints in place. By default the gripper stays
+        # CLOSED through all of them and opens at the separate Release step below (the last waypoint).
+        # If the task sets 'release_at_waypoint', the gripper OPENS at THAT waypoint instead - placing
+        # the object there - and any later waypoints are then traversed already open (e.g. open the
+        # pepper onto the scale tray, then retreat up), so there is no trailing in-air release.
+        release_name = motion_config.get("release_at_waypoint")
+        release_index = names.index(release_name) if release_name in names else None
+        if release_name and release_index is None:
+            print(f"[WARN]: release_at_waypoint '{release_name}' is not a waypoint name; releasing at the end.")
+        if release_index is not None and not (grasp_index < release_index <= len(waypoints) - 1):
+            print(f"[WARN]: release_at_waypoint '{release_name}' must come after the grasp; releasing at the end.")
+            release_index = None
         for index in range(grasp_index + 1, len(waypoints)):
-            _append_follow(index, "closed")
+            _append_follow(index, "open" if release_index is not None and index >= release_index else "closed")
+        released_during_carry = release_index is not None
+        if released_during_carry:
+            print(f"[INFO]: weighing-style release: gripper opens at '{names[release_index]}', "
+                  f"then retreats through the later waypoint(s) already open.")
 
-    # Release the object in place at the final carry position.
-    motion.append(
-        Waypoint("Release", release_pos, quat_w=release_quat, gripper="open", duration_steps=RELEASE_DWELL_STEPS)
-    )
+    # Release the object at the final carry position - unless the flat carry already opened the
+    # gripper at its configured release waypoint above.
+    if not released_during_carry:
+        motion.append(
+            Waypoint("Release", release_pos, quat_w=release_quat, gripper="open", duration_steps=RELEASE_DWELL_STEPS)
+        )
     return motion

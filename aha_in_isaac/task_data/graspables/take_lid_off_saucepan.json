@@ -1,0 +1,167 @@
+{
+  "graspable_objects": [
+    {
+      "fixed_offset_from_task_boundary_root_xyz_m": [
+        -0.026265,
+        0.02984,
+        0.101079
+      ],
+      "fixed_orientation_from_task_boundary_root_rpy_rad": [
+        -1e-05,
+        7e-05,
+        -1e-05
+      ],
+      "name": "saucepan_lid_grasp_point",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          2e-06,
+          7.1e-05,
+          -0.16897
+        ],
+        "position_xyz_m": [
+          0.348428,
+          -0.000243,
+          0.853079
+        ],
+        "quaternion_xyzw": [
+          -2e-06,
+          3.5e-05,
+          -0.084384,
+          0.996433
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_distribution": {
+        "x_uniform_max_m": 0.480629,
+        "x_uniform_min_m": 0.146081,
+        "y_uniform_max_m": 0.304548,
+        "y_uniform_min_m": -0.178638,
+        "z_fixed_m": 0.853079
+      }
+    }
+  ],
+  "other_scene_objects": [
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        -0.041113,
+        -0.096054,
+        -0.056677
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        -0.056685,
+        -0.087772,
+        -0.056673
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        -0.083594,
+        0.001946,
+        1.163613
+      ],
+      "has_separate_distribution": false,
+      "name": "saucepan",
+      "reference_graspable_object": "saucepan_lid_grasp_point",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.08208,
+          0.016031,
+          0.995223
+        ],
+        "position_xyz_m": [
+          0.291743,
+          -0.088015,
+          0.796406
+        ],
+        "quaternion_xyzw": [
+          -0.032229,
+          0.026621,
+          0.476622,
+          0.878114
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.535347,
+        "x_uniform_min_m": 0.091363,
+        "y_uniform_max_m": 0.359266,
+        "y_uniform_min_m": -0.233356,
+        "z_fixed_m": 0.796406
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        6e-06,
+        -4e-06,
+        -0.020032
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        4e-06,
+        -5e-06,
+        -0.020032
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        1.570865,
+        -1.227477,
+        1.570856
+      ],
+      "has_separate_distribution": false,
+      "name": "saucepan_lid",
+      "reference_graspable_object": "saucepan_lid_grasp_point",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.57053,
+          -1.396448,
+          1.570515
+        ],
+        "position_xyz_m": [
+          0.348431,
+          -0.000247,
+          0.833048
+        ],
+        "quaternion_xyzw": [
+          0.061569,
+          -0.704405,
+          0.061558,
+          0.704439
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.480623,
+        "x_uniform_min_m": 0.146087,
+        "y_uniform_max_m": 0.304542,
+        "y_uniform_min_m": -0.178632,
+        "z_fixed_m": 0.833048
+      }
+    }
+  ],
+  "task_base_rotation_rz_bounds_rad": [
+    -3.14,
+    3.14
+  ],
+  "task_boundary_root": "take_lid_off_saucepan",
+  "task_boundary_root_world_pose_after_reset": {
+    "kind": "exact",
+    "orientation_rpy_rad": [
+      0.0,
+      0.0,
+      -0.16896
+    ],
+    "position_xyz_m": [
+      0.369301,
+      -0.034075,
+      0.752
+    ],
+    "quaternion_xyzw": [
+      0.0,
+      0.0,
+      -0.084379,
+      0.996434
+    ],
+    "source": "exact_after_one_rlbench_reset"
+  },
+  "type": "Uniform for x/y; fixed z",
+  "units": "meters"
+}

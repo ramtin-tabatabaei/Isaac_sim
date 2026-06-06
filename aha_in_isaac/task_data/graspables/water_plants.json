@@ -1,0 +1,167 @@
+{
+  "graspable_objects": [
+    {
+      "fixed_offset_from_task_boundary_root_xyz_m": [
+        0.015451,
+        0.16003,
+        0.117898
+      ],
+      "fixed_orientation_from_task_boundary_root_rpy_rad": [
+        -2.371571,
+        -0.174976,
+        2.964912
+      ],
+      "name": "waterer",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          2.36074,
+          0.0976,
+          -0.097071
+        ],
+        "position_xyz_m": [
+          0.235957,
+          -0.170281,
+          0.869898
+        ],
+        "quaternion_xyzw": [
+          -0.921658,
+          -0.063355,
+          -0.026614,
+          -0.38187
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_distribution": {
+        "x_uniform_max_m": 0.457528,
+        "x_uniform_min_m": -0.020785,
+        "y_uniform_max_m": 0.234422,
+        "y_uniform_min_m": -0.191504,
+        "z_fixed_m": 0.869898
+      }
+    }
+  ],
+  "other_scene_objects": [
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        0.084578,
+        -0.209406,
+        -0.355709
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        0.028918,
+        0.407435,
+        0.103411
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        -2.35595,
+        0.000671,
+        2.893576
+      ],
+      "has_separate_distribution": false,
+      "name": "plant",
+      "reference_graspable_object": "waterer",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          0.0,
+          3.031119
+        ],
+        "position_xyz_m": [
+          0.264875,
+          0.237154,
+          0.973309
+        ],
+        "quaternion_xyzw": [
+          0.0,
+          0.0,
+          0.998475,
+          0.055209
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.546871,
+        "x_uniform_min_m": -0.110128,
+        "y_uniform_max_m": 0.323765,
+        "y_uniform_min_m": -0.280847,
+        "z_fixed_m": 0.973309
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        0.045893,
+        -0.096587,
+        -0.142906
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        0.022218,
+        0.174045,
+        0.032742
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        -2.355942,
+        0.000652,
+        2.893574
+      ],
+      "has_separate_distribution": false,
+      "name": "head",
+      "reference_graspable_object": "waterer",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1e-05,
+          -1.9e-05,
+          3.031116
+        ],
+        "position_xyz_m": [
+          0.258175,
+          0.003764,
+          0.90264
+        ],
+        "quaternion_xyzw": [
+          9e-06,
+          5e-06,
+          -0.998475,
+          -0.05521
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.316627,
+        "x_uniform_min_m": 0.120116,
+        "y_uniform_max_m": 0.093523,
+        "y_uniform_min_m": -0.050603,
+        "z_fixed_m": 0.90264
+      }
+    }
+  ],
+  "task_base_rotation_rz_bounds_rad": [
+    -3.14,
+    3.14
+  ],
+  "task_boundary_root": "water_plants",
+  "task_boundary_root_world_pose_after_reset": {
+    "kind": "exact",
+    "orientation_rpy_rad": [
+      -0.0,
+      0.0,
+      3.031119
+    ],
+    "position_xyz_m": [
+      0.268957,
+      -0.01293,
+      0.752
+    ],
+    "quaternion_xyzw": [
+      0.0,
+      0.0,
+      0.998475,
+      0.055209
+    ],
+    "source": "exact_after_one_rlbench_reset"
+  },
+  "type": "Uniform for x/y; fixed z",
+  "units": "meters"
+}

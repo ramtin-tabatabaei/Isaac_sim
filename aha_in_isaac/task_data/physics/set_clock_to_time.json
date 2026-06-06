@@ -1,0 +1,68 @@
+{
+  "shapes": {
+    "clock": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 1.1317161321640015,
+      "friction": 0.5
+    },
+    "clock_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 5.004722595214844,
+      "friction": 0.7099999785423279
+    },
+    "clock_needle_hour": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 3.0004255771636963,
+      "friction": 0.7099999785423279
+    },
+    "clock_stand": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 3.564995765686035,
+      "friction": 0.5
+    },
+    "clock_needle_crank": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.019091013818979263,
+      "friction": 0.5
+    },
+    "clock_needle_minute": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 3.000826835632324,
+      "friction": 0.7099999785423279
+    },
+    "clock_needle_crank_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.0006338255479931831,
+      "friction": 0.7099999785423279
+    },
+    "clock_minute_head": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.01600000075995922,
+      "friction": 0.5
+    }
+  },
+  "joints": {
+    "Revolute_joint": {
+      "type": "revolute",
+      "cyclic": true,
+      "lower": -180.00000500895632,
+      "upper": 180.00000500895632
+    }
+  }
+}

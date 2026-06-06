@@ -1,0 +1,54 @@
+{
+  "shapes": {
+    "shoe1": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.1652393341064453,
+      "friction": 0.7099999785423279
+    },
+    "box_base": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 1.8875000476837158,
+      "friction": 0.5
+    },
+    "shoe2": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.1859002709388733,
+      "friction": 0.7099999785423279
+    },
+    "shoe1_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 5.0,
+      "friction": 0.7099999785423279
+    },
+    "shoe2_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 5.0,
+      "friction": 0.7099999785423279
+    },
+    "box_lid": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.937999963760376,
+      "friction": 0.5
+    }
+  },
+  "joints": {
+    "box_joint": {
+      "type": "revolute",
+      "cyclic": false,
+      "lower": -14.49999983431683,
+      "upper": 135.49999750962428
+    }
+  }
+}

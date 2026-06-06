@@ -1,0 +1,33 @@
+{
+  "shapes": {
+    "push_button_target": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.20000000298023224,
+      "friction": 1.0
+    },
+    "target_button_topPlate": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.06852196902036667,
+      "friction": 0.5
+    },
+    "target_button_wrap": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.028615158051252365,
+      "friction": 0.5
+    }
+  },
+  "joints": {
+    "target_button_joint": {
+      "type": "prismatic",
+      "cyclic": false,
+      "lower": -0.007000000216066837,
+      "upper": 0.0029999995604157448
+    }
+  }
+}

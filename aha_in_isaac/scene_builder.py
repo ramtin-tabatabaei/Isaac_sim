@@ -22,7 +22,14 @@ import isaaclab.sim as sim_utils
 from pxr import Gf, Sdf, Usd, UsdGeom, UsdShade
 
 from robot_arm import spawn_franka
-from scene_context import SceneContext, pose_from_location, pose_from_world_location, task_root_object
+from scene_context import (
+    SceneContext,
+    _qapply,
+    _qinv,
+    pose_from_location,
+    pose_from_world_location,
+    task_root_object,
+)
 from usd_uv import generate_uvs, has_uvs
 
 # Local top of the bundled diningTable.usdc mesh (used to drop it onto our table top).
@@ -114,6 +121,8 @@ class SceneBuilder:
         # Render-skin prim paths (e.g. the wand's ring, glued onto its body). Used to
         # add the grasped object's protruding parts as planner obstacles.
         self.skin_prim_paths: dict[str, str] = {}
+        # Render-skin -> physics-body pairing, filled in _spawn_usd_objects().
+        self._skin_to_body: dict[str, str] = {}
         self.table_prim_path: str | None = None
 
     def _scene_spec(self, key: str) -> dict | None:
@@ -293,20 +302,33 @@ class SceneBuilder:
         objects = self.ctx.objects
         usd_paths = self.ctx.usd_paths
         hidden_objects = set(self.args.hide_object)
-        # Pair each render mesh (..._visual) with its physics body (the sibling
-        # sharing the same base after stripping a body suffix, e.g.
-        # basket_ball_hoop_visual <-> basket_ball_hoop_respondable, or sponge_visual
-        # <-> sponge). We SHOW the render mesh (it has the UVs/detail) and HIDE the
-        # body (collision only), gluing the render onto it so it follows a grasp.
-        render_base_to_obj: dict[str, str] = {}
-        for name in objects:
-            if _is_render(name):
-                render_base_to_obj.setdefault(_render_base(name), name)
-        render_bases = set(render_base_to_obj)
+        # Pair each render mesh (..._visual) with its physics body. We SHOW the render
+        # mesh (it has the UVs/detail) and HIDE the body (collision only), gluing the
+        # render onto it so it follows the body when grasped or simulated.
         body_base_to_obj: dict[str, str] = {}
         for name in objects:
             if not _is_render(name):
                 body_base_to_obj.setdefault(_strip_suffix(name, BODY_SUFFIXES), name)
+        # Pair each render skin to its physics body. The report's parent relationship is
+        # authoritative (e.g. pepper_visual0's parent is pepper0). The name-based "render
+        # base" pairing is only a fallback: it fails when an index trails the _visual token
+        # (pepper_visual0 -> base "pepper", but the body is "pepper0"), which left the skin
+        # unparented so it could not follow its body when the body moved or was grasped.
+        skin_to_body: dict[str, str] = {}
+        for name, entry in objects.items():
+            if not _is_render(name):
+                continue
+            parent = entry.get("parent")
+            if parent in objects and not _is_render(parent):
+                skin_to_body[name] = parent
+            else:
+                fallback = body_base_to_obj.get(_render_base(name))
+                if fallback:
+                    skin_to_body[name] = fallback
+        body_to_skin: dict[str, str] = {}
+        for skin, body in skin_to_body.items():
+            body_to_skin.setdefault(body, skin)
+        self._skin_to_body = skin_to_body
         parent_path = "/World/DesignScene"
         task_root_child_translation = (0.0, 0.0, 0.0)
         task_root_child_orientation = (1.0, 0.0, 0.0, 0.0)
@@ -366,8 +388,7 @@ class SceneBuilder:
             hidden_by_flags = object_name in hidden_objects or (
                 self.args.hide_root and (object_name.endswith("_root") or "boundary_root" in object_name)
             )
-            body_base = _strip_suffix(object_name, BODY_SUFFIXES)
-            skin_name = render_base_to_obj.get(body_base) if glue else None
+            skin_name = body_to_skin.get(object_name) if glue else None
             is_body = skin_name is not None  # this body has a render skin glued on top
             # A body with a skin is hidden by default (the skin covers it) UNLESS the
             # skin itself is hidden, in which case the body becomes the visible mesh.
@@ -399,7 +420,7 @@ class SceneBuilder:
                     print(f"[INFO]: Hiding render mesh '{object_name}' (per appearance config).")
                     continue
 
-                body_name = body_base_to_obj.get(_render_base(object_name))
+                body_name = skin_to_body.get(object_name)
                 if body_name and body_name in body_prim_paths:
                     skin_path = f"{body_prim_paths[body_name]}/{_prim_name(object_name)}"
                     translation, orientation = (0.0, 0.0, 0.0), (1.0, 0.0, 0.0, 0.0)
@@ -416,6 +437,78 @@ class SceneBuilder:
                 self._author_appearance(skin_path, appearance)
                 self.skin_prim_paths[object_name] = skin_path
                 print(f"[INFO]: Placed render mesh '{object_name}' ({note}).")
+
+        if glue and getattr(self.args, "match_graspable_to_report", True):
+            self._snap_graspable_to_report()
+
+    def _snap_graspable_to_report(self):
+        """Move graspable objects (e.g. the weights) onto the sampled world pose from
+        the scene-context report, overriding the pose baked into their USD.
+
+        In task-root mode every prim shares one TaskRoot child transform, so an object's
+        position lives in its baked mesh, not its prim transform. We measure the object's
+        spawned world-space geometry centroid and add a corrective translate (rotated into
+        the TaskRoot frame) so the centroid lands on the reported position.
+
+        The translate is applied to the physics body; its glued visual skin is a child and
+        rides along. Because the body's collision mesh is usually hidden (the skin covers
+        it), we measure the visible skin instead - a hidden prim has an empty world bound.
+        """
+        graspable = self.ctx.graspable_names
+        if not graspable:
+            return
+
+        from pxr import Gf, Usd, UsdGeom
+
+        stage = sim_utils.get_current_stage()
+        bbox = UsdGeom.BBoxCache(
+            Usd.TimeCode.Default(), [UsdGeom.Tokens.default_, UsdGeom.Tokens.render]
+        )
+        inv_root_quat = _qinv(self.ctx.sampled_task_root_quat)
+        body_to_skin = {body: skin for skin, body in self._skin_to_body.items()}
+
+        for name in graspable:
+            body_path = self.body_prim_paths.get(name)
+            target = (self.ctx.objects.get(name, {}).get("world_location") or {}).get("position_xyz_m")
+            if not body_path or not target or len(target) != 3:
+                continue
+            # Measure the visible geometry (the glued skin if present, else the body), but
+            # move the body so the glued skin child rides along.
+            skin_name = body_to_skin.get(name)
+            measure_path = self.skin_prim_paths.get(skin_name, body_path) if skin_name else body_path
+            measure_prim = stage.GetPrimAtPath(measure_path)
+            body_prim = stage.GetPrimAtPath(body_path)
+            if not measure_prim or not measure_prim.IsValid() or not body_prim or not body_prim.IsValid():
+                continue
+            world_range = bbox.ComputeWorldBound(measure_prim).ComputeAlignedRange()
+            if world_range.IsEmpty():
+                continue
+            center = world_range.GetMidpoint()
+            target = tuple(float(v) for v in target)
+            delta_world = tuple(target[i] - center[i] for i in range(3))
+            if max(abs(d) for d in delta_world) < 1e-5:
+                continue
+            # The body's translate op is expressed in the (rotated) TaskRoot frame.
+            delta_local = _qapply(inv_root_quat, delta_world)
+            xf = UsdGeom.Xformable(body_prim)
+            translate_op = next(
+                (
+                    op
+                    for op in xf.GetOrderedXformOps()
+                    if op.GetOpType() == UsdGeom.XformOp.TypeTranslate
+                ),
+                None,
+            )
+            if translate_op is None:
+                translate_op = xf.AddTranslateOp()
+            current = translate_op.Get()
+            current = (0.0, 0.0, 0.0) if current is None else (current[0], current[1], current[2])
+            translate_op.Set(Gf.Vec3d(*(current[i] + delta_local[i] for i in range(3))))
+            print(
+                f"[INFO]: Matched graspable '{name}' to report pose "
+                f"{tuple(round(v, 4) for v in target)} "
+                f"(moved {tuple(round(v, 4) for v in delta_world)} m from its baked USD pose)."
+            )
 
     def _spawn_path_segment(self, parent_path: str, name: str, start, end, color):
         mid = tuple((start[i] + end[i]) * 0.5 for i in range(3))

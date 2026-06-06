@@ -1,0 +1,402 @@
+{
+  "graspable_objects": [
+    {
+      "fixed_offset_from_task_boundary_root_xyz_m": [
+        -0.103648,
+        -0.106917,
+        0.022998
+      ],
+      "fixed_orientation_from_task_boundary_root_rpy_rad": [
+        1.570823,
+        -1.014507,
+        -3.141548
+      ],
+      "name": "charger",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.570813,
+          -0.535878,
+          -3.141562
+        ],
+        "position_xyz_m": [
+          0.20912,
+          -0.130078,
+          0.774998
+        ],
+        "quaternion_xyzw": [
+          -0.187212,
+          -0.681879,
+          0.681874,
+          0.187194
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_distribution": {
+        "x_uniform_max_m": 0.404205,
+        "x_uniform_min_m": 0.018109,
+        "y_uniform_max_m": 0.252628,
+        "y_uniform_min_m": -0.403911,
+        "z_fixed_m": 0.774998
+      }
+    }
+  ],
+  "other_scene_objects": [
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        -0.051089,
+        -0.194316,
+        -0.243426
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        0.168214,
+        0.183217,
+        0.19432
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        0.001787,
+        -1.014582,
+        0.001447
+      ],
+      "has_separate_distribution": false,
+      "name": "plug",
+      "reference_graspable_object": "charger",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.56972,
+          0.478704,
+          -3.141143
+        ],
+        "position_xyz_m": [
+          0.377335,
+          0.053139,
+          0.969318
+        ],
+        "quaternion_xyzw": [
+          0.167572,
+          -0.686616,
+          0.68728,
+          -0.1677
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.533808,
+        "x_uniform_min_m": 0.243612,
+        "y_uniform_max_m": 0.331525,
+        "y_uniform_min_m": -0.362315,
+        "z_fixed_m": 0.969318
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        -0.038914,
+        -0.176974,
+        -0.265061
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        0.168793,
+        0.208036,
+        0.176979
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        -2e-06,
+        0.55629,
+        -1.570807
+      ],
+      "has_separate_distribution": false,
+      "name": "task_wall",
+      "reference_graspable_object": "charger",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.570853,
+          -1.092168,
+          1.570847
+        ],
+        "position_xyz_m": [
+          0.377914,
+          0.077957,
+          0.951976
+        ],
+        "quaternion_xyzw": [
+          0.167612,
+          -0.686964,
+          0.167608,
+          0.686946
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.543944,
+        "x_uniform_min_m": 0.267442,
+        "y_uniform_max_m": 0.355362,
+        "y_uniform_min_m": -0.355363,
+        "z_fixed_m": 0.951976
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        0.102071,
+        0.022996,
+        -0.038324
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        -0.068194,
+        0.085068,
+        -0.022998
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        1.57081,
+        -2.3e-05,
+        -2.127086
+      ],
+      "has_separate_distribution": false,
+      "name": "charger_boundary",
+      "reference_graspable_object": "charger",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          0.0,
+          0.478629
+        ],
+        "position_xyz_m": [
+          0.140926,
+          -0.04501,
+          0.752
+        ],
+        "quaternion_xyzw": [
+          0.0,
+          0.0,
+          0.237037,
+          0.971501
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.31353,
+        "x_uniform_min_m": 0.042,
+        "y_uniform_max_m": 0.343352,
+        "y_uniform_min_m": -0.343355,
+        "z_fixed_m": 0.752
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        -0.07095,
+        -0.196013,
+        -0.252257
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        0.1898,
+        0.180669,
+        0.196018
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        2.8e-05,
+        0.55629,
+        -1.570823
+      ],
+      "has_separate_distribution": false,
+      "name": "hole0",
+      "reference_graspable_object": "charger",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.570797,
+          -1.092168,
+          1.570797
+        ],
+        "position_xyz_m": [
+          0.398921,
+          0.050591,
+          0.971016
+        ],
+        "quaternion_xyzw": [
+          -0.16761,
+          0.686955,
+          -0.16761,
+          -0.686955
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.553833,
+        "x_uniform_min_m": 0.24771,
+        "y_uniform_max_m": 0.335606,
+        "y_uniform_min_m": -0.383662,
+        "z_fixed_m": 0.971016
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        -0.049708,
+        -0.196011,
+        -0.265478
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        0.178287,
+        0.202883,
+        0.196015
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        2.8e-05,
+        0.55629,
+        -1.570823
+      ],
+      "has_separate_distribution": false,
+      "name": "hole1",
+      "reference_graspable_object": "charger",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.570797,
+          -1.092168,
+          1.570797
+        ],
+        "position_xyz_m": [
+          0.387407,
+          0.072804,
+          0.971013
+        ],
+        "quaternion_xyzw": [
+          -0.16761,
+          0.686955,
+          -0.16761,
+          -0.686955
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.550267,
+        "x_uniform_min_m": 0.265402,
+        "y_uniform_max_m": 0.353312,
+        "y_uniform_min_m": -0.36597,
+        "z_fixed_m": 0.971013
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        -4.2e-05,
+        -0.012019,
+        -0.033368
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        0.017073,
+        0.028669,
+        0.012019
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        1.570526,
+        0.0,
+        1.56979
+      ],
+      "has_separate_distribution": false,
+      "name": "detector1",
+      "reference_graspable_object": "charger",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.000233,
+          -0.000165,
+          -2.107681
+        ],
+        "position_xyz_m": [
+          0.226194,
+          -0.10141,
+          0.787017
+        ],
+        "quaternion_xyzw": [
+          -0.000129,
+          -6.1e-05,
+          0.869328,
+          -0.494236
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.411837,
+        "x_uniform_min_m": 0.050598,
+        "y_uniform_max_m": 0.245022,
+        "y_uniform_min_m": -0.37183,
+        "z_fixed_m": 0.787017
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        -4.3e-05,
+        0.012979,
+        -0.033371
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        0.017076,
+        0.028672,
+        -0.012979
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        1.570526,
+        0.0,
+        1.56979
+      ],
+      "has_separate_distribution": false,
+      "name": "detector2",
+      "reference_graspable_object": "charger",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.000233,
+          -0.000165,
+          -2.107681
+        ],
+        "position_xyz_m": [
+          0.226197,
+          -0.101407,
+          0.762019
+        ],
+        "quaternion_xyzw": [
+          -0.000129,
+          -6.1e-05,
+          0.869328,
+          -0.494236
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.411839,
+        "x_uniform_min_m": 0.050602,
+        "y_uniform_max_m": 0.24502,
+        "y_uniform_min_m": -0.371826,
+        "z_fixed_m": 0.762019
+      }
+    }
+  ],
+  "task_base_rotation_rz_bounds_rad": [
+    -0.785,
+    0.785
+  ],
+  "task_boundary_root": "plug_charger_in_power_supply",
+  "task_boundary_root_world_pose_after_reset": {
+    "kind": "exact",
+    "orientation_rpy_rad": [
+      -0.0,
+      0.0,
+      0.478629
+    ],
+    "position_xyz_m": [
+      0.251879,
+      0.01256,
+      0.752
+    ],
+    "quaternion_xyzw": [
+      0.0,
+      0.0,
+      0.237037,
+      0.971501
+    ],
+    "source": "exact_after_one_rlbench_reset"
+  },
+  "type": "Uniform for x/y; fixed z",
+  "units": "meters"
+}

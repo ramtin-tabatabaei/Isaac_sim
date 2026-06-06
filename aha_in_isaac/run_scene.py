@@ -54,6 +54,14 @@ args_cli = parser.parse_args()
 
 CONTEXT = SceneContext.load(args_cli)
 MOTION_CONFIG = load_motion_config(args_cli.motion_config, CONTEXT.task_name)
+if args_cli.planner is None:
+    args_cli.planner = str(MOTION_CONFIG.get("planner", "diffik"))
+if args_cli.planner not in {"diffik", "rmpflow", "curobo", "rrt"}:
+    raise SystemExit(
+        f"Invalid planner '{args_cli.planner}' in {args_cli.motion_config} for task '{CONTEXT.task_name}'. "
+        "Expected one of: diffik, rmpflow, curobo, rrt."
+    )
+print(f"[INFO]: Planner resolved to '{args_cli.planner}' for task '{CONTEXT.task_name}'.")
 APPEARANCE_CONFIG = (
     json.loads(args_cli.appearance_config.read_text(encoding="utf-8"))
     if args_cli.appearance_config.is_file()
@@ -70,7 +78,11 @@ if args_cli.show_colliders:
     import carb  # noqa: E402
 
     carb.settings.get_settings().set_int("/persistent/physics/visualizationDisplayColliders", 2)
-    print("[INFO]: Collider visualization ON (PhysX visualizationDisplayColliders=2).")
+    # Also draw the collision approximations as SOLID render meshes (the "Solid Collision Mesh
+    # Visualization" debug view), which shows the true collision VOLUME instead of the convex
+    # hull's internal triangulation wireframe (which reads as a crumpled mess even when fine).
+    carb.settings.get_settings().set_bool("/persistent/physics/visualizationCollisionMesh", True)
+    print("[INFO]: Collider visualization ON (wireframe=2 + solid collision mesh).")
 
 # 3. Now that Isaac Lab is live, import the modules that depend on it.
 import isaaclab.sim as sim_utils  # noqa: E402
@@ -78,7 +90,7 @@ import isaaclab.sim as sim_utils  # noqa: E402
 from arm_motion import _grasp_index, build_arm_motion  # noqa: E402
 from robot_arm import GRIPPER_CLOSED, GRIPPER_OPEN  # noqa: E402
 from robot_controller import FrankaWaypointController  # noqa: E402
-from scene_builder import SceneBuilder, _render_base  # noqa: E402
+from scene_builder import SceneBuilder, _prim_name, _render_base  # noqa: E402
 
 # Metres to lift the grasped wand straight up so the gripper/fingers clear the
 # buzz-wire apex (~1.05 m world) during the over-the-top carry. 0.20 m puts the
@@ -92,7 +104,6 @@ PREGRASP_SETTLE_STEPS = 150
 # the handle (the drive force grips it) instead of just resting against it. The wand rides
 # the rod (rod bears the weight), so the grip only needs to guide/slide it, not hold it up.
 FRICTION_GRASP_SQUEEZE = 0.004
-
 
 def _grasped_body_name(body_names) -> str | None:
     """The body nearest the lowest waypoint (where the gripper closes); it must NOT
@@ -160,6 +171,11 @@ def _has_collision_filter(a: str, b: str) -> bool:
         if {str(first).lower(), str(second).lower()} == target:
             return True
     return False
+
+
+def _physics_requests_scene_ccd() -> bool:
+    physics = CONTEXT.report.get("physics") or {}
+    return any(bool((shape or {}).get("ccd")) for shape in (physics.get("shapes", {}) or {}).values())
 
 
 def _effective_carry_lift() -> float:
@@ -502,6 +518,40 @@ def _install_screenshot_capture(controller, sim, out_dir, interval_s):
     print(f"[SCREENSHOT]: saving a viewport frame every {interval_s:.1f}s (wall clock) -> {out}/frame_*.png")
 
 
+def _install_driven_close(controller, builder):
+    """Switch data-configured joint drives when their configured waypoint is reached."""
+    joints = getattr(builder, "driven_close_joints", None)
+    if not joints:
+        return
+    from pxr import UsdPhysics
+
+    stage = sim_utils.get_current_stage()
+    fired: set = set()
+    orig_step = controller._step
+
+    def stepped():
+        orig_step()
+        label = (getattr(controller, "_active_label", "") or "").lower()
+        if not label:
+            return
+        for i, j in enumerate(joints):
+            if i in fired or j["at_waypoint"] not in label:
+                continue
+            drive = UsdPhysics.DriveAPI.Get(stage.GetPrimAtPath(j["joint_path"]), j["axis"])
+            if drive:
+                if j.get("stiffness") is not None:
+                    drive.GetStiffnessAttr().Set(float(j["stiffness"]))
+                if j.get("damping") is not None:
+                    drive.GetDampingAttr().Set(float(j["damping"]))
+                drive.GetTargetVelocityAttr().Set(float(j["target_velocity"]))
+                fired.add(i)
+                print(f"[INFO]: Closing joint '{j['joint_path'].rsplit('/', 1)[-1]}' "
+                      f"(target velocity {j['target_velocity']}) as the arm reaches '{label}'.")
+
+    controller._step = stepped
+    print(f"[INFO]: Armed {len(joints)} driven-close joint(s).")
+
+
 def _install_collision_watch(builder, robot, controller, csv_path):
     """Wrap the controller's physics step to record, each step, the closest distance
     between (a) the grasped object's visible geometry (the ring) and the obstacles, and
@@ -715,7 +765,9 @@ def _install_collision_watch(builder, robot, controller, csv_path):
              "" if d_ring != d_ring else round(d_ring, 4), wand_z,
              "" if d_sphere != d_sphere else round(d_sphere, 4),
              "" if d_sphere_link < 0 else body_names[d_sphere_link],
-             row_rod_in_hole, "" if row_speed == "" else round(row_speed, 4))
+             row_rod_in_hole, "" if row_speed == "" else round(row_speed, 4),
+             round(float(hand_q[0]), 5), round(float(hand_q[1]), 5),
+             round(float(hand_q[2]), 5), round(float(hand_q[3]), 5))
         )
 
     def watched():
@@ -758,7 +810,8 @@ def _report_collision_watch(state, csv_path):
         writer.writerow([
             "step", "active_target", "grip", "hand_x", "hand_y", "hand_z",
             "hand_wrist_min_dist_m", "robot_mesh_min_dist_m", "ring_min_dist_m", "wand_z",
-            "arm_sphere_clear_m", "closest_link", "rod_in_hole_pts", "wand_speed_mps"
+            "arm_sphere_clear_m", "closest_link", "rod_in_hole_pts", "wand_speed_mps",
+            "hand_qw", "hand_qx", "hand_qy", "hand_qz"
         ])
         writer.writerows(state["rows"])
     arm_d, arm_s = state["min_arm"]
@@ -1135,6 +1188,289 @@ def _run_pull_test(builder, speed, sim, csv_path):
     print(summary)
 
 
+def _add_articulation_joints(builder):
+    """Create a USD joint for every scene object RLBench attaches to its parent through a
+    ``*_joint`` when that joint has a physics entry in the scene report.
+
+    The report gives the joint's *frame* (geometry). Joint type, limits, drive,
+    collision, and friction are taken from ``CONTEXT.report["physics"]["joints"]``;
+    no task-specific values are supplied here.
+
+    The joint frame is recovered from the report: ``joint_world = child_world * inverse(child-in-joint)``
+    (CoppeliaSim joints act about/along their own local +Z, so the joint frame's Z is the axis).
+    The object USDs bake their meshes in RLBench world coordinates, so each spawned body's local
+    frame equals that world frame; we still map the joint through the bodies' actual runtime
+    transforms so the result is correct regardless of the task-root placement.
+
+    Must run after ``design_scene()`` spawns the prims but before ``sim.reset()`` so PhysX parses
+    the joint with the rest of the scene. Returns the number of joints created.
+    """
+    from pxr import Gf, Sdf, Usd, UsdGeom, UsdPhysics
+    from pxr import PhysxSchema
+
+    from scene_context import _qapply, _qinv, _qmul, pose_from_location, pose_from_world_location
+
+    stage = sim_utils.get_current_stage()
+    objects = {obj["name"]: obj for obj in CONTEXT.report.get("objects", [])}
+    physics = CONTEXT.report.get("physics") or {}
+    physics_joints = physics.get("joints", {}) or {}
+    builder.driven_close_joints = []  # joints driven shut when the arm reaches their waypoint
+    builder.jointed_pairs = {}  # child body name -> its joint's base body name (for hinge-collider trim)
+
+    # Apply per-shape runtime flags only when they are present in the physics JSON.
+    phys_shapes = physics.get("shapes", {}) or {}
+    for bname, bpath in builder.body_prim_paths.items():
+        shape_spec = phys_shapes.get(bname) or {}
+        body = stage.GetPrimAtPath(bpath)
+        if not body or not body.IsValid():
+            continue
+        physx_body = None
+        if "disable_gravity" in shape_spec:
+            physx_body = physx_body or PhysxSchema.PhysxRigidBodyAPI.Apply(body)
+            physx_body.CreateDisableGravityAttr(bool(shape_spec["disable_gravity"]))
+            print(f"[INFO]: Applied '{bname}' disable_gravity={bool(shape_spec['disable_gravity'])} from physics JSON.")
+        if "ccd" in shape_spec:
+            physx_body = physx_body or PhysxSchema.PhysxRigidBodyAPI.Apply(body)
+            physx_body.CreateEnableCCDAttr(bool(shape_spec["ccd"]))
+            print(f"[INFO]: Applied '{bname}' ccd={bool(shape_spec['ccd'])} from physics JSON.")
+
+    def _mat(pos, quat_wxyz) -> Gf.Matrix4d:
+        matrix = Gf.Matrix4d(1.0)
+        matrix.SetRotateOnly(Gf.Quatd(*(float(v) for v in quat_wxyz)))
+        matrix.SetTranslateOnly(Gf.Vec3d(*(float(v) for v in pos)))
+        return matrix
+
+    created = 0
+    for name, entry in objects.items():
+        parent = entry.get("parent") or ""
+        if not parent.endswith("_joint"):
+            continue
+        phys_joint = physics_joints.get(parent) or {}
+        if not phys_joint:
+            print(f"[INFO]: '{name}' has an RLBench '{parent}' but no physics-joint entry; leaving it unjointed.")
+            continue
+        spec = dict(phys_joint)
+        if not spec.get("type"):
+            print(f"[WARN]: Joint '{name}': physics entry for '{parent}' has no type; skipping.")
+            continue
+        joint_type = str(spec["type"]).lower()
+        if joint_type not in ("revolute", "prismatic"):
+            print(f"[WARN]: Joint '{name}': unknown type '{joint_type}'; skipping.")
+            continue
+        hierarchy = (entry.get("hierarchy_path") or "").split("/")
+        if parent not in hierarchy or hierarchy.index(parent) < 1:
+            print(f"[WARN]: Joint for '{name}': cannot locate its base body in '{entry.get('hierarchy_path')}'.")
+            continue
+        base_name = hierarchy[hierarchy.index(parent) - 1]
+        child_path = builder.body_prim_paths.get(name)
+        base_path = builder.body_prim_paths.get(base_name)
+        if not child_path or not base_path:
+            print(f"[WARN]: Joint for '{name}': missing body prim for '{name}' or '{base_name}'.")
+            continue
+        builder.jointed_pairs[name] = base_name
+
+        # Recover the joint's WORLD frame from the report: the child sits at `parent_local_location`
+        # IN the joint frame, so joint_world = child_world * inverse(child-in-joint). CoppeliaSim
+        # joints act about their own local +Z, which becomes the USD joint axis.
+        child_w_pos, child_w_q = pose_from_world_location(entry)
+        child_j_pos, child_j_q = pose_from_location(entry.get("parent_local_location"))
+        joint_w_q = _qmul(child_w_q, _qinv(child_j_q))
+        rotated = _qapply(joint_w_q, child_j_pos)
+        joint_w_pos = tuple(child_w_pos[i] - rotated[i] for i in range(3))
+
+        # Map that WORLD joint frame into each body's LOCAL frame with the bodies' ACTUAL runtime
+        # transforms (world -> local is m.GetInverse()). In task-root mode a body's local frame is
+        # the canonical, un-sampled frame - NOT the report's sampled world frame - and box_base and
+        # box_lid share the same prim transform, so the joint must be converted into each local
+        # frame. The old code used the world frame directly as the child-local frame and multiplied
+        # j_in_child by m_child (instead of inverting), which double-applied the task-root sample
+        # transform and mis-located/mis-aimed the hinge (the lid then snapped to a wrong pose).
+        m_child = UsdGeom.Xformable(stage.GetPrimAtPath(child_path)).ComputeLocalToWorldTransform(Usd.TimeCode.Default())
+        m_base = UsdGeom.Xformable(stage.GetPrimAtPath(base_path)).ComputeLocalToWorldTransform(Usd.TimeCode.Default())
+        j_world = _mat(joint_w_pos, joint_w_q)
+        j_in_child = j_world * m_child.GetInverse()
+        j_in_base = j_world * m_base.GetInverse()
+        rot1, rot0 = j_in_child.ExtractRotationQuat(), j_in_base.ExtractRotationQuat()
+
+        joint_path = f"{base_path}/{_prim_name(name)}Joint"
+        joint_cls = UsdPhysics.RevoluteJoint if joint_type == "revolute" else UsdPhysics.PrismaticJoint
+        joint = joint_cls.Define(stage, Sdf.Path(joint_path))
+        joint.CreateBody0Rel().SetTargets([Sdf.Path(base_path)])
+        joint.CreateBody1Rel().SetTargets([Sdf.Path(child_path)])
+        joint.CreateAxisAttr(str(spec.get("axis", "Z")))
+        joint.CreateLocalPos0Attr(Gf.Vec3f(j_in_base.ExtractTranslation()))
+        joint.CreateLocalRot0Attr(Gf.Quatf(rot0.GetReal(), *(float(v) for v in rot0.GetImaginary())))
+        joint.CreateLocalPos1Attr(Gf.Vec3f(j_in_child.ExtractTranslation()))
+        joint.CreateLocalRot1Attr(Gf.Quatf(rot1.GetReal(), *(float(v) for v in rot1.GetImaginary())))
+        # Coppelia/PyRep reports joint limits in the joint's absolute coordinate. This USD joint
+        # is authored at the current child/base pose, so its zero is the imported pose. When the
+        # physics JSON provides the imported joint position, shift limits into USD's relative frame.
+        joint_position = 0.0
+        for key in ("position", "initial_position", "joint_position"):
+            if spec.get(key) is not None:
+                joint_position = float(spec[key])
+                break
+        # Limits are degrees for revolute, metres for prismatic (USD/PhysX units per joint type).
+        lower_limit = upper_limit = None
+        if "lower" in spec:
+            lower_limit = float(spec["lower"]) - joint_position
+            joint.CreateLowerLimitAttr(lower_limit)
+        if "upper" in spec:
+            upper_limit = float(spec["upper"]) - joint_position
+            joint.CreateUpperLimitAttr(upper_limit)
+        if "collision" in spec:
+            joint.CreateCollisionEnabledAttr(bool(spec["collision"]))
+
+        drive_keys = {"drive_type", "stiffness", "damping", "target", "target_position", "target_velocity", "max_force"}
+        if any(key in spec for key in drive_keys):
+            drive = UsdPhysics.DriveAPI.Apply(joint.GetPrim(), "angular" if joint_type == "revolute" else "linear")
+            if "drive_type" in spec:
+                drive.CreateTypeAttr(str(spec["drive_type"]))
+            if "stiffness" in spec:
+                drive.CreateStiffnessAttr(float(spec["stiffness"]))
+            if "damping" in spec:
+                drive.CreateDampingAttr(float(spec["damping"]))
+            if "target" in spec:
+                drive.CreateTargetPositionAttr(float(spec["target"]))
+            if "target_position" in spec:
+                drive.CreateTargetPositionAttr(float(spec["target_position"]))
+            if "target_velocity" in spec:
+                drive.CreateTargetVelocityAttr(float(spec["target_velocity"]))
+            if "max_force" in spec:
+                drive.CreateMaxForceAttr(float(spec["max_force"]))
+
+        if spec.get("friction") is not None:
+            physx_joint = PhysxSchema.PhysxJointAPI.Apply(joint.GetPrim())
+            physx_joint.CreateJointFrictionAttr(float(spec["friction"]))
+
+        if spec.get("close_at_waypoint") and spec.get("target_velocity") is not None:
+            builder.driven_close_joints.append({
+                "joint_path": joint_path,
+                "axis": "angular" if joint_type == "revolute" else "linear",
+                "target_velocity": float(spec["target_velocity"]),
+                "stiffness": float(spec["stiffness"]) if "stiffness" in spec else None,
+                "damping": float(spec["damping"]) if "damping" in spec else None,
+                "at_waypoint": str(spec["close_at_waypoint"]).lower(),
+            })
+
+        axis_world = tuple(round(float(v), 3) for v in _qapply(joint_w_q, (0.0, 0.0, 1.0)))
+        unit = "deg" if joint_type == "revolute" else "m"
+        print(f"[INFO]: Jointed '{name}' -> '{base_name}' ({joint_type}) at world "
+              f"{tuple(round(v, 3) for v in joint_w_pos)} axis≈{axis_world}, "
+              f"limits [{lower_limit if lower_limit is not None else '-'},{upper_limit if upper_limit is not None else '-'}] {unit}, "
+              f"friction={spec.get('friction', '-')}, damping={spec.get('damping', '-')}.")
+        created += 1
+    if created:
+        print(f"[INFO]: Created {created} articulation joint(s) before sim reset.")
+    return created
+
+
+def _trim_lid_hinge_collider(builder):
+    """Trim a hinged lid's collider at the SHARED HINGE EDGE so base<->lid collision can be
+    enabled without PhysX flinging the lid open.
+
+    A lid hinged to a box shares its hinge edge with the box, so the lid's collider overlaps
+    the box collider there. The instant joint collision is on, PhysX depenetrates that overlap;
+    because the lid can only move about the hinge, the impulse swings it open (its CoM rises -
+    looks like motion "opposite to gravity"). Damping/limits/collider-type cannot stop it (it is
+    a positional contact correction in the closing direction). The fix is geometric: pull the
+    lid collider's hinge-edge vertices back, clear of the box, so there is NO spawn overlap -
+    while the rest of the slab still seats on the box top when the lid closes (real contact).
+
+    The VISUAL lid mesh is left untouched; a hidden, collision-only copy carries the trimmed
+    collider and the visual mesh's own collider is disabled. Data-driven: a lid shape spec with
+    ``"hinge_collision_trim_m"`` opts in (the box is the lid's joint base body, or ``hinge_box``).
+    """
+    from pxr import Gf, Usd, UsdGeom, UsdPhysics, PhysxSchema, Vt
+
+    physics = CONTEXT.report.get("physics") or {}
+    shapes = physics.get("shapes", {}) or {}
+    pairs = getattr(builder, "jointed_pairs", {}) or {}
+    stage = sim_utils.get_current_stage()
+    trimmed_bodies = 0
+    for name, spec in shapes.items():
+        trim = float((spec or {}).get("hinge_collision_trim_m") or 0.0)
+        if trim <= 0.0:
+            continue
+        lid_path = builder.body_prim_paths.get(name)
+        box_name = (spec or {}).get("hinge_box") or pairs.get(name)
+        box_path = builder.body_prim_paths.get(box_name) if box_name else None
+        if not lid_path or not box_path:
+            print(f"[WARN]: hinge trim for '{name}': missing lid/box body (box='{box_name}'); skipping.")
+            continue
+        box_pts = _mesh_world_points(box_path, max_pts=4000)
+        if not box_pts:
+            continue
+        box_top = max(p[2] for p in box_pts)
+        bx_lo = (min(p[0] for p in box_pts), min(p[1] for p in box_pts))
+        bx_hi = (max(p[0] for p in box_pts), max(p[1] for p in box_pts))
+        box_cx = sum(p[0] for p in box_pts) / len(box_pts)
+        box_cy = sum(p[1] for p in box_pts) / len(box_pts)
+
+        n_meshes = 0
+        for prim in Usd.PrimRange(stage.GetPrimAtPath(lid_path)):
+            if not prim.IsA(UsdGeom.Mesh):
+                continue
+            mesh = UsdGeom.Mesh(prim)
+            pts = mesh.GetPointsAttr().Get()
+            if not pts:
+                continue
+            xf = UsdGeom.Xformable(prim).ComputeLocalToWorldTransform(Usd.TimeCode.Default())
+            world = [xf.Transform(Gf.Vec3d(float(p[0]), float(p[1]), float(p[2]))) for p in pts]
+            # pull-away direction = horizontal, from box centre toward lid centre
+            lid_cx = sum(w[0] for w in world) / len(world)
+            lid_cy = sum(w[1] for w in world) / len(world)
+            dx, dy = lid_cx - box_cx, lid_cy - box_cy
+            nrm = (dx * dx + dy * dy) ** 0.5 or 1.0
+            ux, uy = dx / nrm, dy / nrm
+            new_pts = list(pts)
+            n_tr = 0
+            for k, w in enumerate(world):
+                in_xy = (bx_lo[0] - 0.01 <= w[0] <= bx_hi[0] + 0.01) and (bx_lo[1] - 0.01 <= w[1] <= bx_hi[1] + 0.01)
+                if w[2] < box_top - 0.0005 and in_xy:  # a hinge-edge vertex dipping into the box wall
+                    new_pts[k] = Gf.Vec3f(float(pts[k][0] + ux * trim), float(pts[k][1] + uy * trim), float(pts[k][2]))
+                    n_tr += 1
+            if n_tr == 0:
+                continue
+            # disable the collider on the VISUAL mesh, keep it visible
+            if prim.HasAPI(UsdPhysics.CollisionAPI):
+                UsdPhysics.CollisionAPI(prim).GetCollisionEnabledAttr().Set(False)
+            # hidden, collision-only copy with the trimmed hinge edge (same local frame as the visual mesh)
+            coll = UsdGeom.Mesh.Define(stage, prim.GetPath().AppendChild("HingeTrimCollider"))
+            coll.CreatePointsAttr(Vt.Vec3fArray(new_pts))
+            coll.CreateFaceVertexCountsAttr(mesh.GetFaceVertexCountsAttr().Get())
+            coll.CreateFaceVertexIndicesAttr(mesh.GetFaceVertexIndicesAttr().Get())
+            UsdGeom.Imageable(coll).CreateVisibilityAttr(UsdGeom.Tokens.invisible)
+            # Mirror the lid's collider spec from the physics JSON (approximation + contact
+            # tuning) onto the trimmed collider, so every physics choice stays in the task JSON.
+            approx_name = str((spec or {}).get("collider", "convexHull"))
+            approx_token = {
+                "convexHull": UsdPhysics.Tokens.convexHull,
+                "convexDecomposition": UsdPhysics.Tokens.convexDecomposition,
+                "boundingCube": UsdPhysics.Tokens.boundingCube,
+                "boundingSphere": UsdPhysics.Tokens.boundingSphere,
+            }.get(approx_name, UsdPhysics.Tokens.convexHull)
+            UsdPhysics.CollisionAPI.Apply(coll.GetPrim())
+            UsdPhysics.MeshCollisionAPI.Apply(coll.GetPrim()).CreateApproximationAttr(approx_token)
+            if approx_name == "convexDecomposition":
+                PhysxSchema.PhysxConvexDecompositionCollisionAPI.Apply(coll.GetPrim())
+            else:
+                PhysxSchema.PhysxConvexHullCollisionAPI.Apply(coll.GetPrim())
+            if (spec or {}).get("contact_offset") is not None or (spec or {}).get("rest_offset") is not None:
+                pc = PhysxSchema.PhysxCollisionAPI.Apply(coll.GetPrim())
+                if (spec or {}).get("contact_offset") is not None:
+                    pc.CreateContactOffsetAttr(float(spec["contact_offset"]))
+                if (spec or {}).get("rest_offset") is not None:
+                    pc.CreateRestOffsetAttr(float(spec["rest_offset"]))
+            n_meshes += 1
+            print(f"[INFO]: Hinge-trim '{name}': pulled {n_tr} hinge vert(s) {trim * 1000:.0f}mm away from '{box_name}' "
+                  f"(dir≈({ux:.2f},{uy:.2f})); visual collider disabled, hidden trimmed collider added.")
+        if n_meshes:
+            trimmed_bodies += 1
+    if trimmed_bodies:
+        print(f"[INFO]: Applied hinge-collider trim to {trimmed_bodies} body(ies) before sim reset.")
+
+
 def main():
     # A finer step + PhysX tuning are needed for a stable friction grasp; fall
     # back to the lighter inspect-only step when no robot/grasping is involved.
@@ -1150,6 +1486,7 @@ def main():
             physx=sim_utils.PhysxCfg(
                 enable_external_forces_every_iteration=True,
                 min_velocity_iteration_count=2,
+                enable_ccd=_physics_requests_scene_ccd(),
             ),
         )
     sim = sim_utils.SimulationContext(sim_cfg)
@@ -1157,6 +1494,13 @@ def main():
 
     builder = SceneBuilder(args_cli, CONTEXT, APPEARANCE_CONFIG)
     robot = builder.design_scene()
+    # Hinge any RLBench *_joint child with a physics-joint entry. Created here,
+    # after the prims exist but before sim.reset(), so PhysX parses the joint with the scene.
+    _add_articulation_joints(builder)
+    # Trim a hinged lid's collider at the shared hinge edge so base<->lid collision can be ON
+    # without PhysX depenetrating the spawn overlap and flinging the lid open. Generic +
+    # data-driven: no-op unless a shape spec in the task's physics JSON sets hinge_collision_trim_m.
+    _trim_lid_hinge_collider(builder)
     # beat_the_buzz: the ring is topologically CAPTIVE on the rod, so the recorded sideways carry
     # (waypoint3) is impossible - it tunnels/ejects the ring (the wand flies off). Default to
     # sliding the ring ALONG the rod instead, which keeps it threaded. Pass --slide-along-rod 0
@@ -1244,6 +1588,7 @@ def main():
     )
     if getattr(args_cli, "screenshot_dir", None) is not None:
         _install_screenshot_capture(controller, sim, args_cli.screenshot_dir, args_cli.screenshot_interval)
+    _install_driven_close(controller, builder)
     controller.reset_to_home()
 
     # The arm ALWAYS follows the RECORDED waypoints (the dots) - no wand tracking / no

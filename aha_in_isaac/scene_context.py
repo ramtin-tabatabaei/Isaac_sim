@@ -1,9 +1,14 @@
 """
 scene_context.py
 
-Parse an exported AHA ``*.scene_context.md`` report and derive everything the
-rest of the pipeline needs to place the scene: object poses, the dining-table
-top height, the task-root transform, and the robot base pose.
+Load an AHA scene report and derive everything the rest of the pipeline needs to
+place the scene: object poses, the dining-table top height, the task-root
+transform, and the robot base pose.
+
+The report is read from the structured per-category folders under ``task_data/``
+(``objects/``, ``waypoints/``, ``robot_base/``, ``graspables/``, ``meta/``), which
+``build_task_data.py`` materialises from each ``*.scene_context.md``. The ``.md``
+is used as a fallback when a task has no ``task_data/`` entry.
 
 This module is pure Python (no Isaac Lab / USD imports), so it can run *before*
 the simulator is launched. The Isaac-dependent spawning lives in
@@ -19,13 +24,61 @@ from pathlib import Path
 
 USD_EXTENSIONS = (".usd", ".usdc", ".usda")
 
+# Structured, per-category copy of each report (objects/waypoints/robot_base/...),
+# produced by ``build_task_data.py``. Isaac reads from here; the .md stays a fallback.
+TASK_DATA_DIR = Path(__file__).resolve().parent / "task_data"
+
 
 # ----------------------------------------------------------------------
 # Report loading + small quaternion / pose helpers (shared with the builder).
 # ----------------------------------------------------------------------
+def _report_from_task_data(task_name: str) -> dict | None:
+    """Reassemble a report dict from the split ``task_data/<category>/<task>.json``
+    files. Returns None if the structured data for this task is not present, so the
+    caller can fall back to parsing the .md."""
+    objects_path = TASK_DATA_DIR / "objects" / f"{task_name}.json"
+    waypoints_path = TASK_DATA_DIR / "waypoints" / f"{task_name}.json"
+    if not objects_path.is_file() or not waypoints_path.is_file():
+        return None
+
+    def _read(category: str):
+        path = TASK_DATA_DIR / category / f"{task_name}.json"
+        return json.loads(path.read_text(encoding="utf-8")) if path.is_file() else None
+
+    report: dict = {
+        "objects": json.loads(objects_path.read_text(encoding="utf-8")),
+        "waypoints": json.loads(waypoints_path.read_text(encoding="utf-8")),
+        "robot_base": _read("robot_base"),
+    }
+    graspables = _read("graspables")
+    if graspables is not None:
+        report["placement_distribution"] = graspables
+    physics = _read("physics")  # real CoppeliaSim dynamics (mass/friction/joint limits)
+    if physics is not None:
+        report["physics"] = physics
+    meta = _read("meta") or {}
+    for key, value in meta.items():
+        if value is not None:
+            report[key] = value
+    return report
+
+
+def _task_name_from_path(path: Path) -> str:
+    name = Path(path).name
+    suffix = ".scene_context.md"
+    return name[: -len(suffix)] if name.endswith(suffix) else Path(path).stem
+
+
 def load_report(path: Path) -> dict:
-    """Pull the fenced ```json``` scene block out of a scene-context .md file."""
-    text = path.read_text(encoding="utf-8")
+    """Load a scene report.
+
+    Prefers the structured ``task_data/`` folders (the form Isaac reads from, built
+    by ``build_task_data.py``); falls back to the fenced ```json``` block in the
+    ``<task>.scene_context.md`` when those folders have no entry for this task."""
+    structured = _report_from_task_data(_task_name_from_path(path))
+    if structured is not None:
+        return structured
+    text = Path(path).read_text(encoding="utf-8")
     match = re.search(r"```json\s*(\{.*?\})\s*```", text, flags=re.DOTALL)
     if match is None:
         raise RuntimeError(f"No fenced JSON scene data found in {path}")
@@ -188,6 +241,18 @@ class SceneContext:
     @property
     def waypoints(self) -> list[dict]:
         return self.report.get("waypoints") or []
+
+    @property
+    def graspable_names(self) -> set[str]:
+        """Names of the objects RLBench randomizes and re-places each reset (e.g. the
+        weights). Their exact sampled poses are exported under
+        ``placement_distribution.graspable_objects``."""
+        dist = self.report.get("placement_distribution") or {}
+        return {
+            entry.get("name")
+            for entry in (dist.get("graspable_objects") or [])
+            if entry.get("name")
+        }
 
     @classmethod
     def load(cls, args) -> "SceneContext":

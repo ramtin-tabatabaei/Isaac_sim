@@ -9,11 +9,21 @@
     "  waypoint_steps : { waypoint-name: sim steps to spend reaching it }",
     "  gripper_closed : per-finger close target (m). Lower = closes more (smaller",
     "                   objects); raise if it crushes/shoves. Fully open is fixed",
-    "                   at 0.04 (the Franka finger limit), so only this is tunable."
+    "                   at 0.04 (the Franka finger limit), so only this is tunable.",
+    "  planner : default planner when --planner is omitted (diffik/rmpflow/curobo/rrt).",
+    "  release_at_waypoint : name of the waypoint where the gripper OPENS (releases the",
+    "                   object). Default = the last waypoint. Set it earlier to place the",
+    "                   object and then retreat with the gripper already open (e.g. open on",
+    "                   the scale tray at 'waypoint4', then move up to 'waypoint5').",
+    "  Joint physics is not configured here. It comes from task_data/physics/<task>.json."
   ],
   "_default": {
     "waypoint_steps": {},
-    "gripper_closed": 0.02
+    "gripper_closed": 0.02,
+    "planner": "diffik"
+  },
+  "close_box": {
+    "follow_path_orientation": true
   },
   "wipe_desk": {
     "waypoint_steps": {
@@ -34,6 +44,12 @@
     "gripper_closed": 0.01
   },
   "beat_the_buzz": {
-    "waypoint_steps": {}
+    "waypoint_steps": {},
+    "planner": "rrt"
+  },
+  "weighing_scales": {
+    "waypoint_steps": {},
+    "gripper_closed": 0.0,
+    "release_at_waypoint": "waypoint4"
   }
 }

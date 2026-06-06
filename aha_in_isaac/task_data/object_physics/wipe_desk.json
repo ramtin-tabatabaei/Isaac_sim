@@ -1,0 +1,14 @@
+{
+  "sponge": {
+    "type": "rigid",
+    "density": 50.0,
+    "collider": "sdf",
+    "sdf_resolution": 256
+  },
+  "sponge_visual": {
+    "type": "visual"
+  },
+  "dirt_boundary": {
+    "type": "kinematic"
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "graspable_objects": [
+    {
+      "fixed_offset_from_task_boundary_root_xyz_m": [
+        0.018642,
+        -0.020184,
+        0.035931
+      ],
+      "fixed_orientation_from_task_boundary_root_rpy_rad": [
+        -1.57166,
+        -1.453048,
+        -1.570923
+      ],
+      "name": "shoe1",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.571387,
+          -1.398247,
+          1.572109
+        ],
+        "position_xyz_m": [
+          0.202567,
+          -0.016632,
+          0.78793
+        ],
+        "quaternion_xyzw": [
+          0.060675,
+          -0.704535,
+          0.061184,
+          0.704419
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_distribution": {
+        "x_uniform_max_m": 0.402944,
+        "x_uniform_min_m": 0.097504,
+        "y_uniform_max_m": 0.091489,
+        "y_uniform_min_m": -0.217715,
+        "z_fixed_m": 0.78793
+      }
+    },
+    {
+      "fixed_offset_from_task_boundary_root_xyz_m": [
+        0.017051,
+        -0.114251,
+        0.036161
+      ],
+      "fixed_orientation_from_task_boundary_root_rpy_rad": [
+        1.567222,
+        1.346707,
+        1.573387
+      ],
+      "name": "shoe2",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.558794,
+          1.504585,
+          -1.58367
+        ],
+        "position_xyz_m": [
+          0.227968,
+          -0.107218,
+          0.788161
+        ],
+        "quaternion_xyzw": [
+          0.706428,
+          0.02371,
+          0.70701,
+          -0.023097
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_distribution": {
+        "x_uniform_max_m": 0.437472,
+        "x_uniform_min_m": 0.060036,
+        "y_uniform_max_m": 0.003973,
+        "y_uniform_min_m": -0.307449,
+        "z_fixed_m": 0.788161
+      }
+    }
+  ],
+  "other_scene_objects": [
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        0.036636,
+        -0.040173,
+        -0.009188
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        -0.011857,
+        0.039508,
+        0.036593
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        -2.917504,
+        0.000576,
+        -0.001048
+      ],
+      "has_separate_distribution": false,
+      "name": "box_base",
+      "reference_graspable_object": "shoe2",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.570797,
+          -1.2805,
+          1.570797
+        ],
+        "position_xyz_m": [
+          0.216111,
+          -0.06771,
+          0.824754
+        ],
+        "quaternion_xyzw": [
+          0.102275,
+          -0.699671,
+          0.102275,
+          0.699671
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.421639,
+        "x_uniform_min_m": 0.075773,
+        "y_uniform_max_m": 0.042062,
+        "y_uniform_min_m": -0.266889,
+        "z_fixed_m": 0.824754
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        0.118063,
+        -0.044211,
+        -0.003486
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        0.010998,
+        -0.042873,
+        0.118096
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        1.690785,
+        1.561583,
+        -0.002225
+      ],
+      "has_separate_distribution": false,
+      "name": "box_lid",
+      "reference_graspable_object": "shoe1",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.008135,
+          0.002436,
+          1.861089
+        ],
+        "position_xyz_m": [
+          0.213565,
+          -0.059505,
+          0.906026
+        ],
+        "quaternion_xyzw": [
+          0.003407,
+          -0.002534,
+          0.801941,
+          0.597388
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.418268,
+        "x_uniform_min_m": 0.078977,
+        "y_uniform_max_m": 0.049964,
+        "y_uniform_min_m": -0.258527,
+        "z_fixed_m": 0.906026
+      }
+    }
+  ],
+  "task_base_rotation_rz_bounds_rad": [
+    -0.392699,
+    0.392699
+  ],
+  "task_boundary_root": "take_shoes_out_of_box",
+  "task_boundary_root_world_pose_after_reset": {
+    "kind": "exact",
+    "orientation_rpy_rad": [
+      -0.0,
+      0.0,
+      0.290297
+    ],
+    "position_xyz_m": [
+      0.178928,
+      -0.002629,
+      0.752
+    ],
+    "quaternion_xyzw": [
+      0.0,
+      0.0,
+      0.144639,
+      0.989484
+    ],
+    "source": "exact_after_one_rlbench_reset"
+  },
+  "type": "Uniform for x/y; fixed z",
+  "units": "meters"
+}

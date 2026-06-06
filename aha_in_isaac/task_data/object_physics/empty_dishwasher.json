@@ -1,0 +1,37 @@
+{
+  "boundary_root": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "dishwasher": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "dishwasher_base_visual": {
+    "type": "visual"
+  },
+  "dishwasher_door": {
+    "type": "rigid",
+    "density": 400.0,
+    "uv": "auto"
+  },
+  "dishwasher_tray": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "dishwasher_door_visual": {
+    "type": "visual"
+  },
+  "dishwasher_tray_visual": {
+    "type": "visual"
+  },
+  "dishwasher_plate": {
+    "type": "rigid",
+    "density": 200.0,
+    "uv": "auto"
+  },
+  "dishwasher_plate_visual": {
+    "type": "visual"
+  }
+}

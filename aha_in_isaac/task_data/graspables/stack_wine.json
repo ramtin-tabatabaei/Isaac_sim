@@ -1,0 +1,167 @@
+{
+  "graspable_objects": [
+    {
+      "fixed_offset_from_task_boundary_root_xyz_m": [
+        0.098965,
+        -0.284237,
+        0.12123
+      ],
+      "fixed_orientation_from_task_boundary_root_rpy_rad": [
+        -3.14158,
+        7.1e-05,
+        -6.6e-05
+      ],
+      "name": "wine_bottle",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -3.141591,
+          7.2e-05,
+          0.158855
+        ],
+        "position_xyz_m": [
+          0.174336,
+          -0.317322,
+          0.87323
+        ],
+        "quaternion_xyzw": [
+          -0.996847,
+          0.079344,
+          -3.6e-05,
+          4e-06
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_distribution": {
+        "x_uniform_max_m": 0.622462,
+        "x_uniform_min_m": -0.089851,
+        "y_uniform_max_m": -0.07779,
+        "y_uniform_min_m": -0.43693,
+        "z_fixed_m": 0.87323
+      }
+    }
+  ],
+  "other_scene_objects": [
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        -0.048746,
+        -0.559239,
+        0.087117
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        0.040339,
+        0.559909,
+        -0.087113
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        0.0,
+        -1.570796,
+        -3.14158
+      ],
+      "has_separate_distribution": false,
+      "name": "rack_bottom",
+      "reference_graspable_object": "wine_bottle",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.570959,
+          -1.411875,
+          -1.570958
+        ],
+        "position_xyz_m": [
+          0.214675,
+          0.242587,
+          0.786116
+        ],
+        "quaternion_xyzw": [
+          -0.056129,
+          -0.704885,
+          -0.056127,
+          0.704867
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.58144,
+        "x_uniform_min_m": -0.11781,
+        "y_uniform_max_m": 0.332759,
+        "y_uniform_min_m": 0.02301,
+        "z_fixed_m": 0.786116
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        -0.048741,
+        -0.55924,
+        0.016117
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        0.040339,
+        0.559909,
+        -0.016113
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        0.0,
+        -1.570796,
+        -3.14158
+      ],
+      "has_separate_distribution": false,
+      "name": "rack_top",
+      "reference_graspable_object": "wine_bottle",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.570959,
+          -1.411875,
+          -1.570958
+        ],
+        "position_xyz_m": [
+          0.214675,
+          0.242587,
+          0.857116
+        ],
+        "quaternion_xyzw": [
+          -0.056129,
+          -0.704885,
+          -0.056127,
+          0.704867
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.58144,
+        "x_uniform_min_m": -0.11781,
+        "y_uniform_max_m": 0.332759,
+        "y_uniform_min_m": 0.02301,
+        "z_fixed_m": 0.857116
+      }
+    }
+  ],
+  "task_base_rotation_rz_bounds_rad": [
+    -0.785398,
+    0.785398
+  ],
+  "task_boundary_root": "stack_wine",
+  "task_boundary_root_world_pose_after_reset": {
+    "kind": "exact",
+    "orientation_rpy_rad": [
+      0.0,
+      0.0,
+      -0.158922
+    ],
+    "position_xyz_m": [
+      0.121599,
+      -0.021005,
+      0.752
+    ],
+    "quaternion_xyzw": [
+      0.0,
+      0.0,
+      -0.079377,
+      0.996845
+    ],
+    "source": "exact_after_one_rlbench_reset"
+  },
+  "type": "Uniform for x/y; fixed z",
+  "units": "meters"
+}

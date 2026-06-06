@@ -1,0 +1,61 @@
+{
+  "shapes": {
+    "lamp_base": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.6030361652374268,
+      "friction": 0.5
+    },
+    "bulb_holder1": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.2543351352214813,
+      "friction": 0.5
+    },
+    "bulb_holder0": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.2543351352214813,
+      "friction": 0.5
+    },
+    "spawn_boundary": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.09923725575208664,
+      "friction": 0.5
+    },
+    "lamp_screw": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.08236204087734222,
+      "friction": 0.5
+    },
+    "bulb_phys": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 1.0,
+      "friction": 0.5
+    },
+    "light_bulb": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 1.0,
+      "friction": 0.7099999785423279
+    },
+    "bulb": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.017646359279751778,
+      "friction": 0.7099999785423279
+    }
+  },
+  "joints": {}
+}

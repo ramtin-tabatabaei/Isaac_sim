@@ -1,0 +1,40 @@
+{
+  "shapes": {
+    "basket_boundary_root": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.1650000363588333,
+      "friction": 0.5
+    },
+    "basket_ball_hoop_respondable": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 1.8560876846313477,
+      "friction": 0.5
+    },
+    "ball_stop": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.020000001415610313,
+      "friction": 0.5
+    },
+    "ball": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.11129244416952133,
+      "friction": 0.5
+    },
+    "basket_ball_hoop_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 11.524999618530273,
+      "friction": 0.7099999785423279
+    }
+  },
+  "joints": {}
+}

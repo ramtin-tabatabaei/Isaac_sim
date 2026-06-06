@@ -1,0 +1,61 @@
+{
+  "shapes": {
+    "task_wall": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.2500000298023224,
+      "friction": 0.5
+    },
+    "switch_main": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.615272045135498,
+      "friction": 0.5
+    },
+    "Shape_sub": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 1.0,
+      "friction": 0.7099999785423279
+    },
+    "Shape_sub0": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 1.0,
+      "friction": 0.7099999785423279
+    },
+    "Shape_sub1": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 1.0,
+      "friction": 0.7099999785423279
+    },
+    "switch": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 1.0,
+      "friction": 0.7099999785423279
+    },
+    "switch_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 1.0,
+      "friction": 0.7099999785423279
+    }
+  },
+  "joints": {
+    "joint": {
+      "type": "revolute",
+      "cyclic": false,
+      "lower": 0.0,
+      "upper": 60.000001669652114
+    }
+  }
+}

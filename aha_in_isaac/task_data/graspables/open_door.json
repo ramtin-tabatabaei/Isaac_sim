@@ -1,0 +1,207 @@
+{
+  "graspable_objects": [],
+  "other_scene_objects": [
+    {
+      "fixed_offset_from_reference_local_xyz_m": null,
+      "fixed_offset_from_reference_xyz_m": null,
+      "fixed_orientation_from_reference_rpy_rad": null,
+      "has_separate_distribution": false,
+      "name": "door_frame",
+      "reference_graspable_object": null,
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -3.141588,
+          -2.4e-05,
+          2.979781
+        ],
+        "position_xyz_m": [
+          0.493134,
+          0.083346,
+          1.221593
+        ],
+        "quaternion_xyzw": [
+          -0.080818,
+          0.996729,
+          3e-06,
+          -1.2e-05
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.605069,
+        "x_uniform_min_m": 0.325857,
+        "y_uniform_max_m": 0.450857,
+        "y_uniform_min_m": -0.459755,
+        "z_fixed_m": 1.221592
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": null,
+      "fixed_offset_from_reference_xyz_m": null,
+      "fixed_orientation_from_reference_rpy_rad": null,
+      "has_separate_distribution": false,
+      "name": "door_main",
+      "reference_graspable_object": null,
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.570915,
+          1.408988,
+          -1.570668
+        ],
+        "position_xyz_m": [
+          0.502972,
+          0.084383,
+          1.215235
+        ],
+        "quaternion_xyzw": [
+          0.704801,
+          0.057142,
+          0.704787,
+          -0.057149
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.614956,
+        "x_uniform_min_m": 0.332443,
+        "y_uniform_max_m": 0.457443,
+        "y_uniform_min_m": -0.467136,
+        "z_fixed_m": 1.215235
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": null,
+      "fixed_offset_from_reference_xyz_m": null,
+      "fixed_orientation_from_reference_rpy_rad": null,
+      "has_separate_distribution": false,
+      "name": "door_main_visible",
+      "reference_graspable_object": null,
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.000133,
+          4.5e-05,
+          -2.979793
+        ],
+        "position_xyz_m": [
+          0.503489,
+          0.082912,
+          1.20669
+        ],
+        "quaternion_xyzw": [
+          1.7e-05,
+          -6.8e-05,
+          0.996729,
+          -0.080812
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.615274,
+        "x_uniform_min_m": 0.331551,
+        "y_uniform_max_m": 0.456551,
+        "y_uniform_min_m": -0.468415,
+        "z_fixed_m": 1.206689
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": null,
+      "fixed_offset_from_reference_xyz_m": null,
+      "fixed_orientation_from_reference_rpy_rad": null,
+      "has_separate_distribution": false,
+      "name": "open_door_handle",
+      "reference_graspable_object": null,
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.693113,
+          1.406955,
+          -1.401127
+        ],
+        "position_xyz_m": [
+          0.479075,
+          0.230424,
+          1.225781
+        ],
+        "quaternion_xyzw": [
+          0.712955,
+          0.040563,
+          0.69612,
+          -0.07393
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.650069,
+        "x_uniform_min_m": 0.237455,
+        "y_uniform_max_m": 0.562042,
+        "y_uniform_min_m": -0.362455,
+        "z_fixed_m": 1.22578
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": null,
+      "fixed_offset_from_reference_xyz_m": null,
+      "fixed_orientation_from_reference_rpy_rad": null,
+      "has_separate_distribution": false,
+      "name": "door_handle_visible",
+      "reference_graspable_object": null,
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.570813,
+          -1.408999,
+          1.522095
+        ],
+        "position_xyz_m": [
+          0.479263,
+          0.231357,
+          1.229018
+        ],
+        "quaternion_xyzw": [
+          -0.074291,
+          0.703194,
+          -0.039958,
+          -0.705976
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.650785,
+        "x_uniform_min_m": 0.237062,
+        "y_uniform_max_m": 0.562909,
+        "y_uniform_min_m": -0.362062,
+        "z_fixed_m": 1.229018
+      }
+    }
+  ],
+  "task_base_rotation_rz_bounds_rad": [
+    -0.785398,
+    0.785398
+  ],
+  "task_boundary_root": "boundary_root",
+  "task_boundary_root_world_pose_after_reset": {
+    "kind": "exact",
+    "orientation_rpy_rad": [
+      -0.0,
+      0.0,
+      0.161798
+    ],
+    "position_xyz_m": [
+      0.240459,
+      0.048479,
+      0.752001
+    ],
+    "quaternion_xyzw": [
+      0.0,
+      0.0,
+      0.080811,
+      0.996729
+    ],
+    "source": "exact_after_one_rlbench_reset"
+  },
+  "type": "Uniform for x/y; fixed z",
+  "units": "meters"
+}

@@ -1,0 +1,207 @@
+{
+  "graspable_objects": [],
+  "other_scene_objects": [
+    {
+      "fixed_offset_from_reference_local_xyz_m": null,
+      "fixed_offset_from_reference_xyz_m": null,
+      "fixed_orientation_from_reference_rpy_rad": null,
+      "has_separate_distribution": false,
+      "name": "clock",
+      "reference_graspable_object": null,
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.570846,
+          0.989427,
+          1.570852
+        ],
+        "position_xyz_m": [
+          0.084775,
+          -0.313999,
+          1.032776
+        ],
+        "quaternion_xyzw": [
+          -0.202661,
+          0.677453,
+          0.202665,
+          0.677431
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.406249,
+        "x_uniform_min_m": -0.171875,
+        "y_uniform_max_m": 0.537798,
+        "y_uniform_min_m": -0.504417,
+        "z_fixed_m": 1.032776
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": null,
+      "fixed_offset_from_reference_xyz_m": null,
+      "fixed_orientation_from_reference_rpy_rad": null,
+      "has_separate_distribution": false,
+      "name": "clock_needle_hour",
+      "reference_graspable_object": null,
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.1e-05,
+          9e-06,
+          -2.560224
+        ],
+        "position_xyz_m": [
+          0.094088,
+          -0.309098,
+          1.032626
+        ],
+        "quaternion_xyzw": [
+          3e-06,
+          -7e-06,
+          0.958048,
+          -0.286608
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.407677,
+        "x_uniform_min_m": -0.173303,
+        "y_uniform_max_m": 0.539225,
+        "y_uniform_min_m": -0.505845,
+        "z_fixed_m": 1.032626
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": null,
+      "fixed_offset_from_reference_xyz_m": null,
+      "fixed_orientation_from_reference_rpy_rad": null,
+      "has_separate_distribution": false,
+      "name": "clock_stand",
+      "reference_graspable_object": null,
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.570813,
+          0.58137,
+          3.1415
+        ],
+        "position_xyz_m": [
+          0.084775,
+          -0.313996,
+          0.895275
+        ],
+        "quaternion_xyzw": [
+          0.202693,
+          -0.677438,
+          0.677446,
+          -0.202633
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.406247,
+        "x_uniform_min_m": -0.171872,
+        "y_uniform_max_m": 0.537795,
+        "y_uniform_min_m": -0.504415,
+        "z_fixed_m": 0.895275
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": null,
+      "fixed_offset_from_reference_xyz_m": null,
+      "fixed_orientation_from_reference_rpy_rad": null,
+      "has_separate_distribution": false,
+      "name": "clock_needle_crank",
+      "reference_graspable_object": null,
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.570846,
+          0.989427,
+          1.570852
+        ],
+        "position_xyz_m": [
+          0.068981,
+          -0.325278,
+          1.032656
+        ],
+        "quaternion_xyzw": [
+          -0.202661,
+          0.677453,
+          0.202665,
+          0.677431
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.408403,
+        "x_uniform_min_m": -0.174027,
+        "y_uniform_max_m": 0.539951,
+        "y_uniform_min_m": -0.50657,
+        "z_fixed_m": 1.032656
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": null,
+      "fixed_offset_from_reference_xyz_m": null,
+      "fixed_orientation_from_reference_rpy_rad": null,
+      "has_separate_distribution": false,
+      "name": "clock_needle_minute",
+      "reference_graspable_object": null,
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.1e-05,
+          9e-06,
+          -0.989427
+        ],
+        "position_xyz_m": [
+          0.093351,
+          -0.309319,
+          1.032624
+        ],
+        "quaternion_xyzw": [
+          2e-06,
+          7e-06,
+          -0.47478,
+          0.880105
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.407403,
+        "x_uniform_min_m": -0.173028,
+        "y_uniform_max_m": 0.538951,
+        "y_uniform_min_m": -0.50557,
+        "z_fixed_m": 1.032624
+      }
+    }
+  ],
+  "task_base_rotation_rz_bounds_rad": [
+    -3.14,
+    3.14
+  ],
+  "task_boundary_root": "change_clock",
+  "task_boundary_root_world_pose_after_reset": {
+    "kind": "exact",
+    "orientation_rpy_rad": [
+      0.0,
+      0.0,
+      -0.989427
+    ],
+    "position_xyz_m": [
+      0.011838,
+      -0.203004,
+      0.752
+    ],
+    "quaternion_xyzw": [
+      0.0,
+      0.0,
+      -0.474779,
+      0.880105
+    ],
+    "source": "exact_after_one_rlbench_reset"
+  },
+  "type": "Uniform for x/y; fixed z",
+  "units": "meters"
+}

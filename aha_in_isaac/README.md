@@ -41,10 +41,10 @@ Pass `--carry-lift 0` to force the recorded, non-lifted path for diagnostics.
 | `curobo_planner.py` | **Experimental** cuRobo global collision-free planner (`--planner curobo`); plans a joint trajectory per waypoint around the scene's mesh/bbox obstacles. By default (`--curobo-graph on`) it routes each plan with cuRobo's sampling-based **PRM** graph planner (collision-free through free space, then trajopt smooths it) and keeps a `--curobo-safety-margin` (default 0.03 m) clearance, so the path no longer hugs/clips the cuboid or carried wand. `--curobo-graph off` restores trajopt-only. Requires `pip install` of cuRobo. |
 | `task_motion_config.json` | Per-task `waypoint_steps` + `gripper_closed` (arm/gripper motion). |
 | `add_physics_to_usds.py` | **Offline tool** — bake physics onto object USDs. One task (`--task`/`--input-dir`/`--output-dir`) or all at once (`--batch-root task_usds`). Then point `--usd-dir` at the output. |
-| `object_physics_config.json` | Per-task, per-object physics (`type` = rigid/kinematic/visual/deformable, `density`, friction, ...) consumed by the baker via `--task`. |
+| `task_data/object_physics/<task>.json` | Per-task, per-object physics (`type` = rigid/kinematic/visual/deformable, `density`, friction, ...) consumed by the baker via `--task`. One file per task, plus a shared `_defaults.json` (defaults + field docs). |
 | `object_appearance_config.json` | Per-task, per-object appearance (`visible`, `texture`, `color`, roughness, metallic) applied at scene-build time. |
 | `object_appearance_config.json` *(cont.)* | Has a `_scene` block for the shared table/floor too. |
-| `generate_task_configs.py` | **Generator** — fills both configs for every task with a scene report and synthesises a per-object texture, inferring type/color from names. Pure Python: `python3 generate_task_configs.py`. Skips already-configured tasks. |
+| `generate_task_configs.py` | **Generator** — writes each task's `task_data/object_physics/<task>.json` and an `object_appearance_config.json` block for every task with a scene report, and synthesises a per-object texture, inferring type/color from names. Pure Python: `python3 generate_task_configs.py`. Skips CURATED tasks. |
 | `usd_uv.py` | Shared UV-generation helper (auto/spherical/box/planar), used by the baker and the runtime. |
 | `textures/` | Object textures. Shared ones (`basketball.png`, `wood.png`, ...) plus a per-task subfolder `textures/<task>/<object>.png` for the generated ones. |
 

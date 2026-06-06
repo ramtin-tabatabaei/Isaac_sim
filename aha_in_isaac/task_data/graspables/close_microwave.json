@@ -1,0 +1,172 @@
+{
+  "graspable_objects": [],
+  "other_scene_objects": [
+    {
+      "fixed_offset_from_reference_local_xyz_m": null,
+      "fixed_offset_from_reference_xyz_m": null,
+      "fixed_orientation_from_reference_rpy_rad": null,
+      "has_separate_distribution": false,
+      "name": "microwave_frame_resp",
+      "reference_graspable_object": null,
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.570798,
+          1.18562,
+          1.570795
+        ],
+        "position_xyz_m": [
+          0.309593,
+          0.413965,
+          0.912315
+        ],
+        "quaternion_xyzw": [
+          0.694034,
+          -0.13534,
+          0.694034,
+          0.13534
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.793861,
+        "x_uniform_min_m": 0.3309,
+        "y_uniform_max_m": 0.313569,
+        "y_uniform_min_m": -0.369002,
+        "z_fixed_m": 0.912315
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": null,
+      "fixed_offset_from_reference_xyz_m": null,
+      "fixed_orientation_from_reference_rpy_rad": null,
+      "has_separate_distribution": false,
+      "name": "microwave_frame_vis",
+      "reference_graspable_object": null,
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.570798,
+          1.18562,
+          1.570795
+        ],
+        "position_xyz_m": [
+          0.308785,
+          0.404002,
+          0.915914
+        ],
+        "quaternion_xyzw": [
+          0.694034,
+          -0.13534,
+          0.694034,
+          0.13534
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.784657,
+        "x_uniform_min_m": 0.320942,
+        "y_uniform_max_m": 0.307152,
+        "y_uniform_min_m": -0.36812,
+        "z_fixed_m": 0.915914
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": null,
+      "fixed_offset_from_reference_xyz_m": null,
+      "fixed_orientation_from_reference_rpy_rad": null,
+      "has_separate_distribution": false,
+      "name": "microwave_door_resp",
+      "reference_graspable_object": null,
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.570791,
+          -0.487488,
+          -6.6e-05
+        ],
+        "position_xyz_m": [
+          0.093278,
+          0.175688,
+          0.889629
+        ],
+        "quaternion_xyzw": [
+          -0.686198,
+          -0.170674,
+          0.170628,
+          0.686213
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.519253,
+        "x_uniform_min_m": 0.032308,
+        "y_uniform_max_m": 0.300611,
+        "y_uniform_min_m": -0.150904,
+        "z_fixed_m": 0.889629
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": null,
+      "fixed_offset_from_reference_xyz_m": null,
+      "fixed_orientation_from_reference_rpy_rad": null,
+      "has_separate_distribution": false,
+      "name": "microwave_door",
+      "reference_graspable_object": null,
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.570791,
+          -0.487475,
+          -6.6e-05
+        ],
+        "position_xyz_m": [
+          0.094345,
+          0.176239,
+          0.889629
+        ],
+        "quaternion_xyzw": [
+          0.686199,
+          0.17067,
+          -0.170624,
+          -0.686214
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.519796,
+        "x_uniform_min_m": 0.033449,
+        "y_uniform_max_m": 0.300176,
+        "y_uniform_min_m": -0.151975,
+        "z_fixed_m": 0.889629
+      }
+    }
+  ],
+  "task_base_rotation_rz_bounds_rad": [
+    -0.392699,
+    0.392699
+  ],
+  "task_boundary_root": "boundary_root",
+  "task_boundary_root_world_pose_after_reset": {
+    "kind": "exact",
+    "orientation_rpy_rad": [
+      -0.0,
+      0.0,
+      1.185607
+    ],
+    "position_xyz_m": [
+      0.157798,
+      0.119417,
+      0.752
+    ],
+    "quaternion_xyzw": [
+      0.0,
+      0.0,
+      0.558688,
+      0.829378
+    ],
+    "source": "exact_after_one_rlbench_reset"
+  },
+  "type": "Uniform for x/y; fixed z",
+  "units": "meters"
+}

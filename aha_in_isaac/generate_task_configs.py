@@ -1,9 +1,10 @@
 """
 generate_task_configs.py
 
-One-shot generator: for every task that has a scene-context report, add a block
-to object_physics_config.json and object_appearance_config.json, and synthesise a
-texture image per object under textures/<task>/.
+One-shot generator: for every task that has a scene-context report, write a per-task
+object-physics file (task_data/object_physics/<task>.json), add a block to
+object_appearance_config.json, and synthesise a texture image per object under
+textures/<task>/.
 
 Everything is inferred from the object NAME (no Isaac/USD needed):
   * type      : '*_visual'/'*_vis' -> visual; structural/boundary/collision names
@@ -32,7 +33,7 @@ from PIL import Image, ImageDraw, ImageFilter
 HERE = Path(__file__).resolve().parent
 REPORTS_DIR = Path("/home/ramtin/AHA/portable_scene_reports")
 TEXTURES_DIR = HERE / "textures"
-PHYSICS_CONFIG = HERE / "object_physics_config.json"
+OBJECT_PHYSICS_DIR = HERE / "task_data" / "object_physics"  # per-task <task>.json (+ _defaults.json)
 APPEARANCE_CONFIG = HERE / "object_appearance_config.json"
 TEX_SIZE = 128
 # Hand-curated task blocks that the generator must never overwrite.
@@ -123,7 +124,7 @@ def _load(path: Path) -> dict:
 
 
 def main():
-    physics = _load(PHYSICS_CONFIG)
+    OBJECT_PHYSICS_DIR.mkdir(parents=True, exist_ok=True)
     appearance = _load(APPEARANCE_CONFIG)
 
     reports = sorted(REPORTS_DIR.glob("*.scene_context.json"))
@@ -180,14 +181,16 @@ def main():
                 "metallic": 0.6 if style == "metal" else 0.0,
             }
 
-        physics[task] = physics_block  # overwrite auto blocks so re-runs pick up rule changes
+        # Write this task's object physics as its own file; CURATED tasks are skipped above so
+        # their hand-tuned files stay untouched. Appearance remains a single combined file.
+        (OBJECT_PHYSICS_DIR / f"{task}.json").write_text(json.dumps(physics_block, indent=2) + "\n", encoding="utf-8")
         appearance[task] = appearance_block
         added_tasks += 1
 
-    PHYSICS_CONFIG.write_text(json.dumps(physics, indent=2) + "\n", encoding="utf-8")
     APPEARANCE_CONFIG.write_text(json.dumps(appearance, indent=2) + "\n", encoding="utf-8")
-    print(f"[INFO]: Added {added_tasks} task block(s); wrote {tex_count} textures under {TEXTURES_DIR}.")
-    print(f"[INFO]: Updated {PHYSICS_CONFIG.name} and {APPEARANCE_CONFIG.name}.")
+    print(f"[INFO]: Wrote {added_tasks} per-task object-physics file(s) under {OBJECT_PHYSICS_DIR}; "
+          f"{tex_count} textures under {TEXTURES_DIR}.")
+    print(f"[INFO]: Updated {APPEARANCE_CONFIG.name}.")
 
 
 if __name__ == "__main__":

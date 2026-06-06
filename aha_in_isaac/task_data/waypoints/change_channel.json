@@ -1,0 +1,1066 @@
+[
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141578,
+        0.241705,
+        -3.141573
+      ],
+      "position_xyz_m": [
+        0.2786,
+        -0.008159,
+        1.471653
+      ],
+      "quaternion_xyzw": [
+        9e-06,
+        0.992706,
+        -6e-06,
+        0.120559
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.075667,
+        -0.228623,
+        -0.3214
+      ],
+      "position_xyz_m": [
+        -0.10926,
+        -0.0254,
+        -0.630146
+      ],
+      "quaternion_xyzw": [
+        -0.018855,
+        -0.118525,
+        -0.154592,
+        0.980662
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      -0.002,
+      0.0,
+      0.082001
+    ],
+    "fixed_orientation_rpy_rad": [
+      3.141593,
+      0.0,
+      3.141593
+    ],
+    "motion_type": "point",
+    "name": "waypoint0",
+    "parent": "tv_remote",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.141593,
+          0.0,
+          3.141593
+        ],
+        "position_xyz_m": [
+          -0.002,
+          0.0,
+          0.082001
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          1.0,
+          -0.0,
+          -0.0
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "tv_remote"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.141593,
+          0.0,
+          3.141593
+        ],
+        "position_xyz_m": [
+          -0.002,
+          0.0,
+          0.082001
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          1.0,
+          -0.0,
+          -0.0
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "tv_remote"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141259,
+        0.001098,
+        -2.83773
+      ],
+      "position_xyz_m": [
+        0.186314,
+        0.047966,
+        0.841382
+      ],
+      "quaternion_xyzw": [
+        0.151347,
+        0.988481,
+        -8.2e-05,
+        0.000568
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      3.141259,
+      0.001098,
+      -2.83773
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.14159,
+        0.241581,
+        3.141584
+      ],
+      "position_xyz_m": [
+        0.278635,
+        -0.008145,
+        1.471598
+      ],
+      "quaternion_xyzw": [
+        -4e-06,
+        0.992714,
+        -2e-06,
+        0.120497
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.077269,
+        -0.227964,
+        -0.328596
+      ],
+      "position_xyz_m": [
+        -0.113483,
+        -0.024841,
+        -0.713087
+      ],
+      "quaternion_xyzw": [
+        -0.019269,
+        -0.118397,
+        -0.158043,
+        0.980119
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      0.0,
+      0.0,
+      0.083001
+    ],
+    "fixed_orientation_rpy_rad": [
+      -0.0,
+      0.0,
+      -0.0
+    ],
+    "motion_type": "point",
+    "name": "waypoint1",
+    "parent": "waypoint0",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "position_xyz_m": [
+          0.0,
+          0.0,
+          0.083001
+        ],
+        "quaternion_xyzw": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "waypoint",
+      "reference_name": "waypoint0"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.141593,
+          0.0,
+          3.141593
+        ],
+        "position_xyz_m": [
+          -0.002,
+          -0.0,
+          -0.001
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          1.0,
+          -0.0,
+          0.0
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "tv_remote"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141259,
+        0.001098,
+        -2.83773
+      ],
+      "position_xyz_m": [
+        0.186405,
+        0.047939,
+        0.758382
+      ],
+      "quaternion_xyzw": [
+        0.151347,
+        0.988481,
+        -8.2e-05,
+        0.000568
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      3.141259,
+      0.001098,
+      -2.83773
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.141592,
+        0.241543,
+        -3.141581
+      ],
+      "position_xyz_m": [
+        0.278668,
+        -0.008166,
+        1.471574
+      ],
+      "quaternion_xyzw": [
+        6e-06,
+        0.992716,
+        1e-06,
+        0.120478
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.079923,
+        -0.227026,
+        -0.340317
+      ],
+      "position_xyz_m": [
+        -0.118468,
+        -0.024138,
+        -0.630056
+      ],
+      "quaternion_xyzw": [
+        -0.019955,
+        -0.118266,
+        -0.163655,
+        0.9792
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "fixed_orientation_rpy_rad": [
+      -0.0,
+      0.0,
+      -0.0
+    ],
+    "motion_type": "point",
+    "name": "waypoint2",
+    "parent": "waypoint0",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "position_xyz_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "quaternion_xyzw": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "waypoint",
+      "reference_name": "waypoint0"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.141593,
+          0.0,
+          3.141593
+        ],
+        "position_xyz_m": [
+          -0.002,
+          0.0,
+          0.082001
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          1.0,
+          -0.0,
+          0.0
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "tv_remote"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141259,
+        0.001098,
+        -2.83773
+      ],
+      "position_xyz_m": [
+        0.186314,
+        0.047966,
+        0.841382
+      ],
+      "quaternion_xyzw": [
+        0.151347,
+        0.988481,
+        -8.2e-05,
+        0.000568
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      3.141259,
+      0.001098,
+      -2.83773
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.141591,
+        0.241556,
+        -3.141592
+      ],
+      "position_xyz_m": [
+        0.278629,
+        -0.008161,
+        1.471618
+      ],
+      "quaternion_xyzw": [
+        1e-06,
+        0.992715,
+        1e-06,
+        0.120484
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.24146,
+        -0.00688,
+        -1.542857
+      ],
+      "position_xyz_m": [
+        -0.03832,
+        0.039044,
+        -0.630617
+      ],
+      "quaternion_xyzw": [
+        -0.083962,
+        -0.086411,
+        -0.691784,
+        0.711982
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      -0.002,
+      0.0,
+      0.089001
+    ],
+    "fixed_orientation_rpy_rad": [
+      3.141593,
+      -0.0,
+      3.141593
+    ],
+    "motion_type": "point",
+    "name": "waypoint3",
+    "parent": "spawn_boundary",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.141593,
+          -0.0,
+          3.141593
+        ],
+        "position_xyz_m": [
+          -0.002,
+          0.0,
+          0.089001
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          1.0,
+          -0.0,
+          -0.0
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "spawn_boundary"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.141593,
+          -0.0,
+          3.141593
+        ],
+        "position_xyz_m": [
+          -0.002,
+          0.0,
+          0.089001
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          1.0,
+          -0.0,
+          -0.0
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "spawn_boundary"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141593,
+        -0.0,
+        -1.599569
+      ],
+      "position_xyz_m": [
+        0.238499,
+        0.02902,
+        0.841001
+      ],
+      "quaternion_xyzw": [
+        0.696861,
+        0.717206,
+        -0.0,
+        -0.0
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      3.141593,
+      -0.0,
+      -1.599569
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141576,
+        0.241624,
+        3.141588
+      ],
+      "position_xyz_m": [
+        0.278616,
+        -0.008154,
+        1.471645
+      ],
+      "quaternion_xyzw": [
+        -3e-06,
+        0.992711,
+        -8e-06,
+        0.120518
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.241527,
+        -0.0069,
+        -1.542868
+      ],
+      "position_xyz_m": [
+        -0.038313,
+        0.039032,
+        -0.711644
+      ],
+      "quaternion_xyzw": [
+        -0.083979,
+        -0.086442,
+        -0.691784,
+        0.711976
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      0.0,
+      0.0,
+      0.081
+    ],
+    "fixed_orientation_rpy_rad": [
+      -0.0,
+      0.0,
+      -0.0
+    ],
+    "motion_type": "point",
+    "name": "waypoint4",
+    "parent": "waypoint3",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "position_xyz_m": [
+          0.0,
+          0.0,
+          0.081
+        ],
+        "quaternion_xyzw": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "waypoint",
+      "reference_name": "waypoint3"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.141593,
+          -0.0,
+          3.141593
+        ],
+        "position_xyz_m": [
+          -0.002,
+          0.0,
+          0.008001
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          1.0,
+          -0.0,
+          -0.0
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "spawn_boundary"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141593,
+        -0.0,
+        -1.599569
+      ],
+      "position_xyz_m": [
+        0.238499,
+        0.02902,
+        0.760001
+      ],
+      "quaternion_xyzw": [
+        0.696861,
+        0.717206,
+        -0.0,
+        -0.0
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      3.141593,
+      -0.0,
+      -1.599569
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141584,
+        0.241415,
+        -3.141589
+      ],
+      "position_xyz_m": [
+        0.278682,
+        -0.00816,
+        1.471524
+      ],
+      "quaternion_xyzw": [
+        1e-06,
+        0.992724,
+        -4e-06,
+        0.120414
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.241318,
+        -0.006886,
+        -1.542856
+      ],
+      "position_xyz_m": [
+        -0.038321,
+        0.039098,
+        -0.630523
+      ],
+      "quaternion_xyzw": [
+        -0.083909,
+        -0.086365,
+        -0.69179,
+        0.711988
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "fixed_orientation_rpy_rad": [
+      -0.0,
+      0.0,
+      -0.0
+    ],
+    "motion_type": "point",
+    "name": "waypoint5",
+    "parent": "waypoint3",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "position_xyz_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "quaternion_xyzw": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "waypoint",
+      "reference_name": "waypoint3"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.141593,
+          -0.0,
+          3.141593
+        ],
+        "position_xyz_m": [
+          -0.002,
+          0.0,
+          0.089001
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          1.0,
+          -0.0,
+          -0.0
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "spawn_boundary"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141593,
+        -0.0,
+        -1.599569
+      ],
+      "position_xyz_m": [
+        0.238499,
+        0.02902,
+        0.841001
+      ],
+      "quaternion_xyzw": [
+        0.696861,
+        0.717206,
+        -0.0,
+        -0.0
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      3.141593,
+      -0.0,
+      -1.599569
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141565,
+        0.24136,
+        -3.141567
+      ],
+      "position_xyz_m": [
+        0.278703,
+        -0.008165,
+        1.471503
+      ],
+      "quaternion_xyzw": [
+        1.1e-05,
+        0.992727,
+        -1.2e-05,
+        0.120387
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.087809,
+        -0.223955,
+        -0.375811
+      ],
+      "position_xyz_m": [
+        -0.089017,
+        -0.021607,
+        -0.629965
+      ],
+      "quaternion_xyzw": [
+        -0.021994,
+        -0.117818,
+        -0.180635,
+        0.97622
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      0.045003,
+      0.0,
+      0.082002
+    ],
+    "fixed_orientation_rpy_rad": [
+      3.141593,
+      0.0,
+      3.141593
+    ],
+    "motion_type": "point",
+    "name": "waypoint6",
+    "parent": "tv_remote",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.141593,
+          0.0,
+          3.141593
+        ],
+        "position_xyz_m": [
+          0.045003,
+          0.0,
+          0.082002
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          1.0,
+          -0.0,
+          -0.0
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "tv_remote"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.141593,
+          0.0,
+          3.141593
+        ],
+        "position_xyz_m": [
+          0.045003,
+          0.0,
+          0.082002
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          1.0,
+          -0.0,
+          -0.0
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "tv_remote"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141259,
+        0.001098,
+        -2.83773
+      ],
+      "position_xyz_m": [
+        0.231164,
+        0.033903,
+        0.841437
+      ],
+      "quaternion_xyzw": [
+        0.151347,
+        0.988481,
+        -8.2e-05,
+        0.000568
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      3.141259,
+      0.001098,
+      -2.83773
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.141591,
+        0.241572,
+        -3.14158
+      ],
+      "position_xyz_m": [
+        0.278629,
+        -0.00817,
+        1.471602
+      ],
+      "quaternion_xyzw": [
+        6e-06,
+        0.992714,
+        2e-06,
+        0.120493
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.090178,
+        -0.22326,
+        -0.385972
+      ],
+      "position_xyz_m": [
+        -0.094302,
+        -0.02074,
+        -0.705179
+      ],
+      "quaternion_xyzw": [
+        -0.022618,
+        -0.11781,
+        -0.185475,
+        0.975299
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      0.0,
+      0.0,
+      0.075121
+    ],
+    "fixed_orientation_rpy_rad": [
+      -0.0,
+      0.0,
+      -0.0
+    ],
+    "motion_type": "point",
+    "name": "waypoint7",
+    "parent": "waypoint6",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "position_xyz_m": [
+          0.0,
+          0.0,
+          0.075121
+        ],
+        "quaternion_xyzw": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "waypoint",
+      "reference_name": "waypoint6"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.141593,
+          0.0,
+          3.141593
+        ],
+        "position_xyz_m": [
+          0.045003,
+          0.0,
+          0.006881
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          1.0,
+          -0.0,
+          0.0
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "tv_remote"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141259,
+        0.001098,
+        -2.83773
+      ],
+      "position_xyz_m": [
+        0.231246,
+        0.033878,
+        0.766316
+      ],
+      "quaternion_xyzw": [
+        0.151347,
+        0.988481,
+        -8.2e-05,
+        0.000568
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      3.141259,
+      0.001098,
+      -2.83773
+    ]
+  }
+]

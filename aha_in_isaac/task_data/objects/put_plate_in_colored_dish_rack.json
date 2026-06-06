@@ -1,0 +1,739 @@
+[
+  {
+    "handle": 80,
+    "hierarchy_path": "put_plate_in_colored_dish_rack/plate_stand",
+    "name": "plate_stand",
+    "parent": "put_plate_in_colored_dish_rack",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        -0.225,
+        0.023
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        -0.225,
+        0.023
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.25,
+        -0.225,
+        0.775
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 86,
+    "hierarchy_path": "put_plate_in_colored_dish_rack/dish_rack",
+    "name": "dish_rack",
+    "parent": "put_plate_in_colored_dish_rack",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.000345,
+        -0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        0.0,
+        0.01
+      ],
+      "quaternion_xyzw": [
+        -0.000173,
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.000345,
+        -0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        0.0,
+        0.01
+      ],
+      "quaternion_xyzw": [
+        -0.000173,
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.000345,
+        -0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.25,
+        0.0,
+        0.762
+      ],
+      "quaternion_xyzw": [
+        -0.000173,
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 99,
+    "hierarchy_path": "put_plate_in_colored_dish_rack/boundary",
+    "name": "boundary",
+    "parent": "put_plate_in_colored_dish_rack",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.25,
+        0.0,
+        0.752
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 81,
+    "hierarchy_path": "put_plate_in_colored_dish_rack/plate_stand/plate",
+    "name": "plate",
+    "parent": "plate_stand",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.553356,
+        -1.3e-05,
+        1.570814
+      ],
+      "position_xyz_m": [
+        0.0,
+        0.0,
+        0.03949
+      ],
+      "quaternion_xyzw": [
+        0.495613,
+        -0.495629,
+        0.504342,
+        0.50434
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.553356,
+        -1.3e-05,
+        1.570814
+      ],
+      "position_xyz_m": [
+        0.0,
+        -0.225,
+        0.062491
+      ],
+      "quaternion_xyzw": [
+        0.495613,
+        -0.495629,
+        0.504342,
+        0.50434
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.553356,
+        -1.3e-05,
+        1.570814
+      ],
+      "position_xyz_m": [
+        0.25,
+        -0.225,
+        0.814491
+      ],
+      "quaternion_xyzw": [
+        0.495613,
+        -0.495629,
+        0.504342,
+        0.50434
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 92,
+    "hierarchy_path": "put_plate_in_colored_dish_rack/dish_rack/dish_rack_pillar3",
+    "name": "dish_rack_pillar3",
+    "parent": "dish_rack",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -1.56981
+      ],
+      "position_xyz_m": [
+        -7e-06,
+        0.025037,
+        0.065011
+      ],
+      "quaternion_xyzw": [
+        -0.499753,
+        0.500256,
+        0.499754,
+        -0.500237
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -1.570155
+      ],
+      "position_xyz_m": [
+        -7e-06,
+        0.025015,
+        0.07502
+      ],
+      "quaternion_xyzw": [
+        0.499839,
+        -0.50017,
+        -0.49984,
+        0.500151
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -1.570155
+      ],
+      "position_xyz_m": [
+        0.249993,
+        0.025015,
+        0.82702
+      ],
+      "quaternion_xyzw": [
+        0.499839,
+        -0.50017,
+        -0.49984,
+        0.500151
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 93,
+    "hierarchy_path": "put_plate_in_colored_dish_rack/dish_rack/dish_rack_pillar4",
+    "name": "dish_rack_pillar4",
+    "parent": "dish_rack",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -1.569836
+      ],
+      "position_xyz_m": [
+        -0.0,
+        0.075022,
+        0.064989
+      ],
+      "quaternion_xyzw": [
+        -0.49976,
+        0.500262,
+        0.49976,
+        -0.500218
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -1.570181
+      ],
+      "position_xyz_m": [
+        -0.0,
+        0.075,
+        0.075015
+      ],
+      "quaternion_xyzw": [
+        0.499846,
+        -0.500176,
+        -0.499846,
+        0.500131
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -1.570181
+      ],
+      "position_xyz_m": [
+        0.25,
+        0.075,
+        0.827015
+      ],
+      "quaternion_xyzw": [
+        0.499846,
+        -0.500176,
+        -0.499846,
+        0.500131
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 94,
+    "hierarchy_path": "put_plate_in_colored_dish_rack/dish_rack/dish_rack_pillar2",
+    "name": "dish_rack_pillar2",
+    "parent": "dish_rack",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -1.569822
+      ],
+      "position_xyz_m": [
+        -1.1e-05,
+        -0.024964,
+        0.065026
+      ],
+      "quaternion_xyzw": [
+        -0.499756,
+        0.50026,
+        0.499757,
+        -0.500227
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -1.570168
+      ],
+      "position_xyz_m": [
+        -1.1e-05,
+        -0.024986,
+        0.075017
+      ],
+      "quaternion_xyzw": [
+        0.499842,
+        -0.500174,
+        -0.499844,
+        0.50014
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -1.570168
+      ],
+      "position_xyz_m": [
+        0.249989,
+        -0.024986,
+        0.827017
+      ],
+      "quaternion_xyzw": [
+        0.499842,
+        -0.500174,
+        -0.499844,
+        0.50014
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 95,
+    "hierarchy_path": "put_plate_in_colored_dish_rack/dish_rack/dish_rack_pillar1",
+    "name": "dish_rack_pillar1",
+    "parent": "dish_rack",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -1.569836
+      ],
+      "position_xyz_m": [
+        -1.5e-05,
+        -0.074965,
+        0.065041
+      ],
+      "quaternion_xyzw": [
+        -0.499759,
+        0.500264,
+        0.499761,
+        -0.500216
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -1.570181
+      ],
+      "position_xyz_m": [
+        -1.5e-05,
+        -0.074988,
+        0.075015
+      ],
+      "quaternion_xyzw": [
+        0.499845,
+        -0.500178,
+        -0.499847,
+        0.50013
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -1.570181
+      ],
+      "position_xyz_m": [
+        0.249985,
+        -0.074988,
+        0.827015
+      ],
+      "quaternion_xyzw": [
+        0.499845,
+        -0.500178,
+        -0.499847,
+        0.50013
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 96,
+    "hierarchy_path": "put_plate_in_colored_dish_rack/dish_rack/dish_rack_pillar0",
+    "name": "dish_rack_pillar0",
+    "parent": "dish_rack",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -1.569836
+      ],
+      "position_xyz_m": [
+        -1e-06,
+        -0.124958,
+        0.065065
+      ],
+      "quaternion_xyzw": [
+        -0.499759,
+        0.500264,
+        0.499761,
+        -0.500216
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -1.570181
+      ],
+      "position_xyz_m": [
+        -1e-06,
+        -0.124981,
+        0.075022
+      ],
+      "quaternion_xyzw": [
+        0.499845,
+        -0.500177,
+        -0.499847,
+        0.50013
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -1.570181
+      ],
+      "position_xyz_m": [
+        0.249999,
+        -0.124981,
+        0.827022
+      ],
+      "quaternion_xyzw": [
+        0.499845,
+        -0.500177,
+        -0.499847,
+        0.50013
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 97,
+    "hierarchy_path": "put_plate_in_colored_dish_rack/dish_rack/dish_rack_pillar5",
+    "name": "dish_rack_pillar5",
+    "parent": "dish_rack",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -1.569836
+      ],
+      "position_xyz_m": [
+        -0.0,
+        0.125022,
+        0.064957
+      ],
+      "quaternion_xyzw": [
+        -0.49976,
+        0.500262,
+        0.49976,
+        -0.500218
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -1.570181
+      ],
+      "position_xyz_m": [
+        -0.0,
+        0.124999,
+        0.075
+      ],
+      "quaternion_xyzw": [
+        0.499846,
+        -0.500176,
+        -0.499846,
+        0.500131
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -1.570181
+      ],
+      "position_xyz_m": [
+        0.25,
+        0.124999,
+        0.827
+      ],
+      "quaternion_xyzw": [
+        0.499846,
+        -0.500176,
+        -0.499846,
+        0.500131
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 82,
+    "hierarchy_path": "put_plate_in_colored_dish_rack/plate_stand/plate/plate_visual",
+    "name": "plate_visual",
+    "parent": "plate",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.000504,
+        0.0,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "quaternion_xyzw": [
+        0.000252,
+        -0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.553356,
+        0.000491,
+        1.570814
+      ],
+      "position_xyz_m": [
+        0.0,
+        -0.225,
+        0.062491
+      ],
+      "quaternion_xyzw": [
+        0.49574,
+        -0.495502,
+        0.504467,
+        0.504215
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.553356,
+        0.000491,
+        1.570814
+      ],
+      "position_xyz_m": [
+        0.25,
+        -0.225,
+        0.814491
+      ],
+      "quaternion_xyzw": [
+        0.49574,
+        -0.495502,
+        0.504467,
+        0.504215
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  }
+]

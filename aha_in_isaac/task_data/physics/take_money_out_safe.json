@@ -1,0 +1,103 @@
+{
+  "shapes": {
+    "safe_body": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 7.0,
+      "friction": 0.5
+    },
+    "placement_boundary": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.029426109045743942,
+      "friction": 0.5
+    },
+    "dollar_stack2": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.5,
+      "friction": 0.5
+    },
+    "dollar_stack1": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.5,
+      "friction": 0.5
+    },
+    "dollar_stack0": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.5,
+      "friction": 0.5
+    },
+    "money_boundary": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.03529176861047745,
+      "friction": 0.5
+    },
+    "safe_door": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 1.0,
+      "friction": 0.5
+    },
+    "dollar_back_visual2": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.002475881017744541,
+      "friction": 0.5
+    },
+    "dollar_front_visual2": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.002475881017744541,
+      "friction": 0.5
+    },
+    "dollar_back_visual1": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.002475881017744541,
+      "friction": 0.5
+    },
+    "dollar_front_visual1": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.002475881017744541,
+      "friction": 0.5
+    },
+    "dollar_back_visual0": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.002475881017744541,
+      "friction": 0.5
+    },
+    "dollar_front_visual0": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.002475881017744541,
+      "friction": 0.5
+    }
+  },
+  "joints": {
+    "safe_joint": {
+      "type": "revolute",
+      "cyclic": true,
+      "lower": -180.00000500895632,
+      "upper": 180.00000500895632
+    }
+  }
+}

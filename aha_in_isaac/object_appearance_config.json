@@ -1,7 +1,7 @@
 {
   "_README": [
     "Per-task, per-object APPEARANCE config for scene_builder.py (applied at scene",
-    "build time, unlike object_physics_config.json which is baked offline).",
+    "build time, unlike task_data/object_physics/<task>.json which is baked offline).",
     "Object keys match a file/object-name suffix; the longest matching key wins,",
     "and each entry is merged over '_defaults'.",
     "",

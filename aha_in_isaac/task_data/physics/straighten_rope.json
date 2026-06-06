@@ -1,0 +1,248 @@
+{
+  "shapes": {
+    "tail": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.001570796244777739,
+      "friction": 0.20000000298023224
+    },
+    "head_target": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.005000000819563866,
+      "friction": 0.5
+    },
+    "head_tail": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.005000000819563866,
+      "friction": 0.5
+    },
+    "Cylinder16": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.025132739916443825,
+      "friction": 0.5
+    },
+    "Cylinder15": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.025132739916443825,
+      "friction": 0.5
+    },
+    "Cylinder14": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.025132739916443825,
+      "friction": 0.5
+    },
+    "Cylinder13": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.025132739916443825,
+      "friction": 0.5
+    },
+    "Cylinder12": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.025132739916443825,
+      "friction": 0.5
+    },
+    "Cylinder11": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.025132739916443825,
+      "friction": 0.5
+    },
+    "Cylinder10": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.025132739916443825,
+      "friction": 0.5
+    },
+    "Cylinder9": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.025132739916443825,
+      "friction": 0.5
+    },
+    "Cylinder8": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.025132739916443825,
+      "friction": 0.5
+    },
+    "Cylinder7": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.025132739916443825,
+      "friction": 0.5
+    },
+    "Cylinder6": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.025132739916443825,
+      "friction": 0.5
+    },
+    "Cylinder5": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.025132739916443825,
+      "friction": 0.5
+    },
+    "Cylinder4": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.025132739916443825,
+      "friction": 0.5
+    },
+    "Cylinder3": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.025132739916443825,
+      "friction": 0.5
+    },
+    "Cylinder2": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.025132739916443825,
+      "friction": 0.5
+    },
+    "Cylinder1": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.025132739916443825,
+      "friction": 0.5
+    },
+    "head": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.025132739916443825,
+      "friction": 0.5
+    }
+  },
+  "joints": {
+    "Joint16": {
+      "type": "spherical",
+      "cyclic": true,
+      "lower": 0.0,
+      "upper": 3.1415927410125732
+    },
+    "Joint15": {
+      "type": "spherical",
+      "cyclic": true,
+      "lower": 0.0,
+      "upper": 3.1415927410125732
+    },
+    "Joint14": {
+      "type": "spherical",
+      "cyclic": true,
+      "lower": 0.0,
+      "upper": 3.1415927410125732
+    },
+    "Joint13": {
+      "type": "spherical",
+      "cyclic": true,
+      "lower": 0.0,
+      "upper": 3.1415927410125732
+    },
+    "Joint12": {
+      "type": "spherical",
+      "cyclic": true,
+      "lower": 0.0,
+      "upper": 3.1415927410125732
+    },
+    "Joint11": {
+      "type": "spherical",
+      "cyclic": true,
+      "lower": 0.0,
+      "upper": 3.1415927410125732
+    },
+    "Joint10": {
+      "type": "spherical",
+      "cyclic": true,
+      "lower": 0.0,
+      "upper": 3.1415927410125732
+    },
+    "Joint9": {
+      "type": "spherical",
+      "cyclic": true,
+      "lower": 0.0,
+      "upper": 3.1415927410125732
+    },
+    "Joint8": {
+      "type": "spherical",
+      "cyclic": true,
+      "lower": 0.0,
+      "upper": 3.1415927410125732
+    },
+    "Joint7": {
+      "type": "spherical",
+      "cyclic": true,
+      "lower": 0.0,
+      "upper": 3.1415927410125732
+    },
+    "Joint6": {
+      "type": "spherical",
+      "cyclic": true,
+      "lower": 0.0,
+      "upper": 3.1415927410125732
+    },
+    "Joint5": {
+      "type": "spherical",
+      "cyclic": true,
+      "lower": 0.0,
+      "upper": 3.1415927410125732
+    },
+    "Joint4": {
+      "type": "spherical",
+      "cyclic": true,
+      "lower": 0.0,
+      "upper": 3.1415927410125732
+    },
+    "Joint3": {
+      "type": "spherical",
+      "cyclic": true,
+      "lower": 0.0,
+      "upper": 3.1415927410125732
+    },
+    "Joint2": {
+      "type": "spherical",
+      "cyclic": true,
+      "lower": 0.0,
+      "upper": 3.1415927410125732
+    },
+    "Joint1": {
+      "type": "spherical",
+      "cyclic": true,
+      "lower": 0.0,
+      "upper": 3.1415927410125732
+    },
+    "Joint0": {
+      "type": "spherical",
+      "cyclic": true,
+      "lower": 0.0,
+      "upper": 3.1415927410125732
+    }
+  }
+}

@@ -17,8 +17,9 @@ collider, so the robot (and other bodies) pass straight through it. Use this to
 clear a base/holder out of the arm's path while leaving the graspable object
 collidable.
 
-What each object becomes is driven by ``object_physics_config.json`` (density,
-type, friction, ...), selected with ``--task``:
+What each object becomes is driven by the per-task object physics config under
+``task_data/object_physics/<task>.json`` (density, type, friction, ...), selected
+with ``--task``:
 
     cd ~/IsaacLab
     ./isaaclab.sh -p scripts/aha_in_isaac/add_physics_to_usds.py \
@@ -55,7 +56,9 @@ for _package_dir in ("isaaclab", "isaaclab_assets", "isaaclab_tasks"):
 from isaaclab.app import AppLauncher
 
 USD_EXTENSIONS = (".usd", ".usdc", ".usda")
-DEFAULT_CONFIG = Path(__file__).with_name("object_physics_config.json")
+# Per-task object physics config: one file per task under task_data/object_physics/<task>.json,
+# with the shared defaults/docs in task_data/object_physics/_defaults.json.
+DEFAULT_CONFIG = Path(__file__).resolve().parent / "task_data" / "object_physics"
 
 parser = argparse.ArgumentParser(description="Bake physics onto a folder of object USDs.")
 parser.add_argument("--input-dir", type=Path, default=None, help="Folder of source USD files (single-task mode).")
@@ -69,7 +72,9 @@ parser.add_argument(
 )
 parser.add_argument("--output-suffix", default="_physics", help="Suffix for batch output folders (default '_physics').")
 parser.add_argument(
-    "--config", type=Path, default=DEFAULT_CONFIG, help="Per-task object physics config JSON."
+    "--config", type=Path, default=DEFAULT_CONFIG,
+    help="Per-task object physics config: a directory of <task>.json files (+ _defaults.json), "
+    "or a single legacy combined JSON file."
 )
 parser.add_argument(
     "--task",
@@ -100,6 +105,10 @@ parser.add_argument(
     help="Type for files that match no filter / no config entry.",
 )
 parser.add_argument("--overwrite", action="store_true", help="Overwrite existing files in --output-dir.")
+parser.add_argument(
+    "--no-import-physics", action="store_true",
+    help="Ignore task_data/physics (CoppeliaSim mass/friction); use only the hand-authored config.",
+)
 AppLauncher.add_app_launcher_args(parser)
 args_cli = parser.parse_args()
 
@@ -181,6 +190,21 @@ def _legacy_spec(stem: str) -> dict:
 
 
 def _load_task_config(config_path: Path, task: str) -> tuple[dict, dict]:
+    """Resolve (defaults, task_block) for ``task``. ``config_path`` is normally a directory of
+    per-task ``<task>.json`` files plus a shared ``_defaults.json`` (``{"_defaults": {...}}``);
+    a single combined JSON file is still accepted for backwards compatibility."""
+    if config_path.is_dir():
+        defaults_path = config_path / "_defaults.json"
+        defaults = {}
+        if defaults_path.is_file():
+            defaults = (json.loads(defaults_path.read_text(encoding="utf-8")) or {}).get("_defaults", {})
+        task_path = config_path / f"{task}.json"
+        if not task_path.is_file():
+            avail = ", ".join(sorted(p.stem for p in config_path.glob("*.json") if not p.stem.startswith("_"))) or "(none)"
+            raise KeyError(f"Task '{task}' config not found at {task_path}. Available: {avail}")
+        data = json.loads(task_path.read_text(encoding="utf-8")) or {}
+        task_block = {k: v for k, v in data.items() if not k.startswith("_")}
+        return defaults, task_block
     if not config_path.is_file():
         raise FileNotFoundError(f"Object physics config not found: {config_path}")
     data = json.loads(config_path.read_text(encoding="utf-8"))
@@ -192,8 +216,35 @@ def _load_task_config(config_path: Path, task: str) -> tuple[dict, dict]:
     return defaults, task_block
 
 
-def _config_spec(stem: str, defaults: dict, task_block: dict) -> tuple[dict, bool]:
-    """Merge the best-matching object entry over the defaults (longest key wins)."""
+TASK_PHYSICS_DIR = Path(__file__).resolve().parent / "task_data" / "physics"
+
+
+def _load_task_physics(task: str) -> dict:
+    """Real CoppeliaSim per-shape physics (mass/friction), keyed by object name.
+    Empty if not extracted yet (run ``build_task_physics.py``)."""
+    path = TASK_PHYSICS_DIR / f"{task}.json"
+    if not path.is_file():
+        return {}
+    return (json.loads(path.read_text(encoding="utf-8")) or {}).get("shapes", {}) or {}
+
+
+def _physics_for_stem(stem: str, shapes: dict) -> dict:
+    """The physics entry whose object name best (longest-suffix) matches a USD stem."""
+    name = stem.lower()
+    best, best_len = {}, -1
+    for obj, vals in shapes.items():
+        token = obj.lower()
+        if (name == token or name.endswith(token)) and len(token) > best_len:
+            best, best_len = vals or {}, len(token)
+    return best
+
+
+def _config_spec(stem: str, defaults: dict, task_block: dict, physics: dict | None = None) -> tuple[dict, bool]:
+    """Merge the best-matching object entry over the defaults (longest key wins).
+
+    Real CoppeliaSim physics (``physics``: mass/friction) sits between the global
+    ``defaults`` and the per-task config, so it improves the defaults while explicit
+    per-task values still win."""
     name = stem.lower()
     best_key, best_len = None, -1
     for key in task_block:
@@ -201,6 +252,31 @@ def _config_spec(stem: str, defaults: dict, task_block: dict) -> tuple[dict, boo
         if (name == token or name.endswith(token)) and len(token) > best_len:
             best_key, best_len = key, len(token)
     spec = dict(defaults)
+    if physics:
+        if physics.get("dynamic") is not None:
+            spec["type"] = "rigid" if bool(physics["dynamic"]) else "kinematic"
+        if physics.get("collidable") is not None:
+            spec["collision"] = bool(physics["collidable"])
+        friction = physics.get("friction")
+        if friction is not None:
+            spec["static_friction"] = float(friction)
+            spec["dynamic_friction"] = float(friction)
+        # A hand-authored physics JSON may give a material density (kg/m^3); otherwise use the
+        # CoppeliaSim-measured mass. Either one clears the other so the baker uses the one given.
+        if physics.get("density") is not None:
+            spec["density"] = float(physics["density"])
+            spec["mass"] = None
+        elif physics.get("mass") is not None:
+            spec["mass"] = float(physics["mass"])
+            spec["density"] = None
+        # Collider approximation + contact tuning may also be authored in the physics JSON, so a
+        # hollow box / thin lid can get a CONCAVE-correct collider ('convexDecomposition' = the
+        # walls/cavity as separate convex pieces) instead of the convex-hull default that fills the
+        # cavity into a solid block. Per-task config still overrides these.
+        for _k in ("collider", "contact_offset", "rest_offset",
+                   "max_convex_hulls", "hull_vertex_limit", "voxel_resolution", "sdf_resolution"):
+            if physics.get(_k) is not None:
+                spec[_k] = physics[_k]
     if best_key is not None:
         spec.update(task_block[best_key])
     spec["type"] = TYPE_ALIASES.get(str(spec.get("type", "rigid")).lower(), "rigid")
@@ -247,7 +323,7 @@ def _bake_rigid(stage: Usd.Stage, spec: dict, kinematic: bool) -> int:
     # no collider is just decoration, so we skip the rigid body too; a *dynamic*
     # body with no collider is still authored on request (it falls under gravity
     # but never makes contact).
-    want_collision = bool(spec.get("collision", True))
+    want_collision = bool(spec["collision"])
     author_body = want_collision or not kinematic
     if not want_collision and not kinematic:
         print("         collision=false on a rigid body: it will fall freely and never collide.")
@@ -402,8 +478,10 @@ def bake_folder(input_dir: Path, output_dir: Path, task: str | None) -> int:
         raise FileNotFoundError(f"Input dir not found: {input_dir}")
 
     defaults, task_block = ({}, {})
+    task_physics = {}
     if task:
         defaults, task_block = _load_task_config(args_cli.config, task)
+        task_physics = {} if args_cli.no_import_physics else _load_task_physics(task)
 
     usd_files = sorted(
         path for path in input_dir.iterdir() if path.is_file() and path.suffix.lower() in USD_EXTENSIONS
@@ -419,7 +497,9 @@ def bake_folder(input_dir: Path, output_dir: Path, task: str | None) -> int:
             print(f"[SKIP]: {dst.name} already exists (use --overwrite).")
             continue
         if task:
-            spec, matched = _config_spec(src.stem, defaults, task_block)
+            spec, matched = _config_spec(
+                src.stem, defaults, task_block, _physics_for_stem(src.stem, task_physics)
+            )
             if not matched:
                 print(f"[WARN]: '{src.name}' matched no object rule; using default type '{spec['type']}'.")
         else:
@@ -429,7 +509,7 @@ def bake_folder(input_dir: Path, output_dir: Path, task: str | None) -> int:
         bits = []
         if result_mode != "visual" and density:
             bits.append(f"density={density}")
-        if result_mode != "visual" and not spec.get("collision", True):
+        if result_mode != "visual" and not spec["collision"]:
             bits.append("no-collision")
         detail = " ".join(bits)
         print(f"[OK]:   {src.name:<48} -> {result_mode:<10} ({mesh_count} mesh(es)) {detail}")
