@@ -1,0 +1,464 @@
+[
+  {
+    "handle": 81,
+    "hierarchy_path": "open_wine_bottle/bottle",
+    "name": "bottle",
+    "parent": "open_wine_bottle",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.001736,
+        0.003187,
+        -2.566682
+      ],
+      "position_xyz_m": [
+        -0.067542,
+        0.033308,
+        0.147652
+      ],
+      "quaternion_xyzw": [
+        0.001774,
+        0.000381,
+        0.958967,
+        -0.283511
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.001736,
+        0.003187,
+        -2.566682
+      ],
+      "position_xyz_m": [
+        -0.067542,
+        0.033308,
+        0.147652
+      ],
+      "quaternion_xyzw": [
+        0.001774,
+        0.000381,
+        0.958967,
+        -0.283511
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.001372,
+        0.00336,
+        -2.677919
+      ],
+      "position_xyz_m": [
+        0.05862,
+        0.398593,
+        0.899652
+      ],
+      "quaternion_xyzw": [
+        0.001793,
+        0.000281,
+        0.973245,
+        -0.229764
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.645308,
+      "x_uniform_min_m": -0.030779,
+      "y_uniform_max_m": 0.445237,
+      "y_uniform_min_m": -0.511854,
+      "z_fixed_m": 0.899652
+    }
+  },
+  {
+    "handle": 82,
+    "hierarchy_path": "open_wine_bottle/bottle/bottle_visual",
+    "name": "bottle_visual",
+    "parent": "bottle",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.3e-05,
+        0.003645,
+        -0.084034
+      ],
+      "position_xyz_m": [
+        0.000555,
+        2.7e-05,
+        0.000242
+      ],
+      "quaternion_xyzw": [
+        -9.3e-05,
+        0.00182,
+        -0.042005,
+        0.999116
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.000273,
+        0.000146,
+        -2.650719
+      ],
+      "position_xyz_m": [
+        -0.067992,
+        0.032985,
+        0.147896
+      ],
+      "quaternion_xyzw": [
+        3.8e-05,
+        -0.00015,
+        0.970031,
+        -0.24298
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.000288,
+        0.000115,
+        -2.761956
+      ],
+      "position_xyz_m": [
+        0.058136,
+        0.398321,
+        0.899896
+      ],
+      "quaternion_xyzw": [
+        2.9e-05,
+        -0.000152,
+        0.982038,
+        -0.18868
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.64557,
+      "x_uniform_min_m": -0.031041,
+      "y_uniform_max_m": 0.445499,
+      "y_uniform_min_m": -0.512116,
+      "z_fixed_m": 0.899896
+    }
+  },
+  {
+    "handle": 83,
+    "hierarchy_path": "open_wine_bottle/bottle/label",
+    "name": "label",
+    "parent": "bottle",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.006626,
+        -0.006656,
+        -0.58548
+      ],
+      "position_xyz_m": [
+        0.021861,
+        -0.01402,
+        -0.03663
+      ],
+      "quaternion_xyzw": [
+        -0.002212,
+        -0.004142,
+        -0.288563,
+        0.957449
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.000205,
+        0.012375,
+        3.131031
+      ],
+      "position_xyz_m": [
+        -0.093629,
+        0.033124,
+        0.111105
+      ],
+      "quaternion_xyzw": [
+        0.006188,
+        -7e-05,
+        0.999967,
+        0.00528
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.001578,
+        0.012276,
+        3.019785
+      ],
+      "position_xyz_m": [
+        0.032673,
+        0.401305,
+        0.863105
+      ],
+      "quaternion_xyzw": [
+        0.006175,
+        -0.000414,
+        0.998127,
+        0.06086
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.669315,
+      "x_uniform_min_m": -0.054786,
+      "y_uniform_max_m": 0.469243,
+      "y_uniform_min_m": -0.53586,
+      "z_fixed_m": 0.863105
+    }
+  },
+  {
+    "handle": 85,
+    "hierarchy_path": "open_wine_bottle/bottle/joint/dummy",
+    "name": "dummy",
+    "parent": "joint",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        2e-06,
+        -6e-06,
+        0.0
+      ],
+      "position_xyz_m": [
+        2e-06,
+        1e-06,
+        0.06401
+      ],
+      "quaternion_xyzw": [
+        -1e-06,
+        3e-06,
+        -0.0,
+        -1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        2e-06,
+        -6e-06,
+        -0.0
+      ],
+      "position_xyz_m": [
+        -0.067994,
+        0.033003,
+        0.290036
+      ],
+      "quaternion_xyzw": [
+        1e-06,
+        -3e-06,
+        -0.0,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1e-06,
+        -6e-06,
+        -0.111237
+      ],
+      "position_xyz_m": [
+        0.058136,
+        0.39834,
+        1.042036
+      ],
+      "quaternion_xyzw": [
+        1e-06,
+        -3e-06,
+        -0.05559,
+        0.998454
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.64558,
+      "x_uniform_min_m": -0.031051,
+      "y_uniform_max_m": 0.445509,
+      "y_uniform_min_m": -0.512126,
+      "z_fixed_m": 1.042036
+    }
+  },
+  {
+    "handle": 87,
+    "hierarchy_path": "open_wine_bottle/bottle/joint/dummy/Force_sensor/cap",
+    "name": "cap",
+    "parent": "Force_sensor",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        2e-06,
+        -3e-06,
+        0.0
+      ],
+      "position_xyz_m": [
+        -0.0,
+        0.0,
+        0.004
+      ],
+      "quaternion_xyzw": [
+        1e-06,
+        -2e-06,
+        -0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        4e-06,
+        -9e-06,
+        -0.0
+      ],
+      "position_xyz_m": [
+        -0.067997,
+        0.033002,
+        0.302027
+      ],
+      "quaternion_xyzw": [
+        2e-06,
+        -5e-06,
+        -0.0,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3e-06,
+        -1e-05,
+        -0.111237
+      ],
+      "position_xyz_m": [
+        0.058134,
+        0.398339,
+        1.054027
+      ],
+      "quaternion_xyzw": [
+        2e-06,
+        -5e-06,
+        -0.05559,
+        0.998454
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.645582,
+      "x_uniform_min_m": -0.031053,
+      "y_uniform_max_m": 0.445511,
+      "y_uniform_min_m": -0.512128,
+      "z_fixed_m": 1.054027
+    }
+  },
+  {
+    "handle": 88,
+    "hierarchy_path": "open_wine_bottle/bottle/joint/dummy/Force_sensor/cap/cap_visual",
+    "name": "cap_visual",
+    "parent": "cap",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570795,
+        0.751971,
+        -1.570798
+      ],
+      "position_xyz_m": [
+        4.5e-05,
+        -0.000127,
+        -0.004636
+      ],
+      "quaternion_xyzw": [
+        0.648667,
+        0.281478,
+        0.648668,
+        -0.281478
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570783,
+        0.751971,
+        -1.57081
+      ],
+      "position_xyz_m": [
+        -0.067952,
+        0.032875,
+        0.297391
+      ],
+      "quaternion_xyzw": [
+        0.648664,
+        0.281478,
+        0.648672,
+        -0.281478
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570781,
+        0.863208,
+        -1.570813
+      ],
+      "position_xyz_m": [
+        0.058164,
+        0.398208,
+        1.049391
+      ],
+      "quaternion_xyzw": [
+        0.663308,
+        0.244984,
+        0.663316,
+        -0.244984
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.645486,
+      "x_uniform_min_m": -0.030958,
+      "y_uniform_max_m": 0.445415,
+      "y_uniform_min_m": -0.512032,
+      "z_fixed_m": 1.049391
+    }
+  }
+]

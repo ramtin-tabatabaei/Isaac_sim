@@ -1,0 +1,167 @@
+{
+  "graspable_objects": [
+    {
+      "fixed_offset_from_task_boundary_root_xyz_m": [
+        -0.001448,
+        -0.095629,
+        0.08133
+      ],
+      "fixed_orientation_from_task_boundary_root_rpy_rad": [
+        -2.688998,
+        0.701099,
+        -1.500891
+      ],
+      "name": "hockey_stick",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -2.340959,
+          0.16145,
+          -2.271065
+        ],
+        "position_xyz_m": [
+          0.393856,
+          0.06334,
+          0.83333
+        ],
+        "quaternion_xyzw": [
+          0.415543,
+          0.819099,
+          0.383535,
+          -0.096448
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_distribution": {
+        "x_uniform_max_m": 0.550198,
+        "x_uniform_min_m": -0.063617,
+        "y_uniform_max_m": 0.299255,
+        "y_uniform_min_m": -0.329492,
+        "z_fixed_m": 0.83333
+      }
+    }
+  ],
+  "other_scene_objects": [
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        -0.067674,
+        0.013809,
+        -0.003251
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        0.052943,
+        -0.038388,
+        -0.02246
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        -0.853918,
+        0.098183,
+        -0.504123
+      ],
+      "has_separate_distribution": false,
+      "name": "hockey_goal",
+      "reference_graspable_object": "hockey_stick",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.559912,
+          0.654771,
+          3.129476
+        ],
+        "position_xyz_m": [
+          0.446798,
+          0.024952,
+          0.81087
+        ],
+        "quaternion_xyzw": [
+          0.224579,
+          0.667269,
+          0.671801,
+          0.230217
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.61544,
+        "x_uniform_min_m": -0.128859,
+        "y_uniform_max_m": 0.364498,
+        "y_uniform_min_m": -0.394734,
+        "z_fixed_m": 0.81087
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        0.215576,
+        -0.140875,
+        0.138081
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        -0.221241,
+        0.17785,
+        -0.069333
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        -2.469303,
+        0.498119,
+        -3.059405
+      ],
+      "has_separate_distribution": false,
+      "name": "hockey_ball",
+      "reference_graspable_object": "hockey_stick",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.000153,
+          -0.001461,
+          -0.68014
+        ],
+        "position_xyz_m": [
+          0.172615,
+          0.24119,
+          0.763997
+        ],
+        "quaternion_xyzw": [
+          0.000172,
+          -0.000714,
+          -0.333553,
+          0.942731
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.64289,
+        "x_uniform_min_m": -0.15631,
+        "y_uniform_max_m": 0.391947,
+        "y_uniform_min_m": -0.422185,
+        "z_fixed_m": 0.763997
+      }
+    }
+  ],
+  "task_base_rotation_rz_bounds_rad": [
+    -3.14,
+    3.14
+  ],
+  "task_boundary_root": "hockey",
+  "task_boundary_root_world_pose_after_reset": {
+    "kind": "exact",
+    "orientation_rpy_rad": [
+      -0.0,
+      0.0,
+      0.869712
+    ],
+    "position_xyz_m": [
+      0.321716,
+      0.126132,
+      0.752
+    ],
+    "quaternion_xyzw": [
+      0.0,
+      0.0,
+      0.42128,
+      0.906931
+    ],
+    "source": "exact_after_one_rlbench_reset"
+  },
+  "type": "Uniform for x/y; fixed z",
+  "units": "meters"
+}

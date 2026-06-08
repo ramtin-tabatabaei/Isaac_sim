@@ -1,0 +1,33 @@
+{
+  "shapes": {
+    "stand": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 48.828125,
+      "friction": 1.0
+    },
+    "umbrella": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.0028265747241675854,
+      "friction": 1.0
+    },
+    "stand_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.01061488501727581,
+      "friction": 0.7099999785423279
+    },
+    "umbrella_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 11.0,
+      "friction": 0.7099999785423279
+    }
+  },
+  "joints": {}
+}

@@ -1,0 +1,617 @@
+[
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.000346,
+          -0.0,
+          -4e-06
+        ],
+        "position_xyz_m": [
+          0.024935,
+          -0.025228,
+          -0.20825
+        ],
+        "quaternion_xyzw": [
+          -0.000173,
+          -0.0,
+          -2e-06,
+          1.0
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "item",
+      "world_offset_xyz_m": [
+        -0.02013,
+        -0.029201,
+        -0.208251
+      ]
+    },
+    "handle": 87,
+    "hierarchy_path": "put_item_in_drawer/drawer_frame",
+    "name": "drawer_frame",
+    "parent": "put_item_in_drawer",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.000345,
+        -2.6e-05,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        0.025,
+        -0.175,
+        0.277492
+      ],
+      "quaternion_xyzw": [
+        -0.000113,
+        -0.000131,
+        -0.707107,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.000345,
+        -2.6e-05,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        0.025,
+        -0.175,
+        0.277492
+      ],
+      "quaternion_xyzw": [
+        -0.000113,
+        -0.000131,
+        -0.707107,
+        0.707107
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.000335,
+        -8.9e-05,
+        -1.386065
+      ],
+      "position_xyz_m": [
+        0.2351,
+        -0.139153,
+        1.029492
+      ],
+      "quaternion_xyzw": [
+        -0.0001,
+        -0.000141,
+        -0.638873,
+        0.769312
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.448746,
+      "x_uniform_min_m": 0.047448,
+      "y_uniform_max_m": -0.037161,
+      "y_uniform_min_m": -0.267336,
+      "z_fixed_m": 1.029492
+    }
+  },
+  {
+    "handle": 101,
+    "hierarchy_path": "put_item_in_drawer/item",
+    "name": "item",
+    "parent": "put_item_in_drawer",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.000345,
+        -0.000372,
+        -1.570792
+      ],
+      "position_xyz_m": [
+        0.050151,
+        -0.149993,
+        0.485743
+      ],
+      "quaternion_xyzw": [
+        9e-06,
+        -0.000253,
+        -0.707105,
+        0.707108
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.462413,
+      "x_uniform_min_m": 0.080254,
+      "y_uniform_max_m": -0.004433,
+      "y_uniform_min_m": -0.248715,
+      "z_fixed_m": 1.237743
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.000345,
+        -0.000372,
+        -1.570792
+      ],
+      "position_xyz_m": [
+        0.050151,
+        -0.149993,
+        0.485743
+      ],
+      "quaternion_xyzw": [
+        9e-06,
+        -0.000253,
+        -0.707105,
+        0.707108
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.000271,
+        -0.000429,
+        -1.38606
+      ],
+      "position_xyz_m": [
+        0.255229,
+        -0.109951,
+        1.237743
+      ],
+      "quaternion_xyzw": [
+        3.3e-05,
+        -0.000251,
+        -0.638871,
+        0.769314
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.462413,
+      "x_uniform_min_m": 0.080254,
+      "y_uniform_max_m": -0.004433,
+      "y_uniform_min_m": -0.248715,
+      "z_fixed_m": 1.237743
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.570797,
+          4e-06,
+          -1.570771
+        ],
+        "position_xyz_m": [
+          0.023429,
+          -0.025212,
+          -0.442908
+        ],
+        "quaternion_xyzw": [
+          -0.500008,
+          -0.499993,
+          -0.499994,
+          0.500005
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "item",
+      "world_offset_xyz_m": [
+        -0.020289,
+        -0.027781,
+        -0.442909
+      ]
+    },
+    "handle": 92,
+    "hierarchy_path": "put_item_in_drawer/drawer_frame/drawer_legs",
+    "name": "drawer_legs",
+    "parent": "drawer_frame",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570451,
+        -0.0,
+        -1.570771
+      ],
+      "position_xyz_m": [
+        -0.001506,
+        9.8e-05,
+        -0.234658
+      ],
+      "quaternion_xyzw": [
+        -0.49992,
+        -0.499907,
+        -0.50008,
+        0.500093
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570796,
+        3.141273
+      ],
+      "position_xyz_m": [
+        0.025104,
+        -0.173575,
+        0.042834
+      ],
+      "quaternion_xyzw": [
+        -0.706976,
+        -0.000113,
+        -0.707238,
+        -0.000113
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.568778,
+        1.386064,
+        -1.5731
+      ],
+      "position_xyz_m": [
+        0.23494,
+        -0.137733,
+        0.794833
+      ],
+      "quaternion_xyzw": [
+        -0.703952,
+        -0.06532,
+        -0.704234,
+        0.06512
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.448297,
+      "x_uniform_min_m": 0.048089,
+      "y_uniform_max_m": -0.035805,
+      "y_uniform_min_m": -0.265941,
+      "z_fixed_m": 0.794833
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          -1.570796,
+          -3e-06
+        ],
+        "position_xyz_m": [
+          0.001855,
+          -0.025228,
+          -0.326862
+        ],
+        "quaternion_xyzw": [
+          0.0,
+          -0.707097,
+          -2e-06,
+          0.707116
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "item",
+      "world_offset_xyz_m": [
+        -0.024318,
+        -0.006546,
+        -0.326871
+      ]
+    },
+    "handle": 89,
+    "hierarchy_path": "put_item_in_drawer/drawer_frame/drawer_joint_bottom/drawer_bottom",
+    "name": "drawer_bottom",
+    "parent": "drawer_joint_bottom",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -2.6e-05,
+        1e-06,
+        1.570793
+      ],
+      "position_xyz_m": [
+        -1.4e-05,
+        0.035887,
+        0.021188
+      ],
+      "quaternion_xyzw": [
+        9e-06,
+        -1e-05,
+        -0.707106,
+        -0.707108
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.571115,
+        -1e-06,
+        -1.571172
+      ],
+      "position_xyz_m": [
+        0.025044,
+        -0.151961,
+        0.158872
+      ],
+      "quaternion_xyzw": [
+        -0.499986,
+        -0.500174,
+        -0.500014,
+        0.499827
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.571121,
+        -0.184733,
+        -1.571231
+      ],
+      "position_xyz_m": [
+        0.230911,
+        -0.116498,
+        0.910872
+      ],
+      "quaternion_xyzw": [
+        -0.451721,
+        -0.544158,
+        -0.451781,
+        0.543815
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.43997,
+      "x_uniform_min_m": 0.056305,
+      "y_uniform_max_m": -0.015859,
+      "y_uniform_min_m": -0.244571,
+      "z_fixed_m": 0.910872
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          -1.570796,
+          -5e-06
+        ],
+        "position_xyz_m": [
+          0.001866,
+          -0.025229,
+          -0.206799
+        ],
+        "quaternion_xyzw": [
+          0.0,
+          -0.707099,
+          -3e-06,
+          0.707115
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "item",
+      "world_offset_xyz_m": [
+        -0.024368,
+        -0.006525,
+        -0.206807
+      ]
+    },
+    "handle": 94,
+    "hierarchy_path": "put_item_in_drawer/drawer_frame/drawer_joint_middle/drawer_middle",
+    "name": "drawer_middle",
+    "parent": "drawer_joint_middle",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -2.4e-05,
+        3e-06,
+        1.570793
+      ],
+      "position_xyz_m": [
+        -1.1e-05,
+        0.037381,
+        0.02118
+      ],
+      "quaternion_xyzw": [
+        -8e-06,
+        1e-05,
+        0.707106,
+        0.707108
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.571119,
+        -1e-06,
+        -1.571172
+      ],
+      "position_xyz_m": [
+        0.024999,
+        -0.151931,
+        0.278936
+      ],
+      "quaternion_xyzw": [
+        -0.499986,
+        -0.500175,
+        -0.500013,
+        0.499825
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.571125,
+        -0.184733,
+        -1.571233
+      ],
+      "position_xyz_m": [
+        0.230861,
+        -0.116476,
+        1.030935
+      ],
+      "quaternion_xyzw": [
+        -0.451722,
+        -0.544159,
+        -0.45178,
+        0.543813
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.439917,
+      "x_uniform_min_m": 0.056275,
+      "y_uniform_max_m": -0.015848,
+      "y_uniform_min_m": -0.244534,
+      "z_fixed_m": 1.030935
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          -1.570796,
+          -8e-06
+        ],
+        "position_xyz_m": [
+          0.001865,
+          -0.025229,
+          -0.086774
+        ],
+        "quaternion_xyzw": [
+          2e-06,
+          -0.707101,
+          -4e-06,
+          0.707112
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "item",
+      "world_offset_xyz_m": [
+        -0.02442,
+        -0.006491,
+        -0.086782
+      ]
+    },
+    "handle": 98,
+    "hierarchy_path": "put_item_in_drawer/drawer_frame/drawer_joint_top/drawer_top",
+    "name": "drawer_top",
+    "parent": "drawer_joint_top",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -2.2e-05,
+        7e-06,
+        1.570794
+      ],
+      "position_xyz_m": [
+        -7e-06,
+        0.035885,
+        0.021189
+      ],
+      "quaternion_xyzw": [
+        6e-06,
+        -1e-05,
+        -0.707106,
+        -0.707108
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.571125,
+        -0.0,
+        -1.571176
+      ],
+      "position_xyz_m": [
+        0.024954,
+        -0.151888,
+        0.39896
+      ],
+      "quaternion_xyzw": [
+        -0.499987,
+        -0.500177,
+        -0.500013,
+        0.499823
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.571131,
+        -0.184732,
+        -1.571238
+      ],
+      "position_xyz_m": [
+        0.230809,
+        -0.116442,
+        1.15096
+      ],
+      "quaternion_xyzw": [
+        -0.451722,
+        -0.544161,
+        -0.45178,
+        0.543811
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.439859,
+      "x_uniform_min_m": 0.05625,
+      "y_uniform_max_m": -0.015826,
+      "y_uniform_min_m": -0.244484,
+      "z_fixed_m": 1.15096
+    }
+  }
+]

@@ -1,0 +1,61 @@
+{
+  "shapes": {
+    "plug": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.125008225440979,
+      "friction": 0.7099999785423279
+    },
+    "task_wall": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.1600000262260437,
+      "friction": 0.5
+    },
+    "charger": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.006976000033318996,
+      "friction": 0.5
+    },
+    "hole1": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.0010000000474974513,
+      "friction": 0.5
+    },
+    "hole2": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.0010000000474974513,
+      "friction": 0.5
+    },
+    "charger_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.05591148883104324,
+      "friction": 0.7099999785423279
+    },
+    "hole_visual1": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 7.853982242522761e-05,
+      "friction": 0.5
+    },
+    "hole_visual2": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 7.853982242522761e-05,
+      "friction": 0.5
+    }
+  },
+  "joints": {}
+}

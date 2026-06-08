@@ -1,0 +1,47 @@
+{
+  "shapes": {
+    "plant": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 30.0,
+      "friction": 0.7099999785423279
+    },
+    "waterer": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.008807373233139515,
+      "friction": 0.7099999785423279
+    },
+    "base_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 8.0,
+      "friction": 0.7099999785423279
+    },
+    "plant_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 22.0,
+      "friction": 0.7099999785423279
+    },
+    "waterer_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 29.0,
+      "friction": 0.7099999785423279
+    },
+    "head": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.0005235985736362636,
+      "friction": 0.5
+    }
+  },
+  "joints": {}
+}

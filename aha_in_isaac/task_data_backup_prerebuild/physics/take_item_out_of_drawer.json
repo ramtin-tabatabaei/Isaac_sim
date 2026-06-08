@@ -1,0 +1,66 @@
+{
+  "shapes": {
+    "item": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.06399998813867569,
+      "friction": 0.5
+    },
+    "drawer_frame": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 5.2734375,
+      "friction": 0.5
+    },
+    "drawer_legs": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.06573783606290817,
+      "friction": 0.5
+    },
+    "drawer_bottom": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.3375000059604645,
+      "friction": 0.5
+    },
+    "drawer_middle": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.3375000059604645,
+      "friction": 0.5
+    },
+    "drawer_top": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.3375000059604645,
+      "friction": 0.5
+    }
+  },
+  "joints": {
+    "drawer_joint_bottom": {
+      "type": "prismatic",
+      "cyclic": false,
+      "lower": 0.0,
+      "upper": 0.30000001192092896
+    },
+    "drawer_joint_middle": {
+      "type": "prismatic",
+      "cyclic": false,
+      "lower": 0.0,
+      "upper": 0.30000001192092896
+    },
+    "drawer_joint_top": {
+      "type": "prismatic",
+      "cyclic": false,
+      "lower": 0.0,
+      "upper": 0.30000001192092896
+    }
+  }
+}

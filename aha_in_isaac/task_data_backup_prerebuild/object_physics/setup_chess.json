@@ -1,0 +1,311 @@
+{
+  "chess_board_base": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "chess_board_surface": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "chess_board_base_visual": {
+    "type": "visual"
+  },
+  "white_squares": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "black_squares": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "white_queenside_knight_dynamic": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "white_kingside_knight_dynamic": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "white_pawn_a_dynamic": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "white_pawn_b_dynamic": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "white_pawn_c_dynamic": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "white_pawn_d_dynamic": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "white_pawn_e_dynamic": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "white_pawn_f_dynamic": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "white_pawn_g_dynamic": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "white_pawn_h_dynamic": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "white_queenside_rook_dynamic": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "white_kingside_rook_dynamic": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "white_queenside_bishop_dynamic": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "white_kingside_bishop_dynamic": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "white_queen_dynamic": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "white_king_dynamic": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "black_queenside_knight_dynamic": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "black_kingside_knight_dynamic": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "black_pawn_f_dynamic": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "black_pawn_a_dynamic": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "black_pawn_b_dynamic": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "black_pawn_c_dynamic": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "black_pawn_d_dynamic": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "black_pawn_e_dynamic": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "black_pawn_g_dynamic": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "black_pawn_h_dynamic": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "black_queenside_rook_dynamic": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "black_kingside_rook_dynamic": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "black_queenside_bishop_dynamic": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "black_kingside_bishop_dynamic": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "black_king_dynamic": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "black_queen_dynamic": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "white_queenside_knight": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "white_kingside_knight": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "white_pawn_a": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "white_pawn_b": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "white_pawn_c": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "white_pawn_d": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "white_pawn_e": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "white_pawn_f": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "white_pawn_g": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "white_pawn_h": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "white_queenside_rook": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "white_kingside_rook": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "white_queenside_bishop": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "white_kingside_bishop": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "white_queen": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "white_king": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "black_queenside_knight": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "black_kingside_knight": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "black_pawn_f": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "black_pawn_a": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "black_pawn_b": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "black_pawn_c": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "black_pawn_d": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "black_pawn_e": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "black_pawn_g": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "black_pawn_h": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "black_queenside_rook": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "black_kingside_rook": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "black_queenside_bishop": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "black_kingside_bishop": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "black_king": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "black_queen": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  }
+}

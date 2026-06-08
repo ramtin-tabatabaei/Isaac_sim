@@ -5,33 +5,47 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          0.756321,
-          -0.588756,
-          2.002364
+          0.756466,
+          -0.58993,
+          1.998656
         ],
         "position_xyz_m": [
-          0.093358,
-          0.054849,
-          -0.041849
+          0.093501,
+          0.054659,
+          -0.041836
         ],
         "quaternion_xyzw": [
-          -0.036517,
-          -0.442963,
-          0.691171,
-          0.569853
+          -0.036127,
+          -0.443309,
+          0.689836,
+          0.571225
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "mug2",
       "world_offset_xyz_m": [
-        -0.00651,
-        -0.040856,
-        -0.108462
+        -0.006514,
+        -0.040884,
+        -0.108473
       ]
     },
     "handle": 81,
     "hierarchy_path": "remove_cups/tree_boundary",
     "name": "tree_boundary",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.24733,
+        -0.095974,
+        0.752001
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.30996,
+      "x_min_m": 0.18854,
+      "y_max_m": -0.017835,
+      "y_min_m": -0.192581,
+      "z_max_m": 0.752001,
+      "z_min_m": 0.752001
+    },
     "parent": "remove_cups",
     "parent_local_location": {
       "kind": "exact",
@@ -83,8 +97,8 @@
         -0.0
       ],
       "position_xyz_m": [
-        0.258246,
-        -0.177952,
+        0.193926,
+        -0.044263,
         0.752001
       ],
       "quaternion_xyzw": [
@@ -100,7 +114,7 @@
       "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
       "x_uniform_max_m": 0.311757,
       "x_uniform_min_m": 0.188243,
-      "y_uniform_max_m": -0.014845,
+      "y_uniform_max_m": -0.014846,
       "y_uniform_min_m": -0.194947,
       "z_fixed_m": 0.752001
     }
@@ -111,33 +125,47 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          0.9765,
-          -0.50778,
-          0.77194
+          0.974522,
+          -0.50607,
+          0.780045
         ],
         "position_xyz_m": [
-          0.044302,
-          0.007907,
-          0.020105
+          0.044196,
+          0.008157,
+          0.020276
         ],
         "quaternion_xyzw": [
-          0.337134,
-          -0.376433,
-          0.212661,
-          0.83631
+          0.33515,
+          -0.376944,
+          0.216852,
+          0.835801
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "mug0",
       "world_offset_xyz_m": [
-        -0.046087,
-        0.001238,
-        -0.01743
+        -0.046125,
+        0.001326,
+        -0.017369
       ]
     },
     "handle": 82,
     "hierarchy_path": "remove_cups/tree_boundary/place_cups_holder_base",
     "name": "place_cups_holder_base",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.247327,
+        -0.095976,
+        0.909188
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.309958,
+      "x_min_m": 0.188537,
+      "y_max_m": -0.017836,
+      "y_min_m": -0.192582,
+      "z_max_m": 0.909188,
+      "z_min_m": 0.909188
+    },
     "parent": "tree_boundary",
     "parent_local_location": {
       "kind": "exact",
@@ -189,8 +217,8 @@
         -2.871499
       ],
       "position_xyz_m": [
-        0.258243,
-        -0.177954,
+        0.193924,
+        -0.044265,
         0.909188
       ],
       "quaternion_xyzw": [
@@ -217,33 +245,47 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -2.442419,
-          -1.330758,
-          -0.050604
+          -2.427423,
+          -1.329739,
+          -0.037436
         ],
         "position_xyz_m": [
-          -0.031229,
-          -0.011415,
-          0.027324
+          -0.0312,
+          -0.011378,
+          0.027348
         ],
         "quaternion_xyzw": [
-          -0.733514,
-          -0.230082,
-          0.573014,
-          0.284034
+          -0.733188,
+          -0.229417,
+          0.572789,
+          0.285861
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "mug2",
       "world_offset_xyz_m": [
-        0.013918,
-        0.005243,
-        0.040385
+        0.013914,
+        0.005215,
+        0.040374
       ]
     },
     "handle": 83,
     "hierarchy_path": "remove_cups/tree_boundary/place_cups_holder_base/place_cups_holder_spoke2",
     "name": "place_cups_holder_spoke2",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.267757,
+        -0.049875,
+        0.900847
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.330388,
+      "x_min_m": 0.208968,
+      "y_max_m": 0.028265,
+      "y_min_m": -0.146482,
+      "z_max_m": 0.900847,
+      "z_min_m": 0.900847
+    },
     "parent": "place_cups_holder_base",
     "parent_local_location": {
       "kind": "exact",
@@ -295,8 +337,8 @@
         1.420353
       ],
       "position_xyz_m": [
-        0.278674,
-        -0.131853,
+        0.214354,
+        0.001836,
         0.900847
       ],
       "quaternion_xyzw": [
@@ -323,33 +365,47 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          2.185169,
-          -0.128617,
-          -1.033184
+          2.172822,
+          -0.115115,
+          -1.027631
         ],
         "position_xyz_m": [
-          0.052099,
-          -0.020492,
-          -0.02398
+          0.052761,
+          -0.020596,
+          -0.022982
         ],
         "quaternion_xyzw": [
-          -0.784977,
-          -0.41189,
-          0.276438,
-          -0.371133
+          -0.782581,
+          -0.410913,
+          0.272831,
+          -0.379843
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "mug1",
       "world_offset_xyz_m": [
-        0.026142,
-        -0.049025,
-        -0.024947
+        0.026381,
+        -0.049213,
+        -0.024865
       ]
     },
     "handle": 86,
     "hierarchy_path": "remove_cups/tree_boundary/place_cups_holder_base/place_cups_holder_spoke3",
     "name": "place_cups_holder_spoke3",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.2269,
+        -0.142067,
+        0.900851
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.289531,
+      "x_min_m": 0.168111,
+      "y_max_m": -0.063927,
+      "y_min_m": -0.238674,
+      "z_max_m": 0.900851,
+      "z_min_m": 0.900851
+    },
     "parent": "place_cups_holder_base",
     "parent_local_location": {
       "kind": "exact",
@@ -401,8 +457,8 @@
         -1.721183
       ],
       "position_xyz_m": [
-        0.237817,
-        -0.224045,
+        0.173497,
+        -0.090356,
         0.900851
       ],
       "quaternion_xyzw": [
@@ -429,33 +485,47 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -2.485206,
-          -1.363997,
-          -0.261929
+          -2.561997,
+          -1.358614,
+          -0.327122
         ],
         "position_xyz_m": [
-          -0.02532,
-          -0.012496,
-          0.028439
+          -0.025356,
+          -0.012542,
+          0.02838
         ],
         "quaternion_xyzw": [
-          -0.702053,
-          -0.29741,
-          0.558914,
-          0.326013
+          -0.706383,
+          -0.298536,
+          0.55782,
+          0.31739
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "mug1",
       "world_offset_xyz_m": [
-        0.000468,
-        0.0175,
-        0.036049
+        0.000707,
+        0.017313,
+        0.036131
       ]
     },
     "handle": 89,
     "hierarchy_path": "remove_cups/tree_boundary/place_cups_holder_base/place_cups_holder_spoke1",
     "name": "place_cups_holder_spoke1",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.201226,
+        -0.075541,
+        0.961847
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.263857,
+      "x_min_m": 0.142437,
+      "y_max_m": 0.002599,
+      "y_min_m": -0.172148,
+      "z_max_m": 0.961847,
+      "z_min_m": 0.961847
+    },
     "parent": "place_cups_holder_base",
     "parent_local_location": {
       "kind": "exact",
@@ -507,8 +577,8 @@
         2.228078
       ],
       "position_xyz_m": [
-        0.212142,
-        -0.157519,
+        0.147823,
+        -0.02383,
         0.961847
       ],
       "quaternion_xyzw": [
@@ -535,33 +605,47 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -2.635498,
-          -1.394435,
-          -0.435033
+          -2.680777,
+          -1.392594,
+          -0.475026
         ],
         "position_xyz_m": [
-          -0.025196,
-          -0.012375,
-          0.02866
+          -0.025233,
+          -0.012449,
+          0.028612
         ],
         "quaternion_xyzw": [
-          -0.690038,
-          -0.317137,
-          0.565571,
-          0.321561
+          -0.691514,
+          -0.318109,
+          0.565676,
+          0.317215
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "mug0",
       "world_offset_xyz_m": [
-        0.0,
-        -0.019183,
-        0.035233
+        -3.8e-05,
+        -0.019095,
+        0.035295
       ]
     },
     "handle": 92,
     "hierarchy_path": "remove_cups/tree_boundary/place_cups_holder_base/place_cups_holder_spoke0",
     "name": "place_cups_holder_spoke0",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.293415,
+        -0.116397,
+        0.961852
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.356045,
+      "x_min_m": 0.234625,
+      "y_max_m": -0.038257,
+      "y_min_m": -0.213003,
+      "z_max_m": 0.961852,
+      "z_min_m": 0.961852
+    },
     "parent": "place_cups_holder_base",
     "parent_local_location": {
       "kind": "exact",
@@ -613,8 +697,8 @@
         -0.913367
       ],
       "position_xyz_m": [
-        0.304331,
-        -0.198375,
+        0.240011,
+        -0.064686,
         0.961852
       ],
       "quaternion_xyzw": [
@@ -631,61 +715,92 @@
       "x_uniform_max_m": 0.357841,
       "x_uniform_min_m": 0.234328,
       "y_uniform_max_m": -0.035268,
-      "y_uniform_min_m": -0.215369,
+      "y_uniform_min_m": -0.21537,
       "z_fixed_m": 0.961852
     }
   },
   {
+    "analytical_task_root_yaw_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.318271,
+      "x_uniform_min_m": 0.194758,
+      "y_uniform_max_m": 0.026039,
+      "y_uniform_min_m": -0.154063,
+      "z_fixed_m": 0.860474
+    },
     "handle": 84,
     "hierarchy_path": "remove_cups/tree_boundary/place_cups_holder_base/place_cups_holder_spoke2/mug2",
+    "is_graspable": true,
     "name": "mug2",
+    "observed_spawn_yaw_range_rad": [
+      -1.974497,
+      -1.965799
+    ],
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.253985,
+        -0.055147,
+        0.860353
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.316709,
+      "x_min_m": 0.195437,
+      "y_max_m": 0.023073,
+      "y_min_m": -0.151748,
+      "z_max_m": 0.860496,
+      "z_min_m": 0.860152
+    },
     "parent": "place_cups_holder_spoke2",
     "parent_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        1.832125,
-        -0.789391,
-        -1.226926
+        1.829383,
+        -0.78774,
+        -1.225823
       ],
       "position_xyz_m": [
-        0.034381,
-        0.010602,
-        -0.023615
+        0.03438,
+        0.010609,
+        -0.023585
       ],
       "quaternion_xyzw": [
-        0.733514,
-        0.230082,
-        -0.573014,
-        0.284034
+        0.733188,
+        0.229417,
+        -0.572789,
+        0.285861
       ],
       "source": "exact_parent_local_offset"
     },
     "placement_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.318267,
-      "x_uniform_min_m": 0.194754,
-      "y_uniform_max_m": 0.026011,
-      "y_uniform_min_m": -0.154091,
-      "z_fixed_m": 0.860462
+      "kind": "observed_over_rlbench_resets",
+      "n_resets_observed": 30,
+      "source": "observed_graspable_world_range_includes_spawn_translation_and_rotation",
+      "x_uniform_max_m": 0.316709,
+      "x_uniform_min_m": 0.195437,
+      "y_uniform_max_m": 0.023073,
+      "y_uniform_min_m": -0.151748,
+      "z_fixed_m": 0.860353,
+      "z_observed_max_m": 0.860496,
+      "z_observed_min_m": 0.860152
     },
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        0.824338,
-        0.471663,
-        -1.971977
+        0.823997,
+        0.474186,
+        -1.968774
       ],
       "position_xyz_m": [
-        0.036506,
-        -0.110146,
-        0.108463
+        0.03651,
+        -0.110118,
+        0.108474
       ],
       "quaternion_xyzw": [
-        0.036517,
-        0.442963,
-        -0.691171,
-        0.569853
+        0.036127,
+        0.443309,
+        -0.689836,
+        0.571225
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -693,31 +808,34 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        0.824338,
-        0.471663,
-        -1.971977
+        0.823997,
+        0.474186,
+        -1.968774
       ],
       "position_xyz_m": [
-        0.264756,
-        -0.137096,
-        0.860462
+        0.200441,
+        -0.003379,
+        0.860474
       ],
       "quaternion_xyzw": [
-        0.036517,
-        0.442963,
-        -0.691171,
-        0.569853
+        0.036127,
+        0.443309,
+        -0.689836,
+        0.571225
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.318267,
-      "x_uniform_min_m": 0.194754,
-      "y_uniform_max_m": 0.026011,
-      "y_uniform_min_m": -0.154091,
-      "z_fixed_m": 0.860462
+      "kind": "observed_over_rlbench_resets",
+      "n_resets_observed": 30,
+      "source": "observed_graspable_world_range_includes_spawn_translation_and_rotation",
+      "x_uniform_max_m": 0.316709,
+      "x_uniform_min_m": 0.195437,
+      "y_uniform_max_m": 0.023073,
+      "y_uniform_min_m": -0.151748,
+      "z_fixed_m": 0.860353,
+      "z_observed_max_m": 0.860496,
+      "z_observed_min_m": 0.860152
     }
   },
   {
@@ -726,51 +844,65 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          1.975515,
-          -0.650292,
-          -2.034111
+          1.979201,
+          -0.650662,
+          -2.031475
         ],
         "position_xyz_m": [
-          0.066014,
-          -0.013286,
-          0.04892
+          0.066048,
+          -0.013564,
+          0.048866
         ],
         "quaternion_xyzw": [
-          -0.565587,
-          -0.580353,
-          0.583988,
-          -0.047535
+          -0.566495,
+          -0.58059,
+          0.582905,
+          -0.047119
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "mug2",
       "world_offset_xyz_m": [
-        -0.011632,
-        -0.082413,
-        0.000515
+        -0.011584,
+        -0.082461,
+        0.000525
       ]
     },
     "handle": 87,
     "hierarchy_path": "remove_cups/tree_boundary/place_cups_holder_base/place_cups_holder_spoke3/mug3",
     "name": "mug3",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.242292,
+        -0.13759,
+        0.86103
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.304945,
+      "x_min_m": 0.183566,
+      "y_max_m": -0.059433,
+      "y_min_m": -0.234182,
+      "z_max_m": 0.861068,
+      "z_min_m": 0.860998
+    },
     "parent": "place_cups_holder_spoke3",
     "parent_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        1.766647,
-        -0.712836,
-        -1.21306
+        1.764855,
+        -0.709998,
+        -1.212526
       ],
       "position_xyz_m": [
-        0.03393,
-        0.012156,
-        -0.023362
+        0.033908,
+        0.012211,
+        -0.023358
       ],
       "quaternion_xyzw": [
-        0.721305,
-        0.230929,
-        -0.560557,
-        0.334914
+        0.720898,
+        0.231146,
+        -0.560009,
+        0.336553
       ],
       "source": "exact_parent_local_offset"
     },
@@ -778,20 +910,20 @@
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.841744,
-        -0.560692,
-        1.21959
+        -0.842709,
+        -0.56373,
+        1.220779
       ],
       "position_xyz_m": [
-        0.024874,
-        -0.192559,
-        0.108977
+        0.024926,
+        -0.192578,
+        0.108999
       ],
       "quaternion_xyzw": [
-        -0.466476,
-        0.01782,
-        0.594983,
-        0.654277
+        -0.467403,
+        0.017195,
+        0.595632,
+        0.65304
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -799,84 +931,115 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.841744,
-        -0.560692,
-        1.21959
+        -0.842709,
+        -0.56373,
+        1.220779
       ],
       "position_xyz_m": [
-        0.253124,
-        -0.219509,
-        0.860977
+        0.188856,
+        -0.085839,
+        0.860999
       ],
       "quaternion_xyzw": [
-        -0.466476,
-        0.01782,
-        0.594983,
-        0.654277
+        -0.467403,
+        0.017195,
+        0.595632,
+        0.65304
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
       "kind": "range",
       "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.306634,
-      "x_uniform_min_m": 0.183121,
-      "y_uniform_max_m": -0.056402,
-      "y_uniform_min_m": -0.236504,
-      "z_fixed_m": 0.860977
+      "x_uniform_max_m": 0.306686,
+      "x_uniform_min_m": 0.183173,
+      "y_uniform_max_m": -0.056422,
+      "y_uniform_min_m": -0.236523,
+      "z_fixed_m": 0.860999
     }
   },
   {
+    "analytical_task_root_yaw_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.264946,
+      "x_uniform_min_m": 0.141433,
+      "y_uniform_max_m": -0.011725,
+      "y_uniform_min_m": -0.191827,
+      "z_fixed_m": 0.925716
+    },
     "handle": 90,
     "hierarchy_path": "remove_cups/tree_boundary/place_cups_holder_base/place_cups_holder_spoke1/mug1",
+    "is_graspable": true,
     "name": "mug1",
+    "observed_spawn_yaw_range_rad": [
+      0.122984,
+      0.149146
+    ],
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.200854,
+        -0.092967,
+        0.925759
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.263742,
+      "x_min_m": 0.142128,
+      "y_max_m": -0.014862,
+      "y_min_m": -0.189572,
+      "z_max_m": 0.925826,
+      "z_min_m": 0.925691
+    },
     "parent": "place_cups_holder_spoke1",
     "parent_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        1.773807,
-        -0.632119,
-        -1.322426
+        1.792565,
+        -0.641708,
+        -1.319202
       ],
       "position_xyz_m": [
-        0.031597,
-        0.016189,
-        -0.018589
+        0.031775,
+        0.016115,
+        -0.01834
       ],
       "quaternion_xyzw": [
-        0.702053,
-        0.29741,
-        -0.558914,
-        0.326013
+        0.706383,
+        0.298536,
+        -0.55782,
+        0.31739
       ],
       "source": "exact_parent_local_offset"
     },
     "placement_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.265185,
-      "x_uniform_min_m": 0.141672,
-      "y_uniform_max_m": -0.011913,
-      "y_uniform_min_m": -0.192014,
-      "z_fixed_m": 0.925798
+      "kind": "observed_over_rlbench_resets",
+      "n_resets_observed": 30,
+      "source": "observed_graspable_world_range_includes_spawn_translation_and_rotation",
+      "x_uniform_max_m": 0.263742,
+      "x_uniform_min_m": 0.142128,
+      "y_uniform_max_m": -0.014862,
+      "y_uniform_min_m": -0.189572,
+      "z_fixed_m": 0.925759,
+      "z_observed_max_m": 0.925826,
+      "z_observed_min_m": 0.925691
     },
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.858595,
-        0.700542,
-        0.137541
+        -0.843671,
+        0.714352,
+        0.11991
       ],
       "position_xyz_m": [
-        -0.016576,
-        -0.148069,
-        0.173798
+        -0.016814,
+        -0.147882,
+        0.173716
       ],
       "quaternion_xyzw": [
-        -0.368594,
-        0.338142,
-        -0.083807,
-        0.861844
+        -0.363793,
+        0.341392,
+        -0.091677,
+        0.861801
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -884,84 +1047,118 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.858595,
-        0.700542,
-        0.137541
+        -0.843671,
+        0.714352,
+        0.11991
       ],
       "position_xyz_m": [
-        0.211674,
-        -0.17502,
-        0.925798
+        0.147116,
+        -0.041143,
+        0.925716
       ],
       "quaternion_xyzw": [
-        -0.368594,
-        0.338142,
-        -0.083807,
-        0.861844
+        -0.363793,
+        0.341392,
+        -0.091677,
+        0.861801
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.265185,
-      "x_uniform_min_m": 0.141672,
-      "y_uniform_max_m": -0.011913,
-      "y_uniform_min_m": -0.192014,
-      "z_fixed_m": 0.925798
+      "kind": "observed_over_rlbench_resets",
+      "n_resets_observed": 30,
+      "source": "observed_graspable_world_range_includes_spawn_translation_and_rotation",
+      "x_uniform_max_m": 0.263742,
+      "x_uniform_min_m": 0.142128,
+      "y_uniform_max_m": -0.014862,
+      "y_uniform_min_m": -0.189572,
+      "z_fixed_m": 0.925759,
+      "z_observed_max_m": 0.925826,
+      "z_observed_min_m": 0.925691
     }
   },
   {
+    "analytical_task_root_yaw_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.357879,
+      "x_uniform_min_m": 0.234366,
+      "y_uniform_max_m": -0.016173,
+      "y_uniform_min_m": -0.196275,
+      "z_fixed_m": 0.926557
+    },
     "handle": 93,
     "hierarchy_path": "remove_cups/tree_boundary/place_cups_holder_base/place_cups_holder_spoke0/mug0",
+    "is_graspable": true,
     "name": "mug0",
+    "observed_spawn_yaw_range_rad": [
+      -3.046187,
+      -3.035868
+    ],
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.293433,
+        -0.097252,
+        0.926582
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.356087,
+      "x_min_m": 0.234672,
+      "y_max_m": -0.019192,
+      "y_min_m": -0.19389,
+      "z_max_m": 0.926653,
+      "z_min_m": 0.926533
+    },
     "parent": "place_cups_holder_spoke0",
     "parent_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        1.759736,
-        -0.614528,
-        -1.374809
+        1.767046,
+        -0.619376,
+        -1.375969
       ],
       "position_xyz_m": [
-        0.030451,
-        0.017537,
-        -0.019355
+        0.030532,
+        0.017471,
+        -0.019309
       ],
       "quaternion_xyzw": [
-        0.690038,
-        0.317137,
-        -0.565571,
-        0.321561
+        0.691514,
+        0.318109,
+        -0.565676,
+        0.317215
       ],
       "source": "exact_parent_local_offset"
     },
     "placement_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.357841,
-      "x_uniform_min_m": 0.234328,
-      "y_uniform_max_m": -0.016085,
-      "y_uniform_min_m": -0.196186,
-      "z_fixed_m": 0.926618
+      "kind": "observed_over_rlbench_resets",
+      "n_resets_observed": 30,
+      "source": "observed_graspable_world_range_includes_spawn_translation_and_rotation",
+      "x_uniform_max_m": 0.356087,
+      "x_uniform_min_m": 0.234672,
+      "y_uniform_max_m": -0.019192,
+      "y_uniform_min_m": -0.19389,
+      "z_fixed_m": 0.926582,
+      "z_observed_max_m": 0.926653,
+      "z_observed_min_m": 0.926533
     },
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        0.882949,
-        -0.690942,
-        -3.032561
+        0.875963,
+        -0.696437,
+        -3.042416
       ],
       "position_xyz_m": [
-        0.076081,
-        -0.152241,
-        0.174618
+        0.076119,
+        -0.15233,
+        0.174557
       ],
       "quaternion_xyzw": [
-        -0.327623,
-        -0.384748,
-        0.857324,
-        0.098123
+        -0.328396,
+        -0.382851,
+        0.857384,
+        0.102344
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -969,34 +1166,46 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        0.882949,
-        -0.690942,
-        -3.032561
+        0.875963,
+        -0.696437,
+        -3.042416
       ],
       "position_xyz_m": [
-        0.304331,
-        -0.179191,
-        0.926618
+        0.240049,
+        -0.045591,
+        0.926557
       ],
       "quaternion_xyzw": [
-        -0.327623,
-        -0.384748,
-        0.857324,
-        0.098123
+        -0.328396,
+        -0.382851,
+        0.857384,
+        0.102344
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.357841,
-      "x_uniform_min_m": 0.234328,
-      "y_uniform_max_m": -0.016085,
-      "y_uniform_min_m": -0.196186,
-      "z_fixed_m": 0.926618
+      "kind": "observed_over_rlbench_resets",
+      "n_resets_observed": 30,
+      "source": "observed_graspable_world_range_includes_spawn_translation_and_rotation",
+      "x_uniform_max_m": 0.356087,
+      "x_uniform_min_m": 0.234672,
+      "y_uniform_max_m": -0.019192,
+      "y_uniform_min_m": -0.19389,
+      "z_fixed_m": 0.926582,
+      "z_observed_max_m": 0.926653,
+      "z_observed_min_m": 0.926533
     }
   },
   {
+    "analytical_task_root_yaw_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.321116,
+      "x_uniform_min_m": 0.197603,
+      "y_uniform_max_m": 0.030512,
+      "y_uniform_min_m": -0.149589,
+      "z_fixed_m": 0.865351
+    },
     "fixed_relation_to_nearest_graspable": {
       "has_separate_position_range": false,
       "reference_local_location": {
@@ -1021,14 +1230,30 @@
       },
       "reference_object": "mug2",
       "world_offset_xyz_m": [
-        0.002864,
-        0.004468,
-        0.004871
+        0.002845,
+        0.004474,
+        0.004877
       ]
     },
     "handle": 85,
     "hierarchy_path": "remove_cups/tree_boundary/place_cups_holder_base/place_cups_holder_spoke2/mug2/mug_visual2",
+    "mounted_note": "Rigidly mounted on graspable 'mug2'. RLBench re-places 'mug2' each episode at a random position within its spawn region and a random yaw (RLBench default +/-pi). This object sits ~0.005 m from 'mug2' rotation axis, so its absolute world position sweeps a wide ring; its pose relative to 'mug2' is fixed.",
+    "mounted_on_graspable": "mug2",
     "name": "mug_visual2",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.256836,
+        -0.05069,
+        0.865242
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.319536,
+      "x_min_m": 0.198298,
+      "y_max_m": 0.027549,
+      "y_min_m": -0.147281,
+      "z_max_m": 0.86537,
+      "z_min_m": 0.865066
+    },
     "parent": "mug2",
     "parent_local_location": {
       "kind": "exact",
@@ -1051,23 +1276,24 @@
       "source": "exact_parent_local_offset"
     },
     "placement_range": null,
+    "rotation_radius_from_graspable_m": 0.005311,
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        0.07327,
-        -0.96156,
-        -0.179536
+        0.079844,
+        -0.961648,
+        -0.172883
       ],
       "position_xyz_m": [
-        0.03937,
-        -0.105678,
-        0.113333
+        0.039356,
+        -0.105644,
+        0.113351
       ],
       "quaternion_xyzw": [
-        0.073775,
-        -0.457388,
-        -0.096302,
-        0.880954
+        0.075152,
+        -0.457361,
+        -0.094874,
+        0.881006
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -1075,31 +1301,34 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        0.07327,
-        -0.96156,
-        -0.179536
+        0.079843,
+        -0.961648,
+        -0.172883
       ],
       "position_xyz_m": [
-        0.26762,
-        -0.132628,
-        0.865333
+        0.203286,
+        0.001095,
+        0.865351
       ],
       "quaternion_xyzw": [
-        0.073775,
-        -0.457388,
-        -0.096302,
-        0.880954
+        0.075152,
+        -0.457361,
+        -0.094874,
+        0.881006
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.321131,
-      "x_uniform_min_m": 0.197618,
-      "y_uniform_max_m": 0.030479,
-      "y_uniform_min_m": -0.149623,
-      "z_fixed_m": 0.865333
+      "kind": "mounted_on_graspable_envelope",
+      "mounted_on_graspable": "mug2",
+      "n_resets_observed": 30,
+      "rotation_radius_m": 0.005311,
+      "source": "observed_mug2_range_expanded_by_mount_radius_for_full_yaw",
+      "x_uniform_max_m": 0.32202,
+      "x_uniform_min_m": 0.190126,
+      "y_uniform_max_m": 0.028384,
+      "y_uniform_min_m": -0.157059,
+      "z_fixed_m": 0.865242
     }
   },
   {
@@ -1108,40 +1337,54 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          0.411945,
-          0.241111,
-          -2.898391
+          0.393594,
+          0.230282,
+          -2.885111
         ],
         "position_xyz_m": [
-          0.079916,
-          0.002329,
-          -0.033192
+          0.080548,
+          0.002289,
+          -0.032112
         ],
         "quaternion_xyzw": [
-          0.092224,
-          -0.215815,
-          0.961599,
-          -0.14229
+          0.086904,
+          -0.207049,
+          0.963332,
+          -0.14687
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "mug1",
       "world_offset_xyz_m": [
-        0.038877,
-        -0.049009,
-        -0.059836
+        0.039174,
+        -0.049216,
+        -0.059729
       ]
     },
     "handle": 88,
     "hierarchy_path": "remove_cups/tree_boundary/place_cups_holder_base/place_cups_holder_spoke3/mug3/mug_visual3",
     "name": "mug_visual3",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.239739,
+        -0.142113,
+        0.866022
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.302386,
+      "x_min_m": 0.181023,
+      "y_max_m": -0.063952,
+      "y_min_m": -0.238705,
+      "z_max_m": 0.866067,
+      "z_min_m": 0.865986
+    },
     "parent": "mug3",
     "parent_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
         1.570803,
         -5e-06,
-        2.044681
+        2.04468
       ],
       "position_xyz_m": [
         -0.007076,
@@ -1160,20 +1403,20 @@
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.23842,
-        0.919328,
-        3.114242
+        -0.243355,
+        0.917392,
+        3.118439
       ],
       "position_xyz_m": [
-        0.022301,
-        -0.197078,
-        0.113962
+        0.02236,
+        -0.197098,
+        0.113987
       ],
       "quaternion_xyzw": [
-        0.439,
-        0.112597,
-        0.889037,
-        0.064926
+        0.438216,
+        0.113911,
+        0.88932,
+        0.064043
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -1181,34 +1424,43 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.23842,
-        0.919328,
-        3.114242
+        -0.243355,
+        0.917392,
+        3.118439
       ],
       "position_xyz_m": [
-        0.250551,
-        -0.224029,
-        0.865962
+        0.18629,
+        -0.090359,
+        0.865987
       ],
       "quaternion_xyzw": [
-        0.439,
-        0.112597,
-        0.889037,
-        0.064926
+        0.438216,
+        0.113911,
+        0.88932,
+        0.064043
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
       "kind": "range",
       "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.304062,
-      "x_uniform_min_m": 0.180549,
-      "y_uniform_max_m": -0.060922,
-      "y_uniform_min_m": -0.241023,
-      "z_fixed_m": 0.865962
+      "x_uniform_max_m": 0.30412,
+      "x_uniform_min_m": 0.180607,
+      "y_uniform_max_m": -0.060941,
+      "y_uniform_min_m": -0.241043,
+      "z_fixed_m": 0.865987
     }
   },
   {
+    "analytical_task_root_yaw_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.260529,
+      "x_uniform_min_m": 0.137016,
+      "y_uniform_max_m": -0.008276,
+      "y_uniform_min_m": -0.188378,
+      "z_fixed_m": 0.930241
+    },
     "fixed_relation_to_nearest_graspable": {
       "has_separate_position_range": false,
       "reference_local_location": {
@@ -1216,7 +1468,7 @@
         "orientation_rpy_rad": [
           1.5708,
           -4e-06,
-          2.044682
+          2.044681
         ],
         "position_xyz_m": [
           -0.007076,
@@ -1233,21 +1485,37 @@
       },
       "reference_object": "mug1",
       "world_offset_xyz_m": [
-        -0.004479,
-        0.003379,
-        0.004518
+        -0.004417,
+        0.003449,
+        0.004525
       ]
     },
     "handle": 91,
     "hierarchy_path": "remove_cups/tree_boundary/place_cups_holder_base/place_cups_holder_spoke1/mug1/mug_visual1",
+    "mounted_note": "Rigidly mounted on graspable 'mug1'. RLBench re-places 'mug1' each episode at a random position within its spawn region and a random yaw (RLBench default +/-pi). This object sits ~0.006 m from 'mug1' rotation axis, so its absolute world position sweeps a wide ring; its pose relative to 'mug1' is fixed.",
+    "mounted_on_graspable": "mug1",
     "name": "mug_visual1",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.19636,
+        -0.089609,
+        0.930277
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.259202,
+      "x_min_m": 0.137624,
+      "y_max_m": -0.01145,
+      "y_min_m": -0.186228,
+      "z_max_m": 0.930331,
+      "z_min_m": 0.930219
+    },
     "parent": "mug1",
     "parent_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
         1.5708,
         -4e-06,
-        2.044682
+        2.044681
       ],
       "position_xyz_m": [
         -0.007076,
@@ -1263,23 +1531,24 @@
       "source": "exact_parent_local_offset"
     },
     "placement_range": null,
+    "rotation_radius_from_graspable_m": 0.005625,
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        0.801192,
-        0.105005,
-        1.33946
+        0.805897,
+        0.090495,
+        1.326761
       ],
       "position_xyz_m": [
-        -0.021054,
-        -0.14469,
-        0.178316
+        -0.021232,
+        -0.144433,
+        0.178241
       ],
       "quaternion_xyzw": [
-        0.335307,
-        -0.203863,
-        0.586883,
-        0.708221
+        0.334273,
+        -0.208437,
+        0.57986,
+        0.713146
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -1287,34 +1556,46 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        0.801192,
-        0.105005,
-        1.33946
+        0.805897,
+        0.090495,
+        1.326761
       ],
       "position_xyz_m": [
-        0.207196,
-        -0.171641,
-        0.930316
+        0.142699,
+        -0.037694,
+        0.930241
       ],
       "quaternion_xyzw": [
-        0.335307,
-        -0.203863,
-        0.586883,
-        0.708221
+        0.334273,
+        -0.208437,
+        0.57986,
+        0.713146
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.260706,
-      "x_uniform_min_m": 0.137193,
-      "y_uniform_max_m": -0.008534,
-      "y_uniform_min_m": -0.188635,
-      "z_fixed_m": 0.930316
+      "kind": "mounted_on_graspable_envelope",
+      "mounted_on_graspable": "mug1",
+      "n_resets_observed": 30,
+      "rotation_radius_m": 0.005625,
+      "source": "observed_mug1_range_expanded_by_mount_radius_for_full_yaw",
+      "x_uniform_max_m": 0.269367,
+      "x_uniform_min_m": 0.136503,
+      "y_uniform_max_m": -0.009237,
+      "y_uniform_min_m": -0.195197,
+      "z_fixed_m": 0.930277
     }
   },
   {
+    "analytical_task_root_yaw_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.362412,
+      "x_uniform_min_m": 0.238899,
+      "y_uniform_max_m": -0.019809,
+      "y_uniform_min_m": -0.19991,
+      "z_fixed_m": 0.930815
+    },
     "fixed_relation_to_nearest_graspable": {
       "has_separate_position_range": false,
       "reference_local_location": {
@@ -1339,14 +1620,30 @@
       },
       "reference_object": "mug0",
       "world_offset_xyz_m": [
-        0.004556,
-        -0.003597,
-        0.004266
+        0.004533,
+        -0.003635,
+        0.004257
       ]
     },
     "handle": 94,
     "hierarchy_path": "remove_cups/tree_boundary/place_cups_holder_base/place_cups_holder_spoke0/mug0/mug_visual0",
+    "mounted_note": "Rigidly mounted on graspable 'mug0'. RLBench re-places 'mug0' each episode at a random position within its spawn region and a random yaw (RLBench default +/-pi). This object sits ~0.006 m from 'mug0' rotation axis, so its absolute world position sweeps a wide ring; its pose relative to 'mug0' is fixed.",
+    "mounted_on_graspable": "mug0",
     "name": "mug_visual0",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.29797,
+        -0.100884,
+        0.930838
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.36062,
+      "x_min_m": 0.23921,
+      "y_max_m": -0.022822,
+      "y_min_m": -0.197524,
+      "z_max_m": 0.930898,
+      "z_min_m": 0.93079
+    },
     "parent": "mug0",
     "parent_local_location": {
       "kind": "exact",
@@ -1369,23 +1666,24 @@
       "source": "exact_parent_local_offset"
     },
     "placement_range": null,
+    "rotation_radius_from_graspable_m": 0.00582,
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.757497,
-        -0.083948,
-        -1.790777
+        -0.758581,
+        -0.076021,
+        -1.795772
       ],
       "position_xyz_m": [
-        0.080636,
-        -0.155838,
-        0.178884
+        0.080652,
+        -0.155965,
+        0.178815
       ],
       "quaternion_xyzw": [
-        0.200547,
-        0.3127,
-        0.714801,
-        -0.592503
+        0.202999,
+        0.311341,
+        0.717137,
+        -0.589553
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -1393,31 +1691,34 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.757497,
-        -0.083948,
-        -1.790777
+        -0.758581,
+        -0.076021,
+        -1.795772
       ],
       "position_xyz_m": [
-        0.308886,
-        -0.182788,
-        0.930884
+        0.244582,
+        -0.049226,
+        0.930815
       ],
       "quaternion_xyzw": [
-        0.200547,
-        0.3127,
-        0.714801,
-        -0.592503
+        0.202999,
+        0.311341,
+        0.717137,
+        -0.589553
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.362397,
-      "x_uniform_min_m": 0.238884,
-      "y_uniform_max_m": -0.019682,
-      "y_uniform_min_m": -0.199783,
-      "z_fixed_m": 0.930884
+      "kind": "mounted_on_graspable_envelope",
+      "mounted_on_graspable": "mug0",
+      "n_resets_observed": 30,
+      "rotation_radius_m": 0.00582,
+      "source": "observed_mug0_range_expanded_by_mount_radius_for_full_yaw",
+      "x_uniform_max_m": 0.361907,
+      "x_uniform_min_m": 0.228852,
+      "y_uniform_max_m": -0.013372,
+      "y_uniform_min_m": -0.19971,
+      "z_fixed_m": 0.930838
     }
   }
 ]

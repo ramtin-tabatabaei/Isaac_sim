@@ -1,0 +1,61 @@
+{
+  "shapes": {
+    "queue": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.06720000505447388,
+      "friction": 0.5
+    },
+    "hit_ball_with_queue_stopper1": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 2.5599999844416743e-06,
+      "friction": 0.5
+    },
+    "hit_ball_with_queue_stopper2": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 2.5599999844416743e-06,
+      "friction": 0.5
+    },
+    "queue_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.062499988824129105,
+      "friction": 0.7099999785423279
+    },
+    "ball": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.002060970989987254,
+      "friction": 0.5
+    },
+    "hit_ball_with_queue_pocket1": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.001500000013038516,
+      "friction": 0.5
+    },
+    "hit_ball_with_queue_pocket0": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.003000000026077032,
+      "friction": 0.5
+    },
+    "hit_ball_with_queue_pocket": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.003000000026077032,
+      "friction": 0.5
+    }
+  },
+  "joints": {}
+}

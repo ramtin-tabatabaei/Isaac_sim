@@ -1,0 +1,667 @@
+[
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141581,
+        0.241696,
+        -3.141572
+      ],
+      "position_xyz_m": [
+        0.278575,
+        -0.008158,
+        1.47168
+      ],
+      "quaternion_xyzw": [
+        9e-06,
+        0.992707,
+        -5e-06,
+        0.120554
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.158676,
+        -1.329132,
+        3.141451
+      ],
+      "position_xyz_m": [
+        0.498439,
+        -0.321777,
+        0.104036
+      ],
+      "quaternion_xyzw": [
+        -0.614773,
+        -0.062432,
+        0.784705,
+        0.048933
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      -0.05,
+      -1e-06,
+      -0.1
+    ],
+    "fixed_orientation_rpy_rad": [
+      0.0,
+      1.570796,
+      2.6e-05
+    ],
+    "motion_type": "point",
+    "name": "waypoint0",
+    "parent": "wine_bottle",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          1.570796,
+          2.6e-05
+        ],
+        "position_xyz_m": [
+          -0.05,
+          -1e-06,
+          -0.1
+        ],
+        "quaternion_xyzw": [
+          9e-06,
+          0.707107,
+          9e-06,
+          0.707107
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "wine_bottle"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          1.570796,
+          2.6e-05
+        ],
+        "position_xyz_m": [
+          -0.05,
+          -1e-06,
+          -0.1
+        ],
+        "quaternion_xyzw": [
+          9e-06,
+          0.707107,
+          9e-06,
+          0.707107
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "wine_bottle"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.57035,
+        1.411941,
+        1.571277
+      ],
+      "position_xyz_m": [
+        0.124959,
+        -0.309412,
+        0.973226
+      ],
+      "quaternion_xyzw": [
+        -0.704852,
+        0.056117,
+        -0.704903,
+        -0.056093
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      1.57035,
+      1.411941,
+      1.571277
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141586,
+        0.241608,
+        3.14159
+      ],
+      "position_xyz_m": [
+        0.278663,
+        -0.008167,
+        1.471613
+      ],
+      "quaternion_xyzw": [
+        -2e-06,
+        0.992712,
+        -4e-06,
+        0.12051
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.158721,
+        -1.32922,
+        3.141448
+      ],
+      "position_xyz_m": [
+        0.498371,
+        -0.321784,
+        0.054118
+      ],
+      "quaternion_xyzw": [
+        -0.614806,
+        -0.062448,
+        0.784676,
+        0.048951
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      0.0,
+      -1e-06,
+      -0.1
+    ],
+    "fixed_orientation_rpy_rad": [
+      0.0,
+      1.570796,
+      2.6e-05
+    ],
+    "motion_type": "point",
+    "name": "waypoint1",
+    "parent": "wine_bottle",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          1.570796,
+          2.6e-05
+        ],
+        "position_xyz_m": [
+          0.0,
+          -1e-06,
+          -0.1
+        ],
+        "quaternion_xyzw": [
+          9e-06,
+          0.707107,
+          9e-06,
+          0.707107
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "wine_bottle"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          1.570796,
+          2.6e-05
+        ],
+        "position_xyz_m": [
+          0.0,
+          -1e-06,
+          -0.1
+        ],
+        "quaternion_xyzw": [
+          9e-06,
+          0.707107,
+          9e-06,
+          0.707107
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "wine_bottle"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570349,
+        1.411941,
+        1.571278
+      ],
+      "position_xyz_m": [
+        0.174329,
+        -0.317321,
+        0.973229
+      ],
+      "quaternion_xyzw": [
+        -0.704851,
+        0.056117,
+        -0.704904,
+        -0.056093
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      1.570349,
+      1.411941,
+      1.571278
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.14158,
+        0.241529,
+        -3.141589
+      ],
+      "position_xyz_m": [
+        0.278709,
+        -0.008162,
+        1.471552
+      ],
+      "quaternion_xyzw": [
+        1e-06,
+        0.992717,
+        -6e-06,
+        0.120471
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.158699,
+        -1.329299,
+        3.141432
+      ],
+      "position_xyz_m": [
+        0.473311,
+        -0.321793,
+        0.054162
+      ],
+      "quaternion_xyzw": [
+        -0.614838,
+        -0.062443,
+        0.784652,
+        0.048953
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      0.0,
+      -3e-06,
+      -0.125
+    ],
+    "fixed_orientation_rpy_rad": [
+      0.0,
+      1.570796,
+      2.6e-05
+    ],
+    "motion_type": "point",
+    "name": "waypoint2",
+    "parent": "wine_bottle",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          1.570796,
+          2.6e-05
+        ],
+        "position_xyz_m": [
+          0.0,
+          -3e-06,
+          -0.125
+        ],
+        "quaternion_xyzw": [
+          9e-06,
+          0.707107,
+          9e-06,
+          0.707107
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "wine_bottle"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          1.570796,
+          2.6e-05
+        ],
+        "position_xyz_m": [
+          0.0,
+          -3e-06,
+          -0.125
+        ],
+        "quaternion_xyzw": [
+          9e-06,
+          0.707107,
+          9e-06,
+          0.707107
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "wine_bottle"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570349,
+        1.411941,
+        1.571278
+      ],
+      "position_xyz_m": [
+        0.174328,
+        -0.317319,
+        0.998229
+      ],
+      "quaternion_xyzw": [
+        -0.704851,
+        0.056117,
+        -0.704904,
+        -0.056093
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      1.570349,
+      1.411941,
+      1.571278
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.14158,
+        0.241763,
+        -3.141586
+      ],
+      "position_xyz_m": [
+        0.27858,
+        -0.008151,
+        1.471709
+      ],
+      "quaternion_xyzw": [
+        3e-06,
+        0.992703,
+        -6e-06,
+        0.120587
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.238833,
+        -0.037917,
+        1.416408
+      ],
+      "position_xyz_m": [
+        -0.087755,
+        -0.039987,
+        -0.57905
+      ],
+      "quaternion_xyzw": [
+        0.078226,
+        -0.091774,
+        0.644007,
+        0.755456
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      0.062794,
+      -0.325235,
+      0.131542
+    ],
+    "fixed_orientation_rpy_rad": [
+      3.141566,
+      -0.0,
+      1.570822
+    ],
+    "motion_type": "point",
+    "name": "waypoint3",
+    "parent": "rack",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.141566,
+          -0.0,
+          1.570822
+        ],
+        "position_xyz_m": [
+          0.062794,
+          -0.325235,
+          0.131542
+        ],
+        "quaternion_xyzw": [
+          -0.707098,
+          0.707116,
+          -9e-06,
+          -9e-06
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "rack"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.141566,
+          -0.0,
+          1.570822
+        ],
+        "position_xyz_m": [
+          0.062794,
+          -0.325235,
+          0.131542
+        ],
+        "quaternion_xyzw": [
+          -0.707098,
+          0.707116,
+          -9e-06,
+          -9e-06
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "rack"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141567,
+        -4e-06,
+        1.729744
+      ],
+      "position_xyz_m": [
+        0.225204,
+        -0.088486,
+        0.892661
+      ],
+      "quaternion_xyzw": [
+        -0.648738,
+        0.761012,
+        -8e-06,
+        -1e-05
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      3.141567,
+      -4e-06,
+      1.729744
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141568,
+        0.241551,
+        3.141591
+      ],
+      "position_xyz_m": [
+        0.278639,
+        -0.008168,
+        1.471604
+      ],
+      "quaternion_xyzw": [
+        -2e-06,
+        0.992716,
+        -1.2e-05,
+        0.120482
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.238626,
+        -0.037873,
+        1.416389
+      ],
+      "position_xyz_m": [
+        0.112254,
+        -0.040057,
+        -0.578949
+      ],
+      "quaternion_xyzw": [
+        0.078162,
+        -0.09169,
+        0.644011,
+        0.755469
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      0.06279,
+      -0.125233,
+      0.131533
+    ],
+    "fixed_orientation_rpy_rad": [
+      3.141566,
+      -0.0,
+      1.570822
+    ],
+    "motion_type": "point",
+    "name": "waypoint4",
+    "parent": "rack",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.141566,
+          -0.0,
+          1.570822
+        ],
+        "position_xyz_m": [
+          0.06279,
+          -0.125233,
+          0.131533
+        ],
+        "quaternion_xyzw": [
+          -0.707098,
+          0.707116,
+          -9e-06,
+          -9e-06
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "rack"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.141566,
+          -0.0,
+          1.570822
+        ],
+        "position_xyz_m": [
+          0.06279,
+          -0.125233,
+          0.131533
+        ],
+        "quaternion_xyzw": [
+          -0.707098,
+          0.707116,
+          -9e-06,
+          -9e-06
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "rack"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141567,
+        -4e-06,
+        1.729744
+      ],
+      "position_xyz_m": [
+        0.256851,
+        0.108996,
+        0.892653
+      ],
+      "quaternion_xyzw": [
+        -0.648738,
+        0.761012,
+        -8e-06,
+        -1e-05
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      3.141567,
+      -4e-06,
+      1.729744
+    ]
+  }
+]

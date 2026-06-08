@@ -1,0 +1,47 @@
+{
+  "shapes": {
+    "boundary_root": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.1080000251531601,
+      "friction": 0.5
+    },
+    "microwave_frame_resp": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 26.25385093688965,
+      "friction": 0.5
+    },
+    "microwave_frame_vis": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 1.5658084154129028,
+      "friction": 0.7099999785423279
+    },
+    "microwave_door_resp": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.17280001938343048,
+      "friction": 0.5
+    },
+    "microwave_door": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 2.348712682723999,
+      "friction": 0.7099999785423279
+    }
+  },
+  "joints": {
+    "microwave_door_joint": {
+      "type": "revolute",
+      "cyclic": false,
+      "lower": 0.0,
+      "upper": 90.00000250447816
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "chopping_board": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "knife_block": {
+    "type": "rigid",
+    "density": 400.0,
+    "uv": "auto"
+  },
+  "boundary": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "chopping_board_visual": {
+    "type": "visual"
+  },
+  "knife_boundary": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "knife_block_visual": {
+    "type": "visual"
+  },
+  "knife": {
+    "type": "rigid",
+    "density": 1200.0,
+    "uv": "auto"
+  },
+  "knife_visual": {
+    "type": "visual"
+  }
+}

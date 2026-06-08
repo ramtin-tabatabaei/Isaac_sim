@@ -1,0 +1,164 @@
+{
+  "shapes": {
+    "oven_boundary_root": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.1650000363588333,
+      "friction": 0.5
+    },
+    "tray": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.31499993801116943,
+      "friction": 0.5
+    },
+    "oven_frame0": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 10.0,
+      "friction": 0.7099999785423279
+    },
+    "oven_base": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 57.26890182495117,
+      "friction": 0.5
+    },
+    "oven_tray_boundary": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.13200002908706665,
+      "friction": 0.5
+    },
+    "tray_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.125,
+      "friction": 0.7099999785423279
+    },
+    "oven_knob_8": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 2.0,
+      "friction": 0.7099999785423279
+    },
+    "oven_stove_top0": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 12.0,
+      "friction": 0.7099999785423279
+    },
+    "oven_gas_source0": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 18.0,
+      "friction": 0.7099999785423279
+    },
+    "oven_knob_10": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 2.0,
+      "friction": 0.7099999785423279
+    },
+    "oven_knob_11": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 2.0,
+      "friction": 0.7099999785423279
+    },
+    "oven_knob_12": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 2.0,
+      "friction": 0.7099999785423279
+    },
+    "oven_knob_13": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 2.0,
+      "friction": 0.7099999785423279
+    },
+    "oven_knob_14": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 2.0,
+      "friction": 0.7099999785423279
+    },
+    "oven_door": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.10000000149011612,
+      "friction": 0.5
+    },
+    "oven_knob": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.008362921886146069,
+      "friction": 0.5
+    },
+    "oven_tray": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 1.3629999160766602,
+      "friction": 0.5
+    },
+    "oven_door_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 6.0,
+      "friction": 0.7099999785423279
+    },
+    "oven_knob_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 2.0,
+      "friction": 0.7099999785423279
+    },
+    "oven_tray_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 18.0,
+      "friction": 0.7099999785423279
+    }
+  },
+  "joints": {
+    "oven_door_joint": {
+      "type": "revolute",
+      "cyclic": false,
+      "lower": 0.0,
+      "upper": 90.00000250447816
+    },
+    "oven_knob_joint": {
+      "type": "revolute",
+      "cyclic": true,
+      "lower": -180.00000500895632,
+      "upper": 180.00000500895632
+    },
+    "oven_tray_joint": {
+      "type": "prismatic",
+      "cyclic": false,
+      "lower": 0.0,
+      "upper": 0.30000001192092896
+    }
+  }
+}

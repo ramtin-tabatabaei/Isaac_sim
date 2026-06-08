@@ -1,0 +1,136 @@
+[
+  {
+    "handle": 80,
+    "hierarchy_path": "open_box/box_base",
+    "name": "box_base",
+    "parent": "open_box",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        0.0
+      ],
+      "position_xyz_m": [
+        -0.025001,
+        -0.150002,
+        0.072754
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.707107,
+        0.0,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        0.0
+      ],
+      "position_xyz_m": [
+        -0.025001,
+        -0.150002,
+        0.072754
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.707107,
+        0.0,
+        0.707107
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.224999,
+        -0.150002,
+        0.824754
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.707107,
+        0.0,
+        0.707107
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 82,
+    "hierarchy_path": "open_box/box_base/box_joint/box_lid",
+    "name": "box_lid",
+    "parent": "box_joint",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570822,
+        -0.261781,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.126009,
+        0.038258,
+        -7e-05
+      ],
+      "quaternion_xyzw": [
+        -0.701067,
+        -0.092289,
+        0.092291,
+        0.701049
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.008715,
+        6e-06,
+        1.570802
+      ],
+      "position_xyz_m": [
+        -0.025092,
+        -0.14143,
+        0.154473
+      ],
+      "quaternion_xyzw": [
+        0.003083,
+        -0.003079,
+        0.707102,
+        0.707098
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.008715,
+        6e-06,
+        1.570802
+      ],
+      "position_xyz_m": [
+        0.224908,
+        -0.14143,
+        0.906473
+      ],
+      "quaternion_xyzw": [
+        0.003083,
+        -0.003079,
+        0.707102,
+        0.707098
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  }
+]

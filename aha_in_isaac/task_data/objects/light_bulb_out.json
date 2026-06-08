@@ -5,33 +5,47 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          2e-06,
-          2e-06,
-          -3.1e-05
+          0.000137,
+          -0.000544,
+          6.5e-05
         ],
         "position_xyz_m": [
-          3e-06,
-          3e-06,
+          8.6e-05,
+          2.4e-05,
           -0.205799
         ],
         "quaternion_xyzw": [
-          1e-06,
-          1e-06,
-          -1.5e-05,
+          6.9e-05,
+          -0.000272,
+          3.3e-05,
           1.0
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "bulb_phys",
       "world_offset_xyz_m": [
-        -3e-06,
-        -3e-06,
+        2.6e-05,
+        -1e-06,
         -0.205799
       ]
     },
     "handle": 81,
     "hierarchy_path": "light_bulb_out/lamp_base",
     "name": "lamp_base",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.22051,
+        0.044009,
+        0.889131
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.38801,
+      "x_min_m": 0.081174,
+      "y_max_m": 0.341617,
+      "y_min_m": -0.380478,
+      "z_max_m": 0.889131,
+      "z_min_m": 0.889131
+    },
     "parent": "light_bulb_out",
     "parent_local_location": {
       "kind": "exact",
@@ -80,18 +94,18 @@
       "orientation_rpy_rad": [
         -0.0,
         0.0,
-        3.097583
+        2.949795
       ],
       "position_xyz_m": [
-        0.225629,
-        0.056065,
+        0.258076,
+        0.178058,
         0.889131
       ],
       "quaternion_xyzw": [
         0.0,
         0.0,
-        0.999758,
-        0.022003
+        0.995405,
+        0.095752
       ],
       "source": "exact_after_one_rlbench_reset"
     },
@@ -100,7 +114,7 @@
       "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
       "x_uniform_max_m": 0.441664,
       "x_uniform_min_m": 0.058336,
-      "y_uniform_max_m": 0.083969,
+      "y_uniform_max_m": 0.08397,
       "y_uniform_min_m": -0.442927,
       "z_fixed_m": 0.889131
     }
@@ -111,51 +125,65 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          2e-06,
-          2e-06,
-          -3.068978
+          0.000137,
+          -0.000544,
+          -2.205515
         ],
         "position_xyz_m": [
-          -0.143627,
-          0.300877,
-          -0.314843
+          -0.038309,
+          0.172019,
+          -0.314841
         ],
         "quaternion_xyzw": [
-          1e-06,
-          -1e-06,
-          0.999341,
-          -0.036299
+          -0.000274,
+          6.1e-05,
+          0.892455,
+          -0.451137
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "bulb_phys",
       "world_offset_xyz_m": [
-        0.13026,
-        -0.3069,
+        0.004981,
+        -0.176158,
         -0.314844
       ]
     },
     "handle": 93,
     "hierarchy_path": "light_bulb_out/bulb_holder1",
     "name": "bulb_holder1",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.259349,
+        -0.006374,
+        0.780086
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.512483,
+      "x_min_m": -0.016495,
+      "y_max_m": 0.286733,
+      "y_min_m": -0.305391,
+      "z_max_m": 0.780086,
+      "z_min_m": 0.780086
+    },
     "parent": "light_bulb_out",
     "parent_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
         -0.0,
         0.0,
-        -3.068948
+        -2.20558
       ],
       "position_xyz_m": [
-        -0.110635,
-        0.30287,
+        -0.00544,
+        0.173984,
         0.028086
       ],
       "quaternion_xyzw": [
         0.0,
         0.0,
-        0.99934,
-        -0.036315
+        0.89247,
+        -0.451108
       ],
       "source": "exact_parent_local_offset"
     },
@@ -165,18 +193,18 @@
       "orientation_rpy_rad": [
         -0.0,
         0.0,
-        -3.068948
+        -2.20558
       ],
       "position_xyz_m": [
-        -0.110635,
-        0.30287,
+        -0.00544,
+        0.173984,
         0.028086
       ],
       "quaternion_xyzw": [
         0.0,
         0.0,
-        0.99934,
-        -0.036315
+        0.89247,
+        -0.451108
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -186,28 +214,28 @@
       "orientation_rpy_rad": [
         -0.0,
         -0.0,
-        0.028636
+        0.744215
       ],
       "position_xyz_m": [
-        0.355892,
-        -0.250832,
+        0.26303,
+        0.001901,
         0.780086
       ],
       "quaternion_xyzw": [
         0.0,
         0.0,
-        -0.014317,
-        -0.999897
+        -0.36358,
+        -0.931563
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
       "kind": "range",
       "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.731042,
-      "x_uniform_min_m": -0.231044,
-      "y_uniform_max_m": 0.373348,
-      "y_uniform_min_m": -0.732307,
+      "x_uniform_max_m": 0.582669,
+      "x_uniform_min_m": -0.082669,
+      "y_uniform_max_m": 0.224975,
+      "y_uniform_min_m": -0.583931,
       "z_fixed_m": 0.780086
     }
   },
@@ -217,51 +245,65 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          2e-06,
-          2e-06,
-          -2.470883
+          0.000137,
+          -0.000544,
+          0.602621
         ],
         "position_xyz_m": [
-          0.021397,
-          0.265429,
-          -0.314844
+          -0.015207,
+          0.295754,
+          -0.314812
         ],
         "quaternion_xyzw": [
-          1e-06,
-          -1e-06,
-          0.944294,
-          -0.329104
+          -1.5e-05,
+          -0.00028,
+          0.296772,
+          0.954948
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "bulb_phys",
       "world_offset_xyz_m": [
-        -0.033046,
-        -0.264231,
+        -0.041293,
+        -0.293217,
         -0.314844
       ]
     },
     "handle": 94,
     "hierarchy_path": "light_bulb_out/bulb_holder0",
     "name": "bulb_holder0",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.204826,
+        -0.032979,
+        0.780086
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.414656,
+      "x_min_m": -0.006636,
+      "y_max_m": 0.239423,
+      "y_min_m": -0.322504,
+      "z_max_m": 0.780086,
+      "z_min_m": 0.780086
+    },
     "parent": "light_bulb_out",
     "parent_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
         -0.0,
         0.0,
-        -2.470852
+        0.602555
       ],
       "position_xyz_m": [
-        0.05439,
-        0.267427,
+        0.017671,
+        0.297718,
         0.028086
       ],
       "quaternion_xyzw": [
         0.0,
         0.0,
-        0.944288,
-        -0.329119
+        0.296741,
+        0.954958
       ],
       "source": "exact_parent_local_offset"
     },
@@ -271,18 +313,18 @@
       "orientation_rpy_rad": [
         -0.0,
         0.0,
-        -2.470852
+        0.602555
       ],
       "position_xyz_m": [
-        0.05439,
-        0.267427,
+        0.017671,
+        0.297718,
         0.028086
       ],
       "quaternion_xyzw": [
         0.0,
         0.0,
-        0.944288,
-        -0.329119
+        0.296741,
+        0.954958
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -291,29 +333,29 @@
       "kind": "exact",
       "orientation_rpy_rad": [
         -0.0,
-        -0.0,
-        0.626731
+        0.0,
+        -2.730835
       ],
       "position_xyz_m": [
-        0.192586,
-        -0.208163,
+        0.216756,
+        -0.115158,
         0.780086
       ],
       "quaternion_xyzw": [
         0.0,
         0.0,
-        -0.308262,
-        -0.951302
+        0.978984,
+        -0.203938
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
       "kind": "range",
       "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.681501,
-      "x_uniform_min_m": -0.181501,
-      "y_uniform_max_m": 0.323806,
-      "y_uniform_min_m": -0.682765,
+      "x_uniform_max_m": 0.706839,
+      "x_uniform_min_m": -0.206841,
+      "y_uniform_max_m": 0.349146,
+      "y_uniform_min_m": -0.708102,
       "z_fixed_m": 0.780086
     }
   },
@@ -323,33 +365,47 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          2e-06,
-          2e-06,
-          -3.1e-05
+          0.000137,
+          -0.000544,
+          6.5e-05
         ],
         "position_xyz_m": [
-          -0.032993,
-          0.253003,
-          -0.34293
+          -0.03286,
+          0.253039,
+          -0.342914
         ],
         "quaternion_xyzw": [
-          1e-06,
-          1e-06,
-          -1.5e-05,
+          6.9e-05,
+          -0.000272,
+          3.3e-05,
           1.0
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "bulb_phys",
       "world_offset_xyz_m": [
-        0.021838,
-        -0.254209,
+        -0.015803,
+        -0.254652,
         -0.34293
       ]
     },
     "handle": 95,
     "hierarchy_path": "light_bulb_out/spawn_boundary",
     "name": "spawn_boundary",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.221722,
+        -0.022199,
+        0.752
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.444538,
+      "x_min_m": 0.032048,
+      "y_max_m": 0.245819,
+      "y_min_m": -0.286291,
+      "z_max_m": 0.752,
+      "z_min_m": 0.752
+    },
     "parent": "light_bulb_out",
     "parent_local_location": {
       "kind": "exact",
@@ -398,18 +454,18 @@
       "orientation_rpy_rad": [
         -0.0,
         0.0,
-        3.097583
+        2.949795
       ],
       "position_xyz_m": [
-        0.24747,
-        -0.198141,
+        0.242246,
+        -0.076592,
         0.752
       ],
       "quaternion_xyzw": [
         0.0,
         0.0,
-        0.999758,
-        0.022003
+        0.995405,
+        0.095752
       ],
       "source": "exact_after_one_rlbench_reset"
     },
@@ -429,33 +485,47 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          2e-06,
-          2e-06,
-          -3.1e-05
+          0.000137,
+          -0.000544,
+          6.5e-05
         ],
         "position_xyz_m": [
-          3e-06,
-          3e-06,
+          -3e-06,
+          1e-06,
           -0.041326
         ],
         "quaternion_xyzw": [
-          1e-06,
-          1e-06,
-          -1.5e-05,
+          6.9e-05,
+          -0.000272,
+          3.3e-05,
           1.0
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "bulb_phys",
       "world_offset_xyz_m": [
-        -3e-06,
-        -3e-06,
+        2.6e-05,
+        -0.0,
         -0.041326
       ]
     },
     "handle": 82,
     "hierarchy_path": "light_bulb_out/lamp_base/lamp_screw",
     "name": "lamp_screw",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.22051,
+        0.044009,
+        1.053604
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.38801,
+      "x_min_m": 0.081174,
+      "y_max_m": 0.341617,
+      "y_min_m": -0.380479,
+      "z_max_m": 1.053604,
+      "z_min_m": 1.053604
+    },
     "parent": "lamp_base",
     "parent_local_location": {
       "kind": "exact",
@@ -504,18 +574,18 @@
       "orientation_rpy_rad": [
         -0.0,
         0.0,
-        3.097583
+        2.949795
       ],
       "position_xyz_m": [
-        0.225629,
-        0.056065,
+        0.258075,
+        0.178059,
         1.053604
       ],
       "quaternion_xyzw": [
         0.0,
         0.0,
-        0.999758,
-        0.022003
+        0.995405,
+        0.095752
       ],
       "source": "exact_after_one_rlbench_reset"
     },
@@ -530,55 +600,86 @@
     }
   },
   {
+    "analytical_task_root_yaw_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.44169,
+      "x_uniform_min_m": 0.05831,
+      "y_uniform_max_m": 0.083996,
+      "y_uniform_min_m": -0.442953,
+      "z_fixed_m": 1.09493
+    },
     "handle": 83,
     "hierarchy_path": "light_bulb_out/lamp_base/lamp_screw/bulb_phys",
+    "is_graspable": true,
     "name": "bulb_phys",
+    "observed_spawn_yaw_range_rad": [
+      -0.000672,
+      0.000327
+    ],
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.220498,
+        0.044008,
+        1.09493
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.388045,
+      "x_min_m": 0.081177,
+      "y_max_m": 0.341615,
+      "y_min_m": -0.380493,
+      "z_max_m": 1.09493,
+      "z_min_m": 1.09493
+    },
     "parent": "lamp_screw",
     "parent_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -2e-06,
-        -2e-06,
-        3.1e-05
+        -0.000137,
+        0.000544,
+        -6.5e-05
       ],
       "position_xyz_m": [
-        -3e-06,
-        -3e-06,
+        2.6e-05,
+        5e-06,
         0.041326
       ],
       "quaternion_xyzw": [
-        -1e-06,
-        -1e-06,
-        1.5e-05,
+        -6.9e-05,
+        0.000272,
+        -3.3e-05,
         1.0
       ],
       "source": "exact_parent_local_offset"
     },
     "placement_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.441661,
-      "x_uniform_min_m": 0.058339,
-      "y_uniform_max_m": 0.083966,
-      "y_uniform_min_m": -0.442924,
-      "z_fixed_m": 1.09493
+      "kind": "observed_over_rlbench_resets",
+      "n_resets_observed": 30,
+      "source": "observed_graspable_world_range_includes_spawn_translation_and_rotation",
+      "x_uniform_max_m": 0.388045,
+      "x_uniform_min_m": 0.081177,
+      "y_uniform_max_m": 0.341615,
+      "y_uniform_min_m": -0.380493,
+      "z_fixed_m": 1.09493,
+      "z_observed_max_m": 1.09493,
+      "z_observed_min_m": 1.09493
     },
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -2e-06,
-        -2e-06,
-        3.1e-05
+        -0.000137,
+        0.000544,
+        -6.5e-05
       ],
       "position_xyz_m": [
-        0.033001,
-        0.001998,
+        0.03303,
+        0.002006,
         0.34293
       ],
       "quaternion_xyzw": [
-        -1e-06,
-        -1e-06,
-        1.5e-05,
+        -6.9e-05,
+        0.000272,
+        -3.3e-05,
         1.0
       ],
       "source": "exact_task_root_local_offset"
@@ -587,34 +688,46 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        2e-06,
-        2e-06,
-        3.097614
+        3.1e-05,
+        -0.00056,
+        2.94973
       ],
       "position_xyz_m": [
-        0.225632,
-        0.056068,
+        0.258049,
+        0.178059,
         1.09493
       ],
       "quaternion_xyzw": [
-        1e-06,
-        -1e-06,
-        0.999758,
-        0.021988
+        -0.000277,
+        -4.2e-05,
+        0.995402,
+        0.095784
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.441661,
-      "x_uniform_min_m": 0.058339,
-      "y_uniform_max_m": 0.083966,
-      "y_uniform_min_m": -0.442924,
-      "z_fixed_m": 1.09493
+      "kind": "observed_over_rlbench_resets",
+      "n_resets_observed": 30,
+      "source": "observed_graspable_world_range_includes_spawn_translation_and_rotation",
+      "x_uniform_max_m": 0.388045,
+      "x_uniform_min_m": 0.081177,
+      "y_uniform_max_m": 0.341615,
+      "y_uniform_min_m": -0.380493,
+      "z_fixed_m": 1.09493,
+      "z_observed_max_m": 1.09493,
+      "z_observed_min_m": 1.09493
     }
   },
   {
+    "analytical_task_root_yaw_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.441689,
+      "x_uniform_min_m": 0.058311,
+      "y_uniform_max_m": 0.083995,
+      "y_uniform_min_m": -0.442952,
+      "z_fixed_m": 1.092835
+    },
     "fixed_relation_to_nearest_graspable": {
       "has_separate_position_range": false,
       "reference_local_location": {
@@ -639,14 +752,30 @@
       },
       "reference_object": "bulb_phys",
       "world_offset_xyz_m": [
-        -0.0,
+        1e-06,
         0.0,
-        -0.002095
+        -0.002096
       ]
     },
     "handle": 84,
     "hierarchy_path": "light_bulb_out/lamp_base/lamp_screw/bulb_phys/light_bulb",
+    "mounted_note": "Rigidly mounted on graspable 'bulb_phys'. RLBench re-places 'bulb_phys' each episode at a random position within its spawn region and a random yaw (RLBench default +/-pi). This object sits ~0.0 m from 'bulb_phys' rotation axis, so its absolute world position sweeps a wide ring; its pose relative to 'bulb_phys' is fixed.",
+    "mounted_on_graspable": "bulb_phys",
     "name": "light_bulb",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.220498,
+        0.044008,
+        1.092835
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.388043,
+      "x_min_m": 0.081177,
+      "y_max_m": 0.341616,
+      "y_min_m": -0.380493,
+      "z_max_m": 1.092835,
+      "z_min_m": 1.092834
+    },
     "parent": "bulb_phys",
     "parent_local_location": {
       "kind": "exact",
@@ -669,23 +798,24 @@
       "source": "exact_parent_local_offset"
     },
     "placement_range": null,
+    "rotation_radius_from_graspable_m": 4e-06,
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        3.141591,
-        2e-06,
-        3.141562
+        3.141456,
+        -0.000544,
+        -3.141527
       ],
       "position_xyz_m": [
-        0.033001,
-        0.001998,
+        0.033028,
+        0.002005,
         0.340835
       ],
       "quaternion_xyzw": [
-        -1.5e-05,
+        3.3e-05,
         1.0,
-        -1e-06,
-        1e-06
+        -6.9e-05,
+        -0.000272
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -693,34 +823,46 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -3.141591,
-        -2e-06,
-        0.043979
+        -3.141562,
+        0.00056,
+        0.191863
       ],
       "position_xyz_m": [
-        0.225632,
-        0.056068,
+        0.25805,
+        0.178059,
         1.092835
       ],
       "quaternion_xyzw": [
-        -0.999758,
-        0.021988,
-        1e-06,
-        1e-06
+        -0.995402,
+        0.095784,
+        -0.000277,
+        4.2e-05
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.441661,
-      "x_uniform_min_m": 0.058339,
-      "y_uniform_max_m": 0.083966,
-      "y_uniform_min_m": -0.442924,
+      "kind": "mounted_on_graspable_envelope",
+      "mounted_on_graspable": "bulb_phys",
+      "n_resets_observed": 30,
+      "rotation_radius_m": 4e-06,
+      "source": "observed_bulb_phys_range_expanded_by_mount_radius_for_full_yaw",
+      "x_uniform_max_m": 0.388049,
+      "x_uniform_min_m": 0.081173,
+      "y_uniform_max_m": 0.341619,
+      "y_uniform_min_m": -0.380497,
       "z_fixed_m": 1.092835
     }
   },
   {
+    "analytical_task_root_yaw_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.441697,
+      "x_uniform_min_m": 0.058303,
+      "y_uniform_max_m": 0.084003,
+      "y_uniform_min_m": -0.44296,
+      "z_fixed_m": 1.107618
+    },
     "fixed_relation_to_nearest_graspable": {
       "has_separate_position_range": false,
       "reference_local_location": {
@@ -731,7 +873,7 @@
           3.141593
         ],
         "position_xyz_m": [
-          0.0,
+          -0.0,
           0.0,
           0.012688
         ],
@@ -745,14 +887,30 @@
       },
       "reference_object": "bulb_phys",
       "world_offset_xyz_m": [
-        0.0,
+        -7e-06,
         -0.0,
         0.012688
       ]
     },
     "handle": 85,
     "hierarchy_path": "light_bulb_out/lamp_base/lamp_screw/bulb_phys/light_bulb/bulb",
+    "mounted_note": "Rigidly mounted on graspable 'bulb_phys'. RLBench re-places 'bulb_phys' each episode at a random position within its spawn region and a random yaw (RLBench default +/-pi). This object sits ~0.0 m from 'bulb_phys' rotation axis, so its absolute world position sweeps a wide ring; its pose relative to 'bulb_phys' is fixed.",
+    "mounted_on_graspable": "bulb_phys",
     "name": "bulb",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.220494,
+        0.044007,
+        1.107618
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.388053,
+      "x_min_m": 0.081178,
+      "y_max_m": 0.341615,
+      "y_min_m": -0.380496,
+      "z_max_m": 1.107618,
+      "z_min_m": 1.107618
+    },
     "parent": "light_bulb",
     "parent_local_location": {
       "kind": "exact",
@@ -775,23 +933,24 @@
       "source": "exact_parent_local_offset"
     },
     "placement_range": null,
+    "rotation_radius_from_graspable_m": 2.5e-05,
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        3.141591,
-        2e-06,
-        3.141562
+        3.141456,
+        -0.000544,
+        -3.141527
       ],
       "position_xyz_m": [
-        0.033001,
-        0.001999,
-        0.355619
+        0.033036,
+        0.002007,
+        0.355618
       ],
       "quaternion_xyzw": [
-        -1.5e-05,
+        3.3e-05,
         1.0,
-        -1e-06,
-        1e-06
+        -6.9e-05,
+        -0.000272
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -799,31 +958,34 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -3.141591,
-        -2e-06,
-        0.043979
+        -3.141562,
+        0.00056,
+        0.191863
       ],
       "position_xyz_m": [
-        0.225632,
-        0.056068,
+        0.258042,
+        0.178059,
         1.107618
       ],
       "quaternion_xyzw": [
-        -0.999758,
-        0.021988,
-        1e-06,
-        1e-06
+        -0.995402,
+        0.095784,
+        -0.000277,
+        4.2e-05
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.441661,
-      "x_uniform_min_m": 0.058339,
-      "y_uniform_max_m": 0.083966,
-      "y_uniform_min_m": -0.442924,
-      "z_fixed_m": 1.107619
+      "kind": "mounted_on_graspable_envelope",
+      "mounted_on_graspable": "bulb_phys",
+      "n_resets_observed": 30,
+      "rotation_radius_m": 2.5e-05,
+      "source": "observed_bulb_phys_range_expanded_by_mount_radius_for_full_yaw",
+      "x_uniform_max_m": 0.38807,
+      "x_uniform_min_m": 0.081152,
+      "y_uniform_max_m": 0.34164,
+      "y_uniform_min_m": -0.380518,
+      "z_fixed_m": 1.107618
     }
   }
 ]

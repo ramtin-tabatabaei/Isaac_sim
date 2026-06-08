@@ -4,6 +4,8 @@
   "placement_ranges": null,
   "units_and_conventions": {
     "exact_location_meaning": "A measured pose from the imported .ttm, one RLBench reset, or after reaching one waypoint.",
+    "mounted_object_meaning": "world_position_range with kind 'mounted_on_graspable_envelope' is the graspable's observed world envelope expanded by the object's fixed mount radius, because the object rides the graspable's random position and yaw. Such objects also carry mounted_on_graspable and rotation_radius_from_graspable_m, and their pose relative to the graspable is fixed.",
+    "observed_range_meaning": "world_position_range with kind 'observed_over_rlbench_resets' is the min/max world position over --range-resets RLBench resets; for a graspable it captures spawn translation AND the \u00b1\u03c0 spawn rotation.",
     "orientation_rpy_order": [
       "roll_x",
       "pitch_y",
@@ -20,7 +22,7 @@
     "rotation_units": "radians"
   },
   "schema_name": "scene_objects_robot_base_waypoint_end_effector",
-  "schema_version": 5,
+  "schema_version": 6,
   "source_ttm_path": "/home/ramtin/RLBench/rlbench/task_ttms/put_books_on_bookshelf.ttm",
   "runtime_generated_scene_objects_excluded": [],
   "end_effector_collection_error": null

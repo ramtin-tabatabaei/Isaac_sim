@@ -1,0 +1,1583 @@
+[
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "fixed_offset_xyz_m": [
+      -0.105577,
+      -0.239022,
+      0.256952
+    ],
+    "fixed_orientation_rpy_rad": [
+      -1.57074,
+      -2e-06,
+      -3.141593
+    ],
+    "motion_type": "point",
+    "name": "waypoint0",
+    "parent": "bookshelf",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.57074,
+          -2e-06,
+          -3.141593
+        ],
+        "position_xyz_m": [
+          -0.105577,
+          -0.239022,
+          0.256952
+        ],
+        "quaternion_xyzw": [
+          -1e-06,
+          0.707087,
+          0.707127,
+          -1e-06
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "bookshelf"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.57074,
+          -2e-06,
+          -3.141593
+        ],
+        "position_xyz_m": [
+          -0.105577,
+          -0.239022,
+          0.256952
+        ],
+        "quaternion_xyzw": [
+          -1e-06,
+          0.707087,
+          0.707127,
+          -1e-06
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "bookshelf"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        -0.0,
+        -3.141593
+      ],
+      "position_xyz_m": [
+        0.303987,
+        -0.189008,
+        1.253961
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        0.707107,
+        0.707107,
+        -0.0
+      ],
+      "source": "exact_after_raw_ttm_import"
+    },
+    "world_orientation_rpy_rad": [
+      -1.570796,
+      -0.0,
+      -3.141593
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "fixed_offset_xyz_m": [
+      0.0,
+      -2e-06,
+      0.034994
+    ],
+    "fixed_orientation_rpy_rad": [
+      -0.0,
+      0.0,
+      -0.0
+    ],
+    "motion_type": "point",
+    "name": "waypoint1",
+    "parent": "waypoint0",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "position_xyz_m": [
+          0.0,
+          -2e-06,
+          0.034994
+        ],
+        "quaternion_xyzw": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "waypoint",
+      "reference_name": "waypoint0"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.57074,
+          -2e-06,
+          -3.141593
+        ],
+        "position_xyz_m": [
+          -0.105577,
+          -0.204029,
+          0.256953
+        ],
+        "quaternion_xyzw": [
+          -1e-06,
+          0.707087,
+          0.707127,
+          -1e-06
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "bookshelf"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        -0.0,
+        -3.141593
+      ],
+      "position_xyz_m": [
+        0.303987,
+        -0.154014,
+        1.25396
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        0.707107,
+        0.707107,
+        -0.0
+      ],
+      "source": "exact_after_raw_ttm_import"
+    },
+    "world_orientation_rpy_rad": [
+      -1.570796,
+      -0.0,
+      -3.141593
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "fixed_offset_xyz_m": [
+      -0.0,
+      0.208003,
+      0.033979
+    ],
+    "fixed_orientation_rpy_rad": [
+      -0.0,
+      0.0,
+      -0.0
+    ],
+    "motion_type": "point",
+    "name": "waypoint2",
+    "parent": "waypoint0",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "position_xyz_m": [
+          -0.0,
+          0.208003,
+          0.033979
+        ],
+        "quaternion_xyzw": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "waypoint",
+      "reference_name": "waypoint0"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.57074,
+          -2e-06,
+          -3.141593
+        ],
+        "position_xyz_m": [
+          -0.105577,
+          -0.205054,
+          0.464957
+        ],
+        "quaternion_xyzw": [
+          -1e-06,
+          0.707087,
+          0.707127,
+          -1e-06
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "bookshelf"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        -0.0,
+        -3.141593
+      ],
+      "position_xyz_m": [
+        0.303987,
+        -0.155028,
+        1.461964
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        0.707107,
+        0.707107,
+        -0.0
+      ],
+      "source": "exact_after_raw_ttm_import"
+    },
+    "world_orientation_rpy_rad": [
+      -1.570796,
+      -0.0,
+      -3.141593
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "fixed_offset_xyz_m": [
+      -0.310032,
+      0.120396,
+      0.079166
+    ],
+    "fixed_orientation_rpy_rad": [
+      1.534459,
+      1.563146,
+      -1.795907
+    ],
+    "motion_type": "point",
+    "name": "waypoint3",
+    "parent": "bookshelf",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.534459,
+          1.563146,
+          -1.795907
+        ],
+        "position_xyz_m": [
+          -0.310032,
+          0.120396,
+          0.079166
+        ],
+        "quaternion_xyzw": [
+          -0.089481,
+          0.701323,
+          -0.094867,
+          0.700813
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "bookshelf"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.534459,
+          1.563146,
+          -1.795907
+        ],
+        "position_xyz_m": [
+          -0.310032,
+          0.120396,
+          0.079166
+        ],
+        "quaternion_xyzw": [
+          -0.089481,
+          0.701323,
+          -0.094867,
+          0.700813
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "bookshelf"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.53441,
+        1.563146,
+        -1.795915
+      ],
+      "position_xyz_m": [
+        0.099532,
+        0.170401,
+        1.076154
+      ],
+      "quaternion_xyzw": [
+        -0.0895,
+        0.701321,
+        -0.094887,
+        0.700811
+      ],
+      "source": "exact_after_raw_ttm_import"
+    },
+    "world_orientation_rpy_rad": [
+      1.53441,
+      1.563146,
+      -1.795915
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "fixed_offset_xyz_m": [
+      -0.000299,
+      0.001946,
+      0.255998
+    ],
+    "fixed_orientation_rpy_rad": [
+      -9e-06,
+      -1.1e-05,
+      -1e-06
+    ],
+    "motion_type": "point",
+    "name": "waypoint4",
+    "parent": "waypoint3",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -9e-06,
+          -1.1e-05,
+          -1e-06
+        ],
+        "position_xyz_m": [
+          -0.000299,
+          0.001946,
+          0.255998
+        ],
+        "quaternion_xyzw": [
+          4e-06,
+          6e-06,
+          1e-06,
+          -1.0
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "waypoint",
+      "reference_name": "waypoint3"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.533257,
+          1.563154,
+          -1.794707
+        ],
+        "position_xyz_m": [
+          -0.054027,
+          0.120396,
+          0.079023
+        ],
+        "quaternion_xyzw": [
+          0.089485,
+          -0.70132,
+          0.094863,
+          -0.700817
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "bookshelf"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.533209,
+        1.563161,
+        -1.794715
+      ],
+      "position_xyz_m": [
+        0.355537,
+        0.170401,
+        1.076012
+      ],
+      "quaternion_xyzw": [
+        0.089504,
+        -0.701317,
+        0.094884,
+        -0.700814
+      ],
+      "source": "exact_after_raw_ttm_import"
+    },
+    "world_orientation_rpy_rad": [
+      1.533209,
+      1.563161,
+      -1.794715
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "fixed_offset_xyz_m": [
+      -9.7e-05,
+      0.001006,
+      0.130011
+    ],
+    "fixed_orientation_rpy_rad": [
+      -0.0,
+      -1.2e-05,
+      0.174538
+    ],
+    "motion_type": "point",
+    "name": "waypoint5",
+    "parent": "waypoint3",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          -1.2e-05,
+          0.174538
+        ],
+        "position_xyz_m": [
+          -9.7e-05,
+          0.001006,
+          0.130011
+        ],
+        "quaternion_xyzw": [
+          -1e-06,
+          -6e-06,
+          0.087158,
+          0.996195
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "waypoint",
+      "reference_name": "waypoint3"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.532962,
+          1.563169,
+          -1.619872
+        ],
+        "position_xyz_m": [
+          -0.180017,
+          0.120399,
+          0.079035
+        ],
+        "quaternion_xyzw": [
+          -0.028015,
+          0.706449,
+          -0.033423,
+          0.706419
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "bookshelf"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.532899,
+        1.563169,
+        -1.619864
+      ],
+      "position_xyz_m": [
+        0.229547,
+        0.170404,
+        1.076024
+      ],
+      "quaternion_xyzw": [
+        -0.028035,
+        0.706448,
+        -0.033443,
+        0.706418
+      ],
+      "source": "exact_after_raw_ttm_import"
+    },
+    "world_orientation_rpy_rad": [
+      1.532899,
+      1.563169,
+      -1.619864
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "fixed_offset_xyz_m": [
+      -0.221577,
+      -0.163022,
+      0.237957
+    ],
+    "fixed_orientation_rpy_rad": [
+      0.0,
+      1.570796,
+      1.570853
+    ],
+    "motion_type": "point",
+    "name": "waypoint6",
+    "parent": "bookshelf",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          1.570796,
+          1.570853
+        ],
+        "position_xyz_m": [
+          -0.221577,
+          -0.163022,
+          0.237957
+        ],
+        "quaternion_xyzw": [
+          0.500014,
+          0.499986,
+          0.500015,
+          0.499985
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "bookshelf"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          1.570796,
+          1.570853
+        ],
+        "position_xyz_m": [
+          -0.221577,
+          -0.163022,
+          0.237957
+        ],
+        "quaternion_xyzw": [
+          0.500014,
+          0.499986,
+          0.500015,
+          0.499985
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "bookshelf"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570796,
+        1.570796
+      ],
+      "position_xyz_m": [
+        0.187987,
+        -0.113009,
+        1.234961
+      ],
+      "quaternion_xyzw": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "source": "exact_after_raw_ttm_import"
+    },
+    "world_orientation_rpy_rad": [
+      0.0,
+      1.570796,
+      1.570796
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "fixed_offset_xyz_m": [
+      -2e-05,
+      -1.4e-05,
+      0.114965
+    ],
+    "fixed_orientation_rpy_rad": [
+      2.3e-05,
+      1.7e-05,
+      1.9e-05
+    ],
+    "motion_type": "point",
+    "name": "waypoint7",
+    "parent": "waypoint6",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          2.3e-05,
+          1.7e-05,
+          1.9e-05
+        ],
+        "position_xyz_m": [
+          -2e-05,
+          -1.4e-05,
+          0.114965
+        ],
+        "quaternion_xyzw": [
+          -1.2e-05,
+          -8e-06,
+          -9e-06,
+          -1.0
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "waypoint",
+      "reference_name": "waypoint6"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          1.570796,
+          1.570871
+        ],
+        "position_xyz_m": [
+          -0.106612,
+          -0.163042,
+          0.237943
+        ],
+        "quaternion_xyzw": [
+          -0.50002,
+          -0.499992,
+          -0.500018,
+          -0.499971
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "bookshelf"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570796,
+        1.570815
+      ],
+      "position_xyz_m": [
+        0.302952,
+        -0.113029,
+        1.234948
+      ],
+      "quaternion_xyzw": [
+        -0.500006,
+        -0.500005,
+        -0.500003,
+        -0.499985
+      ],
+      "source": "exact_after_raw_ttm_import"
+    },
+    "world_orientation_rpy_rad": [
+      0.0,
+      1.570796,
+      1.570815
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "fixed_offset_xyz_m": [
+      -3.4e-05,
+      0.225973,
+      0.109968
+    ],
+    "fixed_orientation_rpy_rad": [
+      2.3e-05,
+      1.7e-05,
+      1.9e-05
+    ],
+    "motion_type": "point",
+    "name": "waypoint8",
+    "parent": "waypoint6",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          2.3e-05,
+          1.7e-05,
+          1.9e-05
+        ],
+        "position_xyz_m": [
+          -3.4e-05,
+          0.225973,
+          0.109968
+        ],
+        "quaternion_xyzw": [
+          1.2e-05,
+          8e-06,
+          9e-06,
+          1.0
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "waypoint",
+      "reference_name": "waypoint6"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          1.570796,
+          1.570872
+        ],
+        "position_xyz_m": [
+          -0.11161,
+          -0.163069,
+          0.463929
+        ],
+        "quaternion_xyzw": [
+          0.50002,
+          0.499992,
+          0.500018,
+          0.499971
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "bookshelf"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570796,
+        1.570815
+      ],
+      "position_xyz_m": [
+        0.297954,
+        -0.113043,
+        1.460934
+      ],
+      "quaternion_xyzw": [
+        0.500006,
+        0.500005,
+        0.500003,
+        0.499985
+      ],
+      "source": "exact_after_raw_ttm_import"
+    },
+    "world_orientation_rpy_rad": [
+      0.0,
+      1.570796,
+      1.570815
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "fixed_offset_xyz_m": [
+      -0.320092,
+      0.040371,
+      0.110975
+    ],
+    "fixed_orientation_rpy_rad": [
+      1.546807,
+      1.563224,
+      -1.546547
+    ],
+    "motion_type": "point",
+    "name": "waypoint9",
+    "parent": "bookshelf",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.546807,
+          1.563224,
+          -1.546547
+        ],
+        "position_xyz_m": [
+          -0.320092,
+          0.040371,
+          0.110975
+        ],
+        "quaternion_xyzw": [
+          0.002773,
+          0.707037,
+          -0.002588,
+          0.707166
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "bookshelf"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.546807,
+          1.563224,
+          -1.546547
+        ],
+        "position_xyz_m": [
+          -0.320092,
+          0.040371,
+          0.110975
+        ],
+        "quaternion_xyzw": [
+          0.002773,
+          0.707037,
+          -0.002588,
+          0.707166
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "bookshelf"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.546764,
+        1.563224,
+        -1.54656
+      ],
+      "position_xyz_m": [
+        0.089472,
+        0.090378,
+        1.107968
+      ],
+      "quaternion_xyzw": [
+        0.002753,
+        0.707037,
+        -0.002609,
+        0.707166
+      ],
+      "source": "exact_after_raw_ttm_import"
+    },
+    "world_orientation_rpy_rad": [
+      1.546764,
+      1.563224,
+      -1.54656
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "fixed_offset_xyz_m": [
+      7.2e-05,
+      0.003053,
+      0.270998
+    ],
+    "fixed_orientation_rpy_rad": [
+      -1.7e-05,
+      -5.4e-05,
+      5e-06
+    ],
+    "motion_type": "point",
+    "name": "waypoint10",
+    "parent": "waypoint9",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.7e-05,
+          -5.4e-05,
+          5e-06
+        ],
+        "position_xyz_m": [
+          7.2e-05,
+          0.003053,
+          0.270998
+        ],
+        "quaternion_xyzw": [
+          8e-06,
+          2.7e-05,
+          -2e-06,
+          -1.0
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "waypoint",
+      "reference_name": "waypoint9"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.53962,
+          1.563232,
+          -1.539352
+        ],
+        "position_xyz_m": [
+          -0.049079,
+          0.04137,
+          0.110953
+        ],
+        "quaternion_xyzw": [
+          -0.002768,
+          -0.707018,
+          0.002581,
+          -0.707186
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "bookshelf"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.539586,
+        1.563232,
+        -1.539374
+      ],
+      "position_xyz_m": [
+        0.360486,
+        0.091376,
+        1.107946
+      ],
+      "quaternion_xyzw": [
+        -0.002749,
+        -0.707018,
+        0.002601,
+        -0.707186
+      ],
+      "source": "exact_after_raw_ttm_import"
+    },
+    "world_orientation_rpy_rad": [
+      1.539586,
+      1.563232,
+      -1.539374
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "fixed_offset_xyz_m": [
+      1e-05,
+      0.001922,
+      0.122017
+    ],
+    "fixed_orientation_rpy_rad": [
+      -1.5e-05,
+      -4.6e-05,
+      -7e-06
+    ],
+    "motion_type": "point",
+    "name": "waypoint11",
+    "parent": "waypoint9",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.5e-05,
+          -4.6e-05,
+          -7e-06
+        ],
+        "position_xyz_m": [
+          1e-05,
+          0.001922,
+          0.122017
+        ],
+        "quaternion_xyzw": [
+          -7e-06,
+          -2.3e-05,
+          -3e-06,
+          1.0
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "waypoint",
+      "reference_name": "waypoint9"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.5407,
+          1.563232,
+          -1.54044
+        ],
+        "position_xyz_m": [
+          -0.198064,
+          0.041367,
+          0.110987
+        ],
+        "quaternion_xyzw": [
+          0.002765,
+          0.707021,
+          -0.002586,
+          0.707183
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "bookshelf"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.54065,
+        1.563232,
+        -1.540453
+      ],
+      "position_xyz_m": [
+        0.2115,
+        0.091374,
+        1.107981
+      ],
+      "quaternion_xyzw": [
+        0.002746,
+        0.707021,
+        -0.002606,
+        0.707183
+      ],
+      "source": "exact_after_raw_ttm_import"
+    },
+    "world_orientation_rpy_rad": [
+      1.54065,
+      1.563232,
+      -1.540453
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "fixed_offset_xyz_m": [
+      -0.219577,
+      -0.149021,
+      0.217957
+    ],
+    "fixed_orientation_rpy_rad": [
+      0.0,
+      1.570796,
+      1.570853
+    ],
+    "motion_type": "point",
+    "name": "waypoint12",
+    "parent": "bookshelf",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          1.570796,
+          1.570853
+        ],
+        "position_xyz_m": [
+          -0.219577,
+          -0.149021,
+          0.217957
+        ],
+        "quaternion_xyzw": [
+          0.500014,
+          0.499986,
+          0.500015,
+          0.499985
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "bookshelf"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          1.570796,
+          1.570853
+        ],
+        "position_xyz_m": [
+          -0.219577,
+          -0.149021,
+          0.217957
+        ],
+        "quaternion_xyzw": [
+          0.500014,
+          0.499986,
+          0.500015,
+          0.499985
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "bookshelf"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570796,
+        1.570797
+      ],
+      "position_xyz_m": [
+        0.189986,
+        -0.099009,
+        1.214962
+      ],
+      "quaternion_xyzw": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "source": "exact_after_raw_ttm_import"
+    },
+    "world_orientation_rpy_rad": [
+      0.0,
+      1.570796,
+      1.570797
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "fixed_offset_xyz_m": [
+      -0.090582,
+      -0.149022,
+      0.217957
+    ],
+    "fixed_orientation_rpy_rad": [
+      0.0,
+      1.570308,
+      1.570853
+    ],
+    "motion_type": "point",
+    "name": "waypoint13",
+    "parent": "bookshelf",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          1.570308,
+          1.570853
+        ],
+        "position_xyz_m": [
+          -0.090582,
+          -0.149022,
+          0.217957
+        ],
+        "quaternion_xyzw": [
+          0.500014,
+          0.499986,
+          0.500015,
+          0.499985
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "bookshelf"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          1.570308,
+          1.570853
+        ],
+        "position_xyz_m": [
+          -0.090582,
+          -0.149022,
+          0.217957
+        ],
+        "quaternion_xyzw": [
+          0.500014,
+          0.499986,
+          0.500015,
+          0.499985
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "bookshelf"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570796,
+        1.570796
+      ],
+      "position_xyz_m": [
+        0.318982,
+        -0.09901,
+        1.214962
+      ],
+      "quaternion_xyzw": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "source": "exact_after_raw_ttm_import"
+    },
+    "world_orientation_rpy_rad": [
+      0.0,
+      1.570796,
+      1.570796
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "fixed_offset_xyz_m": [
+      -2.7e-05,
+      0.238976,
+      -2.4e-05
+    ],
+    "fixed_orientation_rpy_rad": [
+      -0.0,
+      0.0,
+      -0.0
+    ],
+    "motion_type": "point",
+    "name": "waypoint14",
+    "parent": "waypoint13",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "position_xyz_m": [
+          -2.7e-05,
+          0.238976,
+          -2.4e-05
+        ],
+        "quaternion_xyzw": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "waypoint",
+      "reference_name": "waypoint13"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          1.570308,
+          1.570853
+        ],
+        "position_xyz_m": [
+          -0.090606,
+          -0.149063,
+          0.456934
+        ],
+        "quaternion_xyzw": [
+          0.500014,
+          0.499986,
+          0.500015,
+          0.499985
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "bookshelf"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570796,
+        1.570796
+      ],
+      "position_xyz_m": [
+        0.318958,
+        -0.099037,
+        1.453938
+      ],
+      "quaternion_xyzw": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "source": "exact_after_raw_ttm_import"
+    },
+    "world_orientation_rpy_rad": [
+      0.0,
+      1.570796,
+      1.570796
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "fixed_offset_xyz_m": [
+      -0.34312,
+      -0.027615,
+      0.147982
+    ],
+    "fixed_orientation_rpy_rad": [
+      1.539953,
+      1.563193,
+      -1.539655
+    ],
+    "motion_type": "point",
+    "name": "waypoint15",
+    "parent": "bookshelf",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.539953,
+          1.563193,
+          -1.539655
+        ],
+        "position_xyz_m": [
+          -0.34312,
+          -0.027615,
+          0.147982
+        ],
+        "quaternion_xyzw": [
+          0.002792,
+          0.707018,
+          -0.002584,
+          0.707185
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "bookshelf"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.539953,
+          1.563193,
+          -1.539655
+        ],
+        "position_xyz_m": [
+          -0.34312,
+          -0.027615,
+          0.147982
+        ],
+        "quaternion_xyzw": [
+          0.002792,
+          0.707018,
+          -0.002584,
+          0.707185
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "bookshelf"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.539904,
+        1.563193,
+        -1.539669
+      ],
+      "position_xyz_m": [
+        0.066444,
+        0.022394,
+        1.144979
+      ],
+      "quaternion_xyzw": [
+        0.002773,
+        0.707018,
+        -0.002605,
+        0.707185
+      ],
+      "source": "exact_after_raw_ttm_import"
+    },
+    "world_orientation_rpy_rad": [
+      1.539904,
+      1.563193,
+      -1.539669
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "fixed_offset_xyz_m": [
+      8.1e-05,
+      0.002072,
+      0.273005
+    ],
+    "fixed_orientation_rpy_rad": [
+      -7e-06,
+      -1.1e-05,
+      -2e-06
+    ],
+    "motion_type": "point",
+    "name": "waypoint16",
+    "parent": "waypoint15",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -7e-06,
+          -1.1e-05,
+          -2e-06
+        ],
+        "position_xyz_m": [
+          8.1e-05,
+          0.002072,
+          0.273005
+        ],
+        "quaternion_xyzw": [
+          -3e-06,
+          -6e-06,
+          -1e-06,
+          1.0
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "waypoint",
+      "reference_name": "waypoint15"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.538461,
+          1.563193,
+          -1.53817
+        ],
+        "position_xyz_m": [
+          -0.070107,
+          -0.027618,
+          0.147965
+        ],
+        "quaternion_xyzw": [
+          0.002789,
+          0.707014,
+          -0.002583,
+          0.707189
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "bookshelf"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.538411,
+        1.563193,
+        -1.538176
+      ],
+      "position_xyz_m": [
+        0.339457,
+        0.02239,
+        1.144962
+      ],
+      "quaternion_xyzw": [
+        0.00277,
+        0.707014,
+        -0.002603,
+        0.707189
+      ],
+      "source": "exact_after_raw_ttm_import"
+    },
+    "world_orientation_rpy_rad": [
+      1.538411,
+      1.563193,
+      -1.538176
+    ]
+  }
+]

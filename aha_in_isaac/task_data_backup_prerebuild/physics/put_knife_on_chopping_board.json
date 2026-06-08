@@ -1,0 +1,54 @@
+{
+  "shapes": {
+    "chopping_board": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.8969998955726624,
+      "friction": 0.5
+    },
+    "knife_block": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.4370800852775574,
+      "friction": 0.5
+    },
+    "boundary": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.125,
+      "friction": 0.5
+    },
+    "chopping_board_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.5120000243186951,
+      "friction": 0.7099999785423279
+    },
+    "knife": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.10000000149011612,
+      "friction": 0.7099999785423279
+    },
+    "knife_block_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 2.0,
+      "friction": 0.7099999785423279
+    },
+    "knife_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 2.0,
+      "friction": 0.7099999785423279
+    }
+  },
+  "joints": {}
+}

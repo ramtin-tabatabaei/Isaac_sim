@@ -7,36 +7,41 @@
         0.029337
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
-        0.023459,
-        0.023816,
-        -0.000183
+        0.023455,
+        0.023821,
+        -0.000184
       ],
       "name": "ball",
+      "observed_spawn_yaw_range_rad": [
+        -0.000212,
+        -0.000169
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          0.033102,
-          0.004656,
-          -0.653309
+          0.015082,
+          0.029834,
+          0.309466
         ],
         "position_xyz_m": [
-          0.187896,
-          -0.011537,
+          0.072631,
+          0.007305,
           0.781336
         ],
         "quaternion_xyzw": [
-          0.014928,
-          0.007515,
-          -0.320795,
-          0.947001
+          0.009749,
+          0.013576,
+          0.154206,
+          0.987897
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.343683,
-        "x_uniform_min_m": -0.078429,
-        "y_uniform_max_m": 0.310108,
-        "y_uniform_min_m": -0.261317,
+        "x_uniform_max_m": 0.202992,
+        "x_uniform_min_m": -0.051939,
+        "y_uniform_max_m": 0.214579,
+        "y_uniform_min_m": -0.148529,
         "z_fixed_m": 0.781336
       }
     }
@@ -44,19 +49,19 @@
   "other_scene_objects": [
     {
       "fixed_offset_from_reference_local_xyz_m": [
-        0.268828,
+        0.268827,
         0.001932,
-        0.230875
+        0.230876
       ],
       "fixed_offset_from_reference_xyz_m": [
-        0.215717,
-        -0.169383,
+        0.262241,
+        0.080336,
         0.22439
       ],
       "fixed_orientation_from_reference_rpy_rad": [
-        3.118199,
-        0.004476,
-        -3.141202
+        3.118203,
+        0.00448,
+        -3.141203
       ],
       "has_separate_distribution": false,
       "name": "basket_ball_hoop_respondable",
@@ -64,20 +69,20 @@
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -3.12979,
-          -0.015319,
-          -2.488158
+          3.135757,
+          -0.018437,
+          2.831959
         ],
         "position_xyz_m": [
-          0.403614,
-          -0.18092,
+          0.334872,
+          0.087642,
           1.005726
         ],
         "quaternion_xyzw": [
-          0.320878,
-          0.947071,
-          0.003131,
-          -0.009148
+          -0.154166,
+          0.987998,
+          -0.001461,
+          -0.009558
         ],
         "source": "exact_after_one_rlbench_reset"
       },
@@ -98,20 +103,20 @@
   "task_boundary_root_world_pose_after_reset": {
     "kind": "exact",
     "orientation_rpy_rad": [
+      -0.0,
       0.0,
-      0.0,
-      -0.653328
+      0.309596
     ],
     "position_xyz_m": [
-      0.285638,
-      -0.129803,
+      0.225535,
+      0.019994,
       0.752
     ],
     "quaternion_xyzw": [
       0.0,
       0.0,
-      -0.320885,
-      0.947118
+      0.15418,
+      0.988043
     ],
     "source": "exact_after_one_rlbench_reset"
   },

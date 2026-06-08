@@ -1,0 +1,2572 @@
+[
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          1.570796,
+          -0.0
+        ],
+        "position_xyz_m": [
+          -0.0238,
+          0.070768,
+          -0.014415
+        ],
+        "quaternion_xyzw": [
+          1e-06,
+          0.707107,
+          -2e-06,
+          0.707107
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "checker14",
+      "world_offset_xyz_m": [
+        0.017582,
+        -0.072564,
+        -0.014414
+      ]
+    },
+    "handle": 81,
+    "hierarchy_path": "setup_checkers/chess_board_base",
+    "name": "chess_board_base",
+    "parent": "setup_checkers",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570451,
+        0.0
+      ],
+      "position_xyz_m": [
+        -0.0,
+        0.0,
+        0.00878
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.707116,
+        0.0,
+        0.707098
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570451,
+        0.0
+      ],
+      "position_xyz_m": [
+        -0.0,
+        0.0,
+        0.00878
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.707116,
+        0.0,
+        0.707098
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.571094,
+        -1.484075,
+        1.5705
+      ],
+      "position_xyz_m": [
+        0.234323,
+        0.208113,
+        0.76078
+      ],
+      "quaternion_xyzw": [
+        -0.706451,
+        0.030651,
+        0.706433,
+        0.030651
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.36562,
+      "x_uniform_min_m": 0.13438,
+      "y_uniform_max_m": 0.118372,
+      "y_uniform_min_m": -0.24562,
+      "z_fixed_m": 0.76078
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1e-06,
+          -2.6e-05,
+          -4e-06
+        ],
+        "position_xyz_m": [
+          -0.0238,
+          0.070769,
+          -0.014522
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          -1.3e-05,
+          -2e-06,
+          1.0
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "checker14",
+      "world_offset_xyz_m": [
+        0.017582,
+        -0.072564,
+        -0.014522
+      ]
+    },
+    "handle": 83,
+    "hierarchy_path": "setup_checkers/chess_board_base/chess_board_base_visual",
+    "name": "chess_board_base_visual",
+    "parent": "chess_board_base",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570451,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.000108,
+        0.0,
+        0.0
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        -0.707116,
+        -0.0,
+        0.707098
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        0.0,
+        0.008672
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        0.0,
+        3.054872
+      ],
+      "position_xyz_m": [
+        0.234323,
+        0.208112,
+        0.760672
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.0,
+        0.99906,
+        0.043347
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.36562,
+      "x_uniform_min_m": 0.13438,
+      "y_uniform_max_m": 0.118372,
+      "y_uniform_min_m": -0.24562,
+      "z_fixed_m": 0.760672
+    }
+  },
+  {
+    "handle": 84,
+    "hierarchy_path": "setup_checkers/chess_board_base/checker9",
+    "name": "checker9",
+    "parent": "chess_board_base",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        0.00018
+      ],
+      "position_xyz_m": [
+        -0.014415,
+        0.072898,
+        -0.02409
+      ],
+      "quaternion_xyzw": [
+        -6.4e-05,
+        -0.707107,
+        6.4e-05,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.442394,
+      "x_uniform_min_m": 0.057605,
+      "y_uniform_max_m": 0.195147,
+      "y_uniform_min_m": -0.322395,
+      "z_fixed_m": 0.775195
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1e-06,
+        2.6e-05,
+        0.00018
+      ],
+      "position_xyz_m": [
+        -0.02409,
+        0.072898,
+        0.023195
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        1.3e-05,
+        9e-05,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3e-06,
+        -2.6e-05,
+        3.055052
+      ],
+      "position_xyz_m": [
+        0.252009,
+        0.133403,
+        0.775195
+      ],
+      "quaternion_xyzw": [
+        -1.3e-05,
+        1e-06,
+        0.999064,
+        0.043257
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.442394,
+      "x_uniform_min_m": 0.057605,
+      "y_uniform_max_m": 0.195147,
+      "y_uniform_min_m": -0.322395,
+      "z_fixed_m": 0.775195
+    }
+  },
+  {
+    "handle": 111,
+    "hierarchy_path": "setup_checkers/chess_board_base/checker8",
+    "name": "checker8",
+    "parent": "chess_board_base",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        3.3e-05
+      ],
+      "position_xyz_m": [
+        -0.014415,
+        0.072893,
+        -0.119876
+      ],
+      "quaternion_xyzw": [
+        -1e-05,
+        -0.707107,
+        1.3e-05,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.505917,
+      "x_uniform_min_m": -0.005918,
+      "y_uniform_max_m": 0.258669,
+      "y_uniform_min_m": -0.385918,
+      "z_fixed_m": 0.775198
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3e-06,
+        2.6e-05,
+        3.3e-05
+      ],
+      "position_xyz_m": [
+        -0.119876,
+        0.072893,
+        0.023198
+      ],
+      "quaternion_xyzw": [
+        2e-06,
+        1.3e-05,
+        1.6e-05,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -6e-06,
+        -2.6e-05,
+        3.054904
+      ],
+      "position_xyz_m": [
+        0.347435,
+        0.125111,
+        0.775198
+      ],
+      "quaternion_xyzw": [
+        -1.3e-05,
+        2e-06,
+        0.999061,
+        0.043331
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.505917,
+      "x_uniform_min_m": -0.005918,
+      "y_uniform_max_m": 0.258669,
+      "y_uniform_min_m": -0.385918,
+      "z_fixed_m": 0.775198
+    }
+  },
+  {
+    "handle": 112,
+    "hierarchy_path": "setup_checkers/chess_board_base/checker7",
+    "name": "checker7",
+    "parent": "chess_board_base",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        7.1e-05
+      ],
+      "position_xyz_m": [
+        -0.014415,
+        0.120781,
+        0.119561
+      ],
+      "quaternion_xyzw": [
+        -2.5e-05,
+        -0.707107,
+        2.5e-05,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.535569,
+      "x_uniform_min_m": -0.035569,
+      "y_uniform_max_m": 0.288321,
+      "y_uniform_min_m": -0.41557,
+      "z_fixed_m": 0.775191
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1e-06,
+        2.5e-05,
+        7.1e-05
+      ],
+      "position_xyz_m": [
+        0.119561,
+        0.120781,
+        0.023192
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        1.3e-05,
+        3.6e-05,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1e-06,
+        -2.5e-05,
+        3.054943
+      ],
+      "position_xyz_m": [
+        0.104751,
+        0.098141,
+        0.775191
+      ],
+      "quaternion_xyzw": [
+        -1.3e-05,
+        0.0,
+        0.999062,
+        0.043311
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.535569,
+      "x_uniform_min_m": -0.035569,
+      "y_uniform_max_m": 0.288321,
+      "y_uniform_min_m": -0.41557,
+      "z_fixed_m": 0.775191
+    }
+  },
+  {
+    "handle": 113,
+    "hierarchy_path": "setup_checkers/chess_board_base/checker6",
+    "name": "checker6",
+    "parent": "chess_board_base",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        0.000133
+      ],
+      "position_xyz_m": [
+        -0.014415,
+        0.12079,
+        0.023803
+      ],
+      "quaternion_xyzw": [
+        -4.7e-05,
+        -0.707107,
+        4.7e-05,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.488733,
+      "x_uniform_min_m": 0.011268,
+      "y_uniform_max_m": 0.241485,
+      "y_uniform_min_m": -0.368733,
+      "z_fixed_m": 0.775194
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        2.6e-05,
+        0.000133
+      ],
+      "position_xyz_m": [
+        0.023803,
+        0.12079,
+        0.023194
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        1.3e-05,
+        6.7e-05,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -2e-06,
+        -2.6e-05,
+        3.055005
+      ],
+      "position_xyz_m": [
+        0.200148,
+        0.089838,
+        0.775194
+      ],
+      "quaternion_xyzw": [
+        -1.3e-05,
+        1e-06,
+        0.999063,
+        0.04328
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.488733,
+      "x_uniform_min_m": 0.011268,
+      "y_uniform_max_m": 0.241485,
+      "y_uniform_min_m": -0.368733,
+      "z_fixed_m": 0.775194
+    }
+  },
+  {
+    "handle": 114,
+    "hierarchy_path": "setup_checkers/chess_board_base/checker5",
+    "name": "checker5",
+    "parent": "chess_board_base",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        6.3e-05
+      ],
+      "position_xyz_m": [
+        -0.014415,
+        0.120789,
+        -0.071979
+      ],
+      "quaternion_xyzw": [
+        -2.2e-05,
+        -0.707107,
+        2.2e-05,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.506229,
+      "x_uniform_min_m": -0.006229,
+      "y_uniform_max_m": 0.258981,
+      "y_uniform_min_m": -0.386229,
+      "z_fixed_m": 0.775196
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        2.6e-05,
+        6.3e-05
+      ],
+      "position_xyz_m": [
+        -0.071979,
+        0.120789,
+        0.023196
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        1.3e-05,
+        3.2e-05,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -2e-06,
+        -2.6e-05,
+        3.054935
+      ],
+      "position_xyz_m": [
+        0.29557,
+        0.081543,
+        0.775196
+      ],
+      "quaternion_xyzw": [
+        -1.3e-05,
+        1e-06,
+        0.999062,
+        0.043315
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.506229,
+      "x_uniform_min_m": -0.006229,
+      "y_uniform_max_m": 0.258981,
+      "y_uniform_min_m": -0.386229,
+      "z_fixed_m": 0.775196
+    }
+  },
+  {
+    "handle": 115,
+    "hierarchy_path": "setup_checkers/chess_board_base/checker4",
+    "name": "checker4",
+    "parent": "chess_board_base",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        0.000279
+      ],
+      "position_xyz_m": [
+        -0.014415,
+        0.120789,
+        -0.167763
+      ],
+      "quaternion_xyzw": [
+        -9.9e-05,
+        -0.707107,
+        9.8e-05,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.572341,
+      "x_uniform_min_m": -0.072342,
+      "y_uniform_max_m": 0.325094,
+      "y_uniform_min_m": -0.452342,
+      "z_fixed_m": 0.775199
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1e-06,
+        2.6e-05,
+        0.000279
+      ],
+      "position_xyz_m": [
+        -0.167762,
+        0.120789,
+        0.023199
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        1.3e-05,
+        0.00014,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1e-06,
+        -2.6e-05,
+        3.055151
+      ],
+      "position_xyz_m": [
+        0.390993,
+        0.073248,
+        0.775199
+      ],
+      "quaternion_xyzw": [
+        -1.3e-05,
+        0.0,
+        0.999066,
+        0.043208
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.572341,
+      "x_uniform_min_m": -0.072342,
+      "y_uniform_max_m": 0.325094,
+      "y_uniform_min_m": -0.452342,
+      "z_fixed_m": 0.775199
+    }
+  },
+  {
+    "handle": 116,
+    "hierarchy_path": "setup_checkers/chess_board_base/checker3",
+    "name": "checker3",
+    "parent": "chess_board_base",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        2.2e-05
+      ],
+      "position_xyz_m": [
+        0.007192,
+        0.318681,
+        -0.094886
+      ],
+      "quaternion_xyzw": [
+        -8e-06,
+        -0.707107,
+        7e-06,
+        0.707106
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.698123,
+      "x_uniform_min_m": -0.198126,
+      "y_uniform_max_m": 0.450877,
+      "y_uniform_min_m": -0.578127,
+      "z_fixed_m": 0.75359
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1e-06,
+        2.4e-05,
+        2.2e-05
+      ],
+      "position_xyz_m": [
+        -0.094886,
+        0.318681,
+        0.00159
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        1.2e-05,
+        1.1e-05,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1e-06,
+        -2.4e-05,
+        3.054893
+      ],
+      "position_xyz_m": [
+        0.301252,
+        -0.117589,
+        0.75359
+      ],
+      "quaternion_xyzw": [
+        -1.2e-05,
+        0.0,
+        0.999061,
+        0.043336
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.698123,
+      "x_uniform_min_m": -0.198126,
+      "y_uniform_max_m": 0.450877,
+      "y_uniform_min_m": -0.578127,
+      "z_fixed_m": 0.75359
+    }
+  },
+  {
+    "handle": 117,
+    "hierarchy_path": "setup_checkers/chess_board_base/checker23",
+    "name": "checker23",
+    "parent": "chess_board_base",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        2.7e-05
+      ],
+      "position_xyz_m": [
+        -0.014415,
+        -0.166549,
+        0.119581
+      ],
+      "quaternion_xyzw": [
+        -9e-06,
+        -0.707107,
+        1e-05,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.570652,
+      "x_uniform_min_m": -0.070651,
+      "y_uniform_max_m": 0.323404,
+      "y_uniform_min_m": -0.450652,
+      "z_fixed_m": 0.775191
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1e-06,
+        2.6e-05,
+        2.7e-05
+      ],
+      "position_xyz_m": [
+        0.119582,
+        -0.166549,
+        0.023192
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        1.3e-05,
+        1.4e-05,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3e-06,
+        -2.6e-05,
+        3.054899
+      ],
+      "position_xyz_m": [
+        0.129616,
+        0.384393,
+        0.775191
+      ],
+      "quaternion_xyzw": [
+        -1.3e-05,
+        1e-06,
+        0.999061,
+        0.043333
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.570652,
+      "x_uniform_min_m": -0.070651,
+      "y_uniform_max_m": 0.323404,
+      "y_uniform_min_m": -0.450652,
+      "z_fixed_m": 0.775191
+    }
+  },
+  {
+    "handle": 118,
+    "hierarchy_path": "setup_checkers/chess_board_base/checker22",
+    "name": "checker22",
+    "parent": "chess_board_base",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        4.4e-05
+      ],
+      "position_xyz_m": [
+        -0.014415,
+        -0.166528,
+        0.023826
+      ],
+      "quaternion_xyzw": [
+        -1.6e-05,
+        -0.707107,
+        1.5e-05,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.533843,
+      "x_uniform_min_m": -0.033843,
+      "y_uniform_max_m": 0.286596,
+      "y_uniform_min_m": -0.413844,
+      "z_fixed_m": 0.775194
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1e-06,
+        2.6e-05,
+        4.4e-05
+      ],
+      "position_xyz_m": [
+        0.023826,
+        -0.166528,
+        0.023194
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        1.3e-05,
+        2.2e-05,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -2e-06,
+        -2.6e-05,
+        3.054916
+      ],
+      "position_xyz_m": [
+        0.22501,
+        0.376079,
+        0.775194
+      ],
+      "quaternion_xyzw": [
+        -1.3e-05,
+        0.0,
+        0.999061,
+        0.043325
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.533843,
+      "x_uniform_min_m": -0.033843,
+      "y_uniform_max_m": 0.286596,
+      "y_uniform_min_m": -0.413844,
+      "z_fixed_m": 0.775194
+    }
+  },
+  {
+    "handle": 119,
+    "hierarchy_path": "setup_checkers/chess_board_base/checker21",
+    "name": "checker21",
+    "parent": "chess_board_base",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -0.00027
+      ],
+      "position_xyz_m": [
+        -0.014415,
+        -0.166538,
+        -0.071974
+      ],
+      "quaternion_xyzw": [
+        9.5e-05,
+        -0.707106,
+        -9.5e-05,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.547044,
+      "x_uniform_min_m": -0.047044,
+      "y_uniform_max_m": 0.299795,
+      "y_uniform_min_m": -0.427045,
+      "z_fixed_m": 0.775196
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        2.7e-05,
+        -0.00027
+      ],
+      "position_xyz_m": [
+        -0.071974,
+        -0.166538,
+        0.023196
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        1.4e-05,
+        -0.000135,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -2e-06,
+        -2.7e-05,
+        3.054602
+      ],
+      "position_xyz_m": [
+        0.320451,
+        0.367791,
+        0.775196
+      ],
+      "quaternion_xyzw": [
+        -1.4e-05,
+        0.0,
+        0.999054,
+        0.043482
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.547044,
+      "x_uniform_min_m": -0.047044,
+      "y_uniform_max_m": 0.299795,
+      "y_uniform_min_m": -0.427045,
+      "z_fixed_m": 0.775196
+    }
+  },
+  {
+    "handle": 120,
+    "hierarchy_path": "setup_checkers/chess_board_base/checker20",
+    "name": "checker20",
+    "parent": "chess_board_base",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        5.4e-05
+      ],
+      "position_xyz_m": [
+        -0.014415,
+        -0.166555,
+        -0.167758
+      ],
+      "quaternion_xyzw": [
+        -2e-05,
+        -0.707107,
+        1.8e-05,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.602015,
+      "x_uniform_min_m": -0.102016,
+      "y_uniform_max_m": 0.354768,
+      "y_uniform_min_m": -0.482016,
+      "z_fixed_m": 0.775199
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -2e-06,
+        2.6e-05,
+        5.4e-05
+      ],
+      "position_xyz_m": [
+        -0.167758,
+        -0.166555,
+        0.023199
+      ],
+      "quaternion_xyzw": [
+        -1e-06,
+        1.3e-05,
+        2.7e-05,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -2.6e-05,
+        3.054926
+      ],
+      "position_xyz_m": [
+        0.415877,
+        0.359512,
+        0.775199
+      ],
+      "quaternion_xyzw": [
+        -1.3e-05,
+        -1e-06,
+        0.999061,
+        0.04332
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.602015,
+      "x_uniform_min_m": -0.102016,
+      "y_uniform_max_m": 0.354768,
+      "y_uniform_min_m": -0.482016,
+      "z_fixed_m": 0.775199
+    }
+  },
+  {
+    "handle": 121,
+    "hierarchy_path": "setup_checkers/chess_board_base/checker2",
+    "name": "checker2",
+    "parent": "chess_board_base",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        6.5e-05
+      ],
+      "position_xyz_m": [
+        -0.014415,
+        0.16868,
+        0.071681
+      ],
+      "quaternion_xyzw": [
+        -2.3e-05,
+        -0.707107,
+        2.3e-05,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.548897,
+      "x_uniform_min_m": -0.048897,
+      "y_uniform_max_m": 0.301648,
+      "y_uniform_min_m": -0.428898,
+      "z_fixed_m": 0.775193
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        2.6e-05,
+        6.5e-05
+      ],
+      "position_xyz_m": [
+        0.071681,
+        0.16868,
+        0.023193
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        1.3e-05,
+        3.2e-05,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -2e-06,
+        -2.6e-05,
+        3.054936
+      ],
+      "position_xyz_m": [
+        0.148302,
+        0.046276,
+        0.775193
+      ],
+      "quaternion_xyzw": [
+        -1.3e-05,
+        0.0,
+        0.999061,
+        0.043315
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.548897,
+      "x_uniform_min_m": -0.048897,
+      "y_uniform_max_m": 0.301648,
+      "y_uniform_min_m": -0.428898,
+      "z_fixed_m": 0.775193
+    }
+  },
+  {
+    "handle": 122,
+    "hierarchy_path": "setup_checkers/chess_board_base/checker19",
+    "name": "checker19",
+    "parent": "chess_board_base",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        5.4e-05
+      ],
+      "position_xyz_m": [
+        -0.014415,
+        -0.118657,
+        0.167471
+      ],
+      "quaternion_xyzw": [
+        -1.8e-05,
+        -0.707107,
+        2e-05,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.570867,
+      "x_uniform_min_m": -0.070866,
+      "y_uniform_max_m": 0.323619,
+      "y_uniform_min_m": -0.450867,
+      "z_fixed_m": 0.77519
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3e-06,
+        2.5e-05,
+        5.4e-05
+      ],
+      "position_xyz_m": [
+        0.167472,
+        -0.118658,
+        0.02319
+      ],
+      "quaternion_xyzw": [
+        1e-06,
+        1.3e-05,
+        2.7e-05,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -5e-06,
+        -2.5e-05,
+        3.054925
+      ],
+      "position_xyz_m": [
+        0.077758,
+        0.340829,
+        0.77519
+      ],
+      "quaternion_xyzw": [
+        -1.3e-05,
+        2e-06,
+        0.999061,
+        0.04332
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.570867,
+      "x_uniform_min_m": -0.070866,
+      "y_uniform_max_m": 0.323619,
+      "y_uniform_min_m": -0.450867,
+      "z_fixed_m": 0.77519
+    }
+  },
+  {
+    "handle": 123,
+    "hierarchy_path": "setup_checkers/chess_board_base/checker18",
+    "name": "checker18",
+    "parent": "chess_board_base",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570451,
+        -6.5e-05
+      ],
+      "position_xyz_m": [
+        -0.014415,
+        -0.11866,
+        0.071682
+      ],
+      "quaternion_xyzw": [
+        2.3e-05,
+        -0.707107,
+        -2.3e-05,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.504251,
+      "x_uniform_min_m": -0.00425,
+      "y_uniform_max_m": 0.257003,
+      "y_uniform_min_m": -0.384251,
+      "z_fixed_m": 0.775192
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        2.6e-05,
+        -6.5e-05
+      ],
+      "position_xyz_m": [
+        0.071683,
+        -0.11866,
+        0.023193
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        1.3e-05,
+        -3.3e-05,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -2e-06,
+        -2.6e-05,
+        3.054806
+      ],
+      "position_xyz_m": [
+        0.173187,
+        0.332536,
+        0.775192
+      ],
+      "quaternion_xyzw": [
+        -1.3e-05,
+        1e-06,
+        0.999059,
+        0.043379
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.504251,
+      "x_uniform_min_m": -0.00425,
+      "y_uniform_max_m": 0.257003,
+      "y_uniform_min_m": -0.384251,
+      "z_fixed_m": 0.775192
+    }
+  },
+  {
+    "handle": 124,
+    "hierarchy_path": "setup_checkers/chess_board_base/checker17",
+    "name": "checker17",
+    "parent": "chess_board_base",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570451,
+        2.8e-05
+      ],
+      "position_xyz_m": [
+        -0.014415,
+        -0.118659,
+        -0.024087
+      ],
+      "quaternion_xyzw": [
+        -1e-05,
+        -0.707107,
+        1e-05,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.486699,
+      "x_uniform_min_m": 0.013302,
+      "y_uniform_max_m": 0.239451,
+      "y_uniform_min_m": -0.366699,
+      "z_fixed_m": 0.775195
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1e-06,
+        2.6e-05,
+        2.8e-05
+      ],
+      "position_xyz_m": [
+        -0.024087,
+        -0.118659,
+        0.023195
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        1.3e-05,
+        1.4e-05,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1e-06,
+        -2.6e-05,
+        3.054899
+      ],
+      "position_xyz_m": [
+        0.268597,
+        0.32424,
+        0.775195
+      ],
+      "quaternion_xyzw": [
+        -1.3e-05,
+        0.0,
+        0.999061,
+        0.043333
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.486699,
+      "x_uniform_min_m": 0.013302,
+      "y_uniform_max_m": 0.239451,
+      "y_uniform_min_m": -0.366699,
+      "z_fixed_m": 0.775195
+    }
+  },
+  {
+    "handle": 125,
+    "hierarchy_path": "setup_checkers/chess_board_base/checker16",
+    "name": "checker16",
+    "parent": "chess_board_base",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -7.7e-05
+      ],
+      "position_xyz_m": [
+        -0.014415,
+        -0.118662,
+        -0.119879
+      ],
+      "quaternion_xyzw": [
+        2.7e-05,
+        -0.707106,
+        -2.8e-05,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.534295,
+      "x_uniform_min_m": -0.034295,
+      "y_uniform_max_m": 0.287047,
+      "y_uniform_min_m": -0.414296,
+      "z_fixed_m": 0.775198
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1e-06,
+        2.7e-05,
+        -7.7e-05
+      ],
+      "position_xyz_m": [
+        -0.119879,
+        -0.118662,
+        0.023198
+      ],
+      "quaternion_xyzw": [
+        -1e-06,
+        1.3e-05,
+        -3.9e-05,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1e-06,
+        -2.7e-05,
+        3.054794
+      ],
+      "position_xyz_m": [
+        0.364029,
+        0.315946,
+        0.775198
+      ],
+      "quaternion_xyzw": [
+        -1.3e-05,
+        -0.0,
+        0.999058,
+        0.043386
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.534295,
+      "x_uniform_min_m": -0.034295,
+      "y_uniform_max_m": 0.287047,
+      "y_uniform_min_m": -0.414296,
+      "z_fixed_m": 0.775198
+    }
+  },
+  {
+    "handle": 126,
+    "hierarchy_path": "setup_checkers/chess_board_base/checker13",
+    "name": "checker13",
+    "parent": "chess_board_base",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -0.000136
+      ],
+      "position_xyz_m": [
+        -0.014415,
+        -0.07076,
+        -0.071971
+      ],
+      "quaternion_xyzw": [
+        4.7e-05,
+        -0.707107,
+        -4.9e-05,
+        0.707106
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.466549,
+      "x_uniform_min_m": 0.033452,
+      "y_uniform_max_m": 0.219301,
+      "y_uniform_min_m": -0.346549,
+      "z_fixed_m": 0.775196
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3e-06,
+        2.5e-05,
+        -0.000136
+      ],
+      "position_xyz_m": [
+        -0.071971,
+        -0.07076,
+        0.023196
+      ],
+      "quaternion_xyzw": [
+        -1e-06,
+        1.2e-05,
+        -6.8e-05,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1e-06,
+        -2.5e-05,
+        3.054735
+      ],
+      "position_xyz_m": [
+        0.312153,
+        0.272373,
+        0.775196
+      ],
+      "quaternion_xyzw": [
+        -1.2e-05,
+        -1e-06,
+        0.999057,
+        0.043415
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.466549,
+      "x_uniform_min_m": 0.033452,
+      "y_uniform_max_m": 0.219301,
+      "y_uniform_min_m": -0.346549,
+      "z_fixed_m": 0.775196
+    }
+  },
+  {
+    "handle": 127,
+    "hierarchy_path": "setup_checkers/chess_board_base/checker15",
+    "name": "checker15",
+    "parent": "chess_board_base",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570451,
+        9e-06
+      ],
+      "position_xyz_m": [
+        -0.014415,
+        -0.070759,
+        0.119577
+      ],
+      "quaternion_xyzw": [
+        -4e-06,
+        -0.707107,
+        3e-06,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.504563,
+      "x_uniform_min_m": -0.004564,
+      "y_uniform_max_m": 0.257315,
+      "y_uniform_min_m": -0.384564,
+      "z_fixed_m": 0.775191
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1e-06,
+        2.5e-05,
+        9e-06
+      ],
+      "position_xyz_m": [
+        0.119577,
+        -0.070759,
+        0.023192
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        1.3e-05,
+        5e-06,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1e-06,
+        -2.5e-05,
+        3.054881
+      ],
+      "position_xyz_m": [
+        0.121324,
+        0.288963,
+        0.775191
+      ],
+      "quaternion_xyzw": [
+        -1.3e-05,
+        0.0,
+        0.99906,
+        0.043342
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.504563,
+      "x_uniform_min_m": -0.004564,
+      "y_uniform_max_m": 0.257315,
+      "y_uniform_min_m": -0.384564,
+      "z_fixed_m": 0.775191
+    }
+  },
+  {
+    "handle": 128,
+    "hierarchy_path": "setup_checkers/chess_board_base/checker14",
+    "name": "checker14",
+    "parent": "chess_board_base",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        4e-06
+      ],
+      "position_xyz_m": [
+        -0.014415,
+        -0.070768,
+        0.023801
+      ],
+      "quaternion_xyzw": [
+        -1e-06,
+        -0.707107,
+        2e-06,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.440283,
+      "x_uniform_min_m": 0.059718,
+      "y_uniform_max_m": 0.193035,
+      "y_uniform_min_m": -0.320283,
+      "z_fixed_m": 0.775194
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        2.6e-05,
+        4e-06
+      ],
+      "position_xyz_m": [
+        0.023801,
+        -0.070768,
+        0.023194
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        1.3e-05,
+        2e-06,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3e-06,
+        -2.6e-05,
+        3.054875
+      ],
+      "position_xyz_m": [
+        0.216741,
+        0.280676,
+        0.775194
+      ],
+      "quaternion_xyzw": [
+        -1.3e-05,
+        1e-06,
+        0.99906,
+        0.043345
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.440283,
+      "x_uniform_min_m": 0.059718,
+      "y_uniform_max_m": 0.193035,
+      "y_uniform_min_m": -0.320283,
+      "z_fixed_m": 0.775194
+    }
+  },
+  {
+    "handle": 129,
+    "hierarchy_path": "setup_checkers/chess_board_base/checker12",
+    "name": "checker12",
+    "parent": "chess_board_base",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570451,
+        3.1e-05
+      ],
+      "position_xyz_m": [
+        -0.014415,
+        -0.070766,
+        -0.167758
+      ],
+      "quaternion_xyzw": [
+        -1.1e-05,
+        -0.707109,
+        1.1e-05,
+        0.707104
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.54769,
+      "x_uniform_min_m": -0.047692,
+      "y_uniform_max_m": 0.300444,
+      "y_uniform_min_m": -0.427691,
+      "z_fixed_m": 0.775199
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1e-06,
+        1.9e-05,
+        3.1e-05
+      ],
+      "position_xyz_m": [
+        -0.167757,
+        -0.070766,
+        0.023199
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        9e-06,
+        1.5e-05,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1e-06,
+        -1.9e-05,
+        3.054902
+      ],
+      "position_xyz_m": [
+        0.407579,
+        0.264083,
+        0.775199
+      ],
+      "quaternion_xyzw": [
+        -9e-06,
+        -0.0,
+        0.999061,
+        0.043332
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.54769,
+      "x_uniform_min_m": -0.047692,
+      "y_uniform_max_m": 0.300444,
+      "y_uniform_min_m": -0.427691,
+      "z_fixed_m": 0.775199
+    }
+  },
+  {
+    "handle": 130,
+    "hierarchy_path": "setup_checkers/chess_board_base/checker11",
+    "name": "checker11",
+    "parent": "chess_board_base",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570451,
+        7e-05
+      ],
+      "position_xyz_m": [
+        -0.014415,
+        0.0729,
+        0.167471
+      ],
+      "quaternion_xyzw": [
+        -2.5e-05,
+        -0.707107,
+        2.4e-05,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.548268,
+      "x_uniform_min_m": -0.04827,
+      "y_uniform_max_m": 0.301021,
+      "y_uniform_min_m": -0.428269,
+      "z_fixed_m": 0.77519
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1e-06,
+        2.6e-05,
+        7e-05
+      ],
+      "position_xyz_m": [
+        0.167472,
+        0.0729,
+        0.02319
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        1.3e-05,
+        3.5e-05,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1e-06,
+        -2.6e-05,
+        3.054942
+      ],
+      "position_xyz_m": [
+        0.061167,
+        0.149992,
+        0.77519
+      ],
+      "quaternion_xyzw": [
+        -1.3e-05,
+        0.0,
+        0.999062,
+        0.043312
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.548268,
+      "x_uniform_min_m": -0.04827,
+      "y_uniform_max_m": 0.301021,
+      "y_uniform_min_m": -0.428269,
+      "z_fixed_m": 0.77519
+    }
+  },
+  {
+    "handle": 131,
+    "hierarchy_path": "setup_checkers/chess_board_base/checker10",
+    "name": "checker10",
+    "parent": "chess_board_base",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        8.9e-05
+      ],
+      "position_xyz_m": [
+        -0.014415,
+        0.072899,
+        0.071692
+      ],
+      "quaternion_xyzw": [
+        -3.1e-05,
+        -0.707107,
+        3.2e-05,
+        0.707106
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.467864,
+      "x_uniform_min_m": 0.032136,
+      "y_uniform_max_m": 0.220615,
+      "y_uniform_min_m": -0.347865,
+      "z_fixed_m": 0.775193
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1e-06,
+        2.4e-05,
+        8.9e-05
+      ],
+      "position_xyz_m": [
+        0.071692,
+        0.072899,
+        0.023193
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        1.2e-05,
+        4.5e-05,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3e-06,
+        -2.4e-05,
+        3.054961
+      ],
+      "position_xyz_m": [
+        0.156587,
+        0.141697,
+        0.775193
+      ],
+      "quaternion_xyzw": [
+        -1.2e-05,
+        1e-06,
+        0.999062,
+        0.043302
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.467864,
+      "x_uniform_min_m": 0.032136,
+      "y_uniform_max_m": 0.220615,
+      "y_uniform_min_m": -0.347865,
+      "z_fixed_m": 0.775193
+    }
+  },
+  {
+    "handle": 132,
+    "hierarchy_path": "setup_checkers/chess_board_base/checker1",
+    "name": "checker1",
+    "parent": "chess_board_base",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570451,
+        5.9e-05
+      ],
+      "position_xyz_m": [
+        -0.014415,
+        0.16868,
+        -0.024088
+      ],
+      "quaternion_xyzw": [
+        -2.1e-05,
+        -0.707106,
+        2.1e-05,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.53601,
+      "x_uniform_min_m": -0.036011,
+      "y_uniform_max_m": 0.288762,
+      "y_uniform_min_m": -0.416011,
+      "z_fixed_m": 0.775195
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        2.7e-05,
+        5.9e-05
+      ],
+      "position_xyz_m": [
+        -0.024087,
+        0.16868,
+        0.023195
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        1.3e-05,
+        3e-05,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -2e-06,
+        -2.7e-05,
+        3.054931
+      ],
+      "position_xyz_m": [
+        0.24371,
+        0.03798,
+        0.775195
+      ],
+      "quaternion_xyzw": [
+        -1.3e-05,
+        0.0,
+        0.999061,
+        0.043317
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.53601,
+      "x_uniform_min_m": -0.036011,
+      "y_uniform_max_m": 0.288762,
+      "y_uniform_min_m": -0.416011,
+      "z_fixed_m": 0.775195
+    }
+  },
+  {
+    "handle": 133,
+    "hierarchy_path": "setup_checkers/chess_board_base/checker0",
+    "name": "checker0",
+    "parent": "chess_board_base",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.056918,
+        -1.567413,
+        3.056912
+      ],
+      "position_xyz_m": [
+        -0.014395,
+        0.168698,
+        -0.119151
+      ],
+      "quaternion_xyzw": [
+        0.000105,
+        -0.708317,
+        0.000101,
+        0.705894
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.572152,
+      "x_uniform_min_m": -0.072153,
+      "y_uniform_max_m": 0.324904,
+      "y_uniform_min_m": -0.452153,
+      "z_fixed_m": 0.775177
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.000291,
+        -0.003401,
+        -5e-06
+      ],
+      "position_xyz_m": [
+        -0.119151,
+        0.168698,
+        0.023178
+      ],
+      "quaternion_xyzw": [
+        0.000145,
+        -0.0017,
+        -3e-06,
+        0.999999
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        5e-06,
+        0.003413,
+        3.054866
+      ],
+      "position_xyz_m": [
+        0.338415,
+        0.029729,
+        0.775177
+      ],
+      "quaternion_xyzw": [
+        0.001705,
+        7.2e-05,
+        0.999059,
+        0.043349
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.572152,
+      "x_uniform_min_m": -0.072153,
+      "y_uniform_max_m": 0.324904,
+      "y_uniform_min_m": -0.452153,
+      "z_fixed_m": 0.775177
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1e-06,
+          -2.6e-05,
+          -0.00018
+        ],
+        "position_xyz_m": [
+          0.023857,
+          -0.071817,
+          -0.003584
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          -1.3e-05,
+          -9e-05,
+          1.0
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "checker9",
+      "world_offset_xyz_m": [
+        -0.01756,
+        0.07361,
+        -0.003585
+      ]
+    },
+    "handle": 134,
+    "hierarchy_path": "setup_checkers/chess_board_base/chess_board_surface",
+    "name": "chess_board_surface",
+    "parent": "chess_board_base",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570451,
+        -0.0
+      ],
+      "position_xyz_m": [
+        -0.01083,
+        0.001085,
+        -0.00022
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.707116,
+        0.0,
+        0.707098
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        -0.00022,
+        0.001085,
+        0.01961
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        0.0,
+        3.054872
+      ],
+      "position_xyz_m": [
+        0.234449,
+        0.207013,
+        0.77161
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.0,
+        0.99906,
+        0.043347
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.366727,
+      "x_uniform_min_m": 0.133273,
+      "y_uniform_max_m": 0.119479,
+      "y_uniform_min_m": -0.246727,
+      "z_fixed_m": 0.77161
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          1.570796,
+          -1e-06
+        ],
+        "position_xyz_m": [
+          0.023862,
+          -0.071817,
+          -0.003579
+        ],
+        "quaternion_xyzw": [
+          -6.4e-05,
+          -0.707107,
+          6.4e-05,
+          -0.707107
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "checker9",
+      "world_offset_xyz_m": [
+        -0.017565,
+        0.073611,
+        -0.003579
+      ]
+    },
+    "handle": 135,
+    "hierarchy_path": "setup_checkers/chess_board_base/chess_board_surface/squares_black",
+    "name": "squares_black",
+    "parent": "chess_board_surface",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570796,
+        -0.0
+      ],
+      "position_xyz_m": [
+        5e-06,
+        0.0,
+        5e-06
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.707116,
+        0.0,
+        -0.707098
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570796,
+        -0.0
+      ],
+      "position_xyz_m": [
+        -0.000215,
+        0.001085,
+        0.019616
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.707116,
+        0.0,
+        -0.707098
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.571096,
+        -1.484077,
+        1.5705
+      ],
+      "position_xyz_m": [
+        0.234444,
+        0.207013,
+        0.771616
+      ],
+      "quaternion_xyzw": [
+        0.706451,
+        -0.030651,
+        -0.706433,
+        -0.030651
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.366726,
+      "x_uniform_min_m": 0.133274,
+      "y_uniform_max_m": 0.119478,
+      "y_uniform_min_m": -0.246726,
+      "z_fixed_m": 0.771616
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          1.570796,
+          -1e-06
+        ],
+        "position_xyz_m": [
+          0.023862,
+          -0.071817,
+          -0.003579
+        ],
+        "quaternion_xyzw": [
+          6.4e-05,
+          0.707107,
+          -6.4e-05,
+          0.707107
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "checker9",
+      "world_offset_xyz_m": [
+        -0.017566,
+        0.073611,
+        -0.00358
+      ]
+    },
+    "handle": 136,
+    "hierarchy_path": "setup_checkers/chess_board_base/chess_board_surface/squares_black/squares_white",
+    "name": "squares_white",
+    "parent": "squares_black",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        -1e-06,
+        0.0
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570796,
+        0.0
+      ],
+      "position_xyz_m": [
+        -0.000215,
+        0.001084,
+        0.019616
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.707116,
+        -0.0,
+        0.707098
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.571099,
+        -1.484077,
+        1.570498
+      ],
+      "position_xyz_m": [
+        0.234443,
+        0.207014,
+        0.771616
+      ],
+      "quaternion_xyzw": [
+        -0.706451,
+        0.030651,
+        0.706433,
+        0.030651
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.366725,
+      "x_uniform_min_m": 0.133275,
+      "y_uniform_max_m": 0.119477,
+      "y_uniform_min_m": -0.246726,
+      "z_fixed_m": 0.771616
+    }
+  }
+]

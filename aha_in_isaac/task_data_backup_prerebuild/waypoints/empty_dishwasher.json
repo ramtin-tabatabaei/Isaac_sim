@@ -1,0 +1,1537 @@
+[
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "fixed_offset_xyz_m": [
+      -0.282955,
+      1e-06,
+      0.129029
+    ],
+    "fixed_orientation_rpy_rad": [
+      0.0,
+      1.570451,
+      1.570796
+    ],
+    "motion_type": "point",
+    "name": "waypoint0",
+    "parent": "dishwasher",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          1.570451,
+          1.570796
+        ],
+        "position_xyz_m": [
+          -0.282955,
+          1e-06,
+          0.129029
+        ],
+        "quaternion_xyzw": [
+          0.500086,
+          0.500086,
+          0.499914,
+          0.499914
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "dishwasher"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          1.570451,
+          1.570796
+        ],
+        "position_xyz_m": [
+          -0.282955,
+          1e-06,
+          0.129029
+        ],
+        "quaternion_xyzw": [
+          0.500086,
+          0.500086,
+          0.499914,
+          0.499914
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "dishwasher"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570796,
+        1.570796
+      ],
+      "position_xyz_m": [
+        0.342001,
+        1e-06,
+        1.142367
+      ],
+      "quaternion_xyzw": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "source": "exact_after_raw_ttm_import"
+    },
+    "world_orientation_rpy_rad": [
+      0.0,
+      1.570796,
+      1.570796
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "fixed_offset_xyz_m": [
+      -0.230955,
+      1e-06,
+      0.129017
+    ],
+    "fixed_orientation_rpy_rad": [
+      0.0,
+      1.570451,
+      1.570796
+    ],
+    "motion_type": "point",
+    "name": "waypoint1",
+    "parent": "dishwasher",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          1.570451,
+          1.570796
+        ],
+        "position_xyz_m": [
+          -0.230955,
+          1e-06,
+          0.129017
+        ],
+        "quaternion_xyzw": [
+          0.500086,
+          0.500086,
+          0.499914,
+          0.499914
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "dishwasher"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          1.570451,
+          1.570796
+        ],
+        "position_xyz_m": [
+          -0.230955,
+          1e-06,
+          0.129017
+        ],
+        "quaternion_xyzw": [
+          0.500086,
+          0.500086,
+          0.499914,
+          0.499914
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "dishwasher"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570796,
+        1.570796
+      ],
+      "position_xyz_m": [
+        0.394001,
+        1e-06,
+        1.142372
+      ],
+      "quaternion_xyzw": [
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "source": "exact_after_raw_ttm_import"
+    },
+    "world_orientation_rpy_rad": [
+      0.0,
+      1.570796,
+      1.570796
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 25,
+    "cartesian_path_samples": [
+      {
+        "orientation_rpy_rad": [
+          -7.8e-05,
+          1.403705,
+          1.570944
+        ],
+        "position_xyz_m": [
+          0.394,
+          1e-06,
+          1.14237
+        ],
+        "relative_distance": 0.0
+      },
+      {
+        "orientation_rpy_rad": [
+          -6.4e-05,
+          1.385522,
+          1.570929
+        ],
+        "position_xyz_m": [
+          0.383585,
+          1e-06,
+          1.140613
+        ],
+        "relative_distance": 0.041667
+      },
+      {
+        "orientation_rpy_rad": [
+          -5.2e-05,
+          1.367339,
+          1.570917
+        ],
+        "position_xyz_m": [
+          0.37317,
+          0.0,
+          1.138856
+        ],
+        "relative_distance": 0.083333
+      },
+      {
+        "orientation_rpy_rad": [
+          -4.2e-05,
+          1.349157,
+          1.570908
+        ],
+        "position_xyz_m": [
+          0.362756,
+          0.0,
+          1.1371
+        ],
+        "relative_distance": 0.125
+      },
+      {
+        "orientation_rpy_rad": [
+          -3.3e-05,
+          1.330974,
+          1.5709
+        ],
+        "position_xyz_m": [
+          0.352341,
+          0.0,
+          1.135343
+        ],
+        "relative_distance": 0.166667
+      },
+      {
+        "orientation_rpy_rad": [
+          -2.5e-05,
+          1.309154,
+          1.570882
+        ],
+        "position_xyz_m": [
+          0.342018,
+          0.0,
+          1.13323
+        ],
+        "relative_distance": 0.208333
+      },
+      {
+        "orientation_rpy_rad": [
+          -1.7e-05,
+          1.272793,
+          1.570829
+        ],
+        "position_xyz_m": [
+          0.332067,
+          0.0,
+          1.129691
+        ],
+        "relative_distance": 0.25
+      },
+      {
+        "orientation_rpy_rad": [
+          -1.6e-05,
+          1.236433,
+          1.570782
+        ],
+        "position_xyz_m": [
+          0.322115,
+          0.0,
+          1.126153
+        ],
+        "relative_distance": 0.291667
+      },
+      {
+        "orientation_rpy_rad": [
+          -2e-05,
+          1.200072,
+          1.570739
+        ],
+        "position_xyz_m": [
+          0.312164,
+          0.0,
+          1.122614
+        ],
+        "relative_distance": 0.333333
+      },
+      {
+        "orientation_rpy_rad": [
+          -2.7e-05,
+          1.163712,
+          1.5707
+        ],
+        "position_xyz_m": [
+          0.302212,
+          0.0,
+          1.119075
+        ],
+        "relative_distance": 0.375
+      },
+      {
+        "orientation_rpy_rad": [
+          -3.6e-05,
+          1.12735,
+          1.570697
+        ],
+        "position_xyz_m": [
+          0.292567,
+          -0.0,
+          1.114867
+        ],
+        "relative_distance": 0.416667
+      },
+      {
+        "orientation_rpy_rad": [
+          -4.3e-05,
+          1.090987,
+          1.570744
+        ],
+        "position_xyz_m": [
+          0.283381,
+          -0.0,
+          1.109654
+        ],
+        "relative_distance": 0.458333
+      },
+      {
+        "orientation_rpy_rad": [
+          -4.5e-05,
+          1.054624,
+          1.570787
+        ],
+        "position_xyz_m": [
+          0.274195,
+          -1e-06,
+          1.104441
+        ],
+        "relative_distance": 0.5
+      },
+      {
+        "orientation_rpy_rad": [
+          -4.4e-05,
+          1.01826,
+          1.570827
+        ],
+        "position_xyz_m": [
+          0.265009,
+          -1e-06,
+          1.099228
+        ],
+        "relative_distance": 0.541667
+      },
+      {
+        "orientation_rpy_rad": [
+          -4.1e-05,
+          0.981897,
+          1.570865
+        ],
+        "position_xyz_m": [
+          0.255823,
+          -1e-06,
+          1.094016
+        ],
+        "relative_distance": 0.583333
+      },
+      {
+        "orientation_rpy_rad": [
+          -3.6e-05,
+          0.945531,
+          1.570856
+        ],
+        "position_xyz_m": [
+          0.247264,
+          -1e-06,
+          1.087893
+        ],
+        "relative_distance": 0.625
+      },
+      {
+        "orientation_rpy_rad": [
+          -3.4e-05,
+          0.909165,
+          1.570818
+        ],
+        "position_xyz_m": [
+          0.239123,
+          -2e-06,
+          1.081164
+        ],
+        "relative_distance": 0.666667
+      },
+      {
+        "orientation_rpy_rad": [
+          -3.4e-05,
+          0.872799,
+          1.570782
+        ],
+        "position_xyz_m": [
+          0.230982,
+          -2e-06,
+          1.074435
+        ],
+        "relative_distance": 0.708333
+      },
+      {
+        "orientation_rpy_rad": [
+          -3.6e-05,
+          0.836433,
+          1.570747
+        ],
+        "position_xyz_m": [
+          0.222841,
+          -2e-06,
+          1.067706
+        ],
+        "relative_distance": 0.75
+      },
+      {
+        "orientation_rpy_rad": [
+          -3.9e-05,
+          0.800067,
+          1.570713
+        ],
+        "position_xyz_m": [
+          0.2147,
+          -2e-06,
+          1.060977
+        ],
+        "relative_distance": 0.791667
+      },
+      {
+        "orientation_rpy_rad": [
+          -4.2e-05,
+          0.778248,
+          1.570708
+        ],
+        "position_xyz_m": [
+          0.207593,
+          -3e-06,
+          1.053198
+        ],
+        "relative_distance": 0.833333
+      },
+      {
+        "orientation_rpy_rad": [
+          -4.4e-05,
+          0.760068,
+          1.57071
+        ],
+        "position_xyz_m": [
+          0.200744,
+          -3e-06,
+          1.045158
+        ],
+        "relative_distance": 0.875
+      },
+      {
+        "orientation_rpy_rad": [
+          -4.6e-05,
+          0.741889,
+          1.570711
+        ],
+        "position_xyz_m": [
+          0.193895,
+          -3e-06,
+          1.037117
+        ],
+        "relative_distance": 0.916667
+      },
+      {
+        "orientation_rpy_rad": [
+          -4.8e-05,
+          0.72371,
+          1.570713
+        ],
+        "position_xyz_m": [
+          0.187046,
+          -4e-06,
+          1.029077
+        ],
+        "relative_distance": 0.958333
+      },
+      {
+        "orientation_rpy_rad": [
+          -5e-05,
+          0.70553,
+          1.570714
+        ],
+        "position_xyz_m": [
+          0.180197,
+          -4e-06,
+          1.021036
+        ],
+        "relative_distance": 1.0
+      }
+    ],
+    "fixed_offset_xyz_m": [
+      -0.344318,
+      -1e-06,
+      0.079748
+    ],
+    "fixed_orientation_rpy_rad": [
+      -0.0,
+      0.000345,
+      1.570796
+    ],
+    "motion_type": "predefined_cartesian_path",
+    "name": "waypoint2",
+    "parent": "dishwasher",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          0.000345,
+          1.570796
+        ],
+        "position_xyz_m": [
+          -0.344318,
+          -1e-06,
+          0.079748
+        ],
+        "quaternion_xyzw": [
+          0.000122,
+          0.000122,
+          0.707107,
+          0.707107
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "dishwasher"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          0.000345,
+          1.570796
+        ],
+        "position_xyz_m": [
+          -0.344318,
+          -1e-06,
+          0.079748
+        ],
+        "quaternion_xyzw": [
+          0.000122,
+          0.000122,
+          0.707107,
+          0.707107
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "dishwasher"
+    },
+    "type": "PATH",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        -0.0,
+        1.570796
+      ],
+      "position_xyz_m": [
+        0.280654,
+        -1e-06,
+        1.093065
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        -0.0,
+        0.707107,
+        0.707107
+      ],
+      "source": "exact_after_raw_ttm_import"
+    },
+    "world_orientation_rpy_rad": [
+      -0.0,
+      -0.0,
+      1.570796
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "fixed_offset_xyz_m": [
+      -0.455233,
+      -5e-06,
+      -0.002139
+    ],
+    "fixed_orientation_rpy_rad": [
+      -5e-05,
+      0.705873,
+      1.570714
+    ],
+    "motion_type": "point",
+    "name": "waypoint3",
+    "parent": "dishwasher",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -5e-05,
+          0.705873,
+          1.570714
+        ],
+        "position_xyz_m": [
+          -0.455233,
+          -5e-06,
+          -0.002139
+        ],
+        "quaternion_xyzw": [
+          0.244388,
+          0.244442,
+          0.663488,
+          0.663556
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "dishwasher"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -5e-05,
+          0.705873,
+          1.570714
+        ],
+        "position_xyz_m": [
+          -0.455233,
+          -5e-06,
+          -0.002139
+        ],
+        "quaternion_xyzw": [
+          0.244388,
+          0.244442,
+          0.663488,
+          0.663556
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "dishwasher"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -5e-05,
+        0.705527,
+        1.570714
+      ],
+      "position_xyz_m": [
+        0.169768,
+        -5e-06,
+        1.01114
+      ],
+      "quaternion_xyzw": [
+        0.244273,
+        0.244327,
+        0.663531,
+        0.663598
+      ],
+      "source": "exact_after_raw_ttm_import"
+    },
+    "world_orientation_rpy_rad": [
+      -5e-05,
+      0.705527,
+      1.570714
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "fixed_offset_xyz_m": [
+      -0.382972,
+      1e-06,
+      0.079048
+    ],
+    "fixed_orientation_rpy_rad": [
+      3.141593,
+      0.523253,
+      -3.141593
+    ],
+    "motion_type": "point",
+    "name": "waypoint4",
+    "parent": "dishwasher",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.141593,
+          0.523253,
+          -3.141593
+        ],
+        "position_xyz_m": [
+          -0.382972,
+          1e-06,
+          0.079048
+        ],
+        "quaternion_xyzw": [
+          0.0,
+          0.965971,
+          -0.0,
+          0.258652
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "dishwasher"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.141593,
+          0.523253,
+          -3.141593
+        ],
+        "position_xyz_m": [
+          -0.382972,
+          1e-06,
+          0.079048
+        ],
+        "quaternion_xyzw": [
+          0.0,
+          0.965971,
+          -0.0,
+          0.258652
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "dishwasher"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141593,
+        0.523599,
+        -3.141593
+      ],
+      "position_xyz_m": [
+        0.242001,
+        1e-06,
+        1.092351
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.965926,
+        -0.0,
+        0.258819
+      ],
+      "source": "exact_after_raw_ttm_import"
+    },
+    "world_orientation_rpy_rad": [
+      3.141593,
+      0.523599,
+      -3.141593
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "fixed_offset_xyz_m": [
+      -0.508041,
+      1e-06,
+      -0.120925
+    ],
+    "fixed_orientation_rpy_rad": [
+      -3.141593,
+      0.523253,
+      -3.141593
+    ],
+    "motion_type": "point",
+    "name": "waypoint5",
+    "parent": "dishwasher",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -3.141593,
+          0.523253,
+          -3.141593
+        ],
+        "position_xyz_m": [
+          -0.508041,
+          1e-06,
+          -0.120925
+        ],
+        "quaternion_xyzw": [
+          0.0,
+          0.965971,
+          0.0,
+          0.258652
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "dishwasher"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -3.141593,
+          0.523253,
+          -3.141593
+        ],
+        "position_xyz_m": [
+          -0.508041,
+          1e-06,
+          -0.120925
+        ],
+        "quaternion_xyzw": [
+          0.0,
+          0.965971,
+          0.0,
+          0.258652
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "dishwasher"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.141593,
+        0.523598,
+        -3.141593
+      ],
+      "position_xyz_m": [
+        0.117001,
+        1e-06,
+        0.892335
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.965926,
+        0.0,
+        0.258819
+      ],
+      "source": "exact_after_raw_ttm_import"
+    },
+    "world_orientation_rpy_rad": [
+      -3.141593,
+      0.523598,
+      -3.141593
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "fixed_offset_xyz_m": [
+      0.074278,
+      -0.235365,
+      0.017198
+    ],
+    "fixed_orientation_rpy_rad": [
+      -1.570792,
+      -0.436348,
+      -1.570793
+    ],
+    "motion_type": "point",
+    "name": "waypoint6",
+    "parent": "dishwasher_tray",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.570792,
+          -0.436348,
+          -1.570793
+        ],
+        "position_xyz_m": [
+          0.074278,
+          -0.235365,
+          0.017198
+        ],
+        "quaternion_xyzw": [
+          0.379923,
+          0.596369,
+          0.379924,
+          -0.596372
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "dishwasher_tray"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.570792,
+          -0.436348,
+          -1.570793
+        ],
+        "position_xyz_m": [
+          0.074278,
+          -0.235365,
+          0.017198
+        ],
+        "quaternion_xyzw": [
+          0.379923,
+          0.596369,
+          0.379924,
+          -0.596372
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "dishwasher_tray"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.141584,
+        1.134449,
+        -1.570804
+      ],
+      "position_xyz_m": [
+        0.364618,
+        0.019714,
+        0.988587
+      ],
+      "quaternion_xyzw": [
+        0.59637,
+        0.596371,
+        0.379925,
+        0.379922
+      ],
+      "source": "exact_after_raw_ttm_import"
+    },
+    "world_orientation_rpy_rad": [
+      -3.141584,
+      1.134449,
+      -1.570804
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "fixed_offset_xyz_m": [
+      0.025669,
+      -0.131138,
+      0.017199
+    ],
+    "fixed_orientation_rpy_rad": [
+      -1.570795,
+      -0.436333,
+      -1.570794
+    ],
+    "motion_type": "point",
+    "name": "waypoint7",
+    "parent": "dishwasher_tray",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.570795,
+          -0.436333,
+          -1.570794
+        ],
+        "position_xyz_m": [
+          0.025669,
+          -0.131138,
+          0.017199
+        ],
+        "quaternion_xyzw": [
+          0.379928,
+          0.596367,
+          0.379928,
+          -0.596369
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "dishwasher_tray"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.570795,
+          -0.436333,
+          -1.570794
+        ],
+        "position_xyz_m": [
+          0.025669,
+          -0.131138,
+          0.017199
+        ],
+        "quaternion_xyzw": [
+          0.379928,
+          0.596367,
+          0.379928,
+          -0.596369
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "dishwasher_tray"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.141589,
+        1.134464,
+        -1.570798
+      ],
+      "position_xyz_m": [
+        0.468845,
+        0.019715,
+        0.939978
+      ],
+      "quaternion_xyzw": [
+        0.596368,
+        0.596368,
+        0.379929,
+        0.379928
+      ],
+      "source": "exact_after_raw_ttm_import"
+    },
+    "world_orientation_rpy_rad": [
+      -3.141589,
+      1.134464,
+      -1.570798
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "fixed_offset_xyz_m": [
+      -0.486208,
+      0.019711,
+      -0.073289
+    ],
+    "fixed_orientation_rpy_rad": [
+      -3.14159,
+      1.134119,
+      -1.570797
+    ],
+    "motion_type": "point",
+    "name": "waypoint8",
+    "parent": "dishwasher",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -3.14159,
+          1.134119,
+          -1.570797
+        ],
+        "position_xyz_m": [
+          -0.486208,
+          0.019711,
+          -0.073289
+        ],
+        "quaternion_xyzw": [
+          0.596434,
+          0.596433,
+          0.379826,
+          0.379824
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "dishwasher"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -3.14159,
+          1.134119,
+          -1.570797
+        ],
+        "position_xyz_m": [
+          -0.486208,
+          0.019711,
+          -0.073289
+        ],
+        "quaternion_xyzw": [
+          0.596434,
+          0.596433,
+          0.379826,
+          0.379824
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "dishwasher"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.14159,
+        1.134464,
+        -1.570797
+      ],
+      "position_xyz_m": [
+        0.138817,
+        0.019711,
+        0.939978
+      ],
+      "quaternion_xyzw": [
+        0.596368,
+        0.596368,
+        0.379929,
+        0.379927
+      ],
+      "source": "exact_after_raw_ttm_import"
+    },
+    "world_orientation_rpy_rad": [
+      -3.14159,
+      1.134464,
+      -1.570797
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "fixed_offset_xyz_m": [
+      -0.531516,
+      0.019711,
+      -0.052143
+    ],
+    "fixed_orientation_rpy_rad": [
+      -3.14159,
+      1.134118,
+      -1.570798
+    ],
+    "motion_type": "point",
+    "name": "waypoint9",
+    "parent": "dishwasher",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -3.14159,
+          1.134118,
+          -1.570798
+        ],
+        "position_xyz_m": [
+          -0.531516,
+          0.019711,
+          -0.052143
+        ],
+        "quaternion_xyzw": [
+          0.596434,
+          0.596433,
+          0.379826,
+          0.379824
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "dishwasher"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -3.14159,
+          1.134118,
+          -1.570798
+        ],
+        "position_xyz_m": [
+          -0.531516,
+          0.019711,
+          -0.052143
+        ],
+        "quaternion_xyzw": [
+          0.596434,
+          0.596433,
+          0.379826,
+          0.379824
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "dishwasher"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.14159,
+        1.134464,
+        -1.570797
+      ],
+      "position_xyz_m": [
+        0.093502,
+        0.019711,
+        0.961109
+      ],
+      "quaternion_xyzw": [
+        0.596368,
+        0.596368,
+        0.379929,
+        0.379927
+      ],
+      "source": "exact_after_raw_ttm_import"
+    },
+    "world_orientation_rpy_rad": [
+      -3.14159,
+      1.134464,
+      -1.570797
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "fixed_offset_xyz_m": [
+      -1.3e-05,
+      0.062808,
+      0.077806
+    ],
+    "fixed_orientation_rpy_rad": [
+      2.462705,
+      4.5e-05,
+      1.570745
+    ],
+    "motion_type": "point",
+    "name": "waypoint10",
+    "parent": "dishwasher_plate",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          2.462705,
+          4.5e-05,
+          1.570745
+        ],
+        "position_xyz_m": [
+          -1.3e-05,
+          0.062808,
+          0.077806
+        ],
+        "quaternion_xyzw": [
+          0.666782,
+          -0.666737,
+          0.235449,
+          0.235431
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "dishwasher_plate"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          2.462705,
+          4.5e-05,
+          1.570745
+        ],
+        "position_xyz_m": [
+          -1.3e-05,
+          0.062808,
+          0.077806
+        ],
+        "quaternion_xyzw": [
+          0.666782,
+          -0.666737,
+          0.235449,
+          0.235431
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "dishwasher_plate"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.14159,
+        -6e-06,
+        -3.141513
+      ],
+      "position_xyz_m": [
+        0.549949,
+        -0.098887,
+        1.059747
+      ],
+      "quaternion_xyzw": [
+        -4e-05,
+        -1.0,
+        1e-06,
+        3e-06
+      ],
+      "source": "exact_after_raw_ttm_import"
+    },
+    "world_orientation_rpy_rad": [
+      3.14159,
+      -6e-06,
+      -3.141513
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "fixed_offset_xyz_m": [
+      -9e-06,
+      0.031407,
+      0.038899
+    ],
+    "fixed_orientation_rpy_rad": [
+      2.462705,
+      4.5e-05,
+      1.570745
+    ],
+    "motion_type": "point",
+    "name": "waypoint11",
+    "parent": "dishwasher_plate",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          2.462705,
+          4.5e-05,
+          1.570745
+        ],
+        "position_xyz_m": [
+          -9e-06,
+          0.031407,
+          0.038899
+        ],
+        "quaternion_xyzw": [
+          0.666782,
+          -0.666737,
+          0.235449,
+          0.235431
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "dishwasher_plate"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          2.462705,
+          4.5e-05,
+          1.570745
+        ],
+        "position_xyz_m": [
+          -9e-06,
+          0.031407,
+          0.038899
+        ],
+        "quaternion_xyzw": [
+          0.666782,
+          -0.666737,
+          0.235449,
+          0.235431
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "dishwasher_plate"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.14159,
+        -6e-06,
+        -3.141513
+      ],
+      "position_xyz_m": [
+        0.549941,
+        -0.098889,
+        1.00975
+      ],
+      "quaternion_xyzw": [
+        -4e-05,
+        -1.0,
+        1e-06,
+        3e-06
+      ],
+      "source": "exact_after_raw_ttm_import"
+    },
+    "world_orientation_rpy_rad": [
+      3.14159,
+      -6e-06,
+      -3.141513
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "fixed_offset_xyz_m": [
+      0.233445,
+      -0.018036,
+      -0.101378
+    ],
+    "fixed_orientation_rpy_rad": [
+      0.0,
+      -1.570796,
+      -1.570825
+    ],
+    "motion_type": "point",
+    "name": "waypoint12",
+    "parent": "dishwasher_tray",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          -1.570796,
+          -1.570825
+        ],
+        "position_xyz_m": [
+          0.233445,
+          -0.018036,
+          -0.101378
+        ],
+        "quaternion_xyzw": [
+          -0.500012,
+          0.499995,
+          0.500002,
+          -0.499991
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "dishwasher_tray"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          -1.570796,
+          -1.570825
+        ],
+        "position_xyz_m": [
+          0.233445,
+          -0.018036,
+          -0.101378
+        ],
+        "quaternion_xyzw": [
+          -0.500012,
+          0.499995,
+          0.500002,
+          -0.499991
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "dishwasher_tray"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141578,
+        -6e-06,
+        3.141564
+      ],
+      "position_xyz_m": [
+        0.581947,
+        -0.098862,
+        1.147754
+      ],
+      "quaternion_xyzw": [
+        -1.5e-05,
+        1.0,
+        -7e-06,
+        -3e-06
+      ],
+      "source": "exact_after_raw_ttm_import"
+    },
+    "world_orientation_rpy_rad": [
+      3.141578,
+      -6e-06,
+      3.141564
+    ]
+  }
+]

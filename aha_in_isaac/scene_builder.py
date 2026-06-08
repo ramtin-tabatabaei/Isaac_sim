@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import math
 import re
+import statistics
 from pathlib import Path
 
 import isaaclab.sim as sim_utils
@@ -26,6 +27,7 @@ from scene_context import (
     SceneContext,
     _qapply,
     _qinv,
+    _qmul,
     pose_from_location,
     pose_from_world_location,
     task_root_object,
@@ -45,6 +47,14 @@ WAYPOINT_COLORS = (
     (1.0, 0.72, 0.05),
     (1.0, 0.15, 0.1),
 )
+
+# In task-root mode the rigid transform places every object so its measured world
+# centre lands within ~1.6 cm of its reported pose. An object left FURTHER than this
+# from its report pose is one RLBench re-placed independently (a second jar, a
+# distractor cup/block, the hockey ball) that is not tagged graspable; it is snapped
+# onto its reported pose. The margin sits well below the smallest such displacement
+# (>=10 cm in the data) so correctly-placed rigid objects are never disturbed.
+SNAP_MOVER_THRESHOLD_M = 0.05
 
 def _prim_name(name: str) -> str:
     words = re.findall(r"[A-Za-z0-9]+", name)
@@ -234,10 +244,47 @@ class SceneBuilder:
         return tuple(float(v) for v in center)
 
     def _canonical_task_root_pos(self) -> tuple[float, float, float]:
-        root_entry = task_root_object(self.ctx.objects, self.ctx.task_name)
-        root_center = self._usd_bbox_center(self.ctx.usd_paths[root_entry["name"]])
-        root_local_pos, _ = pose_from_location(root_entry.get("task_root_local_location"))
-        return tuple(root_center[i] - root_local_pos[i] for i in range(3))
+        """Position of the task-root origin in the baked-USD frame. Every object is
+        shifted by ``-canonical`` so the canonical task-root origin lands on the
+        TaskRoot xform; the sampled task-root transform then re-places the whole scene.
+
+        Derived as the consensus (component-wise median) of each object's *implied*
+        task-root origin -- ``bbox_center(obj) - R_sampled^-1 . (report_pos(obj) -
+        sampled_pos)`` -- rather than from the single task-root anchor's bbox centre.
+        The lone anchor is unreliable: in some tasks its collision USD is baked in a
+        different frame than the rest of the assembly (e.g. change_clock's ``clock``
+        collider is baked lying flat and displaced), which uniformly shifts every other
+        object by tens of centimetres. The median is robust to such a mis-baked anchor
+        and to a minority of independently-placed objects. For a healthy task every
+        object agrees, and the median provably equals the old single-anchor value
+        (``impliedC(anchor) == bbox_center(anchor) - anchor_local_pos``), so this is a
+        no-op there.
+        """
+        objects = self.ctx.objects
+        sampled_pos = self.ctx.sampled_task_root_pos
+        inv_quat = _qinv(self.ctx.sampled_task_root_quat)
+        # Graspables (and what is mounted on them) sit at their own sampled pose, not
+        # the rigid layout, so they must not vote on the canonical origin.
+        movable = set(self.ctx.graspable_names) | {
+            name for name, entry in objects.items() if entry.get("mounted_on_graspable")
+        }
+        implied: list[tuple[float, float, float]] = []
+        for name, entry in objects.items():
+            if name in movable or name not in self.ctx.usd_paths:
+                continue
+            report = (entry.get("world_location") or {}).get("position_xyz_m")
+            if not report or len(report) != 3:
+                continue
+            center = self._usd_bbox_center(self.ctx.usd_paths[name])
+            rel = _qapply(inv_quat, tuple(float(report[i]) - sampled_pos[i] for i in range(3)))
+            implied.append(tuple(center[i] - rel[i] for i in range(3)))
+        if not implied:
+            # Fallback: original single-anchor estimate.
+            root_entry = task_root_object(objects, self.ctx.task_name)
+            root_center = self._usd_bbox_center(self.ctx.usd_paths[root_entry["name"]])
+            root_local_pos, _ = pose_from_location(root_entry.get("task_root_local_location"))
+            return tuple(root_center[i] - root_local_pos[i] for i in range(3))
+        return tuple(statistics.median(c[i] for c in implied) for i in range(3))
 
     # ------------------------------------------------------------------
     # Scene pieces.
@@ -329,6 +376,24 @@ class SceneBuilder:
         for skin, body in skin_to_body.items():
             body_to_skin.setdefault(body, skin)
         self._skin_to_body = skin_to_body
+        # Child shapes that should RIDE their parent body rather than spawn as a standalone
+        # physics body (data-driven: physics-shapes "mount_on_parent": true). Used for the
+        # change_channel button caps (wrapN): in CoppeliaSim they are rigidly mounted on the
+        # pressable topPlateN, so gluing them under the plate makes them follow BOTH the press
+        # (the plate's prismatic joint) and the remote when it is carried - instead of a
+        # collider-less mesh floating where it spawned. Same gluing path as a render skin.
+        phys_shapes = (self.ctx.report.get("physics") or {}).get("shapes", {}) or {}
+        mounted_to_body: dict[str, str] = {}
+        for name, entry in objects.items():
+            if not (phys_shapes.get(name, {}) or {}).get("mount_on_parent"):
+                continue
+            mount_parent = entry.get("parent")
+            if mount_parent in objects and not _is_render(mount_parent):
+                mounted_to_body[name] = mount_parent
+            else:
+                print(f"[WARN]: '{name}' mount_on_parent set but parent '{mount_parent}' is not a "
+                      "spawned body; it will spawn standalone.")
+        self._mounted_to_body = mounted_to_body
         parent_path = "/World/DesignScene"
         task_root_child_translation = (0.0, 0.0, 0.0)
         task_root_child_orientation = (1.0, 0.0, 0.0, 0.0)
@@ -372,8 +437,8 @@ class SceneBuilder:
             if object_name not in usd_paths:
                 print(f"[WARN]: No USD mapping for object '{object_name}', skipping.")
                 continue
-            if glue and _is_render(object_name):
-                continue  # render skin; spawned in pass 2 (glued onto its body)
+            if glue and (_is_render(object_name) or object_name in mounted_to_body):
+                continue  # render skin or mounted child; spawned in pass 2 (glued onto its body)
 
             scene_pos, scene_quat = pose_from_world_location(entry)
             pos, quat = spawn_pose if spawn_pose is not None else (scene_pos, scene_quat)
@@ -438,24 +503,66 @@ class SceneBuilder:
                 self.skin_prim_paths[object_name] = skin_path
                 print(f"[INFO]: Placed render mesh '{object_name}' ({note}).")
 
+            # Pass 2b: mounted child shapes (mount_on_parent) glued under their parent body so
+            # they ride it through the press and when the body is carried. Same gluing as a skin.
+            for object_name, body_name in mounted_to_body.items():
+                if object_name not in usd_paths or body_name not in body_prim_paths:
+                    continue
+                appearance = self._appearance_for(object_name)
+                if not appearance.get("visible", True):
+                    print(f"[INFO]: Hiding mounted child '{object_name}' (per appearance config).")
+                    continue
+                skin_path = f"{body_prim_paths[body_name]}/{_prim_name(object_name)}"
+                cfg = sim_utils.UsdFileCfg(usd_path=str(usd_paths[object_name]), visible=True)
+                cfg.func(skin_path, cfg, translation=(0.0, 0.0, 0.0), orientation=(1.0, 0.0, 0.0, 0.0))
+                self._author_appearance(skin_path, appearance)
+                self.skin_prim_paths[object_name] = skin_path
+                print(f"[INFO]: Placed mounted child '{object_name}' glued onto body '{body_name}'.")
+
         if glue and getattr(self.args, "match_graspable_to_report", True):
             self._snap_graspable_to_report()
 
     def _snap_graspable_to_report(self):
-        """Move graspable objects (e.g. the weights) onto the sampled world pose from
-        the scene-context report, overriding the pose baked into their USD.
+        """Move graspable objects (e.g. the weights) -- and anything rigidly mounted on
+        them -- onto the sampled world pose from the scene-context report, overriding the
+        pose baked into their USD.
 
         In task-root mode every prim shares one TaskRoot child transform, so an object's
         position lives in its baked mesh, not its prim transform. We measure the object's
         spawned world-space geometry centroid and add a corrective translate (rotated into
         the TaskRoot frame) so the centroid lands on the reported position.
 
+        Objects mounted on a graspable (e.g. change_channel's +/- buttons on the
+        ``tv_remote``) are tagged ``mounted_on_graspable`` in the report. They spawn at the
+        *canonical* graspable layout, so without this they would be left behind when the
+        graspable snaps to its (translated and yaw-rotated) sampled pose. Snapping each to
+        its own reported world pose keeps the whole assembly together and aligned with the
+        button-press waypoints, which are defined against the same sampled configuration.
+
         The translate is applied to the physics body; its glued visual skin is a child and
         rides along. Because the body's collision mesh is usually hidden (the skin covers
         it), we measure the visible skin instead - a hidden prim has an empty world bound.
+        Render skins are not in ``body_prim_paths`` and are skipped here (they ride bodies).
+
+        Beyond the tagged graspables, this also snaps any *other* body the rigid
+        task-root transform leaves further than ``SNAP_MOVER_THRESHOLD_M`` from its
+        reported pose: an object RLBench re-places independently each reset (a second
+        jar, a distractor cup/block, the hockey ball) that is not tagged graspable and
+        would otherwise float at the canonical layout pose. Correctly-placed rigid
+        objects measure within ~1.6 cm of their report pose, well under the threshold,
+        so they are left exactly as the transform placed them.
         """
-        graspable = self.ctx.graspable_names
-        if not graspable:
+        graspable = set(self.ctx.graspable_names)
+        mounted = {
+            name
+            for name, entry in self.ctx.objects.items()
+            if entry.get("mounted_on_graspable")
+        }
+        snap_names = graspable | mounted
+        # Every spawned body is a snap candidate; non-graspable ones are only moved if
+        # measured far from their report pose (the displacement gate in the loop).
+        candidates = sorted(set(self.body_prim_paths) | snap_names)
+        if not candidates:
             return
 
         from pxr import Gf, Usd, UsdGeom
@@ -467,7 +574,22 @@ class SceneBuilder:
         inv_root_quat = _qinv(self.ctx.sampled_task_root_quat)
         body_to_skin = {body: skin for skin, body in self._skin_to_body.items()}
 
-        for name in graspable:
+        # Only graspable *assemblies* (a graspable that has mounted children, plus those
+        # children) need their sampled spawn ORIENTATION applied. Lone graspables (weights,
+        # a ball) keep the proven translate-only behaviour, so this can't regress them.
+        mounted_graspables = {
+            entry.get("mounted_on_graspable")
+            for entry in self.ctx.objects.values()
+            if entry.get("mounted_on_graspable")
+        }
+        orient_names = {
+            name
+            for name in snap_names
+            if self.ctx.objects.get(name, {}).get("mounted_on_graspable") or name in mounted_graspables
+        }
+        xform_cache = UsdGeom.XformCache(Usd.TimeCode.Default())
+
+        for name in candidates:
             body_path = self.body_prim_paths.get(name)
             target = (self.ctx.objects.get(name, {}).get("world_location") or {}).get("position_xyz_m")
             if not body_path or not target or len(target) != 3:
@@ -480,13 +602,51 @@ class SceneBuilder:
             body_prim = stage.GetPrimAtPath(body_path)
             if not measure_prim or not measure_prim.IsValid() or not body_prim or not body_prim.IsValid():
                 continue
+
+            # Apply the sampled spawn ORIENTATION first (the +/-pi yaw the task-root canonical
+            # placement omits). Without it the remote is drawn at its canonical yaw, so the
+            # buttons -- even at the right positions -- don't sit on its face and the press
+            # waypoints don't match. Rotating about the prim origin shifts the geometry, so we
+            # do it BEFORE measuring the centroid for the position correction below.
+            report_quat_xyzw = (self.ctx.objects.get(name, {}).get("world_location") or {}).get("quaternion_xyzw")
+            if name in orient_names and report_quat_xyzw and len(report_quat_xyzw) == 4:
+                rx, ry, rz, rw = (float(v) for v in report_quat_xyzw)
+                report_quat = (rw, rx, ry, rz)
+                cur_gf = xform_cache.GetLocalToWorldTransform(body_prim).ExtractRotationQuat()
+                cur_im = cur_gf.GetImaginary()
+                cur_quat = (cur_gf.GetReal(), cur_im[0], cur_im[1], cur_im[2])
+                # World rotation that fixes this body, expressed in the (rotated) TaskRoot frame:
+                #   R_local = inv(root) . report . inv(current) . root
+                r_local = _qmul(
+                    inv_root_quat,
+                    _qmul(report_quat, _qmul(_qinv(cur_quat), self.ctx.sampled_task_root_quat)),
+                )
+                xf_orient = UsdGeom.Xformable(body_prim)
+                orient_op = next(
+                    (op for op in xf_orient.GetOrderedXformOps() if op.GetOpType() == UsdGeom.XformOp.TypeOrient),
+                    None,
+                )
+                if orient_op is None:
+                    orient_op = xf_orient.AddOrientOp()
+                if orient_op.GetPrecision() == UsdGeom.XformOp.PrecisionFloat:
+                    orient_op.Set(Gf.Quatf(r_local[0], Gf.Vec3f(r_local[1], r_local[2], r_local[3])))
+                else:
+                    orient_op.Set(Gf.Quatd(r_local[0], Gf.Vec3d(r_local[1], r_local[2], r_local[3])))
+                bbox.Clear()  # the body just rotated; recompute its bounds for the position fix
+
             world_range = bbox.ComputeWorldBound(measure_prim).ComputeAlignedRange()
             if world_range.IsEmpty():
                 continue
             center = world_range.GetMidpoint()
             target = tuple(float(v) for v in target)
             delta_world = tuple(target[i] - center[i] for i in range(3))
-            if max(abs(d) for d in delta_world) < 1e-5:
+            displacement = max(abs(d) for d in delta_world)
+            # Tagged graspables/assemblies always snap (and may carry an orientation
+            # fix); a plain body only snaps if the rigid transform left it far from its
+            # report pose - i.e. it is an independently re-placed instance.
+            if name not in snap_names and displacement < SNAP_MOVER_THRESHOLD_M:
+                continue
+            if displacement < 1e-5:
                 continue
             # The body's translate op is expressed in the (rotated) TaskRoot frame.
             delta_local = _qapply(inv_root_quat, delta_world)
@@ -504,10 +664,13 @@ class SceneBuilder:
             current = translate_op.Get()
             current = (0.0, 0.0, 0.0) if current is None else (current[0], current[1], current[2])
             translate_op.Set(Gf.Vec3d(*(current[i] + delta_local[i] for i in range(3))))
+            oriented = name in orient_names and report_quat_xyzw and len(report_quat_xyzw) == 4
+            kind = "assembly" if oriented else ("graspable" if name in snap_names else "mover")
             print(
-                f"[INFO]: Matched graspable '{name}' to report pose "
+                f"[INFO]: Matched {kind} '{name}' to report pose "
                 f"{tuple(round(v, 4) for v in target)} "
-                f"(moved {tuple(round(v, 4) for v in delta_world)} m from its baked USD pose)."
+                f"(moved {tuple(round(v, 4) for v in delta_world)} m"
+                f"{', + sampled orientation' if oriented else ''} from its baked USD pose)."
             )
 
     def _spawn_path_segment(self, parent_path: str, name: str, start, end, color):

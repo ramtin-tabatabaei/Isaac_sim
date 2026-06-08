@@ -1,0 +1,26 @@
+{
+  "shapes": {
+    "sponge": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.09310949593782425,
+      "friction": 0.5
+    },
+    "dirt_boundary": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.08916103839874268,
+      "friction": 0.5
+    },
+    "sponge_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.00034323043655604124,
+      "friction": 0.7099999785423279
+    }
+  },
+  "joints": {}
+}

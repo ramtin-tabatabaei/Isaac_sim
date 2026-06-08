@@ -1,0 +1,40 @@
+{
+  "shapes": {
+    "cup2": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.053227417171001434,
+      "friction": 0.5
+    },
+    "boundary": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.24000003933906555,
+      "friction": 0.5
+    },
+    "cup1": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.053227417171001434,
+      "friction": 0.5
+    },
+    "cup2_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.00010787887731567025,
+      "friction": 0.7099999785423279
+    },
+    "cup1_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.00010787887731567025,
+      "friction": 0.7099999785423279
+    }
+  },
+  "joints": {}
+}

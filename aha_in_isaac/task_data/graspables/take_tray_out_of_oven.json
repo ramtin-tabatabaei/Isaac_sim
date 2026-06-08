@@ -3,40 +3,45 @@
     {
       "fixed_offset_from_task_boundary_root_xyz_m": [
         0.317514,
-        -0.062507,
+        -0.062508,
         0.295483
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
-        8e-06,
-        -4.9e-05,
-        -0.0
+        5e-06,
+        -3.5e-05,
+        0.0
       ],
       "name": "tray",
+      "observed_spawn_yaw_range_rad": [
+        -1e-06,
+        0.0
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          3.4e-05,
-          -3.6e-05,
-          0.583889
+          3.5e-05,
+          -4e-06,
+          1.298194
         ],
         "position_xyz_m": [
-          0.530921,
-          0.06971,
+          0.332048,
+          0.427066,
           1.047483
         ],
         "quaternion_xyzw": [
-          1.1e-05,
-          -2.2e-05,
-          0.287815,
-          0.957686
+          1.3e-05,
+          -1.2e-05,
+          0.604467,
+          0.79663
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.748608,
-        "x_uniform_min_m": 0.255424,
-        "y_uniform_max_m": 0.36021,
-        "y_uniform_min_m": -0.448643,
+        "x_uniform_max_m": 0.609878,
+        "x_uniform_min_m": 0.271116,
+        "y_uniform_max_m": 0.42237,
+        "y_uniform_min_m": -0.030514,
         "z_fixed_m": 1.047483
       }
     }
@@ -45,18 +50,18 @@
     {
       "fixed_offset_from_reference_local_xyz_m": [
         0.05732,
-        0.055862,
-        0.038992
+        0.055864,
+        0.038994
       ],
       "fixed_offset_from_reference_xyz_m": [
-        0.017027,
-        0.078205,
+        -0.038368,
+        0.070242,
         0.038996
       ],
       "fixed_orientation_from_reference_rpy_rad": [
-        -8e-06,
-        -7e-06,
-        2.6e-05
+        -5e-06,
+        -2.2e-05,
+        2.5e-05
       ],
       "has_separate_distribution": false,
       "name": "oven_frame0",
@@ -64,20 +69,20 @@
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          3.1e-05,
-          -4.7e-05,
-          0.583915
+          5.4e-05,
+          -1.5e-05,
+          1.298219
         ],
         "position_xyz_m": [
-          0.547948,
-          0.147915,
+          0.29368,
+          0.497308,
           1.086479
         ],
         "quaternion_xyzw": [
-          8e-06,
-          -2.7e-05,
-          0.287828,
-          0.957682
+          1.7e-05,
+          -2.2e-05,
+          0.604477,
+          0.796622
         ],
         "source": "exact_after_one_rlbench_reset"
       },
@@ -92,18 +97,18 @@
     {
       "fixed_offset_from_reference_local_xyz_m": [
         0.06091,
-        0.054808,
-        -5.1e-05
+        0.054809,
+        -5e-05
       ],
       "fixed_offset_from_reference_xyz_m": [
-        0.020605,
-        0.079306,
-        -4.8e-05
+        -0.036386,
+        0.073417,
+        -4.7e-05
       ],
       "fixed_orientation_from_reference_rpy_rad": [
-        -3.141539,
-        -3.8e-05,
-        -1.5e-05
+        -3.141536,
+        -2.3e-05,
+        -1.4e-05
       ],
       "has_separate_distribution": false,
       "name": "oven_base",
@@ -111,20 +116,20 @@
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -3.141535,
-          -2.5e-05,
-          -0.583904
+          -3.141565,
+          -5.7e-05,
+          -1.298208
         ],
         "position_xyz_m": [
-          0.551526,
-          0.149015,
+          0.295662,
+          0.500483,
           1.047435
         ],
         "quaternion_xyzw": [
-          -0.957684,
-          -0.287822,
-          3e-06,
-          3.1e-05
+          -0.796626,
+          -0.604473,
+          1.4e-05,
+          2.8e-05
         ],
         "source": "exact_after_one_rlbench_reset"
       },
@@ -133,24 +138,24 @@
         "x_uniform_min_m": 0.337251,
         "y_uniform_max_m": 0.442034,
         "y_uniform_min_m": -0.452926,
-        "z_fixed_m": 1.047436
+        "z_fixed_m": 1.047435
       }
     },
     {
       "fixed_offset_from_reference_local_xyz_m": [
-        -0.164943,
-        0.108298,
-        0.193221
+        -0.164946,
+        0.108299,
+        0.193219
       ],
       "fixed_offset_from_reference_xyz_m": [
-        -0.197324,
-        -0.000579,
+        -0.14871,
+        -0.129703,
         0.193214
       ],
       "fixed_orientation_from_reference_rpy_rad": [
-        0.706723,
-        -0.000443,
-        0.000413
+        0.706727,
+        -0.000454,
+        0.000422
       ],
       "has_separate_distribution": false,
       "name": "oven_knob_8",
@@ -158,20 +163,20 @@
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          0.61923,
-          0.365664,
-          0.465996
+          0.226545,
+          0.675444,
+          1.218604
         ],
         "position_xyz_m": [
-          0.333596,
-          0.069131,
+          0.183338,
+          0.297363,
           1.240697
         ],
         "quaternion_xyzw": [
-          0.331502,
-          0.099311,
-          0.270152,
-          0.898477
+          0.275863,
+          0.20894,
+          0.567219,
+          0.747333
         ],
         "source": "exact_after_one_rlbench_reset"
       },
@@ -185,19 +190,19 @@
     },
     {
       "fixed_offset_from_reference_local_xyz_m": [
-        0.081749,
+        0.081744,
         0.056309,
-        0.28338
+        0.283382
       ],
       "fixed_offset_from_reference_xyz_m": [
-        0.037153,
-        0.092036,
+        -0.032222,
+        0.093877,
         0.283385
       ],
       "fixed_orientation_from_reference_rpy_rad": [
-        1.570792,
+        1.570796,
         2.6e-05,
-        1.570748
+        1.570762
       ],
       "has_separate_distribution": false,
       "name": "oven_stove_top0",
@@ -205,20 +210,20 @@
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          1.570802,
-          0.583916,
-          1.570794
+          1.570813,
+          1.29822,
+          1.570782
         ],
         "position_xyz_m": [
-          0.568074,
-          0.161746,
+          0.299826,
+          0.520942,
           1.330868
         ],
         "quaternion_xyzw": [
-          0.622756,
-          -0.334928,
-          0.622754,
-          0.334926
+          0.700551,
+          -0.096073,
+          0.700548,
+          0.096072
         ],
         "source": "exact_after_one_rlbench_reset"
       },
@@ -227,24 +232,24 @@
         "x_uniform_min_m": 0.353041,
         "y_uniform_max_m": 0.457813,
         "y_uniform_min_m": -0.466585,
-        "z_fixed_m": 1.330868
+        "z_fixed_m": 1.330867
       }
     },
     {
       "fixed_offset_from_reference_local_xyz_m": [
-        0.078723,
-        0.053539,
-        0.255211
+        0.078719,
+        0.05354,
+        0.255213
       ],
       "fixed_offset_from_reference_xyz_m": [
-        0.036157,
-        0.088058,
+        -0.03037,
+        0.090218,
         0.255216
       ],
       "fixed_orientation_from_reference_rpy_rad": [
-        -1.559546,
+        -1.559543,
         0.011238,
-        -1.564205
+        -1.564219
       ],
       "has_separate_distribution": false,
       "name": "oven_gas_source0",
@@ -252,26 +257,26 @@
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -1.557402,
-          -0.572611,
-          -1.556869
+          -1.530615,
+          -1.286738,
+          -1.525554
         ],
         "position_xyz_m": [
-          0.567077,
-          0.157768,
+          0.301679,
+          0.517284,
           1.302699
         ],
         "quaternion_xyzw": [
-          -0.338576,
-          -0.616228,
-          -0.338245,
-          0.625475
+          -0.101772,
+          -0.695711,
+          -0.09823,
+          0.704258
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
         "x_uniform_max_m": 0.821326,
-        "x_uniform_min_m": 0.348945,
+        "x_uniform_min_m": 0.348944,
         "y_uniform_max_m": 0.453716,
         "y_uniform_min_m": -0.466406,
         "z_fixed_m": 1.302699
@@ -279,19 +284,19 @@
     },
     {
       "fixed_offset_from_reference_local_xyz_m": [
-        -0.164939,
-        -0.041967,
-        0.175343
+        -0.164942,
+        -0.041966,
+        0.175341
       ],
       "fixed_offset_from_reference_xyz_m": [
-        -0.114484,
-        -0.125946,
+        -0.003993,
+        -0.170156,
         0.175335
       ],
       "fixed_orientation_from_reference_rpy_rad": [
-        1.806533,
-        0.000166,
-        0.000583
+        1.806536,
+        0.000169,
+        0.000597
       ],
       "has_separate_distribution": false,
       "name": "oven_knob_10",
@@ -299,20 +304,20 @@
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          1.851158,
-          0.565897,
-          -0.152506
+          2.299602,
+          1.212465,
+          -0.695674
         ],
         "position_xyz_m": [
-          0.416437,
-          -0.056237,
+          0.328055,
+          0.25691,
           1.222818
         ],
         "quaternion_xyzw": [
-          0.75218,
-          0.225853,
-          0.178424,
-          0.592774
+          0.625754,
+          0.474568,
+          0.374403,
+          0.49299
         ],
         "source": "exact_after_one_rlbench_reset"
       },
@@ -326,19 +331,19 @@
     },
     {
       "fixed_offset_from_reference_local_xyz_m": [
-        -0.165317,
-        0.02881,
-        0.194071
+        -0.16532,
+        0.028811,
+        0.194069
       ],
       "fixed_offset_from_reference_xyz_m": [
-        -0.153817,
-        -0.067105,
-        0.194063
+        -0.072258,
+        -0.151465,
+        0.194064
       ],
       "fixed_orientation_from_reference_rpy_rad": [
-        0.078406,
-        -0.000603,
-        7.4e-05
+        0.078409,
+        -0.000617,
+        7.5e-05
       ],
       "has_separate_distribution": false,
       "name": "oven_knob_11",
@@ -346,20 +351,20 @@
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          0.065822,
-          0.042653,
-          0.582537
+          0.021782,
+          0.075337,
+          1.297425
         ],
         "position_xyz_m": [
-          0.377104,
-          0.002605,
+          0.25979,
+          0.2756,
           1.241546
         ],
         "quaternion_xyzw": [
-          0.037633,
-          0.010968,
-          0.287619,
-          0.956942
+          0.031423,
+          0.023433,
+          0.604023,
+          0.796002
         ],
         "source": "exact_after_one_rlbench_reset"
       },
@@ -373,19 +378,19 @@
     },
     {
       "fixed_offset_from_reference_local_xyz_m": [
-        -0.164944,
+        -0.164947,
         0.190413,
-        0.194616
+        0.194614
       ],
       "fixed_offset_from_reference_xyz_m": [
-        -0.242593,
-        0.06793,
-        0.194609
+        -0.227793,
+        -0.107596,
+        0.19461
       ],
       "fixed_orientation_from_reference_rpy_rad": [
-        -0.078423,
-        -0.000605,
-        -2.1e-05
+        -0.07842,
+        -0.000619,
+        -2.3e-05
       ],
       "has_separate_distribution": false,
       "name": "oven_knob_12",
@@ -393,20 +398,20 @@
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -0.065104,
-          -0.043743,
-          0.582466
+          -0.020521,
+          -0.07569,
+          1.297417
         ],
         "position_xyz_m": [
-          0.288327,
-          0.13764,
+          0.104255,
+          0.319469,
           1.242092
         ],
         "quaternion_xyzw": [
-          -0.037444,
-          -0.011595,
-          0.287594,
-          0.95695
+          -0.031028,
+          -0.023954,
+          0.604003,
+          0.796018
         ],
         "source": "exact_after_one_rlbench_reset"
       },
@@ -415,24 +420,24 @@
         "x_uniform_min_m": 0.092513,
         "y_uniform_max_m": 0.378311,
         "y_uniform_min_m": -0.197355,
-        "z_fixed_m": 1.242093
+        "z_fixed_m": 1.242092
       }
     },
     {
       "fixed_offset_from_reference_local_xyz_m": [
-        -0.163406,
-        -0.176011,
-        0.193606
+        -0.163409,
+        -0.17601,
+        0.193604
       ],
       "fixed_offset_from_reference_xyz_m": [
-        -0.03931,
-        -0.236938,
+        0.125514,
+        -0.20477,
         0.193597
       ],
       "fixed_orientation_from_reference_rpy_rad": [
-        -0.235752,
-        -0.000597,
-        -0.000116
+        -0.235748,
+        -0.000611,
+        -0.00012
       ],
       "has_separate_distribution": false,
       "name": "oven_knob_13",
@@ -440,20 +445,20 @@
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -0.197441,
-          -0.129659,
-          0.570979
+          -0.063948,
+          -0.227061,
+          1.290848
         ],
         "position_xyz_m": [
-          0.491611,
-          -0.167228,
+          0.457562,
+          0.222296,
           1.24108
         ],
         "quaternion_xyzw": [
-          -0.112528,
-          -0.034161,
-          0.285794,
-          0.951048
+          -0.093485,
+          -0.071346,
+          0.600252,
+          0.791118
         ],
         "source": "exact_after_one_rlbench_reset"
       },
@@ -467,19 +472,19 @@
     },
     {
       "fixed_offset_from_reference_local_xyz_m": [
-        -0.167951,
-        -0.104769,
-        0.194296
+        -0.167954,
+        -0.104768,
+        0.194293
       ],
       "fixed_offset_from_reference_xyz_m": [
-        -0.082376,
-        -0.180004,
+        0.055679,
+        -0.189966,
         0.194287
       ],
       "fixed_orientation_from_reference_rpy_rad": [
-        -0.235752,
-        -0.000597,
-        -0.000116
+        -0.235748,
+        -0.000611,
+        -0.00012
       ],
       "has_separate_distribution": false,
       "name": "oven_knob_14",
@@ -487,20 +492,20 @@
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -0.197441,
-          -0.129659,
-          0.570979
+          -0.063948,
+          -0.227061,
+          1.290848
         ],
         "position_xyz_m": [
-          0.448545,
-          -0.110295,
+          0.387727,
+          0.2371,
           1.24177
         ],
         "quaternion_xyzw": [
-          -0.112528,
-          -0.034161,
-          0.285794,
-          0.951048
+          -0.093485,
+          -0.071346,
+          0.600252,
+          0.791118
         ],
         "source": "exact_after_one_rlbench_reset"
       },
@@ -509,24 +514,24 @@
         "x_uniform_min_m": 0.062557,
         "y_uniform_max_m": 0.167379,
         "y_uniform_min_m": -0.404383,
-        "z_fixed_m": 1.24177
+        "z_fixed_m": 1.241769
       }
     },
     {
       "fixed_offset_from_reference_local_xyz_m": [
         -0.153837,
-        0.054017,
-        -0.027038
+        0.054019,
+        -0.02704
       ],
       "fixed_offset_from_reference_xyz_m": [
-        -0.158128,
-        -0.039737,
+        -0.093443,
+        -0.133612,
         -0.027045
       ],
       "fixed_orientation_from_reference_rpy_rad": [
-        -1.570929,
-        -2.2e-05,
-        1.9e-05
+        -1.570926,
+        -2.1e-05,
+        5e-06
       ],
       "has_separate_distribution": false,
       "name": "oven_door",
@@ -534,20 +539,20 @@
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -1.570946,
-          -0.583911,
-          -0.000112
+          -1.571259,
+          -1.298215,
+          -0.000476
         ],
         "position_xyz_m": [
-          0.372793,
-          0.029972,
-          1.020438
+          0.238605,
+          0.293454,
+          1.020437
         ],
         "quaternion_xyzw": [
-          -0.677223,
-          -0.203546,
-          0.203501,
-          0.677145
+          -0.563327,
+          -0.427464,
+          0.427394,
+          0.563269
         ],
         "source": "exact_after_one_rlbench_reset"
       },
@@ -556,24 +561,24 @@
         "x_uniform_min_m": 0.184784,
         "y_uniform_max_m": 0.289687,
         "y_uniform_min_m": -0.301696,
-        "z_fixed_m": 1.020438
+        "z_fixed_m": 1.020437
       }
     },
     {
       "fixed_offset_from_reference_local_xyz_m": [
-        -0.16615,
+        -0.166153,
         0.280754,
-        0.195707
+        0.195706
       ],
       "fixed_offset_from_reference_xyz_m": [
-        -0.293402,
-        0.142639,
+        -0.315123,
+        -0.084434,
         0.195701
       ],
       "fixed_orientation_from_reference_rpy_rad": [
         0.0,
         -1.570796,
-        8e-06
+        5e-06
       ],
       "has_separate_distribution": false,
       "name": "oven_knob",
@@ -581,20 +586,20 @@
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          1.570798,
-          -0.986906,
-          1.570797
+          1.570797,
+          -0.272602,
+          1.570796
         ],
         "position_xyz_m": [
-          0.237519,
-          0.212349,
+          0.016926,
+          0.342631,
           1.243184
         ],
         "quaternion_xyzw": [
-          0.203517,
-          -0.677186,
-          0.203516,
-          0.677186
+          0.427423,
+          -0.563302,
+          0.427423,
+          0.563302
         ],
         "source": "exact_after_one_rlbench_reset"
       },
@@ -609,18 +614,18 @@
     {
       "fixed_offset_from_reference_local_xyz_m": [
         0.085749,
-        0.052494,
-        -0.007498
+        0.052495,
+        -0.007496
       ],
       "fixed_offset_from_reference_xyz_m": [
-        0.042605,
-        0.091068,
+        -0.027469,
+        0.096717,
         -0.007493
       ],
       "fixed_orientation_from_reference_rpy_rad": [
-        -1e-06,
-        1.8e-05,
-        1e-06
+        2e-06,
+        3e-06,
+        -0.0
       ],
       "has_separate_distribution": false,
       "name": "oven_tray",
@@ -628,20 +633,20 @@
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          2.3e-05,
-          -2.2e-05,
-          0.58389
+          3.3e-05,
+          -1e-06,
+          1.298193
         ],
         "position_xyz_m": [
-          0.573526,
-          0.160778,
+          0.304579,
+          0.523782,
           1.03999
         ],
         "quaternion_xyzw": [
-          8e-06,
-          -1.4e-05,
-          0.287816,
-          0.957686
+          1.3e-05,
+          -1e-05,
+          0.604467,
+          0.79663
         ],
         "source": "exact_after_one_rlbench_reset"
       },
@@ -664,18 +669,18 @@
     "orientation_rpy_rad": [
       -0.0,
       0.0,
-      0.58389
+      1.298194
     ],
     "position_xyz_m": [
-      0.231553,
-      -0.053176,
+      0.186361,
+      0.138106,
       0.752
     ],
     "quaternion_xyzw": [
       0.0,
       0.0,
-      0.287815,
-      0.957686
+      0.604467,
+      0.79663
     ],
     "source": "exact_after_one_rlbench_reset"
   },

@@ -1,0 +1,82 @@
+{
+  "shapes": {
+    "cup_distractor1": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.10000000149011612,
+      "friction": 0.7099999785423279
+    },
+    "cup_distractor2": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.10000000149011612,
+      "friction": 0.7099999785423279
+    },
+    "cup_target": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.10000000149011612,
+      "friction": 0.7099999785423279
+    },
+    "cup_source": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.5,
+      "friction": 0.7099999785423279
+    },
+    "boundary": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.1600000262260437,
+      "friction": 0.5
+    },
+    "cup_distractor0": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.10000000149011612,
+      "friction": 0.7099999785423279
+    },
+    "cup_distractor_visual1": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.0020000000949949026,
+      "friction": 0.7099999785423279
+    },
+    "cup_distractor_visual2": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.0020000000949949026,
+      "friction": 0.7099999785423279
+    },
+    "cup_target_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.0020000000949949026,
+      "friction": 0.7099999785423279
+    },
+    "cup_source_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.0020000000949949026,
+      "friction": 0.7099999785423279
+    },
+    "cup_distractor_visual0": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.0020000000949949026,
+      "friction": 0.7099999785423279
+    }
+  },
+  "joints": {}
+}

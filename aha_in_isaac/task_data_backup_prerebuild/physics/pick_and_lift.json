@@ -1,0 +1,40 @@
+{
+  "shapes": {
+    "pick_and_lift_target": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.125,
+      "friction": 0.5
+    },
+    "pick_and_lift_boundary": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.24295002222061157,
+      "friction": 0.5
+    },
+    "success_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.26808252930641174,
+      "friction": 0.5
+    },
+    "stack_blocks_distractor1": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.125,
+      "friction": 0.5
+    },
+    "stack_blocks_distractor0": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.125,
+      "friction": 0.5
+    }
+  },
+  "joints": {}
+}

@@ -1,0 +1,268 @@
+[
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.141591,
+        0.241587,
+        -3.141587
+      ],
+      "position_xyz_m": [
+        0.278603,
+        -0.008154,
+        1.47163
+      ],
+      "quaternion_xyzw": [
+        3e-06,
+        0.992713,
+        1e-06,
+        0.1205
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.114903,
+        -0.212983,
+        0.499777
+      ],
+      "position_xyz_m": [
+        -0.177596,
+        -0.134568,
+        -0.491207
+      ],
+      "quaternion_xyzw": [
+        0.029079,
+        -0.116939,
+        0.239576,
+        0.963371
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      0.087361,
+      0.45238,
+      0.068108
+    ],
+    "fixed_orientation_rpy_rad": [
+      -3.141593,
+      0.0,
+      -0.872651
+    ],
+    "motion_type": "point",
+    "name": "waypoint0",
+    "parent": "microwave",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -3.141593,
+          0.0,
+          -0.872651
+        ],
+        "position_xyz_m": [
+          0.087361,
+          0.45238,
+          0.068108
+        ],
+        "quaternion_xyzw": [
+          0.906311,
+          0.422612,
+          0.0,
+          -0.0
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "microwave"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -3.141593,
+          0.0,
+          -0.872651
+        ],
+        "position_xyz_m": [
+          0.087361,
+          0.45238,
+          0.068108
+        ],
+        "quaternion_xyzw": [
+          0.906311,
+          0.422612,
+          0.0,
+          -0.0
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "microwave"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141593,
+        -0.0,
+        2.654118
+      ],
+      "position_xyz_m": [
+        0.058663,
+        0.027554,
+        0.980423
+      ],
+      "quaternion_xyzw": [
+        -0.241331,
+        0.970443,
+        -0.0,
+        -0.0
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      3.141593,
+      -0.0,
+      2.654118
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141582,
+        0.241432,
+        -3.141589
+      ],
+      "position_xyz_m": [
+        0.278683,
+        -0.008164,
+        1.471529
+      ],
+      "quaternion_xyzw": [
+        1e-06,
+        0.992723,
+        -5e-06,
+        0.120423
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.224354,
+        -0.089948,
+        1.195749
+      ],
+      "position_xyz_m": [
+        0.242031,
+        -0.010919,
+        -0.459906
+      ],
+      "quaternion_xyzw": [
+        0.067283,
+        -0.099873,
+        0.554624,
+        0.823341
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      -0.35605,
+      0.029325,
+      -0.0312
+    ],
+    "fixed_orientation_rpy_rad": [
+      0.0,
+      0.0,
+      -0.698132
+    ],
+    "motion_type": "point",
+    "name": "waypoint1",
+    "parent": "waypoint0",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          0.0,
+          -0.698132
+        ],
+        "position_xyz_m": [
+          -0.35605,
+          0.029325,
+          -0.0312
+        ],
+        "quaternion_xyzw": [
+          0.0,
+          0.0,
+          -0.34202,
+          0.939693
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "waypoint",
+      "reference_name": "waypoint0"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -3.141593,
+          0.0,
+          -1.570783
+        ],
+        "position_xyz_m": [
+          -0.119043,
+          0.160783,
+          0.099308
+        ],
+        "quaternion_xyzw": [
+          0.707111,
+          0.707102,
+          0.0,
+          -0.0
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "microwave"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141593,
+        -0.0,
+        1.955986
+      ],
+      "position_xyz_m": [
+        0.359504,
+        0.220236,
+        1.011623
+      ],
+      "quaternion_xyzw": [
+        -0.558688,
+        0.829378,
+        -0.0,
+        -0.0
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      3.141593,
+      -0.0,
+      1.955986
+    ]
+  }
+]

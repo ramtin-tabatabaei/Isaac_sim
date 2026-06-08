@@ -1,0 +1,88 @@
+{
+  "shapes": {
+    "fridge_root": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.10125002264976501,
+      "friction": 0.5
+    },
+    "fridge_base": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 4.572817802429199,
+      "friction": 0.5
+    },
+    "fridge_base_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 1.7809876203536987,
+      "friction": 0.7099999785423279
+    },
+    "shelf0": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.6260764598846436,
+      "friction": 0.5
+    },
+    "door_bottom": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.05603770166635513,
+      "friction": 0.5
+    },
+    "door_top": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.08520456403493881,
+      "friction": 1.0
+    },
+    "shelf1": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.7512916922569275,
+      "friction": 0.5
+    },
+    "shelf2": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.7512916922569275,
+      "friction": 0.5
+    },
+    "door_bottom_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 62.954833984375,
+      "friction": 0.7099999785423279
+    },
+    "door_top_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 36.75730514526367,
+      "friction": 0.7099999785423279
+    }
+  },
+  "joints": {
+    "bottom_joint": {
+      "type": "revolute",
+      "cyclic": false,
+      "lower": 0.0,
+      "upper": 90.00000250447816
+    },
+    "top_joint": {
+      "type": "revolute",
+      "cyclic": false,
+      "lower": 0.0,
+      "upper": 90.00000250447816
+    }
+  }
+}

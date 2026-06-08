@@ -1,54 +1,85 @@
 [
   {
+    "analytical_task_root_yaw_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.178191,
+      "x_uniform_min_m": 0.008201,
+      "y_uniform_max_m": 0.090843,
+      "y_uniform_min_m": -0.363276,
+      "z_fixed_m": 0.88381
+    },
     "handle": 81,
     "hierarchy_path": "hang_frame_on_hanger/frame",
+    "is_graspable": true,
     "name": "frame",
+    "observed_spawn_yaw_range_rad": [
+      -0.011165,
+      -0.011032
+    ],
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.085821,
+        -0.108681,
+        0.88381
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.17482,
+      "x_min_m": 0.011647,
+      "y_max_m": 0.063487,
+      "y_min_m": -0.36301,
+      "z_max_m": 0.883812,
+      "z_min_m": 0.883807
+    },
     "parent": "hang_frame_on_hanger",
     "parent_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.002576,
-        -0.23227,
-        -0.011105
+        -0.002577,
+        -0.232269,
+        -0.011108
       ],
       "position_xyz_m": [
         -0.186814,
-        -0.181157,
-        0.131808
+        -0.181156,
+        0.13181
       ],
       "quaternion_xyzw": [
         -0.000636,
-        -0.11588,
-        -0.005366,
+        -0.115879,
+        -0.005367,
         0.993249
       ],
       "source": "exact_parent_local_offset"
     },
     "placement_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.178191,
-      "x_uniform_min_m": 0.0082,
-      "y_uniform_max_m": 0.090843,
-      "y_uniform_min_m": -0.363277,
-      "z_fixed_m": 0.883808
+      "kind": "observed_over_rlbench_resets",
+      "n_resets_observed": 30,
+      "source": "observed_graspable_world_range_includes_spawn_translation_and_rotation",
+      "x_uniform_max_m": 0.17482,
+      "x_uniform_min_m": 0.011647,
+      "y_uniform_max_m": 0.063487,
+      "y_uniform_min_m": -0.36301,
+      "z_fixed_m": 0.88381,
+      "z_observed_max_m": 0.883812,
+      "z_observed_min_m": 0.883807
     },
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.002576,
-        -0.23227,
-        -0.011105
+        -0.002577,
+        -0.232269,
+        -0.011108
       ],
       "position_xyz_m": [
         -0.186814,
-        -0.181157,
-        0.131808
+        -0.181156,
+        0.13181
       ],
       "quaternion_xyzw": [
         -0.000636,
-        -0.11588,
-        -0.005366,
+        -0.115879,
+        -0.005367,
         0.993249
       ],
       "source": "exact_task_root_local_offset"
@@ -57,31 +88,34 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.002576,
-        -0.23227,
-        -0.011105
+        -0.002577,
+        -0.232269,
+        -0.011108
       ],
       "position_xyz_m": [
-        0.038909,
-        -0.22157,
-        0.883808
+        0.108217,
+        -0.036889,
+        0.88381
       ],
       "quaternion_xyzw": [
         -0.000636,
-        -0.11588,
-        -0.005366,
+        -0.115879,
+        -0.005367,
         0.993249
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.178191,
-      "x_uniform_min_m": 0.0082,
-      "y_uniform_max_m": 0.090843,
-      "y_uniform_min_m": -0.363277,
-      "z_fixed_m": 0.883808
+      "kind": "observed_over_rlbench_resets",
+      "n_resets_observed": 30,
+      "source": "observed_graspable_world_range_includes_spawn_translation_and_rotation",
+      "x_uniform_max_m": 0.17482,
+      "x_uniform_min_m": 0.011647,
+      "y_uniform_max_m": 0.063487,
+      "y_uniform_min_m": -0.36301,
+      "z_fixed_m": 0.88381,
+      "z_observed_max_m": 0.883812,
+      "z_observed_min_m": 0.883807
     }
   },
   {
@@ -90,19 +124,19 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -3.094685,
+          -3.094673,
           1.33824,
-          3.095965
+          3.095954
         ],
         "position_xyz_m": [
-          0.371577,
-          0.268126,
-          -0.018845
+          0.371576,
+          0.268127,
+          -0.018847
         ],
         "quaternion_xyzw": [
           -0.003345,
           0.78428,
-          0.004244,
+          0.004245,
           0.620384
         ],
         "source": "exact_reference_local_relation"
@@ -111,12 +145,26 @@
       "world_offset_xyz_m": [
         0.368812,
         0.264157,
-        0.067193
+        0.067191
       ]
     },
     "handle": 88,
     "hierarchy_path": "hang_frame_on_hanger/task_wall",
     "name": "task_wall",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.454634,
+        0.155476,
+        0.951001
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.543632,
+      "x_min_m": 0.38046,
+      "y_max_m": 0.327644,
+      "y_min_m": -0.098853,
+      "z_max_m": 0.951001,
+      "z_min_m": 0.951001
+    },
     "parent": "hang_frame_on_hanger",
     "parent_local_location": {
       "kind": "exact",
@@ -168,8 +216,8 @@
         0.0
       ],
       "position_xyz_m": [
-        0.407721,
-        0.042587,
+        0.47703,
+        0.227268,
         0.951001
       ],
       "quaternion_xyzw": [
@@ -191,6 +239,15 @@
     }
   },
   {
+    "analytical_task_root_yaw_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.186278,
+      "x_uniform_min_m": 0.016288,
+      "y_uniform_max_m": 0.090755,
+      "y_uniform_min_m": -0.363364,
+      "z_fixed_m": 0.849618
+    },
     "fixed_relation_to_nearest_graspable": {
       "has_separate_position_range": false,
       "reference_local_location": {
@@ -222,7 +279,23 @@
     },
     "handle": 84,
     "hierarchy_path": "hang_frame_on_hanger/frame/frame_visual",
+    "mounted_note": "Rigidly mounted on graspable 'frame'. RLBench re-places 'frame' each episode at a random position within its spawn region and a random yaw (RLBench default +/-pi). This object sits ~0.008 m from 'frame' rotation axis, so its absolute world position sweeps a wide ring; its pose relative to 'frame' is fixed.",
+    "mounted_on_graspable": "frame",
     "name": "frame_visual",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.093908,
+        -0.108769,
+        0.849617
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.182907,
+      "x_min_m": 0.019734,
+      "y_max_m": 0.063399,
+      "y_min_m": -0.363098,
+      "z_max_m": 0.84962,
+      "z_min_m": 0.849615
+    },
     "parent": "frame",
     "parent_local_location": {
       "kind": "exact",
@@ -245,22 +318,23 @@
       "source": "exact_parent_local_offset"
     },
     "placement_range": null,
+    "rotation_radius_from_graspable_m": 0.008088,
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.002576,
-        -0.232272,
-        -0.011098
+        -0.002577,
+        -0.232271,
+        -0.011101
       ],
       "position_xyz_m": [
         -0.178727,
-        -0.181245,
-        0.097616
+        -0.181244,
+        0.097618
       ],
       "quaternion_xyzw": [
-        0.000636,
+        0.000637,
         0.11588,
-        0.005362,
+        0.005364,
         -0.993249
       ],
       "source": "exact_task_root_local_offset"
@@ -269,34 +343,46 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.002576,
-        -0.232272,
-        -0.011098
+        -0.002577,
+        -0.232271,
+        -0.011101
       ],
       "position_xyz_m": [
-        0.046996,
-        -0.221658,
-        0.849616
+        0.116305,
+        -0.036977,
+        0.849618
       ],
       "quaternion_xyzw": [
-        0.000636,
+        0.000637,
         0.11588,
-        0.005362,
+        0.005364,
         -0.993249
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.186278,
-      "x_uniform_min_m": 0.016288,
-      "y_uniform_max_m": 0.090755,
-      "y_uniform_min_m": -0.363364,
-      "z_fixed_m": 0.849616
+      "kind": "mounted_on_graspable_envelope",
+      "mounted_on_graspable": "frame",
+      "n_resets_observed": 30,
+      "rotation_radius_m": 0.008088,
+      "source": "observed_frame_range_expanded_by_mount_radius_for_full_yaw",
+      "x_uniform_max_m": 0.182908,
+      "x_uniform_min_m": 0.003559,
+      "y_uniform_max_m": 0.071575,
+      "y_uniform_min_m": -0.371098,
+      "z_fixed_m": 0.849617
     }
   },
   {
+    "analytical_task_root_yaw_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.190633,
+      "x_uniform_min_m": 0.020642,
+      "y_uniform_max_m": 0.09017,
+      "y_uniform_min_m": -0.36395,
+      "z_fixed_m": 1.014927
+    },
     "fixed_relation_to_nearest_graspable": {
       "has_separate_position_range": false,
       "reference_local_location": {
@@ -328,7 +414,23 @@
     },
     "handle": 85,
     "hierarchy_path": "hang_frame_on_hanger/frame/frame_detector",
+    "mounted_note": "Rigidly mounted on graspable 'frame'. RLBench re-places 'frame' each episode at a random position within its spawn region and a random yaw (RLBench default +/-pi). This object sits ~0.012 m from 'frame' rotation axis, so its absolute world position sweeps a wide ring; its pose relative to 'frame' is fixed.",
+    "mounted_on_graspable": "frame",
     "name": "frame_detector",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.098263,
+        -0.109354,
+        1.014927
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.187262,
+      "x_min_m": 0.024089,
+      "y_max_m": 0.062813,
+      "y_min_m": -0.363684,
+      "z_max_m": 1.014929,
+      "z_min_m": 1.014925
+    },
     "parent": "frame",
     "parent_local_location": {
       "kind": "exact",
@@ -351,22 +453,23 @@
       "source": "exact_parent_local_offset"
     },
     "placement_range": null,
+    "rotation_radius_from_graspable_m": 0.01246,
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.002576,
-        -0.23227,
-        -0.011105
+        -0.002577,
+        -0.232269,
+        -0.011108
       ],
       "position_xyz_m": [
         -0.174372,
         -0.18183,
-        0.262926
+        0.262927
       ],
       "quaternion_xyzw": [
         -0.000636,
-        -0.11588,
-        -0.005366,
+        -0.115879,
+        -0.005367,
         0.993249
       ],
       "source": "exact_task_root_local_offset"
@@ -375,34 +478,46 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.002576,
-        -0.23227,
-        -0.011105
+        -0.002577,
+        -0.232269,
+        -0.011108
       ],
       "position_xyz_m": [
-        0.051351,
-        -0.222244,
-        1.014925
+        0.120659,
+        -0.037563,
+        1.014927
       ],
       "quaternion_xyzw": [
         -0.000636,
-        -0.11588,
-        -0.005366,
+        -0.115879,
+        -0.005367,
         0.993249
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.190632,
-      "x_uniform_min_m": 0.020642,
-      "y_uniform_max_m": 0.09017,
-      "y_uniform_min_m": -0.36395,
-      "z_fixed_m": 1.014925
+      "kind": "mounted_on_graspable_envelope",
+      "mounted_on_graspable": "frame",
+      "n_resets_observed": 30,
+      "rotation_radius_m": 0.01246,
+      "source": "observed_frame_range_expanded_by_mount_radius_for_full_yaw",
+      "x_uniform_max_m": 0.18728,
+      "x_uniform_min_m": -0.000813,
+      "y_uniform_max_m": 0.075947,
+      "y_uniform_min_m": -0.37547,
+      "z_fixed_m": 1.014927
     }
   },
   {
+    "analytical_task_root_yaw_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.192111,
+      "x_uniform_min_m": 0.022121,
+      "y_uniform_max_m": 0.089129,
+      "y_uniform_min_m": -0.364991,
+      "z_fixed_m": 1.000978
+    },
     "fixed_relation_to_nearest_graspable": {
       "has_separate_position_range": false,
       "reference_local_location": {
@@ -434,7 +549,23 @@
     },
     "handle": 86,
     "hierarchy_path": "hang_frame_on_hanger/frame/Cuboid2",
+    "mounted_note": "Rigidly mounted on graspable 'frame'. RLBench re-places 'frame' each episode at a random position within its spawn region and a random yaw (RLBench default +/-pi). This object sits ~0.014 m from 'frame' rotation axis, so its absolute world position sweeps a wide ring; its pose relative to 'frame' is fixed.",
+    "mounted_on_graspable": "frame",
     "name": "Cuboid2",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.099742,
+        -0.110395,
+        1.000977
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.188741,
+      "x_min_m": 0.025568,
+      "y_max_m": 0.061772,
+      "y_min_m": -0.364725,
+      "z_max_m": 1.000979,
+      "z_min_m": 1.000975
+    },
     "parent": "frame",
     "parent_local_location": {
       "kind": "exact",
@@ -457,22 +588,23 @@
       "source": "exact_parent_local_offset"
     },
     "placement_range": null,
+    "rotation_radius_from_graspable_m": 0.014026,
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.002576,
-        -0.232272,
-        -0.011098
+        -0.002577,
+        -0.232271,
+        -0.011101
       ],
       "position_xyz_m": [
         -0.172893,
         -0.182871,
-        0.248976
+        0.248978
       ],
       "quaternion_xyzw": [
-        -0.000636,
+        -0.000637,
         -0.11588,
-        -0.005362,
+        -0.005364,
         0.993249
       ],
       "source": "exact_task_root_local_offset"
@@ -481,41 +613,53 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.002576,
-        -0.232272,
-        -0.011098
+        -0.002577,
+        -0.232271,
+        -0.011101
       ],
       "position_xyz_m": [
-        0.052829,
-        -0.223285,
-        1.000976
+        0.122138,
+        -0.038604,
+        1.000978
       ],
       "quaternion_xyzw": [
-        -0.000636,
+        -0.000637,
         -0.11588,
-        -0.005362,
+        -0.005364,
         0.993249
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.192111,
-      "x_uniform_min_m": 0.022121,
-      "y_uniform_max_m": 0.089128,
-      "y_uniform_min_m": -0.364991,
-      "z_fixed_m": 1.000976
+      "kind": "mounted_on_graspable_envelope",
+      "mounted_on_graspable": "frame",
+      "n_resets_observed": 30,
+      "rotation_radius_m": 0.014026,
+      "source": "observed_frame_range_expanded_by_mount_radius_for_full_yaw",
+      "x_uniform_max_m": 0.188846,
+      "x_uniform_min_m": -0.002379,
+      "y_uniform_max_m": 0.077513,
+      "y_uniform_min_m": -0.377036,
+      "z_fixed_m": 1.000977
     }
   },
   {
+    "analytical_task_root_yaw_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.228937,
+      "x_uniform_min_m": 0.058947,
+      "y_uniform_max_m": 0.090323,
+      "y_uniform_min_m": -0.363796,
+      "z_fixed_m": 0.860222
+    },
     "fixed_relation_to_nearest_graspable": {
       "has_separate_position_range": false,
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
           0.0,
-          1.570796,
+          1.570451,
           1.570796
         ],
         "position_xyz_m": [
@@ -540,13 +684,29 @@
     },
     "handle": 87,
     "hierarchy_path": "hang_frame_on_hanger/frame/picture",
+    "mounted_note": "Rigidly mounted on graspable 'frame'. RLBench re-places 'frame' each episode at a random position within its spawn region and a random yaw (RLBench default +/-pi). This object sits ~0.051 m from 'frame' rotation axis, so its absolute world position sweeps a wide ring; its pose relative to 'frame' is fixed.",
+    "mounted_on_graspable": "frame",
     "name": "picture",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.136567,
+        -0.109201,
+        0.860221
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.225566,
+      "x_min_m": 0.062393,
+      "y_max_m": 0.062967,
+      "y_min_m": -0.36353,
+      "z_max_m": 0.860223,
+      "z_min_m": 0.860219
+    },
     "parent": "frame",
     "parent_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
         0.0,
-        1.570796,
+        1.570451,
         1.570796
       ],
       "position_xyz_m": [
@@ -563,22 +723,23 @@
       "source": "exact_parent_local_offset"
     },
     "placement_range": null,
+    "rotation_radius_from_graspable_m": 0.050749,
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        0.0456,
-        1.338265,
-        1.523915
+        0.045612,
+        1.338266,
+        1.523904
       ],
       "position_xyz_m": [
         -0.136068,
         -0.181677,
-        0.10822
+        0.108222
       ],
       "quaternion_xyzw": [
-        0.441047,
+        0.441048,
         0.436321,
-        0.551565,
+        0.551564,
         0.557564
       ],
       "source": "exact_task_root_local_offset"
@@ -587,31 +748,34 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        0.0456,
-        1.338264,
-        1.523915
+        0.045612,
+        1.338266,
+        1.523904
       ],
       "position_xyz_m": [
-        0.089655,
-        -0.22209,
-        0.86022
+        0.158964,
+        -0.037409,
+        0.860222
       ],
       "quaternion_xyzw": [
-        0.441047,
+        0.441048,
         0.436321,
-        0.551565,
-        0.557563
+        0.551564,
+        0.557564
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.228937,
-      "x_uniform_min_m": 0.058947,
-      "y_uniform_max_m": 0.090323,
-      "y_uniform_min_m": -0.363797,
-      "z_fixed_m": 0.86022
+      "kind": "mounted_on_graspable_envelope",
+      "mounted_on_graspable": "frame",
+      "n_resets_observed": 30,
+      "rotation_radius_m": 0.050749,
+      "source": "observed_frame_range_expanded_by_mount_radius_for_full_yaw",
+      "x_uniform_max_m": 0.225569,
+      "x_uniform_min_m": -0.039102,
+      "y_uniform_max_m": 0.114236,
+      "y_uniform_min_m": -0.413759,
+      "z_fixed_m": 0.860221
     }
   },
   {
@@ -620,19 +784,19 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -3.094679,
-          1.338266,
-          -1.616409
+          -3.094668,
+          1.338267,
+          -1.61642
         ],
         "position_xyz_m": [
-          0.351568,
-          0.294615,
-          0.102008
+          0.351567,
+          0.294616,
+          0.102007
         ],
         "quaternion_xyzw": [
-          0.552205,
+          0.552204,
           0.556924,
-          0.44169,
+          0.441691,
           0.435679
         ],
         "source": "exact_reference_local_relation"
@@ -641,12 +805,26 @@
       "world_offset_xyz_m": [
         0.321809,
         0.291158,
-        0.180194
+        0.180192
       ]
     },
     "handle": 89,
     "hierarchy_path": "hang_frame_on_hanger/task_wall/hanger",
     "name": "hanger",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.407631,
+        0.182477,
+        1.064002
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.496629,
+      "x_min_m": 0.333457,
+      "y_max_m": 0.354645,
+      "y_min_m": -0.071852,
+      "z_max_m": 1.064002,
+      "z_min_m": 1.064002
+    },
     "parent": "task_wall",
     "parent_local_location": {
       "kind": "exact",
@@ -698,8 +876,8 @@
         1.570817
       ],
       "position_xyz_m": [
-        0.360718,
-        0.069587,
+        0.430027,
+        0.254269,
         1.064002
       ],
       "quaternion_xyzw": [

@@ -7,36 +7,41 @@
         0.063519
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
-        0.0,
-        0.0,
-        -0.0
+        -0.0,
+        -0.0,
+        -1e-06
       ],
       "name": "white_king_dynamic",
+      "observed_spawn_yaw_range_rad": [
+        -0.0,
+        0.0
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          0.0,
           -0.0,
-          -1.400593
+          -0.0,
+          0.108768
         ],
         "position_xyz_m": [
-          0.048616,
-          0.040737,
+          0.251611,
+          -0.217984,
           0.815519
         ],
         "quaternion_xyzw": [
-          0.0,
           -0.0,
-          -0.644444,
-          0.764651
+          -0.0,
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.532727,
-        "x_uniform_min_m": 0.012894,
-        "y_uniform_max_m": 0.412727,
-        "y_uniform_min_m": -0.412727,
+        "x_uniform_max_m": 0.498306,
+        "x_uniform_min_m": -0.012609,
+        "y_uniform_max_m": 0.260438,
+        "y_uniform_min_m": -0.268553,
         "z_fixed_m": 0.815519
       }
     },
@@ -48,35 +53,40 @@
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
         0.0,
+        0.0,
+        -1e-06
+      ],
+      "name": "white_kingside_bishop_dynamic",
+      "observed_spawn_yaw_range_rad": [
         -0.0,
         0.0
       ],
-      "name": "white_kingside_bishop_dynamic",
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -0.0,
-          -0.0,
-          -1.400593
+          0.0,
+          0.0,
+          0.108768
         ],
         "position_xyz_m": [
-          0.055647,
-          -0.006634,
+          0.299324,
+          -0.213875,
           0.810532
         ],
         "quaternion_xyzw": [
           0.0,
-          -0.0,
-          -0.644444,
-          0.764651
+          0.0,
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.546874,
-        "x_uniform_min_m": -0.001254,
-        "y_uniform_max_m": 0.426873,
-        "y_uniform_min_m": -0.426874,
+        "x_uniform_max_m": 0.495288,
+        "x_uniform_min_m": -0.011336,
+        "y_uniform_max_m": 0.391845,
+        "y_uniform_min_m": -0.271954,
         "z_fixed_m": 0.810532
       }
     },
@@ -89,34 +99,39 @@
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
         0.0,
         -0.0,
-        0.0
+        -1e-06
       ],
       "name": "white_kingside_rook_dynamic",
+      "observed_spawn_yaw_range_rad": [
+        -0.0,
+        0.0
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -0.0,
-          -0.0,
-          -1.400593
+          0.0,
+          0.0,
+          0.108768
         ],
         "position_xyz_m": [
-          0.07188,
-          -0.101017,
+          0.394526,
+          -0.203467,
           0.798546
         ],
         "quaternion_xyzw": [
+          0.0,
           -0.0,
-          -0.0,
-          -0.644444,
-          0.764651
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.601707,
-        "x_uniform_min_m": -0.056085,
-        "y_uniform_max_m": 0.481707,
-        "y_uniform_min_m": -0.481707,
+        "x_uniform_max_m": 0.491616,
+        "x_uniform_min_m": -0.016924,
+        "y_uniform_max_m": 0.388753,
+        "y_uniform_min_m": -0.315971,
         "z_fixed_m": 0.798546
       }
     },
@@ -129,34 +144,39 @@
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
         0.0,
         -0.0,
-        0.0
+        -1e-06
       ],
       "name": "white_kingside_knight_dynamic",
+      "observed_spawn_yaw_range_rad": [
+        -0.0,
+        0.0
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
           0.0,
           -0.0,
-          -1.400593
+          0.108768
         ],
         "position_xyz_m": [
-          0.063757,
-          -0.053825,
+          0.346924,
+          -0.208677,
           0.806934
         ],
         "quaternion_xyzw": [
           0.0,
           -0.0,
-          -0.644444,
-          0.764651
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.570568,
-        "x_uniform_min_m": -0.024947,
-        "y_uniform_max_m": 0.450568,
-        "y_uniform_min_m": -0.450568,
+        "x_uniform_max_m": 0.491178,
+        "x_uniform_min_m": -0.008969,
+        "y_uniform_max_m": 0.390305,
+        "y_uniform_min_m": -0.300516,
         "z_fixed_m": 0.806934
       }
     },
@@ -167,36 +187,41 @@
         0.050513
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
+        -0.0,
         0.0,
+        -1e-06
+      ],
+      "name": "white_pawn_a_dynamic",
+      "observed_spawn_yaw_range_rad": [
         -0.0,
         0.0
       ],
-      "name": "white_pawn_a_dynamic",
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
           -0.0,
-          -0.0,
-          -1.400593
+          0.0,
+          0.108768
         ],
         "position_xyz_m": [
-          0.062285,
-          0.237436,
+          0.056123,
+          -0.192264,
           0.802513
         ],
         "quaternion_xyzw": [
           -0.0,
-          -0.0,
-          -0.644444,
-          0.764651
+          0.0,
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.571121,
-        "x_uniform_min_m": -0.025501,
-        "y_uniform_max_m": 0.451121,
-        "y_uniform_min_m": -0.451121,
+        "x_uniform_max_m": 0.468129,
+        "x_uniform_min_m": 0.024656,
+        "y_uniform_max_m": 0.361035,
+        "y_uniform_min_m": -0.334315,
         "z_fixed_m": 0.802513
       }
     },
@@ -209,34 +234,39 @@
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
         0.0,
         -0.0,
-        0.0
+        -1e-06
       ],
       "name": "white_pawn_b_dynamic",
+      "observed_spawn_yaw_range_rad": [
+        -0.0,
+        0.0
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
+          0.0,
           -0.0,
-          -0.0,
-          -1.400593
+          0.108768
         ],
         "position_xyz_m": [
-          0.070396,
-          0.190244,
+          0.103723,
+          -0.187066,
           0.802513
         ],
         "quaternion_xyzw": [
+          0.0,
           -0.0,
-          -0.0,
-          -0.644444,
-          0.764651
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.534301,
-        "x_uniform_min_m": 0.011319,
-        "y_uniform_max_m": 0.4143,
-        "y_uniform_min_m": -0.414301,
+        "x_uniform_max_m": 0.464019,
+        "x_uniform_min_m": 0.027023,
+        "y_uniform_max_m": 0.350148,
+        "y_uniform_min_m": -0.287299,
         "z_fixed_m": 0.802513
       }
     },
@@ -248,35 +278,40 @@
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
         -0.0,
-        -0.0,
-        -0.0
+        0.0,
+        -1e-06
       ],
       "name": "white_pawn_c_dynamic",
+      "observed_spawn_yaw_range_rad": [
+        -0.0,
+        0.0
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
           -0.0,
           0.0,
-          -1.400593
+          0.108768
         ],
         "position_xyz_m": [
-          0.078506,
-          0.143052,
+          0.151324,
+          -0.181868,
           0.802513
         ],
         "quaternion_xyzw": [
           -0.0,
           0.0,
-          -0.644444,
-          0.764651
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.504406,
-        "x_uniform_min_m": 0.041215,
-        "y_uniform_max_m": 0.384405,
-        "y_uniform_min_m": -0.384406,
+        "x_uniform_max_m": 0.45991,
+        "x_uniform_min_m": 0.029389,
+        "y_uniform_max_m": 0.348608,
+        "y_uniform_min_m": -0.240283,
         "z_fixed_m": 0.802513
       }
     },
@@ -288,35 +323,40 @@
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
         0.0,
-        0.0,
-        -0.0
+        -0.0,
+        -1e-06
       ],
       "name": "white_pawn_d_dynamic",
+      "observed_spawn_yaw_range_rad": [
+        -0.0,
+        0.0
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
           0.0,
-          -0.0,
-          -1.400593
+          0.0,
+          0.108768
         ],
         "position_xyz_m": [
-          0.086617,
-          0.095861,
+          0.198924,
+          -0.17667,
           0.802513
         ],
         "quaternion_xyzw": [
           0.0,
           -0.0,
-          -0.644444,
-          0.764651
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.486678,
-        "x_uniform_min_m": 0.058942,
-        "y_uniform_max_m": 0.366678,
-        "y_uniform_min_m": -0.366678,
+        "x_uniform_max_m": 0.4558,
+        "x_uniform_min_m": 0.031756,
+        "y_uniform_max_m": 0.347068,
+        "y_uniform_min_m": -0.218583,
         "z_fixed_m": 0.802513
       }
     },
@@ -327,36 +367,41 @@
         0.050513
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
-        0.0,
+        -0.0,
+        -0.0,
+        -1e-06
+      ],
+      "name": "white_pawn_e_dynamic",
+      "observed_spawn_yaw_range_rad": [
         -0.0,
         0.0
       ],
-      "name": "white_pawn_e_dynamic",
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
           -0.0,
           -0.0,
-          -1.400593
+          0.108768
         ],
         "position_xyz_m": [
-          0.094728,
-          0.048669,
+          0.246525,
+          -0.171472,
           0.802513
         ],
         "quaternion_xyzw": [
           -0.0,
           -0.0,
-          -0.644444,
-          0.764651
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.486594,
-        "x_uniform_min_m": 0.059026,
-        "y_uniform_max_m": 0.366593,
-        "y_uniform_min_m": -0.366594,
+        "x_uniform_max_m": 0.451691,
+        "x_uniform_min_m": 0.034123,
+        "y_uniform_max_m": 0.345527,
+        "y_uniform_min_m": -0.224269,
         "z_fixed_m": 0.802513
       }
     },
@@ -367,36 +412,41 @@
         0.050513
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
-        -0.0,
         0.0,
-        0.0
+        0.0,
+        -1e-06
       ],
       "name": "white_pawn_f_dynamic",
+      "observed_spawn_yaw_range_rad": [
+        -0.0,
+        0.0
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
           0.0,
           0.0,
-          -1.400593
+          0.108768
         ],
         "position_xyz_m": [
-          0.102839,
-          0.001477,
+          0.294126,
+          -0.166274,
           0.802513
         ],
         "quaternion_xyzw": [
           0.0,
           0.0,
-          -0.644444,
-          0.764651
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.504183,
-        "x_uniform_min_m": 0.041438,
-        "y_uniform_max_m": 0.384183,
-        "y_uniform_min_m": -0.384183,
+        "x_uniform_max_m": 0.447581,
+        "x_uniform_min_m": 0.03649,
+        "y_uniform_max_m": 0.343986,
+        "y_uniform_min_m": -0.239733,
         "z_fixed_m": 0.802513
       }
     },
@@ -409,34 +459,39 @@
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
         0.0,
         -0.0,
-        0.0
+        -1e-06
       ],
       "name": "white_pawn_g_dynamic",
+      "observed_spawn_yaw_range_rad": [
+        -0.0,
+        0.0
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
           0.0,
           -0.0,
-          -1.400593
+          0.108768
         ],
         "position_xyz_m": [
-          0.110949,
-          -0.045715,
+          0.341727,
+          -0.161077,
           0.802513
         ],
         "quaternion_xyzw": [
           0.0,
           -0.0,
-          -0.644444,
-          0.764651
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.533997,
-        "x_uniform_min_m": 0.011624,
-        "y_uniform_max_m": 0.413997,
-        "y_uniform_min_m": -0.413997,
+        "x_uniform_max_m": 0.443472,
+        "x_uniform_min_m": 0.038856,
+        "y_uniform_max_m": 0.342446,
+        "y_uniform_min_m": -0.255199,
         "z_fixed_m": 0.802513
       }
     },
@@ -447,36 +502,41 @@
         0.050513
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
+        -0.0,
         0.0,
-        0.0,
-        -0.0
+        -1e-06
       ],
       "name": "white_pawn_h_dynamic",
+      "observed_spawn_yaw_range_rad": [
+        -0.0,
+        0.0
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          0.0,
           -0.0,
-          -1.400593
+          0.0,
+          0.108768
         ],
         "position_xyz_m": [
-          0.11906,
-          -0.092906,
+          0.389327,
+          -0.155878,
           0.802513
         ],
         "quaternion_xyzw": [
+          -0.0,
           0.0,
-          0.0,
-          -0.644444,
-          0.764651
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.570771,
-        "x_uniform_min_m": -0.02515,
-        "y_uniform_max_m": 0.450771,
-        "y_uniform_min_m": -0.450771,
+        "x_uniform_max_m": 0.449388,
+        "x_uniform_min_m": -0.005736,
+        "y_uniform_max_m": 0.340905,
+        "y_uniform_min_m": -0.270663,
         "z_fixed_m": 0.802513
       }
     },
@@ -487,36 +547,41 @@
         0.061043
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
-        -0.0,
-        -0.0,
-        -0.0
+        0.0,
+        0.0,
+        -1e-06
       ],
       "name": "white_queen_dynamic",
+      "observed_spawn_yaw_range_rad": [
+        -0.0,
+        0.0
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -0.0,
           0.0,
-          -1.400593
+          0.0,
+          0.108768
         ],
         "position_xyz_m": [
-          0.039437,
-          0.087802,
+          0.204071,
+          -0.224256,
           0.813043
         ],
         "quaternion_xyzw": [
-          -0.0,
           0.0,
-          -0.644444,
-          0.764651
+          0.0,
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.533858,
-        "x_uniform_min_m": 0.011762,
-        "y_uniform_max_m": 0.413857,
-        "y_uniform_min_m": -0.413858,
+        "x_uniform_max_m": 0.503491,
+        "x_uniform_min_m": -0.016051,
+        "y_uniform_max_m": 0.394908,
+        "y_uniform_min_m": -0.266362,
         "z_fixed_m": 0.813043
       }
     },
@@ -527,36 +592,41 @@
         0.058532
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
+        -0.0,
         0.0,
+        -1e-06
+      ],
+      "name": "white_queenside_bishop_dynamic",
+      "observed_spawn_yaw_range_rad": [
         -0.0,
         0.0
       ],
-      "name": "white_queenside_bishop_dynamic",
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
           -0.0,
-          -0.0,
-          -1.400593
+          0.0,
+          0.108768
         ],
         "position_xyz_m": [
-          0.031315,
-          0.134943,
+          0.156521,
+          -0.229469,
           0.810532
         ],
         "quaternion_xyzw": [
-          0.0,
           -0.0,
-          -0.644444,
-          0.764651
+          0.0,
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.547044,
-        "x_uniform_min_m": -0.001423,
-        "y_uniform_max_m": 0.427042,
-        "y_uniform_min_m": -0.427044,
+        "x_uniform_max_m": 0.507617,
+        "x_uniform_min_m": -0.018436,
+        "y_uniform_max_m": 0.396467,
+        "y_uniform_min_m": -0.263601,
         "z_fixed_m": 0.810532
       }
     },
@@ -569,74 +639,84 @@
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
         -0.0,
         -0.0,
-        -0.0
+        -1e-06
       ],
       "name": "white_queenside_knight_dynamic",
+      "observed_spawn_yaw_range_rad": [
+        -0.0,
+        0.0
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
           -0.0,
-          0.0,
-          -1.400593
+          -0.0,
+          0.108768
         ],
         "position_xyz_m": [
-          0.02321,
-          0.182137,
+          0.108918,
+          -0.234661,
           0.806934
         ],
         "quaternion_xyzw": [
           -0.0,
           -0.0,
-          -0.644444,
-          0.764651
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.570815,
-        "x_uniform_min_m": -0.025195,
-        "y_uniform_max_m": 0.450814,
-        "y_uniform_min_m": -0.450815,
+        "x_uniform_max_m": 0.51172,
+        "x_uniform_min_m": -0.020796,
+        "y_uniform_max_m": 0.398001,
+        "y_uniform_min_m": -0.296375,
         "z_fixed_m": 0.806934
       }
     },
     {
       "fixed_offset_from_task_boundary_root_xyz_m": [
         -0.167809,
-        -0.165394,
+        -0.165395,
         0.046546
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
+        0.0,
         -0.0,
-        -0.0,
-        -0.0
+        -1e-06
       ],
       "name": "white_queenside_rook_dynamic",
+      "observed_spawn_yaw_range_rad": [
+        -0.0,
+        0.0
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -0.0,
           0.0,
-          -1.400593
+          -0.0,
+          0.108768
         ],
         "position_xyz_m": [
-          0.01619,
-          0.229516,
+          0.061197,
+          -0.238759,
           0.798546
         ],
         "quaternion_xyzw": [
+          0.0,
           -0.0,
-          -0.0,
-          -0.644444,
-          0.764651
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.601237,
-        "x_uniform_min_m": -0.055615,
-        "y_uniform_max_m": 0.481235,
-        "y_uniform_min_m": -0.481236,
+        "x_uniform_max_m": 0.514727,
+        "x_uniform_min_m": -0.022057,
+        "y_uniform_max_m": 0.398436,
+        "y_uniform_min_m": -0.34318,
         "z_fixed_m": 0.798546
       }
     },
@@ -649,34 +729,39 @@
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
         -0.0,
         -0.0,
-        -0.0
+        -1e-06
       ],
       "name": "black_king_dynamic",
+      "observed_spawn_yaw_range_rad": [
+        -0.0,
+        0.0
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
           -0.0,
-          0.0,
-          -1.400593
+          -0.0,
+          0.108768
         ],
         "position_xyz_m": [
-          0.377878,
-          0.097332,
+          0.215338,
+          0.114132,
           0.815519
         ],
         "quaternion_xyzw": [
           -0.0,
-          0.0,
-          -0.644444,
-          0.764651
+          -0.0,
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.535958,
-        "x_uniform_min_m": 0.009662,
-        "y_uniform_max_m": 0.415957,
-        "y_uniform_min_m": -0.415958,
+        "x_uniform_max_m": 0.424343,
+        "x_uniform_min_m": 0.037576,
+        "y_uniform_max_m": 0.289941,
+        "y_uniform_min_m": -0.367003,
         "z_fixed_m": 0.815519
       }
     },
@@ -687,36 +772,41 @@
         0.058532
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
-        -0.0,
         0.0,
-        0.0
+        -0.0,
+        -1e-06
       ],
       "name": "black_kingside_bishop_dynamic",
+      "observed_spawn_yaw_range_rad": [
+        -0.0,
+        0.0
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -0.0,
           0.0,
-          -1.400593
+          -0.0,
+          0.108768
         ],
         "position_xyz_m": [
-          0.385989,
-          0.050141,
+          0.262938,
+          0.11933,
           0.810532
         ],
         "quaternion_xyzw": [
-          -0.0,
           0.0,
-          -0.644444,
-          0.764651
+          -0.0,
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.548869,
-        "x_uniform_min_m": -0.003249,
-        "y_uniform_max_m": 0.428868,
-        "y_uniform_min_m": -0.428869,
+        "x_uniform_max_m": 0.446937,
+        "x_uniform_min_m": 0.033612,
+        "y_uniform_max_m": 0.287876,
+        "y_uniform_min_m": -0.359282,
         "z_fixed_m": 0.810532
       }
     },
@@ -728,75 +818,85 @@
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
         -0.0,
-        0.0,
-        0.0
+        -0.0,
+        -1e-06
       ],
       "name": "black_kingside_rook_dynamic",
+      "observed_spawn_yaw_range_rad": [
+        -0.0,
+        0.0
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          0.0,
-          0.0,
-          -1.400593
+          -0.0,
+          -0.0,
+          0.108768
         ],
         "position_xyz_m": [
-          0.40221,
-          -0.044242,
+          0.358139,
+          0.129726,
           0.798546
         ],
         "quaternion_xyzw": [
           -0.0,
-          0.0,
-          -0.644444,
-          0.764651
+          -0.0,
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.603249,
-        "x_uniform_min_m": -0.057629,
-        "y_uniform_max_m": 0.483249,
-        "y_uniform_min_m": -0.483248,
+        "x_uniform_max_m": 0.499011,
+        "x_uniform_min_m": 0.005686,
+        "y_uniform_max_m": 0.341485,
+        "y_uniform_min_m": -0.34384,
         "z_fixed_m": 0.798546
       }
     },
     {
       "fixed_offset_from_task_boundary_root_xyz_m": [
-        0.119495,
+        0.119496,
         0.168677,
         0.054934
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
         0.0,
         0.0,
-        -0.0
+        -1e-06
       ],
       "name": "black_kingside_knight_dynamic",
+      "observed_spawn_yaw_range_rad": [
+        -0.0,
+        0.0
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
           0.0,
-          -0.0,
-          -1.400593
+          0.0,
+          0.108768
         ],
         "position_xyz_m": [
-          0.394099,
-          0.002949,
+          0.310539,
+          0.124527,
           0.806934
         ],
         "quaternion_xyzw": [
           0.0,
-          -0.0,
-          -0.644444,
-          0.764651
+          0.0,
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.572335,
-        "x_uniform_min_m": -0.026715,
-        "y_uniform_max_m": 0.452335,
-        "y_uniform_min_m": -0.452334,
+        "x_uniform_max_m": 0.472084,
+        "x_uniform_min_m": 0.031064,
+        "y_uniform_max_m": 0.30487,
+        "y_uniform_min_m": -0.35156,
         "z_fixed_m": 0.806934
       }
     },
@@ -804,39 +904,44 @@
       "fixed_offset_from_task_boundary_root_xyz_m": [
         -0.167807,
         0.120794,
-        0.050513
+        0.050514
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
+        0.0,
         -0.0,
-        -0.0,
-        -0.0
+        -1e-06
       ],
       "name": "black_pawn_a_dynamic",
+      "observed_spawn_yaw_range_rad": [
+        -0.0,
+        0.0
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -0.0,
           0.0,
-          -1.400593
+          -0.0,
+          0.108768
         ],
         "position_xyz_m": [
-          0.298243,
-          0.277989,
+          0.030132,
+          0.045739,
           0.802513
         ],
         "quaternion_xyzw": [
-          -0.0,
           0.0,
-          -0.644444,
-          0.764651
+          -0.0,
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.572381,
-        "x_uniform_min_m": -0.026762,
-        "y_uniform_max_m": 0.452381,
-        "y_uniform_min_m": -0.452381,
+        "x_uniform_max_m": 0.442518,
+        "x_uniform_min_m": 0.048295,
+        "y_uniform_max_m": 0.366661,
+        "y_uniform_min_m": -0.35406,
         "z_fixed_m": 0.802513
       }
     },
@@ -844,39 +949,44 @@
       "fixed_offset_from_task_boundary_root_xyz_m": [
         -0.119923,
         0.120794,
-        0.050513
+        0.050514
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
         0.0,
-        0.0,
-        -0.0
+        -0.0,
+        -1e-06
       ],
       "name": "black_pawn_b_dynamic",
+      "observed_spawn_yaw_range_rad": [
+        -0.0,
+        0.0
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
           0.0,
           -0.0,
-          -1.400593
+          0.108768
         ],
         "position_xyz_m": [
-          0.306354,
-          0.230797,
+          0.077733,
+          0.050937,
           0.802513
         ],
         "quaternion_xyzw": [
           0.0,
-          0.0,
-          -0.644444,
-          0.764651
+          -0.0,
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.535834,
-        "x_uniform_min_m": 0.009786,
-        "y_uniform_max_m": 0.415834,
-        "y_uniform_min_m": -0.415833,
+        "x_uniform_max_m": 0.414941,
+        "x_uniform_min_m": 0.057369,
+        "y_uniform_max_m": 0.327065,
+        "y_uniform_min_m": -0.342909,
         "z_fixed_m": 0.802513
       }
     },
@@ -884,39 +994,44 @@
       "fixed_offset_from_task_boundary_root_xyz_m": [
         -0.072806,
         0.120794,
-        0.050513
+        0.050514
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
         0.0,
         -0.0,
-        0.0
+        -1e-06
       ],
       "name": "black_pawn_c_dynamic",
+      "observed_spawn_yaw_range_rad": [
+        -0.0,
+        0.0
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
+          0.0,
           -0.0,
-          -0.0,
-          -1.400593
+          0.108768
         ],
         "position_xyz_m": [
-          0.314335,
-          0.184361,
+          0.124572,
+          0.056052,
           0.802513
         ],
         "quaternion_xyzw": [
+          0.0,
           -0.0,
-          -0.0,
-          -0.644444,
-          0.764651
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.506658,
-        "x_uniform_min_m": 0.038962,
-        "y_uniform_max_m": 0.386658,
-        "y_uniform_min_m": -0.386659,
+        "x_uniform_max_m": 0.387807,
+        "x_uniform_min_m": 0.066298,
+        "y_uniform_max_m": 0.288103,
+        "y_uniform_min_m": -0.335311,
         "z_fixed_m": 0.802513
       }
     },
@@ -924,79 +1039,89 @@
       "fixed_offset_from_task_boundary_root_xyz_m": [
         -0.024155,
         0.120794,
-        0.050513
+        0.050514
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
+        0.0,
         -0.0,
-        -0.0,
-        -0.0
+        -1e-06
       ],
       "name": "black_pawn_d_dynamic",
+      "observed_spawn_yaw_range_rad": [
+        -0.0,
+        0.0
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -0.0,
           0.0,
-          -1.400593
+          -0.0,
+          0.108768
         ],
         "position_xyz_m": [
-          0.322576,
-          0.136413,
+          0.172935,
+          0.061333,
           0.802513
         ],
         "quaternion_xyzw": [
-          -0.0,
           0.0,
-          -0.644444,
-          0.764651
+          -0.0,
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.488806,
-        "x_uniform_min_m": 0.056814,
-        "y_uniform_max_m": 0.368806,
-        "y_uniform_min_m": -0.368805,
+        "x_uniform_max_m": 0.359789,
+        "x_uniform_min_m": 0.075517,
+        "y_uniform_max_m": 0.247874,
+        "y_uniform_min_m": -0.327467,
         "z_fixed_m": 0.802513
       }
     },
     {
       "fixed_offset_from_task_boundary_root_xyz_m": [
-        0.023727,
-        0.120794,
-        0.050513
+        0.023962,
+        0.023951,
+        0.050514
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
         -0.0,
-        0.0,
-        0.0
+        -0.0,
+        -1e-06
       ],
       "name": "black_pawn_e_dynamic",
+      "observed_spawn_yaw_range_rad": [
+        -0.0,
+        0.0
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          0.0,
-          0.0,
-          -1.400593
+          -0.0,
+          -0.0,
+          0.108768
         ],
         "position_xyz_m": [
-          0.330687,
-          0.089223,
+          0.231281,
+          -0.029714,
           0.802513
         ],
         "quaternion_xyzw": [
           -0.0,
-          0.0,
-          -0.644444,
-          0.764651
+          -0.0,
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.488723,
-        "x_uniform_min_m": 0.056898,
-        "y_uniform_max_m": 0.368722,
-        "y_uniform_min_m": -0.368723,
+        "x_uniform_max_m": 0.382125,
+        "x_uniform_min_m": 0.084591,
+        "y_uniform_max_m": 0.242102,
+        "y_uniform_min_m": -0.319746,
         "z_fixed_m": 0.802513
       }
     },
@@ -1004,39 +1129,44 @@
       "fixed_offset_from_task_boundary_root_xyz_m": [
         0.071612,
         0.120794,
-        0.050513
+        0.050514
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
-        0.0,
+        -0.0,
+        -0.0,
+        -1e-06
+      ],
+      "name": "black_pawn_f_dynamic",
+      "observed_spawn_yaw_range_rad": [
         -0.0,
         0.0
       ],
-      "name": "black_pawn_f_dynamic",
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
           -0.0,
           -0.0,
-          -1.400593
+          0.108768
         ],
         "position_xyz_m": [
-          0.338797,
-          0.04203,
+          0.268137,
+          0.071729,
           0.802513
         ],
         "quaternion_xyzw": [
-          0.0,
           -0.0,
-          -0.644444,
-          0.764651
+          -0.0,
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.506046,
-        "x_uniform_min_m": 0.039575,
-        "y_uniform_max_m": 0.386045,
-        "y_uniform_min_m": -0.386046,
+        "x_uniform_max_m": 0.405562,
+        "x_uniform_min_m": 0.079414,
+        "y_uniform_max_m": 0.240037,
+        "y_uniform_min_m": -0.231854,
         "z_fixed_m": 0.802513
       }
     },
@@ -1044,39 +1174,44 @@
       "fixed_offset_from_task_boundary_root_xyz_m": [
         0.119495,
         0.120795,
-        0.050513
+        0.050514
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
         -0.0,
-        -0.0,
-        -0.0
+        0.0,
+        -1e-06
       ],
       "name": "black_pawn_g_dynamic",
+      "observed_spawn_yaw_range_rad": [
+        -0.0,
+        0.0
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
           -0.0,
           0.0,
-          -1.400593
+          0.108768
         ],
         "position_xyz_m": [
-          0.346908,
-          -0.005161,
+          0.315737,
+          0.076928,
           0.802513
         ],
         "quaternion_xyzw": [
           -0.0,
-          -0.0,
-          -0.644444,
-          0.764651
+          0.0,
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.535533,
-        "x_uniform_min_m": 0.010088,
-        "y_uniform_max_m": 0.415532,
-        "y_uniform_min_m": -0.415533,
+        "x_uniform_max_m": 0.432489,
+        "x_uniform_min_m": 0.065451,
+        "y_uniform_max_m": 0.274013,
+        "y_uniform_min_m": -0.304304,
         "z_fixed_m": 0.802513
       }
     },
@@ -1084,39 +1219,44 @@
       "fixed_offset_from_task_boundary_root_xyz_m": [
         0.167379,
         0.120794,
-        0.050513
+        0.050514
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
+        -0.0,
         0.0,
+        -1e-06
+      ],
+      "name": "black_pawn_h_dynamic",
+      "observed_spawn_yaw_range_rad": [
         -0.0,
         0.0
       ],
-      "name": "black_pawn_h_dynamic",
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
           -0.0,
-          -0.0,
-          -1.400593
+          0.0,
+          0.108768
         ],
         "position_xyz_m": [
-          0.355019,
-          -0.052354,
+          0.363338,
+          0.082125,
           0.802513
         ],
         "quaternion_xyzw": [
           -0.0,
-          -0.0,
-          -0.644444,
-          0.764651
+          0.0,
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.572035,
-        "x_uniform_min_m": -0.026413,
-        "y_uniform_max_m": 0.452034,
-        "y_uniform_min_m": -0.452035,
+        "x_uniform_max_m": 0.469803,
+        "x_uniform_min_m": 0.031128,
+        "y_uniform_max_m": 0.310629,
+        "y_uniform_min_m": -0.296582,
         "z_fixed_m": 0.802513
       }
     },
@@ -1129,34 +1269,39 @@
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
         0.0,
         0.0,
-        -0.0
+        -1e-06
       ],
       "name": "black_queen_dynamic",
+      "observed_spawn_yaw_range_rad": [
+        -0.0,
+        0.0
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
           0.0,
-          -0.0,
-          -1.400593
+          0.0,
+          0.108768
         ],
         "position_xyz_m": [
-          0.369767,
-          0.144525,
+          0.167737,
+          0.108934,
           0.813043
         ],
         "quaternion_xyzw": [
           0.0,
-          -0.0,
-          -0.644444,
-          0.764651
+          0.0,
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.536018,
-        "x_uniform_min_m": 0.009602,
-        "y_uniform_max_m": 0.416018,
-        "y_uniform_min_m": -0.416018,
+        "x_uniform_max_m": 0.401749,
+        "x_uniform_min_m": 0.061538,
+        "y_uniform_max_m": 0.292006,
+        "y_uniform_min_m": -0.374723,
         "z_fixed_m": 0.813043
       }
     },
@@ -1167,76 +1312,86 @@
         0.058532
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
+        0.0,
         -0.0,
-        -0.0,
-        -0.0
+        -1e-06
       ],
       "name": "black_queenside_bishop_dynamic",
+      "observed_spawn_yaw_range_rad": [
+        -0.0,
+        0.0
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -0.0,
           0.0,
-          -1.400593
+          -0.0,
+          0.108768
         ],
         "position_xyz_m": [
-          0.361657,
-          0.191716,
+          0.120136,
+          0.103736,
           0.810532
         ],
         "quaternion_xyzw": [
+          0.0,
           -0.0,
-          -0.0,
-          -0.644444,
-          0.764651
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.549036,
-        "x_uniform_min_m": -0.003417,
-        "y_uniform_max_m": 0.429036,
-        "y_uniform_min_m": -0.429037,
+        "x_uniform_max_m": 0.426511,
+        "x_uniform_min_m": 0.019427,
+        "y_uniform_max_m": 0.314396,
+        "y_uniform_min_m": -0.382445,
         "z_fixed_m": 0.810532
       }
     },
     {
       "fixed_offset_from_task_boundary_root_xyz_m": [
-        -0.119702,
-        0.023951,
+        -0.119924,
+        0.168678,
         0.054934
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
         -0.0,
         -0.0,
-        -0.0
+        -1e-06
       ],
       "name": "black_queenside_knight_dynamic",
+      "observed_spawn_yaw_range_rad": [
+        -0.0,
+        0.0
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
           -0.0,
-          0.0,
-          -1.400593
+          -0.0,
+          0.108768
         ],
         "position_xyz_m": [
-          0.210948,
-          0.214176,
+          0.072535,
+          0.098538,
           0.806934
         ],
         "quaternion_xyzw": [
           -0.0,
           -0.0,
-          -0.644444,
-          0.764651
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.487694,
-        "x_uniform_min_m": 0.057925,
-        "y_uniform_max_m": 0.367694,
-        "y_uniform_min_m": -0.367695,
+        "x_uniform_max_m": 0.454088,
+        "x_uniform_min_m": 0.010353,
+        "y_uniform_max_m": 0.353992,
+        "y_uniform_min_m": -0.390166,
         "z_fixed_m": 0.806934
       }
     },
@@ -1248,35 +1403,40 @@
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
         -0.0,
-        -0.0,
-        -0.0
+        0.0,
+        -1e-06
       ],
       "name": "black_queenside_rook_dynamic",
+      "observed_spawn_yaw_range_rad": [
+        -0.0,
+        0.0
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
           -0.0,
-          -0.0,
-          -1.400593
+          0.0,
+          0.108768
         ],
         "position_xyz_m": [
-          0.345435,
-          0.2861,
+          0.024934,
+          0.093339,
           0.798546
         ],
         "quaternion_xyzw": [
           -0.0,
-          -0.0,
-          -0.644444,
-          0.764651
+          0.0,
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.603551,
-        "x_uniform_min_m": -0.057931,
-        "y_uniform_max_m": 0.483551,
-        "y_uniform_min_m": -0.48355,
+        "x_uniform_max_m": 0.481663,
+        "x_uniform_min_m": 0.001279,
+        "y_uniform_max_m": 0.393587,
+        "y_uniform_min_m": -0.397887,
         "z_fixed_m": 0.798546
       }
     }
@@ -1284,40 +1444,40 @@
   "other_scene_objects": [
     {
       "fixed_offset_from_reference_local_xyz_m": [
-        -0.023728,
-        0.118624,
-        -0.041733
+        -0.023962,
+        -0.023951,
+        -0.041734
       ],
       "fixed_offset_from_reference_xyz_m": [
-        0.112891,
-        0.043478,
-        -0.041733
+        -0.02122,
+        -0.026411,
+        -0.041734
       ],
       "fixed_orientation_from_reference_rpy_rad": [
-        -0.0,
         0.0,
-        0.0
+        0.0,
+        1e-06
       ],
       "has_separate_distribution": false,
       "name": "chess_board_base",
-      "reference_graspable_object": "white_pawn_e_dynamic",
+      "reference_graspable_object": "black_pawn_e_dynamic",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
+          -0.0,
           0.0,
-          0.0,
-          -1.400593
+          0.108769
         ],
         "position_xyz_m": [
-          0.207619,
-          0.092147,
+          0.210061,
+          -0.056125,
           0.76078
         ],
         "quaternion_xyzw": [
           0.0,
           0.0,
-          -0.644444,
-          0.764651
+          0.054358,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
@@ -1331,40 +1491,40 @@
     },
     {
       "fixed_offset_from_reference_local_xyz_m": [
-        0.023936,
-        0.119709,
+        -0.024182,
+        -0.022866,
         -0.030903
       ],
       "fixed_offset_from_reference_xyz_m": [
-        0.122034,
-        -0.003314,
+        -0.021557,
+        -0.025356,
         -0.030903
       ],
       "fixed_orientation_from_reference_rpy_rad": [
         -0.0,
         0.0,
-        0.0
+        1e-06
       ],
       "has_separate_distribution": false,
       "name": "chess_board_surface",
-      "reference_graspable_object": "white_pawn_d_dynamic",
+      "reference_graspable_object": "black_pawn_e_dynamic",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
+          -0.0,
           0.0,
-          0.0,
-          -1.400593
+          0.108769
         ],
         "position_xyz_m": [
-          0.208651,
-          0.092547,
+          0.209724,
+          -0.05507,
           0.77161
         ],
         "quaternion_xyzw": [
+          -0.0,
           0.0,
-          0.0,
-          -0.644444,
-          0.764651
+          0.054358,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
@@ -1378,40 +1538,40 @@
     },
     {
       "fixed_offset_from_reference_local_xyz_m": [
-        0.023941,
-        0.119709,
+        -0.024177,
+        -0.022866,
         -0.030898
       ],
       "fixed_offset_from_reference_xyz_m": [
-        0.122035,
-        -0.003319,
+        -0.021552,
+        -0.025355,
         -0.030898
       ],
       "fixed_orientation_from_reference_rpy_rad": [
         -1.570796,
-        -0.0,
+        -1e-06,
         -1.570796
       ],
       "has_separate_distribution": false,
       "name": "white_squares",
-      "reference_graspable_object": "white_pawn_d_dynamic",
+      "reference_graspable_object": "black_pawn_e_dynamic",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -1.570797,
-          1.400593,
-          -1.570797
+          -1.570796,
+          -0.108769,
+          -1.570796
         ],
         "position_xyz_m": [
-          0.208652,
-          0.092542,
+          0.209729,
+          -0.05507,
           0.771616
         ],
         "quaternion_xyzw": [
-          -0.704548,
-          -0.060103,
-          -0.704548,
-          0.060103
+          -0.472082,
+          -0.52644,
+          -0.472082,
+          0.52644
         ],
         "source": "exact_after_one_rlbench_reset"
       },
@@ -1425,40 +1585,40 @@
     },
     {
       "fixed_offset_from_reference_local_xyz_m": [
-        0.023941,
-        0.119709,
-        -0.030895
+        -0.024177,
+        -0.022866,
+        -0.030896
       ],
       "fixed_offset_from_reference_xyz_m": [
-        0.122035,
-        -0.003319,
-        -0.030895
+        -0.021552,
+        -0.025355,
+        -0.030896
       ],
       "fixed_orientation_from_reference_rpy_rad": [
         0.0,
         -1.570796,
-        0.0
+        -0.0
       ],
       "has_separate_distribution": false,
       "name": "black_squares",
-      "reference_graspable_object": "white_pawn_d_dynamic",
+      "reference_graspable_object": "black_pawn_e_dynamic",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -1.570796,
-          -0.170204,
-          -1.570796
+          1.570796,
+          -1.462027,
+          1.570796
         ],
         "position_xyz_m": [
-          0.208652,
-          0.092542,
+          0.209729,
+          -0.05507,
           0.771618
         ],
         "quaternion_xyzw": [
-          -0.455691,
-          -0.54069,
-          -0.455691,
-          0.54069
+          0.038437,
+          -0.706061,
+          0.038437,
+          0.706061
         ],
         "source": "exact_after_one_rlbench_reset"
       },
@@ -1484,36 +1644,44 @@
       "fixed_orientation_from_reference_rpy_rad": [
         -1.5e-05,
         -1.5e-05,
-        -0.0
+        -1e-06
       ],
       "has_separate_distribution": false,
+      "mounted_on_graspable": "white_queenside_knight_dynamic",
       "name": "white_queenside_knight",
       "reference_graspable_object": "white_queenside_knight_dynamic",
+      "rotation_radius_from_graspable_m": 0.0,
+      "spawn_rotation_note": "Mounted on graspable 'white_queenside_knight_dynamic', which RLBench randomly positions and yaw-rotates (+/-pi) each episode; world range is the 'white_queenside_knight_dynamic' observed envelope expanded by the mount radius.",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -1.7e-05,
-          1.2e-05,
-          -1.400593
+          -1.3e-05,
+          -1.6e-05,
+          0.108768
         ],
         "position_xyz_m": [
-          0.02321,
-          0.182137,
+          0.108918,
+          -0.234661,
           0.806934
         ],
         "quaternion_xyzw": [
-          -1e-05,
-          -1e-06,
-          -0.644445,
-          0.764651
+          -7e-06,
+          -8e-06,
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.570815,
-        "x_uniform_min_m": -0.025195,
-        "y_uniform_max_m": 0.450814,
-        "y_uniform_min_m": -0.450815,
+        "kind": "mounted_on_graspable_envelope",
+        "mounted_on_graspable": "white_queenside_knight_dynamic",
+        "n_resets_observed": 30,
+        "rotation_radius_m": 0.0,
+        "source": "observed_white_queenside_knight_dynamic_range_expanded_by_mount_radius_for_full_yaw",
+        "x_uniform_max_m": 0.51172,
+        "x_uniform_min_m": -0.020796,
+        "y_uniform_max_m": 0.398001,
+        "y_uniform_min_m": -0.296375,
         "z_fixed_m": 0.806934
       }
     },
@@ -1531,36 +1699,44 @@
       "fixed_orientation_from_reference_rpy_rad": [
         -1.5e-05,
         -1.5e-05,
-        -0.0
+        -1e-06
       ],
       "has_separate_distribution": false,
+      "mounted_on_graspable": "white_kingside_knight_dynamic",
       "name": "white_kingside_knight",
       "reference_graspable_object": "white_kingside_knight_dynamic",
+      "rotation_radius_from_graspable_m": 0.0,
+      "spawn_rotation_note": "Mounted on graspable 'white_kingside_knight_dynamic', which RLBench randomly positions and yaw-rotates (+/-pi) each episode; world range is the 'white_kingside_knight_dynamic' observed envelope expanded by the mount radius.",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -1.7e-05,
-          1.2e-05,
-          -1.400593
+          -1.3e-05,
+          -1.6e-05,
+          0.108768
         ],
         "position_xyz_m": [
-          0.063757,
-          -0.053825,
+          0.346924,
+          -0.208677,
           0.806934
         ],
         "quaternion_xyzw": [
-          -1e-05,
-          -1e-06,
-          -0.644445,
-          0.764651
+          -7e-06,
+          -8e-06,
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.570568,
-        "x_uniform_min_m": -0.024947,
-        "y_uniform_max_m": 0.450568,
-        "y_uniform_min_m": -0.450568,
+        "kind": "mounted_on_graspable_envelope",
+        "mounted_on_graspable": "white_kingside_knight_dynamic",
+        "n_resets_observed": 30,
+        "rotation_radius_m": 0.0,
+        "source": "observed_white_kingside_knight_dynamic_range_expanded_by_mount_radius_for_full_yaw",
+        "x_uniform_max_m": 0.491178,
+        "x_uniform_min_m": -0.008969,
+        "y_uniform_max_m": 0.390305,
+        "y_uniform_min_m": -0.300516,
         "z_fixed_m": 0.806934
       }
     },
@@ -1581,33 +1757,41 @@
         -0.0
       ],
       "has_separate_distribution": false,
+      "mounted_on_graspable": "white_pawn_a_dynamic",
       "name": "white_pawn_a",
       "reference_graspable_object": "white_pawn_a_dynamic",
+      "rotation_radius_from_graspable_m": 0.0,
+      "spawn_rotation_note": "Mounted on graspable 'white_pawn_a_dynamic', which RLBench randomly positions and yaw-rotates (+/-pi) each episode; world range is the 'white_pawn_a_dynamic' observed envelope expanded by the mount radius.",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
           -0.0,
-          -0.0,
-          -1.400593
+          0.0,
+          0.108768
         ],
         "position_xyz_m": [
-          0.062285,
-          0.237436,
+          0.056123,
+          -0.192264,
           0.802513
         ],
         "quaternion_xyzw": [
           -0.0,
-          -0.0,
-          -0.644444,
-          0.764651
+          0.0,
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.571121,
-        "x_uniform_min_m": -0.025501,
-        "y_uniform_max_m": 0.451121,
-        "y_uniform_min_m": -0.451121,
+        "kind": "mounted_on_graspable_envelope",
+        "mounted_on_graspable": "white_pawn_a_dynamic",
+        "n_resets_observed": 30,
+        "rotation_radius_m": 0.0,
+        "source": "observed_white_pawn_a_dynamic_range_expanded_by_mount_radius_for_full_yaw",
+        "x_uniform_max_m": 0.468129,
+        "x_uniform_min_m": 0.024656,
+        "y_uniform_max_m": 0.361035,
+        "y_uniform_min_m": -0.334315,
         "z_fixed_m": 0.802513
       }
     },
@@ -1628,33 +1812,41 @@
         -0.0
       ],
       "has_separate_distribution": false,
+      "mounted_on_graspable": "white_pawn_b_dynamic",
       "name": "white_pawn_b",
       "reference_graspable_object": "white_pawn_b_dynamic",
+      "rotation_radius_from_graspable_m": 0.0,
+      "spawn_rotation_note": "Mounted on graspable 'white_pawn_b_dynamic', which RLBench randomly positions and yaw-rotates (+/-pi) each episode; world range is the 'white_pawn_b_dynamic' observed envelope expanded by the mount radius.",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
+          0.0,
           -0.0,
-          -0.0,
-          -1.400593
+          0.108768
         ],
         "position_xyz_m": [
-          0.070396,
-          0.190244,
+          0.103723,
+          -0.187066,
           0.802513
         ],
         "quaternion_xyzw": [
+          0.0,
           -0.0,
-          -0.0,
-          -0.644444,
-          0.764651
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.534301,
-        "x_uniform_min_m": 0.011319,
-        "y_uniform_max_m": 0.4143,
-        "y_uniform_min_m": -0.414301,
+        "kind": "mounted_on_graspable_envelope",
+        "mounted_on_graspable": "white_pawn_b_dynamic",
+        "n_resets_observed": 30,
+        "rotation_radius_m": 0.0,
+        "source": "observed_white_pawn_b_dynamic_range_expanded_by_mount_radius_for_full_yaw",
+        "x_uniform_max_m": 0.464019,
+        "x_uniform_min_m": 0.027023,
+        "y_uniform_max_m": 0.350148,
+        "y_uniform_min_m": -0.287299,
         "z_fixed_m": 0.802513
       }
     },
@@ -1675,33 +1867,41 @@
         -0.0
       ],
       "has_separate_distribution": false,
+      "mounted_on_graspable": "white_pawn_c_dynamic",
       "name": "white_pawn_c",
       "reference_graspable_object": "white_pawn_c_dynamic",
+      "rotation_radius_from_graspable_m": 0.0,
+      "spawn_rotation_note": "Mounted on graspable 'white_pawn_c_dynamic', which RLBench randomly positions and yaw-rotates (+/-pi) each episode; world range is the 'white_pawn_c_dynamic' observed envelope expanded by the mount radius.",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
           -0.0,
           0.0,
-          -1.400593
+          0.108768
         ],
         "position_xyz_m": [
-          0.078506,
-          0.143052,
+          0.151324,
+          -0.181868,
           0.802513
         ],
         "quaternion_xyzw": [
           -0.0,
           0.0,
-          -0.644444,
-          0.764651
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.504406,
-        "x_uniform_min_m": 0.041215,
-        "y_uniform_max_m": 0.384405,
-        "y_uniform_min_m": -0.384406,
+        "kind": "mounted_on_graspable_envelope",
+        "mounted_on_graspable": "white_pawn_c_dynamic",
+        "n_resets_observed": 30,
+        "rotation_radius_m": 0.0,
+        "source": "observed_white_pawn_c_dynamic_range_expanded_by_mount_radius_for_full_yaw",
+        "x_uniform_max_m": 0.45991,
+        "x_uniform_min_m": 0.029389,
+        "y_uniform_max_m": 0.348608,
+        "y_uniform_min_m": -0.240283,
         "z_fixed_m": 0.802513
       }
     },
@@ -1722,33 +1922,41 @@
         -0.0
       ],
       "has_separate_distribution": false,
+      "mounted_on_graspable": "white_pawn_d_dynamic",
       "name": "white_pawn_d",
       "reference_graspable_object": "white_pawn_d_dynamic",
+      "rotation_radius_from_graspable_m": 0.0,
+      "spawn_rotation_note": "Mounted on graspable 'white_pawn_d_dynamic', which RLBench randomly positions and yaw-rotates (+/-pi) each episode; world range is the 'white_pawn_d_dynamic' observed envelope expanded by the mount radius.",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
           0.0,
-          -0.0,
-          -1.400593
+          0.0,
+          0.108768
         ],
         "position_xyz_m": [
-          0.086617,
-          0.095861,
+          0.198924,
+          -0.17667,
           0.802513
         ],
         "quaternion_xyzw": [
           0.0,
           -0.0,
-          -0.644444,
-          0.764651
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.486678,
-        "x_uniform_min_m": 0.058942,
-        "y_uniform_max_m": 0.366678,
-        "y_uniform_min_m": -0.366678,
+        "kind": "mounted_on_graspable_envelope",
+        "mounted_on_graspable": "white_pawn_d_dynamic",
+        "n_resets_observed": 30,
+        "rotation_radius_m": 0.0,
+        "source": "observed_white_pawn_d_dynamic_range_expanded_by_mount_radius_for_full_yaw",
+        "x_uniform_max_m": 0.4558,
+        "x_uniform_min_m": 0.031756,
+        "y_uniform_max_m": 0.347068,
+        "y_uniform_min_m": -0.218583,
         "z_fixed_m": 0.802513
       }
     },
@@ -1769,33 +1977,41 @@
         -0.0
       ],
       "has_separate_distribution": false,
+      "mounted_on_graspable": "white_pawn_e_dynamic",
       "name": "white_pawn_e",
       "reference_graspable_object": "white_pawn_e_dynamic",
+      "rotation_radius_from_graspable_m": 0.0,
+      "spawn_rotation_note": "Mounted on graspable 'white_pawn_e_dynamic', which RLBench randomly positions and yaw-rotates (+/-pi) each episode; world range is the 'white_pawn_e_dynamic' observed envelope expanded by the mount radius.",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
           -0.0,
           -0.0,
-          -1.400593
+          0.108768
         ],
         "position_xyz_m": [
-          0.094728,
-          0.048669,
+          0.246525,
+          -0.171472,
           0.802513
         ],
         "quaternion_xyzw": [
           -0.0,
           -0.0,
-          -0.644444,
-          0.764651
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.486594,
-        "x_uniform_min_m": 0.059026,
-        "y_uniform_max_m": 0.366593,
-        "y_uniform_min_m": -0.366594,
+        "kind": "mounted_on_graspable_envelope",
+        "mounted_on_graspable": "white_pawn_e_dynamic",
+        "n_resets_observed": 30,
+        "rotation_radius_m": 0.0,
+        "source": "observed_white_pawn_e_dynamic_range_expanded_by_mount_radius_for_full_yaw",
+        "x_uniform_max_m": 0.451691,
+        "x_uniform_min_m": 0.034123,
+        "y_uniform_max_m": 0.345527,
+        "y_uniform_min_m": -0.224269,
         "z_fixed_m": 0.802513
       }
     },
@@ -1816,33 +2032,41 @@
         -0.0
       ],
       "has_separate_distribution": false,
+      "mounted_on_graspable": "white_pawn_f_dynamic",
       "name": "white_pawn_f",
       "reference_graspable_object": "white_pawn_f_dynamic",
+      "rotation_radius_from_graspable_m": 0.0,
+      "spawn_rotation_note": "Mounted on graspable 'white_pawn_f_dynamic', which RLBench randomly positions and yaw-rotates (+/-pi) each episode; world range is the 'white_pawn_f_dynamic' observed envelope expanded by the mount radius.",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
           0.0,
           0.0,
-          -1.400593
+          0.108768
         ],
         "position_xyz_m": [
-          0.102839,
-          0.001477,
+          0.294126,
+          -0.166274,
           0.802513
         ],
         "quaternion_xyzw": [
           0.0,
           0.0,
-          -0.644444,
-          0.764651
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.504183,
-        "x_uniform_min_m": 0.041438,
-        "y_uniform_max_m": 0.384183,
-        "y_uniform_min_m": -0.384183,
+        "kind": "mounted_on_graspable_envelope",
+        "mounted_on_graspable": "white_pawn_f_dynamic",
+        "n_resets_observed": 30,
+        "rotation_radius_m": 0.0,
+        "source": "observed_white_pawn_f_dynamic_range_expanded_by_mount_radius_for_full_yaw",
+        "x_uniform_max_m": 0.447581,
+        "x_uniform_min_m": 0.03649,
+        "y_uniform_max_m": 0.343986,
+        "y_uniform_min_m": -0.239733,
         "z_fixed_m": 0.802513
       }
     },
@@ -1863,33 +2087,41 @@
         -0.0
       ],
       "has_separate_distribution": false,
+      "mounted_on_graspable": "white_pawn_g_dynamic",
       "name": "white_pawn_g",
       "reference_graspable_object": "white_pawn_g_dynamic",
+      "rotation_radius_from_graspable_m": 0.0,
+      "spawn_rotation_note": "Mounted on graspable 'white_pawn_g_dynamic', which RLBench randomly positions and yaw-rotates (+/-pi) each episode; world range is the 'white_pawn_g_dynamic' observed envelope expanded by the mount radius.",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
           0.0,
           -0.0,
-          -1.400593
+          0.108768
         ],
         "position_xyz_m": [
-          0.110949,
-          -0.045715,
+          0.341727,
+          -0.161077,
           0.802513
         ],
         "quaternion_xyzw": [
           0.0,
           -0.0,
-          -0.644444,
-          0.764651
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.533997,
-        "x_uniform_min_m": 0.011624,
-        "y_uniform_max_m": 0.413997,
-        "y_uniform_min_m": -0.413997,
+        "kind": "mounted_on_graspable_envelope",
+        "mounted_on_graspable": "white_pawn_g_dynamic",
+        "n_resets_observed": 30,
+        "rotation_radius_m": 0.0,
+        "source": "observed_white_pawn_g_dynamic_range_expanded_by_mount_radius_for_full_yaw",
+        "x_uniform_max_m": 0.443472,
+        "x_uniform_min_m": 0.038856,
+        "y_uniform_max_m": 0.342446,
+        "y_uniform_min_m": -0.255199,
         "z_fixed_m": 0.802513
       }
     },
@@ -1910,33 +2142,41 @@
         -0.0
       ],
       "has_separate_distribution": false,
+      "mounted_on_graspable": "white_pawn_h_dynamic",
       "name": "white_pawn_h",
       "reference_graspable_object": "white_pawn_h_dynamic",
+      "rotation_radius_from_graspable_m": 0.0,
+      "spawn_rotation_note": "Mounted on graspable 'white_pawn_h_dynamic', which RLBench randomly positions and yaw-rotates (+/-pi) each episode; world range is the 'white_pawn_h_dynamic' observed envelope expanded by the mount radius.",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          0.0,
           -0.0,
-          -1.400593
+          0.0,
+          0.108768
         ],
         "position_xyz_m": [
-          0.11906,
-          -0.092906,
+          0.389327,
+          -0.155878,
           0.802513
         ],
         "quaternion_xyzw": [
+          -0.0,
           0.0,
-          0.0,
-          -0.644444,
-          0.764651
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.570771,
-        "x_uniform_min_m": -0.02515,
-        "y_uniform_max_m": 0.450771,
-        "y_uniform_min_m": -0.450771,
+        "kind": "mounted_on_graspable_envelope",
+        "mounted_on_graspable": "white_pawn_h_dynamic",
+        "n_resets_observed": 30,
+        "rotation_radius_m": 0.0,
+        "source": "observed_white_pawn_h_dynamic_range_expanded_by_mount_radius_for_full_yaw",
+        "x_uniform_max_m": 0.449388,
+        "x_uniform_min_m": -0.005736,
+        "y_uniform_max_m": 0.340905,
+        "y_uniform_min_m": -0.270663,
         "z_fixed_m": 0.802513
       }
     },
@@ -1953,37 +2193,45 @@
       ],
       "fixed_orientation_from_reference_rpy_rad": [
         -0.0,
-        -0.0,
+        0.0,
         0.0
       ],
       "has_separate_distribution": false,
+      "mounted_on_graspable": "white_queenside_rook_dynamic",
       "name": "white_queenside_rook",
       "reference_graspable_object": "white_queenside_rook_dynamic",
+      "rotation_radius_from_graspable_m": 0.0,
+      "spawn_rotation_note": "Mounted on graspable 'white_queenside_rook_dynamic', which RLBench randomly positions and yaw-rotates (+/-pi) each episode; world range is the 'white_queenside_rook_dynamic' observed envelope expanded by the mount radius.",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -0.0,
           0.0,
-          -1.400593
+          -0.0,
+          0.108768
         ],
         "position_xyz_m": [
-          0.01619,
-          0.229516,
+          0.061197,
+          -0.238759,
           0.798546
         ],
         "quaternion_xyzw": [
+          0.0,
           -0.0,
-          -0.0,
-          -0.644444,
-          0.764651
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.601237,
-        "x_uniform_min_m": -0.055615,
-        "y_uniform_max_m": 0.481235,
-        "y_uniform_min_m": -0.481236,
+        "kind": "mounted_on_graspable_envelope",
+        "mounted_on_graspable": "white_queenside_rook_dynamic",
+        "n_resets_observed": 30,
+        "rotation_radius_m": 0.0,
+        "source": "observed_white_queenside_rook_dynamic_range_expanded_by_mount_radius_for_full_yaw",
+        "x_uniform_max_m": 0.514727,
+        "x_uniform_min_m": -0.022057,
+        "y_uniform_max_m": 0.398436,
+        "y_uniform_min_m": -0.34318,
         "z_fixed_m": 0.798546
       }
     },
@@ -2000,37 +2248,45 @@
       ],
       "fixed_orientation_from_reference_rpy_rad": [
         -0.0,
-        0.0,
-        -0.0
+        -0.0,
+        0.0
       ],
       "has_separate_distribution": false,
+      "mounted_on_graspable": "white_kingside_rook_dynamic",
       "name": "white_kingside_rook",
       "reference_graspable_object": "white_kingside_rook_dynamic",
+      "rotation_radius_from_graspable_m": 0.0,
+      "spawn_rotation_note": "Mounted on graspable 'white_kingside_rook_dynamic', which RLBench randomly positions and yaw-rotates (+/-pi) each episode; world range is the 'white_kingside_rook_dynamic' observed envelope expanded by the mount radius.",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -0.0,
-          -0.0,
-          -1.400593
+          0.0,
+          0.0,
+          0.108768
         ],
         "position_xyz_m": [
-          0.07188,
-          -0.101017,
+          0.394526,
+          -0.203467,
           0.798546
         ],
         "quaternion_xyzw": [
+          0.0,
           -0.0,
-          -0.0,
-          -0.644444,
-          0.764651
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.601707,
-        "x_uniform_min_m": -0.056085,
-        "y_uniform_max_m": 0.481707,
-        "y_uniform_min_m": -0.481707,
+        "kind": "mounted_on_graspable_envelope",
+        "mounted_on_graspable": "white_kingside_rook_dynamic",
+        "n_resets_observed": 30,
+        "rotation_radius_m": 0.0,
+        "source": "observed_white_kingside_rook_dynamic_range_expanded_by_mount_radius_for_full_yaw",
+        "x_uniform_max_m": 0.491616,
+        "x_uniform_min_m": -0.016924,
+        "y_uniform_max_m": 0.388753,
+        "y_uniform_min_m": -0.315971,
         "z_fixed_m": 0.798546
       }
     },
@@ -2047,37 +2303,45 @@
       ],
       "fixed_orientation_from_reference_rpy_rad": [
         -0.0,
-        -0.0,
-        0.0
+        0.0,
+        -0.0
       ],
       "has_separate_distribution": false,
+      "mounted_on_graspable": "white_queenside_bishop_dynamic",
       "name": "white_queenside_bishop",
       "reference_graspable_object": "white_queenside_bishop_dynamic",
+      "rotation_radius_from_graspable_m": 0.0,
+      "spawn_rotation_note": "Mounted on graspable 'white_queenside_bishop_dynamic', which RLBench randomly positions and yaw-rotates (+/-pi) each episode; world range is the 'white_queenside_bishop_dynamic' observed envelope expanded by the mount radius.",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
           -0.0,
-          -0.0,
-          -1.400593
+          0.0,
+          0.108768
         ],
         "position_xyz_m": [
-          0.031315,
-          0.134943,
+          0.156521,
+          -0.229469,
           0.810532
         ],
         "quaternion_xyzw": [
-          0.0,
           -0.0,
-          -0.644444,
-          0.764651
+          0.0,
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.547044,
-        "x_uniform_min_m": -0.001423,
-        "y_uniform_max_m": 0.427042,
-        "y_uniform_min_m": -0.427044,
+        "kind": "mounted_on_graspable_envelope",
+        "mounted_on_graspable": "white_queenside_bishop_dynamic",
+        "n_resets_observed": 30,
+        "rotation_radius_m": 0.0,
+        "source": "observed_white_queenside_bishop_dynamic_range_expanded_by_mount_radius_for_full_yaw",
+        "x_uniform_max_m": 0.507617,
+        "x_uniform_min_m": -0.018436,
+        "y_uniform_max_m": 0.396467,
+        "y_uniform_min_m": -0.263601,
         "z_fixed_m": 0.810532
       }
     },
@@ -2098,33 +2362,41 @@
         -0.0
       ],
       "has_separate_distribution": false,
+      "mounted_on_graspable": "white_kingside_bishop_dynamic",
       "name": "white_kingside_bishop",
       "reference_graspable_object": "white_kingside_bishop_dynamic",
+      "rotation_radius_from_graspable_m": 0.0,
+      "spawn_rotation_note": "Mounted on graspable 'white_kingside_bishop_dynamic', which RLBench randomly positions and yaw-rotates (+/-pi) each episode; world range is the 'white_kingside_bishop_dynamic' observed envelope expanded by the mount radius.",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -0.0,
-          -0.0,
-          -1.400593
+          0.0,
+          0.0,
+          0.108768
         ],
         "position_xyz_m": [
-          0.055647,
-          -0.006634,
+          0.299324,
+          -0.213875,
           0.810532
         ],
         "quaternion_xyzw": [
           0.0,
-          -0.0,
-          -0.644444,
-          0.764651
+          0.0,
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.546874,
-        "x_uniform_min_m": -0.001254,
-        "y_uniform_max_m": 0.426873,
-        "y_uniform_min_m": -0.426874,
+        "kind": "mounted_on_graspable_envelope",
+        "mounted_on_graspable": "white_kingside_bishop_dynamic",
+        "n_resets_observed": 30,
+        "rotation_radius_m": 0.0,
+        "source": "observed_white_kingside_bishop_dynamic_range_expanded_by_mount_radius_for_full_yaw",
+        "x_uniform_max_m": 0.495288,
+        "x_uniform_min_m": -0.011336,
+        "y_uniform_max_m": 0.391845,
+        "y_uniform_min_m": -0.271954,
         "z_fixed_m": 0.810532
       }
     },
@@ -2141,37 +2413,45 @@
       ],
       "fixed_orientation_from_reference_rpy_rad": [
         -0.0,
-        -0.0,
-        0.0
+        0.0,
+        -0.0
       ],
       "has_separate_distribution": false,
+      "mounted_on_graspable": "white_queen_dynamic",
       "name": "white_queen",
       "reference_graspable_object": "white_queen_dynamic",
+      "rotation_radius_from_graspable_m": 0.0,
+      "spawn_rotation_note": "Mounted on graspable 'white_queen_dynamic', which RLBench randomly positions and yaw-rotates (+/-pi) each episode; world range is the 'white_queen_dynamic' observed envelope expanded by the mount radius.",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -0.0,
           0.0,
-          -1.400593
+          0.0,
+          0.108768
         ],
         "position_xyz_m": [
-          0.039437,
-          0.087802,
+          0.204071,
+          -0.224256,
           0.813043
         ],
         "quaternion_xyzw": [
-          -0.0,
           0.0,
-          -0.644444,
-          0.764651
+          0.0,
+          0.054357,
+          0.998522
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.533858,
-        "x_uniform_min_m": 0.011762,
-        "y_uniform_max_m": 0.413857,
-        "y_uniform_min_m": -0.413858,
+        "kind": "mounted_on_graspable_envelope",
+        "mounted_on_graspable": "white_queen_dynamic",
+        "n_resets_observed": 30,
+        "rotation_radius_m": 0.0,
+        "source": "observed_white_queen_dynamic_range_expanded_by_mount_radius_for_full_yaw",
+        "x_uniform_max_m": 0.503491,
+        "x_uniform_min_m": -0.016051,
+        "y_uniform_max_m": 0.394908,
+        "y_uniform_min_m": -0.266362,
         "z_fixed_m": 0.813043
       }
     },
@@ -2192,33 +2472,41 @@
         1.570797
       ],
       "has_separate_distribution": false,
+      "mounted_on_graspable": "white_king_dynamic",
       "name": "white_king",
       "reference_graspable_object": "white_king_dynamic",
+      "rotation_radius_from_graspable_m": 0.0,
+      "spawn_rotation_note": "Mounted on graspable 'white_king_dynamic', which RLBench randomly positions and yaw-rotates (+/-pi) each episode; world range is the 'white_king_dynamic' observed envelope expanded by the mount radius.",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -3.141357,
-          -0.000253,
-          2.971389
+          3.141354,
+          -0.000251,
+          1.462028
         ],
         "position_xyz_m": [
-          0.048616,
-          0.040737,
+          0.251611,
+          -0.217984,
           0.815519
         ],
         "quaternion_xyzw": [
-          0.084999,
-          -0.996381,
-          -0.000128,
-          0.000116
+          0.744498,
+          -0.667625,
+          -1.4e-05,
+          0.000172
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.532727,
-        "x_uniform_min_m": 0.012894,
-        "y_uniform_max_m": 0.412727,
-        "y_uniform_min_m": -0.412727,
+        "kind": "mounted_on_graspable_envelope",
+        "mounted_on_graspable": "white_king_dynamic",
+        "n_resets_observed": 30,
+        "rotation_radius_m": 0.0,
+        "source": "observed_white_king_dynamic_range_expanded_by_mount_radius_for_full_yaw",
+        "x_uniform_max_m": 0.498306,
+        "x_uniform_min_m": -0.012609,
+        "y_uniform_max_m": 0.260438,
+        "y_uniform_min_m": -0.268553,
         "z_fixed_m": 0.815519
       }
     },
@@ -2239,33 +2527,41 @@
         -3.141592
       ],
       "has_separate_distribution": false,
+      "mounted_on_graspable": "black_queenside_knight_dynamic",
       "name": "black_queenside_knight",
       "reference_graspable_object": "black_queenside_knight_dynamic",
+      "rotation_radius_from_graspable_m": 0.0,
+      "spawn_rotation_note": "Mounted on graspable 'black_queenside_knight_dynamic', which RLBench randomly positions and yaw-rotates (+/-pi) each episode; world range is the 'black_queenside_knight_dynamic' observed envelope expanded by the mount radius.",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          0.000363,
-          6.2e-05,
-          1.741
+          -4e-05,
+          0.000367,
+          -3.032824
         ],
         "position_xyz_m": [
-          0.210948,
-          0.214176,
+          0.072535,
+          0.098538,
           0.806934
         ],
         "quaternion_xyzw": [
-          0.000141,
-          -0.000119,
-          0.764651,
-          0.644444
+          0.000184,
+          1e-05,
+          0.998522,
+          -0.054358
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.487694,
-        "x_uniform_min_m": 0.057925,
-        "y_uniform_max_m": 0.367694,
-        "y_uniform_min_m": -0.367695,
+        "kind": "mounted_on_graspable_envelope",
+        "mounted_on_graspable": "black_queenside_knight_dynamic",
+        "n_resets_observed": 30,
+        "rotation_radius_m": 0.0,
+        "source": "observed_black_queenside_knight_dynamic_range_expanded_by_mount_radius_for_full_yaw",
+        "x_uniform_max_m": 0.454088,
+        "x_uniform_min_m": 0.010353,
+        "y_uniform_max_m": 0.353992,
+        "y_uniform_min_m": -0.390166,
         "z_fixed_m": 0.806934
       }
     },
@@ -2286,33 +2582,41 @@
         -3.141593
       ],
       "has_separate_distribution": false,
+      "mounted_on_graspable": "black_kingside_knight_dynamic",
       "name": "black_kingside_knight",
       "reference_graspable_object": "black_kingside_knight_dynamic",
+      "rotation_radius_from_graspable_m": 0.0,
+      "spawn_rotation_note": "Mounted on graspable 'black_kingside_knight_dynamic', which RLBench randomly positions and yaw-rotates (+/-pi) each episode; world range is the 'black_kingside_knight_dynamic' observed envelope expanded by the mount radius.",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          0.000366,
-          6.3e-05,
-          1.741
+          -4e-05,
+          0.00037,
+          -3.032824
         ],
         "position_xyz_m": [
-          0.394099,
-          0.002949,
+          0.310539,
+          0.124527,
           0.806934
         ],
         "quaternion_xyzw": [
-          0.000142,
-          -0.00012,
-          0.764651,
-          0.644444
+          0.000186,
+          1e-05,
+          0.998522,
+          -0.054357
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.572335,
-        "x_uniform_min_m": -0.026715,
-        "y_uniform_max_m": 0.452335,
-        "y_uniform_min_m": -0.452334,
+        "kind": "mounted_on_graspable_envelope",
+        "mounted_on_graspable": "black_kingside_knight_dynamic",
+        "n_resets_observed": 30,
+        "rotation_radius_m": 0.0,
+        "source": "observed_black_kingside_knight_dynamic_range_expanded_by_mount_radius_for_full_yaw",
+        "x_uniform_max_m": 0.472084,
+        "x_uniform_min_m": 0.031064,
+        "y_uniform_max_m": 0.30487,
+        "y_uniform_min_m": -0.35156,
         "z_fixed_m": 0.806934
       }
     },
@@ -2333,33 +2637,41 @@
         1.570796
       ],
       "has_separate_distribution": false,
+      "mounted_on_graspable": "black_pawn_f_dynamic",
       "name": "black_pawn_f",
       "reference_graspable_object": "black_pawn_f_dynamic",
+      "rotation_radius_from_graspable_m": 0.0,
+      "spawn_rotation_note": "Mounted on graspable 'black_pawn_f_dynamic', which RLBench randomly positions and yaw-rotates (+/-pi) each episode; world range is the 'black_pawn_f_dynamic' observed envelope expanded by the mount radius.",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          8.5e-05,
-          -0.000336,
-          0.170204
+          0.00034,
+          6.4e-05,
+          1.679565
         ],
         "position_xyz_m": [
-          0.338797,
-          0.04203,
+          0.268137,
+          0.071729,
           0.802513
         ],
         "quaternion_xyzw": [
-          2.8e-05,
-          -0.000171,
-          0.084999,
-          0.996381
+          0.000137,
+          -0.000105,
+          0.744498,
+          0.667625
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.506046,
-        "x_uniform_min_m": 0.039575,
-        "y_uniform_max_m": 0.386045,
-        "y_uniform_min_m": -0.386046,
+        "kind": "mounted_on_graspable_envelope",
+        "mounted_on_graspable": "black_pawn_f_dynamic",
+        "n_resets_observed": 30,
+        "rotation_radius_m": 0.0,
+        "source": "observed_black_pawn_f_dynamic_range_expanded_by_mount_radius_for_full_yaw",
+        "x_uniform_max_m": 0.405562,
+        "x_uniform_min_m": 0.079414,
+        "y_uniform_max_m": 0.240037,
+        "y_uniform_min_m": -0.231854,
         "z_fixed_m": 0.802513
       }
     },
@@ -2380,33 +2692,41 @@
         -3.141592
       ],
       "has_separate_distribution": false,
+      "mounted_on_graspable": "black_pawn_a_dynamic",
       "name": "black_pawn_a",
       "reference_graspable_object": "black_pawn_a_dynamic",
+      "rotation_radius_from_graspable_m": 0.0,
+      "spawn_rotation_note": "Mounted on graspable 'black_pawn_a_dynamic', which RLBench randomly positions and yaw-rotates (+/-pi) each episode; world range is the 'black_pawn_a_dynamic' observed envelope expanded by the mount radius.",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          0.000366,
-          6.3e-05,
-          1.741
+          -4e-05,
+          0.000369,
+          -3.032824
         ],
         "position_xyz_m": [
-          0.298243,
-          0.277989,
+          0.030132,
+          0.045739,
           0.802513
         ],
         "quaternion_xyzw": [
-          0.000142,
-          -0.00012,
-          0.764651,
-          0.644444
+          0.000185,
+          1e-05,
+          0.998522,
+          -0.054358
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.572381,
-        "x_uniform_min_m": -0.026762,
-        "y_uniform_max_m": 0.452381,
-        "y_uniform_min_m": -0.452381,
+        "kind": "mounted_on_graspable_envelope",
+        "mounted_on_graspable": "black_pawn_a_dynamic",
+        "n_resets_observed": 30,
+        "rotation_radius_m": 0.0,
+        "source": "observed_black_pawn_a_dynamic_range_expanded_by_mount_radius_for_full_yaw",
+        "x_uniform_max_m": 0.442518,
+        "x_uniform_min_m": 0.048295,
+        "y_uniform_max_m": 0.366661,
+        "y_uniform_min_m": -0.35406,
         "z_fixed_m": 0.802513
       }
     },
@@ -2427,33 +2747,41 @@
         1.570796
       ],
       "has_separate_distribution": false,
+      "mounted_on_graspable": "black_pawn_b_dynamic",
       "name": "black_pawn_b",
       "reference_graspable_object": "black_pawn_b_dynamic",
+      "rotation_radius_from_graspable_m": 0.0,
+      "spawn_rotation_note": "Mounted on graspable 'black_pawn_b_dynamic', which RLBench randomly positions and yaw-rotates (+/-pi) each episode; world range is the 'black_pawn_b_dynamic' observed envelope expanded by the mount radius.",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          8.5e-05,
-          -0.000336,
-          0.170204
+          0.00034,
+          6.4e-05,
+          1.679565
         ],
         "position_xyz_m": [
-          0.306354,
-          0.230797,
+          0.077733,
+          0.050937,
           0.802513
         ],
         "quaternion_xyzw": [
-          2.8e-05,
-          -0.000171,
-          0.084999,
-          0.996381
+          0.000137,
+          -0.000105,
+          0.744498,
+          0.667625
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.535834,
-        "x_uniform_min_m": 0.009786,
-        "y_uniform_max_m": 0.415834,
-        "y_uniform_min_m": -0.415833,
+        "kind": "mounted_on_graspable_envelope",
+        "mounted_on_graspable": "black_pawn_b_dynamic",
+        "n_resets_observed": 30,
+        "rotation_radius_m": 0.0,
+        "source": "observed_black_pawn_b_dynamic_range_expanded_by_mount_radius_for_full_yaw",
+        "x_uniform_max_m": 0.414941,
+        "x_uniform_min_m": 0.057369,
+        "y_uniform_max_m": 0.327065,
+        "y_uniform_min_m": -0.342909,
         "z_fixed_m": 0.802513
       }
     },
@@ -2474,33 +2802,41 @@
         -3.141592
       ],
       "has_separate_distribution": false,
+      "mounted_on_graspable": "black_pawn_c_dynamic",
       "name": "black_pawn_c",
       "reference_graspable_object": "black_pawn_c_dynamic",
+      "rotation_radius_from_graspable_m": 0.0,
+      "spawn_rotation_note": "Mounted on graspable 'black_pawn_c_dynamic', which RLBench randomly positions and yaw-rotates (+/-pi) each episode; world range is the 'black_pawn_c_dynamic' observed envelope expanded by the mount radius.",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          0.000366,
-          6.3e-05,
-          1.741
+          -4e-05,
+          0.000369,
+          -3.032824
         ],
         "position_xyz_m": [
-          0.314335,
-          0.184361,
+          0.124572,
+          0.056052,
           0.802513
         ],
         "quaternion_xyzw": [
-          0.000142,
-          -0.00012,
-          0.764651,
-          0.644444
+          0.000185,
+          1e-05,
+          0.998522,
+          -0.054358
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.506658,
-        "x_uniform_min_m": 0.038962,
-        "y_uniform_max_m": 0.386658,
-        "y_uniform_min_m": -0.386659,
+        "kind": "mounted_on_graspable_envelope",
+        "mounted_on_graspable": "black_pawn_c_dynamic",
+        "n_resets_observed": 30,
+        "rotation_radius_m": 0.0,
+        "source": "observed_black_pawn_c_dynamic_range_expanded_by_mount_radius_for_full_yaw",
+        "x_uniform_max_m": 0.387807,
+        "x_uniform_min_m": 0.066298,
+        "y_uniform_max_m": 0.288103,
+        "y_uniform_min_m": -0.335311,
         "z_fixed_m": 0.802513
       }
     },
@@ -2521,33 +2857,41 @@
         1.570796
       ],
       "has_separate_distribution": false,
+      "mounted_on_graspable": "black_pawn_d_dynamic",
       "name": "black_pawn_d",
       "reference_graspable_object": "black_pawn_d_dynamic",
+      "rotation_radius_from_graspable_m": 0.0,
+      "spawn_rotation_note": "Mounted on graspable 'black_pawn_d_dynamic', which RLBench randomly positions and yaw-rotates (+/-pi) each episode; world range is the 'black_pawn_d_dynamic' observed envelope expanded by the mount radius.",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          8.5e-05,
-          -0.000336,
-          0.170204
+          0.00034,
+          6.4e-05,
+          1.679565
         ],
         "position_xyz_m": [
-          0.322576,
-          0.136413,
+          0.172935,
+          0.061333,
           0.802513
         ],
         "quaternion_xyzw": [
-          2.8e-05,
-          -0.000171,
-          0.084999,
-          0.996381
+          0.000137,
+          -0.000105,
+          0.744498,
+          0.667625
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.488806,
-        "x_uniform_min_m": 0.056814,
-        "y_uniform_max_m": 0.368806,
-        "y_uniform_min_m": -0.368805,
+        "kind": "mounted_on_graspable_envelope",
+        "mounted_on_graspable": "black_pawn_d_dynamic",
+        "n_resets_observed": 30,
+        "rotation_radius_m": 0.0,
+        "source": "observed_black_pawn_d_dynamic_range_expanded_by_mount_radius_for_full_yaw",
+        "x_uniform_max_m": 0.359789,
+        "x_uniform_min_m": 0.075517,
+        "y_uniform_max_m": 0.247874,
+        "y_uniform_min_m": -0.327467,
         "z_fixed_m": 0.802513
       }
     },
@@ -2568,33 +2912,41 @@
         1.570797
       ],
       "has_separate_distribution": false,
+      "mounted_on_graspable": "black_pawn_e_dynamic",
       "name": "black_pawn_e",
       "reference_graspable_object": "black_pawn_e_dynamic",
+      "rotation_radius_from_graspable_m": 0.0,
+      "spawn_rotation_note": "Mounted on graspable 'black_pawn_e_dynamic', which RLBench randomly positions and yaw-rotates (+/-pi) each episode; world range is the 'black_pawn_e_dynamic' observed envelope expanded by the mount radius.",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          8.4e-05,
-          -0.000336,
-          0.170204
+          0.00034,
+          6.4e-05,
+          1.679565
         ],
         "position_xyz_m": [
-          0.330687,
-          0.089223,
+          0.231281,
+          -0.029714,
           0.802513
         ],
         "quaternion_xyzw": [
-          2.8e-05,
-          -0.000171,
-          0.084999,
-          0.996381
+          0.000137,
+          -0.000105,
+          0.744498,
+          0.667625
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.488723,
-        "x_uniform_min_m": 0.056898,
-        "y_uniform_max_m": 0.368722,
-        "y_uniform_min_m": -0.368723,
+        "kind": "mounted_on_graspable_envelope",
+        "mounted_on_graspable": "black_pawn_e_dynamic",
+        "n_resets_observed": 30,
+        "rotation_radius_m": 0.0,
+        "source": "observed_black_pawn_e_dynamic_range_expanded_by_mount_radius_for_full_yaw",
+        "x_uniform_max_m": 0.382125,
+        "x_uniform_min_m": 0.084591,
+        "y_uniform_max_m": 0.242102,
+        "y_uniform_min_m": -0.319746,
         "z_fixed_m": 0.802513
       }
     },
@@ -2615,33 +2967,41 @@
         1.570797
       ],
       "has_separate_distribution": false,
+      "mounted_on_graspable": "black_pawn_g_dynamic",
       "name": "black_pawn_g",
       "reference_graspable_object": "black_pawn_g_dynamic",
+      "rotation_radius_from_graspable_m": 0.0,
+      "spawn_rotation_note": "Mounted on graspable 'black_pawn_g_dynamic', which RLBench randomly positions and yaw-rotates (+/-pi) each episode; world range is the 'black_pawn_g_dynamic' observed envelope expanded by the mount radius.",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          8.4e-05,
-          -0.000336,
-          0.170204
+          0.00034,
+          6.4e-05,
+          1.679565
         ],
         "position_xyz_m": [
-          0.346908,
-          -0.005161,
+          0.315737,
+          0.076928,
           0.802513
         ],
         "quaternion_xyzw": [
-          2.8e-05,
-          -0.000171,
-          0.084999,
-          0.996381
+          0.000137,
+          -0.000105,
+          0.744498,
+          0.667625
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.535533,
-        "x_uniform_min_m": 0.010088,
-        "y_uniform_max_m": 0.415532,
-        "y_uniform_min_m": -0.415533,
+        "kind": "mounted_on_graspable_envelope",
+        "mounted_on_graspable": "black_pawn_g_dynamic",
+        "n_resets_observed": 30,
+        "rotation_radius_m": 0.0,
+        "source": "observed_black_pawn_g_dynamic_range_expanded_by_mount_radius_for_full_yaw",
+        "x_uniform_max_m": 0.432489,
+        "x_uniform_min_m": 0.065451,
+        "y_uniform_max_m": 0.274013,
+        "y_uniform_min_m": -0.304304,
         "z_fixed_m": 0.802513
       }
     },
@@ -2662,33 +3022,41 @@
         1.570796
       ],
       "has_separate_distribution": false,
+      "mounted_on_graspable": "black_pawn_h_dynamic",
       "name": "black_pawn_h",
       "reference_graspable_object": "black_pawn_h_dynamic",
+      "rotation_radius_from_graspable_m": 0.0,
+      "spawn_rotation_note": "Mounted on graspable 'black_pawn_h_dynamic', which RLBench randomly positions and yaw-rotates (+/-pi) each episode; world range is the 'black_pawn_h_dynamic' observed envelope expanded by the mount radius.",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          8.5e-05,
-          -0.000336,
-          0.170204
+          0.00034,
+          6.4e-05,
+          1.679565
         ],
         "position_xyz_m": [
-          0.355019,
-          -0.052354,
+          0.363338,
+          0.082125,
           0.802513
         ],
         "quaternion_xyzw": [
-          2.8e-05,
-          -0.000171,
-          0.084999,
-          0.996381
+          0.000137,
+          -0.000105,
+          0.744498,
+          0.667625
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.572035,
-        "x_uniform_min_m": -0.026413,
-        "y_uniform_max_m": 0.452034,
-        "y_uniform_min_m": -0.452035,
+        "kind": "mounted_on_graspable_envelope",
+        "mounted_on_graspable": "black_pawn_h_dynamic",
+        "n_resets_observed": 30,
+        "rotation_radius_m": 0.0,
+        "source": "observed_black_pawn_h_dynamic_range_expanded_by_mount_radius_for_full_yaw",
+        "x_uniform_max_m": 0.469803,
+        "x_uniform_min_m": 0.031128,
+        "y_uniform_max_m": 0.310629,
+        "y_uniform_min_m": -0.296582,
         "z_fixed_m": 0.802513
       }
     },
@@ -2709,33 +3077,41 @@
         -3.141593
       ],
       "has_separate_distribution": false,
+      "mounted_on_graspable": "black_queenside_rook_dynamic",
       "name": "black_queenside_rook",
       "reference_graspable_object": "black_queenside_rook_dynamic",
+      "rotation_radius_from_graspable_m": 0.0,
+      "spawn_rotation_note": "Mounted on graspable 'black_queenside_rook_dynamic', which RLBench randomly positions and yaw-rotates (+/-pi) each episode; world range is the 'black_queenside_rook_dynamic' observed envelope expanded by the mount radius.",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          0.000366,
-          6.3e-05,
-          1.741
+          -4e-05,
+          0.000369,
+          -3.032824
         ],
         "position_xyz_m": [
-          0.345435,
-          0.2861,
+          0.024934,
+          0.093339,
           0.798546
         ],
         "quaternion_xyzw": [
-          0.000142,
-          -0.00012,
-          0.764651,
-          0.644444
+          0.000185,
+          1e-05,
+          0.998522,
+          -0.054357
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.603551,
-        "x_uniform_min_m": -0.057931,
-        "y_uniform_max_m": 0.483551,
-        "y_uniform_min_m": -0.48355,
+        "kind": "mounted_on_graspable_envelope",
+        "mounted_on_graspable": "black_queenside_rook_dynamic",
+        "n_resets_observed": 30,
+        "rotation_radius_m": 0.0,
+        "source": "observed_black_queenside_rook_dynamic_range_expanded_by_mount_radius_for_full_yaw",
+        "x_uniform_max_m": 0.481663,
+        "x_uniform_min_m": 0.001279,
+        "y_uniform_max_m": 0.393587,
+        "y_uniform_min_m": -0.397887,
         "z_fixed_m": 0.798546
       }
     },
@@ -2756,33 +3132,41 @@
         -3.141592
       ],
       "has_separate_distribution": false,
+      "mounted_on_graspable": "black_kingside_rook_dynamic",
       "name": "black_kingside_rook",
       "reference_graspable_object": "black_kingside_rook_dynamic",
+      "rotation_radius_from_graspable_m": 0.0,
+      "spawn_rotation_note": "Mounted on graspable 'black_kingside_rook_dynamic', which RLBench randomly positions and yaw-rotates (+/-pi) each episode; world range is the 'black_kingside_rook_dynamic' observed envelope expanded by the mount radius.",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          0.000366,
-          6.3e-05,
-          1.741
+          -4e-05,
+          0.000369,
+          -3.032824
         ],
         "position_xyz_m": [
-          0.40221,
-          -0.044242,
+          0.358139,
+          0.129726,
           0.798546
         ],
         "quaternion_xyzw": [
-          0.000142,
-          -0.00012,
-          0.764651,
-          0.644444
+          0.000185,
+          1e-05,
+          0.998522,
+          -0.054358
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.603249,
-        "x_uniform_min_m": -0.057629,
-        "y_uniform_max_m": 0.483249,
-        "y_uniform_min_m": -0.483248,
+        "kind": "mounted_on_graspable_envelope",
+        "mounted_on_graspable": "black_kingside_rook_dynamic",
+        "n_resets_observed": 30,
+        "rotation_radius_m": 0.0,
+        "source": "observed_black_kingside_rook_dynamic_range_expanded_by_mount_radius_for_full_yaw",
+        "x_uniform_max_m": 0.499011,
+        "x_uniform_min_m": 0.005686,
+        "y_uniform_max_m": 0.341485,
+        "y_uniform_min_m": -0.34384,
         "z_fixed_m": 0.798546
       }
     },
@@ -2803,33 +3187,41 @@
         -3.141593
       ],
       "has_separate_distribution": false,
+      "mounted_on_graspable": "black_queenside_bishop_dynamic",
       "name": "black_queenside_bishop",
       "reference_graspable_object": "black_queenside_bishop_dynamic",
+      "rotation_radius_from_graspable_m": 0.0,
+      "spawn_rotation_note": "Mounted on graspable 'black_queenside_bishop_dynamic', which RLBench randomly positions and yaw-rotates (+/-pi) each episode; world range is the 'black_queenside_bishop_dynamic' observed envelope expanded by the mount radius.",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          0.000366,
-          6.3e-05,
-          1.741
+          -4e-05,
+          0.000369,
+          -3.032824
         ],
         "position_xyz_m": [
-          0.361657,
-          0.191716,
+          0.120136,
+          0.103736,
           0.810532
         ],
         "quaternion_xyzw": [
-          0.000142,
-          -0.00012,
-          0.764651,
-          0.644444
+          0.000185,
+          1e-05,
+          0.998522,
+          -0.054357
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.549036,
-        "x_uniform_min_m": -0.003417,
-        "y_uniform_max_m": 0.429036,
-        "y_uniform_min_m": -0.429037,
+        "kind": "mounted_on_graspable_envelope",
+        "mounted_on_graspable": "black_queenside_bishop_dynamic",
+        "n_resets_observed": 30,
+        "rotation_radius_m": 0.0,
+        "source": "observed_black_queenside_bishop_dynamic_range_expanded_by_mount_radius_for_full_yaw",
+        "x_uniform_max_m": 0.426511,
+        "x_uniform_min_m": 0.019427,
+        "y_uniform_max_m": 0.314396,
+        "y_uniform_min_m": -0.382445,
         "z_fixed_m": 0.810532
       }
     },
@@ -2850,33 +3242,41 @@
         -3.141592
       ],
       "has_separate_distribution": false,
+      "mounted_on_graspable": "black_kingside_bishop_dynamic",
       "name": "black_kingside_bishop",
       "reference_graspable_object": "black_kingside_bishop_dynamic",
+      "rotation_radius_from_graspable_m": 0.0,
+      "spawn_rotation_note": "Mounted on graspable 'black_kingside_bishop_dynamic', which RLBench randomly positions and yaw-rotates (+/-pi) each episode; world range is the 'black_kingside_bishop_dynamic' observed envelope expanded by the mount radius.",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          0.000366,
-          6.3e-05,
-          1.741
+          -4e-05,
+          0.000369,
+          -3.032824
         ],
         "position_xyz_m": [
-          0.385989,
-          0.050141,
+          0.262938,
+          0.11933,
           0.810532
         ],
         "quaternion_xyzw": [
-          0.000142,
-          -0.00012,
-          0.764651,
-          0.644444
+          0.000185,
+          1e-05,
+          0.998522,
+          -0.054358
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.548869,
-        "x_uniform_min_m": -0.003249,
-        "y_uniform_max_m": 0.428868,
-        "y_uniform_min_m": -0.428869,
+        "kind": "mounted_on_graspable_envelope",
+        "mounted_on_graspable": "black_kingside_bishop_dynamic",
+        "n_resets_observed": 30,
+        "rotation_radius_m": 0.0,
+        "source": "observed_black_kingside_bishop_dynamic_range_expanded_by_mount_radius_for_full_yaw",
+        "x_uniform_max_m": 0.446937,
+        "x_uniform_min_m": 0.033612,
+        "y_uniform_max_m": 0.287876,
+        "y_uniform_min_m": -0.359282,
         "z_fixed_m": 0.810532
       }
     },
@@ -2897,33 +3297,41 @@
         1.570797
       ],
       "has_separate_distribution": false,
+      "mounted_on_graspable": "black_king_dynamic",
       "name": "black_king",
       "reference_graspable_object": "black_king_dynamic",
+      "rotation_radius_from_graspable_m": 0.0,
+      "spawn_rotation_note": "Mounted on graspable 'black_king_dynamic', which RLBench randomly positions and yaw-rotates (+/-pi) each episode; world range is the 'black_king_dynamic' observed envelope expanded by the mount radius.",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -3.141357,
-          -0.000253,
-          2.971389
+          3.141354,
+          -0.000251,
+          1.462028
         ],
         "position_xyz_m": [
-          0.377878,
-          0.097332,
+          0.215338,
+          0.114132,
           0.815519
         ],
         "quaternion_xyzw": [
-          0.084999,
-          -0.996381,
-          -0.000128,
-          0.000116
+          0.744498,
+          -0.667625,
+          -1.4e-05,
+          0.000172
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.535958,
-        "x_uniform_min_m": 0.009662,
-        "y_uniform_max_m": 0.415957,
-        "y_uniform_min_m": -0.415958,
+        "kind": "mounted_on_graspable_envelope",
+        "mounted_on_graspable": "black_king_dynamic",
+        "n_resets_observed": 30,
+        "rotation_radius_m": 0.0,
+        "source": "observed_black_king_dynamic_range_expanded_by_mount_radius_for_full_yaw",
+        "x_uniform_max_m": 0.424343,
+        "x_uniform_min_m": 0.037576,
+        "y_uniform_max_m": 0.289941,
+        "y_uniform_min_m": -0.367003,
         "z_fixed_m": 0.815519
       }
     },
@@ -2944,33 +3352,41 @@
         -3.141592
       ],
       "has_separate_distribution": false,
+      "mounted_on_graspable": "black_queen_dynamic",
       "name": "black_queen",
       "reference_graspable_object": "black_queen_dynamic",
+      "rotation_radius_from_graspable_m": 0.0,
+      "spawn_rotation_note": "Mounted on graspable 'black_queen_dynamic', which RLBench randomly positions and yaw-rotates (+/-pi) each episode; world range is the 'black_queen_dynamic' observed envelope expanded by the mount radius.",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          0.000366,
-          6.3e-05,
-          1.741
+          -4e-05,
+          0.000369,
+          -3.032824
         ],
         "position_xyz_m": [
-          0.369767,
-          0.144525,
+          0.167737,
+          0.108934,
           0.813043
         ],
         "quaternion_xyzw": [
-          0.000142,
-          -0.00012,
-          0.764651,
-          0.644444
+          0.000185,
+          1e-05,
+          0.998522,
+          -0.054358
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.536018,
-        "x_uniform_min_m": 0.009602,
-        "y_uniform_max_m": 0.416018,
-        "y_uniform_min_m": -0.416018,
+        "kind": "mounted_on_graspable_envelope",
+        "mounted_on_graspable": "black_queen_dynamic",
+        "n_resets_observed": 30,
+        "rotation_radius_m": 0.0,
+        "source": "observed_black_queen_dynamic_range_expanded_by_mount_radius_for_full_yaw",
+        "x_uniform_max_m": 0.401749,
+        "x_uniform_min_m": 0.061538,
+        "y_uniform_max_m": 0.292006,
+        "y_uniform_min_m": -0.374723,
         "z_fixed_m": 0.813043
       }
     }
@@ -2983,20 +3399,20 @@
   "task_boundary_root_world_pose_after_reset": {
     "kind": "exact",
     "orientation_rpy_rad": [
+      -0.0,
       0.0,
-      0.0,
-      -1.400593
+      0.108769
     ],
     "position_xyz_m": [
-      0.207619,
-      0.092147,
+      0.210061,
+      -0.056125,
       0.752
     ],
     "quaternion_xyzw": [
       0.0,
       0.0,
-      -0.644444,
-      0.764651
+      0.054358,
+      0.998522
     ],
     "source": "exact_after_one_rlbench_reset"
   },

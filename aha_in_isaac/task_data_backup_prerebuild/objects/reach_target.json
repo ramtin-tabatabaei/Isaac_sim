@@ -1,0 +1,270 @@
+[
+  {
+    "handle": 80,
+    "hierarchy_path": "reach_target/target",
+    "name": "target",
+    "parent": "reach_target",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        0.0,
+        0.125
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        0.0,
+        0.125
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.25,
+        0.0,
+        0.877
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 83,
+    "hierarchy_path": "reach_target/boundary",
+    "name": "boundary",
+    "parent": "reach_target",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        0.0,
+        0.25
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        0.0,
+        0.25
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.25,
+        0.0,
+        1.002
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 84,
+    "hierarchy_path": "reach_target/distractor0",
+    "name": "distractor0",
+    "parent": "reach_target",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        -0.1,
+        0.125
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        -0.1,
+        0.125
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.25,
+        -0.1,
+        0.877
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 85,
+    "hierarchy_path": "reach_target/distractor1",
+    "name": "distractor1",
+    "parent": "reach_target",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        0.1,
+        0.125
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        0.1,
+        0.125
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.25,
+        0.1,
+        0.877
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  }
+]

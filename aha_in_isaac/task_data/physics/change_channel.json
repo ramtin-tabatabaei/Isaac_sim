@@ -47,7 +47,8 @@
       "respondable": 0,
       "collidable": 0,
       "mass": 0.009977484121918678,
-      "friction": 0.5
+      "friction": 0.5,
+      "mount_on_parent": true
     },
     "power_visual": {
       "dynamic": false,
@@ -61,7 +62,8 @@
       "respondable": 0,
       "collidable": 0,
       "mass": 0.009977484121918678,
-      "friction": 0.5
+      "friction": 0.5,
+      "mount_on_parent": true
     },
     "plus_visual": {
       "dynamic": false,
@@ -75,7 +77,8 @@
       "respondable": 0,
       "collidable": 0,
       "mass": 0.009977484121918678,
-      "friction": 0.5
+      "friction": 0.5,
+      "mount_on_parent": true
     },
     "minus_visual": {
       "dynamic": false,
@@ -85,24 +88,40 @@
       "friction": 0.5
     }
   },
+  "_comment_joints": "RLBench presses target_button_joint1 (plus) / joint2 (minus); success = depressed >= 1.5 mm. Each button (topPlateN) is prismatic-jointed to tv_remote along the button normal (local Z). A spring drive (target_position 0) returns the button to rest and resists carry jitter; the gripper overcomes it to press in toward the -0.007 m lower limit.",
   "joints": {
     "target_button_joint0": {
       "type": "prismatic",
+      "axis": "Z",
       "cyclic": false,
       "lower": -0.007000000216066837,
-      "upper": 0.0029999995604157448
+      "upper": 0.0029999995604157448,
+      "drive_type": "force",
+      "stiffness": 40.0,
+      "damping": 4.0,
+      "target_position": 0.0
     },
     "target_button_joint1": {
       "type": "prismatic",
+      "axis": "Z",
       "cyclic": false,
       "lower": -0.007000000216066837,
-      "upper": 0.0029999995604157448
+      "upper": 0.0029999995604157448,
+      "drive_type": "force",
+      "stiffness": 40.0,
+      "damping": 4.0,
+      "target_position": 0.0
     },
     "target_button_joint2": {
       "type": "prismatic",
+      "axis": "Z",
       "cyclic": false,
       "lower": -0.007000000216066837,
-      "upper": 0.0029999995604157448
+      "upper": 0.0029999995604157448,
+      "drive_type": "force",
+      "stiffness": 40.0,
+      "damping": 4.0,
+      "target_position": 0.0
     }
   }
 }

@@ -3,24 +3,38 @@
     "handle": 81,
     "hierarchy_path": "close_microwave/boundary_root",
     "name": "boundary_root",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.217569,
+        -0.00994,
+        0.752
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.37543,
+      "x_min_m": 0.083168,
+      "y_max_m": 0.178962,
+      "y_min_m": -0.173544,
+      "z_max_m": 0.752,
+      "z_min_m": 0.752
+    },
     "parent": "close_microwave",
     "parent_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
         -0.0,
         0.0,
-        1.185607
+        1.645312
       ],
       "position_xyz_m": [
-        -0.092202,
-        0.119417,
+        0.10176,
+        -0.205424,
         0.0
       ],
       "quaternion_xyzw": [
         0.0,
         0.0,
-        0.558688,
-        0.829378
+        0.732955,
+        0.680277
       ],
       "source": "exact_parent_local_offset"
     },
@@ -32,18 +46,18 @@
       "orientation_rpy_rad": [
         -0.0,
         0.0,
-        1.185607
+        1.645312
       ],
       "position_xyz_m": [
-        0.157798,
-        0.119417,
+        0.35176,
+        -0.205424,
         0.752
       ],
       "quaternion_xyzw": [
         0.0,
         0.0,
-        0.558688,
-        0.829378
+        0.732955,
+        0.680277
       ],
       "source": "exact_after_one_rlbench_reset"
     },
@@ -61,13 +75,27 @@
     "handle": 83,
     "hierarchy_path": "close_microwave/boundary_root/microwave/microwave_frame_resp",
     "name": "microwave_frame_resp",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.239287,
+        0.314292,
+        0.912315
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.428939,
+      "x_min_m": 0.050019,
+      "y_max_m": 0.50866,
+      "y_min_m": 0.155529,
+      "z_max_m": 0.912315,
+      "z_min_m": 0.912315
+    },
     "parent": "microwave",
     "parent_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
         0.0,
         -1.570796,
-        -0.0
+        0.0
       ],
       "position_xyz_m": [
         0.0,
@@ -107,20 +135,20 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        1.570798,
-        1.18562,
-        1.570795
+        -1.570807,
+        1.496269,
+        -1.570789
       ],
       "position_xyz_m": [
-        0.309593,
-        0.413965,
+        0.35711,
+        0.125893,
         0.912315
       ],
       "quaternion_xyzw": [
-        0.694034,
-        -0.13534,
-        0.694034,
-        0.13534
+        0.706616,
+        0.026344,
+        0.706616,
+        -0.026344
       ],
       "source": "exact_after_one_rlbench_reset"
     },
@@ -138,6 +166,20 @@
     "handle": 84,
     "hierarchy_path": "close_microwave/boundary_root/microwave/microwave_frame_resp/microwave_frame_vis",
     "name": "microwave_frame_vis",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.242446,
+        0.305012,
+        0.915914
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.428953,
+      "x_min_m": 0.054769,
+      "y_max_m": 0.499865,
+      "y_min_m": 0.145915,
+      "z_max_m": 0.915915,
+      "z_min_m": 0.915914
+    },
     "parent": "microwave_frame_resp",
     "parent_local_location": {
       "kind": "exact",
@@ -169,7 +211,7 @@
       ],
       "position_xyz_m": [
         0.320463,
-        -0.032995,
+        -0.032996,
         0.163915
       ],
       "quaternion_xyzw": [
@@ -184,20 +226,20 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        1.570798,
-        1.18562,
-        1.570795
+        -1.570807,
+        1.496269,
+        -1.570789
       ],
       "position_xyz_m": [
-        0.308785,
-        0.404002,
-        0.915914
+        0.360807,
+        0.116606,
+        0.915915
       ],
       "quaternion_xyzw": [
-        0.694034,
-        -0.13534,
-        0.694034,
-        0.13534
+        0.706616,
+        0.026344,
+        0.706616,
+        -0.026344
       ],
       "source": "exact_after_one_rlbench_reset"
     },
@@ -208,13 +250,27 @@
       "x_uniform_min_m": 0.320942,
       "y_uniform_max_m": 0.307152,
       "y_uniform_min_m": -0.36812,
-      "z_fixed_m": 0.915914
+      "z_fixed_m": 0.915915
     }
   },
   {
     "handle": 86,
     "hierarchy_path": "close_microwave/boundary_root/microwave/microwave_frame_resp/microwave_door_joint/microwave_door_resp",
     "name": "microwave_door_resp",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.137569,
+        0.01553,
+        0.889629
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.293585,
+      "x_min_m": -0.001591,
+      "y_max_m": 0.191005,
+      "y_min_m": -0.143472,
+      "z_max_m": 0.889629,
+      "z_min_m": 0.889628
+    },
     "parent": "microwave_door_joint",
     "parent_local_location": {
       "kind": "exact",
@@ -231,7 +287,7 @@
       "quaternion_xyzw": [
         -0.49999,
         -0.500019,
-        -0.499981,
+        -0.499982,
         -0.500009
       ],
       "source": "exact_parent_local_offset"
@@ -240,7 +296,7 @@
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -1.57079,
+        -1.570791,
         0.698119,
         -7.2e-05
       ],
@@ -261,20 +317,20 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -1.570791,
-        -0.487488,
-        -6.6e-05
+        -1.570789,
+        -0.947193,
+        -6.3e-05
       ],
       "position_xyz_m": [
-        0.093278,
-        0.175688,
+        0.268972,
+        -0.183623,
         0.889629
       ],
       "quaternion_xyzw": [
-        -0.686198,
-        -0.170674,
-        0.170628,
-        0.686213
+        -0.629266,
+        -0.322525,
+        0.322483,
+        0.62929
       ],
       "source": "exact_after_one_rlbench_reset"
     },
@@ -292,11 +348,25 @@
     "handle": 87,
     "hierarchy_path": "close_microwave/boundary_root/microwave/microwave_frame_resp/microwave_door_joint/microwave_door_resp/microwave_door",
     "name": "microwave_door",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.138315,
+        0.016442,
+        0.889629
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.294335,
+      "x_min_m": -0.000996,
+      "y_max_m": 0.192049,
+      "y_min_m": -0.142582,
+      "z_max_m": 0.889629,
+      "z_min_m": 0.889629
+    },
     "parent": "microwave_door_resp",
     "parent_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        0.0,
+        -0.0,
         1.3e-05,
         0.0
       ],
@@ -319,7 +389,7 @@
       "orientation_rpy_rad": [
         -1.570791,
         0.698132,
-        -7.2e-05
+        -7.1e-05
       ],
       "position_xyz_m": [
         0.028816,
@@ -338,20 +408,20 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -1.570791,
-        -0.487475,
-        -6.6e-05
+        -1.570789,
+        -0.947181,
+        -6.2e-05
       ],
       "position_xyz_m": [
-        0.094345,
-        0.176239,
+        0.269684,
+        -0.182655,
         0.889629
       ],
       "quaternion_xyzw": [
-        0.686199,
-        0.17067,
-        -0.170624,
-        -0.686214
+        0.629268,
+        0.322521,
+        -0.32248,
+        -0.629292
       ],
       "source": "exact_after_one_rlbench_reset"
     },

@@ -1,0 +1,368 @@
+[
+  {
+    "handle": 81,
+    "hierarchy_path": "open_microwave/boundary_root",
+    "name": "boundary_root",
+    "parent": "open_microwave",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        1.356319
+      ],
+      "position_xyz_m": [
+        -0.008103,
+        -0.117104,
+        0.0
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.627361,
+        0.778729
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": null,
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        1.356319
+      ],
+      "position_xyz_m": [
+        0.241897,
+        -0.117104,
+        0.752
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.627361,
+        0.778729
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.4625,
+      "x_uniform_min_m": 0.0375,
+      "y_uniform_max_m": 0.215,
+      "y_uniform_min_m": -0.215,
+      "z_fixed_m": 0.752
+    }
+  },
+  {
+    "handle": 83,
+    "hierarchy_path": "open_microwave/boundary_root/microwave/microwave_frame_resp",
+    "name": "microwave_frame_resp",
+    "parent": "microwave",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.707107,
+        0.0,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570797,
+        1.3e-05,
+        1.570796
+      ],
+      "position_xyz_m": [
+        0.33,
+        -0.03,
+        0.160315
+      ],
+      "quaternion_xyzw": [
+        0.500003,
+        -0.499997,
+        0.500003,
+        0.499997
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.5708,
+        1.356333,
+        1.570794
+      ],
+      "position_xyz_m": [
+        0.341445,
+        0.19895,
+        0.912315
+      ],
+      "quaternion_xyzw": [
+        0.703046,
+        -0.075679,
+        0.703045,
+        0.075679
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.793861,
+      "x_uniform_min_m": 0.3309,
+      "y_uniform_max_m": 0.313569,
+      "y_uniform_min_m": -0.369002,
+      "z_fixed_m": 0.912315
+    }
+  },
+  {
+    "handle": 84,
+    "hierarchy_path": "open_microwave/boundary_root/microwave/microwave_frame_resp/microwave_frame_vis",
+    "name": "microwave_frame_vis",
+    "parent": "microwave_frame_resp",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.0036,
+        0.009537,
+        0.002995
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570797,
+        1.3e-05,
+        1.570796
+      ],
+      "position_xyz_m": [
+        0.320463,
+        -0.032995,
+        0.163915
+      ],
+      "quaternion_xyzw": [
+        0.500003,
+        -0.499997,
+        0.500003,
+        0.499997
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.5708,
+        1.356333,
+        1.570794
+      ],
+      "position_xyz_m": [
+        0.342342,
+        0.188994,
+        0.915914
+      ],
+      "quaternion_xyzw": [
+        0.703046,
+        -0.075679,
+        0.703045,
+        0.075679
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.784657,
+      "x_uniform_min_m": 0.320942,
+      "y_uniform_max_m": 0.307152,
+      "y_uniform_min_m": -0.36812,
+      "z_fixed_m": 0.915915
+    }
+  },
+  {
+    "handle": 86,
+    "hierarchy_path": "open_microwave/boundary_root/microwave/microwave_frame_resp/microwave_door_joint/microwave_door_resp",
+    "name": "microwave_door_resp",
+    "parent": "microwave_door_joint",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570451,
+        1.57074
+      ],
+      "position_xyz_m": [
+        -0.2208,
+        -0.0156,
+        -1e-06
+      ],
+      "quaternion_xyzw": [
+        -0.49999,
+        -0.500019,
+        -0.499981,
+        -0.500009
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570797,
+        -1.3e-05,
+        -5.6e-05
+      ],
+      "position_xyz_m": [
+        0.166183,
+        0.019253,
+        0.13763
+      ],
+      "quaternion_xyzw": [
+        -0.707107,
+        -2.4e-05,
+        -1.5e-05,
+        0.707107
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570797,
+        -1.356332,
+        -5.7e-05
+      ],
+      "position_xyz_m": [
+        0.258455,
+        0.04937,
+        0.88963
+      ],
+      "quaternion_xyzw": [
+        -0.550629,
+        -0.44363,
+        0.443599,
+        0.550654
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.629795,
+      "x_uniform_min_m": 0.183666,
+      "y_uniform_max_m": 0.296383,
+      "y_uniform_min_m": -0.260808,
+      "z_fixed_m": 0.88963
+    }
+  },
+  {
+    "handle": 87,
+    "hierarchy_path": "open_microwave/boundary_root/microwave/microwave_frame_resp/microwave_door_joint/microwave_door_resp/microwave_door",
+    "name": "microwave_door",
+    "parent": "microwave_door_resp",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        1.3e-05,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.001201,
+        -0.0,
+        -1.3e-05
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -6e-06,
+        -0.0,
+        -1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570797,
+        0.0,
+        -5.6e-05
+      ],
+      "position_xyz_m": [
+        0.167384,
+        0.019239,
+        0.13763
+      ],
+      "quaternion_xyzw": [
+        0.707107,
+        2e-05,
+        2e-05,
+        -0.707107
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570798,
+        -1.356319,
+        -5.7e-05
+      ],
+      "position_xyz_m": [
+        0.258724,
+        0.05054,
+        0.88963
+      ],
+      "quaternion_xyzw": [
+        0.550632,
+        0.443627,
+        -0.443596,
+        -0.550657
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.630986,
+      "x_uniform_min_m": 0.18478,
+      "y_uniform_max_m": 0.29683,
+      "y_uniform_min_m": -0.26128,
+      "z_fixed_m": 0.88963
+    }
+  }
+]

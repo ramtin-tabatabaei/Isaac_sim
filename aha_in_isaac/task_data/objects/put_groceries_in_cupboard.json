@@ -3,24 +3,38 @@
     "handle": 108,
     "hierarchy_path": "put_groceries_in_cupboard/boundary_root",
     "name": "boundary_root",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.232528,
+        -0.004797,
+        0.752
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.290984,
+      "x_min_m": 0.177862,
+      "y_max_m": 0.129601,
+      "y_min_m": -0.151789,
+      "z_max_m": 0.752,
+      "z_min_m": 0.752
+    },
     "parent": "put_groceries_in_cupboard",
     "parent_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
         -0.0,
         0.0,
-        0.437288
+        0.006198
       ],
       "position_xyz_m": [
-        0.008909,
-        0.11954,
+        -0.088102,
+        -0.108783,
         0.0
       ],
       "quaternion_xyzw": [
         0.0,
         0.0,
-        0.216906,
-        0.976192
+        0.003099,
+        0.999995
       ],
       "source": "exact_parent_local_offset"
     },
@@ -32,18 +46,18 @@
       "orientation_rpy_rad": [
         -0.0,
         0.0,
-        0.437288
+        0.006198
       ],
       "position_xyz_m": [
-        0.258909,
-        0.11954,
+        0.161898,
+        -0.108783,
         0.752
       ],
       "quaternion_xyzw": [
         0.0,
         0.0,
-        0.216906,
-        0.976192
+        0.003099,
+        0.999995
       ],
       "source": "exact_after_one_rlbench_reset"
     },
@@ -61,6 +75,20 @@
     "handle": 109,
     "hierarchy_path": "put_groceries_in_cupboard/boundary_root/cupboard",
     "name": "cupboard",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.538619,
+        -0.006591,
+        1.533003
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.622308,
+      "x_min_m": 0.504334,
+      "y_max_m": 0.249161,
+      "y_min_m": -0.270791,
+      "z_max_m": 1.533003,
+      "z_min_m": 1.533002
+    },
     "parent": "boundary_root",
     "parent_local_location": {
       "kind": "exact",
@@ -107,20 +135,20 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -8.2e-05,
-        1.4e-05,
-        -2.704319
+        -6.8e-05,
+        4.7e-05,
+        -3.13541
       ],
       "position_xyz_m": [
-        0.55921,
-        0.259922,
-        1.533002
+        0.493385,
+        -0.106728,
+        1.533003
       ],
       "quaternion_xyzw": [
-        1.6e-05,
-        3.8e-05,
-        0.976194,
-        -0.216899
+        2.4e-05,
+        3.4e-05,
+        0.999995,
+        -0.003092
       ],
       "source": "exact_after_one_rlbench_reset"
     },

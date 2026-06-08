@@ -5,33 +5,47 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          1.570151,
-          -1.345493,
-          3.0804
+          1.570652,
+          -0.062918,
+          3.081019
         ],
         "position_xyz_m": [
-          -0.05079,
-          0.441096,
+          -0.320742,
+          0.069661,
           0.186551
         ],
         "quaternion_xyzw": [
-          -0.423647,
-          -0.566084,
-          0.539482,
-          0.457199
+          0.000832,
+          0.707055,
+          -0.70581,
+          -0.043633
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "tv_remote",
       "world_offset_xyz_m": [
-        0.439787,
-        -0.06106,
-        0.186563
+        0.323898,
+        -0.05306,
+        0.18656
       ]
     },
     "handle": 81,
     "hierarchy_path": "tv_on/tv_frame",
     "name": "tv_frame",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.361209,
+        0.034445,
+        0.945821
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.486672,
+      "x_min_m": 0.241881,
+      "y_max_m": 0.346948,
+      "y_min_m": -0.389132,
+      "z_max_m": 0.945821,
+      "z_min_m": 0.945821
+    },
     "parent": "tv_on",
     "parent_local_location": {
       "kind": "exact",
@@ -79,19 +93,19 @@
       "kind": "exact",
       "orientation_rpy_rad": [
         -1.570652,
-        0.027292,
-        -0.060595
+        0.011426,
+        -0.060593
       ],
       "position_xyz_m": [
-        0.487089,
-        0.087716,
+        0.481985,
+        0.13155,
         0.945821
       ],
       "quaternion_xyzw": [
-        -0.706958,
-        -0.011771,
-        -0.031064,
-        0.706475
+        -0.706842,
+        -0.017379,
+        -0.025458,
+        0.7067
       ],
       "source": "exact_after_one_rlbench_reset"
     },
@@ -106,56 +120,87 @@
     }
   },
   {
+    "analytical_task_root_yaw_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.314097,
+      "x_uniform_min_m": 0.094142,
+      "y_uniform_max_m": 0.245231,
+      "y_uniform_min_m": -0.231977,
+      "z_fixed_m": 0.759262
+    },
     "handle": 82,
     "hierarchy_path": "tv_on/tv_remote",
+    "is_graspable": true,
     "name": "tv_remote",
+    "observed_spawn_yaw_range_rad": [
+      -3.001012,
+      3.073374
+    ],
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.165124,
+        -0.007192,
+        0.759291
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.382579,
+      "x_min_m": 0.043566,
+      "y_max_m": 0.326705,
+      "y_min_m": -0.179812,
+      "z_max_m": 0.759386,
+      "z_min_m": 0.759259
+    },
     "parent": "tv_on",
     "parent_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        1e-06,
-        -2.7e-05,
-        -1.795987
+        0.0,
+        -2.6e-05,
+        -3.078561
       ],
       "position_xyz_m": [
-        -0.201904,
-        0.04899,
-        0.007259
+        -0.085097,
+        0.049323,
+        0.007262
       ],
       "quaternion_xyzw": [
-        1.1e-05,
-        -8e-06,
-        -0.782078,
-        0.623181
+        -1.3e-05,
+        0.0,
+        0.999503,
+        -0.03151
       ],
       "source": "exact_parent_local_offset"
     },
     "placement_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.313764,
-      "x_uniform_min_m": -0.015263,
-      "y_uniform_max_m": 0.354635,
-      "y_uniform_min_m": -0.348785,
-      "z_fixed_m": 0.759259
+      "kind": "observed_over_rlbench_resets",
+      "n_resets_observed": 30,
+      "source": "observed_graspable_world_range_includes_spawn_translation_and_rotation",
+      "x_uniform_max_m": 0.382579,
+      "x_uniform_min_m": 0.043566,
+      "y_uniform_max_m": 0.326705,
+      "y_uniform_min_m": -0.179812,
+      "z_fixed_m": 0.759291,
+      "z_observed_max_m": 0.759386,
+      "z_observed_min_m": 0.759259
     },
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        1e-06,
-        -2.7e-05,
-        -1.795987
+        0.0,
+        -2.6e-05,
+        -3.078561
       ],
       "position_xyz_m": [
-        -0.201904,
-        0.04899,
-        0.007259
+        -0.085097,
+        0.049323,
+        0.007262
       ],
       "quaternion_xyzw": [
-        1.1e-05,
-        -8e-06,
-        -0.782078,
-        0.623181
+        -1.3e-05,
+        0.0,
+        0.999503,
+        -0.03151
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -163,31 +208,34 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.0,
-        -2.7e-05,
-        -1.823392
+        0.0,
+        -2.6e-05,
+        -3.0901
       ],
       "position_xyz_m": [
-        0.047301,
-        0.148776,
-        0.759259
+        0.158088,
+        0.18461,
+        0.759262
       ],
       "quaternion_xyzw": [
-        1.1e-05,
-        -8e-06,
-        -0.790543,
-        0.612406
+        -1.3e-05,
+        0.0,
+        0.999669,
+        -0.025743
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.313764,
-      "x_uniform_min_m": -0.015263,
-      "y_uniform_max_m": 0.354635,
-      "y_uniform_min_m": -0.348785,
-      "z_fixed_m": 0.759259
+      "kind": "observed_over_rlbench_resets",
+      "n_resets_observed": 30,
+      "source": "observed_graspable_world_range_includes_spawn_translation_and_rotation",
+      "x_uniform_max_m": 0.382579,
+      "x_uniform_min_m": 0.043566,
+      "y_uniform_max_m": 0.326705,
+      "y_uniform_min_m": -0.179812,
+      "z_fixed_m": 0.759291,
+      "z_observed_max_m": 0.759386,
+      "z_observed_min_m": 0.759259
     }
   },
   {
@@ -196,33 +244,47 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
+          -1e-06,
           -2.6e-05,
-          -7e-06,
-          1.795987
+          3.078561
         ],
         "position_xyz_m": [
-          0.026115,
-          0.105396,
+          0.02297,
+          0.047971,
           -0.007261
         ],
         "quaternion_xyzw": [
-          -1.1e-05,
-          8e-06,
-          0.782078,
-          0.623181
+          1.3e-05,
+          -0.0,
+          -0.999503,
+          -0.03151
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "tv_remote",
       "world_offset_xyz_m": [
-        0.095525,
-        -0.051627,
-        -0.007259
+        -0.020471,
+        -0.04909,
+        -0.007262
       ]
     },
     "handle": 102,
     "hierarchy_path": "tv_on/spawn_boundary",
     "name": "spawn_boundary",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.183005,
+        -0.000127,
+        0.752
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.258634,
+      "x_min_m": 0.097022,
+      "y_max_m": 0.231196,
+      "y_min_m": -0.146092,
+      "z_max_m": 0.752,
+      "z_min_m": 0.752
+    },
     "parent": "tv_on",
     "parent_local_location": {
       "kind": "exact",
@@ -271,18 +333,18 @@
       "orientation_rpy_rad": [
         0.0,
         0.0,
-        -0.027405
+        -0.011539
       ],
       "position_xyz_m": [
-        0.142827,
-        0.097149,
+        0.137617,
+        0.13552,
         0.752
       ],
       "quaternion_xyzw": [
         0.0,
         0.0,
-        -0.013702,
-        0.999906
+        -0.005769,
+        0.999983
       ],
       "source": "exact_after_one_rlbench_reset"
     },
@@ -297,112 +359,15 @@
     }
   },
   {
-    "fixed_relation_to_nearest_graspable": {
-      "has_separate_position_range": false,
-      "reference_local_location": {
-        "kind": "exact",
-        "orientation_rpy_rad": [
-          -0.0,
-          -0.0,
-          -1e-06
-        ],
-        "position_xyz_m": [
-          0.085001,
-          -0.0,
-          0.011994
-        ],
-        "quaternion_xyzw": [
-          -0.0,
-          -0.0,
-          -0.0,
-          1.0
-        ],
-        "source": "exact_reference_local_relation"
-      },
-      "reference_object": "tv_remote",
-      "world_offset_xyz_m": [
-        -0.021244,
-        -0.082303,
-        0.011993
-      ]
-    },
-    "handle": 86,
-    "hierarchy_path": "tv_on/tv_remote/target_button_joint0/target_button_topPlate0",
-    "name": "target_button_topPlate0",
-    "parent": "target_button_joint0",
-    "parent_local_location": {
-      "kind": "exact",
-      "orientation_rpy_rad": [
-        -0.0,
-        -0.0,
-        -1e-06
-      ],
-      "position_xyz_m": [
-        1e-06,
-        -0.0,
-        0.03795
-      ],
-      "quaternion_xyzw": [
-        -0.0,
-        -0.0,
-        -0.0,
-        1.0
-      ],
-      "source": "exact_parent_local_offset"
-    },
-    "placement_range": null,
-    "task_root_local_location": {
-      "kind": "exact",
-      "orientation_rpy_rad": [
-        1e-06,
-        -2.7e-05,
-        -1.795988
-      ],
-      "position_xyz_m": [
-        -0.220884,
-        -0.033864,
-        0.019252
-      ],
-      "quaternion_xyzw": [
-        1.1e-05,
-        -8e-06,
-        -0.782078,
-        0.62318
-      ],
-      "source": "exact_task_root_local_offset"
-    },
-    "type": "SHAPE",
-    "world_location": {
-      "kind": "exact",
-      "orientation_rpy_rad": [
-        -0.0,
-        -2.7e-05,
-        -1.823393
-      ],
-      "position_xyz_m": [
-        0.026058,
-        0.066472,
-        0.771252
-      ],
-      "quaternion_xyzw": [
-        1.1e-05,
-        -8e-06,
-        -0.790544,
-        0.612406
-      ],
-      "source": "exact_after_one_rlbench_reset"
-    },
-    "world_position_range": {
+    "analytical_task_root_yaw_range": {
       "kind": "range",
       "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.298638,
-      "x_uniform_min_m": -0.030965,
-      "y_uniform_max_m": 0.367757,
-      "y_uniform_min_m": -0.370346,
-      "z_fixed_m": 0.771252
-    }
-  },
-  {
+      "x_uniform_max_m": 0.308743,
+      "x_uniform_min_m": 0.016975,
+      "y_uniform_max_m": 0.322398,
+      "y_uniform_min_m": -0.31681,
+      "z_fixed_m": 0.771838
+    },
     "fixed_relation_to_nearest_graspable": {
       "has_separate_position_range": false,
       "reference_local_location": {
@@ -413,9 +378,9 @@
           0.0
         ],
         "position_xyz_m": [
-          0.045001,
-          -0.0,
-          0.011994
+          0.085001,
+          0.0,
+          0.012579
         ],
         "quaternion_xyzw": [
           -0.0,
@@ -427,15 +392,31 @@
       },
       "reference_object": "tv_remote",
       "world_offset_xyz_m": [
-        -0.011247,
-        -0.043573,
-        0.011994
+        -0.084888,
+        -0.004375,
+        0.012576
       ]
     },
-    "handle": 90,
-    "hierarchy_path": "tv_on/tv_remote/target_button_joint1/target_button_topPlate1",
-    "name": "target_button_topPlate1",
-    "parent": "target_button_joint1",
+    "handle": 86,
+    "hierarchy_path": "tv_on/tv_remote/target_button_joint0/target_button_topPlate0",
+    "mounted_note": "Rigidly mounted on graspable 'tv_remote'. RLBench re-places 'tv_remote' each episode at a random position within its spawn region and a random yaw (RLBench default +/-pi). This object sits ~0.085 m from 'tv_remote' rotation axis, so its absolute world position sweeps a wide ring; its pose relative to 'tv_remote' is fixed.",
+    "mounted_on_graspable": "tv_remote",
+    "name": "target_button_topPlate0",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.146059,
+        -0.01254,
+        0.771834
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.439875,
+      "x_min_m": -0.007773,
+      "y_max_m": 0.326788,
+      "y_min_m": -0.260875,
+      "z_max_m": 0.773513,
+      "z_min_m": 0.771251
+    },
+    "parent": "target_button_joint0",
     "parent_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
@@ -445,7 +426,7 @@
       ],
       "position_xyz_m": [
         1e-06,
-        -0.0,
+        0.0,
         0.03795
       ],
       "quaternion_xyzw": [
@@ -457,23 +438,24 @@
       "source": "exact_parent_local_offset"
     },
     "placement_range": null,
+    "rotation_radius_from_graspable_m": 0.085014,
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
         1e-06,
-        -2.7e-05,
-        -1.795987
+        -2.6e-05,
+        -3.078561
       ],
       "position_xyz_m": [
-        -0.211953,
-        0.005125,
-        0.019252
+        -0.169929,
+        0.043969,
+        0.019838
       ],
       "quaternion_xyzw": [
-        1.1e-05,
-        -8e-06,
-        -0.782078,
-        0.623181
+        -1.3e-05,
+        0.0,
+        0.999503,
+        -0.03151
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -481,211 +463,134 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.0,
-        -2.7e-05,
-        -1.823392
+        0.0,
+        -2.6e-05,
+        -3.0901
       ],
       "position_xyz_m": [
-        0.036054,
-        0.105203,
-        0.771252
+        0.073199,
+        0.180235,
+        0.771838
       ],
       "quaternion_xyzw": [
-        1.1e-05,
-        -8e-06,
-        -0.790543,
-        0.612406
+        -1.3e-05,
+        0.0,
+        0.999669,
+        -0.025743
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.269899,
-      "x_uniform_min_m": -0.019515,
-      "y_uniform_max_m": 0.358887,
-      "y_uniform_min_m": -0.358833,
-      "z_fixed_m": 0.771252
+      "kind": "mounted_on_graspable_envelope",
+      "mounted_on_graspable": "tv_remote",
+      "n_resets_observed": 30,
+      "rotation_radius_m": 0.085014,
+      "source": "observed_tv_remote_range_expanded_by_mount_radius_for_full_yaw",
+      "x_uniform_max_m": 0.467593,
+      "x_uniform_min_m": -0.041448,
+      "y_uniform_max_m": 0.411719,
+      "y_uniform_min_m": -0.264826,
+      "z_fixed_m": 0.771834
     }
   },
   {
+    "analytical_task_root_yaw_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.311262,
+      "x_uniform_min_m": 0.05443,
+      "y_uniform_max_m": 0.284943,
+      "y_uniform_min_m": -0.276889,
+      "z_fixed_m": 0.771839
+    },
     "fixed_relation_to_nearest_graspable": {
       "has_separate_position_range": false,
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
           -0.0,
-          -0.0,
-          -1e-06
+          -1e-06,
+          0.0
         ],
         "position_xyz_m": [
-          0.005,
+          0.045001,
           0.0,
-          0.01374
+          0.012578
         ],
         "quaternion_xyzw": [
           -0.0,
           -0.0,
-          -0.0,
+          0.0,
           1.0
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "tv_remote",
       "world_offset_xyz_m": [
-        -0.00125,
-        -0.004842,
-        0.01374
+        -0.044941,
+        -0.002316,
+        0.012577
       ]
     },
-    "handle": 94,
-    "hierarchy_path": "tv_on/tv_remote/target_button_joint2/target_button_topPlate2",
-    "name": "target_button_topPlate2",
-    "parent": "target_button_joint2",
+    "handle": 90,
+    "hierarchy_path": "tv_on/tv_remote/target_button_joint1/target_button_topPlate1",
+    "mounted_note": "Rigidly mounted on graspable 'tv_remote'. RLBench re-places 'tv_remote' each episode at a random position within its spawn region and a random yaw (RLBench default +/-pi). This object sits ~0.045 m from 'tv_remote' rotation axis, so its absolute world position sweeps a wide ring; its pose relative to 'tv_remote' is fixed.",
+    "mounted_on_graspable": "tv_remote",
+    "name": "target_button_topPlate1",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.15503,
+        -0.010023,
+        0.771877
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.412912,
+      "x_min_m": 0.016386,
+      "y_max_m": 0.326749,
+      "y_min_m": -0.222727,
+      "z_max_m": 0.773373,
+      "z_min_m": 0.771252
+    },
+    "parent": "target_button_joint1",
     "parent_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
         -0.0,
-        -0.0,
-        -1e-06
+        -1e-06,
+        0.0
       ],
       "position_xyz_m": [
-        0.0,
+        1e-06,
         0.0,
         0.03795
       ],
       "quaternion_xyzw": [
         -0.0,
         -0.0,
-        -0.0,
-        1.0
-      ],
-      "source": "exact_parent_local_offset"
-    },
-    "placement_range": null,
-    "task_root_local_location": {
-      "kind": "exact",
-      "orientation_rpy_rad": [
-        1e-06,
-        -2.7e-05,
-        -1.795988
-      ],
-      "position_xyz_m": [
-        -0.203021,
-        0.044116,
-        0.020999
-      ],
-      "quaternion_xyzw": [
-        1.1e-05,
-        -8e-06,
-        -0.782078,
-        0.62318
-      ],
-      "source": "exact_task_root_local_offset"
-    },
-    "type": "SHAPE",
-    "world_location": {
-      "kind": "exact",
-      "orientation_rpy_rad": [
-        -0.0,
-        -2.7e-05,
-        -1.823393
-      ],
-      "position_xyz_m": [
-        0.046051,
-        0.143934,
-        0.772998
-      ],
-      "quaternion_xyzw": [
-        1.1e-05,
-        -8e-06,
-        -0.790544,
-        0.612406
-      ],
-      "source": "exact_after_one_rlbench_reset"
-    },
-    "world_position_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.30889,
-      "x_uniform_min_m": -0.015258,
-      "y_uniform_max_m": 0.354632,
-      "y_uniform_min_m": -0.349901,
-      "z_fixed_m": 0.772998
-    }
-  },
-  {
-    "fixed_relation_to_nearest_graspable": {
-      "has_separate_position_range": false,
-      "reference_local_location": {
-        "kind": "exact",
-        "orientation_rpy_rad": [
-          -0.0,
-          -0.0,
-          -1e-06
-        ],
-        "position_xyz_m": [
-          0.085001,
-          -0.0,
-          0.008963
-        ],
-        "quaternion_xyzw": [
-          -0.0,
-          -0.0,
-          -0.0,
-          1.0
-        ],
-        "source": "exact_reference_local_relation"
-      },
-      "reference_object": "tv_remote",
-      "world_offset_xyz_m": [
-        -0.021243,
-        -0.082303,
-        0.008963
-      ]
-    },
-    "handle": 87,
-    "hierarchy_path": "tv_on/tv_remote/target_button_joint0/target_button_topPlate0/target_button_wrap0",
-    "name": "target_button_wrap0",
-    "parent": "target_button_topPlate0",
-    "parent_local_location": {
-      "kind": "exact",
-      "orientation_rpy_rad": [
-        -0.0,
-        0.0,
-        -0.0
-      ],
-      "position_xyz_m": [
-        0.0,
-        0.0,
-        -0.003031
-      ],
-      "quaternion_xyzw": [
-        0.0,
-        0.0,
         0.0,
         1.0
       ],
       "source": "exact_parent_local_offset"
     },
     "placement_range": null,
+    "rotation_radius_from_graspable_m": 0.045013,
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
         1e-06,
-        -2.7e-05,
-        -1.795988
+        -2.6e-05,
+        -3.078561
       ],
       "position_xyz_m": [
-        -0.220884,
-        -0.033864,
-        0.016221
+        -0.130009,
+        0.046488,
+        0.019839
       ],
       "quaternion_xyzw": [
-        1.1e-05,
-        -8e-06,
-        -0.782078,
-        0.62318
+        -1.3e-05,
+        0.0,
+        0.999503,
+        -0.03151
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -693,140 +598,46 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.0,
-        -2.7e-05,
-        -1.823393
+        0.0,
+        -2.6e-05,
+        -3.0901
       ],
       "position_xyz_m": [
-        0.026058,
-        0.066472,
-        0.768221
+        0.113146,
+        0.182294,
+        0.771839
       ],
       "quaternion_xyzw": [
-        1.1e-05,
-        -8e-06,
-        -0.790544,
-        0.612406
+        -1.3e-05,
+        0.0,
+        0.999669,
+        -0.025743
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.298638,
-      "x_uniform_min_m": -0.030965,
-      "y_uniform_max_m": 0.367757,
-      "y_uniform_min_m": -0.370346,
-      "z_fixed_m": 0.768221
+      "kind": "mounted_on_graspable_envelope",
+      "mounted_on_graspable": "tv_remote",
+      "n_resets_observed": 30,
+      "rotation_radius_m": 0.045013,
+      "source": "observed_tv_remote_range_expanded_by_mount_radius_for_full_yaw",
+      "x_uniform_max_m": 0.427592,
+      "x_uniform_min_m": -0.001447,
+      "y_uniform_max_m": 0.371718,
+      "y_uniform_min_m": -0.224825,
+      "z_fixed_m": 0.771877
     }
   },
   {
-    "fixed_relation_to_nearest_graspable": {
-      "has_separate_position_range": false,
-      "reference_local_location": {
-        "kind": "exact",
-        "orientation_rpy_rad": [
-          -0.0,
-          -0.0,
-          -1.570823
-        ],
-        "position_xyz_m": [
-          0.085001,
-          -0.0,
-          0.012894
-        ],
-        "quaternion_xyzw": [
-          -0.0,
-          -0.0,
-          -0.707116,
-          0.707097
-        ],
-        "source": "exact_reference_local_relation"
-      },
-      "reference_object": "tv_remote",
-      "world_offset_xyz_m": [
-        -0.021244,
-        -0.082303,
-        0.012893
-      ]
-    },
-    "handle": 88,
-    "hierarchy_path": "tv_on/tv_remote/target_button_joint0/target_button_topPlate0/power_visual",
-    "name": "power_visual",
-    "parent": "target_button_topPlate0",
-    "parent_local_location": {
-      "kind": "exact",
-      "orientation_rpy_rad": [
-        0.0,
-        -0.0,
-        -1.570822
-      ],
-      "position_xyz_m": [
-        0.0,
-        0.0,
-        0.0009
-      ],
-      "quaternion_xyzw": [
-        0.0,
-        0.0,
-        -0.707116,
-        0.707098
-      ],
-      "source": "exact_parent_local_offset"
-    },
-    "placement_range": null,
-    "task_root_local_location": {
-      "kind": "exact",
-      "orientation_rpy_rad": [
-        1e-06,
-        -2.7e-05,
-        2.916375
-      ],
-      "position_xyz_m": [
-        -0.220884,
-        -0.033864,
-        0.020152
-      ],
-      "quaternion_xyzw": [
-        1.3e-05,
-        2e-06,
-        -0.993666,
-        -0.112371
-      ],
-      "source": "exact_task_root_local_offset"
-    },
-    "type": "SHAPE",
-    "world_location": {
-      "kind": "exact",
-      "orientation_rpy_rad": [
-        -0.0,
-        -2.7e-05,
-        2.88897
-      ],
-      "position_xyz_m": [
-        0.026058,
-        0.066472,
-        0.772152
-      ],
-      "quaternion_xyzw": [
-        1.3e-05,
-        2e-06,
-        -0.992033,
-        -0.125976
-      ],
-      "source": "exact_after_one_rlbench_reset"
-    },
-    "world_position_range": {
+    "analytical_task_root_yaw_range": {
       "kind": "range",
       "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.298638,
-      "x_uniform_min_m": -0.030965,
-      "y_uniform_max_m": 0.367757,
-      "y_uniform_min_m": -0.370346,
-      "z_fixed_m": 0.772152
-    }
-  },
-  {
+      "x_uniform_max_m": 0.313782,
+      "x_uniform_min_m": 0.089945,
+      "y_uniform_max_m": 0.249428,
+      "y_uniform_min_m": -0.236968,
+      "z_fixed_m": 0.773393
+    },
     "fixed_relation_to_nearest_graspable": {
       "has_separate_position_range": false,
       "reference_local_location": {
@@ -837,9 +648,9 @@
           0.0
         ],
         "position_xyz_m": [
-          0.045001,
-          -0.0,
-          0.008963
+          0.005,
+          0.0,
+          0.014131
         ],
         "quaternion_xyzw": [
           -0.0,
@@ -851,15 +662,166 @@
       },
       "reference_object": "tv_remote",
       "world_offset_xyz_m": [
-        -0.011247,
-        -0.043573,
-        0.008963
+        -0.004994,
+        -0.000257,
+        0.014131
       ]
     },
-    "handle": 91,
-    "hierarchy_path": "tv_on/tv_remote/target_button_joint1/target_button_topPlate1/target_button_wrap1",
-    "name": "target_button_wrap1",
-    "parent": "target_button_topPlate1",
+    "handle": 94,
+    "hierarchy_path": "tv_on/tv_remote/target_button_joint2/target_button_topPlate2",
+    "mounted_note": "Rigidly mounted on graspable 'tv_remote'. RLBench re-places 'tv_remote' each episode at a random position within its spawn region and a random yaw (RLBench default +/-pi). This object sits ~0.005 m from 'tv_remote' rotation axis, so its absolute world position sweeps a wide ring; its pose relative to 'tv_remote' is fixed.",
+    "mounted_on_graspable": "tv_remote",
+    "name": "target_button_topPlate2",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.164001,
+        -0.007507,
+        0.772788
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.385947,
+      "x_min_m": 0.040545,
+      "y_max_m": 0.32671,
+      "y_min_m": -0.184578,
+      "z_max_m": 0.773277,
+      "z_min_m": 0.771866
+    },
+    "parent": "target_button_joint2",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        -0.0,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        0.0,
+        0.03795
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        -0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "rotation_radius_from_graspable_m": 0.005012,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1e-06,
+        -2.6e-05,
+        -3.078561
+      ],
+      "position_xyz_m": [
+        -0.090088,
+        0.049008,
+        0.021393
+      ],
+      "quaternion_xyzw": [
+        -1.3e-05,
+        0.0,
+        0.999503,
+        -0.03151
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -2.6e-05,
+        -3.0901
+      ],
+      "position_xyz_m": [
+        0.153094,
+        0.184353,
+        0.773393
+      ],
+      "quaternion_xyzw": [
+        -1.3e-05,
+        0.0,
+        0.999669,
+        -0.025743
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "mounted_on_graspable_envelope",
+      "mounted_on_graspable": "tv_remote",
+      "n_resets_observed": 30,
+      "rotation_radius_m": 0.005012,
+      "source": "observed_tv_remote_range_expanded_by_mount_radius_for_full_yaw",
+      "x_uniform_max_m": 0.387591,
+      "x_uniform_min_m": 0.038554,
+      "y_uniform_max_m": 0.331717,
+      "y_uniform_min_m": -0.184824,
+      "z_fixed_m": 0.772788
+    }
+  },
+  {
+    "analytical_task_root_yaw_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.308743,
+      "x_uniform_min_m": 0.016975,
+      "y_uniform_max_m": 0.322398,
+      "y_uniform_min_m": -0.316809,
+      "z_fixed_m": 0.768807
+    },
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          -0.0,
+          0.0
+        ],
+        "position_xyz_m": [
+          0.085001,
+          0.0,
+          0.009548
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          -0.0,
+          0.0,
+          1.0
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "tv_remote",
+      "world_offset_xyz_m": [
+        -0.084888,
+        -0.004375,
+        0.009546
+      ]
+    },
+    "handle": 87,
+    "hierarchy_path": "tv_on/tv_remote/target_button_joint0/target_button_topPlate0/target_button_wrap0",
+    "mounted_note": "Rigidly mounted on graspable 'tv_remote'. RLBench re-places 'tv_remote' each episode at a random position within its spawn region and a random yaw (RLBench default +/-pi). This object sits ~0.085 m from 'tv_remote' rotation axis, so its absolute world position sweeps a wide ring; its pose relative to 'tv_remote' is fixed.",
+    "mounted_on_graspable": "tv_remote",
+    "name": "target_button_wrap0",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.146059,
+        -0.01254,
+        0.768803
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.439876,
+      "x_min_m": -0.007773,
+      "y_max_m": 0.326788,
+      "y_min_m": -0.260876,
+      "z_max_m": 0.770482,
+      "z_min_m": 0.76822
+    },
+    "parent": "target_button_topPlate0",
     "parent_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
@@ -881,23 +843,24 @@
       "source": "exact_parent_local_offset"
     },
     "placement_range": null,
+    "rotation_radius_from_graspable_m": 0.085013,
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
         1e-06,
-        -2.7e-05,
-        -1.795987
+        -2.6e-05,
+        -3.078561
       ],
       "position_xyz_m": [
-        -0.211953,
-        0.005125,
-        0.016222
+        -0.169929,
+        0.043969,
+        0.016807
       ],
       "quaternion_xyzw": [
-        1.1e-05,
-        -8e-06,
-        -0.782078,
-        0.623181
+        -1.3e-05,
+        0.0,
+        0.999503,
+        -0.03151
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -905,34 +868,46 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.0,
-        -2.7e-05,
-        -1.823392
+        0.0,
+        -2.6e-05,
+        -3.0901
       ],
       "position_xyz_m": [
-        0.036054,
-        0.105203,
-        0.768221
+        0.0732,
+        0.180235,
+        0.768807
       ],
       "quaternion_xyzw": [
-        1.1e-05,
-        -8e-06,
-        -0.790543,
-        0.612406
+        -1.3e-05,
+        0.0,
+        0.999669,
+        -0.025743
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.269899,
-      "x_uniform_min_m": -0.019515,
-      "y_uniform_max_m": 0.358887,
-      "y_uniform_min_m": -0.358833,
-      "z_fixed_m": 0.768221
+      "kind": "mounted_on_graspable_envelope",
+      "mounted_on_graspable": "tv_remote",
+      "n_resets_observed": 30,
+      "rotation_radius_m": 0.085013,
+      "source": "observed_tv_remote_range_expanded_by_mount_radius_for_full_yaw",
+      "x_uniform_max_m": 0.467592,
+      "x_uniform_min_m": -0.041447,
+      "y_uniform_max_m": 0.411718,
+      "y_uniform_min_m": -0.264825,
+      "z_fixed_m": 0.768803
     }
   },
   {
+    "analytical_task_root_yaw_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.308743,
+      "x_uniform_min_m": 0.016975,
+      "y_uniform_max_m": 0.322398,
+      "y_uniform_min_m": -0.31681,
+      "z_fixed_m": 0.772738
+    },
     "fixed_relation_to_nearest_graspable": {
       "has_separate_position_range": false,
       "reference_local_location": {
@@ -943,12 +918,12 @@
           -1.570822
         ],
         "position_xyz_m": [
-          0.045001,
-          -0.0,
-          0.012894
+          0.085001,
+          0.0,
+          0.013479
         ],
         "quaternion_xyzw": [
-          -0.0,
+          0.0,
           -0.0,
           -0.707116,
           0.707098
@@ -957,14 +932,300 @@
       },
       "reference_object": "tv_remote",
       "world_offset_xyz_m": [
-        -0.011247,
-        -0.043573,
-        0.012894
+        -0.084888,
+        -0.004375,
+        0.013476
+      ]
+    },
+    "handle": 88,
+    "hierarchy_path": "tv_on/tv_remote/target_button_joint0/target_button_topPlate0/power_visual",
+    "mounted_note": "Rigidly mounted on graspable 'tv_remote'. RLBench re-places 'tv_remote' each episode at a random position within its spawn region and a random yaw (RLBench default +/-pi). This object sits ~0.085 m from 'tv_remote' rotation axis, so its absolute world position sweeps a wide ring; its pose relative to 'tv_remote' is fixed.",
+    "mounted_on_graspable": "tv_remote",
+    "name": "power_visual",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.146059,
+        -0.01254,
+        0.772734
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.439875,
+      "x_min_m": -0.007774,
+      "y_max_m": 0.326788,
+      "y_min_m": -0.260875,
+      "z_max_m": 0.774413,
+      "z_min_m": 0.772151
+    },
+    "parent": "target_button_topPlate0",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -1.570822
+      ],
+      "position_xyz_m": [
+        0.0,
+        0.0,
+        0.0009
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        -0.707116,
+        0.707098
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "rotation_radius_from_graspable_m": 0.085015,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1e-06,
+        -2.6e-05,
+        1.633802
+      ],
+      "position_xyz_m": [
+        -0.169929,
+        0.043969,
+        0.020738
+      ],
+      "quaternion_xyzw": [
+        -9e-06,
+        -9e-06,
+        0.729028,
+        0.684484
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -2.6e-05,
+        1.622263
+      ],
+      "position_xyz_m": [
+        0.073199,
+        0.180235,
+        0.772738
+      ],
+      "quaternion_xyzw": [
+        -9e-06,
+        -9e-06,
+        0.725067,
+        0.688678
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "mounted_on_graspable_envelope",
+      "mounted_on_graspable": "tv_remote",
+      "n_resets_observed": 30,
+      "rotation_radius_m": 0.085015,
+      "source": "observed_tv_remote_range_expanded_by_mount_radius_for_full_yaw",
+      "x_uniform_max_m": 0.467594,
+      "x_uniform_min_m": -0.041449,
+      "y_uniform_max_m": 0.41172,
+      "y_uniform_min_m": -0.264827,
+      "z_fixed_m": 0.772734
+    }
+  },
+  {
+    "analytical_task_root_yaw_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.311262,
+      "x_uniform_min_m": 0.05443,
+      "y_uniform_max_m": 0.284943,
+      "y_uniform_min_m": -0.276889,
+      "z_fixed_m": 0.768808
+    },
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          -1e-06,
+          0.0
+        ],
+        "position_xyz_m": [
+          0.045001,
+          0.0,
+          0.009548
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          -0.0,
+          0.0,
+          1.0
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "tv_remote",
+      "world_offset_xyz_m": [
+        -0.044941,
+        -0.002316,
+        0.009547
+      ]
+    },
+    "handle": 91,
+    "hierarchy_path": "tv_on/tv_remote/target_button_joint1/target_button_topPlate1/target_button_wrap1",
+    "mounted_note": "Rigidly mounted on graspable 'tv_remote'. RLBench re-places 'tv_remote' each episode at a random position within its spawn region and a random yaw (RLBench default +/-pi). This object sits ~0.045 m from 'tv_remote' rotation axis, so its absolute world position sweeps a wide ring; its pose relative to 'tv_remote' is fixed.",
+    "mounted_on_graspable": "tv_remote",
+    "name": "target_button_wrap1",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.15503,
+        -0.010023,
+        0.768846
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.412913,
+      "x_min_m": 0.016386,
+      "y_max_m": 0.326749,
+      "y_min_m": -0.222728,
+      "z_max_m": 0.770342,
+      "z_min_m": 0.768221
+    },
+    "parent": "target_button_topPlate1",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        0.0,
+        -0.003031
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "rotation_radius_from_graspable_m": 0.045011,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1e-06,
+        -2.6e-05,
+        -3.078561
+      ],
+      "position_xyz_m": [
+        -0.130009,
+        0.046488,
+        0.016808
+      ],
+      "quaternion_xyzw": [
+        -1.3e-05,
+        0.0,
+        0.999503,
+        -0.03151
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -2.6e-05,
+        -3.0901
+      ],
+      "position_xyz_m": [
+        0.113146,
+        0.182294,
+        0.768808
+      ],
+      "quaternion_xyzw": [
+        -1.3e-05,
+        0.0,
+        0.999669,
+        -0.025743
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "mounted_on_graspable_envelope",
+      "mounted_on_graspable": "tv_remote",
+      "n_resets_observed": 30,
+      "rotation_radius_m": 0.045011,
+      "source": "observed_tv_remote_range_expanded_by_mount_radius_for_full_yaw",
+      "x_uniform_max_m": 0.42759,
+      "x_uniform_min_m": -0.001445,
+      "y_uniform_max_m": 0.371716,
+      "y_uniform_min_m": -0.224823,
+      "z_fixed_m": 0.768846
+    }
+  },
+  {
+    "analytical_task_root_yaw_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.311262,
+      "x_uniform_min_m": 0.054429,
+      "y_uniform_max_m": 0.284943,
+      "y_uniform_min_m": -0.276889,
+      "z_fixed_m": 0.772739
+    },
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          -1e-06,
+          -1.570822
+        ],
+        "position_xyz_m": [
+          0.045001,
+          0.0,
+          0.013479
+        ],
+        "quaternion_xyzw": [
+          0.0,
+          -0.0,
+          -0.707116,
+          0.707098
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "tv_remote",
+      "world_offset_xyz_m": [
+        -0.044941,
+        -0.002316,
+        0.013477
       ]
     },
     "handle": 92,
     "hierarchy_path": "tv_on/tv_remote/target_button_joint1/target_button_topPlate1/plus_visual",
+    "mounted_note": "Rigidly mounted on graspable 'tv_remote'. RLBench re-places 'tv_remote' each episode at a random position within its spawn region and a random yaw (RLBench default +/-pi). This object sits ~0.045 m from 'tv_remote' rotation axis, so its absolute world position sweeps a wide ring; its pose relative to 'tv_remote' is fixed.",
+    "mounted_on_graspable": "tv_remote",
     "name": "plus_visual",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.15503,
+        -0.010023,
+        0.772777
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.412912,
+      "x_min_m": 0.016386,
+      "y_max_m": 0.326749,
+      "y_min_m": -0.222727,
+      "z_max_m": 0.774273,
+      "z_min_m": 0.772152
+    },
     "parent": "target_button_topPlate1",
     "parent_local_location": {
       "kind": "exact",
@@ -987,23 +1248,24 @@
       "source": "exact_parent_local_offset"
     },
     "placement_range": null,
+    "rotation_radius_from_graspable_m": 0.045014,
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
         1e-06,
-        -2.7e-05,
-        2.916376
+        -2.6e-05,
+        1.633802
       ],
       "position_xyz_m": [
-        -0.211953,
-        0.005125,
-        0.020152
+        -0.130009,
+        0.046488,
+        0.020739
       ],
       "quaternion_xyzw": [
-        1.3e-05,
-        2e-06,
-        -0.993666,
-        -0.11237
+        -9e-06,
+        -9e-06,
+        0.729028,
+        0.684484
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -1011,34 +1273,46 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.0,
-        -2.7e-05,
-        2.888971
+        0.0,
+        -2.6e-05,
+        1.622263
       ],
       "position_xyz_m": [
-        0.036054,
-        0.105203,
-        0.772152
+        0.113146,
+        0.182294,
+        0.772739
       ],
       "quaternion_xyzw": [
-        1.3e-05,
-        2e-06,
-        -0.992033,
-        -0.125975
+        -9e-06,
+        -9e-06,
+        0.725067,
+        0.688678
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.269899,
-      "x_uniform_min_m": -0.019515,
-      "y_uniform_max_m": 0.358887,
-      "y_uniform_min_m": -0.358833,
-      "z_fixed_m": 0.772152
+      "kind": "mounted_on_graspable_envelope",
+      "mounted_on_graspable": "tv_remote",
+      "n_resets_observed": 30,
+      "rotation_radius_m": 0.045014,
+      "source": "observed_tv_remote_range_expanded_by_mount_radius_for_full_yaw",
+      "x_uniform_max_m": 0.427593,
+      "x_uniform_min_m": -0.001448,
+      "y_uniform_max_m": 0.371719,
+      "y_uniform_min_m": -0.224826,
+      "z_fixed_m": 0.772777
     }
   },
   {
+    "analytical_task_root_yaw_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.313782,
+      "x_uniform_min_m": 0.089945,
+      "y_uniform_max_m": 0.249428,
+      "y_uniform_min_m": -0.236968,
+      "z_fixed_m": 0.770362
+    },
     "fixed_relation_to_nearest_graspable": {
       "has_separate_position_range": false,
       "reference_local_location": {
@@ -1046,31 +1320,47 @@
         "orientation_rpy_rad": [
           -0.0,
           -0.0,
-          -1e-06
+          0.0
         ],
         "position_xyz_m": [
           0.005,
-          -0.0,
-          0.010709
+          0.0,
+          0.0111
         ],
         "quaternion_xyzw": [
           -0.0,
           -0.0,
-          -0.0,
+          0.0,
           1.0
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "tv_remote",
       "world_offset_xyz_m": [
-        -0.00125,
-        -0.004842,
-        0.010709
+        -0.004994,
+        -0.000257,
+        0.0111
       ]
     },
     "handle": 95,
     "hierarchy_path": "tv_on/tv_remote/target_button_joint2/target_button_topPlate2/target_button_wrap2",
+    "mounted_note": "Rigidly mounted on graspable 'tv_remote'. RLBench re-places 'tv_remote' each episode at a random position within its spawn region and a random yaw (RLBench default +/-pi). This object sits ~0.005 m from 'tv_remote' rotation axis, so its absolute world position sweeps a wide ring; its pose relative to 'tv_remote' is fixed.",
+    "mounted_on_graspable": "tv_remote",
     "name": "target_button_wrap2",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.164001,
+        -0.007507,
+        0.769757
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.385948,
+      "x_min_m": 0.040545,
+      "y_max_m": 0.32671,
+      "y_min_m": -0.184579,
+      "z_max_m": 0.770246,
+      "z_min_m": 0.768835
+    },
     "parent": "target_button_topPlate2",
     "parent_local_location": {
       "kind": "exact",
@@ -1093,23 +1383,24 @@
       "source": "exact_parent_local_offset"
     },
     "placement_range": null,
+    "rotation_radius_from_graspable_m": 0.005011,
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
         1e-06,
-        -2.7e-05,
-        -1.795988
+        -2.6e-05,
+        -3.078561
       ],
       "position_xyz_m": [
-        -0.203021,
-        0.044116,
-        0.017968
+        -0.090088,
+        0.049008,
+        0.018362
       ],
       "quaternion_xyzw": [
-        1.1e-05,
-        -8e-06,
-        -0.782078,
-        0.62318
+        -1.3e-05,
+        0.0,
+        0.999503,
+        -0.03151
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -1117,34 +1408,46 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.0,
-        -2.7e-05,
-        -1.823393
+        0.0,
+        -2.6e-05,
+        -3.0901
       ],
       "position_xyz_m": [
-        0.046051,
-        0.143934,
-        0.769968
+        0.153094,
+        0.184353,
+        0.770362
       ],
       "quaternion_xyzw": [
-        1.1e-05,
-        -8e-06,
-        -0.790544,
-        0.612406
+        -1.3e-05,
+        0.0,
+        0.999669,
+        -0.025743
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.30889,
-      "x_uniform_min_m": -0.015258,
-      "y_uniform_max_m": 0.354632,
-      "y_uniform_min_m": -0.349901,
-      "z_fixed_m": 0.769968
+      "kind": "mounted_on_graspable_envelope",
+      "mounted_on_graspable": "tv_remote",
+      "n_resets_observed": 30,
+      "rotation_radius_m": 0.005011,
+      "source": "observed_tv_remote_range_expanded_by_mount_radius_for_full_yaw",
+      "x_uniform_max_m": 0.38759,
+      "x_uniform_min_m": 0.038555,
+      "y_uniform_max_m": 0.331716,
+      "y_uniform_min_m": -0.184823,
+      "z_fixed_m": 0.769757
     }
   },
   {
+    "analytical_task_root_yaw_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.313782,
+      "x_uniform_min_m": 0.089945,
+      "y_uniform_max_m": 0.249428,
+      "y_uniform_min_m": -0.236968,
+      "z_fixed_m": 0.774293
+    },
     "fixed_relation_to_nearest_graspable": {
       "has_separate_position_range": false,
       "reference_local_location": {
@@ -1152,36 +1455,52 @@
         "orientation_rpy_rad": [
           -0.0,
           -0.0,
-          -1.570823
+          -1.570822
         ],
         "position_xyz_m": [
           0.005,
-          -0.0,
-          0.01464
+          0.0,
+          0.015031
         ],
         "quaternion_xyzw": [
-          -0.0,
+          0.0,
           -0.0,
           -0.707116,
-          0.707097
+          0.707098
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "tv_remote",
       "world_offset_xyz_m": [
-        -0.00125,
-        -0.004842,
-        0.01464
+        -0.004994,
+        -0.000257,
+        0.015031
       ]
     },
     "handle": 96,
     "hierarchy_path": "tv_on/tv_remote/target_button_joint2/target_button_topPlate2/minus_visual",
+    "mounted_note": "Rigidly mounted on graspable 'tv_remote'. RLBench re-places 'tv_remote' each episode at a random position within its spawn region and a random yaw (RLBench default +/-pi). This object sits ~0.005 m from 'tv_remote' rotation axis, so its absolute world position sweeps a wide ring; its pose relative to 'tv_remote' is fixed.",
+    "mounted_on_graspable": "tv_remote",
     "name": "minus_visual",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.164001,
+        -0.007507,
+        0.773688
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.385947,
+      "x_min_m": 0.040545,
+      "y_max_m": 0.32671,
+      "y_min_m": -0.184577,
+      "z_max_m": 0.774177,
+      "z_min_m": 0.772766
+    },
     "parent": "target_button_topPlate2",
     "parent_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.0,
+        0.0,
         0.0,
         -1.570822
       ],
@@ -1199,23 +1518,24 @@
       "source": "exact_parent_local_offset"
     },
     "placement_range": null,
+    "rotation_radius_from_graspable_m": 0.005013,
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
         1e-06,
-        -2.7e-05,
-        2.916375
+        -2.6e-05,
+        1.633802
       ],
       "position_xyz_m": [
-        -0.203021,
-        0.044116,
-        0.021899
+        -0.090088,
+        0.049008,
+        0.022293
       ],
       "quaternion_xyzw": [
-        1.3e-05,
-        2e-06,
-        -0.993666,
-        -0.112371
+        -9e-06,
+        -9e-06,
+        0.729028,
+        0.684484
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -1223,31 +1543,34 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.0,
-        -2.7e-05,
-        2.88897
+        0.0,
+        -2.6e-05,
+        1.622263
       ],
       "position_xyz_m": [
-        0.046051,
-        0.143934,
-        0.773899
+        0.153094,
+        0.184353,
+        0.774293
       ],
       "quaternion_xyzw": [
-        1.3e-05,
-        2e-06,
-        -0.992033,
-        -0.125976
+        -9e-06,
+        -9e-06,
+        0.725067,
+        0.688678
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.30889,
-      "x_uniform_min_m": -0.015258,
-      "y_uniform_max_m": 0.354632,
-      "y_uniform_min_m": -0.349901,
-      "z_fixed_m": 0.773899
+      "kind": "mounted_on_graspable_envelope",
+      "mounted_on_graspable": "tv_remote",
+      "n_resets_observed": 30,
+      "rotation_radius_m": 0.005013,
+      "source": "observed_tv_remote_range_expanded_by_mount_radius_for_full_yaw",
+      "x_uniform_max_m": 0.387592,
+      "x_uniform_min_m": 0.038553,
+      "y_uniform_max_m": 0.331718,
+      "y_uniform_min_m": -0.184825,
+      "z_fixed_m": 0.773688
     }
   }
 ]

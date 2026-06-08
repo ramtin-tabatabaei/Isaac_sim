@@ -2,61 +2,66 @@
   "graspable_objects": [
     {
       "fixed_offset_from_task_boundary_root_xyz_m": [
-        0.001331,
-        0.236767,
-        0.030429
+        0.001332,
+        0.236768,
+        0.030422
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
-        1.537543,
-        -1.533877,
-        -0.014097
+        1.536385,
+        -1.533875,
+        -0.015232
       ],
       "name": "phone",
+      "observed_spawn_yaw_range_rad": [
+        -0.015534,
+        -0.014123
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          1.562699,
-          -1.418666,
-          0.011128
+          1.569239,
+          0.617089,
+          0.020057
         ],
         "position_xyz_m": [
-          0.184005,
-          0.1161,
-          0.782429
+          -0.085533,
+          -0.04672,
+          0.782422
         ],
         "quaternion_xyzw": [
-          0.531792,
-          -0.465385,
-          -0.455685,
-          0.541262
+          0.675311,
+          0.208134,
+          0.221312,
+          0.672054
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.66232,
-        "x_uniform_min_m": -0.170896,
-        "y_uniform_max_m": 0.422038,
-        "y_uniform_min_m": -0.582315,
-        "z_fixed_m": 0.782429
+        "x_uniform_max_m": 0.519151,
+        "x_uniform_min_m": -0.129623,
+        "y_uniform_max_m": 0.310704,
+        "y_uniform_min_m": -0.345572,
+        "z_fixed_m": 0.782427
       }
     }
   ],
   "other_scene_objects": [
     {
       "fixed_offset_from_reference_local_xyz_m": [
-        0.236639,
-        0.002031,
-        0.010072
+        0.23664,
+        0.002033,
+        0.010074
       ],
       "fixed_offset_from_reference_xyz_m": [
-        0.0259,
-        -0.23535,
-        0.006571
+        0.198753,
+        0.128678,
+        0.006578
       ],
       "fixed_orientation_from_reference_rpy_rad": [
-        0.000521,
-        -0.036916,
-        1.55165
+        0.000563,
+        -0.036919,
+        1.551628
       ],
       "has_separate_distribution": false,
       "name": "phone_case",
@@ -64,27 +69,27 @@
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          1.570803,
-          -1.45557,
-          1.570803
+          1.570797,
+          0.580188,
+          1.570796
         ],
         "position_xyz_m": [
-          0.209905,
-          -0.11925,
+          0.11322,
+          0.081958,
           0.789
         ],
         "quaternion_xyzw": [
-          0.040716,
-          -0.705934,
-          0.040716,
-          0.705933
+          0.62213,
+          -0.336087,
+          0.622129,
+          0.336087
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
         "x_uniform_max_m": 0.42555,
         "x_uniform_min_m": 0.065875,
-        "y_uniform_max_m": 0.185268,
+        "y_uniform_max_m": 0.185266,
         "y_uniform_min_m": -0.345546,
         "z_fixed_m": 0.789
       }
@@ -100,18 +105,18 @@
     "orientation_rpy_rad": [
       -0.0,
       0.0,
-      0.115227
+      2.150985
     ],
     "position_xyz_m": [
-      0.209905,
-      -0.11925,
+      0.113221,
+      0.081958,
       0.752
     ],
     "quaternion_xyzw": [
       0.0,
       0.0,
-      0.057582,
-      0.998341
+      0.879824,
+      0.475299
     ],
     "source": "exact_after_one_rlbench_reset"
   },

@@ -1,0 +1,829 @@
+[
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.54882,
+          1.484833,
+          -0.749483
+        ],
+        "position_xyz_m": [
+          -0.004016,
+          -0.129244,
+          0.071321
+        ],
+        "quaternion_xyzw": [
+          0.656403,
+          -0.261136,
+          0.632758,
+          -0.317113
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "knife",
+      "world_offset_xyz_m": [
+        -0.14624,
+        0.014085,
+        -0.01491
+      ]
+    },
+    "handle": 81,
+    "hierarchy_path": "put_knife_in_knife_block/chopping_board",
+    "name": "chopping_board",
+    "parent": "put_knife_in_knife_block",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        0.000345,
+        2.825102
+      ],
+      "position_xyz_m": [
+        0.085422,
+        0.004367,
+        0.006195
+      ],
+      "quaternion_xyzw": [
+        0.00017,
+        2.7e-05,
+        0.987505,
+        0.157586
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        0.000345,
+        2.825102
+      ],
+      "position_xyz_m": [
+        0.085422,
+        0.004367,
+        0.006195
+      ],
+      "quaternion_xyzw": [
+        0.00017,
+        2.7e-05,
+        0.987505,
+        0.157586
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        0.000345,
+        2.825102
+      ],
+      "position_xyz_m": [
+        0.320795,
+        -0.033119,
+        0.758195
+      ],
+      "quaternion_xyzw": [
+        0.00017,
+        2.7e-05,
+        0.987505,
+        0.157586
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.348401,
+      "x_uniform_min_m": 0.285422,
+      "y_uniform_max_m": 0.184367,
+      "y_uniform_min_m": -0.175633,
+      "z_fixed_m": 0.758195
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.971175,
+          1.425041,
+          2.322856
+        ],
+        "position_xyz_m": [
+          0.084903,
+          -0.325748,
+          0.05146
+        ],
+        "quaternion_xyzw": [
+          0.389821,
+          0.554128,
+          0.492496,
+          0.546287
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "knife",
+      "world_offset_xyz_m": [
+        -0.324688,
+        -0.085532,
+        0.056838
+      ]
+    },
+    "handle": 84,
+    "hierarchy_path": "put_knife_in_knife_block/knife_block",
+    "name": "knife_block",
+    "parent": "put_knife_in_knife_block",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.087323,
+        -2e-06,
+        0.188495
+      ],
+      "position_xyz_m": [
+        -0.093027,
+        -0.09525,
+        0.077943
+      ],
+      "quaternion_xyzw": [
+        -0.043454,
+        0.004107,
+        0.094019,
+        0.994613
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.087323,
+        -2e-06,
+        0.188495
+      ],
+      "position_xyz_m": [
+        -0.093027,
+        -0.09525,
+        0.077943
+      ],
+      "quaternion_xyzw": [
+        -0.043454,
+        0.004107,
+        0.094019,
+        0.994613
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.087323,
+        -2e-06,
+        0.188495
+      ],
+      "position_xyz_m": [
+        0.142347,
+        -0.132736,
+        0.829942
+      ],
+      "quaternion_xyzw": [
+        -0.043454,
+        0.004107,
+        0.094019,
+        0.994613
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.169953,
+      "x_uniform_min_m": 0.106974,
+      "y_uniform_max_m": 0.08475,
+      "y_uniform_min_m": -0.27525,
+      "z_fixed_m": 0.829942
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.547128,
+          1.485148,
+          2.706914
+        ],
+        "position_xyz_m": [
+          -0.003403,
+          -0.209536,
+          0.101441
+        ],
+        "quaternion_xyzw": [
+          0.361384,
+          0.606951,
+          0.412802,
+          0.574984
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "knife",
+      "world_offset_xyz_m": [
+        -0.231662,
+        0.009718,
+        -0.021105
+      ]
+    },
+    "handle": 89,
+    "hierarchy_path": "put_knife_in_knife_block/boundary",
+    "name": "boundary",
+    "parent": "put_knife_in_knife_block",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.235373,
+        -0.037486,
+        0.752
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.262979,
+      "x_uniform_min_m": 0.2,
+      "y_uniform_max_m": 0.18,
+      "y_uniform_min_m": -0.18,
+      "z_fixed_m": 0.752
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.841424,
+          0.063238,
+          0.058642
+        ],
+        "position_xyz_m": [
+          -0.002959,
+          -0.129882,
+          0.072011
+        ],
+        "quaternion_xyzw": [
+          -0.408877,
+          -0.016877,
+          -0.039653,
+          -0.911571
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "knife",
+      "world_offset_xyz_m": [
+        -0.14718,
+        0.014426,
+        -0.01391
+      ]
+    },
+    "handle": 82,
+    "hierarchy_path": "put_knife_in_knife_block/chopping_board/chopping_board_visual",
+    "name": "chopping_board_visual",
+    "parent": "chopping_board",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570796,
+        -3.141593
+      ],
+      "position_xyz_m": [
+        0.001,
+        -3.1e-05,
+        0.001
+      ],
+      "quaternion_xyzw": [
+        0.706985,
+        -0.0,
+        0.707229,
+        0.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.568633,
+        -1.254305,
+        -1.568633
+      ],
+      "position_xyz_m": [
+        0.084482,
+        0.004707,
+        0.007195
+      ],
+      "quaternion_xyzw": [
+        0.11143,
+        0.698031,
+        0.11143,
+        -0.698513
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.568633,
+        -1.254305,
+        -1.568633
+      ],
+      "position_xyz_m": [
+        0.319855,
+        -0.032779,
+        0.759195
+      ],
+      "quaternion_xyzw": [
+        0.11143,
+        0.698031,
+        0.11143,
+        -0.698513
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.347461,
+      "x_uniform_min_m": 0.284482,
+      "y_uniform_max_m": 0.184707,
+      "y_uniform_min_m": -0.175293,
+      "z_fixed_m": 0.759195
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.551551,
+          1.484581,
+          -0.746763
+        ],
+        "position_xyz_m": [
+          0.000829,
+          -0.082341,
+          0.030089
+        ],
+        "quaternion_xyzw": [
+          0.656512,
+          -0.261081,
+          0.632645,
+          -0.317158
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "knife",
+      "world_offset_xyz_m": [
+        -0.087298,
+        -0.005219,
+        -0.006155
+      ]
+    },
+    "handle": 83,
+    "hierarchy_path": "put_knife_in_knife_block/chopping_board/knife_boundary",
+    "name": "knife_boundary",
+    "parent": "chopping_board",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        -0.000345,
+        -0.0
+      ],
+      "position_xyz_m": [
+        -0.06202,
+        1e-06,
+        0.008775
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        -0.000173,
+        -0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.000107,
+        0.000673,
+        2.825102
+      ],
+      "position_xyz_m": [
+        0.144364,
+        -0.014937,
+        0.01495
+      ],
+      "quaternion_xyzw": [
+        0.000341,
+        -0.0,
+        0.987505,
+        0.157586
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.000107,
+        0.000673,
+        2.825102
+      ],
+      "position_xyz_m": [
+        0.379737,
+        -0.052423,
+        0.76695
+      ],
+      "quaternion_xyzw": [
+        0.000341,
+        -0.0,
+        0.987505,
+        0.157586
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.407343,
+      "x_uniform_min_m": 0.344364,
+      "y_uniform_max_m": 0.165063,
+      "y_uniform_min_m": -0.194937,
+      "z_fixed_m": 0.76695
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          2.170002,
+          -1.425024,
+          2.38905
+        ],
+        "position_xyz_m": [
+          0.084681,
+          -0.350124,
+          0.056862
+        ],
+        "quaternion_xyzw": [
+          0.037992,
+          0.734519,
+          -0.116177,
+          -0.667489
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "knife",
+      "world_offset_xyz_m": [
+        -0.349094,
+        -0.090272,
+        0.054542
+      ]
+    },
+    "handle": 88,
+    "hierarchy_path": "put_knife_in_knife_block/knife_block/knife_block_visual",
+    "name": "knife_block_visual",
+    "parent": "knife_block",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.141563,
+        -5.5e-05,
+        -1.570869
+      ],
+      "position_xyz_m": [
+        -0.024821,
+        0.000131,
+        -0.0027
+      ],
+      "quaternion_xyzw": [
+        0.707081,
+        0.707133,
+        -9e-06,
+        -3e-05
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.054288,
+        -5.7e-05,
+        -1.759365
+      ],
+      "position_xyz_m": [
+        -0.117433,
+        -0.099991,
+        0.075647
+      ],
+      "quaternion_xyzw": [
+        0.63679,
+        0.769802,
+        -0.033643,
+        0.027793
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.054288,
+        -5.7e-05,
+        -1.759365
+      ],
+      "position_xyz_m": [
+        0.117941,
+        -0.137477,
+        0.827647
+      ],
+      "quaternion_xyzw": [
+        0.63679,
+        0.769802,
+        -0.033643,
+        0.027793
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.145547,
+      "x_uniform_min_m": 0.082567,
+      "y_uniform_max_m": 0.080009,
+      "y_uniform_min_m": -0.279991,
+      "z_fixed_m": 0.827647
+    }
+  },
+  {
+    "handle": 91,
+    "hierarchy_path": "put_knife_in_knife_block/knife_base/knife",
+    "name": "knife",
+    "parent": "knife_base",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.568772,
+        0.011284,
+        1.485193
+      ],
+      "position_xyz_m": [
+        0.002022,
+        7e-06,
+        -0.00104
+      ],
+      "quaternion_xyzw": [
+        -0.523101,
+        0.474714,
+        -0.48156,
+        -0.51876
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.494641,
+      "x_uniform_min_m": 0.431662,
+      "y_uniform_max_m": 0.170282,
+      "y_uniform_min_m": -0.189718,
+      "z_fixed_m": 0.773105
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.568588,
+        -0.411095,
+        -1.65554
+      ],
+      "position_xyz_m": [
+        0.231662,
+        -0.009718,
+        0.021105
+      ],
+      "quaternion_xyzw": [
+        -0.361384,
+        -0.606951,
+        -0.412802,
+        0.574984
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.568588,
+        -0.411095,
+        -1.65554
+      ],
+      "position_xyz_m": [
+        0.467035,
+        -0.047204,
+        0.773105
+      ],
+      "quaternion_xyzw": [
+        -0.361384,
+        -0.606951,
+        -0.412802,
+        0.574984
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.494641,
+      "x_uniform_min_m": 0.431662,
+      "y_uniform_max_m": 0.170282,
+      "y_uniform_min_m": -0.189718,
+      "z_fixed_m": 0.773105
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.12473,
+          -0.00534,
+          0.897447
+        ],
+        "position_xyz_m": [
+          0.000787,
+          0.001779,
+          -4.1e-05
+        ],
+        "quaternion_xyzw": [
+          0.900957,
+          -0.433819,
+          0.001252,
+          0.008755
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "knife",
+      "world_offset_xyz_m": [
+        0.00158,
+        0.000642,
+        0.000936
+      ]
+    },
+    "handle": 92,
+    "hierarchy_path": "put_knife_in_knife_block/knife_base/knife/knife_visual",
+    "name": "knife_visual",
+    "parent": "knife",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.12473,
+        -0.00534,
+        0.897447
+      ],
+      "position_xyz_m": [
+        0.000787,
+        0.001779,
+        -4.1e-05
+      ],
+      "quaternion_xyzw": [
+        0.900957,
+        -0.433819,
+        0.001252,
+        0.008755
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.580315,
+        0.394736,
+        2.550166
+      ],
+      "position_xyz_m": [
+        0.233242,
+        -0.009076,
+        0.022041
+      ],
+      "quaternion_xyzw": [
+        0.33503,
+        -0.626217,
+        0.700718,
+        0.067835
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.580315,
+        0.394736,
+        2.550166
+      ],
+      "position_xyz_m": [
+        0.468615,
+        -0.046562,
+        0.774041
+      ],
+      "quaternion_xyzw": [
+        0.33503,
+        -0.626217,
+        0.700718,
+        0.067835
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.496221,
+      "x_uniform_min_m": 0.433242,
+      "y_uniform_max_m": 0.170924,
+      "y_uniform_min_m": -0.189076,
+      "z_fixed_m": 0.774041
+    }
+  }
+]

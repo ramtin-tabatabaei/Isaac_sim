@@ -2,61 +2,66 @@
   "graspable_objects": [
     {
       "fixed_offset_from_task_boundary_root_xyz_m": [
-        0.231662,
-        -0.009718,
-        0.021105
+        -0.004535,
+        0.15973,
+        0.021169
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
-        -1.568588,
-        -0.411095,
-        -1.65554
+        -1.567755,
+        1.116632,
+        -1.659924
       ],
       "name": "knife",
+      "observed_spawn_yaw_range_rad": [
+        -1.742935,
+        1.500298
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -1.568588,
-          -0.411095,
-          -1.65554
+          -1.567755,
+          1.116632,
+          -1.659924
         ],
         "position_xyz_m": [
-          0.467035,
-          -0.047204,
-          0.773105
+          0.290227,
+          0.281813,
+          0.773169
         ],
         "quaternion_xyzw": [
-          -0.361384,
-          -0.606951,
-          -0.412802,
-          0.574984
+          0.680982,
+          0.188671,
+          0.695649,
+          -0.12938
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.494641,
-        "x_uniform_min_m": 0.431662,
-        "y_uniform_max_m": 0.170282,
-        "y_uniform_min_m": -0.189718,
-        "z_fixed_m": 0.773105
+        "x_uniform_max_m": 0.403206,
+        "x_uniform_min_m": 0.066757,
+        "y_uniform_max_m": 0.27515,
+        "y_uniform_min_m": -0.264402,
+        "z_fixed_m": 0.775834
       }
     }
   ],
   "other_scene_objects": [
     {
       "fixed_offset_from_reference_local_xyz_m": [
-        -0.004016,
-        -0.129244,
-        0.071321
+        -0.023757,
+        0.101519,
+        -0.049
       ],
       "fixed_offset_from_reference_xyz_m": [
-        -0.14624,
-        0.014085,
-        -0.01491
+        0.001255,
+        -0.114218,
+        -0.014974
       ],
       "fixed_orientation_from_reference_rpy_rad": [
-        -1.54882,
-        1.484833,
-        -0.749483
+        -1.551773,
+        1.484235,
+        3.085756
       ],
       "has_separate_distribution": false,
       "name": "chopping_board",
@@ -66,44 +71,44 @@
         "orientation_rpy_rad": [
           0.0,
           0.000345,
-          2.825102
+          -1.153519
         ],
         "position_xyz_m": [
-          0.320795,
-          -0.033119,
+          0.291482,
+          0.167595,
           0.758195
         ],
         "quaternion_xyzw": [
-          0.00017,
-          2.7e-05,
-          0.987505,
-          0.157586
+          -9.4e-05,
+          0.000145,
+          -0.54531,
+          0.838234
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.348401,
-        "x_uniform_min_m": 0.285422,
-        "y_uniform_max_m": 0.184367,
-        "y_uniform_min_m": -0.175633,
+        "x_uniform_max_m": 0.296721,
+        "x_uniform_min_m": 0.196721,
+        "y_uniform_max_m": 0.225512,
+        "y_uniform_min_m": -0.134488,
         "z_fixed_m": 0.758195
       }
     },
     {
       "fixed_offset_from_reference_local_xyz_m": [
-        0.084903,
-        -0.325748,
-        0.05146
+        0.039808,
+        0.202104,
+        -0.243552
       ],
       "fixed_offset_from_reference_xyz_m": [
-        -0.324688,
-        -0.085532,
-        0.056838
+        -0.132104,
+        -0.284734,
+        0.056774
       ],
       "fixed_orientation_from_reference_rpy_rad": [
-        -0.971175,
-        1.425041,
-        2.322856
+        -0.196318,
+        1.530425,
+        -1.183085
       ],
       "has_separate_distribution": false,
       "name": "knife_block",
@@ -113,44 +118,44 @@
         "orientation_rpy_rad": [
           -0.087323,
           -2e-06,
-          0.188495
+          2.214592
         ],
         "position_xyz_m": [
-          0.142347,
-          -0.132736,
+          0.158123,
+          -0.002921,
           0.829942
         ],
         "quaternion_xyzw": [
-          -0.043454,
-          0.004107,
-          0.094019,
-          0.994613
+          -0.019515,
+          0.039042,
+          0.893641,
+          0.446656
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.169953,
-        "x_uniform_min_m": 0.106974,
-        "y_uniform_max_m": 0.08475,
-        "y_uniform_min_m": -0.27525,
+        "x_uniform_max_m": 0.163361,
+        "x_uniform_min_m": 0.063361,
+        "y_uniform_max_m": 0.054995,
+        "y_uniform_min_m": -0.305005,
         "z_fixed_m": 0.829942
       }
     },
     {
       "fixed_offset_from_reference_local_xyz_m": [
-        -0.003403,
-        -0.209536,
-        0.101441
+        -0.033559,
+        0.143165,
+        -0.066028
       ],
       "fixed_offset_from_reference_xyz_m": [
-        -0.231662,
-        0.009718,
-        -0.021105
+        0.004535,
+        -0.15973,
+        -0.021169
       ],
       "fixed_orientation_from_reference_rpy_rad": [
-        -1.547128,
-        1.485148,
-        2.706914
+        -1.555335,
+        1.484393,
+        -2.040365
       ],
       "has_separate_distribution": false,
       "name": "boundary",
@@ -163,8 +168,8 @@
           -0.0
         ],
         "position_xyz_m": [
-          0.235373,
-          -0.037486,
+          0.294761,
+          0.122083,
           0.752
         ],
         "quaternion_xyzw": [
@@ -176,7 +181,7 @@
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.262979,
+        "x_uniform_max_m": 0.3,
         "x_uniform_min_m": 0.2,
         "y_uniform_max_m": 0.18,
         "y_uniform_min_m": -0.18,
@@ -185,19 +190,19 @@
     },
     {
       "fixed_offset_from_reference_local_xyz_m": [
-        0.000829,
-        -0.082341,
-        0.030089
+        -0.009661,
+        0.040532,
+        -0.046697
       ],
       "fixed_offset_from_reference_xyz_m": [
-        -0.087298,
-        -0.005219,
-        -0.006155
+        -0.023875,
+        -0.057519,
+        -0.00619
       ],
       "fixed_orientation_from_reference_rpy_rad": [
         -1.551551,
-        1.484581,
-        -0.746763
+        1.48458,
+        3.085533
       ],
       "has_separate_distribution": false,
       "name": "knife_boundary",
@@ -205,29 +210,29 @@
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          0.000107,
-          0.000673,
-          2.825102
+          -0.000315,
+          0.000205,
+          -1.153519
         ],
         "position_xyz_m": [
-          0.379737,
-          -0.052423,
-          0.76695
+          0.266352,
+          0.224294,
+          0.766979
         ],
         "quaternion_xyzw": [
-          0.000341,
-          -0.0,
-          0.987505,
-          0.157586
+          -0.000188,
+          0.0,
+          -0.545311,
+          0.838234
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.407343,
-        "x_uniform_min_m": 0.344364,
-        "y_uniform_max_m": 0.165063,
-        "y_uniform_min_m": -0.194937,
-        "z_fixed_m": 0.76695
+        "x_uniform_max_m": 0.27159,
+        "x_uniform_min_m": 0.17159,
+        "y_uniform_max_m": 0.28221,
+        "y_uniform_min_m": -0.07779,
+        "z_fixed_m": 0.766979
       }
     }
   ],
@@ -244,8 +249,8 @@
       -0.0
     ],
     "position_xyz_m": [
-      0.235373,
-      -0.037486,
+      0.294761,
+      0.122083,
       0.752
     ],
     "quaternion_xyzw": [

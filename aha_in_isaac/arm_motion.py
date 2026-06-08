@@ -179,6 +179,7 @@ def build_arm_motion(
     waypoints: list[dict], motion_config: dict, force_down: bool = False, curvy: bool = True,
     carry_lift: float = 0.0, graspable_name: str | None = None,
     slide_along_rod: float = 0.0, slide_axis_w: tuple[float, float, float] = (0.0, -1.0, 0.0),
+    graspable_names: set | None = None,
 ) -> list[Waypoint]:
     if not waypoints:
         return []
@@ -262,6 +263,92 @@ def build_arm_motion(
         grip = str(motion_config.get("gripper_state", "closed"))
         for index in range(len(waypoints)):
             _append_follow(index, grip)
+        return motion
+
+    # Multi-pick pick-and-place sequence (e.g. block_pyramid, stack_blocks): the recorded
+    # waypoints are N repeats of approach -> grasp a block -> lift -> move -> place at the target
+    # -> retreat. The single-grasp path below would grasp ONE block and drag it through every later
+    # waypoint (ramming the other blocks/the stack -> the arm fights those contacts and goes
+    # unstable). Instead, drive the gripper from the waypoint PARENTS: CLOSE on any waypoint whose
+    # parent is a graspable (dynamic) body, OPEN on any waypoint whose parent is a placement target
+    # (a non-waypoint, non-graspable frame), and hold the current grip through the approach/lift/
+    # retreat waypoints (whose parent is another waypoint). Opt in with "pick_place_sequence": true.
+    if motion_config.get("pick_place_sequence"):
+        grasp_set = set(graspable_names or ())
+        wp_names = {w.get("name") for w in waypoints}
+        # Raise the transit (lift/move) height while CARRYING so the held object clears the other
+        # objects and the growing stack instead of grazing their tops (which jams the arm -> the
+        # diffIK flails). The grasp and place poses stay at their recorded heights for accuracy.
+        clearance = float(motion_config.get("carry_clearance_m") or 0.0)
+        grip = "open"
+        for index in range(len(waypoints)):
+            parent = (waypoints[index].get("parent") or "")
+            name, pos, quat = names[index], positions[index], quats[index]
+            steps = _waypoint_steps(motion_config, name)
+            if parent in grasp_set:                       # waypoint sits ON a graspable body -> grasp
+                motion.append(Waypoint(name, pos, quat_w=quat, gripper="open", duration_steps=steps))
+                motion.append(Waypoint(f"Grasp at {name}", pos, quat_w=quat, gripper="closed",
+                                       duration_steps=GRASP_DWELL_STEPS))
+                grip = "closed"
+            elif parent and parent not in wp_names:        # waypoint sits on a placement target -> release
+                motion.append(Waypoint(name, pos, quat_w=quat, gripper="closed", duration_steps=steps))
+                motion.append(Waypoint(f"Release at {name}", pos, quat_w=quat, gripper="open",
+                                       duration_steps=RELEASE_DWELL_STEPS))
+                grip = "open"
+            else:                                          # approach / lift / retreat: keep the grip
+                if grip == "closed" and clearance > 0.0:
+                    pos = (pos[0], pos[1], pos[2] + clearance)
+                motion.append(Waypoint(name, pos, quat_w=quat, gripper=grip, duration_steps=steps))
+        return motion
+
+    # Optional per-task "grasp_z_offset_m": lower the gripper-tip target at the grasp by this
+    # many metres (positive = LOWER, world -z) for BOTH the final descent and the in-place close.
+    # The recorded grasp tip can sit a few mm too high for a SHORT/flat object (and the diff-IK
+    # arm under-descends a little), so the finger pads skim the top instead of straddling the
+    # object's mid-thickness -> the pinch slips off. Lowering seats the fingers deeper. It mutates
+    # only positions[grasp_index] (the grasp point); the flat carry below reads positions[grasp_index+1:]
+    # and positions[-1], so the lift/carry/release heights are unchanged. (slide/carry_lift read
+    # positions[grasp_index], but those tasks leave grasp_z_offset_m at its 0.0 default, so no effect.)
+    grasp_z_offset = float(motion_config.get("grasp_z_offset_m") or 0.0)
+    if grasp_z_offset:
+        gx, gy, gz = positions[grasp_index]
+        positions[grasp_index] = (gx, gy, gz - grasp_z_offset)
+        print(f"[INFO]: grasp_z_offset_m={grasp_z_offset:.4f}: lowered grasp '{names[grasp_index]}' tip to "
+              f"z={positions[grasp_index][2]:.4f} so the fingers seat onto the object mid-thickness.")
+
+    # Scripted per-waypoint gripper (e.g. change_channel: grasp the remote -> carry+place it ->
+    # RELEASE -> re-close and PRESS a button). This task both grasps AND later presses with the
+    # same arm, so neither the single-grasp path (one grasp, release at the very end) nor
+    # pick_place_sequence (keys the grip off the waypoint parent - which is tv_remote for BOTH
+    # the grasp approach and the button approach) fits. Opt in with
+    # "gripper_per_waypoint": {waypoint_name_or_index: "open"|"closed"}. The gripper changes IN
+    # PLACE (a grasp/release dwell) only when the scripted state differs from the current one, so
+    # the arm reaches each waypoint at the previous grip and actuates after arriving - the proven
+    # approach-then-close ordering. grasp_z_offset_m (above) still lowers the grasp waypoint.
+    grip_script = motion_config.get("gripper_per_waypoint")
+    if grip_script:
+        default_state = str(motion_config.get("gripper_default", "closed"))
+        # Build ONLY the waypoints named in the script (in order). Listing a prefix (e.g. the
+        # grasp+carry+place wp0..wp5) lets a later runtime phase handle the rest - change_channel
+        # presses the button in a live phase (run_scene) because the button RIDES the relocated
+        # remote, so its recorded press waypoints are stale once the remote has been moved.
+        listed = [i for i in range(len(waypoints))
+                  if names[i] in grip_script or str(i) in grip_script]
+        grip = None
+        for index in listed:
+            name = names[index]
+            target = str(grip_script.get(name, grip_script.get(str(index), default_state)))
+            if grip is None:
+                grip = target  # start already at the first waypoint's state (no opening dwell)
+            if target != grip:
+                _append_follow(index, grip)  # arrive at the OLD grip, then actuate in place
+                verb = "Grasp" if target == "closed" else "Release"
+                dwell = GRASP_DWELL_STEPS if target == "closed" else RELEASE_DWELL_STEPS
+                motion.append(Waypoint(f"{verb} at {name}", positions[index], quat_w=quats[index],
+                                       gripper=target, duration_steps=dwell))
+                grip = target
+            else:
+                _append_follow(index, grip)
         return motion
 
     # Approach + grasp: follow the recorded waypoints up to and including the grasp,

@@ -1,0 +1,47 @@
+{
+  "shapes": {
+    "base": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 1.3510791063308716,
+      "friction": 0.5
+    },
+    "laptop_holder": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 12.000000953674316,
+      "friction": 0.5
+    },
+    "base_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 408.0378112792969,
+      "friction": 0.5
+    },
+    "lid": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.08329998701810837,
+      "friction": 0.5
+    },
+    "lid_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 1.0504000186920166,
+      "friction": 0.5
+    }
+  },
+  "joints": {
+    "joint": {
+      "type": "revolute",
+      "cyclic": false,
+      "lower": 0.0,
+      "upper": 104.99999950679661
+    }
+  }
+}

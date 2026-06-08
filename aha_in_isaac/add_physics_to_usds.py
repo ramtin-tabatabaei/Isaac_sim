@@ -307,10 +307,19 @@ def _make_physics_material(stage: Usd.Stage, root: Usd.Prim, spec: dict) -> UsdS
     physics_api.CreateRestitutionAttr(float(spec["restitution"]))
     if spec.get("density") and float(spec["density"]) > 0.0:
         physics_api.CreateDensityAttr(float(spec["density"]))
-    if _HAS_PHYSX and float(spec.get("compliant_stiffness") or 0.0) > 0.0:
+    # The friction COMBINE mode decides how this material's friction mixes with the
+    # contacting body's. PhysX defaults to 'average', so a high object friction is
+    # dragged down by a low-friction gripper finger (and the Franka finger colliders are
+    # INSTANCED, so the runtime high-friction pad material silently fails to bind). Setting
+    # 'max' here makes the grippable object's own friction win the contact regardless of the
+    # finger material, so a flat/light object (e.g. a TV remote) isn't squeezed out of the grip.
+    if _HAS_PHYSX and (spec.get("friction_combine_mode") or float(spec.get("compliant_stiffness") or 0.0) > 0.0):
         physx_material = PhysxSchema.PhysxMaterialAPI.Apply(material.GetPrim())
-        physx_material.CreateCompliantContactStiffnessAttr(float(spec["compliant_stiffness"]))
-        physx_material.CreateCompliantContactDampingAttr(float(spec.get("compliant_damping") or 0.0))
+        if spec.get("friction_combine_mode"):
+            physx_material.CreateFrictionCombineModeAttr(str(spec["friction_combine_mode"]))
+        if float(spec.get("compliant_stiffness") or 0.0) > 0.0:
+            physx_material.CreateCompliantContactStiffnessAttr(float(spec["compliant_stiffness"]))
+            physx_material.CreateCompliantContactDampingAttr(float(spec.get("compliant_damping") or 0.0))
     return material
 
 

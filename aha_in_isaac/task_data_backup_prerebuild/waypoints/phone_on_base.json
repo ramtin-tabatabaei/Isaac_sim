@@ -1,0 +1,667 @@
+[
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141591,
+        0.241741,
+        3.141591
+      ],
+      "position_xyz_m": [
+        0.278595,
+        -0.008166,
+        1.471687
+      ],
+      "quaternion_xyzw": [
+        -1e-06,
+        0.992704,
+        -1e-06,
+        0.120576
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.026936,
+        -0.28701,
+        0.11888
+      ],
+      "position_xyz_m": [
+        -0.025141,
+        -0.138338,
+        -0.601628
+      ],
+      "quaternion_xyzw": [
+        0.004811,
+        -0.143539,
+        0.056866,
+        0.987998
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      -0.000493,
+      0.089322,
+      -0.026493
+    ],
+    "fixed_orientation_rpy_rad": [
+      1.5251,
+      -0.0194,
+      1.607881
+    ],
+    "motion_type": "point",
+    "name": "waypoint0",
+    "parent": "phone",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.5251,
+          -0.0194,
+          1.607881
+        ],
+        "position_xyz_m": [
+          -0.000493,
+          0.089322,
+          -0.026493
+        ],
+        "quaternion_xyzw": [
+          -0.474233,
+          0.502262,
+          -0.516011,
+          -0.506526
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "phone"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.5251,
+          -0.0194,
+          1.607881
+        ],
+        "position_xyz_m": [
+          -0.000493,
+          0.089322,
+          -0.026493
+        ],
+        "quaternion_xyzw": [
+          -0.474233,
+          0.502262,
+          -0.516011,
+          -0.506526
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "phone"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.134762,
+        -0.046416,
+        3.027273
+      ],
+      "position_xyz_m": [
+        0.209966,
+        0.122308,
+        0.871693
+      ],
+      "quaternion_xyzw": [
+        -0.057034,
+        0.998097,
+        -0.002083,
+        -0.023363
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      3.134762,
+      -0.046416,
+      3.027273
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141586,
+        0.241631,
+        -3.141585
+      ],
+      "position_xyz_m": [
+        0.278625,
+        -0.008152,
+        1.471637
+      ],
+      "quaternion_xyzw": [
+        3e-06,
+        0.992711,
+        -3e-06,
+        0.120522
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.026929,
+        -0.286901,
+        0.118885
+      ],
+      "position_xyz_m": [
+        -0.021124,
+        -0.138475,
+        -0.67647
+      ],
+      "quaternion_xyzw": [
+        -0.00481,
+        0.143485,
+        -0.05687,
+        -0.988005
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      -0.001944,
+      0.014338,
+      -0.027122
+    ],
+    "fixed_orientation_rpy_rad": [
+      1.5251,
+      -0.0194,
+      1.607881
+    ],
+    "motion_type": "point",
+    "name": "waypoint1",
+    "parent": "phone",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.5251,
+          -0.0194,
+          1.607881
+        ],
+        "position_xyz_m": [
+          -0.001944,
+          0.014338,
+          -0.027122
+        ],
+        "quaternion_xyzw": [
+          0.474233,
+          -0.502262,
+          0.516011,
+          0.506526
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "phone"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.5251,
+          -0.0194,
+          1.607881
+        ],
+        "position_xyz_m": [
+          -0.001944,
+          0.014338,
+          -0.027122
+        ],
+        "quaternion_xyzw": [
+          0.474233,
+          -0.502262,
+          0.516011,
+          0.506526
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "phone"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.134762,
+        -0.046416,
+        3.027273
+      ],
+      "position_xyz_m": [
+        0.210495,
+        0.122406,
+        0.796695
+      ],
+      "quaternion_xyzw": [
+        0.057034,
+        -0.998097,
+        0.002083,
+        0.023363
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      3.134762,
+      -0.046416,
+      3.027273
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141585,
+        0.241533,
+        -3.141569
+      ],
+      "position_xyz_m": [
+        0.278647,
+        -0.008168,
+        1.471588
+      ],
+      "quaternion_xyzw": [
+        1.1e-05,
+        0.992717,
+        -2e-06,
+        0.120473
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.026912,
+        -0.286803,
+        0.118892
+      ],
+      "position_xyz_m": [
+        -0.025198,
+        -0.138348,
+        -0.601532
+      ],
+      "quaternion_xyzw": [
+        -0.004804,
+        0.143436,
+        -0.056876,
+        -0.988012
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      -0.000493,
+      0.089322,
+      -0.026493
+    ],
+    "fixed_orientation_rpy_rad": [
+      1.525101,
+      -0.0194,
+      1.607881
+    ],
+    "motion_type": "point",
+    "name": "waypoint2",
+    "parent": "phone",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.525101,
+          -0.0194,
+          1.607881
+        ],
+        "position_xyz_m": [
+          -0.000493,
+          0.089322,
+          -0.026493
+        ],
+        "quaternion_xyzw": [
+          0.474233,
+          -0.502262,
+          0.516011,
+          0.506526
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "phone"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.525101,
+          -0.0194,
+          1.607881
+        ],
+        "position_xyz_m": [
+          -0.000493,
+          0.089322,
+          -0.026493
+        ],
+        "quaternion_xyzw": [
+          0.474233,
+          -0.502262,
+          0.516011,
+          0.506526
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "phone"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.134762,
+        -0.046416,
+        3.027273
+      ],
+      "position_xyz_m": [
+        0.209966,
+        0.122308,
+        0.871692
+      ],
+      "quaternion_xyzw": [
+        0.057034,
+        -0.998097,
+        0.002083,
+        0.023363
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      3.134762,
+      -0.046416,
+      3.027273
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141588,
+        0.241453,
+        3.14159
+      ],
+      "position_xyz_m": [
+        0.278688,
+        -0.00815,
+        1.471539
+      ],
+      "quaternion_xyzw": [
+        -2e-06,
+        0.992721,
+        -2e-06,
+        0.120434
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.028326,
+        -0.239813,
+        0.11864
+      ],
+      "position_xyz_m": [
+        -0.053194,
+        0.037462,
+        -0.561625
+      ],
+      "quaternion_xyzw": [
+        0.006945,
+        -0.12023,
+        0.057163,
+        0.991075
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      0.120913,
+      0.065001,
+      -0.027911
+    ],
+    "fixed_orientation_rpy_rad": [
+      0.0,
+      -1.570796,
+      -5e-06
+    ],
+    "motion_type": "point",
+    "name": "waypoint3",
+    "parent": "phone_case",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          -1.570796,
+          -5e-06
+        ],
+        "position_xyz_m": [
+          0.120913,
+          0.065001,
+          -0.027911
+        ],
+        "quaternion_xyzw": [
+          3e-06,
+          0.707109,
+          7e-06,
+          -0.707104
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "phone_case"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          -1.570796,
+          -5e-06
+        ],
+        "position_xyz_m": [
+          0.120913,
+          0.065001,
+          -0.027911
+        ],
+        "quaternion_xyzw": [
+          3e-06,
+          0.707109,
+          7e-06,
+          -0.707104
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "phone_case"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.141577,
+        6e-06,
+        3.026361
+      ],
+      "position_xyz_m": [
+        0.230157,
+        -0.051471,
+        0.909913
+      ],
+      "quaternion_xyzw": [
+        -0.057584,
+        0.998341,
+        8e-06,
+        3e-06
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      -3.141577,
+      6e-06,
+      3.026361
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141581,
+        0.241625,
+        -3.141593
+      ],
+      "position_xyz_m": [
+        0.278609,
+        -0.00815,
+        1.471637
+      ],
+      "quaternion_xyzw": [
+        -1e-06,
+        0.992711,
+        -6e-06,
+        0.120519
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.028354,
+        -0.239982,
+        0.118648
+      ],
+      "position_xyz_m": [
+        -0.053111,
+        0.037473,
+        -0.608726
+      ],
+      "quaternion_xyzw": [
+        -0.006954,
+        0.120315,
+        -0.057163,
+        -0.991064
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      0.07391,
+      0.065,
+      -0.027916
+    ],
+    "fixed_orientation_rpy_rad": [
+      0.0,
+      -1.570796,
+      -5e-06
+    ],
+    "motion_type": "point",
+    "name": "waypoint4",
+    "parent": "phone_case",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          -1.570796,
+          -5e-06
+        ],
+        "position_xyz_m": [
+          0.07391,
+          0.065,
+          -0.027916
+        ],
+        "quaternion_xyzw": [
+          -3e-06,
+          -0.707109,
+          -7e-06,
+          0.707104
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "phone_case"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          -1.570796,
+          -5e-06
+        ],
+        "position_xyz_m": [
+          0.07391,
+          0.065,
+          -0.027916
+        ],
+        "quaternion_xyzw": [
+          -3e-06,
+          -0.707109,
+          -7e-06,
+          0.707104
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "phone_case"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.141577,
+        6e-06,
+        3.026361
+      ],
+      "position_xyz_m": [
+        0.230162,
+        -0.051471,
+        0.86291
+      ],
+      "quaternion_xyzw": [
+        0.057584,
+        -0.998341,
+        -8e-06,
+        -3e-06
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      -3.141577,
+      6e-06,
+      3.026361
+    ]
+  }
+]

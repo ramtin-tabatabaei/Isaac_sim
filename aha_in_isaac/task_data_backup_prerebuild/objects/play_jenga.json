@@ -1,0 +1,1571 @@
+[
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          -0.0,
+          -1.570822
+        ],
+        "position_xyz_m": [
+          -0.148999,
+          -0.001997,
+          -0.102333
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          -0.0,
+          -0.707116,
+          0.707098
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "target_cuboid",
+      "world_offset_xyz_m": [
+        0.026765,
+        -0.146589,
+        -0.102333
+      ]
+    },
+    "handle": 81,
+    "hierarchy_path": "play_jenga/Cuboid",
+    "name": "Cuboid",
+    "parent": "play_jenga",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.014,
+        -0.123,
+        0.015
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.014,
+        -0.123,
+        0.015
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        0.167167
+      ],
+      "position_xyz_m": [
+        0.441683,
+        -0.232731,
+        0.767
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.083486,
+        0.996509
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.521004,
+      "x_uniform_min_m": -0.0198,
+      "y_uniform_max_m": 0.07771,
+      "y_uniform_min_m": -0.422461,
+      "z_fixed_m": 0.767
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          -0.0,
+          -1.570822
+        ],
+        "position_xyz_m": [
+          -0.080999,
+          -0.001999,
+          -0.102333
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          -0.0,
+          -0.707116,
+          0.707098
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "target_cuboid",
+      "world_offset_xyz_m": [
+        0.015451,
+        -0.079537,
+        -0.102333
+      ]
+    },
+    "handle": 82,
+    "hierarchy_path": "play_jenga/Cuboid0",
+    "name": "Cuboid0",
+    "parent": "play_jenga",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.014,
+        -0.055,
+        0.015
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.014,
+        -0.055,
+        0.015
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        0.167167
+      ],
+      "position_xyz_m": [
+        0.430369,
+        -0.165679,
+        0.767
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.083486,
+        0.996509
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.494982,
+      "x_uniform_min_m": 0.006223,
+      "y_uniform_max_m": 0.140534,
+      "y_uniform_min_m": -0.355421,
+      "z_fixed_m": 0.767
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          -0.0,
+          -1.570822
+        ],
+        "position_xyz_m": [
+          -0.011999,
+          -0.002001,
+          -0.102333
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          -0.0,
+          -0.707116,
+          0.707098
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "target_cuboid",
+      "world_offset_xyz_m": [
+        0.00397,
+        -0.011499,
+        -0.102333
+      ]
+    },
+    "handle": 83,
+    "hierarchy_path": "play_jenga/Cuboid1",
+    "name": "Cuboid1",
+    "parent": "play_jenga",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.014,
+        0.014,
+        0.015
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.014,
+        0.014,
+        0.015
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        0.167167
+      ],
+      "position_xyz_m": [
+        0.418888,
+        -0.097641,
+        0.767
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.083486,
+        0.996509
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.479292,
+      "x_uniform_min_m": 0.021912,
+      "y_uniform_max_m": 0.204282,
+      "y_uniform_min_m": -0.29109,
+      "z_fixed_m": 0.767
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          -0.0,
+          0.0
+        ],
+        "position_xyz_m": [
+          -0.080001,
+          -0.067999,
+          -0.068333
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          -0.0,
+          0.0,
+          1.0
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "target_cuboid",
+      "world_offset_xyz_m": [
+        0.080364,
+        -0.067569,
+        -0.068333
+      ]
+    },
+    "handle": 84,
+    "hierarchy_path": "play_jenga/Cuboid2",
+    "name": "Cuboid2",
+    "parent": "play_jenga",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        1.570822
+      ],
+      "position_xyz_m": [
+        0.08,
+        -0.054,
+        0.049
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.707116,
+        0.707098
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        1.570822
+      ],
+      "position_xyz_m": [
+        0.08,
+        -0.054,
+        0.049
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.707116,
+        0.707098
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        1.737989
+      ],
+      "position_xyz_m": [
+        0.495282,
+        -0.153711,
+        0.801
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.76368,
+        0.645595
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.555575,
+      "x_uniform_min_m": 0.067581,
+      "y_uniform_max_m": 0.166715,
+      "y_uniform_min_m": -0.379171,
+      "z_fixed_m": 0.801
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          -0.0,
+          0.0
+        ],
+        "position_xyz_m": [
+          -0.079999,
+          1e-06,
+          -0.068333
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          -0.0,
+          0.0,
+          1.0
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "target_cuboid",
+      "world_offset_xyz_m": [
+        0.013312,
+        -0.078884,
+        -0.068333
+      ]
+    },
+    "handle": 85,
+    "hierarchy_path": "play_jenga/Cuboid3",
+    "name": "Cuboid3",
+    "parent": "play_jenga",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        1.570822
+      ],
+      "position_xyz_m": [
+        0.012,
+        -0.054,
+        0.049
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.707116,
+        0.707098
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        1.570822
+      ],
+      "position_xyz_m": [
+        0.012,
+        -0.054,
+        0.049
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.707116,
+        0.707098
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        1.737989
+      ],
+      "position_xyz_m": [
+        0.42823,
+        -0.165026,
+        0.801
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.76368,
+        0.645595
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.492752,
+      "x_uniform_min_m": 0.004758,
+      "y_uniform_max_m": 0.140693,
+      "y_uniform_min_m": -0.353984,
+      "z_fixed_m": 0.801
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          -0.0,
+          0.0
+        ],
+        "position_xyz_m": [
+          -0.079997,
+          0.068001,
+          -0.068333
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          -0.0,
+          0.0,
+          1.0
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "target_cuboid",
+      "world_offset_xyz_m": [
+        -0.05374,
+        -0.090198,
+        -0.068333
+      ]
+    },
+    "handle": 86,
+    "hierarchy_path": "play_jenga/Cuboid4",
+    "name": "Cuboid4",
+    "parent": "play_jenga",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        1.570822
+      ],
+      "position_xyz_m": [
+        -0.056,
+        -0.054,
+        0.049
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.707116,
+        0.707098
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        1.570822
+      ],
+      "position_xyz_m": [
+        -0.056,
+        -0.054,
+        0.049
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.707116,
+        0.707098
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        1.737989
+      ],
+      "position_xyz_m": [
+        0.361178,
+        -0.17634,
+        0.801
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.76368,
+        0.645595
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.429928,
+      "x_uniform_min_m": -0.058066,
+      "y_uniform_max_m": 0.15753,
+      "y_uniform_min_m": -0.369986,
+      "z_fixed_m": 0.801
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          -0.0,
+          -1.570822
+        ],
+        "position_xyz_m": [
+          -0.148999,
+          -0.001997,
+          -0.033333
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          -0.0,
+          -0.707116,
+          0.707098
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "target_cuboid",
+      "world_offset_xyz_m": [
+        0.026765,
+        -0.146589,
+        -0.033333
+      ]
+    },
+    "handle": 87,
+    "hierarchy_path": "play_jenga/Cuboid5",
+    "name": "Cuboid5",
+    "parent": "play_jenga",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.014,
+        -0.123,
+        0.084
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.014,
+        -0.123,
+        0.084
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        0.167167
+      ],
+      "position_xyz_m": [
+        0.441683,
+        -0.232731,
+        0.836
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.083486,
+        0.996509
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.521004,
+      "x_uniform_min_m": -0.0198,
+      "y_uniform_max_m": 0.07771,
+      "y_uniform_min_m": -0.422461,
+      "z_fixed_m": 0.836
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          -0.0,
+          -1.570822
+        ],
+        "position_xyz_m": [
+          -0.080999,
+          -0.001999,
+          -0.033333
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          -0.0,
+          -0.707116,
+          0.707098
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "target_cuboid",
+      "world_offset_xyz_m": [
+        0.015451,
+        -0.079537,
+        -0.033333
+      ]
+    },
+    "handle": 88,
+    "hierarchy_path": "play_jenga/Cuboid6",
+    "name": "Cuboid6",
+    "parent": "play_jenga",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.014,
+        -0.055,
+        0.084
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.014,
+        -0.055,
+        0.084
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        0.167167
+      ],
+      "position_xyz_m": [
+        0.430369,
+        -0.165679,
+        0.836
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.083486,
+        0.996509
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.494982,
+      "x_uniform_min_m": 0.006223,
+      "y_uniform_max_m": 0.140534,
+      "y_uniform_min_m": -0.355421,
+      "z_fixed_m": 0.836
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          -0.0,
+          -1.570822
+        ],
+        "position_xyz_m": [
+          -0.011999,
+          -0.002001,
+          -0.033333
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          -0.0,
+          -0.707116,
+          0.707098
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "target_cuboid",
+      "world_offset_xyz_m": [
+        0.00397,
+        -0.011499,
+        -0.033333
+      ]
+    },
+    "handle": 89,
+    "hierarchy_path": "play_jenga/Cuboid7",
+    "name": "Cuboid7",
+    "parent": "play_jenga",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.014,
+        0.014,
+        0.084
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.014,
+        0.014,
+        0.084
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        0.167167
+      ],
+      "position_xyz_m": [
+        0.418888,
+        -0.097641,
+        0.836
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.083486,
+        0.996509
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.479292,
+      "x_uniform_min_m": 0.021912,
+      "y_uniform_max_m": 0.204282,
+      "y_uniform_min_m": -0.29109,
+      "z_fixed_m": 0.836
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          -0.0,
+          0.0
+        ],
+        "position_xyz_m": [
+          -0.080002,
+          -0.067999,
+          0.00067
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          -0.0,
+          0.0,
+          1.0
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "target_cuboid",
+      "world_offset_xyz_m": [
+        0.080364,
+        -0.06757,
+        0.00067
+      ]
+    },
+    "handle": 90,
+    "hierarchy_path": "play_jenga/Cuboid8",
+    "name": "Cuboid8",
+    "parent": "play_jenga",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        1.570822
+      ],
+      "position_xyz_m": [
+        0.08,
+        -0.054001,
+        0.118003
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.707116,
+        0.707098
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        1.570822
+      ],
+      "position_xyz_m": [
+        0.08,
+        -0.054001,
+        0.118003
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.707116,
+        0.707098
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        1.737989
+      ],
+      "position_xyz_m": [
+        0.495282,
+        -0.153712,
+        0.870003
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.76368,
+        0.645595
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.555576,
+      "x_uniform_min_m": 0.067581,
+      "y_uniform_max_m": 0.166714,
+      "y_uniform_min_m": -0.379172,
+      "z_fixed_m": 0.870003
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          -0.0,
+          0.0
+        ],
+        "position_xyz_m": [
+          -0.079997,
+          0.068001,
+          0.000667
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          -0.0,
+          0.0,
+          1.0
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "target_cuboid",
+      "world_offset_xyz_m": [
+        -0.05374,
+        -0.090198,
+        0.000667
+      ]
+    },
+    "handle": 91,
+    "hierarchy_path": "play_jenga/Cuboid9",
+    "name": "Cuboid9",
+    "parent": "play_jenga",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        1.570822
+      ],
+      "position_xyz_m": [
+        -0.056,
+        -0.054,
+        0.118
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.707116,
+        0.707098
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        1.570822
+      ],
+      "position_xyz_m": [
+        -0.056,
+        -0.054,
+        0.118
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.707116,
+        0.707098
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        1.737989
+      ],
+      "position_xyz_m": [
+        0.361178,
+        -0.17634,
+        0.869999
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.76368,
+        0.645595
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.429928,
+      "x_uniform_min_m": -0.058066,
+      "y_uniform_max_m": 0.15753,
+      "y_uniform_min_m": -0.369986,
+      "z_fixed_m": 0.869999
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          -0.0,
+          -1.570822
+        ],
+        "position_xyz_m": [
+          -0.148999,
+          -0.001997,
+          0.034667
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          -0.0,
+          -0.707116,
+          0.707098
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "target_cuboid",
+      "world_offset_xyz_m": [
+        0.026765,
+        -0.146589,
+        0.034667
+      ]
+    },
+    "handle": 92,
+    "hierarchy_path": "play_jenga/Cuboid10",
+    "name": "Cuboid10",
+    "parent": "play_jenga",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.014,
+        -0.123,
+        0.152
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.014,
+        -0.123,
+        0.152
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        0.167167
+      ],
+      "position_xyz_m": [
+        0.441683,
+        -0.232731,
+        0.904
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.083486,
+        0.996509
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.521004,
+      "x_uniform_min_m": -0.0198,
+      "y_uniform_max_m": 0.07771,
+      "y_uniform_min_m": -0.422461,
+      "z_fixed_m": 0.904
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          -0.0,
+          -1.570822
+        ],
+        "position_xyz_m": [
+          -0.080999,
+          -0.001999,
+          0.034667
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          -0.0,
+          -0.707116,
+          0.707098
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "target_cuboid",
+      "world_offset_xyz_m": [
+        0.015451,
+        -0.079537,
+        0.034667
+      ]
+    },
+    "handle": 93,
+    "hierarchy_path": "play_jenga/Cuboid11",
+    "name": "Cuboid11",
+    "parent": "play_jenga",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.014,
+        -0.055,
+        0.152
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.014,
+        -0.055,
+        0.152
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        0.167167
+      ],
+      "position_xyz_m": [
+        0.430369,
+        -0.165679,
+        0.904
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.083486,
+        0.996509
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.494982,
+      "x_uniform_min_m": 0.006223,
+      "y_uniform_max_m": 0.140534,
+      "y_uniform_min_m": -0.355421,
+      "z_fixed_m": 0.904
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          -0.0,
+          -1.570822
+        ],
+        "position_xyz_m": [
+          -0.011999,
+          -0.002001,
+          0.034667
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          -0.0,
+          -0.707116,
+          0.707098
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "target_cuboid",
+      "world_offset_xyz_m": [
+        0.00397,
+        -0.011499,
+        0.034667
+      ]
+    },
+    "handle": 94,
+    "hierarchy_path": "play_jenga/Cuboid12",
+    "name": "Cuboid12",
+    "parent": "play_jenga",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.014,
+        0.014,
+        0.152
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.014,
+        0.014,
+        0.152
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        0.167167
+      ],
+      "position_xyz_m": [
+        0.418888,
+        -0.097641,
+        0.904
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.083486,
+        0.996509
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.479292,
+      "x_uniform_min_m": 0.021912,
+      "y_uniform_max_m": 0.204282,
+      "y_uniform_min_m": -0.29109,
+      "z_fixed_m": 0.904
+    }
+  },
+  {
+    "handle": 99,
+    "hierarchy_path": "play_jenga/target_cuboid",
+    "name": "target_cuboid",
+    "parent": "play_jenga",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        1.570822
+      ],
+      "position_xyz_m": [
+        0.011999,
+        0.025999,
+        0.117333
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.707116,
+        0.707098
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.482035,
+      "x_uniform_min_m": 0.015472,
+      "y_uniform_max_m": 0.214601,
+      "y_uniform_min_m": -0.279239,
+      "z_fixed_m": 0.869333
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        1.570822
+      ],
+      "position_xyz_m": [
+        0.011999,
+        0.025999,
+        0.117333
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.707116,
+        0.707098
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        1.737989
+      ],
+      "position_xyz_m": [
+        0.414918,
+        -0.086142,
+        0.869333
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.76368,
+        0.645595
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.482035,
+      "x_uniform_min_m": 0.015472,
+      "y_uniform_max_m": 0.214601,
+      "y_uniform_min_m": -0.279239,
+      "z_fixed_m": 0.869333
+    }
+  }
+]

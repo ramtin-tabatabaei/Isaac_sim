@@ -1,0 +1,33 @@
+{
+  "shapes": {
+    "phone_case": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 2.3203125,
+      "friction": 0.5
+    },
+    "phone_case_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 4.875,
+      "friction": 0.7099999785423279
+    },
+    "phone": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.2707793116569519,
+      "friction": 0.7099999785423279
+    },
+    "phone_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.125,
+      "friction": 0.7099999785423279
+    }
+  },
+  "joints": {}
+}

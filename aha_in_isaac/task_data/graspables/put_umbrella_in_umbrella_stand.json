@@ -2,61 +2,66 @@
   "graspable_objects": [
     {
       "fixed_offset_from_task_boundary_root_xyz_m": [
-        0.025128,
+        0.025118,
         -0.078867,
-        0.200535
+        0.201254
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
-        0.088274,
-        -1.163541,
-        0.566017
+        0.079418,
+        -1.127888,
+        0.558689
       ],
       "name": "umbrella",
+      "observed_spawn_yaw_range_rad": [
+        0.559781,
+        0.689381
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          0.339574,
-          1.139066,
-          -3.042607
+          -0.742158,
+          0.952482,
+          -1.826423
         ],
         "position_xyz_m": [
-          0.095331,
-          0.095012,
-          0.952535
+          0.013255,
+          -0.030241,
+          0.953254
         ],
         "quaternion_xyzw": [
-          0.523794,
-          -0.16842,
-          0.824519,
-          -0.132069
+          0.535121,
+          -0.006064,
+          0.757131,
+          -0.374649
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.554401,
-        "x_uniform_min_m": -0.11451,
-        "y_uniform_max_m": 0.482566,
-        "y_uniform_min_m": -0.306676,
-        "z_fixed_m": 0.952535
+        "x_uniform_max_m": 0.352325,
+        "x_uniform_min_m": -0.069213,
+        "y_uniform_max_m": 0.288691,
+        "y_uniform_min_m": -0.349698,
+        "z_fixed_m": 0.952241
       }
     }
   ],
   "other_scene_objects": [
     {
       "fixed_offset_from_reference_local_xyz_m": [
-        -0.083287,
-        0.019124,
-        -0.062911
+        -0.081781,
+        0.018453,
+        -0.066165
       ],
       "fixed_offset_from_reference_xyz_m": [
-        -0.021668,
-        0.02423,
-        -0.101013
+        -0.03158,
+        0.007732,
+        -0.101732
       ],
       "fixed_orientation_from_reference_rpy_rad": [
-        0.811903,
-        0.960183,
-        -2.519084
+        0.764955,
+        0.937018,
+        -2.480905
       ],
       "has_separate_distribution": false,
       "name": "stand",
@@ -64,28 +69,28 @@
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          5.5e-05,
-          -1.1e-05,
-          1.380515
+          5.2e-05,
+          2.2e-05,
+          1.981352
         ],
         "position_xyz_m": [
-          0.073664,
-          0.119242,
+          -0.018325,
+          -0.022509,
           0.851522
         ],
         "quaternion_xyzw": [
-          1.8e-05,
-          -2.2e-05,
-          0.636736,
-          0.771082
+          2.4e-05,
+          -1.5e-05,
+          0.836397,
+          0.548125
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
         "x_uniform_max_m": 0.582596,
-        "x_uniform_min_m": -0.142706,
-        "y_uniform_max_m": 0.51076,
-        "y_uniform_min_m": -0.334872,
+        "x_uniform_min_m": -0.139325,
+        "y_uniform_max_m": 0.510758,
+        "y_uniform_min_m": -0.334895,
         "z_fixed_m": 0.851522
       }
     }
@@ -100,18 +105,18 @@
     "orientation_rpy_rad": [
       -0.0,
       0.0,
-      2.951311
+      -2.731037
     ],
     "position_xyz_m": [
-      0.105089,
-      0.012816,
+      0.067762,
+      -0.092529,
       0.752
     ],
     "quaternion_xyzw": [
       0.0,
       0.0,
-      0.995478,
-      0.094997
+      0.979004,
+      -0.203839
     ],
     "source": "exact_after_one_rlbench_reset"
   },

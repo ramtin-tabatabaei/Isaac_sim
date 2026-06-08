@@ -1,0 +1,404 @@
+[
+  {
+    "handle": 94,
+    "hierarchy_path": "place_wine_at_rack_location/wine_bottle",
+    "name": "wine_bottle",
+    "parent": "place_wine_at_rack_location",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141567,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.098973,
+        -0.284233,
+        0.12165
+      ],
+      "quaternion_xyzw": [
+        1.0,
+        0.0,
+        0.0,
+        1.3e-05
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141567,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.098973,
+        -0.284233,
+        0.12165
+      ],
+      "quaternion_xyzw": [
+        1.0,
+        0.0,
+        0.0,
+        1.3e-05
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141567,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.348973,
+        -0.284233,
+        0.87365
+      ],
+      "quaternion_xyzw": [
+        1.0,
+        0.0,
+        0.0,
+        1.3e-05
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 81,
+    "hierarchy_path": "place_wine_at_rack_location/rack/rack_bottom",
+    "name": "rack_bottom",
+    "parent": "rack",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570451,
+        0.0
+      ],
+      "position_xyz_m": [
+        4e-06,
+        0.0,
+        0.024997
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.707116,
+        0.0,
+        0.707098
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570451,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.050188,
+        0.275,
+        0.034117
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.707116,
+        0.0,
+        0.707098
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570451,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.300188,
+        0.275,
+        0.786116
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.707116,
+        0.0,
+        0.707098
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 83,
+    "hierarchy_path": "place_wine_at_rack_location/rack/rack_top",
+    "name": "rack_top",
+    "parent": "rack",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570451,
+        0.0
+      ],
+      "position_xyz_m": [
+        4e-06,
+        0.0,
+        0.095997
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.707116,
+        0.0,
+        0.707098
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570451,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.050188,
+        0.275,
+        0.105117
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.707116,
+        0.0,
+        0.707098
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570451,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.300188,
+        0.275,
+        0.857116
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.707116,
+        0.0,
+        0.707098
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 95,
+    "hierarchy_path": "place_wine_at_rack_location/wine_bottle/wine_bottle_visual",
+    "name": "wine_bottle_visual",
+    "parent": "wine_bottle",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.141569,
+        -3.8e-05,
+        0.190519
+      ],
+      "position_xyz_m": [
+        -3e-06,
+        -0.0,
+        -0.000767
+      ],
+      "quaternion_xyzw": [
+        0.995466,
+        -0.095115,
+        -2e-05,
+        -1e-05
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -2e-06,
+        -3.8e-05,
+        0.190519
+      ],
+      "position_xyz_m": [
+        0.09897,
+        -0.284233,
+        0.122417
+      ],
+      "quaternion_xyzw": [
+        3e-06,
+        1.9e-05,
+        -0.095115,
+        -0.995466
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -2e-06,
+        -3.8e-05,
+        0.190519
+      ],
+      "position_xyz_m": [
+        0.34897,
+        -0.284233,
+        0.874417
+      ],
+      "quaternion_xyzw": [
+        3e-06,
+        1.9e-05,
+        -0.095115,
+        -0.995466
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 82,
+    "hierarchy_path": "place_wine_at_rack_location/rack/rack_bottom/rack_bottom_visual",
+    "name": "rack_bottom_visual",
+    "parent": "rack_bottom",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -3.7e-05,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.001645,
+        -0.0,
+        -0.003486
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -1.8e-05,
+        -0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.053674,
+        0.275,
+        0.035762
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.707129,
+        0.0,
+        0.707085
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.303674,
+        0.275,
+        0.787761
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.707129,
+        0.0,
+        0.707085
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 84,
+    "hierarchy_path": "place_wine_at_rack_location/rack/rack_top/rack_top_visual",
+    "name": "rack_top_visual",
+    "parent": "rack_top",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -3.7e-05,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.001645,
+        -0.0,
+        -0.003486
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -1.8e-05,
+        -0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.053674,
+        0.275,
+        0.106762
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.707129,
+        0.0,
+        0.707085
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.303674,
+        0.275,
+        0.858761
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.707129,
+        0.0,
+        0.707085
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  }
+]

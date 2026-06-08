@@ -1,0 +1,54 @@
+{
+  "shapes": {
+    "bottle": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 1.0,
+      "friction": 0.7099999785423279
+    },
+    "bottle_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 1.0,
+      "friction": 0.7099999785423279
+    },
+    "label": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 1.0,
+      "friction": 0.7099999785423279
+    },
+    "dummy": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.0009999998146668077,
+      "friction": 0.5
+    },
+    "cap": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.006272000726312399,
+      "friction": 0.5
+    },
+    "cap_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.006778138689696789,
+      "friction": 0.7099999785423279
+    }
+  },
+  "joints": {
+    "joint": {
+      "type": "revolute",
+      "cyclic": true,
+      "lower": -180.00000500895632,
+      "upper": 180.00000500895632
+    }
+  }
+}

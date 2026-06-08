@@ -1,0 +1,310 @@
+[
+  {
+    "handle": 81,
+    "hierarchy_path": "toilet_seat_down/toilet_seat_up_toilet",
+    "name": "toilet_seat_up_toilet",
+    "parent": "toilet_seat_down",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.016586,
+        -0.018161,
+        0.000242
+      ],
+      "position_xyz_m": [
+        -0.00463,
+        0.045236,
+        0.229921
+      ],
+      "quaternion_xyzw": [
+        -0.008294,
+        -0.009079,
+        0.000196,
+        0.999924
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.016586,
+        -0.018161,
+        0.000242
+      ],
+      "position_xyz_m": [
+        -0.00463,
+        0.045236,
+        0.229921
+      ],
+      "quaternion_xyzw": [
+        -0.008294,
+        -0.009079,
+        0.000196,
+        0.999924
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.021179,
+        -0.012505,
+        1.777907
+      ],
+      "position_xyz_m": [
+        0.170109,
+        -0.210436,
+        0.981921
+      ],
+      "quaternion_xyzw": [
+        0.001819,
+        -0.012162,
+        0.776312,
+        0.630229
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.49688,
+      "x_uniform_min_m": 0.007908,
+      "y_uniform_max_m": 0.295382,
+      "y_uniform_min_m": -0.250217,
+      "z_fixed_m": 0.981921
+    }
+  },
+  {
+    "handle": 89,
+    "hierarchy_path": "toilet_seat_down/toilet",
+    "name": "toilet",
+    "parent": "toilet_seat_down",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141537,
+        3e-06,
+        -1.570797
+      ],
+      "position_xyz_m": [
+        -0.004444,
+        -0.127635,
+        0.362224
+      ],
+      "quaternion_xyzw": [
+        0.707107,
+        0.707107,
+        -1.9e-05,
+        2.1e-05
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141537,
+        3e-06,
+        -1.570797
+      ],
+      "position_xyz_m": [
+        -0.004444,
+        -0.127635,
+        0.362224
+      ],
+      "quaternion_xyzw": [
+        0.707107,
+        0.707107,
+        -1.9e-05,
+        2.1e-05
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.141579,
+        5.4e-05,
+        2.935006
+      ],
+      "position_xyz_m": [
+        0.339265,
+        -0.174795,
+        1.114224
+      ],
+      "quaternion_xyzw": [
+        -0.10311,
+        0.99467,
+        4e-06,
+        2.7e-05
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.555276,
+      "x_uniform_min_m": -0.050226,
+      "y_uniform_max_m": 0.162802,
+      "y_uniform_min_m": -0.406641,
+      "z_fixed_m": 1.114224
+    }
+  },
+  {
+    "handle": 82,
+    "hierarchy_path": "toilet_seat_down/toilet_seat_up_toilet/toilet_seat_up_respondable",
+    "name": "toilet_seat_up_respondable",
+    "parent": "toilet_seat_up_toilet",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.016643,
+        0.018155,
+        -0.000536
+      ],
+      "position_xyz_m": [
+        -0.001379,
+        -0.035039,
+        -0.030649
+      ],
+      "quaternion_xyzw": [
+        0.008319,
+        0.009079,
+        -0.000192,
+        0.999924
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        5e-05,
+        -0.0,
+        8e-06
+      ],
+      "position_xyz_m": [
+        -0.005444,
+        0.009692,
+        0.199838
+      ],
+      "quaternion_xyzw": [
+        2.5e-05,
+        -0.0,
+        4e-06,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1e-05,
+        4.9e-05,
+        1.77739
+      ],
+      "position_xyz_m": [
+        0.205063,
+        -0.203942,
+        0.951838
+      ],
+      "quaternion_xyzw": [
+        1.6e-05,
+        2e-05,
+        0.77625,
+        0.630425
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.471171,
+      "x_uniform_min_m": 0.032465,
+      "y_uniform_max_m": 0.261027,
+      "y_uniform_min_m": -0.275925,
+      "z_fixed_m": 0.951838
+    }
+  },
+  {
+    "handle": 84,
+    "hierarchy_path": "toilet_seat_down/toilet_seat_up_toilet/toilet_seat_up_respondable/toilet_seat_up_revolute_joint/toilet_seat_up_seat",
+    "name": "toilet_seat_up_seat",
+    "parent": "toilet_seat_up_revolute_joint",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        -1.570794
+      ],
+      "position_xyz_m": [
+        0.125005,
+        5.6e-05,
+        -1.1e-05
+      ],
+      "quaternion_xyzw": [
+        0.500018,
+        -0.499983,
+        -0.499981,
+        0.500018
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -2.966921,
+        -2e-06,
+        -1.570794
+      ],
+      "position_xyz_m": [
+        -0.005668,
+        -0.055752,
+        0.35962
+      ],
+      "quaternion_xyzw": [
+        0.704413,
+        0.704411,
+        0.061677,
+        -0.061678
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.105409,
+        -0.17092,
+        2.931909
+      ],
+      "position_xyz_m": [
+        0.269162,
+        -0.190737,
+        1.11162
+      ],
+      "quaternion_xyzw": [
+        -0.102715,
+        0.990879,
+        -0.008995,
+        -0.08676
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.503583,
+      "x_uniform_min_m": -0.000263,
+      "y_uniform_max_m": 0.214495,
+      "y_uniform_min_m": -0.334969,
+      "z_fixed_m": 1.11162
+    }
+  }
+]

@@ -5,40 +5,40 @@
     "end_effector_location_after_waypoint": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -3.141591,
-        0.241587,
-        -3.141587
+        -3.141592,
+        0.241416,
+        3.141584
       ],
       "position_xyz_m": [
-        0.278603,
-        -0.008154,
-        1.47163
+        0.278657,
+        -0.008156,
+        1.471539
       ],
       "quaternion_xyzw": [
-        3e-06,
-        0.992713,
-        1e-06,
-        0.1205
+        -4e-06,
+        0.992724,
+        -0.0,
+        0.120415
       ],
       "source": "exact_after_reaching_waypoint_path"
     },
     "end_effector_relative_to_waypoint_after_waypoint": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        0.114903,
-        -0.212983,
-        0.499777
+        0.197273,
+        -0.140073,
+        0.961056
       ],
       "position_xyz_m": [
-        -0.177596,
-        -0.134568,
-        -0.491207
+        -0.248063,
+        0.209271,
+        -0.491116
       ],
       "quaternion_xyzw": [
-        0.029079,
-        -0.116939,
-        0.239576,
-        0.963371
+        0.05492,
+        -0.107162,
+        0.452762,
+        0.883463
       ],
       "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
     },
@@ -110,17 +110,17 @@
       "kind": "exact",
       "orientation_rpy_rad": [
         3.141593,
-        -0.0,
-        2.654118
+        0.0,
+        2.194412
       ],
       "position_xyz_m": [
-        0.058663,
-        0.027554,
+        0.303675,
+        -0.331736,
         0.980423
       ],
       "quaternion_xyzw": [
-        -0.241331,
-        0.970443,
+        -0.456084,
+        0.889937,
         -0.0,
         -0.0
       ],
@@ -128,8 +128,8 @@
     },
     "world_orientation_rpy_rad": [
       3.141593,
-      -0.0,
-      2.654118
+      0.0,
+      2.194412
     ]
   },
   {
@@ -138,40 +138,40 @@
     "end_effector_location_after_waypoint": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        3.141582,
-        0.241432,
-        -3.141589
+        3.141585,
+        0.24162,
+        -3.141579
       ],
       "position_xyz_m": [
-        0.278683,
-        -0.008164,
-        1.471529
+        0.278634,
+        -0.00817,
+        1.471623
       ],
       "quaternion_xyzw": [
-        1e-06,
-        0.992723,
-        -5e-06,
-        0.120423
+        6e-06,
+        0.992711,
+        -3e-06,
+        0.120516
       ],
       "source": "exact_after_reaching_waypoint_path"
     },
     "end_effector_relative_to_waypoint_after_waypoint": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        0.224354,
-        -0.089948,
-        1.195749
+        0.240975,
+        0.017822,
+        1.643168
       ],
       "position_xyz_m": [
-        0.242031,
-        -0.010919,
-        -0.459906
+        -0.032932,
+        0.207283,
+        -0.46
       ],
       "quaternion_xyzw": [
-        0.067283,
-        -0.099873,
-        0.554624,
-        0.823341
+        0.088335,
+        -0.081982,
+        0.727618,
+        0.675314
       ],
       "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
     },
@@ -181,7 +181,7 @@
       -0.0312
     ],
     "fixed_orientation_rpy_rad": [
-      0.0,
+      -0.0,
       0.0,
       -0.698132
     ],
@@ -192,7 +192,7 @@
       "location_in_reference_frame": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          0.0,
+          -0.0,
           0.0,
           -0.698132
         ],
@@ -243,17 +243,17 @@
       "kind": "exact",
       "orientation_rpy_rad": [
         3.141593,
-        -0.0,
-        1.955986
+        0.0,
+        1.49628
       ],
       "position_xyz_m": [
-        0.359504,
-        0.220236,
+        0.487794,
+        -0.025579,
         1.011623
       ],
       "quaternion_xyzw": [
-        -0.558688,
-        0.829378,
+        -0.732955,
+        0.680277,
         -0.0,
         -0.0
       ],
@@ -261,8 +261,8 @@
     },
     "world_orientation_rpy_rad": [
       3.141593,
-      -0.0,
-      1.955986
+      0.0,
+      1.49628
     ]
   }
 ]

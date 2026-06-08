@@ -1,0 +1,47 @@
+{
+  "shapes": {
+    "cube": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.5120000243186951,
+      "friction": 0.5
+    },
+    "stick": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.058982398360967636,
+      "friction": 0.5
+    },
+    "target0": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.01690000109374523,
+      "friction": 0.5
+    },
+    "distractor1": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.01690000109374523,
+      "friction": 0.5
+    },
+    "distractor2": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.01690000109374523,
+      "friction": 0.5
+    },
+    "distractor3": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.01690000109374523,
+      "friction": 0.5
+    }
+  },
+  "joints": {}
+}

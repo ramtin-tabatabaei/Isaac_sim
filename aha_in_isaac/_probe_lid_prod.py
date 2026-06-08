@@ -25,7 +25,8 @@ sim = sim_utils.SimulationContext(sim_utils.SimulationCfg(dt=1.0 / 120.0, device
 builder = R.SceneBuilder(R.args_cli, R.CONTEXT, R.APPEARANCE_CONFIG)
 builder.design_scene()
 R._add_articulation_joints(builder)
-R._trim_lid_hinge_collider(builder)        # <-- the real production function
+R._trim_lid_hinge_collider(builder)        # no-op now (lid keeps full collider)
+R._notch_base_hinge_rim(builder)           # <-- the real production function (base-rim notch)
 
 lid_path = builder.body_prim_paths.get("box_lid")
 box_path = builder.body_prim_paths.get("box_base")
@@ -54,29 +55,32 @@ for label, path in (("box_base", box_path), ("box_lid", lid_path)):
             ce = bool(cea.Get()) if cea.HasAuthoredValue() else True
         lines.append(f"  {label}/{prim.GetName():22} approx={approx}  contact_offset={co}  collisionEnabled={ce}")
 
-# --- Structural checks (visual intact, trimmed collider present) ---
-visual_below = trim_present = visual_coll_disabled = 0
-visual_mesh_pts = None
+# --- Structural checks (lid collider FULL, base rim notched) ---
+lid_trim_present = lid_coll_enabled = 0
 for prim in Usd.PrimRange(stage.GetPrimAtPath(lid_path)):
     if not prim.IsA(UsdGeom.Mesh):
         continue
-    nm = prim.GetName()
-    if nm == "HingeTrimCollider":
-        trim_present = 1
+    if prim.GetName() == "HingeTrimCollider":
+        lid_trim_present = 1
         continue
-    # this is the visual lid mesh
-    xf = UsdGeom.Xformable(prim).ComputeLocalToWorldTransform(Usd.TimeCode.Default())
-    pts = prim.GetAttribute("points").Get()
-    from pxr import Gf
-    wz = [xf.Transform(Gf.Vec3d(float(p[0]), float(p[1]), float(p[2])))[2] for p in pts]
-    visual_below = sum(1 for z in wz if z < box_top - 0.0005)
     if prim.HasAPI(UsdPhysics.CollisionAPI):
         ce = UsdPhysics.CollisionAPI(prim).GetCollisionEnabledAttr()
-        visual_coll_disabled = 1 if (ce.HasAuthoredValue() and ce.Get() is False) else 0
+        lid_coll_enabled = 1 if (not ce.HasAuthoredValue() or ce.Get() is True) else 0
+base_notch_present = base_coll_disabled = 0
+for prim in Usd.PrimRange(stage.GetPrimAtPath(box_path)):
+    if not prim.IsA(UsdGeom.Mesh):
+        continue
+    if prim.GetName() == "HingeRimNotchCollider":
+        base_notch_present = 1
+        continue
+    if prim.HasAPI(UsdPhysics.CollisionAPI):
+        ce = UsdPhysics.CollisionAPI(prim).GetCollisionEnabledAttr()
+        base_coll_disabled = 1 if (ce.HasAuthoredValue() and ce.Get() is False) else 0
+lid_full = bool(lid_coll_enabled) and not lid_trim_present
 lines.append("=== STRUCTURE ===")
-lines.append(f"  visual lid mesh hinge verts still below box top (intact): {visual_below} (expect 2)")
-lines.append(f"  hidden HingeTrimCollider present: {bool(trim_present)}")
-lines.append(f"  visual mesh collider disabled: {bool(visual_coll_disabled)}")
+lines.append(f"  LID collider FULL (matches lid; no trim, collider enabled): {lid_full}")
+lines.append(f"  BASE has hidden HingeRimNotchCollider: {bool(base_notch_present)}")
+lines.append(f"  BASE visual collider disabled: {bool(base_coll_disabled)}")
 
 sim.reset()
 import numpy as np
@@ -136,7 +140,7 @@ tb = metrics()
 seated = tb[0] < 15 and tb[3] <= 1 and tb[2]*1000 < 8.0
 lines.append(f"  after-close: tilt={tb[0]:.1f}  CoM_z={tb[1]:.3f}  gap={tb[2]*1000:.1f}mm  inside={tb[3]}  SEATED={seated}")
 lines.append("=== VERDICT ===")
-lines.append(f"  VISUAL INTACT={visual_below == 2 and bool(trim_present) and bool(visual_coll_disabled)}  "
+lines.append(f"  LID COLLIDER FULL={lid_full}  BASE NOTCHED={bool(base_notch_present) and bool(base_coll_disabled)}  "
              f"REST CLEAN={rest_clean}  CLOSED SEATED ON BOX={seated}")
 OUT.write_text("\n".join(lines) + "\n")
 print("\n".join(lines))

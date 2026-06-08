@@ -1,0 +1,33 @@
+{
+  "shapes": {
+    "toilet_seat_up_toilet": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 2.3292503356933594,
+      "friction": 0.5
+    },
+    "toilet_seat_up_respondable": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 9.545007705688477,
+      "friction": 0.5
+    },
+    "toilet_seat_up_seat": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.177978515625,
+      "friction": 0.5
+    }
+  },
+  "joints": {
+    "toilet_seat_up_revolute_joint": {
+      "type": "revolute",
+      "cyclic": false,
+      "lower": 0.0,
+      "upper": 95.00000150525098
+    }
+  }
+}

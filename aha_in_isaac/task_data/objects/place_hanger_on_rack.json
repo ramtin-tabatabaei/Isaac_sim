@@ -5,51 +5,65 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -0.719258,
-          0.384766,
-          -0.006396
+          -0.719225,
+          0.384795,
+          -0.006405
         ],
         "position_xyz_m": [
           -0.08179,
-          0.036635,
+          0.036632,
           0.016221
         ],
         "quaternion_xyzw": [
-          -0.346005,
-          0.177861,
-          -0.070226,
-          0.918539
+          -0.34599,
+          0.177874,
+          -0.070232,
+          0.918542
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "clothes_hanger",
       "world_offset_xyz_m": [
-        0.089071,
-        0.018773,
-        0.002983
+        -0.073206,
+        -0.054098,
+        0.002978
       ]
     },
     "handle": 81,
     "hierarchy_path": "place_hanger_on_rack/hanger_holder",
     "name": "hanger_holder",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.228567,
+        0.005261,
+        0.8
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.448711,
+      "x_min_m": 0.01882,
+      "y_max_m": 0.271268,
+      "y_min_m": -0.258684,
+      "z_max_m": 0.8,
+      "z_min_m": 0.8
+    },
     "parent": "place_hanger_on_rack",
     "parent_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
         -0.0,
         0.0,
-        -2.753814
+        0.816437
       ],
       "position_xyz_m": [
-        -0.034145,
-        -0.102708,
+        -0.036965,
+        -0.187331,
         0.048
       ],
       "quaternion_xyzw": [
         0.0,
         0.0,
-        0.981262,
-        -0.192677
+        0.396975,
+        0.917829
       ],
       "source": "exact_parent_local_offset"
     },
@@ -59,18 +73,18 @@
       "orientation_rpy_rad": [
         -0.0,
         0.0,
-        -2.753814
+        0.816437
       ],
       "position_xyz_m": [
-        -0.034145,
-        -0.102708,
+        -0.036965,
+        -0.187331,
         0.048
       ],
       "quaternion_xyzw": [
         0.0,
         0.0,
-        0.981262,
-        -0.192677
+        0.396975,
+        0.917829
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -80,28 +94,28 @@
       "orientation_rpy_rad": [
         -0.0,
         0.0,
-        -2.753814
+        0.816437
       ],
       "position_xyz_m": [
-        0.215855,
-        -0.102708,
+        0.213035,
+        -0.187331,
         0.8
       ],
       "quaternion_xyzw": [
         0.0,
         0.0,
-        0.981262,
-        -0.192677
+        0.396975,
+        0.917829
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
       "kind": "range",
       "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.132389,
-      "x_uniform_min_m": 0.095085,
-      "y_uniform_max_m": -0.081835,
-      "y_uniform_min_m": 0.111791,
+      "x_uniform_max_m": 0.215096,
+      "x_uniform_min_m": -0.037336,
+      "y_uniform_max_m": 0.000874,
+      "y_uniform_min_m": 0.029084,
       "z_fixed_m": 0.8
     }
   },
@@ -111,33 +125,47 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -0.719207,
-          0.384733,
-          2.747399
+          -0.719257,
+          0.384845,
+          -0.822831
         ],
         "position_xyz_m": [
-          -0.439847,
-          0.139653,
-          0.04698
+          0.245229,
+          -0.198064,
+          -0.026053
         ],
         "quaternion_xyzw": [
-          -0.107849,
-          -0.373768,
-          -0.887808,
-          -0.245892
+          -0.388192,
+          0.025926,
+          -0.429101,
+          0.815173
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "clothes_hanger",
       "world_offset_xyz_m": [
-        0.44902,
-        0.106503,
-        -0.047054
+        0.289563,
+        0.118255,
+        -0.047059
       ]
     },
     "handle": 89,
     "hierarchy_path": "place_hanger_on_rack/clothes_rack",
     "name": "clothes_rack",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.575804,
+        -0.014979,
+        0.749963
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.575804,
+      "x_min_m": 0.575804,
+      "y_max_m": -0.014979,
+      "y_min_m": -0.014979,
+      "z_max_m": 0.749963,
+      "z_min_m": 0.749963
+    },
     "parent": "place_hanger_on_rack",
     "parent_local_location": {
       "kind": "exact",
@@ -205,7 +233,7 @@
       "kind": "range",
       "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
       "x_uniform_max_m": 0.350301,
-      "x_uniform_min_m": -0.122829,
+      "x_uniform_min_m": -0.172541,
       "y_uniform_max_m": 0.136077,
       "y_uniform_min_m": -0.106122,
       "z_fixed_m": 0.749963
@@ -217,33 +245,47 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -0.719258,
-          0.384766,
-          -0.006396
+          -0.719225,
+          0.384795,
+          -0.006405
         ],
         "position_xyz_m": [
-          0.022187,
-          -0.023006,
-          -0.050619
+          0.022185,
+          -0.023009,
+          -0.050622
         ],
         "quaternion_xyzw": [
-          -0.346005,
-          0.177861,
-          -0.070226,
-          0.918539
+          -0.34599,
+          0.177874,
+          -0.070232,
+          0.918542
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "clothes_hanger",
       "world_offset_xyz_m": [
-        -0.031277,
-        -0.030384,
-        -0.041017
+        0.015821,
+        0.040635,
+        -0.041022
       ]
     },
     "handle": 82,
     "hierarchy_path": "place_hanger_on_rack/hanger_holder/hanger_holder0",
     "name": "hanger_holder0",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.232429,
+        -0.001996,
+        0.756
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.567479,
+      "x_min_m": -0.108515,
+      "y_max_m": 0.236697,
+      "y_min_m": -0.35532,
+      "z_max_m": 0.756,
+      "z_min_m": 0.756
+    },
     "parent": "hanger_holder",
     "parent_local_location": {
       "kind": "exact",
@@ -271,18 +313,18 @@
       "orientation_rpy_rad": [
         -0.0,
         0.0,
-        -2.753814
+        0.816437
       ],
       "position_xyz_m": [
-        -0.154493,
-        -0.151866,
+        0.052062,
+        -0.092599,
         0.004
       ],
       "quaternion_xyzw": [
         0.0,
         0.0,
-        0.981262,
-        -0.192677
+        0.396975,
+        0.917829
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -292,28 +334,28 @@
       "orientation_rpy_rad": [
         -0.0,
         0.0,
-        -2.753814
+        0.816437
       ],
       "position_xyz_m": [
-        0.095507,
-        -0.151866,
+        0.302062,
+        -0.092599,
         0.756
       ],
       "quaternion_xyzw": [
         0.0,
         0.0,
-        0.981262,
-        -0.192677
+        0.396975,
+        0.917829
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
       "kind": "range",
       "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.240789,
-      "x_uniform_min_m": -0.013315,
-      "y_uniform_max_m": 0.026566,
-      "y_uniform_min_m": 0.003392,
+      "x_uniform_max_m": 0.130384,
+      "x_uniform_min_m": 0.047377,
+      "y_uniform_max_m": -0.08384,
+      "y_uniform_min_m": 0.113796,
       "z_fixed_m": 0.756
     }
   },
@@ -323,33 +365,47 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -0.719258,
-          0.384766,
-          -0.006396
+          -0.719225,
+          0.384795,
+          -0.006405
         ],
         "position_xyz_m": [
-          0.001513,
-          -0.003841,
-          -0.029026
+          0.001512,
+          -0.003844,
+          -0.029028
         ],
         "quaternion_xyzw": [
-          -0.346005,
-          0.177861,
-          -0.070226,
-          0.918539
+          -0.34599,
+          0.177874,
+          -0.070232,
+          0.918542
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "clothes_hanger",
       "world_offset_xyz_m": [
-        -0.003504,
-        -0.01904,
-        -0.022017
+        -0.004724,
+        0.018773,
+        -0.022022
       ]
     },
     "handle": 83,
     "hierarchy_path": "place_hanger_on_rack/hanger_holder/hanger_holder_visual",
     "name": "hanger_holder_visual",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.231538,
+        -0.000321,
+        0.775
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.53763,
+      "x_min_m": -0.07913,
+      "y_max_m": 0.230653,
+      "y_min_m": -0.333019,
+      "z_max_m": 0.775,
+      "z_min_m": 0.775
+    },
     "parent": "hanger_holder",
     "parent_local_location": {
       "kind": "exact",
@@ -377,18 +433,18 @@
       "orientation_rpy_rad": [
         -0.0,
         0.0,
-        -2.753814
+        0.816437
       ],
       "position_xyz_m": [
-        -0.12672,
-        -0.140522,
+        0.031517,
+        -0.11446,
         0.023
       ],
       "quaternion_xyzw": [
         0.0,
         0.0,
-        0.981262,
-        -0.192677
+        0.396975,
+        0.917829
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -398,82 +454,113 @@
       "orientation_rpy_rad": [
         -0.0,
         0.0,
-        -2.753814
+        0.816437
       ],
       "position_xyz_m": [
-        0.12328,
-        -0.140522,
+        0.281517,
+        -0.11446,
         0.775
       ],
       "quaternion_xyzw": [
         0.0,
         0.0,
-        0.981262,
-        -0.192677
+        0.396975,
+        0.917829
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
       "kind": "range",
       "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.213373,
-      "x_uniform_min_m": 0.0141,
-      "y_uniform_max_m": -0.000849,
-      "y_uniform_min_m": 0.030808,
+      "x_uniform_max_m": 0.142873,
+      "x_uniform_min_m": 0.034888,
+      "y_uniform_max_m": -0.07135,
+      "y_uniform_min_m": 0.101307,
       "z_fixed_m": 0.775
     }
   },
   {
+    "analytical_task_root_yaw_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.162228,
+      "x_uniform_min_m": 0.015533,
+      "y_uniform_max_m": -0.051995,
+      "y_uniform_min_m": 0.081952,
+      "z_fixed_m": 0.797022
+    },
     "handle": 84,
     "hierarchy_path": "place_hanger_on_rack/hanger_holder/clothes_hanger",
+    "is_graspable": true,
     "name": "clothes_hanger",
+    "observed_spawn_yaw_range_rad": [
+      -3.098111,
+      3.069241
+    ],
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.230317,
+        -0.000223,
+        0.79702
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.525605,
+      "x_min_m": -0.065617,
+      "y_max_m": 0.244516,
+      "y_min_m": -0.33616,
+      "z_max_m": 0.797027,
+      "z_min_m": 0.797012
+    },
     "parent": "hanger_holder",
     "parent_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        0.758398,
-        -0.281866,
-        0.265559
+        0.758373,
+        -0.281889,
+        0.265578
       ],
       "position_xyz_m": [
-        0.089556,
-        -0.016301,
-        -0.002983
+        0.089555,
+        -0.016299,
+        -0.002978
       ],
       "quaternion_xyzw": [
-        0.346005,
-        -0.177861,
-        0.070226,
-        0.918539
+        0.34599,
+        -0.177874,
+        0.070232,
+        0.918542
       ],
       "source": "exact_parent_local_offset"
     },
     "placement_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.197185,
-      "x_uniform_min_m": 0.030289,
-      "y_uniform_max_m": -0.017039,
-      "y_uniform_min_m": 0.046995,
-      "z_fixed_m": 0.797017
+      "kind": "observed_over_rlbench_resets",
+      "n_resets_observed": 30,
+      "source": "observed_graspable_world_range_includes_spawn_translation_and_rotation",
+      "x_uniform_max_m": 0.525605,
+      "x_uniform_min_m": -0.065617,
+      "y_uniform_max_m": 0.244516,
+      "y_uniform_min_m": -0.33616,
+      "z_fixed_m": 0.79702,
+      "z_observed_max_m": 0.797027,
+      "z_observed_min_m": 0.797012
     },
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.799155,
-        0.007695,
-        -2.597955
+        0.7542,
+        0.295154,
+        0.851444
       ],
       "position_xyz_m": [
-        -0.123216,
-        -0.121482,
-        0.045017
+        0.036242,
+        -0.133233,
+        0.045022
       ],
       "quaternion_xyzw": [
-        0.107862,
-        0.373791,
-        0.887797,
-        -0.245891
+        0.388171,
+        -0.025909,
+        0.429099,
+        0.815184
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -481,31 +568,34 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.799155,
-        0.007695,
-        -2.597955
+        0.7542,
+        0.295154,
+        0.851444
       ],
       "position_xyz_m": [
-        0.126784,
-        -0.121482,
-        0.797017
+        0.286242,
+        -0.133233,
+        0.797022
       ],
       "quaternion_xyzw": [
-        0.107862,
-        0.373791,
-        0.887797,
-        -0.245891
+        0.388171,
+        -0.025909,
+        0.429099,
+        0.815184
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.197185,
-      "x_uniform_min_m": 0.030289,
-      "y_uniform_max_m": -0.017039,
-      "y_uniform_min_m": 0.046995,
-      "z_fixed_m": 0.797017
+      "kind": "observed_over_rlbench_resets",
+      "n_resets_observed": 30,
+      "source": "observed_graspable_world_range_includes_spawn_translation_and_rotation",
+      "x_uniform_max_m": 0.525605,
+      "x_uniform_min_m": -0.065617,
+      "y_uniform_max_m": 0.244516,
+      "y_uniform_min_m": -0.33616,
+      "z_fixed_m": 0.79702,
+      "z_observed_max_m": 0.797027,
+      "z_observed_min_m": 0.797012
     }
   },
   {
@@ -514,33 +604,47 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -1.556824,
-          -1.026769,
-          -2.312365
+          1.186424,
+          0.681537,
+          -0.486428
         ],
         "position_xyz_m": [
-          -0.885925,
-          -0.598921,
-          0.082114
+          0.44821,
+          -0.353646,
+          -0.850858
         ],
         "quaternion_xyzw": [
-          -0.07368,
-          0.700682,
-          0.428772,
-          -0.565483
+          -0.44464,
+          -0.395841,
+          0.006862,
+          -0.803466
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "clothes_hanger",
       "world_offset_xyz_m": [
-        0.449028,
-        0.733349,
-        -0.641003
+        0.289571,
+        0.7451,
+        -0.641008
       ]
     },
     "handle": 90,
     "hierarchy_path": "place_hanger_on_rack/clothes_rack/clothes_rack_sub2",
     "name": "clothes_rack_sub2",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.575813,
+        0.611867,
+        0.156014
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.575813,
+      "x_min_m": 0.575813,
+      "y_max_m": 0.611867,
+      "y_min_m": 0.611867,
+      "z_max_m": 0.156014,
+      "z_min_m": 0.156014
+    },
     "parent": "clothes_rack",
     "parent_local_location": {
       "kind": "exact",
@@ -608,7 +712,7 @@
       "kind": "range",
       "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
       "x_uniform_max_m": 0.717357,
-      "x_uniform_min_m": -0.489884,
+      "x_uniform_min_m": -0.539596,
       "y_uniform_max_m": 0.503131,
       "y_uniform_min_m": -0.473179,
       "z_fixed_m": 0.156014
@@ -620,33 +724,47 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -1.556824,
-          -1.02677,
-          -2.312365
+          1.186424,
+          0.681538,
+          -0.486428
         ],
         "position_xyz_m": [
-          -0.439471,
-          0.153043,
-          -0.816639
+          -0.40386,
+          -0.767882,
+          -0.029327
         ],
         "quaternion_xyzw": [
-          -0.07368,
-          0.700682,
-          0.428772,
-          -0.565483
+          -0.44464,
+          -0.395841,
+          0.006862,
+          -0.803466
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "clothes_hanger",
       "world_offset_xyz_m": [
-        0.448978,
-        -0.520656,
-        -0.640931
+        0.289521,
+        -0.508904,
+        -0.640936
       ]
     },
     "handle": 91,
     "hierarchy_path": "place_hanger_on_rack/clothes_rack/clothes_rack_sub3",
     "name": "clothes_rack_sub3",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.575763,
+        -0.642138,
+        0.156086
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.575763,
+      "x_min_m": 0.575763,
+      "y_max_m": -0.642138,
+      "y_min_m": -0.642138,
+      "z_max_m": 0.156086,
+      "z_min_m": 0.156086
+    },
     "parent": "clothes_rack",
     "parent_local_location": {
       "kind": "exact",
@@ -714,13 +832,22 @@
       "kind": "range",
       "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
       "x_uniform_max_m": 0.744192,
-      "x_uniform_min_m": -0.516723,
+      "x_uniform_min_m": -0.566436,
       "y_uniform_max_m": 0.529969,
       "y_uniform_min_m": -0.500015,
       "z_fixed_m": 0.156086
     }
   },
   {
+    "analytical_task_root_yaw_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.134302,
+      "x_uniform_min_m": 0.043459,
+      "y_uniform_max_m": -0.079922,
+      "y_uniform_min_m": 0.109878,
+      "z_fixed_m": 0.820804
+    },
     "fixed_relation_to_nearest_graspable": {
       "has_separate_position_range": false,
       "reference_local_location": {
@@ -745,14 +872,30 @@
       },
       "reference_object": "clothes_hanger",
       "world_offset_xyz_m": [
-        -0.000809,
-        -0.028235,
+        -0.011001,
+        0.026016,
         0.023782
       ]
     },
     "handle": 85,
     "hierarchy_path": "place_hanger_on_rack/hanger_holder/clothes_hanger/clothes_hanger_visual",
+    "mounted_note": "Rigidly mounted on graspable 'clothes_hanger'. RLBench re-places 'clothes_hanger' each episode at a random position within its spawn region and a random yaw (RLBench default +/-pi). This object sits ~0.028 m from 'clothes_hanger' rotation axis, so its absolute world position sweeps a wide ring; its pose relative to 'clothes_hanger' is fixed.",
+    "mounted_on_graspable": "clothes_hanger",
     "name": "clothes_hanger_visual",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.232098,
+        -9.3e-05,
+        0.820802
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.539557,
+      "x_min_m": -0.082012,
+      "y_max_m": 0.221514,
+      "y_min_m": -0.327373,
+      "z_max_m": 0.82081,
+      "z_min_m": 0.820794
+    },
     "parent": "clothes_hanger",
     "parent_local_location": {
       "kind": "exact",
@@ -775,23 +918,24 @@
       "source": "exact_parent_local_offset"
     },
     "placement_range": null,
+    "rotation_radius_from_graspable_m": 0.028247,
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.925848,
-        0.001576,
-        -2.542947
+        0.880183,
+        0.337044,
+        0.866645
       ],
       "position_xyz_m": [
-        -0.124024,
-        -0.149716,
-        0.0688
+        0.02524,
+        -0.107217,
+        0.068804
       ],
       "quaternion_xyzw": [
-        0.132354,
-        0.426502,
-        0.85507,
-        -0.263502
+        0.444885,
+        -0.038629,
+        0.439348,
+        0.77946
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -799,31 +943,34 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.925848,
-        0.001576,
-        -2.542947
+        0.880183,
+        0.337044,
+        0.866645
       ],
       "position_xyz_m": [
-        0.125976,
-        -0.149716,
-        0.820799
+        0.27524,
+        -0.107217,
+        0.820804
       ],
       "quaternion_xyzw": [
-        0.132354,
-        0.426502,
-        0.85507,
-        -0.263502
+        0.444885,
+        -0.038629,
+        0.439348,
+        0.77946
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.218566,
-      "x_uniform_min_m": 0.008905,
-      "y_uniform_max_m": 0.004345,
-      "y_uniform_min_m": 0.025613,
-      "z_fixed_m": 0.820799
+      "kind": "mounted_on_graspable_envelope",
+      "mounted_on_graspable": "clothes_hanger",
+      "n_resets_observed": 30,
+      "rotation_radius_m": 0.028247,
+      "source": "observed_clothes_hanger_range_expanded_by_mount_radius_for_full_yaw",
+      "x_uniform_max_m": 0.553852,
+      "x_uniform_min_m": -0.093864,
+      "y_uniform_max_m": 0.272763,
+      "y_uniform_min_m": -0.364407,
+      "z_fixed_m": 0.820802
     }
   }
 ]

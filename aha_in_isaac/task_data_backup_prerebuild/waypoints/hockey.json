@@ -1,0 +1,803 @@
+[
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": null,
+    "end_effector_relative_to_waypoint_after_waypoint": null,
+    "fixed_offset_xyz_m": [
+      -0.0,
+      0.0,
+      -0.029685
+    ],
+    "fixed_orientation_rpy_rad": [
+      -0.0,
+      0.0,
+      0.0
+    ],
+    "motion_type": "point",
+    "name": "waypoint0",
+    "parent": "waypoint1",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          0.0,
+          0.0
+        ],
+        "position_xyz_m": [
+          -0.0,
+          0.0,
+          -0.029685
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          -0.0,
+          0.0,
+          1.0
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "waypoint",
+      "reference_name": "waypoint1"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.700466,
+          -0.02386,
+          -1.570737
+        ],
+        "position_xyz_m": [
+          0.00072,
+          0.041546,
+          -0.147069
+        ],
+        "quaternion_xyzw": [
+          -0.250533,
+          -0.234672,
+          0.667008,
+          -0.661258
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "hockey_stick"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -2.821728,
+        -0.355755,
+        2.383487
+      ],
+      "position_xyz_m": [
+        0.401112,
+        -0.025441,
+        0.957511
+      ],
+      "quaternion_xyzw": [
+        0.385732,
+        -0.892261,
+        -0.210252,
+        0.104283
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      -2.821728,
+      -0.355755,
+      2.383487
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": null,
+    "end_effector_relative_to_waypoint_after_waypoint": null,
+    "fixed_offset_xyz_m": [
+      1.1e-05,
+      0.022417,
+      -0.12438
+    ],
+    "fixed_orientation_rpy_rad": [
+      0.700466,
+      -0.023861,
+      -1.570737
+    ],
+    "motion_type": "point",
+    "name": "waypoint1",
+    "parent": "hockey_stick",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.700466,
+          -0.023861,
+          -1.570737
+        ],
+        "position_xyz_m": [
+          1.1e-05,
+          0.022417,
+          -0.12438
+        ],
+        "quaternion_xyzw": [
+          -0.250533,
+          -0.234672,
+          0.667008,
+          -0.661258
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "hockey_stick"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.700466,
+          -0.023861,
+          -1.570737
+        ],
+        "position_xyz_m": [
+          1.1e-05,
+          0.022417,
+          -0.12438
+        ],
+        "quaternion_xyzw": [
+          -0.250533,
+          -0.234672,
+          0.667008,
+          -0.661258
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "hockey_stick"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -2.821728,
+        -0.355755,
+        2.383487
+      ],
+      "position_xyz_m": [
+        0.390773,
+        -0.016692,
+        0.931096
+      ],
+      "quaternion_xyzw": [
+        0.385732,
+        -0.892261,
+        -0.210252,
+        0.104283
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      -2.821728,
+      -0.355755,
+      2.383487
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": null,
+    "end_effector_relative_to_waypoint_after_waypoint": null,
+    "fixed_offset_xyz_m": [
+      0.104409,
+      0.020675,
+      -0.118917
+    ],
+    "fixed_orientation_rpy_rad": [
+      0.710391,
+      -0.460087,
+      -1.568273
+    ],
+    "motion_type": "point",
+    "name": "waypoint2",
+    "parent": "hockey_stick",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.710391,
+          -0.460087,
+          -1.568273
+        ],
+        "position_xyz_m": [
+          0.104409,
+          0.020675,
+          -0.118917
+        ],
+        "quaternion_xyzw": [
+          0.390716,
+          0.087772,
+          -0.700832,
+          0.590315
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "hockey_stick"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.710391,
+          -0.460087,
+          -1.568273
+        ],
+        "position_xyz_m": [
+          0.104409,
+          0.020675,
+          -0.118917
+        ],
+        "quaternion_xyzw": [
+          0.390716,
+          0.087772,
+          -0.700832,
+          0.590315
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "hockey_stick"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.140385,
+        -0.049406,
+        2.318111
+      ],
+      "position_xyz_m": [
+        0.323935,
+        0.049895,
+        0.976159
+      ],
+      "quaternion_xyzw": [
+        -0.400097,
+        0.91614,
+        0.010439,
+        -0.022395
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      -3.140385,
+      -0.049406,
+      2.318111
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": null,
+    "end_effector_relative_to_waypoint_after_waypoint": null,
+    "fixed_offset_xyz_m": [
+      0.381721,
+      0.195239,
+      0.133115
+    ],
+    "fixed_orientation_rpy_rad": [
+      1.579433,
+      0.00549,
+      1.596042
+    ],
+    "motion_type": "point",
+    "name": "waypoint3",
+    "parent": "hockey_goal",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.579433,
+          0.00549,
+          1.596042
+        ],
+        "position_xyz_m": [
+          0.381721,
+          0.195239,
+          0.133115
+        ],
+        "quaternion_xyzw": [
+          -0.497158,
+          0.507102,
+          -0.505439,
+          -0.490115
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "hockey_goal"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.579433,
+          0.00549,
+          1.596042
+        ],
+        "position_xyz_m": [
+          0.381721,
+          0.195239,
+          0.133115
+        ],
+        "quaternion_xyzw": [
+          -0.497158,
+          0.507102,
+          -0.505439,
+          -0.490115
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "hockey_goal"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141591,
+        -3e-06,
+        -0.890704
+      ],
+      "position_xyz_m": [
+        0.223232,
+        0.362326,
+        1.005153
+      ],
+      "quaternion_xyzw": [
+        -0.902459,
+        -0.430775,
+        2e-06,
+        0.0
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      3.141591,
+      -3e-06,
+      -0.890704
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 25,
+    "cartesian_path_samples": [
+      {
+        "orientation_rpy_rad": [
+          -2.793291,
+          -0.399325,
+          -0.819505
+        ],
+        "position_xyz_m": [
+          0.200051,
+          0.383264,
+          0.966408
+        ],
+        "relative_distance": 0.0
+      },
+      {
+        "orientation_rpy_rad": [
+          -2.830715,
+          -0.361589,
+          -0.833404
+        ],
+        "position_xyz_m": [
+          0.202302,
+          0.381184,
+          0.965321
+        ],
+        "relative_distance": 0.041667
+      },
+      {
+        "orientation_rpy_rad": [
+          -2.867079,
+          -0.323402,
+          -0.845618
+        ],
+        "position_xyz_m": [
+          0.204554,
+          0.379104,
+          0.964234
+        ],
+        "relative_distance": 0.083333
+      },
+      {
+        "orientation_rpy_rad": [
+          -2.90252,
+          -0.284828,
+          -0.856231
+        ],
+        "position_xyz_m": [
+          0.206805,
+          0.377024,
+          0.963146
+        ],
+        "relative_distance": 0.125
+      },
+      {
+        "orientation_rpy_rad": [
+          -2.937165,
+          -0.245922,
+          -0.865318
+        ],
+        "position_xyz_m": [
+          0.209057,
+          0.374944,
+          0.962059
+        ],
+        "relative_distance": 0.166667
+      },
+      {
+        "orientation_rpy_rad": [
+          -2.971138,
+          -0.206738,
+          -0.872942
+        ],
+        "position_xyz_m": [
+          0.211308,
+          0.372864,
+          0.960971
+        ],
+        "relative_distance": 0.208333
+      },
+      {
+        "orientation_rpy_rad": [
+          -3.004555,
+          -0.167327,
+          -0.879155
+        ],
+        "position_xyz_m": [
+          0.21356,
+          0.370784,
+          0.959884
+        ],
+        "relative_distance": 0.25
+      },
+      {
+        "orientation_rpy_rad": [
+          -3.03753,
+          -0.127734,
+          -0.884001
+        ],
+        "position_xyz_m": [
+          0.215811,
+          0.368703,
+          0.958797
+        ],
+        "relative_distance": 0.291667
+      },
+      {
+        "orientation_rpy_rad": [
+          -3.070029,
+          -0.088178,
+          -0.887502
+        ],
+        "position_xyz_m": [
+          0.218067,
+          0.366622,
+          0.95772
+        ],
+        "relative_distance": 0.333333
+      },
+      {
+        "orientation_rpy_rad": [
+          -3.100444,
+          -0.050819,
+          -0.889615
+        ],
+        "position_xyz_m": [
+          0.220375,
+          0.36453,
+          0.956788
+        ],
+        "relative_distance": 0.375
+      },
+      {
+        "orientation_rpy_rad": [
+          -3.127817,
+          -0.017031,
+          -0.890549
+        ],
+        "position_xyz_m": [
+          0.222754,
+          0.362429,
+          0.95608
+        ],
+        "relative_distance": 0.416667
+      },
+      {
+        "orientation_rpy_rad": [
+          3.132037,
+          0.011811,
+          -0.890619
+        ],
+        "position_xyz_m": [
+          0.225205,
+          0.360334,
+          0.955667
+        ],
+        "relative_distance": 0.458333
+      },
+      {
+        "orientation_rpy_rad": [
+          3.113886,
+          0.034235,
+          -0.890218
+        ],
+        "position_xyz_m": [
+          0.227715,
+          0.35827,
+          0.955621
+        ],
+        "relative_distance": 0.5
+      },
+      {
+        "orientation_rpy_rad": [
+          3.098874,
+          0.052749,
+          -0.889585
+        ],
+        "position_xyz_m": [
+          0.230248,
+          0.356236,
+          0.95579
+        ],
+        "relative_distance": 0.541667
+      },
+      {
+        "orientation_rpy_rad": [
+          3.083833,
+          0.071251,
+          -0.888672
+        ],
+        "position_xyz_m": [
+          0.23278,
+          0.354203,
+          0.955959
+        ],
+        "relative_distance": 0.583333
+      },
+      {
+        "orientation_rpy_rad": [
+          3.068753,
+          0.089737,
+          -0.887479
+        ],
+        "position_xyz_m": [
+          0.235312,
+          0.352169,
+          0.956129
+        ],
+        "relative_distance": 0.625
+      },
+      {
+        "orientation_rpy_rad": [
+          3.053572,
+          0.108243,
+          -0.885997
+        ],
+        "position_xyz_m": [
+          0.237844,
+          0.350134,
+          0.956308
+        ],
+        "relative_distance": 0.666667
+      },
+      {
+        "orientation_rpy_rad": [
+          3.037822,
+          0.127114,
+          -0.884143
+        ],
+        "position_xyz_m": [
+          0.240364,
+          0.348101,
+          0.956605
+        ],
+        "relative_distance": 0.708333
+      },
+      {
+        "orientation_rpy_rad": [
+          3.021295,
+          0.146478,
+          -0.881856
+        ],
+        "position_xyz_m": [
+          0.242863,
+          0.346072,
+          0.957066
+        ],
+        "relative_distance": 0.75
+      },
+      {
+        "orientation_rpy_rad": [
+          3.003952,
+          0.166312,
+          -0.879093
+        ],
+        "position_xyz_m": [
+          0.245333,
+          0.344055,
+          0.957706
+        ],
+        "relative_distance": 0.791667
+      },
+      {
+        "orientation_rpy_rad": [
+          2.986046,
+          0.186402,
+          -0.875873
+        ],
+        "position_xyz_m": [
+          0.247779,
+          0.342049,
+          0.958459
+        ],
+        "relative_distance": 0.833333
+      },
+      {
+        "orientation_rpy_rad": [
+          2.968004,
+          0.206426,
+          -0.872274
+        ],
+        "position_xyz_m": [
+          0.250225,
+          0.340042,
+          0.959213
+        ],
+        "relative_distance": 0.875
+      },
+      {
+        "orientation_rpy_rad": [
+          2.949808,
+          0.226384,
+          -0.868288
+        ],
+        "position_xyz_m": [
+          0.252671,
+          0.338036,
+          0.959968
+        ],
+        "relative_distance": 0.916667
+      },
+      {
+        "orientation_rpy_rad": [
+          2.931443,
+          0.246267,
+          -0.86391
+        ],
+        "position_xyz_m": [
+          0.255117,
+          0.336029,
+          0.960723
+        ],
+        "relative_distance": 0.958333
+      },
+      {
+        "orientation_rpy_rad": [
+          2.912892,
+          0.266068,
+          -0.859131
+        ],
+        "position_xyz_m": [
+          0.257562,
+          0.334023,
+          0.961478
+        ],
+        "relative_distance": 1.0
+      }
+    ],
+    "end_effector_location_after_waypoint": null,
+    "end_effector_relative_to_waypoint_after_waypoint": null,
+    "fixed_offset_xyz_m": [
+      0.00102,
+      -0.019872,
+      0.038355
+    ],
+    "fixed_orientation_rpy_rad": [
+      0.523693,
+      -1.9e-05,
+      2.7e-05
+    ],
+    "motion_type": "predefined_cartesian_path",
+    "name": "waypoint4",
+    "parent": "waypoint3",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.523693,
+          -1.9e-05,
+          2.7e-05
+        ],
+        "position_xyz_m": [
+          0.00102,
+          -0.019872,
+          0.038355
+        ],
+        "quaternion_xyzw": [
+          0.258864,
+          -1.3e-05,
+          1e-05,
+          0.965914
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "waypoint",
+      "reference_name": "waypoint3"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.564833,
+          0.528999,
+          1.600055
+        ],
+        "position_xyz_m": [
+          0.401771,
+          0.156982,
+          0.134306
+        ],
+        "quaternion_xyzw": [
+          -0.607086,
+          0.358988,
+          -0.61948,
+          -0.344701
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "hockey_goal"
+    },
+    "type": "PATH",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -2.793264,
+        -0.399368,
+        -0.819495
+      ],
+      "position_xyz_m": [
+        0.208423,
+        0.375616,
+        0.966798
+      ],
+      "quaternion_xyzw": [
+        -0.871702,
+        -0.416082,
+        0.111526,
+        0.233609
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      -2.793264,
+      -0.399368,
+      -0.819495
+    ]
+  }
+]

@@ -3,11 +3,25 @@
     "handle": 82,
     "hierarchy_path": "slide_cabinet_open/cabinet_base",
     "name": "cabinet_base",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.289196,
+        0.008819,
+        0.844998
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.474797,
+      "x_min_m": 0.096813,
+      "y_max_m": 0.344115,
+      "y_min_m": -0.282965,
+      "z_max_m": 0.844998,
+      "z_min_m": 0.844998
+    },
     "parent": "slide_cabinet_open",
     "parent_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -1.570795,
+        -1.570796,
         -0.0,
         -3e-06
       ],
@@ -28,7 +42,7 @@
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -1.570795,
+        -1.570796,
         -0.0,
         -3e-06
       ],
@@ -49,20 +63,20 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -1.570795,
-        0.771657,
+        -1.570796,
+        0.187039,
         -4e-06
       ],
       "position_xyz_m": [
-        0.373095,
-        -0.010697,
+        0.247237,
+        -0.232638,
         0.844998
       ],
       "quaternion_xyzw": [
-        -0.655125,
-        0.266102,
-        -0.266104,
-        0.655125
+        -0.704017,
+        0.066031,
+        -0.066033,
+        0.704017
       ],
       "source": "exact_after_one_rlbench_reset"
     },
@@ -80,24 +94,38 @@
     "handle": 84,
     "hierarchy_path": "slide_cabinet_open/cabinet_base/left_joint/left_board0",
     "name": "left_board0",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.243687,
+        0.071156,
+        0.855997
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.418316,
+      "x_min_m": 0.047266,
+      "y_max_m": 0.387194,
+      "y_min_m": -0.202183,
+      "z_max_m": 0.856003,
+      "z_min_m": 0.855983
+    },
     "parent": "left_joint",
     "parent_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -3.141547,
-        0.000141,
-        1.57103
+        -3.141516,
+        0.000143,
+        1.571253
       ],
       "position_xyz_m": [
-        0.073998,
-        0.006955,
+        0.074,
+        0.006944,
         0.005194
       ],
       "quaternion_xyzw": [
-        0.707024,
-        -0.70719,
-        3.4e-05,
-        -6.6e-05
+        0.706945,
+        -0.707268,
+        2.3e-05,
+        -7.7e-05
       ],
       "source": "exact_parent_local_offset"
     },
@@ -105,19 +133,19 @@
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -1.570655,
-        -4.6e-05,
-        0.00023
+        -1.570653,
+        -7.6e-05,
+        0.000452
       ],
       "position_xyz_m": [
-        0.049015,
+        0.049026,
         0.065994,
-        0.103998
+        0.104
       ],
       "quaternion_xyzw": [
-        -0.707057,
-        6.5e-05,
-        9.7e-05,
+        -0.707056,
+        0.000133,
+        0.000187,
         0.707157
       ],
       "source": "exact_task_root_local_offset"
@@ -126,44 +154,58 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -1.570599,
-        0.771612,
-        9.2e-05
+        -1.570651,
+        0.186963,
+        0.000425
       ],
       "position_xyz_m": [
-        0.381161,
-        0.07214,
-        0.855998
+        0.208258,
+        -0.159109,
+        0.856
       ],
       "quaternion_xyzw": [
-        -0.655054,
-        0.266145,
-        -0.266032,
-        0.655208
+        -0.703954,
+        0.06616,
+        -0.065851,
+        0.704085
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
       "kind": "range",
       "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.50032,
-      "x_uniform_min_m": -0.07999,
-      "y_uniform_max_m": 0.386208,
-      "y_uniform_min_m": -0.293956,
-      "z_fixed_m": 0.855998
+      "x_uniform_max_m": 0.500328,
+      "x_uniform_min_m": -0.079982,
+      "y_uniform_max_m": 0.386214,
+      "y_uniform_min_m": -0.293964,
+      "z_fixed_m": 0.856
     }
   },
   {
     "handle": 88,
     "hierarchy_path": "slide_cabinet_open/cabinet_base/right_joint/right_board",
     "name": "right_board",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.242061,
+        -0.049428,
+        0.855999
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.443289,
+      "x_min_m": 0.026024,
+      "y_max_m": 0.266568,
+      "y_min_m": -0.321918,
+      "z_max_m": 0.855999,
+      "z_min_m": 0.855998
+    },
     "parent": "right_joint",
     "parent_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        3e-05,
+        2.9e-05,
         -0.000137,
-        1.570809
+        1.570805
       ],
       "position_xyz_m": [
         0.073999,
@@ -173,8 +215,8 @@
       "quaternion_xyzw": [
         3.8e-05,
         5.9e-05,
-        -0.707111,
-        -0.707102
+        -0.70711,
+        -0.707104
       ],
       "source": "exact_parent_local_offset"
     },
@@ -184,7 +226,7 @@
       "orientation_rpy_rad": [
         1.570934,
         3e-05,
-        -3.141576
+        -3.141579
       ],
       "position_xyz_m": [
         0.052996,
@@ -192,10 +234,10 @@
         0.103999
       ],
       "quaternion_xyzw": [
-        -5e-06,
+        -6e-06,
         0.707156,
         -0.707058,
-        1.6e-05
+        1.5e-05
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -203,20 +245,20 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        1.570989,
-        -0.771628,
-        -3.141442
+        1.570937,
+        -0.18701,
+        -3.141553
       ],
       "position_xyz_m": [
-        0.293367,
-        -0.023809,
+        0.187987,
+        -0.287572,
         0.855999
       ],
       "quaternion_xyzw": [
-        0.266117,
-        0.655172,
-        -0.655086,
-        -0.26607
+        0.066031,
+        0.704066,
+        -0.70397,
+        -0.066012
       ],
       "source": "exact_after_one_rlbench_reset"
     },
@@ -234,13 +276,27 @@
     "handle": 85,
     "hierarchy_path": "slide_cabinet_open/cabinet_base/left_joint/left_board0/left_handle_visual",
     "name": "left_handle_visual",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.244795,
+        0.116822,
+        0.851967
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.44699,
+      "x_min_m": 0.035074,
+      "y_max_m": 0.433091,
+      "y_min_m": -0.15704,
+      "z_max_m": 0.851973,
+      "z_min_m": 0.851952
+    },
     "parent": "left_board0",
     "parent_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
         1.570652,
         -7e-06,
-        -1.570821
+        -1.57082
       ],
       "position_xyz_m": [
         -0.000979,
@@ -259,20 +315,20 @@
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -3e-06,
-        0.000222,
-        -1.570775
+        -1e-06,
+        0.000445,
+        -1.570745
       ],
       "position_xyz_m": [
-        0.048033,
+        0.048042,
         0.115242,
-        0.099968
+        0.09997
       ],
       "quaternion_xyzw": [
-        8e-05,
-        -7.8e-05,
-        0.707099,
-        -0.707114
+        0.000158,
+        -0.000157,
+        0.707088,
+        -0.707125
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -280,37 +336,51 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        0.000153,
-        0.000161,
-        -2.342432
+        8.1e-05,
+        0.000437,
+        -1.757784
       ],
       "position_xyz_m": [
-        0.414798,
-        0.108123,
-        0.851968
+        0.216448,
+        -0.110538,
+        0.85197
       ],
       "quaternion_xyzw": [
-        4.5e-05,
-        -0.000102,
-        0.921224,
-        -0.389032
+        0.000142,
+        -0.000171,
+        0.770032,
+        -0.638005
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
       "kind": "range",
       "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.534435,
-      "x_uniform_min_m": -0.115494,
-      "y_uniform_max_m": 0.428854,
-      "y_uniform_min_m": -0.258424,
-      "z_fixed_m": 0.851968
+      "x_uniform_max_m": 0.534441,
+      "x_uniform_min_m": -0.115488,
+      "y_uniform_max_m": 0.428857,
+      "y_uniform_min_m": -0.25843,
+      "z_fixed_m": 0.85197
     }
   },
   {
     "handle": 86,
     "hierarchy_path": "slide_cabinet_open/cabinet_base/left_joint/left_board0/left_board_visual",
     "name": "left_board_visual",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.250173,
+        0.07087,
+        0.85598
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.423926,
+      "x_min_m": 0.054082,
+      "y_max_m": 0.389606,
+      "y_min_m": -0.205111,
+      "z_max_m": 0.85598,
+      "z_min_m": 0.855979
+    },
     "parent": "left_board0",
     "parent_local_location": {
       "kind": "exact",
@@ -336,20 +406,20 @@
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -3e-06,
-        0.000223,
-        -1.57075
+        -1e-06,
+        0.000446,
+        -1.57072
       ],
       "position_xyz_m": [
-        0.056015,
+        0.056027,
         0.065994,
         0.10398
       ],
       "quaternion_xyzw": [
-        -8e-05,
-        7.8e-05,
-        -0.70709,
-        0.707123
+        -0.000158,
+        0.000157,
+        -0.70708,
+        0.707134
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -357,30 +427,30 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        0.000154,
-        0.000162,
-        -2.342407
+        8.2e-05,
+        0.000438,
+        -1.757759
       ],
       "position_xyz_m": [
-        0.386178,
-        0.067259,
+        0.215136,
+        -0.160411,
         0.85598
       ],
       "quaternion_xyzw": [
-        -4.5e-05,
-        0.000102,
-        -0.92122,
-        0.389043
+        -0.000143,
+        0.000171,
+        -0.770024,
+        0.638014
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
       "kind": "range",
       "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.505272,
-      "x_uniform_min_m": -0.075038,
-      "y_uniform_max_m": 0.390565,
-      "y_uniform_min_m": -0.298904,
+      "x_uniform_max_m": 0.50528,
+      "x_uniform_min_m": -0.07503,
+      "y_uniform_max_m": 0.390572,
+      "y_uniform_min_m": -0.298911,
       "z_fixed_m": 0.85598
     }
   },
@@ -388,6 +458,20 @@
     "handle": 89,
     "hierarchy_path": "slide_cabinet_open/cabinet_base/right_joint/right_board/right_handle_visual",
     "name": "right_handle_visual",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.239138,
+        -0.094575,
+        0.85198
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.453702,
+      "x_min_m": 0.000425,
+      "y_max_m": 0.220431,
+      "y_min_m": -0.366006,
+      "z_max_m": 0.85198,
+      "z_min_m": 0.85198
+    },
     "parent": "right_board",
     "parent_local_location": {
       "kind": "exact",
@@ -414,7 +498,7 @@
       "kind": "exact",
       "orientation_rpy_rad": [
         -4e-06,
-        -1.9e-05,
+        -1.5e-05,
         -1.570795
       ],
       "position_xyz_m": [
@@ -423,8 +507,8 @@
         0.09998
       ],
       "quaternion_xyzw": [
-        5e-06,
-        -8e-06,
+        4e-06,
+        -7e-06,
         -0.707106,
         0.707107
       ],
@@ -434,20 +518,20 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -1.6e-05,
-        -1.1e-05,
-        -2.342452
+        -7e-06,
+        -1.4e-05,
+        -1.757834
       ],
       "position_xyz_m": [
-        0.25864,
-        -0.058073,
+        0.177936,
+        -0.335312,
         0.85198
       ],
       "quaternion_xyzw": [
-        2e-06,
-        -9e-06,
-        -0.921228,
-        0.389023
+        3e-06,
+        -7e-06,
+        -0.770048,
+        0.637986
       ],
       "source": "exact_after_one_rlbench_reset"
     },
@@ -455,9 +539,9 @@
       "kind": "range",
       "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
       "x_uniform_max_m": 0.535496,
-      "x_uniform_min_m": -0.110945,
+      "x_uniform_min_m": -0.110944,
       "y_uniform_max_m": 0.260982,
-      "y_uniform_min_m": -0.430179,
+      "y_uniform_min_m": -0.430178,
       "z_fixed_m": 0.85198
     }
   },
@@ -465,13 +549,27 @@
     "handle": 90,
     "hierarchy_path": "slide_cabinet_open/cabinet_base/right_joint/right_board/right_board_visual",
     "name": "right_board_visual",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.248549,
+        -0.049715,
+        0.855999
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.450099,
+      "x_min_m": 0.032385,
+      "y_max_m": 0.268979,
+      "y_min_m": -0.324848,
+      "z_max_m": 0.855999,
+      "z_min_m": 0.855998
+    },
     "parent": "right_board",
     "parent_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
         1.570938,
         2e-06,
-        1.570795
+        1.570794
       ],
       "position_xyz_m": [
         -0.007004,
@@ -491,17 +589,17 @@
       "kind": "exact",
       "orientation_rpy_rad": [
         -4e-06,
-        -1.9e-05,
-        -1.570768
+        -1.5e-05,
+        -1.570769
       ],
       "position_xyz_m": [
-        0.059999,
-        -0.063999,
+        0.06,
+        -0.063998,
         0.103999
       ],
       "quaternion_xyzw": [
-        5e-06,
-        -8e-06,
+        4e-06,
+        -7e-06,
         -0.707097,
         0.707117
       ],
@@ -511,20 +609,20 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -1.6e-05,
-        -1.1e-05,
-        -2.342426
+        -7e-06,
+        -1.4e-05,
+        -1.757808
       ],
       "position_xyz_m": [
-        0.298387,
-        -0.028693,
+        0.194868,
+        -0.288875,
         0.855999
       ],
       "quaternion_xyzw": [
-        2e-06,
-        -9e-06,
-        -0.921223,
-        0.389035
+        3e-06,
+        -7e-06,
+        -0.77004,
+        0.637995
       ],
       "source": "exact_after_one_rlbench_reset"
     },
@@ -533,7 +631,7 @@
       "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
       "x_uniform_max_m": 0.50668,
       "x_uniform_min_m": -0.070809,
-      "y_uniform_max_m": 0.30114,
+      "y_uniform_max_m": 0.301141,
       "y_uniform_min_m": -0.393719,
       "z_fixed_m": 0.855999
     }

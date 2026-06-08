@@ -1,0 +1,61 @@
+{
+  "shapes": {
+    "block": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 2.0,
+      "friction": 0.5
+    },
+    "screw_driver": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.11801562458276749,
+      "friction": 0.7099999785423279
+    },
+    "screw": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.10000000149011612,
+      "friction": 0.5
+    },
+    "screw_driver_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.9999999403953552,
+      "friction": 0.7099999785423279
+    },
+    "screwdriver2": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.9999999403953552,
+      "friction": 0.7099999785423279
+    },
+    "screw_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 1.2499999968440534e-07,
+      "friction": 0.7099999785423279
+    },
+    "screw_visual_strip": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 1.9999999494757503e-05,
+      "friction": 0.5
+    }
+  },
+  "joints": {
+    "screw_joint": {
+      "type": "revolute",
+      "cyclic": false,
+      "lower": 0.0,
+      "upper": 100.0000005060238
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "frame": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "task_wall": {
+    "type": "kinematic",
+    "uv": "auto"
+  },
+  "frame_visual": {
+    "type": "visual"
+  },
+  "frame_detector": {
+    "type": "rigid",
+    "density": 400.0,
+    "uv": "auto"
+  },
+  "Cuboid2": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "picture": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  },
+  "hanger": {
+    "type": "rigid",
+    "density": 80.0,
+    "uv": "auto"
+  }
+}

@@ -40,7 +40,9 @@
       "respondable": 0,
       "collidable": 0,
       "mass": 3.000826835632324,
-      "friction": 0.7099999785423279
+      "friction": 0.7099999785423279,
+      "mount_on_parent": true,
+      "_comment": "Non-colliding shape rigidly part of the crank's body in CoppeliaSim: glue it onto clock_needle_crank so it turns with the revolute joint instead of spawning standalone."
     },
     "clock_needle_crank_visual": {
       "dynamic": false,
@@ -55,7 +57,9 @@
       "type": "revolute",
       "cyclic": true,
       "lower": -180.00000500895632,
-      "upper": 180.00000500895632
+      "upper": 180.00000500895632,
+      "friction": 0.02,
+      "_comment": "clock (static base) <-> clock_needle_crank (dynamic). Light joint friction holds the hand where the gripper leaves it (a clock hand stays set) while staying turnable."
     }
   }
 }

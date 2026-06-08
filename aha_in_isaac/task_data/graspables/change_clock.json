@@ -11,20 +11,20 @@
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -1.570846,
-          0.989427,
-          1.570852
+          -1.57083,
+          -0.638996,
+          1.57079
         ],
         "position_xyz_m": [
-          0.084775,
-          -0.313999,
+          0.185715,
+          0.428579,
           1.032776
         ],
         "quaternion_xyzw": [
-          -0.202661,
-          0.677453,
-          0.202665,
-          0.677431
+          -0.631748,
+          0.31766,
+          0.631735,
+          0.317643
         ],
         "source": "exact_after_one_rlbench_reset"
       },
@@ -46,26 +46,26 @@
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
+          -1e-05,
           1.1e-05,
-          9e-06,
-          -2.560224
+          -0.931801
         ],
         "position_xyz_m": [
-          0.094088,
-          -0.309098,
+          0.180286,
+          0.437594,
           1.032626
         ],
         "quaternion_xyzw": [
-          3e-06,
-          -7e-06,
-          0.958048,
-          -0.286608
+          7e-06,
+          -3e-06,
+          0.449228,
+          -0.893417
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
         "x_uniform_max_m": 0.407677,
-        "x_uniform_min_m": -0.173303,
+        "x_uniform_min_m": -0.173302,
         "y_uniform_max_m": 0.539225,
         "y_uniform_min_m": -0.505845,
         "z_fixed_m": 1.032626
@@ -81,20 +81,20 @@
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          1.570813,
-          0.58137,
-          3.1415
+          -1.57082,
+          0.9318,
+          -6.5e-05
         ],
         "position_xyz_m": [
-          0.084775,
-          -0.313996,
+          0.185712,
+          0.428578,
           0.895275
         ],
         "quaternion_xyzw": [
-          0.202693,
-          -0.677438,
-          0.677446,
-          -0.202633
+          0.631759,
+          -0.317627,
+          0.317676,
+          -0.631724
         ],
         "source": "exact_after_one_rlbench_reset"
       },
@@ -116,20 +116,20 @@
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -1.570846,
-          0.989427,
-          1.570852
+          -1.57083,
+          -0.638996,
+          1.57079
         ],
         "position_xyz_m": [
-          0.068981,
-          -0.325278,
+          0.197885,
+          0.41346,
           1.032656
         ],
         "quaternion_xyzw": [
-          -0.202661,
-          0.677453,
-          0.202665,
-          0.677431
+          0.631748,
+          -0.31766,
+          -0.631735,
+          -0.317643
         ],
         "source": "exact_after_one_rlbench_reset"
       },
@@ -151,20 +151,20 @@
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          1.1e-05,
-          9e-06,
-          -0.989427
+          -1e-05,
+          1e-05,
+          0.638996
         ],
         "position_xyz_m": [
-          0.093351,
-          -0.309319,
+          0.180549,
+          0.436871,
           1.032624
         ],
         "quaternion_xyzw": [
-          2e-06,
-          7e-06,
-          -0.47478,
-          0.880105
+          3e-06,
+          -6e-06,
+          -0.31409,
+          -0.949393
         ],
         "source": "exact_after_one_rlbench_reset"
       },
@@ -185,20 +185,20 @@
   "task_boundary_root_world_pose_after_reset": {
     "kind": "exact",
     "orientation_rpy_rad": [
+      -0.0,
       0.0,
-      0.0,
-      -0.989427
+      0.638996
     ],
     "position_xyz_m": [
-      0.011838,
-      -0.203004,
+      0.079105,
+      0.349369,
       0.752
     ],
     "quaternion_xyzw": [
       0.0,
       0.0,
-      -0.474779,
-      0.880105
+      0.31409,
+      0.949393
     ],
     "source": "exact_after_one_rlbench_reset"
   },

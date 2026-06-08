@@ -1,0 +1,667 @@
+[
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.141589,
+        0.241534,
+        3.141592
+      ],
+      "position_xyz_m": [
+        0.278636,
+        -0.008162,
+        1.47158
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.992716,
+        2e-06,
+        0.120474
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.869981,
+        1.329136,
+        -0.000282
+      ],
+      "position_xyz_m": [
+        -0.594527,
+        0.035519,
+        0.437492
+      ],
+      "quaternion_xyzw": [
+        -0.331641,
+        -0.559333,
+        -0.259786,
+        -0.713913
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      -0.104108,
+      -0.042644,
+      -0.007996
+    ],
+    "fixed_orientation_rpy_rad": [
+      -1.571113,
+      1.202874,
+      1.571111
+    ],
+    "motion_type": "point",
+    "name": "waypoint0",
+    "parent": "toilet_roll_visual",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.571113,
+          1.202874,
+          1.571111
+        ],
+        "position_xyz_m": [
+          -0.104108,
+          -0.042644,
+          -0.007996
+        ],
+        "quaternion_xyzw": [
+          -0.129348,
+          0.695217,
+          0.129347,
+          0.695135
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "toilet_roll_visual"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.571113,
+          1.202874,
+          1.571111
+        ],
+        "position_xyz_m": [
+          -0.104108,
+          -0.042644,
+          -0.007996
+        ],
+        "quaternion_xyzw": [
+          -0.129348,
+          0.695217,
+          0.129347,
+          0.695135
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "toilet_roll_visual"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570889,
+        0.701096,
+        1.570887
+      ],
+      "position_xyz_m": [
+        0.023496,
+        -0.365333,
+        0.877064
+      ],
+      "quaternion_xyzw": [
+        0.297887,
+        -0.641326,
+        -0.297886,
+        -0.641271
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      -1.570889,
+      0.701096,
+      1.570887
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141584,
+        0.241521,
+        -3.14159
+      ],
+      "position_xyz_m": [
+        0.278636,
+        -0.008157,
+        1.471592
+      ],
+      "quaternion_xyzw": [
+        1e-06,
+        0.992717,
+        -4e-06,
+        0.120467
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.870036,
+        1.329151,
+        -0.000337
+      ],
+      "position_xyz_m": [
+        -0.605774,
+        0.032447,
+        0.312646
+      ],
+      "quaternion_xyzw": [
+        -0.331644,
+        -0.559341,
+        -0.259784,
+        -0.713906
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      0.011281,
+      0.005131,
+      -0.019245
+    ],
+    "fixed_orientation_rpy_rad": [
+      -1.571113,
+      1.202874,
+      1.571111
+    ],
+    "motion_type": "point",
+    "name": "waypoint1",
+    "parent": "toilet_roll_visual",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.571113,
+          1.202874,
+          1.571111
+        ],
+        "position_xyz_m": [
+          0.011281,
+          0.005131,
+          -0.019245
+        ],
+        "quaternion_xyzw": [
+          -0.129349,
+          0.695216,
+          0.129347,
+          0.695135
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "toilet_roll_visual"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.571113,
+          1.202874,
+          1.571111
+        ],
+        "position_xyz_m": [
+          0.011281,
+          0.005131,
+          -0.019245
+        ],
+        "quaternion_xyzw": [
+          -0.129349,
+          0.695216,
+          0.129347,
+          0.695135
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "toilet_roll_visual"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570889,
+        0.701095,
+        1.570887
+      ],
+      "position_xyz_m": [
+        0.101682,
+        -0.267946,
+        0.86582
+      ],
+      "quaternion_xyzw": [
+        0.297887,
+        -0.641326,
+        -0.297886,
+        -0.641271
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      -1.570889,
+      0.701095,
+      1.570887
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141586,
+        0.241528,
+        -3.141587
+      ],
+      "position_xyz_m": [
+        0.27864,
+        -0.008142,
+        1.471579
+      ],
+      "quaternion_xyzw": [
+        3e-06,
+        0.992717,
+        -3e-06,
+        0.120471
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.87003,
+        1.329144,
+        -0.000325
+      ],
+      "position_xyz_m": [
+        -0.530278,
+        0.03444,
+        0.325004
+      ],
+      "quaternion_xyzw": [
+        0.331646,
+        0.559337,
+        0.259785,
+        0.713908
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      0.000485,
+      -0.00116,
+      0.05624
+    ],
+    "fixed_orientation_rpy_rad": [
+      -1.571108,
+      1.202874,
+      1.571107
+    ],
+    "motion_type": "point",
+    "name": "waypoint2",
+    "parent": "toilet_roll_visual",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.571108,
+          1.202874,
+          1.571107
+        ],
+        "position_xyz_m": [
+          0.000485,
+          -0.00116,
+          0.05624
+        ],
+        "quaternion_xyzw": [
+          0.129348,
+          -0.695216,
+          -0.129347,
+          -0.695135
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "toilet_roll_visual"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.571108,
+          1.202874,
+          1.571107
+        ],
+        "position_xyz_m": [
+          0.000485,
+          -0.00116,
+          0.05624
+        ],
+        "quaternion_xyzw": [
+          0.129348,
+          -0.695216,
+          -0.129347,
+          -0.695135
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "toilet_roll_visual"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570887,
+        0.701095,
+        1.570886
+      ],
+      "position_xyz_m": [
+        0.095241,
+        -0.278658,
+        0.941304
+      ],
+      "quaternion_xyzw": [
+        -0.297887,
+        0.641325,
+        0.297886,
+        0.641272
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      -1.570887,
+      0.701095,
+      1.570886
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.141589,
+        0.241431,
+        3.141592
+      ],
+      "position_xyz_m": [
+        0.278695,
+        -0.008157,
+        1.47152
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        0.992723,
+        2e-06,
+        0.120423
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.331114,
+        -0.030007,
+        -1.448769
+      ],
+      "position_xyz_m": [
+        -0.001167,
+        0.508637,
+        -0.079142
+      ],
+      "quaternion_xyzw": [
+        0.470216,
+        0.400316,
+        -0.528122,
+        0.582865
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      0.004409,
+      -0.026334,
+      -0.150218
+    ],
+    "fixed_orientation_rpy_rad": [
+      0.0,
+      1.570308,
+      -1.9e-05
+    ],
+    "motion_type": "point",
+    "name": "waypoint3",
+    "parent": "toilet_roll_holder",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          1.570308,
+          -1.9e-05
+        ],
+        "position_xyz_m": [
+          0.004409,
+          -0.026334,
+          -0.150218
+        ],
+        "quaternion_xyzw": [
+          0.000221,
+          0.707114,
+          -0.000234,
+          0.7071
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "toilet_roll_holder"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          1.570308,
+          -1.9e-05
+        ],
+        "position_xyz_m": [
+          0.004409,
+          -0.026334,
+          -0.150218
+        ],
+        "quaternion_xyzw": [
+          0.000221,
+          0.707114,
+          -0.000234,
+          0.7071
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "toilet_roll_holder"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.571445,
+        1.44515,
+        -3.140903
+      ],
+      "position_xyz_m": [
+        0.357023,
+        0.002937,
+        0.962877
+      ],
+      "quaternion_xyzw": [
+        0.467654,
+        0.530415,
+        0.530393,
+        0.467592
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      -1.571445,
+      1.44515,
+      -3.140903
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.14158,
+        0.241677,
+        3.141589
+      ],
+      "position_xyz_m": [
+        0.278584,
+        -0.008151,
+        1.471662
+      ],
+      "quaternion_xyzw": [
+        -2e-06,
+        0.992708,
+        -7e-06,
+        0.120545
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.330869,
+        -0.030061,
+        -1.448795
+      ],
+      "position_xyz_m": [
+        0.123877,
+        0.508759,
+        -0.079271
+      ],
+      "quaternion_xyzw": [
+        0.470154,
+        0.400241,
+        -0.52819,
+        0.582904
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      0.004428,
+      -0.026313,
+      -0.025198
+    ],
+    "fixed_orientation_rpy_rad": [
+      0.0,
+      1.570106,
+      -9e-06
+    ],
+    "motion_type": "point",
+    "name": "waypoint4",
+    "parent": "toilet_roll_holder",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          1.570106,
+          -9e-06
+        ],
+        "position_xyz_m": [
+          0.004428,
+          -0.026313,
+          -0.025198
+        ],
+        "quaternion_xyzw": [
+          0.000225,
+          0.70711,
+          -0.000231,
+          0.707103
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "toilet_roll_holder"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          1.570106,
+          -9e-06
+        ],
+        "position_xyz_m": [
+          0.004428,
+          -0.026313,
+          -0.025198
+        ],
+        "quaternion_xyzw": [
+          0.000225,
+          0.70711,
+          -0.000231,
+          0.707103
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "toilet_roll_holder"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.571468,
+        1.445161,
+        -3.14087
+      ],
+      "position_xyz_m": [
+        0.372707,
+        -0.121096,
+        0.96289
+      ],
+      "quaternion_xyzw": [
+        0.46766,
+        0.530411,
+        0.530393,
+        0.467591
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      -1.571468,
+      1.445161,
+      -3.14087
+    ]
+  }
+]

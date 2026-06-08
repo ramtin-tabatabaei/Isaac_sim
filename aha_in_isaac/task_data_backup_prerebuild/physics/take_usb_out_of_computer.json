@@ -1,0 +1,68 @@
+{
+  "shapes": {
+    "usb": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.00034999995841644704,
+      "friction": 1.0
+    },
+    "computer": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 29.70243263244629,
+      "friction": 0.5
+    },
+    "usb_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 1.000010371208191,
+      "friction": 0.7099999785423279
+    },
+    "tip": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.0005235987482592463,
+      "friction": 0.5
+    },
+    "computer_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.04009696841239929,
+      "friction": 0.7099999785423279
+    },
+    "Plane": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.04452000558376312,
+      "friction": 0.5
+    },
+    "Plane0": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.14454004168510437,
+      "friction": 0.5
+    },
+    "Plane1": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.14685004949569702,
+      "friction": 0.5
+    },
+    "Plane2": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.050160009413957596,
+      "friction": 0.5
+    }
+  },
+  "joints": {}
+}

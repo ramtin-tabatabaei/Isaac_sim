@@ -1,0 +1,2737 @@
+[
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.570796,
+          1.6e-05,
+          1e-06
+        ],
+        "position_xyz_m": [
+          0.001412,
+          -0.354661,
+          0.094354
+        ],
+        "quaternion_xyzw": [
+          -0.707107,
+          6e-06,
+          -5e-06,
+          0.707107
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "solve_puzzle_piece2",
+      "world_offset_xyz_m": [
+        -0.080627,
+        -0.358031,
+        0.001418
+      ]
+    },
+    "handle": 81,
+    "hierarchy_path": "solve_puzzle/solve_puzzle_frame",
+    "name": "solve_puzzle_frame",
+    "parent": "solve_puzzle",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        0.0,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        0.0,
+        0.0,
+        0.001
+      ],
+      "quaternion_xyzw": [
+        -0.5,
+        -0.5,
+        -0.5,
+        0.5
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        0.0,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        0.0,
+        0.0,
+        0.001
+      ],
+      "quaternion_xyzw": [
+        -0.5,
+        -0.5,
+        -0.5,
+        0.5
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        -0.038518,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        0.237367,
+        -0.115443,
+        0.753
+      ],
+      "quaternion_xyzw": [
+        -0.490278,
+        -0.509536,
+        -0.490278,
+        0.509536
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.425453,
+      "x_uniform_min_m": 0.074547,
+      "y_uniform_max_m": 0.062593,
+      "y_uniform_min_m": -0.23568,
+      "z_fixed_m": 0.753
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.570796,
+          1.6e-05,
+          1e-06
+        ],
+        "position_xyz_m": [
+          0.002145,
+          -0.190534,
+          -0.008876
+        ],
+        "quaternion_xyzw": [
+          -0.707107,
+          6e-06,
+          -5e-06,
+          0.707107
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "solve_puzzle_piece2",
+      "world_offset_xyz_m": [
+        0.016206,
+        -0.19005,
+        0.002148
+      ]
+    },
+    "handle": 82,
+    "hierarchy_path": "solve_puzzle/solve_puzzle_frame/solve_puzzle_piece1",
+    "name": "solve_puzzle_piece1",
+    "parent": "solve_puzzle_frame",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.00073,
+        0.10323,
+        0.164127
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        0.0,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        0.10323,
+        0.164127,
+        0.00173
+      ],
+      "quaternion_xyzw": [
+        -0.5,
+        -0.5,
+        -0.5,
+        0.5
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        -0.038518,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        0.3342,
+        0.052538,
+        0.75373
+      ],
+      "quaternion_xyzw": [
+        -0.490278,
+        -0.509536,
+        -0.490278,
+        0.509536
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.619345,
+      "x_uniform_min_m": -0.119344,
+      "y_uniform_max_m": 0.256485,
+      "y_uniform_min_m": -0.429572,
+      "z_fixed_m": 0.75373
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.570796,
+          1.6e-05,
+          1e-06
+        ],
+        "position_xyz_m": [
+          0.002143,
+          -0.319774,
+          -0.008876
+        ],
+        "quaternion_xyzw": [
+          -0.707107,
+          6e-06,
+          -5e-06,
+          0.707107
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "solve_puzzle_piece2",
+      "world_offset_xyz_m": [
+        0.021183,
+        -0.319195,
+        0.002148
+      ]
+    },
+    "handle": 83,
+    "hierarchy_path": "solve_puzzle/solve_puzzle_frame/solve_puzzle_piece3",
+    "name": "solve_puzzle_piece3",
+    "parent": "solve_puzzle_frame",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.00073,
+        0.10323,
+        0.034887
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        0.0,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        0.10323,
+        0.034887,
+        0.00173
+      ],
+      "quaternion_xyzw": [
+        -0.5,
+        -0.5,
+        -0.5,
+        0.5
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        -0.038518,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        0.339177,
+        -0.076606,
+        0.75373
+      ],
+      "quaternion_xyzw": [
+        -0.490278,
+        -0.509536,
+        -0.490278,
+        0.509536
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.534419,
+      "x_uniform_min_m": -0.034419,
+      "y_uniform_max_m": 0.171559,
+      "y_uniform_min_m": -0.344645,
+      "z_fixed_m": 0.75373
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          1e-06,
+          -1.6e-05
+        ],
+        "position_xyz_m": [
+          0.002142,
+          -0.389547,
+          1e-06
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          1e-06,
+          -8e-06,
+          1.0
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "solve_puzzle_piece2",
+      "world_offset_xyz_m": [
+        0.015,
+        -0.389258,
+        0.002148
+      ]
+    },
+    "handle": 84,
+    "hierarchy_path": "solve_puzzle/solve_puzzle_frame/solve_puzzle_piece4",
+    "name": "solve_puzzle_piece4",
+    "parent": "solve_puzzle_frame",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570796,
+        -0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.00073,
+        0.094354,
+        -0.034886
+      ],
+      "quaternion_xyzw": [
+        0.707107,
+        0.0,
+        0.0,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.094354,
+        -0.034886,
+        0.00173
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        -0.707107,
+        -0.0,
+        0.707107
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570799,
+        -1.532282,
+        1.570799
+      ],
+      "position_xyz_m": [
+        0.332994,
+        -0.14667,
+        0.75373
+      ],
+      "quaternion_xyzw": [
+        0.013617,
+        -0.706976,
+        0.013617,
+        0.706976
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.52605,
+      "x_uniform_min_m": -0.026049,
+      "y_uniform_max_m": 0.16319,
+      "y_uniform_min_m": -0.336276,
+      "z_fixed_m": 0.75373
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.570796,
+          1.6e-05,
+          1e-06
+        ],
+        "position_xyz_m": [
+          0.002141,
+          -0.459321,
+          -0.008876
+        ],
+        "quaternion_xyzw": [
+          -0.707107,
+          6e-06,
+          -5e-06,
+          0.707107
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "solve_puzzle_piece2",
+      "world_offset_xyz_m": [
+        0.026557,
+        -0.458638,
+        0.002148
+      ]
+    },
+    "handle": 85,
+    "hierarchy_path": "solve_puzzle/solve_puzzle_frame/solve_puzzle_piece5",
+    "name": "solve_puzzle_piece5",
+    "parent": "solve_puzzle_frame",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.00073,
+        0.10323,
+        -0.10466
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        0.0,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        0.10323,
+        -0.10466,
+        0.00173
+      ],
+      "quaternion_xyzw": [
+        -0.5,
+        -0.5,
+        -0.5,
+        0.5
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        -0.038518,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        0.344551,
+        -0.21605,
+        0.75373
+      ],
+      "quaternion_xyzw": [
+        -0.490278,
+        -0.509536,
+        -0.490278,
+        0.509536
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.572457,
+      "x_uniform_min_m": -0.072456,
+      "y_uniform_max_m": 0.209597,
+      "y_uniform_min_m": -0.382683,
+      "z_fixed_m": 0.75373
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          1e-06,
+          -1.6e-05
+        ],
+        "position_xyz_m": [
+          0.00214,
+          -0.527665,
+          1e-06
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          1e-06,
+          -8e-06,
+          1.0
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "solve_puzzle_piece2",
+      "world_offset_xyz_m": [
+        0.020319,
+        -0.527273,
+        0.002148
+      ]
+    },
+    "handle": 86,
+    "hierarchy_path": "solve_puzzle/solve_puzzle_frame/solve_puzzle_piece6",
+    "name": "solve_puzzle_piece6",
+    "parent": "solve_puzzle_frame",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570796,
+        -0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.00073,
+        0.094353,
+        -0.173004
+      ],
+      "quaternion_xyzw": [
+        0.707107,
+        0.0,
+        0.0,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.094353,
+        -0.173004,
+        0.00173
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        -0.707107,
+        -0.0,
+        0.707107
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570799,
+        -1.532282,
+        1.570799
+      ],
+      "position_xyz_m": [
+        0.338313,
+        -0.284685,
+        0.75373
+      ],
+      "quaternion_xyzw": [
+        0.013617,
+        -0.706976,
+        0.013617,
+        0.706976
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.622514,
+      "x_uniform_min_m": -0.122512,
+      "y_uniform_max_m": 0.259654,
+      "y_uniform_min_m": -0.43274,
+      "z_fixed_m": 0.75373
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          1e-06,
+          -1.6e-05
+        ],
+        "position_xyz_m": [
+          0.002145,
+          -0.181657,
+          0.059468
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          1e-06,
+          -8e-06,
+          1.0
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "solve_puzzle_piece2",
+      "world_offset_xyz_m": [
+        -0.052429,
+        -0.183812,
+        0.002148
+      ]
+    },
+    "handle": 87,
+    "hierarchy_path": "solve_puzzle/solve_puzzle_frame/solve_puzzle_piece7",
+    "name": "solve_puzzle_piece7",
+    "parent": "solve_puzzle_frame",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570796,
+        -0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.00073,
+        0.034886,
+        0.173004
+      ],
+      "quaternion_xyzw": [
+        0.707107,
+        -0.0,
+        -0.0,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.034886,
+        0.173004,
+        0.00173
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        -0.707107,
+        -0.0,
+        0.707107
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570806,
+        -1.532277,
+        1.570806
+      ],
+      "position_xyz_m": [
+        0.265565,
+        0.058776,
+        0.75373
+      ],
+      "quaternion_xyzw": [
+        0.013617,
+        -0.706976,
+        0.013617,
+        0.706976
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.601938,
+      "x_uniform_min_m": -0.101939,
+      "y_uniform_max_m": 0.239079,
+      "y_uniform_min_m": -0.412165,
+      "z_fixed_m": 0.75373
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.570796,
+          1.6e-05,
+          1e-06
+        ],
+        "position_xyz_m": [
+          0.002144,
+          -0.250001,
+          0.059468
+        ],
+        "quaternion_xyzw": [
+          -0.707107,
+          6e-06,
+          -5e-06,
+          0.707107
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "solve_puzzle_piece2",
+      "world_offset_xyz_m": [
+        -0.049797,
+        -0.252105,
+        0.002148
+      ]
+    },
+    "handle": 88,
+    "hierarchy_path": "solve_puzzle/solve_puzzle_frame/solve_puzzle_piece8",
+    "name": "solve_puzzle_piece8",
+    "parent": "solve_puzzle_frame",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.00073,
+        0.034886,
+        0.10466
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        0.0,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        0.034886,
+        0.10466,
+        0.00173
+      ],
+      "quaternion_xyzw": [
+        -0.5,
+        -0.5,
+        -0.5,
+        0.5
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        -0.038518,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        0.268197,
+        -0.009517,
+        0.75373
+      ],
+      "quaternion_xyzw": [
+        -0.490278,
+        -0.509536,
+        -0.490278,
+        0.509536
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.535773,
+      "x_uniform_min_m": -0.035774,
+      "y_uniform_max_m": 0.172914,
+      "y_uniform_min_m": -0.346001,
+      "z_fixed_m": 0.75373
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          1e-06,
+          -1.6e-05
+        ],
+        "position_xyz_m": [
+          0.002143,
+          -0.319774,
+          0.059468
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          1e-06,
+          -8e-06,
+          1.0
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "solve_puzzle_piece2",
+      "world_offset_xyz_m": [
+        -0.04711,
+        -0.321827,
+        0.002148
+      ]
+    },
+    "handle": 89,
+    "hierarchy_path": "solve_puzzle/solve_puzzle_frame/solve_puzzle_piece9",
+    "name": "solve_puzzle_piece9",
+    "parent": "solve_puzzle_frame",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570796,
+        -0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.00073,
+        0.034886,
+        0.034887
+      ],
+      "quaternion_xyzw": [
+        0.707107,
+        -0.0,
+        -0.0,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.034886,
+        0.034887,
+        0.00173
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        -0.707107,
+        -0.0,
+        0.707107
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570806,
+        -1.532277,
+        1.570806
+      ],
+      "position_xyz_m": [
+        0.270884,
+        -0.079238,
+        0.75373
+      ],
+      "quaternion_xyzw": [
+        0.013617,
+        -0.706976,
+        0.013617,
+        0.706976
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.47479,
+      "x_uniform_min_m": 0.02521,
+      "y_uniform_max_m": 0.11193,
+      "y_uniform_min_m": -0.285017,
+      "z_fixed_m": 0.75373
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.570796,
+          1.6e-05,
+          1e-06
+        ],
+        "position_xyz_m": [
+          0.002142,
+          -0.389547,
+          0.059468
+        ],
+        "quaternion_xyzw": [
+          -0.707107,
+          6e-06,
+          -5e-06,
+          0.707107
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "solve_puzzle_piece2",
+      "world_offset_xyz_m": [
+        -0.044423,
+        -0.391548,
+        0.002148
+      ]
+    },
+    "handle": 90,
+    "hierarchy_path": "solve_puzzle/solve_puzzle_frame/solve_puzzle_piece10",
+    "name": "solve_puzzle_piece10",
+    "parent": "solve_puzzle_frame",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.00073,
+        0.034886,
+        -0.034887
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        0.0,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        0.034886,
+        -0.034887,
+        0.00173
+      ],
+      "quaternion_xyzw": [
+        -0.5,
+        -0.5,
+        -0.5,
+        0.5
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        -0.038518,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        0.273571,
+        -0.14896,
+        0.75373
+      ],
+      "quaternion_xyzw": [
+        -0.490278,
+        -0.509536,
+        -0.490278,
+        0.509536
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.474789,
+      "x_uniform_min_m": 0.02521,
+      "y_uniform_max_m": 0.11193,
+      "y_uniform_min_m": -0.285016,
+      "z_fixed_m": 0.75373
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          1e-06,
+          -1.6e-05
+        ],
+        "position_xyz_m": [
+          0.002141,
+          -0.459321,
+          0.059468
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          1e-06,
+          -8e-06,
+          1.0
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "solve_puzzle_piece2",
+      "world_offset_xyz_m": [
+        -0.041736,
+        -0.46127,
+        0.002148
+      ]
+    },
+    "handle": 91,
+    "hierarchy_path": "solve_puzzle/solve_puzzle_frame/solve_puzzle_piece11",
+    "name": "solve_puzzle_piece11",
+    "parent": "solve_puzzle_frame",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570796,
+        -0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.00073,
+        0.034886,
+        -0.10466
+      ],
+      "quaternion_xyzw": [
+        0.707107,
+        0.0,
+        0.0,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.034886,
+        -0.10466,
+        0.00173
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        -0.707107,
+        -0.0,
+        0.707107
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570799,
+        -1.532282,
+        1.570799
+      ],
+      "position_xyz_m": [
+        0.276258,
+        -0.218681,
+        0.75373
+      ],
+      "quaternion_xyzw": [
+        0.013617,
+        -0.706976,
+        0.013617,
+        0.706976
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.535773,
+      "x_uniform_min_m": -0.035774,
+      "y_uniform_max_m": 0.172914,
+      "y_uniform_min_m": -0.346001,
+      "z_fixed_m": 0.75373
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.570796,
+          1.6e-05,
+          1e-06
+        ],
+        "position_xyz_m": [
+          0.00214,
+          -0.518788,
+          0.059468
+        ],
+        "quaternion_xyzw": [
+          -0.707107,
+          6e-06,
+          -5e-06,
+          0.707107
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "solve_puzzle_piece2",
+      "world_offset_xyz_m": [
+        -0.039446,
+        -0.520693,
+        0.002148
+      ]
+    },
+    "handle": 92,
+    "hierarchy_path": "solve_puzzle/solve_puzzle_frame/solve_puzzle_piece12",
+    "name": "solve_puzzle_piece12",
+    "parent": "solve_puzzle_frame",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.00073,
+        0.034886,
+        -0.164127
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        0.0,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        0.034886,
+        -0.164127,
+        0.00173
+      ],
+      "quaternion_xyzw": [
+        -0.5,
+        -0.5,
+        -0.5,
+        0.5
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        -0.038518,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        0.278548,
+        -0.278105,
+        0.75373
+      ],
+      "quaternion_xyzw": [
+        -0.490278,
+        -0.509536,
+        -0.490278,
+        0.509536
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.593246,
+      "x_uniform_min_m": -0.093247,
+      "y_uniform_max_m": 0.230387,
+      "y_uniform_min_m": -0.403473,
+      "z_fixed_m": 0.75373
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.570796,
+          1.6e-05,
+          1e-06
+        ],
+        "position_xyz_m": [
+          0.002145,
+          -0.190534,
+          0.129241
+        ],
+        "quaternion_xyzw": [
+          -0.707107,
+          6e-06,
+          -5e-06,
+          0.707107
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "solve_puzzle_piece2",
+      "world_offset_xyz_m": [
+        -0.121808,
+        -0.195369,
+        0.002148
+      ]
+    },
+    "handle": 93,
+    "hierarchy_path": "solve_puzzle/solve_puzzle_frame/solve_puzzle_piece13",
+    "name": "solve_puzzle_piece13",
+    "parent": "solve_puzzle_frame",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.00073,
+        -0.034887,
+        0.164127
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        0.0,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        -0.034887,
+        0.164127,
+        0.00173
+      ],
+      "quaternion_xyzw": [
+        -0.5,
+        -0.5,
+        -0.5,
+        0.5
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        -0.038518,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        0.196185,
+        0.047219,
+        0.75373
+      ],
+      "quaternion_xyzw": [
+        -0.490278,
+        -0.509536,
+        -0.490278,
+        0.509536
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.593246,
+      "x_uniform_min_m": -0.093246,
+      "y_uniform_max_m": 0.230386,
+      "y_uniform_min_m": -0.403474,
+      "z_fixed_m": 0.75373
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          1e-06,
+          -1.6e-05
+        ],
+        "position_xyz_m": [
+          0.002144,
+          -0.250001,
+          0.129241
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          1e-06,
+          -8e-06,
+          1.0
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "solve_puzzle_piece2",
+      "world_offset_xyz_m": [
+        -0.119518,
+        -0.254792,
+        0.002148
+      ]
+    },
+    "handle": 94,
+    "hierarchy_path": "solve_puzzle/solve_puzzle_frame/solve_puzzle_piece14",
+    "name": "solve_puzzle_piece14",
+    "parent": "solve_puzzle_frame",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570796,
+        -0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.00073,
+        -0.034887,
+        0.10466
+      ],
+      "quaternion_xyzw": [
+        0.707107,
+        -0.0,
+        -0.0,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        0.0
+      ],
+      "position_xyz_m": [
+        -0.034887,
+        0.10466,
+        0.00173
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        -0.707107,
+        -0.0,
+        0.707107
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570806,
+        -1.532277,
+        1.570806
+      ],
+      "position_xyz_m": [
+        0.198475,
+        -0.012203,
+        0.75373
+      ],
+      "quaternion_xyzw": [
+        0.013617,
+        -0.706976,
+        0.013617,
+        0.706976
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.535775,
+      "x_uniform_min_m": -0.035774,
+      "y_uniform_max_m": 0.172914,
+      "y_uniform_min_m": -0.346001,
+      "z_fixed_m": 0.75373
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.570796,
+          1.6e-05,
+          1e-06
+        ],
+        "position_xyz_m": [
+          0.002143,
+          -0.319774,
+          0.129241
+        ],
+        "quaternion_xyzw": [
+          -0.707107,
+          6e-06,
+          -5e-06,
+          0.707107
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "solve_puzzle_piece2",
+      "world_offset_xyz_m": [
+        -0.116831,
+        -0.324514,
+        0.002148
+      ]
+    },
+    "handle": 95,
+    "hierarchy_path": "solve_puzzle/solve_puzzle_frame/solve_puzzle_piece15",
+    "name": "solve_puzzle_piece15",
+    "parent": "solve_puzzle_frame",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.00073,
+        -0.034887,
+        0.034887
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        0.0,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        -0.034887,
+        0.034887,
+        0.00173
+      ],
+      "quaternion_xyzw": [
+        -0.5,
+        -0.5,
+        -0.5,
+        0.5
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        -0.038518,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        0.201162,
+        -0.081925,
+        0.75373
+      ],
+      "quaternion_xyzw": [
+        -0.490278,
+        -0.509536,
+        -0.490278,
+        0.509536
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.474791,
+      "x_uniform_min_m": 0.02521,
+      "y_uniform_max_m": 0.111931,
+      "y_uniform_min_m": -0.285017,
+      "z_fixed_m": 0.75373
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          1e-06,
+          -1.6e-05
+        ],
+        "position_xyz_m": [
+          0.002142,
+          -0.389547,
+          0.129241
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          1e-06,
+          -8e-06,
+          1.0
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "solve_puzzle_piece2",
+      "world_offset_xyz_m": [
+        -0.114145,
+        -0.394235,
+        0.002148
+      ]
+    },
+    "handle": 96,
+    "hierarchy_path": "solve_puzzle/solve_puzzle_frame/solve_puzzle_piece16",
+    "name": "solve_puzzle_piece16",
+    "parent": "solve_puzzle_frame",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570796,
+        -0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.00073,
+        -0.034887,
+        -0.034887
+      ],
+      "quaternion_xyzw": [
+        0.707107,
+        0.0,
+        0.0,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        0.0
+      ],
+      "position_xyz_m": [
+        -0.034887,
+        -0.034887,
+        0.00173
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        -0.707107,
+        -0.0,
+        0.707107
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570799,
+        -1.532282,
+        1.570799
+      ],
+      "position_xyz_m": [
+        0.203849,
+        -0.151647,
+        0.75373
+      ],
+      "quaternion_xyzw": [
+        0.013617,
+        -0.706976,
+        0.013617,
+        0.706976
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.47479,
+      "x_uniform_min_m": 0.02521,
+      "y_uniform_max_m": 0.111931,
+      "y_uniform_min_m": -0.285017,
+      "z_fixed_m": 0.75373
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.570796,
+          1.6e-05,
+          1e-06
+        ],
+        "position_xyz_m": [
+          0.002141,
+          -0.459321,
+          0.129241
+        ],
+        "quaternion_xyzw": [
+          -0.707107,
+          6e-06,
+          -5e-06,
+          0.707107
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "solve_puzzle_piece2",
+      "world_offset_xyz_m": [
+        -0.111458,
+        -0.463957,
+        0.002148
+      ]
+    },
+    "handle": 97,
+    "hierarchy_path": "solve_puzzle/solve_puzzle_frame/solve_puzzle_piece17",
+    "name": "solve_puzzle_piece17",
+    "parent": "solve_puzzle_frame",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.00073,
+        -0.034887,
+        -0.10466
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        0.0,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        -0.034887,
+        -0.10466,
+        0.00173
+      ],
+      "quaternion_xyzw": [
+        -0.5,
+        -0.5,
+        -0.5,
+        0.5
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        -0.038518,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        0.206536,
+        -0.221368,
+        0.75373
+      ],
+      "quaternion_xyzw": [
+        -0.490278,
+        -0.509536,
+        -0.490278,
+        0.509536
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.535774,
+      "x_uniform_min_m": -0.035773,
+      "y_uniform_max_m": 0.172914,
+      "y_uniform_min_m": -0.346001,
+      "z_fixed_m": 0.75373
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          1e-06,
+          -1.6e-05
+        ],
+        "position_xyz_m": [
+          0.00214,
+          -0.527665,
+          0.129241
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          1e-06,
+          -8e-06,
+          1.0
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "solve_puzzle_piece2",
+      "world_offset_xyz_m": [
+        -0.108826,
+        -0.53225,
+        0.002148
+      ]
+    },
+    "handle": 98,
+    "hierarchy_path": "solve_puzzle/solve_puzzle_frame/solve_puzzle_piece18",
+    "name": "solve_puzzle_piece18",
+    "parent": "solve_puzzle_frame",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570796,
+        -0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.00073,
+        -0.034887,
+        -0.173004
+      ],
+      "quaternion_xyzw": [
+        0.707107,
+        0.0,
+        0.0,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        0.0
+      ],
+      "position_xyz_m": [
+        -0.034887,
+        -0.173004,
+        0.00173
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        -0.707107,
+        -0.0,
+        0.707107
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570799,
+        -1.532282,
+        1.570799
+      ],
+      "position_xyz_m": [
+        0.209168,
+        -0.289662,
+        0.75373
+      ],
+      "quaternion_xyzw": [
+        0.013617,
+        -0.706976,
+        0.013617,
+        0.706976
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.601939,
+      "x_uniform_min_m": -0.101938,
+      "y_uniform_max_m": 0.239079,
+      "y_uniform_min_m": -0.412166,
+      "z_fixed_m": 0.75373
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          1e-06,
+          -1.6e-05
+        ],
+        "position_xyz_m": [
+          0.002145,
+          -0.181657,
+          0.188709
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          1e-06,
+          -8e-06,
+          1.0
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "solve_puzzle_piece2",
+      "world_offset_xyz_m": [
+        -0.181573,
+        -0.188789,
+        0.002148
+      ]
+    },
+    "handle": 99,
+    "hierarchy_path": "solve_puzzle/solve_puzzle_frame/solve_puzzle_piece19",
+    "name": "solve_puzzle_piece19",
+    "parent": "solve_puzzle_frame",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570796,
+        -0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.00073,
+        -0.094354,
+        0.173004
+      ],
+      "quaternion_xyzw": [
+        0.707107,
+        0.0,
+        0.0,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        0.0
+      ],
+      "position_xyz_m": [
+        -0.094354,
+        0.173004,
+        0.00173
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        -0.707107,
+        -0.0,
+        0.707107
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570799,
+        -1.532282,
+        1.570799
+      ],
+      "position_xyz_m": [
+        0.13642,
+        0.053799,
+        0.75373
+      ],
+      "quaternion_xyzw": [
+        0.013617,
+        -0.706976,
+        0.013617,
+        0.706976
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.622512,
+      "x_uniform_min_m": -0.122514,
+      "y_uniform_max_m": 0.259653,
+      "y_uniform_min_m": -0.432741,
+      "z_fixed_m": 0.75373
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.570796,
+          1.6e-05,
+          1e-06
+        ],
+        "position_xyz_m": [
+          0.002144,
+          -0.250001,
+          0.197585
+        ],
+        "quaternion_xyzw": [
+          -0.707107,
+          6e-06,
+          -5e-06,
+          0.707107
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "solve_puzzle_piece2",
+      "world_offset_xyz_m": [
+        -0.187811,
+        -0.257424,
+        0.002148
+      ]
+    },
+    "handle": 100,
+    "hierarchy_path": "solve_puzzle/solve_puzzle_frame/solve_puzzle_piece20",
+    "name": "solve_puzzle_piece20",
+    "parent": "solve_puzzle_frame",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.00073,
+        -0.103231,
+        0.10466
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        0.0,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        -0.103231,
+        0.10466,
+        0.00173
+      ],
+      "quaternion_xyzw": [
+        -0.5,
+        -0.5,
+        -0.5,
+        0.5
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        -0.038518,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        0.130182,
+        -0.014835,
+        0.75373
+      ],
+      "quaternion_xyzw": [
+        -0.490278,
+        -0.509536,
+        -0.490278,
+        0.509536
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.572456,
+      "x_uniform_min_m": -0.072457,
+      "y_uniform_max_m": 0.209597,
+      "y_uniform_min_m": -0.382685,
+      "z_fixed_m": 0.75373
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          1e-06,
+          -1.6e-05
+        ],
+        "position_xyz_m": [
+          0.002143,
+          -0.319774,
+          0.188709
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          1e-06,
+          -8e-06,
+          1.0
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "solve_puzzle_piece2",
+      "world_offset_xyz_m": [
+        -0.176255,
+        -0.326804,
+        0.002148
+      ]
+    },
+    "handle": 101,
+    "hierarchy_path": "solve_puzzle/solve_puzzle_frame/solve_puzzle_piece21",
+    "name": "solve_puzzle_piece21",
+    "parent": "solve_puzzle_frame",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570796,
+        -0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.00073,
+        -0.094354,
+        0.034887
+      ],
+      "quaternion_xyzw": [
+        0.707107,
+        0.0,
+        0.0,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        0.0
+      ],
+      "position_xyz_m": [
+        -0.094354,
+        0.034887,
+        0.00173
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        -0.707107,
+        -0.0,
+        0.707107
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570799,
+        -1.532282,
+        1.570799
+      ],
+      "position_xyz_m": [
+        0.141739,
+        -0.084215,
+        0.75373
+      ],
+      "quaternion_xyzw": [
+        0.013617,
+        -0.706976,
+        0.013617,
+        0.706976
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.52605,
+      "x_uniform_min_m": -0.02605,
+      "y_uniform_max_m": 0.16319,
+      "y_uniform_min_m": -0.336277,
+      "z_fixed_m": 0.75373
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.570796,
+          1.6e-05,
+          1e-06
+        ],
+        "position_xyz_m": [
+          0.002142,
+          -0.389547,
+          0.197585
+        ],
+        "quaternion_xyzw": [
+          -0.707107,
+          6e-06,
+          -5e-06,
+          0.707107
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "solve_puzzle_piece2",
+      "world_offset_xyz_m": [
+        -0.182438,
+        -0.396867,
+        0.002148
+      ]
+    },
+    "handle": 102,
+    "hierarchy_path": "solve_puzzle/solve_puzzle_frame/solve_puzzle_piece22",
+    "name": "solve_puzzle_piece22",
+    "parent": "solve_puzzle_frame",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.00073,
+        -0.103231,
+        -0.034887
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        0.0,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        -0.103231,
+        -0.034887,
+        0.00173
+      ],
+      "quaternion_xyzw": [
+        -0.5,
+        -0.5,
+        -0.5,
+        0.5
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        -0.038518,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        0.135556,
+        -0.154279,
+        0.75373
+      ],
+      "quaternion_xyzw": [
+        -0.490278,
+        -0.509536,
+        -0.490278,
+        0.509536
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.534419,
+      "x_uniform_min_m": -0.034419,
+      "y_uniform_max_m": 0.171559,
+      "y_uniform_min_m": -0.344646,
+      "z_fixed_m": 0.75373
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          1e-06,
+          -1.6e-05
+        ],
+        "position_xyz_m": [
+          0.002141,
+          -0.459321,
+          0.188709
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          1e-06,
+          -8e-06,
+          1.0
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "solve_puzzle_piece2",
+      "world_offset_xyz_m": [
+        -0.170881,
+        -0.466247,
+        0.002148
+      ]
+    },
+    "handle": 103,
+    "hierarchy_path": "solve_puzzle/solve_puzzle_frame/solve_puzzle_piece23",
+    "name": "solve_puzzle_piece23",
+    "parent": "solve_puzzle_frame",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570796,
+        -0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.00073,
+        -0.094354,
+        -0.10466
+      ],
+      "quaternion_xyzw": [
+        0.707107,
+        0.0,
+        0.0,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        0.0
+      ],
+      "position_xyz_m": [
+        -0.094354,
+        -0.10466,
+        0.00173
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        -0.707107,
+        -0.0,
+        0.707107
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570799,
+        -1.532282,
+        1.570799
+      ],
+      "position_xyz_m": [
+        0.147113,
+        -0.223658,
+        0.75373
+      ],
+      "quaternion_xyzw": [
+        0.013617,
+        -0.706976,
+        0.013617,
+        0.706976
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.566365,
+      "x_uniform_min_m": -0.066365,
+      "y_uniform_max_m": 0.203506,
+      "y_uniform_min_m": -0.376592,
+      "z_fixed_m": 0.75373
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.570796,
+          1.6e-05,
+          1e-06
+        ],
+        "position_xyz_m": [
+          0.00214,
+          -0.518788,
+          0.197585
+        ],
+        "quaternion_xyzw": [
+          -0.707107,
+          6e-06,
+          -5e-06,
+          0.707107
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "solve_puzzle_piece2",
+      "world_offset_xyz_m": [
+        -0.177461,
+        -0.526012,
+        0.002148
+      ]
+    },
+    "handle": 104,
+    "hierarchy_path": "solve_puzzle/solve_puzzle_frame/solve_puzzle_piece24",
+    "name": "solve_puzzle_piece24",
+    "parent": "solve_puzzle_frame",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.00073,
+        -0.103231,
+        -0.164127
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        0.0,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        -0.103231,
+        -0.164127,
+        0.00173
+      ],
+      "quaternion_xyzw": [
+        -0.5,
+        -0.5,
+        -0.5,
+        0.5
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        -0.038518,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        0.140533,
+        -0.283424,
+        0.75373
+      ],
+      "quaternion_xyzw": [
+        -0.490278,
+        -0.509536,
+        -0.490278,
+        0.509536
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.619345,
+      "x_uniform_min_m": -0.119346,
+      "y_uniform_max_m": 0.256486,
+      "y_uniform_min_m": -0.429572,
+      "z_fixed_m": 0.75373
+    }
+  },
+  {
+    "handle": 105,
+    "hierarchy_path": "solve_puzzle/solve_puzzle_frame/solve_puzzle_piece2",
+    "name": "solve_puzzle_piece2",
+    "parent": "solve_puzzle_frame",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570796,
+        -1e-06,
+        1.6e-05
+      ],
+      "position_xyz_m": [
+        -0.001418,
+        0.094354,
+        0.354661
+      ],
+      "quaternion_xyzw": [
+        0.707107,
+        -6e-06,
+        5e-06,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.792448,
+      "x_uniform_min_m": -0.29245,
+      "y_uniform_max_m": 0.429589,
+      "y_uniform_min_m": -0.602675,
+      "z_fixed_m": 0.751582
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        1.6e-05
+      ],
+      "position_xyz_m": [
+        0.094354,
+        0.354661,
+        -0.000418
+      ],
+      "quaternion_xyzw": [
+        -6e-06,
+        -0.707107,
+        6e-06,
+        0.707106
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570837,
+        -1.53228,
+        1.570852
+      ],
+      "position_xyz_m": [
+        0.317994,
+        0.242588,
+        0.751582
+      ],
+      "quaternion_xyzw": [
+        0.013612,
+        -0.706976,
+        0.013623,
+        0.706975
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.792448,
+      "x_uniform_min_m": -0.29245,
+      "y_uniform_max_m": 0.429589,
+      "y_uniform_min_m": -0.602675,
+      "z_fixed_m": 0.751582
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "position_xyz_m": [
+          -4e-06,
+          -1.7e-05,
+          -1.1e-05
+        ],
+        "quaternion_xyzw": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "solve_puzzle_piece2",
+      "world_offset_xyz_m": [
+        1.2e-05,
+        -1.6e-05,
+        -4e-06
+      ]
+    },
+    "handle": 106,
+    "hierarchy_path": "solve_puzzle/solve_puzzle_frame/solve_puzzle_piece2/solve_puzzle_piece_visual2",
+    "name": "solve_puzzle_piece_visual2",
+    "parent": "solve_puzzle_piece2",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        -4e-06,
+        -1.7e-05,
+        -1.1e-05
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        1.6e-05
+      ],
+      "position_xyz_m": [
+        0.094365,
+        0.354644,
+        -0.000422
+      ],
+      "quaternion_xyzw": [
+        -6e-06,
+        -0.707107,
+        6e-06,
+        0.707106
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570837,
+        -1.53228,
+        1.570852
+      ],
+      "position_xyz_m": [
+        0.318005,
+        0.242572,
+        0.751578
+      ],
+      "quaternion_xyzw": [
+        0.013612,
+        -0.706976,
+        0.013623,
+        0.706975
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.792434,
+      "x_uniform_min_m": -0.292437,
+      "y_uniform_max_m": 0.429576,
+      "y_uniform_min_m": -0.602661,
+      "z_fixed_m": 0.751578
+    }
+  }
+]

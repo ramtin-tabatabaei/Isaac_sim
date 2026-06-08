@@ -1,0 +1,117 @@
+{
+  "shapes": {
+    "scales_body": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 1.0,
+      "friction": 0.5
+    },
+    "scales_body_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 6.0,
+      "friction": 0.7099999785423279
+    },
+    "SpringDamper": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.20000000298023224,
+      "friction": 1.0
+    },
+    "scales_meter": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 7.0,
+      "friction": 0.7099999785423279
+    },
+    "peppers_boundary": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.06931842863559723,
+      "friction": 0.5
+    },
+    "pepper2": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.10000000149011612,
+      "friction": 0.7099999785423279
+    },
+    "pepper0": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.10000000149011612,
+      "friction": 0.7099999785423279
+    },
+    "pepper1": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.10000000149011612,
+      "friction": 0.7099999785423279
+    },
+    "scales_meter_pivot": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 1.0,
+      "friction": 0.7099999785423279
+    },
+    "pepper_visual2": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.00010421846673125401,
+      "friction": 0.7099999785423279
+    },
+    "pepper_visual0": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.00010421846673125401,
+      "friction": 0.7099999785423279
+    },
+    "pepper_visual1": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.00010421846673125401,
+      "friction": 0.7099999785423279
+    },
+    "scales_tray_physical": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.2800000011920929,
+      "friction": 1.0
+    },
+    "scales_meter_needle": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 3.0142674446105957,
+      "friction": 0.7099999785423279
+    },
+    "scales_tray_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 15.0,
+      "friction": 0.7099999785423279
+    }
+  },
+  "joints": {
+    "scales_joint": {
+      "type": "prismatic",
+      "cyclic": false,
+      "lower": -0.5,
+      "upper": 0.5
+    }
+  }
+}

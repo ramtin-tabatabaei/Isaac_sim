@@ -5,33 +5,47 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          0.008702,
-          -0.021577,
-          -1.875165
+          -0.0,
+          0.0,
+          -2.027608
         ],
         "position_xyz_m": [
-          0.042358,
-          -0.01089,
-          -0.262581
+          0.018035,
+          0.022273,
+          -0.263691
         ],
         "quaternion_xyzw": [
-          0.011271,
-          -0.002877,
-          -0.806103,
-          0.591661
+          -0.0,
+          -0.0,
+          -0.848849,
+          0.528635
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "dollar_stack",
       "world_offset_xyz_m": [
-        0.035766,
-        0.015496,
-        -0.26333
+        -0.005715,
+        0.028084,
+        -0.263691
       ]
     },
     "handle": 81,
     "hierarchy_path": "put_money_in_safe/safe_body",
     "name": "safe_body",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.190673,
+        -0.059525,
+        0.998
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.238018,
+      "x_min_m": 0.134892,
+      "y_max_m": 0.112716,
+      "y_min_m": -0.257288,
+      "z_max_m": 0.998,
+      "z_min_m": 0.998
+    },
     "parent": "put_money_in_safe",
     "parent_local_location": {
       "kind": "exact",
@@ -80,18 +94,18 @@
       "orientation_rpy_rad": [
         0.0,
         0.0,
-        -1.121532
+        -1.146198
       ],
       "position_xyz_m": [
-        0.196216,
-        0.100946,
+        0.206955,
+        0.085698,
         0.998
       ],
       "quaternion_xyzw": [
         0.0,
         0.0,
-        -0.531835,
-        0.846848
+        -0.542238,
+        0.840225
       ],
       "source": "exact_after_one_rlbench_reset"
     },
@@ -99,7 +113,7 @@
       "kind": "range",
       "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
       "x_uniform_max_m": 0.507065,
-      "x_uniform_min_m": 0.115569,
+      "x_uniform_min_m": 0.111093,
       "y_uniform_max_m": 0.360364,
       "y_uniform_min_m": -0.295545,
       "z_fixed_m": 0.998
@@ -111,33 +125,47 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          0.008702,
-          -0.021577,
-          -1.875164
+          -0.0,
+          0.0,
+          -2.027608
         ],
         "position_xyz_m": [
-          0.036068,
-          -0.014335,
-          -0.014283
+          0.01692,
+          0.021145,
+          -0.015294
         ],
         "quaternion_xyzw": [
-          0.011271,
-          -0.002877,
-          -0.806103,
-          0.591661
+          -0.0,
+          -0.0,
+          -0.848849,
+          0.528636
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "dollar_stack",
       "world_offset_xyz_m": [
-        0.035966,
-        0.013923,
-        -0.014933
+        -0.005554,
+        0.026506,
+        -0.015294
       ]
     },
     "handle": 82,
     "hierarchy_path": "put_money_in_safe/safe_body/dollar_stack_boundary",
     "name": "dollar_stack_boundary",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.190822,
+        -0.061103,
+        1.246397
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.238273,
+      "x_min_m": 0.134949,
+      "y_max_m": 0.111139,
+      "y_min_m": -0.258872,
+      "z_max_m": 1.246397,
+      "z_min_m": 1.246396
+    },
     "parent": "safe_body",
     "parent_local_location": {
       "kind": "exact",
@@ -186,18 +214,18 @@
       "orientation_rpy_rad": [
         0.0,
         0.0,
-        -1.121531
+        -1.146197
       ],
       "position_xyz_m": [
-        0.196416,
-        0.099373,
+        0.207116,
+        0.08412,
         1.246397
       ],
       "quaternion_xyzw": [
         0.0,
         0.0,
-        -0.531835,
-        0.846848
+        -0.542238,
+        0.840225
       ],
       "source": "exact_after_one_rlbench_reset"
     },
@@ -205,63 +233,94 @@
       "kind": "range",
       "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
       "x_uniform_max_m": 0.50865,
-      "x_uniform_min_m": 0.115614,
+      "x_uniform_min_m": 0.111138,
       "y_uniform_max_m": 0.360409,
       "y_uniform_min_m": -0.297094,
-      "z_fixed_m": 1.246396
+      "z_fixed_m": 1.246397
     }
   },
   {
+    "analytical_task_root_yaw_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.535493,
+      "x_uniform_min_m": 0.114722,
+      "y_uniform_max_m": 0.363993,
+      "y_uniform_min_m": -0.322919,
+      "z_fixed_m": 1.261691
+    },
     "handle": 83,
     "hierarchy_path": "put_money_in_safe/safe_body/dollar_stack_boundary/dollar_stack",
+    "is_graspable": true,
     "name": "dollar_stack",
+    "observed_spawn_yaw_range_rad": [
+      0.016034,
+      1.533285
+    ],
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.18907,
+        -0.05688,
+        1.261678
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.256996,
+      "x_min_m": 0.115876,
+      "y_max_m": 0.138885,
+      "y_min_m": -0.310443,
+      "z_max_m": 1.261691,
+      "z_min_m": 1.261347
+    },
     "parent": "dollar_stack_boundary",
     "parent_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.017978,
-        -0.014768,
-        1.875126
+        0.0,
+        1e-06,
+        2.027608
       ],
       "position_xyz_m": [
-        -0.003079,
-        -0.038444,
-        0.014933
+        0.02644,
+        -0.005859,
+        0.015294
       ],
       "quaternion_xyzw": [
-        -0.011271,
-        0.002877,
-        0.806103,
-        0.591661
+        0.0,
+        0.0,
+        0.848849,
+        0.528636
       ],
       "source": "exact_parent_local_offset"
     },
     "placement_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.51897,
-      "x_uniform_min_m": 0.078453,
-      "y_uniform_max_m": 0.323248,
-      "y_uniform_min_m": -0.316374,
-      "z_fixed_m": 1.261329
+      "kind": "observed_over_rlbench_resets",
+      "n_resets_observed": 30,
+      "source": "observed_graspable_world_range_includes_spawn_translation_and_rotation",
+      "x_uniform_max_m": 0.256996,
+      "x_uniform_min_m": 0.115876,
+      "y_uniform_max_m": 0.138885,
+      "y_uniform_min_m": -0.310443,
+      "z_fixed_m": 1.261678,
+      "z_observed_max_m": 1.261691,
+      "z_observed_min_m": 1.261347
     },
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.020048,
-        0.011806,
-        0.65539
+        1e-06,
+        0.0,
+        0.807621
       ],
       "position_xyz_m": [
-        -0.085167,
-        -0.261905,
-        0.50933
+        -0.044422,
+        -0.278428,
+        0.509691
       ],
       "quaternion_xyzw": [
-        -0.007591,
-        0.008815,
-        0.321784,
-        0.946742
+        0.0,
+        -0.0,
+        0.392925,
+        0.919571
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -269,31 +328,34 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.021112,
-        0.009778,
-        0.75383
+        1e-06,
+        0.0,
+        0.881411
       ],
       "position_xyz_m": [
-        0.160449,
-        0.08545,
-        1.261329
+        0.21267,
+        0.057615,
+        1.261691
       ],
       "quaternion_xyzw": [
-        -0.008015,
-        0.008431,
-        0.367981,
-        0.929761
+        0.0,
+        -0.0,
+        0.426578,
+        0.904451
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.51897,
-      "x_uniform_min_m": 0.078453,
-      "y_uniform_max_m": 0.323248,
-      "y_uniform_min_m": -0.316374,
-      "z_fixed_m": 1.261329
+      "kind": "observed_over_rlbench_resets",
+      "n_resets_observed": 30,
+      "source": "observed_graspable_world_range_includes_spawn_translation_and_rotation",
+      "x_uniform_max_m": 0.256996,
+      "x_uniform_min_m": 0.115876,
+      "y_uniform_max_m": 0.138885,
+      "y_uniform_min_m": -0.310443,
+      "z_fixed_m": 1.261678,
+      "z_observed_max_m": 1.261691,
+      "z_observed_min_m": 1.261347
     }
   },
   {
@@ -302,33 +364,47 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          0.008693,
-          -0.02159,
-          -1.87516
+          -1.1e-05,
+          -1e-05,
+          -2.027603
         ],
         "position_xyz_m": [
-          0.353936,
-          0.020141,
-          -0.256014
+          0.330784,
+          0.005676,
+          -0.264118
         ],
         "quaternion_xyzw": [
-          0.011274,
-          -0.002884,
-          -0.806102,
-          0.591663
+          1e-06,
+          -7e-06,
+          -0.848848,
+          0.528638
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "dollar_stack",
       "world_offset_xyz_m": [
-        0.241745,
-        0.251419,
-        -0.263757
+        0.20602,
+        0.258855,
+        -0.264118
       ]
     },
     "handle": 89,
     "hierarchy_path": "put_money_in_safe/safe_body/safe_joint/safe_door",
     "name": "safe_door",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.404048,
+        0.169419,
+        0.997573
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.435751,
+      "x_min_m": 0.358591,
+      "y_max_m": 0.343879,
+      "y_min_m": -0.038232,
+      "z_max_m": 0.997573,
+      "z_min_m": 0.997573
+    },
     "parent": "safe_joint",
     "parent_local_location": {
       "kind": "exact",
@@ -375,20 +451,20 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        2e-06,
+        1e-06,
         -1.5e-05,
-        -1.121526
+        -1.146192
       ],
       "position_xyz_m": [
-        0.402194,
-        0.336869,
+        0.41869,
+        0.316469,
         0.997573
       ],
       "quaternion_xyzw": [
         5e-06,
         -6e-06,
-        -0.531833,
-        0.84685
+        -0.542236,
+        0.840226
       ],
       "source": "exact_after_one_rlbench_reset"
     },
@@ -396,13 +472,22 @@
       "kind": "range",
       "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
       "x_uniform_max_m": 0.440645,
-      "x_uniform_min_m": 0.199086,
+      "x_uniform_min_m": 0.19461,
       "y_uniform_max_m": 0.588536,
       "y_uniform_min_m": -0.076436,
       "z_fixed_m": 0.997573
     }
   },
   {
+    "analytical_task_root_yaw_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.535493,
+      "x_uniform_min_m": 0.114722,
+      "y_uniform_max_m": 0.363993,
+      "y_uniform_min_m": -0.322919,
+      "z_fixed_m": 1.277904
+    },
     "fixed_relation_to_nearest_graspable": {
       "has_separate_position_range": false,
       "reference_local_location": {
@@ -427,14 +512,30 @@
       },
       "reference_object": "dollar_stack",
       "world_offset_xyz_m": [
-        0.000159,
-        0.000342,
-        0.016209
+        0.0,
+        0.0,
+        0.016213
       ]
     },
     "handle": 84,
     "hierarchy_path": "put_money_in_safe/safe_body/dollar_stack_boundary/dollar_stack/dollar_back_visual",
+    "mounted_note": "Rigidly mounted on graspable 'dollar_stack'. RLBench re-places 'dollar_stack' each episode at a random position within its spawn region and a random yaw (RLBench default +/-pi). This object sits ~0.0 m from 'dollar_stack' rotation axis, so its absolute world position sweeps a wide ring; its pose relative to 'dollar_stack' is fixed.",
+    "mounted_on_graspable": "dollar_stack",
     "name": "dollar_back_visual",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.189074,
+        -0.056871,
+        1.277891
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.256996,
+      "x_min_m": 0.115876,
+      "y_max_m": 0.138885,
+      "y_min_m": -0.310443,
+      "z_max_m": 1.277904,
+      "z_min_m": 1.277557
+    },
     "parent": "dollar_stack",
     "parent_local_location": {
       "kind": "exact",
@@ -457,23 +558,24 @@
       "source": "exact_parent_local_offset"
     },
     "placement_range": null,
+    "rotation_radius_from_graspable_m": 0.000322,
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.020048,
-        0.011806,
-        1.004456
+        1e-06,
+        -0.0,
+        1.156687
       ],
       "position_xyz_m": [
-        -0.084975,
-        -0.26158,
-        0.525538
+        -0.044421,
+        -0.278428,
+        0.525904
       ],
       "quaternion_xyzw": [
-        -0.005945,
-        0.009999,
-        0.481295,
-        0.876481
+        0.0,
+        -0.0,
+        0.546638,
+        0.837369
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -481,34 +583,46 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.021112,
-        0.009778,
-        1.102897
+        1e-06,
+        -0.0,
+        1.230477
       ],
       "position_xyz_m": [
-        0.160608,
-        0.085792,
-        1.277538
+        0.21267,
+        0.057615,
+        1.277904
       ],
       "quaternion_xyzw": [
-        -0.00643,
-        0.009694,
-        0.523842,
-        0.851736
+        0.0,
+        -0.0,
+        0.577153,
+        0.816636
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.518645,
-      "x_uniform_min_m": 0.078645,
-      "y_uniform_max_m": 0.32344,
-      "y_uniform_min_m": -0.316005,
-      "z_fixed_m": 1.277538
+      "kind": "mounted_on_graspable_envelope",
+      "mounted_on_graspable": "dollar_stack",
+      "n_resets_observed": 30,
+      "rotation_radius_m": 0.000322,
+      "source": "observed_dollar_stack_range_expanded_by_mount_radius_for_full_yaw",
+      "x_uniform_max_m": 0.257318,
+      "x_uniform_min_m": 0.115554,
+      "y_uniform_max_m": 0.139207,
+      "y_uniform_min_m": -0.310765,
+      "z_fixed_m": 1.277891
     }
   },
   {
+    "analytical_task_root_yaw_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.535493,
+      "x_uniform_min_m": 0.114722,
+      "y_uniform_max_m": 0.363993,
+      "y_uniform_min_m": -0.322919,
+      "z_fixed_m": 1.245585
+    },
     "fixed_relation_to_nearest_graspable": {
       "has_separate_position_range": false,
       "reference_local_location": {
@@ -533,14 +647,30 @@
       },
       "reference_object": "dollar_stack",
       "world_offset_xyz_m": [
-        -0.000157,
-        -0.00034,
-        -0.016102
+        0.0,
+        0.0,
+        -0.016106
       ]
     },
     "handle": 85,
     "hierarchy_path": "put_money_in_safe/safe_body/dollar_stack_boundary/dollar_stack/dollar_front_visual",
+    "mounted_note": "Rigidly mounted on graspable 'dollar_stack'. RLBench re-places 'dollar_stack' each episode at a random position within its spawn region and a random yaw (RLBench default +/-pi). This object sits ~0.0 m from 'dollar_stack' rotation axis, so its absolute world position sweeps a wide ring; its pose relative to 'dollar_stack' is fixed.",
+    "mounted_on_graspable": "dollar_stack",
     "name": "dollar_front_visual",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.189066,
+        -0.05689,
+        1.245572
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.256997,
+      "x_min_m": 0.115876,
+      "y_max_m": 0.138885,
+      "y_min_m": -0.310442,
+      "z_max_m": 1.245585,
+      "z_min_m": 1.245244
+    },
     "parent": "dollar_stack",
     "parent_local_location": {
       "kind": "exact",
@@ -563,23 +693,24 @@
       "source": "exact_parent_local_offset"
     },
     "placement_range": null,
+    "rotation_radius_from_graspable_m": 0.000319,
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.020048,
-        0.011806,
-        1.004456
+        1e-06,
+        -0.0,
+        1.156687
       ],
       "position_xyz_m": [
-        -0.085357,
-        -0.262228,
-        0.493228
+        -0.044422,
+        -0.278428,
+        0.493585
       ],
       "quaternion_xyzw": [
-        -0.005945,
-        0.009999,
-        0.481295,
-        0.876481
+        0.0,
+        -0.0,
+        0.546638,
+        0.837369
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -587,31 +718,34 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.021112,
-        0.009778,
-        1.102897
+        1e-06,
+        -0.0,
+        1.230477
       ],
       "position_xyz_m": [
-        0.160292,
-        0.08511,
-        1.245228
+        0.21267,
+        0.057615,
+        1.245585
       ],
       "quaternion_xyzw": [
-        -0.00643,
-        0.009694,
-        0.523842,
-        0.851736
+        0.0,
+        -0.0,
+        0.577153,
+        0.816636
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.519293,
-      "x_uniform_min_m": 0.078263,
-      "y_uniform_max_m": 0.323058,
-      "y_uniform_min_m": -0.316739,
-      "z_fixed_m": 1.245228
+      "kind": "mounted_on_graspable_envelope",
+      "mounted_on_graspable": "dollar_stack",
+      "n_resets_observed": 30,
+      "rotation_radius_m": 0.000319,
+      "source": "observed_dollar_stack_range_expanded_by_mount_radius_for_full_yaw",
+      "x_uniform_max_m": 0.257315,
+      "x_uniform_min_m": 0.115557,
+      "y_uniform_max_m": 0.139204,
+      "y_uniform_min_m": -0.310762,
+      "z_fixed_m": 1.245572
     }
   }
 ]

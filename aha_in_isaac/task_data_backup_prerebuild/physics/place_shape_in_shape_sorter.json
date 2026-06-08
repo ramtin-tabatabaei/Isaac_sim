@@ -1,0 +1,82 @@
+{
+  "shapes": {
+    "shape_sorter": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 1.3670402765274048,
+      "friction": 0.5
+    },
+    "triangular_prism": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.800000011920929,
+      "friction": 0.7099999785423279
+    },
+    "star": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.06861289590597153,
+      "friction": 0.7099999785423279
+    },
+    "moon": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.6019251942634583,
+      "friction": 0.7099999785423279
+    },
+    "cube": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 6.605599880218506,
+      "friction": 0.5
+    },
+    "cylinder": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 6.605599880218506,
+      "friction": 0.5
+    },
+    "boundary": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.12651053071022034,
+      "friction": 0.5
+    },
+    "shape_sorter_visual": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 7.999999773744548e-09,
+      "friction": 0.7099999785423279
+    },
+    "shape_sorter_top": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.008954628370702267,
+      "friction": 0.5
+    },
+    "star_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 4.0015034675598145,
+      "friction": 0.7099999785423279
+    },
+    "moon_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 4.815401554107666,
+      "friction": 0.7099999785423279
+    }
+  },
+  "joints": {}
+}

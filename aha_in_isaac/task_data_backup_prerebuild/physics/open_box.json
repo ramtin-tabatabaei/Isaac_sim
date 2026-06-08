@@ -1,0 +1,26 @@
+{
+  "shapes": {
+    "box_base": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 1.8875000476837158,
+      "friction": 0.5
+    },
+    "box_lid": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.937999963760376,
+      "friction": 0.5
+    }
+  },
+  "joints": {
+    "box_joint": {
+      "type": "revolute",
+      "cyclic": false,
+      "lower": -14.49999983431683,
+      "upper": 135.49999750962428
+    }
+  }
+}

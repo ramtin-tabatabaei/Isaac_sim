@@ -4,40 +4,45 @@
       "fixed_offset_from_task_boundary_root_xyz_m": [
         0.046903,
         0.175,
-        0.014385
+        0.014386
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
-        2e-06,
-        -2.7e-05,
-        1.570813
+        1.3e-05,
+        -2.4e-05,
+        1.570814
       ],
       "name": "sponge",
+      "observed_spawn_yaw_range_rad": [
+        1.570782,
+        1.570883
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -1e-06,
+          -0.0,
           -2.7e-05,
-          1.467548
+          1.06558
         ],
         "position_xyz_m": [
-          0.306057,
-          0.254494,
-          0.766384
+          0.361067,
+          0.094642,
+          0.766386
         ],
         "quaternion_xyzw": [
-          -9e-06,
-          -1e-05,
-          0.669677,
-          0.742652
+          -7e-06,
+          -1.1e-05,
+          0.507939,
+          0.861393
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.556876,
-        "x_uniform_min_m": -0.156876,
-        "y_uniform_max_m": 0.407278,
-        "y_uniform_min_m": -0.461877,
-        "z_fixed_m": 0.766384
+        "x_uniform_max_m": 0.396937,
+        "x_uniform_min_m": -0.024593,
+        "y_uniform_max_m": 0.35385,
+        "y_uniform_min_m": -0.393502,
+        "z_fixed_m": 0.766381
       }
     }
   ],
@@ -46,17 +51,17 @@
       "fixed_offset_from_reference_local_xyz_m": [
         -0.2,
         -0.003094,
-        -0.014384
+        -0.014383
       ],
       "fixed_offset_from_reference_xyz_m": [
-        -0.017535,
-        -0.199254,
-        -0.014384
+        -0.094092,
+        -0.176511,
+        -0.014386
       ],
       "fixed_orientation_from_reference_rpy_rad": [
-        2.7e-05,
-        2e-06,
-        -1.570813
+        2.4e-05,
+        1.3e-05,
+        -1.570814
       ],
       "has_separate_distribution": false,
       "name": "dirt_boundary",
@@ -66,18 +71,18 @@
         "orientation_rpy_rad": [
           0.0,
           0.0,
-          -0.103265
+          -0.505233
         ],
         "position_xyz_m": [
-          0.288522,
-          0.05524,
+          0.266975,
+          -0.081869,
           0.752
         ],
         "quaternion_xyzw": [
           0.0,
           0.0,
-          -0.05161,
-          0.998667
+          -0.249938,
+          0.968262
         ],
         "source": "exact_after_one_rlbench_reset"
       },
@@ -100,18 +105,18 @@
     "orientation_rpy_rad": [
       0.0,
       0.0,
-      -0.103265
+      -0.505233
     ],
     "position_xyz_m": [
-      0.241365,
-      0.085261,
+      0.235323,
+      -0.035792,
       0.752
     ],
     "quaternion_xyzw": [
       0.0,
       0.0,
-      -0.05161,
-      0.998667
+      -0.249938,
+      0.968262
     ],
     "source": "exact_after_one_rlbench_reset"
   },

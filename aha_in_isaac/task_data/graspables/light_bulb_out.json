@@ -2,41 +2,46 @@
   "graspable_objects": [
     {
       "fixed_offset_from_task_boundary_root_xyz_m": [
-        0.033001,
-        0.001998,
+        0.03303,
+        0.002006,
         0.34293
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
-        -2e-06,
-        -2e-06,
-        3.1e-05
+        -0.000137,
+        0.000544,
+        -6.5e-05
       ],
       "name": "bulb_phys",
+      "observed_spawn_yaw_range_rad": [
+        -0.000672,
+        0.000327
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          2e-06,
-          2e-06,
-          3.097614
+          3.1e-05,
+          -0.00056,
+          2.94973
         ],
         "position_xyz_m": [
-          0.225632,
-          0.056068,
+          0.258049,
+          0.178059,
           1.09493
         ],
         "quaternion_xyzw": [
-          1e-06,
-          -1e-06,
-          0.999758,
-          0.021988
+          -0.000277,
+          -4.2e-05,
+          0.995402,
+          0.095784
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.441661,
-        "x_uniform_min_m": 0.058339,
-        "y_uniform_max_m": 0.083966,
-        "y_uniform_min_m": -0.442924,
+        "x_uniform_max_m": 0.388045,
+        "x_uniform_min_m": 0.081177,
+        "y_uniform_max_m": 0.341615,
+        "y_uniform_min_m": -0.380493,
         "z_fixed_m": 1.09493
       }
     }
@@ -44,19 +49,19 @@
   "other_scene_objects": [
     {
       "fixed_offset_from_reference_local_xyz_m": [
-        3e-06,
-        3e-06,
+        8.6e-05,
+        2.4e-05,
         -0.205799
       ],
       "fixed_offset_from_reference_xyz_m": [
-        -3e-06,
-        -3e-06,
+        2.6e-05,
+        -1e-06,
         -0.205799
       ],
       "fixed_orientation_from_reference_rpy_rad": [
-        2e-06,
-        2e-06,
-        -3.1e-05
+        0.000137,
+        -0.000544,
+        6.5e-05
       ],
       "has_separate_distribution": false,
       "name": "lamp_base",
@@ -66,44 +71,44 @@
         "orientation_rpy_rad": [
           -0.0,
           0.0,
-          3.097583
+          2.949795
         ],
         "position_xyz_m": [
-          0.225629,
-          0.056065,
+          0.258076,
+          0.178058,
           0.889131
         ],
         "quaternion_xyzw": [
           0.0,
           0.0,
-          0.999758,
-          0.022003
+          0.995405,
+          0.095752
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
         "x_uniform_max_m": 0.441664,
         "x_uniform_min_m": 0.058336,
-        "y_uniform_max_m": 0.083969,
+        "y_uniform_max_m": 0.08397,
         "y_uniform_min_m": -0.442927,
         "z_fixed_m": 0.889131
       }
     },
     {
       "fixed_offset_from_reference_local_xyz_m": [
-        -0.143627,
-        0.300877,
-        -0.314843
+        -0.038309,
+        0.172019,
+        -0.314841
       ],
       "fixed_offset_from_reference_xyz_m": [
-        0.13026,
-        -0.3069,
+        0.004981,
+        -0.176158,
         -0.314844
       ],
       "fixed_orientation_from_reference_rpy_rad": [
-        2e-06,
-        2e-06,
-        -3.068978
+        0.000137,
+        -0.000544,
+        -2.205515
       ],
       "has_separate_distribution": false,
       "name": "bulb_holder1",
@@ -113,44 +118,44 @@
         "orientation_rpy_rad": [
           -0.0,
           -0.0,
-          0.028636
+          0.744215
         ],
         "position_xyz_m": [
-          0.355892,
-          -0.250832,
+          0.26303,
+          0.001901,
           0.780086
         ],
         "quaternion_xyzw": [
           0.0,
           0.0,
-          -0.014317,
-          -0.999897
+          -0.36358,
+          -0.931563
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.731042,
-        "x_uniform_min_m": -0.231044,
-        "y_uniform_max_m": 0.373348,
-        "y_uniform_min_m": -0.732307,
+        "x_uniform_max_m": 0.582669,
+        "x_uniform_min_m": -0.082669,
+        "y_uniform_max_m": 0.224975,
+        "y_uniform_min_m": -0.583931,
         "z_fixed_m": 0.780086
       }
     },
     {
       "fixed_offset_from_reference_local_xyz_m": [
-        0.021397,
-        0.265429,
-        -0.314844
+        -0.015207,
+        0.295754,
+        -0.314812
       ],
       "fixed_offset_from_reference_xyz_m": [
-        -0.033046,
-        -0.264231,
+        -0.041293,
+        -0.293217,
         -0.314844
       ],
       "fixed_orientation_from_reference_rpy_rad": [
-        2e-06,
-        2e-06,
-        -2.470883
+        0.000137,
+        -0.000544,
+        0.602621
       ],
       "has_separate_distribution": false,
       "name": "bulb_holder0",
@@ -159,45 +164,45 @@
         "kind": "exact",
         "orientation_rpy_rad": [
           -0.0,
-          -0.0,
-          0.626731
+          0.0,
+          -2.730835
         ],
         "position_xyz_m": [
-          0.192586,
-          -0.208163,
+          0.216756,
+          -0.115158,
           0.780086
         ],
         "quaternion_xyzw": [
           0.0,
           0.0,
-          -0.308262,
-          -0.951302
+          0.978984,
+          -0.203938
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.681501,
-        "x_uniform_min_m": -0.181501,
-        "y_uniform_max_m": 0.323806,
-        "y_uniform_min_m": -0.682765,
+        "x_uniform_max_m": 0.706839,
+        "x_uniform_min_m": -0.206841,
+        "y_uniform_max_m": 0.349146,
+        "y_uniform_min_m": -0.708102,
         "z_fixed_m": 0.780086
       }
     },
     {
       "fixed_offset_from_reference_local_xyz_m": [
-        -0.032993,
-        0.253003,
-        -0.34293
+        -0.03286,
+        0.253039,
+        -0.342914
       ],
       "fixed_offset_from_reference_xyz_m": [
-        0.021838,
-        -0.254209,
+        -0.015803,
+        -0.254652,
         -0.34293
       ],
       "fixed_orientation_from_reference_rpy_rad": [
-        2e-06,
-        2e-06,
-        -3.1e-05
+        0.000137,
+        -0.000544,
+        6.5e-05
       ],
       "has_separate_distribution": false,
       "name": "spawn_boundary",
@@ -207,18 +212,18 @@
         "orientation_rpy_rad": [
           -0.0,
           0.0,
-          3.097583
+          2.949795
         ],
         "position_xyz_m": [
-          0.24747,
-          -0.198141,
+          0.242246,
+          -0.076592,
           0.752
         ],
         "quaternion_xyzw": [
           0.0,
           0.0,
-          0.999758,
-          0.022003
+          0.995405,
+          0.095752
         ],
         "source": "exact_after_one_rlbench_reset"
       },
@@ -232,19 +237,19 @@
     },
     {
       "fixed_offset_from_reference_local_xyz_m": [
-        3e-06,
-        3e-06,
+        -3e-06,
+        1e-06,
         -0.041326
       ],
       "fixed_offset_from_reference_xyz_m": [
-        -3e-06,
-        -3e-06,
+        2.6e-05,
+        -0.0,
         -0.041326
       ],
       "fixed_orientation_from_reference_rpy_rad": [
-        2e-06,
-        2e-06,
-        -3.1e-05
+        0.000137,
+        -0.000544,
+        6.5e-05
       ],
       "has_separate_distribution": false,
       "name": "lamp_screw",
@@ -254,18 +259,18 @@
         "orientation_rpy_rad": [
           -0.0,
           0.0,
-          3.097583
+          2.949795
         ],
         "position_xyz_m": [
-          0.225629,
-          0.056065,
+          0.258075,
+          0.178059,
           1.053604
         ],
         "quaternion_xyzw": [
           0.0,
           0.0,
-          0.999758,
-          0.022003
+          0.995405,
+          0.095752
         ],
         "source": "exact_after_one_rlbench_reset"
       },
@@ -284,9 +289,9 @@
         -0.002096
       ],
       "fixed_offset_from_reference_xyz_m": [
-        -0.0,
+        1e-06,
         0.0,
-        -0.002095
+        -0.002096
       ],
       "fixed_orientation_from_reference_rpy_rad": [
         -3.141593,
@@ -294,44 +299,52 @@
         3.141593
       ],
       "has_separate_distribution": false,
+      "mounted_on_graspable": "bulb_phys",
       "name": "light_bulb",
       "reference_graspable_object": "bulb_phys",
+      "rotation_radius_from_graspable_m": 4e-06,
+      "spawn_rotation_note": "Mounted on graspable 'bulb_phys', which RLBench randomly positions and yaw-rotates (+/-pi) each episode; world range is the 'bulb_phys' observed envelope expanded by the mount radius.",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -3.141591,
-          -2e-06,
-          0.043979
+          -3.141562,
+          0.00056,
+          0.191863
         ],
         "position_xyz_m": [
-          0.225632,
-          0.056068,
+          0.25805,
+          0.178059,
           1.092835
         ],
         "quaternion_xyzw": [
-          -0.999758,
-          0.021988,
-          1e-06,
-          1e-06
+          -0.995402,
+          0.095784,
+          -0.000277,
+          4.2e-05
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.441661,
-        "x_uniform_min_m": 0.058339,
-        "y_uniform_max_m": 0.083966,
-        "y_uniform_min_m": -0.442924,
+        "kind": "mounted_on_graspable_envelope",
+        "mounted_on_graspable": "bulb_phys",
+        "n_resets_observed": 30,
+        "rotation_radius_m": 4e-06,
+        "source": "observed_bulb_phys_range_expanded_by_mount_radius_for_full_yaw",
+        "x_uniform_max_m": 0.388049,
+        "x_uniform_min_m": 0.081173,
+        "y_uniform_max_m": 0.341619,
+        "y_uniform_min_m": -0.380497,
         "z_fixed_m": 1.092835
       }
     },
     {
       "fixed_offset_from_reference_local_xyz_m": [
-        0.0,
+        -0.0,
         0.0,
         0.012688
       ],
       "fixed_offset_from_reference_xyz_m": [
-        0.0,
+        -7e-06,
         -0.0,
         0.012688
       ],
@@ -341,34 +354,42 @@
         3.141593
       ],
       "has_separate_distribution": false,
+      "mounted_on_graspable": "bulb_phys",
       "name": "bulb",
       "reference_graspable_object": "bulb_phys",
+      "rotation_radius_from_graspable_m": 2.5e-05,
+      "spawn_rotation_note": "Mounted on graspable 'bulb_phys', which RLBench randomly positions and yaw-rotates (+/-pi) each episode; world range is the 'bulb_phys' observed envelope expanded by the mount radius.",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -3.141591,
-          -2e-06,
-          0.043979
+          -3.141562,
+          0.00056,
+          0.191863
         ],
         "position_xyz_m": [
-          0.225632,
-          0.056068,
+          0.258042,
+          0.178059,
           1.107618
         ],
         "quaternion_xyzw": [
-          -0.999758,
-          0.021988,
-          1e-06,
-          1e-06
+          -0.995402,
+          0.095784,
+          -0.000277,
+          4.2e-05
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.441661,
-        "x_uniform_min_m": 0.058339,
-        "y_uniform_max_m": 0.083966,
-        "y_uniform_min_m": -0.442924,
-        "z_fixed_m": 1.107619
+        "kind": "mounted_on_graspable_envelope",
+        "mounted_on_graspable": "bulb_phys",
+        "n_resets_observed": 30,
+        "rotation_radius_m": 2.5e-05,
+        "source": "observed_bulb_phys_range_expanded_by_mount_radius_for_full_yaw",
+        "x_uniform_max_m": 0.38807,
+        "x_uniform_min_m": 0.081152,
+        "y_uniform_max_m": 0.34164,
+        "y_uniform_min_m": -0.380518,
+        "z_fixed_m": 1.107618
       }
     }
   ],
@@ -382,18 +403,18 @@
     "orientation_rpy_rad": [
       -0.0,
       0.0,
-      3.097583
+      2.949795
     ],
     "position_xyz_m": [
-      0.258689,
-      0.056612,
+      0.290855,
+      0.173732,
       0.752
     ],
     "quaternion_xyzw": [
       0.0,
       0.0,
-      0.999758,
-      0.022003
+      0.995405,
+      0.095752
     ],
     "source": "exact_after_one_rlbench_reset"
   },

@@ -1,0 +1,401 @@
+[
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.141589,
+        0.241672,
+        3.141583
+      ],
+      "position_xyz_m": [
+        0.278616,
+        -0.008145,
+        1.471642
+      ],
+      "quaternion_xyzw": [
+        -4e-06,
+        0.992708,
+        1e-06,
+        0.120542
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.041662,
+        -0.238261,
+        -0.173912
+      ],
+      "position_xyz_m": [
+        0.06754,
+        -0.019672,
+        -0.577607
+      ],
+      "quaternion_xyzw": [
+        -0.010285,
+        -0.12017,
+        -0.083746,
+        0.989161
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      0.060975,
+      1.7e-05,
+      9e-06
+    ],
+    "fixed_orientation_rpy_rad": [
+      0.0,
+      -1.570796,
+      0.343293
+    ],
+    "motion_type": "point",
+    "name": "waypoint0",
+    "parent": "saucepan_lid",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          -1.570796,
+          0.343293
+        ],
+        "position_xyz_m": [
+          0.060975,
+          1.7e-05,
+          9e-06
+        ],
+        "quaternion_xyzw": [
+          0.120689,
+          0.696686,
+          -0.120865,
+          -0.696745
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "saucepan_lid"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          -1.570796,
+          0.343293
+        ],
+        "position_xyz_m": [
+          0.060975,
+          1.7e-05,
+          9e-06
+        ],
+        "quaternion_xyzw": [
+          0.120689,
+          0.696686,
+          -0.120865,
+          -0.696745
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "saucepan_lid"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141355,
+        -0.000132,
+        -2.972649
+      ],
+      "position_xyz_m": [
+        0.348423,
+        -0.000233,
+        0.894022
+      ],
+      "quaternion_xyzw": [
+        0.084371,
+        0.996434,
+        -0.000124,
+        -5.6e-05
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      3.141355,
+      -0.000132,
+      -2.972649
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141558,
+        0.241495,
+        -3.141572
+      ],
+      "position_xyz_m": [
+        0.278666,
+        -0.008167,
+        1.471563
+      ],
+      "quaternion_xyzw": [
+        8e-06,
+        0.992719,
+        -1.6e-05,
+        0.120454
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.041587,
+        -0.238086,
+        -0.173874
+      ],
+      "position_xyz_m": [
+        0.06748,
+        -0.019679,
+        -0.62352
+      ],
+      "quaternion_xyzw": [
+        -0.010257,
+        -0.12008,
+        -0.083734,
+        0.989173
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      4e-06,
+      -0.0,
+      0.045992
+    ],
+    "fixed_orientation_rpy_rad": [
+      -0.0,
+      0.0,
+      -0.0
+    ],
+    "motion_type": "point",
+    "name": "waypoint1",
+    "parent": "waypoint0",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          0.0,
+          -0.0
+        ],
+        "position_xyz_m": [
+          4e-06,
+          -0.0,
+          0.045992
+        ],
+        "quaternion_xyzw": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "waypoint",
+      "reference_name": "waypoint0"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          -1.570796,
+          0.343293
+        ],
+        "position_xyz_m": [
+          0.014982,
+          8e-06,
+          1.8e-05
+        ],
+        "quaternion_xyzw": [
+          0.120689,
+          0.696686,
+          -0.120865,
+          -0.696745
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "saucepan_lid"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141355,
+        -0.000132,
+        -2.972649
+      ],
+      "position_xyz_m": [
+        0.348413,
+        -0.000243,
+        0.84803
+      ],
+      "quaternion_xyzw": [
+        0.084371,
+        0.996434,
+        -0.000124,
+        -5.6e-05
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      3.141355,
+      -0.000132,
+      -2.972649
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "end_effector_location_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141559,
+        0.241445,
+        -3.141575
+      ],
+      "position_xyz_m": [
+        0.278704,
+        -0.00817,
+        1.471524
+      ],
+      "quaternion_xyzw": [
+        7e-06,
+        0.992722,
+        -1.5e-05,
+        0.120429
+      ],
+      "source": "exact_after_reaching_waypoint_path"
+    },
+    "end_effector_relative_to_waypoint_after_waypoint": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.041523,
+        -0.238077,
+        -0.173883
+      ],
+      "position_xyz_m": [
+        0.067471,
+        -0.019637,
+        -0.502494
+      ],
+      "quaternion_xyzw": [
+        -0.010225,
+        -0.120074,
+        -0.083743,
+        0.989174
+      ],
+      "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
+    },
+    "fixed_offset_xyz_m": [
+      0.135967,
+      3.5e-05,
+      2e-06
+    ],
+    "fixed_orientation_rpy_rad": [
+      0.0,
+      -1.570796,
+      0.343295
+    ],
+    "motion_type": "point",
+    "name": "waypoint2",
+    "parent": "saucepan_lid",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          -1.570796,
+          0.343295
+        ],
+        "position_xyz_m": [
+          0.135967,
+          3.5e-05,
+          2e-06
+        ],
+        "quaternion_xyzw": [
+          0.12069,
+          0.696686,
+          -0.120866,
+          -0.696745
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "saucepan_lid"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          -1.570796,
+          0.343295
+        ],
+        "position_xyz_m": [
+          0.135967,
+          3.5e-05,
+          2e-06
+        ],
+        "quaternion_xyzw": [
+          0.12069,
+          0.696686,
+          -0.120866,
+          -0.696745
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "saucepan_lid"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141355,
+        -0.000132,
+        -2.972647
+      ],
+      "position_xyz_m": [
+        0.34843,
+        -0.000215,
+        0.969014
+      ],
+      "quaternion_xyzw": [
+        0.084372,
+        0.996434,
+        -0.000124,
+        -5.5e-05
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_orientation_rpy_rad": [
+      3.141355,
+      -0.000132,
+      -2.972647
+    ]
+  }
+]

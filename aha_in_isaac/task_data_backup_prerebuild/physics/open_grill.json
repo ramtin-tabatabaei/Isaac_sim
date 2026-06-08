@@ -1,0 +1,61 @@
+{
+  "shapes": {
+    "grill_root": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.14787499606609344,
+      "friction": 0.5
+    },
+    "grill": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 15.104964256286621,
+      "friction": 0.5
+    },
+    "grill_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 107.83220672607422,
+      "friction": 0.7099999785423279
+    },
+    "Shape1": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 8.916104316711426,
+      "friction": 0.7099999785423279
+    },
+    "lid": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.6607483625411987,
+      "friction": 0.5
+    },
+    "lid_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 1.2100000381469727,
+      "friction": 0.7099999785423279
+    },
+    "handle_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.016075067222118378,
+      "friction": 0.5
+    }
+  },
+  "joints": {
+    "lid_joint": {
+      "type": "revolute",
+      "cyclic": false,
+      "lower": 0.0,
+      "upper": 60.000001669652114
+    }
+  }
+}

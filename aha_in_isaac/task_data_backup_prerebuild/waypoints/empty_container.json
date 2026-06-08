@@ -1,0 +1,374 @@
+[
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "fixed_offset_xyz_m": [
+      0.0,
+      -5.9e-05,
+      0.170089
+    ],
+    "fixed_orientation_rpy_rad": [
+      -3.141248,
+      -0.0,
+      3.141593
+    ],
+    "motion_type": "point",
+    "name": "waypoint0",
+    "parent": "large_container",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -3.141248,
+          -0.0,
+          3.141593
+        ],
+        "position_xyz_m": [
+          0.0,
+          -5.9e-05,
+          0.170089
+        ],
+        "quaternion_xyzw": [
+          0.0,
+          -1.0,
+          -0.000173,
+          -0.0
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "large_container"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -3.141248,
+          -0.0,
+          3.141593
+        ],
+        "position_xyz_m": [
+          0.0,
+          -5.9e-05,
+          0.170089
+        ],
+        "quaternion_xyzw": [
+          0.0,
+          -1.0,
+          -0.000173,
+          -0.0
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "large_container"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141593,
+        0.0,
+        3.141593
+      ],
+      "position_xyz_m": [
+        0.25,
+        -8e-06,
+        0.946089
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "source": "exact_after_raw_ttm_import"
+    },
+    "world_orientation_rpy_rad": [
+      3.141593,
+      0.0,
+      3.141593
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "fixed_offset_xyz_m": [
+      0.0,
+      -1.7e-05,
+      0.049996
+    ],
+    "fixed_orientation_rpy_rad": [
+      -3.141247,
+      0.0,
+      3.141593
+    ],
+    "motion_type": "point",
+    "name": "waypoint1",
+    "parent": "large_container",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -3.141247,
+          0.0,
+          3.141593
+        ],
+        "position_xyz_m": [
+          0.0,
+          -1.7e-05,
+          0.049996
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          1.0,
+          0.000173,
+          0.0
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "large_container"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -3.141247,
+          0.0,
+          3.141593
+        ],
+        "position_xyz_m": [
+          0.0,
+          -1.7e-05,
+          0.049996
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          1.0,
+          0.000173,
+          0.0
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "large_container"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.141593,
+        0.0,
+        -3.141593
+      ],
+      "position_xyz_m": [
+        0.25,
+        -8e-06,
+        0.825997
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source": "exact_after_raw_ttm_import"
+    },
+    "world_orientation_rpy_rad": [
+      -3.141593,
+      0.0,
+      -3.141593
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "fixed_offset_xyz_m": [
+      0.0,
+      -5.9e-05,
+      0.170089
+    ],
+    "fixed_orientation_rpy_rad": [
+      -3.141247,
+      0.0,
+      3.141593
+    ],
+    "motion_type": "point",
+    "name": "waypoint2",
+    "parent": "large_container",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -3.141247,
+          0.0,
+          3.141593
+        ],
+        "position_xyz_m": [
+          0.0,
+          -5.9e-05,
+          0.170089
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          1.0,
+          0.000173,
+          0.0
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "large_container"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -3.141247,
+          0.0,
+          3.141593
+        ],
+        "position_xyz_m": [
+          0.0,
+          -5.9e-05,
+          0.170089
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          1.0,
+          0.000173,
+          0.0
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "large_container"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.141593,
+        0.0,
+        -3.141593
+      ],
+      "position_xyz_m": [
+        0.25,
+        -8e-06,
+        0.94609
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source": "exact_after_raw_ttm_import"
+    },
+    "world_orientation_rpy_rad": [
+      -3.141593,
+      0.0,
+      -3.141593
+    ]
+  },
+  {
+    "cartesian_path_sample_count": 0,
+    "cartesian_path_samples": null,
+    "fixed_offset_xyz_m": [
+      -0.0,
+      -0.250046,
+      0.17
+    ],
+    "fixed_orientation_rpy_rad": [
+      -3.141247,
+      0.0,
+      3.141593
+    ],
+    "motion_type": "point",
+    "name": "waypoint3",
+    "parent": "large_container",
+    "relative_to": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -3.141247,
+          0.0,
+          3.141593
+        ],
+        "position_xyz_m": [
+          -0.0,
+          -0.250046,
+          0.17
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          1.0,
+          0.000173,
+          0.0
+        ],
+        "source": "exact_parent_local_offset"
+      },
+      "meaning": "Waypoint pose expressed in the coordinate frame of reference_name.",
+      "reference_kind": "object",
+      "reference_name": "large_container"
+    },
+    "relative_to_nearest_object": {
+      "location_in_reference_frame": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -3.141247,
+          0.0,
+          3.141593
+        ],
+        "position_xyz_m": [
+          -0.0,
+          -0.250046,
+          0.17
+        ],
+        "quaternion_xyzw": [
+          -0.0,
+          1.0,
+          0.000173,
+          0.0
+        ],
+        "source": "exact_waypoint_pose_in_nearest_object_frame"
+      },
+      "meaning": "Waypoint pose expressed in the nearest non-waypoint parent object's frame.",
+      "reference_kind": "object",
+      "reference_name": "large_container"
+    },
+    "type": "DUMMY",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.141593,
+        0.0,
+        -3.141593
+      ],
+      "position_xyz_m": [
+        0.25,
+        -0.249995,
+        0.946087
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "source": "exact_after_raw_ttm_import"
+    },
+    "world_orientation_rpy_rad": [
+      -3.141593,
+      0.0,
+      -3.141593
+    ]
+  }
+]

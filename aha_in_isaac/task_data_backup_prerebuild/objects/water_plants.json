@@ -1,0 +1,617 @@
+[
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -2.35595,
+          0.000671,
+          2.893576
+        ],
+        "position_xyz_m": [
+          0.084578,
+          -0.209406,
+          -0.355709
+        ],
+        "quaternion_xyzw": [
+          0.114142,
+          -0.916754,
+          -0.379819,
+          -0.047656
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "waterer",
+      "world_offset_xyz_m": [
+        0.028918,
+        0.407435,
+        0.103411
+      ]
+    },
+    "handle": 81,
+    "hierarchy_path": "water_plants/plant",
+    "name": "plant",
+    "parent": "water_plants",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.031629,
+        -0.248109,
+        0.221309
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.031629,
+        -0.248109,
+        0.221309
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        3.031119
+      ],
+      "position_xyz_m": [
+        0.264875,
+        0.237154,
+        0.973309
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.998475,
+        0.055209
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.546871,
+      "x_uniform_min_m": -0.110128,
+      "y_uniform_max_m": 0.323765,
+      "y_uniform_min_m": -0.280847,
+      "z_fixed_m": 0.973309
+    }
+  },
+  {
+    "handle": 90,
+    "hierarchy_path": "water_plants/waterer",
+    "name": "waterer",
+    "parent": "water_plants",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -2.371571,
+        -0.174976,
+        2.964912
+      ],
+      "position_xyz_m": [
+        0.015451,
+        0.16003,
+        0.117898
+      ],
+      "quaternion_xyzw": [
+        -0.114142,
+        0.916754,
+        0.379819,
+        -0.047656
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.457528,
+      "x_uniform_min_m": -0.020785,
+      "y_uniform_max_m": 0.234422,
+      "y_uniform_min_m": -0.191504,
+      "z_fixed_m": 0.869898
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -2.371571,
+        -0.174976,
+        2.964912
+      ],
+      "position_xyz_m": [
+        0.015451,
+        0.16003,
+        0.117898
+      ],
+      "quaternion_xyzw": [
+        -0.114142,
+        0.916754,
+        0.379819,
+        -0.047656
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        2.36074,
+        0.0976,
+        -0.097071
+      ],
+      "position_xyz_m": [
+        0.235957,
+        -0.170281,
+        0.869898
+      ],
+      "quaternion_xyzw": [
+        -0.921658,
+        -0.063355,
+        -0.026614,
+        -0.38187
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.457528,
+      "x_uniform_min_m": -0.020785,
+      "y_uniform_max_m": 0.234422,
+      "y_uniform_min_m": -0.191504,
+      "z_fixed_m": 0.869898
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.785468,
+          -0.438523,
+          1.570055
+        ],
+        "position_xyz_m": [
+          0.084843,
+          -0.299817,
+          -0.215633
+        ],
+        "quaternion_xyzw": [
+          -0.406279,
+          0.121899,
+          0.696279,
+          0.579027
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "waterer",
+      "world_offset_xyz_m": [
+        0.03411,
+        0.37266,
+        -0.05956
+      ]
+    },
+    "handle": 82,
+    "hierarchy_path": "water_plants/plant/base_visual",
+    "name": "base_visual",
+    "parent": "plant",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        0.190506,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        -0.008994,
+        0.03399,
+        -0.162971
+      ],
+      "quaternion_xyzw": [
+        0.545288,
+        0.450179,
+        0.545288,
+        -0.450179
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        0.190506,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        0.022634,
+        -0.214119,
+        0.058338
+      ],
+      "quaternion_xyzw": [
+        0.545288,
+        0.450179,
+        0.545288,
+        -0.450179
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570796,
+        -0.30098,
+        1.570796
+      ],
+      "position_xyz_m": [
+        0.270067,
+        0.202379,
+        0.810338
+      ],
+      "quaternion_xyzw": [
+        -0.419388,
+        0.56931,
+        -0.419388,
+        -0.56931
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.512065,
+      "x_uniform_min_m": -0.075322,
+      "y_uniform_max_m": 0.288961,
+      "y_uniform_min_m": -0.24604,
+      "z_fixed_m": 0.810338
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -2.35595,
+          0.000671,
+          2.893576
+        ],
+        "position_xyz_m": [
+          0.085001,
+          -0.171438,
+          -0.395812
+        ],
+        "quaternion_xyzw": [
+          0.114142,
+          -0.916754,
+          -0.379819,
+          -0.047656
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "waterer",
+      "world_offset_xyz_m": [
+        0.029092,
+        0.408996,
+        0.158615
+      ]
+    },
+    "handle": 83,
+    "hierarchy_path": "water_plants/plant/plant_visual",
+    "name": "plant_visual",
+    "parent": "plant",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        -1e-06,
+        -0.001571,
+        0.055204
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.031628,
+        -0.24968,
+        0.276513
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        3.031119
+      ],
+      "position_xyz_m": [
+        0.265049,
+        0.238715,
+        1.028513
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.998475,
+        0.055209
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.548429,
+      "x_uniform_min_m": -0.111686,
+      "y_uniform_max_m": 0.325324,
+      "y_uniform_min_m": -0.282405,
+      "z_fixed_m": 1.028513
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.048324,
+          -0.356545,
+          0.421701
+        ],
+        "position_xyz_m": [
+          0.005608,
+          -0.002983,
+          0.000179
+        ],
+        "quaternion_xyzw": [
+          -0.013853,
+          -0.178328,
+          0.201725,
+          0.962972
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "waterer",
+      "world_offset_xyz_m": [
+        0.005284,
+        0.002732,
+        -0.002232
+      ]
+    },
+    "handle": 91,
+    "hierarchy_path": "water_plants/waterer/waterer_visual",
+    "name": "waterer_visual",
+    "parent": "waterer",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.048324,
+        -0.356545,
+        0.421701
+      ],
+      "position_xyz_m": [
+        0.005608,
+        -0.002983,
+        0.000179
+      ],
+      "quaternion_xyzw": [
+        -0.013853,
+        -0.178328,
+        0.201725,
+        0.962972
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -2.354495,
+        0.184289,
+        -2.905362
+      ],
+      "position_xyz_m": [
+        0.0105,
+        0.156732,
+        0.115665
+      ],
+      "quaternion_xyzw": [
+        0.143409,
+        0.90907,
+        0.389195,
+        0.039391
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        2.372362,
+        -0.261881,
+        0.316891
+      ],
+      "position_xyz_m": [
+        0.241242,
+        -0.167549,
+        0.867665
+      ],
+      "quaternion_xyzw": [
+        -0.899766,
+        0.19338,
+        0.060818,
+        -0.386427
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.453837,
+      "x_uniform_min_m": -0.017095,
+      "y_uniform_max_m": 0.230733,
+      "y_uniform_min_m": -0.187812,
+      "z_fixed_m": 0.867665
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -2.355942,
+          0.000652,
+          2.893574
+        ],
+        "position_xyz_m": [
+          0.045893,
+          -0.096587,
+          -0.142906
+        ],
+        "quaternion_xyzw": [
+          -0.114147,
+          0.916752,
+          0.379823,
+          0.047648
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "waterer",
+      "world_offset_xyz_m": [
+        0.022218,
+        0.174045,
+        0.032742
+      ]
+    },
+    "handle": 92,
+    "hierarchy_path": "water_plants/waterer/head",
+    "name": "head",
+    "parent": "waterer",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -2.355942,
+        0.000652,
+        2.893574
+      ],
+      "position_xyz_m": [
+        0.045893,
+        -0.096587,
+        -0.142906
+      ],
+      "quaternion_xyzw": [
+        -0.114147,
+        0.916752,
+        0.379823,
+        0.047648
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.2e-05,
+        1.8e-05,
+        -2e-06
+      ],
+      "position_xyz_m": [
+        0.012557,
+        -0.015403,
+        0.15064
+      ],
+      "quaternion_xyzw": [
+        6e-06,
+        -9e-06,
+        1e-06,
+        -1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1e-05,
+        -1.9e-05,
+        3.031116
+      ],
+      "position_xyz_m": [
+        0.258175,
+        0.003764,
+        0.90264
+      ],
+      "quaternion_xyzw": [
+        9e-06,
+        5e-06,
+        -0.998475,
+        -0.05521
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.316627,
+      "x_uniform_min_m": 0.120116,
+      "y_uniform_max_m": 0.093523,
+      "y_uniform_min_m": -0.050603,
+      "z_fixed_m": 0.90264
+    }
+  }
+]

@@ -1,0 +1,829 @@
+[
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.141538,
+          -8.6e-05,
+          -0.000486
+        ],
+        "position_xyz_m": [
+          0.025148,
+          -0.000994,
+          0.085062
+        ],
+        "quaternion_xyzw": [
+          -1.0,
+          -0.000243,
+          4.3e-05,
+          -2.7e-05
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "toilet_roll",
+      "world_offset_xyz_m": [
+        0.015007,
+        0.020196,
+        -0.085064
+      ]
+    },
+    "handle": 81,
+    "hierarchy_path": "put_toilet_roll_on_stand/toilet_roll_box",
+    "name": "toilet_roll_box",
+    "parent": "put_toilet_roll_on_stand",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -2.6e-05,
+        -9e-06,
+        -0.337097
+      ],
+      "position_xyz_m": [
+        -0.134616,
+        0.120103,
+        0.047996
+      ],
+      "quaternion_xyzw": [
+        -1.2e-05,
+        -7e-06,
+        -0.167751,
+        0.985829
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -2.6e-05,
+        -9e-06,
+        -0.337097
+      ],
+      "position_xyz_m": [
+        -0.134616,
+        0.120103,
+        0.047996
+      ],
+      "quaternion_xyzw": [
+        -1.2e-05,
+        -7e-06,
+        -0.167751,
+        0.985829
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        -2.7e-05,
+        0.891638
+      ],
+      "position_xyz_m": [
+        0.109263,
+        -0.257673,
+        0.799995
+      ],
+      "quaternion_xyzw": [
+        -6e-06,
+        -1.2e-05,
+        0.431197,
+        0.902258
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.554686,
+      "x_uniform_min_m": 0.016645,
+      "y_uniform_max_m": 0.410405,
+      "y_uniform_min_m": -0.410405,
+      "z_fixed_m": 0.799995
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -8.9e-05,
+          5.6e-05,
+          2.042649
+        ],
+        "position_xyz_m": [
+          0.312158,
+          0.16808,
+          0.00209
+        ],
+        "quaternion_xyzw": [
+          -1e-06,
+          -5.3e-05,
+          -0.852801,
+          -0.522237
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "toilet_roll",
+      "world_offset_xyz_m": [
+        0.326794,
+        0.137472,
+        -0.002117
+      ]
+    },
+    "handle": 87,
+    "hierarchy_path": "put_toilet_roll_on_stand/stand_base",
+    "name": "stand_base",
+    "parent": "put_toilet_roll_on_stand",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141544,
+        -3.1e-05,
+        2.37926
+      ],
+      "position_xyz_m": [
+        0.080448,
+        -0.134284,
+        0.130943
+      ],
+      "quaternion_xyzw": [
+        -0.372004,
+        0.928231,
+        -1.7e-05,
+        -2.3e-05
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141544,
+        -3.1e-05,
+        2.37926
+      ],
+      "position_xyz_m": [
+        0.080448,
+        -0.134284,
+        0.130943
+      ],
+      "quaternion_xyzw": [
+        -0.372004,
+        0.928231,
+        -1.7e-05,
+        -2.3e-05
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141548,
+        3.5e-05,
+        1.150525
+      ],
+      "position_xyz_m": [
+        0.42105,
+        -0.140397,
+        0.882942
+      ],
+      "quaternion_xyzw": [
+        -0.83905,
+        0.544055,
+        -2.7e-05,
+        -9e-06
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.530817,
+      "x_uniform_min_m": 0.040513,
+      "y_uniform_max_m": 0.386537,
+      "y_uniform_min_m": -0.386537,
+      "z_fixed_m": 0.882942
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.14156,
+          -6.9e-05,
+          0.33661
+        ],
+        "position_xyz_m": [
+          0.150595,
+          -0.050077,
+          0.133051
+        ],
+        "quaternion_xyzw": [
+          -0.98587,
+          0.167512,
+          3.1e-05,
+          -2.2e-05
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "toilet_roll",
+      "world_offset_xyz_m": [
+        0.055547,
+        0.148656,
+        -0.13306
+      ]
+    },
+    "handle": 93,
+    "hierarchy_path": "put_toilet_roll_on_stand/boundary_roll",
+    "name": "boundary_roll",
+    "parent": "put_toilet_roll_on_stand",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        0.125,
+        0.0
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        0.125,
+        0.0
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        1.228735
+      ],
+      "position_xyz_m": [
+        0.149803,
+        -0.129213,
+        0.752
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.576442,
+        0.817138
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.49928,
+      "x_uniform_min_m": 0.072051,
+      "y_uniform_max_m": 0.354999,
+      "y_uniform_min_m": -0.355,
+      "z_fixed_m": 0.752
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.14156,
+          -6.9e-05,
+          0.33661
+        ],
+        "position_xyz_m": [
+          0.233167,
+          0.185892,
+          0.133037
+        ],
+        "quaternion_xyzw": [
+          -0.98587,
+          0.167512,
+          3.1e-05,
+          -2.2e-05
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "toilet_roll",
+      "world_offset_xyz_m": [
+        0.291064,
+        0.064799,
+        -0.13306
+      ]
+    },
+    "handle": 94,
+    "hierarchy_path": "put_toilet_roll_on_stand/boundary_stand",
+    "name": "boundary_stand",
+    "parent": "put_toilet_roll_on_stand",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        -0.125,
+        0.0
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.0,
+        -0.125,
+        0.0
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        1.228735
+      ],
+      "position_xyz_m": [
+        0.38532,
+        -0.213071,
+        0.752
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.576442,
+        0.817138
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.49928,
+      "x_uniform_min_m": 0.072051,
+      "y_uniform_max_m": 0.355,
+      "y_uniform_min_m": -0.354999,
+      "z_fixed_m": 0.752
+    }
+  },
+  {
+    "handle": 82,
+    "hierarchy_path": "put_toilet_roll_on_stand/toilet_roll_box/toilet_roll",
+    "name": "toilet_roll",
+    "parent": "toilet_roll_box",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.141538,
+        -8.6e-05,
+        -0.000486
+      ],
+      "position_xyz_m": [
+        -0.02514,
+        -0.001011,
+        0.085064
+      ],
+      "quaternion_xyzw": [
+        1.0,
+        0.000243,
+        -4.3e-05,
+        -2.7e-05
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.577813,
+      "x_uniform_min_m": -0.006482,
+      "y_uniform_max_m": 0.433532,
+      "y_uniform_min_m": -0.433532,
+      "z_fixed_m": 0.885059
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.141539,
+        -5.5e-05,
+        0.33661
+      ],
+      "position_xyz_m": [
+        -0.158676,
+        0.127465,
+        0.13306
+      ],
+      "quaternion_xyzw": [
+        0.98587,
+        -0.167512,
+        -3.1e-05,
+        -2.2e-05
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141559,
+        -6.9e-05,
+        -0.892125
+      ],
+      "position_xyz_m": [
+        0.094256,
+        -0.277869,
+        0.885059
+      ],
+      "quaternion_xyzw": [
+        0.902153,
+        0.431416,
+        -3.8e-05,
+        0.0
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.577813,
+      "x_uniform_min_m": -0.006482,
+      "y_uniform_max_m": 0.433532,
+      "y_uniform_min_m": -0.433532,
+      "z_fixed_m": 0.885059
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.570673,
+          -0.7665,
+          0.00072
+        ],
+        "position_xyz_m": [
+          0.276147,
+          0.133399,
+          -0.104163
+        ],
+        "quaternion_xyzw": [
+          -0.655864,
+          -0.264193,
+          0.264633,
+          0.655755
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "toilet_roll",
+      "world_offset_xyz_m": [
+        0.2772,
+        0.131216,
+        0.104139
+      ]
+    },
+    "handle": 88,
+    "hierarchy_path": "put_toilet_roll_on_stand/stand_base/toilet_roll_holder",
+    "name": "toilet_roll_holder",
+    "parent": "stand_base",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570406,
+        1.27615,
+        0.000158
+      ],
+      "position_xyz_m": [
+        -0.014517,
+        0.04783,
+        -0.106258
+      ],
+      "quaternion_xyzw": [
+        0.567835,
+        -0.421316,
+        0.421061,
+        -0.568124
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.57094,
+        -1.10311,
+        0.00069
+      ],
+      "position_xyz_m": [
+        0.057919,
+        -0.089661,
+        0.237199
+      ],
+      "quaternion_xyzw": [
+        0.602166,
+        -0.370714,
+        -0.370351,
+        0.602335
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570861,
+        0.125625,
+        0.000554
+      ],
+      "position_xyz_m": [
+        0.371456,
+        -0.146653,
+        0.989199
+      ],
+      "quaternion_xyzw": [
+        0.705748,
+        0.044189,
+        0.044583,
+        0.705677
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.481022,
+      "x_uniform_min_m": 0.090309,
+      "y_uniform_max_m": 0.33674,
+      "y_uniform_min_m": -0.336741,
+      "z_fixed_m": 0.989199
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.14157,
+          -0.000113,
+          -0.390346
+        ],
+        "position_xyz_m": [
+          0.0,
+          4e-06,
+          -5e-06
+        ],
+        "quaternion_xyzw": [
+          0.981014,
+          0.193936,
+          -5.7e-05,
+          0.0
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "toilet_roll",
+      "world_offset_xyz_m": [
+        3e-06,
+        -2e-06,
+        5e-06
+      ]
+    },
+    "handle": 83,
+    "hierarchy_path": "put_toilet_roll_on_stand/toilet_roll_box/toilet_roll/toilet_roll_visual",
+    "name": "toilet_roll_visual",
+    "parent": "toilet_roll",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.14157,
+        -0.000113,
+        -0.390346
+      ],
+      "position_xyz_m": [
+        0.0,
+        4e-06,
+        -5e-06
+      ],
+      "quaternion_xyzw": [
+        0.981014,
+        0.193936,
+        -5.7e-05,
+        0.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -4e-06,
+        -4.4e-05,
+        -0.726957
+      ],
+      "position_xyz_m": [
+        -0.158677,
+        0.127462,
+        0.133064
+      ],
+      "quaternion_xyzw": [
+        -6e-06,
+        2.1e-05,
+        0.355527,
+        -0.934666
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        4e-05,
+        -1.9e-05,
+        0.501778
+      ],
+      "position_xyz_m": [
+        0.094259,
+        -0.277872,
+        0.885064
+      ],
+      "quaternion_xyzw": [
+        -1.7e-05,
+        1.4e-05,
+        -0.248265,
+        -0.968692
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.577811,
+      "x_uniform_min_m": -0.00648,
+      "y_uniform_max_m": 0.433531,
+      "y_uniform_min_m": -0.433531,
+      "z_fixed_m": 0.885064
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.570908,
+          0.766483,
+          -3.1e-05
+        ],
+        "position_xyz_m": [
+          0.276136,
+          0.13339,
+          -0.104173
+        ],
+        "quaternion_xyzw": [
+          0.655844,
+          0.264403,
+          0.264413,
+          0.655779
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "toilet_roll",
+      "world_offset_xyz_m": [
+        0.277186,
+        0.131213,
+        0.104149
+      ]
+    },
+    "handle": 89,
+    "hierarchy_path": "put_toilet_roll_on_stand/stand_base/toilet_roll_holder/holder_visual",
+    "name": "holder_visual",
+    "parent": "toilet_roll_holder",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141585,
+        -1.6e-05,
+        0.000682
+      ],
+      "position_xyz_m": [
+        -1.4e-05,
+        1e-05,
+        1e-06
+      ],
+      "quaternion_xyzw": [
+        1.0,
+        -0.000341,
+        -8e-06,
+        4e-06
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570672,
+        1.103094,
+        8e-06
+      ],
+      "position_xyz_m": [
+        0.057912,
+        -0.089649,
+        0.237209
+      ],
+      "quaternion_xyzw": [
+        0.602214,
+        -0.370553,
+        0.370502,
+        -0.602293
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.57074,
+        -0.125641,
+        0.000127
+      ],
+      "position_xyz_m": [
+        0.371442,
+        -0.146656,
+        0.989209
+      ],
+      "quaternion_xyzw": [
+        0.705695,
+        0.044348,
+        -0.044435,
+        -0.705729
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.481008,
+      "x_uniform_min_m": 0.090323,
+      "y_uniform_max_m": 0.336726,
+      "y_uniform_min_m": -0.336727,
+      "z_fixed_m": 0.989209
+    }
+  }
+]

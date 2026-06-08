@@ -1,0 +1,605 @@
+[
+  {
+    "handle": 80,
+    "hierarchy_path": "empty_dishwasher/boundary_root",
+    "name": "boundary_root",
+    "parent": "empty_dishwasher",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        -0.0,
+        1.570796
+      ],
+      "position_xyz_m": [
+        0.050006,
+        -6e-06,
+        -1.3e-05
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        -0.0,
+        0.707107,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        -0.0,
+        1.570796
+      ],
+      "position_xyz_m": [
+        0.050006,
+        -6e-06,
+        -1.3e-05
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        -0.0,
+        0.707107,
+        0.707107
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        -0.0,
+        1.570796
+      ],
+      "position_xyz_m": [
+        0.300006,
+        -6e-06,
+        0.751987
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        -0.0,
+        0.707107,
+        0.707107
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 81,
+    "hierarchy_path": "empty_dishwasher/boundary_root/dishwasher",
+    "name": "dishwasher",
+    "parent": "boundary_root",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.000345,
+        0.0,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        6e-06,
+        -0.324994,
+        0.261448
+      ],
+      "quaternion_xyzw": [
+        -0.000122,
+        -0.000122,
+        -0.707107,
+        0.707107
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -0.000345,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.375,
+        -0.0,
+        0.261436
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.000173,
+        0.0,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -0.000345,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.625,
+        -0.0,
+        1.013435
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.000173,
+        0.0,
+        1.0
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 97,
+    "hierarchy_path": "empty_dishwasher/boundary_root/dishwasher/dishwasher_base_visual",
+    "name": "dishwasher_base_visual",
+    "parent": "dishwasher",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570451,
+        -0.0
+      ],
+      "position_xyz_m": [
+        -0.003786,
+        2e-06,
+        -0.000438
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.706985,
+        0.0,
+        0.707229
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.371214,
+        2e-06,
+        0.260996
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.707107,
+        0.0,
+        0.707107
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        -1.570796,
+        0.0
+      ],
+      "position_xyz_m": [
+        0.621214,
+        2e-06,
+        1.012996
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        -0.707107,
+        0.0,
+        0.707107
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 83,
+    "hierarchy_path": "empty_dishwasher/boundary_root/dishwasher/dishwasher_door_joint/dishwasher_door",
+    "name": "dishwasher_door",
+    "parent": "dishwasher_door_joint",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -3.4e-05,
+        1.9e-05,
+        3.141536
+      ],
+      "position_xyz_m": [
+        0.010563,
+        0.167974,
+        -8e-05
+      ],
+      "quaternion_xyzw": [
+        1e-05,
+        1.7e-05,
+        1.0,
+        2.8e-05
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        -1.9e-05,
+        -5.6e-05
+      ],
+      "position_xyz_m": [
+        0.154637,
+        0.000639,
+        0.268426
+      ],
+      "quaternion_xyzw": [
+        0.707107,
+        2.7e-05,
+        1.3e-05,
+        -0.707107
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        -1.9e-05,
+        -5.6e-05
+      ],
+      "position_xyz_m": [
+        0.404637,
+        0.000639,
+        1.020426
+      ],
+      "quaternion_xyzw": [
+        0.707107,
+        2.7e-05,
+        1.3e-05,
+        -0.707107
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 86,
+    "hierarchy_path": "empty_dishwasher/boundary_root/dishwasher/dishwasher_tray_joint/dishwasher_tray",
+    "name": "dishwasher_tray",
+    "parent": "dishwasher_tray_joint",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570796,
+        -1.570797
+      ],
+      "position_xyz_m": [
+        0.002499,
+        0.013211,
+        1.6e-05
+      ],
+      "quaternion_xyzw": [
+        -0.500001,
+        0.499999,
+        -0.499999,
+        0.5
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570797,
+        -0.0,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        0.349983,
+        0.002516,
+        0.162309
+      ],
+      "quaternion_xyzw": [
+        -0.5,
+        -0.5,
+        -0.5,
+        0.5
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570797,
+        -0.0,
+        -1.570796
+      ],
+      "position_xyz_m": [
+        0.599983,
+        0.002516,
+        0.914309
+      ],
+      "quaternion_xyzw": [
+        -0.5,
+        -0.5,
+        -0.5,
+        0.5
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 84,
+    "hierarchy_path": "empty_dishwasher/boundary_root/dishwasher/dishwasher_door_joint/dishwasher_door/dishwasher_door_visual",
+    "name": "dishwasher_door_visual",
+    "parent": "dishwasher_door",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        5e-05,
+        -0.00011
+      ],
+      "position_xyz_m": [
+        0.003713,
+        0.005623,
+        -0.001298
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        2.5e-05,
+        -5.5e-05,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        3.1e-05,
+        -0.000166
+      ],
+      "position_xyz_m": [
+        0.15835,
+        -0.000659,
+        0.262803
+      ],
+      "quaternion_xyzw": [
+        0.707107,
+        4.8e-05,
+        7e-05,
+        -0.707107
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570796,
+        3.1e-05,
+        -0.000166
+      ],
+      "position_xyz_m": [
+        0.40835,
+        -0.000659,
+        1.014803
+      ],
+      "quaternion_xyzw": [
+        0.707107,
+        4.8e-05,
+        7e-05,
+        -0.707107
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 87,
+    "hierarchy_path": "empty_dishwasher/boundary_root/dishwasher/dishwasher_tray_joint/dishwasher_tray/dishwasher_tray_visual",
+    "name": "dishwasher_tray_visual",
+    "parent": "dishwasher_tray",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        3.141593,
+        -5.5e-05,
+        1e-06
+      ],
+      "position_xyz_m": [
+        -0.000601,
+        -0.0012,
+        -0.000712
+      ],
+      "quaternion_xyzw": [
+        -1.0,
+        0.0,
+        2.7e-05,
+        -0.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.57085,
+        0.0,
+        1.570797
+      ],
+      "position_xyz_m": [
+        0.348783,
+        0.001804,
+        0.161708
+      ],
+      "quaternion_xyzw": [
+        -0.500013,
+        0.500014,
+        -0.499987,
+        -0.499986
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.57085,
+        0.0,
+        1.570797
+      ],
+      "position_xyz_m": [
+        0.598783,
+        0.001804,
+        0.913708
+      ],
+      "quaternion_xyzw": [
+        -0.500013,
+        0.500014,
+        -0.499987,
+        -0.499986
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 88,
+    "hierarchy_path": "empty_dishwasher/boundary_root/dishwasher/dishwasher_tray_joint/dishwasher_tray/dishwasher_plate",
+    "name": "dishwasher_plate",
+    "parent": "dishwasher_tray",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        1.570717,
+        0.891915,
+        -1.570864
+      ],
+      "position_xyz_m": [
+        0.045445,
+        -0.05006,
+        -0.101412
+      ],
+      "quaternion_xyzw": [
+        0.235389,
+        0.666759,
+        -0.235487,
+        0.666761
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -6.4e-05,
+        -0.678882,
+        -1.570965
+      ],
+      "position_xyz_m": [
+        0.299923,
+        -0.098896,
+        0.207754
+      ],
+      "quaternion_xyzw": [
+        0.235437,
+        -0.23544,
+        -0.666809,
+        0.666711
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -6.4e-05,
+        -0.678882,
+        -1.570965
+      ],
+      "position_xyz_m": [
+        0.549923,
+        -0.098896,
+        0.959754
+      ],
+      "quaternion_xyzw": [
+        0.235437,
+        -0.23544,
+        -0.666809,
+        0.666711
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  },
+  {
+    "handle": 89,
+    "hierarchy_path": "empty_dishwasher/boundary_root/dishwasher/dishwasher_tray_joint/dishwasher_tray/dishwasher_plate/dishwasher_plate_visual",
+    "name": "dishwasher_plate_visual",
+    "parent": "dishwasher_plate",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        -3e-06,
+        6e-06
+      ],
+      "position_xyz_m": [
+        0.0,
+        -0.0,
+        -1e-06
+      ],
+      "quaternion_xyzw": [
+        -0.0,
+        -2e-06,
+        3e-06,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -6.8e-05,
+        -0.678881,
+        -1.570962
+      ],
+      "position_xyz_m": [
+        0.299924,
+        -0.098896,
+        0.207754
+      ],
+      "quaternion_xyzw": [
+        0.235435,
+        -0.235441,
+        -0.666807,
+        0.666713
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -6.8e-05,
+        -0.678881,
+        -1.570962
+      ],
+      "position_xyz_m": [
+        0.549924,
+        -0.098896,
+        0.959754
+      ],
+      "quaternion_xyzw": [
+        0.235435,
+        -0.235441,
+        -0.666807,
+        0.666713
+      ],
+      "source": "exact_after_raw_ttm_import"
+    }
+  }
+]

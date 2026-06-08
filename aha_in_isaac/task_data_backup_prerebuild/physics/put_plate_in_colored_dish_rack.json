@@ -1,0 +1,82 @@
+{
+  "shapes": {
+    "plate_stand": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 0,
+      "mass": 0.39269912242889404,
+      "friction": 0.5
+    },
+    "dish_rack": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.09200000762939453,
+      "friction": 0.5
+    },
+    "boundary": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.24502506852149963,
+      "friction": 0.5
+    },
+    "plate": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 1.0000001192092896,
+      "friction": 0.7099999785423279
+    },
+    "dish_rack_pillar3": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.02356194704771042,
+      "friction": 0.5
+    },
+    "dish_rack_pillar4": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.02356194704771042,
+      "friction": 0.5
+    },
+    "dish_rack_pillar2": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.02356194704771042,
+      "friction": 0.5
+    },
+    "dish_rack_pillar1": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.02356194704771042,
+      "friction": 0.5
+    },
+    "dish_rack_pillar0": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.02356194704771042,
+      "friction": 0.5
+    },
+    "dish_rack_pillar5": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.02356194704771042,
+      "friction": 0.5
+    },
+    "plate_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 1.0000001192092896,
+      "friction": 0.7099999785423279
+    }
+  },
+  "joints": {}
+}

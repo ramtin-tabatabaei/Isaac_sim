@@ -2,61 +2,66 @@
   "graspable_objects": [
     {
       "fixed_offset_from_task_boundary_root_xyz_m": [
-        -0.001448,
-        -0.095629,
-        0.08133
+        -0.001447,
+        -0.095638,
+        0.081327
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
-        -2.688998,
-        0.701099,
-        -1.500891
+        -2.689109,
+        0.701114,
+        -1.500704
       ],
       "name": "hockey_stick",
+      "observed_spawn_yaw_range_rad": [
+        -1.500988,
+        -1.496372
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -2.340959,
-          0.16145,
-          -2.271065
+          2.33682,
+          -0.1322,
+          0.842021
         ],
         "position_xyz_m": [
-          0.393856,
-          0.06334,
-          0.83333
+          0.181412,
+          0.122041,
+          0.833327
         ],
         "quaternion_xyzw": [
-          0.415543,
-          0.819099,
-          0.383535,
-          -0.096448
+          0.827375,
+          -0.398828,
+          0.104228,
+          0.381476
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.550198,
-        "x_uniform_min_m": -0.063617,
-        "y_uniform_max_m": 0.299255,
-        "y_uniform_min_m": -0.329492,
-        "z_fixed_m": 0.83333
+        "x_uniform_max_m": 0.364585,
+        "x_uniform_min_m": 0.078753,
+        "y_uniform_max_m": 0.203901,
+        "y_uniform_min_m": -0.242796,
+        "z_fixed_m": 0.833325
       }
     }
   ],
   "other_scene_objects": [
     {
       "fixed_offset_from_reference_local_xyz_m": [
-        -0.067674,
-        0.013809,
-        -0.003251
+        -0.067663,
+        0.013815,
+        -0.003245
       ],
       "fixed_offset_from_reference_xyz_m": [
-        0.052943,
-        -0.038388,
-        -0.02246
+        -0.054456,
+        0.036194,
+        -0.022457
       ],
       "fixed_orientation_from_reference_rpy_rad": [
-        -0.853918,
-        0.098183,
-        -0.504123
+        -0.853896,
+        0.098325,
+        -0.504135
       ],
       "has_separate_distribution": false,
       "name": "hockey_goal",
@@ -64,46 +69,46 @@
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -1.559912,
-          0.654771,
-          3.129476
+          1.560233,
+          -0.61401,
+          -0.011574
         ],
         "position_xyz_m": [
-          0.446798,
-          0.024952,
+          0.126956,
+          0.158234,
           0.81087
         ],
         "quaternion_xyzw": [
-          0.224579,
-          0.667269,
-          0.671801,
-          0.230217
+          -0.671707,
+          0.210933,
+          0.216477,
+          -0.676354
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
         "x_uniform_max_m": 0.61544,
         "x_uniform_min_m": -0.128859,
-        "y_uniform_max_m": 0.364498,
+        "y_uniform_max_m": 0.364497,
         "y_uniform_min_m": -0.394734,
         "z_fixed_m": 0.81087
       }
     },
     {
       "fixed_offset_from_reference_local_xyz_m": [
-        0.215576,
-        -0.140875,
-        0.138081
+        0.215551,
+        -0.140867,
+        0.138061
       ],
       "fixed_offset_from_reference_xyz_m": [
-        -0.221241,
-        0.17785,
-        -0.069333
+        0.228265,
+        -0.168689,
+        -0.069323
       ],
       "fixed_orientation_from_reference_rpy_rad": [
-        -2.469303,
-        0.498119,
-        -3.059405
+        -2.466918,
+        0.495545,
+        -3.060408
       ],
       "has_separate_distribution": false,
       "name": "hockey_ball",
@@ -111,29 +116,29 @@
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -0.000153,
-          -0.001461,
-          -0.68014
+          2e-06,
+          -0.001888,
+          2.502215
         ],
         "position_xyz_m": [
-          0.172615,
-          0.24119,
-          0.763997
+          0.409677,
+          -0.046648,
+          0.764003
         ],
         "quaternion_xyzw": [
-          0.000172,
-          -0.000714,
-          -0.333553,
-          0.942731
+          -0.000896,
+          -0.000298,
+          0.949333,
+          0.314271
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.64289,
-        "x_uniform_min_m": -0.15631,
-        "y_uniform_max_m": 0.391947,
-        "y_uniform_min_m": -0.422185,
-        "z_fixed_m": 0.763997
+        "x_uniform_max_m": 0.642851,
+        "x_uniform_min_m": -0.15627,
+        "y_uniform_max_m": 0.391908,
+        "y_uniform_min_m": -0.422146,
+        "z_fixed_m": 0.764003
       }
     }
   ],
@@ -147,18 +152,18 @@
     "orientation_rpy_rad": [
       -0.0,
       0.0,
-      0.869712
+      -2.231117
     ],
     "position_xyz_m": [
-      0.321716,
-      0.126132,
+      0.256058,
+      0.062237,
       0.752
     ],
     "quaternion_xyzw": [
       0.0,
       0.0,
-      0.42128,
-      0.906931
+      0.898157,
+      -0.439676
     ],
     "source": "exact_after_one_rlbench_reset"
   },

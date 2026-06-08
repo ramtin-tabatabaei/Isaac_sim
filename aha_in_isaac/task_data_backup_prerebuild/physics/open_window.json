@@ -1,0 +1,95 @@
+{
+  "shapes": {
+    "boundary_root": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 0.2129400074481964,
+      "friction": 0.5
+    },
+    "window_main": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 1.5500156879425049,
+      "friction": 0.5
+    },
+    "right_frame": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 3.9124176502227783,
+      "friction": 0.5
+    },
+    "window_wall0": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 12.012560844421387,
+      "friction": 0.5
+    },
+    "window_main_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 6.75,
+      "friction": 0.7099999785423279
+    },
+    "right_frame_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 10.6624174118042,
+      "friction": 0.5
+    },
+    "left_frame": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 3.9124176502227783,
+      "friction": 0.5
+    },
+    "window_left": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 3.375,
+      "friction": 0.7099999785423279
+    },
+    "left_frame_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 3.9124176502227783,
+      "friction": 0.5
+    },
+    "left_handle": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.32399997115135193,
+      "friction": 0.5
+    },
+    "left_handle_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 0,
+      "mass": 3.375,
+      "friction": 0.5
+    }
+  },
+  "joints": {
+    "left_window_joint": {
+      "type": "revolute",
+      "cyclic": false,
+      "lower": 0.0,
+      "upper": 90.00000250447816
+    },
+    "left_handle_joint": {
+      "type": "revolute",
+      "cyclic": false,
+      "lower": 0.0,
+      "upper": 90.00000250447816
+    }
+  }
+}

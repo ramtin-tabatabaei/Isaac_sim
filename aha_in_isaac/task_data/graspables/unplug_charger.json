@@ -3,40 +3,45 @@
     {
       "fixed_offset_from_task_boundary_root_xyz_m": [
         0.101304,
-        -0.022008,
+        -0.022007,
         0.218331
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
-        3.139502,
-        -1.550872,
-        3.139625
+        3.140677,
+        -1.550884,
+        3.140792
       ],
       "name": "charger",
+      "observed_spawn_yaw_range_rad": [
+        -3.141411,
+        3.141495
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -1.604349,
-          -0.934677,
-          -1.597667
+          -1.653644,
+          -1.327772,
+          -1.651106
         ],
         "position_xyz_m": [
-          0.285853,
-          -0.054491,
+          0.346603,
+          -0.055249,
           0.970331
         ],
         "quaternion_xyzw": [
-          -0.223272,
-          -0.678317,
-          -0.218784,
-          0.664958
+          -0.086317,
+          -0.708877,
+          -0.084535,
+          0.694908
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.50562,
-        "x_uniform_min_m": 0.04573,
-        "y_uniform_max_m": 0.311035,
-        "y_uniform_min_m": -0.342174,
+        "x_uniform_max_m": 0.428332,
+        "x_uniform_min_m": 0.124831,
+        "y_uniform_max_m": 0.189671,
+        "y_uniform_min_m": -0.31877,
         "z_fixed_m": 0.970331
       }
     }
@@ -44,19 +49,19 @@
   "other_scene_objects": [
     {
       "fixed_offset_from_reference_local_xyz_m": [
-        -0.001626,
+        -0.001625,
         0.000245,
         -0.030716
       ],
       "fixed_offset_from_reference_xyz_m": [
-        0.02488,
-        -0.01806,
+        0.029903,
+        -0.007136,
         -0.001013
       ],
       "fixed_orientation_from_reference_rpy_rad": [
-        1.570849,
-        0.000831,
-        1.550819
+        1.570873,
+        0.00084,
+        1.550835
       ],
       "has_separate_distribution": false,
       "name": "plug",
@@ -64,20 +69,20 @@
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          1.569609,
-          -0.635816,
-          3.140841
+          1.569812,
+          -0.242166,
+          3.14131
         ],
         "position_xyz_m": [
-          0.310732,
-          -0.072551,
+          0.376507,
+          -0.062385,
           0.969318
         ],
         "quaternion_xyzw": [
-          -0.220906,
-          -0.671359,
-          0.67199,
-          0.221149
+          -0.085352,
+          -0.701596,
+          0.702263,
+          0.085467
         ],
         "source": "exact_after_one_rlbench_reset"
       },
@@ -91,19 +96,19 @@
     },
     {
       "fixed_offset_from_reference_local_xyz_m": [
-        -0.01916,
+        -0.019159,
         0.02201,
-        -0.040314
+        -0.040313
       ],
       "fixed_offset_from_reference_xyz_m": [
-        0.045805,
-        -0.006456,
+        0.044778,
+        0.011606,
         -0.018355
       ],
       "fixed_orientation_from_reference_rpy_rad": [
-        -3.9e-05,
-        0.019905,
-        -0.000122
+        -1.6e-05,
+        0.019889,
+        -0.000114
       ],
       "has_separate_distribution": false,
       "name": "task_wall",
@@ -111,20 +116,20 @@
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -1.57084,
-          -0.934905,
-          -1.570832
+          -1.570905,
+          -1.328556,
+          -1.570902
         ],
         "position_xyz_m": [
-          0.331658,
-          -0.060948,
+          0.391381,
+          -0.043643,
           0.951976
         ],
         "quaternion_xyzw": [
-          -0.221056,
-          -0.671675,
-          -0.22105,
-          0.671658
+          -0.085437,
+          -0.701936,
+          -0.085435,
+          0.701917
         ],
         "source": "exact_after_one_rlbench_reset"
       },
@@ -138,19 +143,19 @@
     },
     {
       "fixed_offset_from_reference_local_xyz_m": [
-        -0.000248,
+        -0.000247,
         -0.011959,
         -0.046733
       ],
       "fixed_offset_from_reference_xyz_m": [
-        0.030494,
-        -0.037372,
+        0.042496,
+        -0.022818,
         0.000685
       ],
       "fixed_orientation_from_reference_rpy_rad": [
-        -3.9e-05,
-        0.019931,
-        -0.000123
+        -1.6e-05,
+        0.019915,
+        -0.000114
       ],
       "has_separate_distribution": false,
       "name": "hole1",
@@ -159,19 +164,19 @@
         "kind": "exact",
         "orientation_rpy_rad": [
           -1.570797,
-          -0.934905,
+          -1.328555,
           -1.570797
         ],
         "position_xyz_m": [
-          0.316347,
-          -0.091864,
+          0.389099,
+          -0.078067,
           0.971016
         ],
         "quaternion_xyzw": [
-          0.221053,
-          0.671666,
-          0.221053,
-          -0.671666
+          0.085436,
+          0.701926,
+          0.085436,
+          -0.701926
         ],
         "source": "exact_after_one_rlbench_reset"
       },
@@ -185,19 +190,19 @@
     },
     {
       "fixed_offset_from_reference_local_xyz_m": [
-        -0.000248,
+        -0.000247,
         0.013061,
-        -0.046745
+        -0.046744
       ],
       "fixed_offset_from_reference_xyz_m": [
-        0.045362,
-        -0.017249,
+        0.048508,
+        0.001469,
         0.000682
       ],
       "fixed_orientation_from_reference_rpy_rad": [
-        -3.9e-05,
-        0.019931,
-        -0.000123
+        -1.6e-05,
+        0.019915,
+        -0.000114
       ],
       "has_separate_distribution": false,
       "name": "hole2",
@@ -206,19 +211,19 @@
         "kind": "exact",
         "orientation_rpy_rad": [
           -1.570797,
-          -0.934905,
+          -1.328555,
           -1.570797
         ],
         "position_xyz_m": [
-          0.331215,
-          -0.07174,
+          0.395112,
+          -0.05378,
           0.971013
         ],
         "quaternion_xyzw": [
-          0.221053,
-          0.671666,
-          0.221053,
-          -0.671666
+          0.085436,
+          0.701926,
+          0.085436,
+          -0.701926
         ],
         "source": "exact_after_one_rlbench_reset"
       },
@@ -241,18 +246,18 @@
     "orientation_rpy_rad": [
       0.0,
       0.0,
-      -0.635892
+      -0.242241
     ],
     "position_xyz_m": [
-      0.21742,
-      0.023379,
+      0.253536,
+      -0.009584,
       0.752
     ],
     "quaternion_xyzw": [
       0.0,
       0.0,
-      -0.312616,
-      0.94988
+      -0.120825,
+      0.992674
     ],
     "source": "exact_after_one_rlbench_reset"
   },

@@ -1,0 +1,120 @@
+{
+  "graspable_objects": [
+    {
+      "fixed_offset_from_task_boundary_root_xyz_m": [
+        0.064763,
+        -0.109067,
+        0.146128
+      ],
+      "fixed_orientation_from_task_boundary_root_rpy_rad": [
+        1.587055,
+        0.231481,
+        -2.416296
+      ],
+      "name": "umbrella",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.588024,
+          0.406396,
+          -2.419376
+        ],
+        "position_xyz_m": [
+          0.399135,
+          0.106271,
+          0.898128
+        ],
+        "quaternion_xyzw": [
+          0.114449,
+          0.70343,
+          -0.591439,
+          0.37721
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_distribution": {
+        "x_uniform_max_m": 0.508356,
+        "x_uniform_min_m": -0.137882,
+        "y_uniform_max_m": 0.576846,
+        "y_uniform_min_m": -0.420807,
+        "z_fixed_m": 0.898128
+      }
+    }
+  ],
+  "other_scene_objects": [
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        0.039386,
+        0.027588,
+        -0.012647
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        -0.015394,
+        0.007948,
+        -0.046606
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        1.592087,
+        -0.728928,
+        1.353468
+      ],
+      "has_separate_distribution": false,
+      "name": "stand",
+      "reference_graspable_object": "umbrella",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -5.5e-05,
+          -1e-05,
+          -1.395857
+        ],
+        "position_xyz_m": [
+          0.383741,
+          0.114219,
+          0.851522
+        ],
+        "quaternion_xyzw": [
+          -1.8e-05,
+          -2.2e-05,
+          -0.642632,
+          0.766175
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.492479,
+        "x_uniform_min_m": -0.122005,
+        "y_uniform_max_m": 0.560967,
+        "y_uniform_min_m": -0.40493,
+        "z_fixed_m": 0.851522
+      }
+    }
+  ],
+  "task_base_rotation_rz_bounds_rad": [
+    -3.14,
+    3.14
+  ],
+  "task_boundary_root": "take_umbrella_out_of_umbrella_stand",
+  "task_boundary_root_world_pose_after_reset": {
+    "kind": "exact",
+    "orientation_rpy_rad": [
+      -0.0,
+      0.0,
+      0.174939
+    ],
+    "position_xyz_m": [
+      0.316378,
+      0.202402,
+      0.752
+    ],
+    "quaternion_xyzw": [
+      0.0,
+      0.0,
+      0.087358,
+      0.996177
+    ],
+    "source": "exact_after_one_rlbench_reset"
+  },
+  "type": "Uniform for x/y; fixed z",
+  "units": "meters"
+}

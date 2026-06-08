@@ -1,0 +1,308 @@
+{
+  "graspable_objects": [
+    {
+      "fixed_offset_from_task_boundary_root_xyz_m": [
+        -0.158676,
+        0.127465,
+        0.13306
+      ],
+      "fixed_orientation_from_task_boundary_root_rpy_rad": [
+        -3.141539,
+        -5.5e-05,
+        0.33661
+      ],
+      "name": "toilet_roll",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.141559,
+          -6.9e-05,
+          -0.892125
+        ],
+        "position_xyz_m": [
+          0.094256,
+          -0.277869,
+          0.885059
+        ],
+        "quaternion_xyzw": [
+          0.902153,
+          0.431416,
+          -3.8e-05,
+          0.0
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_distribution": {
+        "x_uniform_max_m": 0.577813,
+        "x_uniform_min_m": -0.006482,
+        "y_uniform_max_m": 0.433532,
+        "y_uniform_min_m": -0.433532,
+        "z_fixed_m": 0.885059
+      }
+    }
+  ],
+  "other_scene_objects": [
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        0.025148,
+        -0.000994,
+        0.085062
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        0.015007,
+        0.020196,
+        -0.085064
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        3.141538,
+        -8.6e-05,
+        -0.000486
+      ],
+      "has_separate_distribution": false,
+      "name": "toilet_roll_box",
+      "reference_graspable_object": "toilet_roll",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          -2.7e-05,
+          0.891638
+        ],
+        "position_xyz_m": [
+          0.109263,
+          -0.257673,
+          0.799995
+        ],
+        "quaternion_xyzw": [
+          -6e-06,
+          -1.2e-05,
+          0.431197,
+          0.902258
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.554686,
+        "x_uniform_min_m": 0.016645,
+        "y_uniform_max_m": 0.410405,
+        "y_uniform_min_m": -0.410405,
+        "z_fixed_m": 0.799995
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        0.312158,
+        0.16808,
+        0.00209
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        0.326794,
+        0.137472,
+        -0.002117
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        -8.9e-05,
+        5.6e-05,
+        2.042649
+      ],
+      "has_separate_distribution": false,
+      "name": "stand_base",
+      "reference_graspable_object": "toilet_roll",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          3.141548,
+          3.5e-05,
+          1.150525
+        ],
+        "position_xyz_m": [
+          0.42105,
+          -0.140397,
+          0.882942
+        ],
+        "quaternion_xyzw": [
+          -0.83905,
+          0.544055,
+          -2.7e-05,
+          -9e-06
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.530817,
+        "x_uniform_min_m": 0.040513,
+        "y_uniform_max_m": 0.386537,
+        "y_uniform_min_m": -0.386537,
+        "z_fixed_m": 0.882942
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        0.150595,
+        -0.050077,
+        0.133051
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        0.055547,
+        0.148656,
+        -0.13306
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        3.14156,
+        -6.9e-05,
+        0.33661
+      ],
+      "has_separate_distribution": false,
+      "name": "boundary_roll",
+      "reference_graspable_object": "toilet_roll",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          0.0,
+          1.228735
+        ],
+        "position_xyz_m": [
+          0.149803,
+          -0.129213,
+          0.752
+        ],
+        "quaternion_xyzw": [
+          0.0,
+          0.0,
+          0.576442,
+          0.817138
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.49928,
+        "x_uniform_min_m": 0.072051,
+        "y_uniform_max_m": 0.354999,
+        "y_uniform_min_m": -0.355,
+        "z_fixed_m": 0.752
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        0.233167,
+        0.185892,
+        0.133037
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        0.291064,
+        0.064799,
+        -0.13306
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        3.14156,
+        -6.9e-05,
+        0.33661
+      ],
+      "has_separate_distribution": false,
+      "name": "boundary_stand",
+      "reference_graspable_object": "toilet_roll",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.0,
+          0.0,
+          1.228735
+        ],
+        "position_xyz_m": [
+          0.38532,
+          -0.213071,
+          0.752
+        ],
+        "quaternion_xyzw": [
+          0.0,
+          0.0,
+          0.576442,
+          0.817138
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.49928,
+        "x_uniform_min_m": 0.072051,
+        "y_uniform_max_m": 0.355,
+        "y_uniform_min_m": -0.354999,
+        "z_fixed_m": 0.752
+      }
+    },
+    {
+      "fixed_offset_from_reference_local_xyz_m": [
+        0.276147,
+        0.133399,
+        -0.104163
+      ],
+      "fixed_offset_from_reference_xyz_m": [
+        0.2772,
+        0.131216,
+        0.104139
+      ],
+      "fixed_orientation_from_reference_rpy_rad": [
+        -1.570673,
+        -0.7665,
+        0.00072
+      ],
+      "has_separate_distribution": false,
+      "name": "toilet_roll_holder",
+      "reference_graspable_object": "toilet_roll",
+      "world_pose_after_reset": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          1.570861,
+          0.125625,
+          0.000554
+        ],
+        "position_xyz_m": [
+          0.371456,
+          -0.146653,
+          0.989199
+        ],
+        "quaternion_xyzw": [
+          0.705748,
+          0.044189,
+          0.044583,
+          0.705677
+        ],
+        "source": "exact_after_one_rlbench_reset"
+      },
+      "world_position_range_due_to_task_root_sampling": {
+        "x_uniform_max_m": 0.481022,
+        "x_uniform_min_m": 0.090309,
+        "y_uniform_max_m": 0.33674,
+        "y_uniform_min_m": -0.336741,
+        "z_fixed_m": 0.989199
+      }
+    }
+  ],
+  "task_base_rotation_rz_bounds_rad": [
+    -3.14,
+    3.14
+  ],
+  "task_boundary_root": "put_toilet_roll_on_stand",
+  "task_boundary_root_world_pose_after_reset": {
+    "kind": "exact",
+    "orientation_rpy_rad": [
+      -0.0,
+      0.0,
+      1.228735
+    ],
+    "position_xyz_m": [
+      0.267561,
+      -0.171142,
+      0.752
+    ],
+    "quaternion_xyzw": [
+      0.0,
+      0.0,
+      0.576442,
+      0.817138
+    ],
+    "source": "exact_after_one_rlbench_reset"
+  },
+  "type": "Uniform for x/y; fixed z",
+  "units": "meters"
+}

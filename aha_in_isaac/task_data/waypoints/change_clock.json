@@ -5,40 +5,40 @@
     "end_effector_location_after_waypoint": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        3.141582,
-        0.241603,
-        -3.141583
+        3.141587,
+        0.241464,
+        3.141583
       ],
       "position_xyz_m": [
-        0.278611,
-        -0.008166,
-        1.471639
+        0.27865,
+        -0.008152,
+        1.47156
       ],
       "quaternion_xyzw": [
-        4e-06,
-        0.992712,
         -5e-06,
-        0.120508
+        0.992721,
+        -3e-06,
+        0.120439
       ],
       "source": "exact_after_reaching_waypoint_path"
     },
     "end_effector_relative_to_waypoint_after_waypoint": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        0.581462,
-        1.329184,
-        -8.5e-05
+        2.209772,
+        1.329321,
+        1.1e-05
       ],
       "position_xyz_m": [
-        -0.439012,
-        0.149896,
-        0.408341
+        -0.438932,
+        0.18662,
+        -0.327591
       ],
       "quaternion_xyzw": [
-        -0.225619,
-        -0.590866,
-        -0.176757,
-        -0.754142
+        -0.703231,
+        -0.277081,
+        -0.551052,
+        -0.353602
       ],
       "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
     },
@@ -84,7 +84,7 @@
       "location_in_reference_frame": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -0.0,
+          0.0,
           -2.6e-05,
           1e-06
         ],
@@ -94,7 +94,7 @@
           -0.078397
         ],
         "quaternion_xyzw": [
-          0.0,
+          -0.0,
           1.3e-05,
           -1e-06,
           -1.0
@@ -109,27 +109,27 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -1.570799,
-        0.989427,
-        1.570814
+        -1.570798,
+        -0.638996,
+        1.57081
       ],
       "position_xyz_m": [
-        0.01967,
-        -0.357679,
+        0.233072,
+        0.366097,
         1.032625
       ],
       "quaternion_xyzw": [
-        0.202658,
-        -0.677444,
-        -0.202668,
-        -0.67744
+        0.63174,
+        -0.317657,
+        -0.631744,
+        -0.317647
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_orientation_rpy_rad": [
-      -1.570799,
-      0.989427,
-      1.570814
+      -1.570798,
+      -0.638996,
+      1.57081
     ]
   },
   {
@@ -138,40 +138,40 @@
     "end_effector_location_after_waypoint": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        3.141587,
-        0.241284,
-        -3.141585
+        3.141584,
+        0.241576,
+        -3.141592
       ],
       "position_xyz_m": [
-        0.278742,
-        -0.008153,
-        1.471459
+        0.278637,
+        -0.008155,
+        1.47162
       ],
       "quaternion_xyzw": [
-        3e-06,
-        0.992732,
-        -2e-06,
-        0.12035
+        0.0,
+        0.992714,
+        -4e-06,
+        0.120494
       ],
       "source": "exact_after_reaching_waypoint_path"
     },
     "end_effector_relative_to_waypoint_after_waypoint": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        0.581439,
-        1.329503,
-        -6.4e-05
+        2.209785,
+        1.32921,
+        9e-06
       ],
       "position_xyz_m": [
-        -0.438832,
-        0.149835,
-        0.341455
+        -0.438992,
+        0.186632,
+        -0.394588
       ],
       "quaternion_xyzw": [
-        -0.225588,
-        -0.590986,
-        -0.176795,
-        -0.754049
+        -0.703263,
+        -0.277059,
+        -0.551014,
+        -0.353614
       ],
       "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
     },
@@ -181,7 +181,7 @@
       -0.011395
     ],
     "fixed_orientation_rpy_rad": [
-      -0.0,
+      0.0,
       -2.6e-05,
       1e-06
     ],
@@ -192,7 +192,7 @@
       "location_in_reference_frame": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -0.0,
+          0.0,
           -2.6e-05,
           1e-06
         ],
@@ -217,7 +217,7 @@
       "location_in_reference_frame": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -0.0,
+          0.0,
           -2.6e-05,
           1e-06
         ],
@@ -242,27 +242,27 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -1.570799,
-        0.989427,
-        1.570814
+        -1.570798,
+        -0.638996,
+        1.57081
       ],
       "position_xyz_m": [
-        0.075665,
-        -0.320883,
+        0.193113,
+        0.419879,
         1.032625
       ],
       "quaternion_xyzw": [
-        0.202658,
-        -0.677444,
-        -0.202668,
-        -0.67744
+        0.63174,
+        -0.317657,
+        -0.631744,
+        -0.317647
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_orientation_rpy_rad": [
-      -1.570799,
-      0.989427,
-      1.570814
+      -1.570798,
+      -0.638996,
+      1.57081
     ]
   },
   {
@@ -271,40 +271,40 @@
     "end_effector_location_after_waypoint": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        3.14157,
-        0.241618,
-        -3.141577
+        3.141585,
+        0.241415,
+        -3.14159
       ],
       "position_xyz_m": [
-        0.278618,
-        -0.008165,
-        1.471636
+        0.278664,
+        -0.00815,
+        1.471538
       ],
       "quaternion_xyzw": [
-        6e-06,
-        0.992711,
-        -1e-05,
-        0.120516
+        1e-06,
+        0.992724,
+        -4e-06,
+        0.120415
       ],
       "source": "exact_after_reaching_waypoint_path"
     },
     "end_effector_relative_to_waypoint_after_waypoint": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -1.367677,
-        0.131821,
-        2.13875
+        -1.71658,
+        0.193111,
+        -2.488422
       ],
       "position_xyz_m": [
-        -0.149886,
-        -0.438993,
-        0.341336
+        -0.186618,
+        -0.438874,
+        -0.394608
       ],
       "quaternion_xyzw": [
-        0.258248,
-        -0.577339,
-        -0.658255,
-        -0.408274
+        -0.301327,
+        -0.693171,
+        -0.639698,
+        0.139651
       ],
       "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
     },
@@ -375,27 +375,27 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -1.570846,
-        0.989403,
-        5.6e-05
+        -1.57083,
+        -0.63902,
+        -5e-06
       ],
       "position_xyz_m": [
-        0.075667,
-        -0.320883,
+        0.193112,
+        0.419881,
         1.03265
       ],
       "quaternion_xyzw": [
-        0.622338,
-        -0.335722,
-        0.335703,
-        -0.622326
+        0.671331,
+        0.222101,
+        -0.222105,
+        -0.671309
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_orientation_rpy_rad": [
-      -1.570846,
-      0.989403,
-      5.6e-05
+      -1.57083,
+      -0.63902,
+      -5e-06
     ]
   },
   {
@@ -404,40 +404,40 @@
     "end_effector_location_after_waypoint": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        3.14158,
-        0.24138,
-        -3.141589
+        3.14157,
+        0.241681,
+        -3.141579
       ],
       "position_xyz_m": [
-        0.278693,
-        -0.008165,
-        1.471518
+        0.27861,
+        -0.008155,
+        1.471664
       ],
       "quaternion_xyzw": [
-        1e-06,
-        0.992726,
-        -6e-06,
-        0.120397
+        6e-06,
+        0.992708,
+        -1.1e-05,
+        0.120547
       ],
       "source": "exact_after_reaching_waypoint_path"
     },
     "end_effector_relative_to_waypoint_after_waypoint": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -1.367875,
-        0.131685,
-        2.138766
+        -1.716757,
+        0.193313,
+        -2.488381
       ],
       "position_xyz_m": [
-        -0.149845,
-        -0.438874,
-        0.408401
+        -0.186664,
+        -0.439,
+        -0.327578
       ],
       "quaternion_xyzw": [
-        0.258331,
-        -0.577384,
-        -0.658225,
-        -0.408207
+        -0.301414,
+        -0.693193,
+        -0.639653,
+        0.139563
       ],
       "source": "exact_tip_pose_in_waypoint_frame_after_reaching_waypoint_path"
     },
@@ -489,7 +489,7 @@
         ],
         "position_xyz_m": [
           0.000125,
-          -0.000753,
+          -0.000752,
           -0.078395
         ],
         "quaternion_xyzw": [
@@ -508,27 +508,27 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -1.570846,
-        0.989403,
-        5.6e-05
+        -1.57083,
+        -0.63902,
+        -5e-06
       ],
       "position_xyz_m": [
-        0.019673,
-        -0.35768,
+        0.233073,
+        0.3661,
         1.032652
       ],
       "quaternion_xyzw": [
-        0.622338,
-        -0.335722,
-        0.335703,
-        -0.622326
+        0.671331,
+        0.222101,
+        -0.222105,
+        -0.671309
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_orientation_rpy_rad": [
-      -1.570846,
-      0.989403,
-      5.6e-05
+      -1.57083,
+      -0.63902,
+      -5e-06
     ]
   }
 ]

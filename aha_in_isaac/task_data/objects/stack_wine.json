@@ -1,55 +1,86 @@
 [
   {
+    "analytical_task_root_yaw_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.622466,
+      "x_uniform_min_m": -0.089847,
+      "y_uniform_max_m": -0.077787,
+      "y_uniform_min_m": -0.436936,
+      "z_fixed_m": 0.873235
+    },
     "handle": 81,
     "hierarchy_path": "stack_wine/wine_bottle",
+    "is_graspable": true,
     "name": "wine_bottle",
+    "observed_spawn_yaw_range_rad": [
+      -2e-05,
+      0.000327
+    ],
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.251158,
+        -0.336016,
+        0.873232
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.413343,
+      "x_min_m": 0.156954,
+      "y_max_m": -0.240903,
+      "y_min_m": -0.415634,
+      "z_max_m": 0.873236,
+      "z_min_m": 0.873229
+    },
     "parent": "stack_wine",
     "parent_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -3.14158,
-        7.1e-05,
-        -6.6e-05
+        -3.141592,
+        2.6e-05,
+        5.1e-05
       ],
       "position_xyz_m": [
-        0.098965,
+        0.098971,
         -0.284237,
-        0.12123
+        0.121235
       ],
       "quaternion_xyzw": [
         -1.0,
-        -3.3e-05,
-        -3.5e-05,
-        6e-06
+        2.6e-05,
+        -1.3e-05,
+        0.0
       ],
       "source": "exact_parent_local_offset"
     },
     "placement_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.622462,
-      "x_uniform_min_m": -0.089851,
-      "y_uniform_max_m": -0.07779,
-      "y_uniform_min_m": -0.43693,
-      "z_fixed_m": 0.87323
+      "kind": "observed_over_rlbench_resets",
+      "n_resets_observed": 30,
+      "source": "observed_graspable_world_range_includes_spawn_translation_and_rotation",
+      "x_uniform_max_m": 0.413343,
+      "x_uniform_min_m": 0.156954,
+      "y_uniform_max_m": -0.240903,
+      "y_uniform_min_m": -0.415634,
+      "z_fixed_m": 0.873232,
+      "z_observed_max_m": 0.873236,
+      "z_observed_min_m": 0.873229
     },
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -3.14158,
-        7.1e-05,
-        -6.6e-05
+        -3.141592,
+        2.6e-05,
+        5.1e-05
       ],
       "position_xyz_m": [
-        0.098965,
+        0.098971,
         -0.284237,
-        0.12123
+        0.121235
       ],
       "quaternion_xyzw": [
         -1.0,
-        -3.3e-05,
-        -3.5e-05,
-        6e-06
+        2.6e-05,
+        -1.3e-05,
+        0.0
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -57,34 +88,46 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -3.141591,
-        7.2e-05,
-        0.158855
+        3.141592,
+        2.6e-05,
+        0.053312
       ],
       "position_xyz_m": [
-        0.174336,
-        -0.317322,
-        0.87323
+        0.36968,
+        -0.387885,
+        0.873235
       ],
       "quaternion_xyzw": [
-        -0.996847,
-        0.079344,
-        -3.6e-05,
-        4e-06
+        -0.999645,
+        0.026653,
+        -1.3e-05,
+        -0.0
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.622462,
-      "x_uniform_min_m": -0.089851,
-      "y_uniform_max_m": -0.07779,
-      "y_uniform_min_m": -0.43693,
-      "z_fixed_m": 0.87323
+      "kind": "observed_over_rlbench_resets",
+      "n_resets_observed": 30,
+      "source": "observed_graspable_world_range_includes_spawn_translation_and_rotation",
+      "x_uniform_max_m": 0.413343,
+      "x_uniform_min_m": 0.156954,
+      "y_uniform_max_m": -0.240903,
+      "y_uniform_min_m": -0.415634,
+      "z_fixed_m": 0.873232,
+      "z_observed_max_m": 0.873236,
+      "z_observed_min_m": 0.873229
     }
   },
   {
+    "analytical_task_root_yaw_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.622464,
+      "x_uniform_min_m": -0.08985,
+      "y_uniform_max_m": -0.077789,
+      "y_uniform_min_m": -0.436935,
+      "z_fixed_m": 0.874002
+    },
     "fixed_relation_to_nearest_graspable": {
       "has_separate_position_range": false,
       "reference_local_location": {
@@ -110,13 +153,29 @@
       "reference_object": "wine_bottle",
       "world_offset_xyz_m": [
         -3e-06,
-        1e-06,
+        0.0,
         0.000767
       ]
     },
     "handle": 82,
     "hierarchy_path": "stack_wine/wine_bottle/wine_bottle_visual",
+    "mounted_note": "Rigidly mounted on graspable 'wine_bottle'. RLBench re-places 'wine_bottle' each episode at a random position within its spawn region and a random yaw (RLBench default +/-pi). This object sits ~0.0 m from 'wine_bottle' rotation axis, so its absolute world position sweeps a wide ring; its pose relative to 'wine_bottle' is fixed.",
+    "mounted_on_graspable": "wine_bottle",
     "name": "wine_bottle_visual",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.251155,
+        -0.336015,
+        0.873999
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.41334,
+      "x_min_m": 0.15695,
+      "y_max_m": -0.240904,
+      "y_min_m": -0.415633,
+      "z_max_m": 0.874003,
+      "z_min_m": 0.873996
+    },
     "parent": "wine_bottle",
     "parent_local_location": {
       "kind": "exact",
@@ -139,23 +198,24 @@
       "source": "exact_parent_local_offset"
     },
     "placement_range": null,
+    "rotation_radius_from_graspable_m": 3e-06,
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        3.7e-05,
-        -0.000108,
-        0.190585
+        2.5e-05,
+        -6.4e-05,
+        0.190468
       ],
       "position_xyz_m": [
-        0.098962,
+        0.098968,
         -0.284237,
-        0.121997
+        0.122002
       ],
       "quaternion_xyzw": [
-        1.3e-05,
-        -5.6e-05,
-        0.095148,
-        0.995463
+        9e-06,
+        -3.3e-05,
+        0.09509,
+        0.995469
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -163,31 +223,34 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        1.9e-05,
-        -0.000113,
-        0.031664
+        2.1e-05,
+        -6.5e-05,
+        0.137207
       ],
       "position_xyz_m": [
-        0.174333,
-        -0.317322,
-        0.873997
+        0.369677,
+        -0.387885,
+        0.874002
       ],
       "quaternion_xyzw": [
-        9e-06,
-        -5.7e-05,
-        0.015831,
-        0.999875
+        8e-06,
+        -3.3e-05,
+        0.06855,
+        0.997648
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.622459,
-      "x_uniform_min_m": -0.089853,
-      "y_uniform_max_m": -0.077793,
-      "y_uniform_min_m": -0.436928,
-      "z_fixed_m": 0.873997
+      "kind": "mounted_on_graspable_envelope",
+      "mounted_on_graspable": "wine_bottle",
+      "n_resets_observed": 30,
+      "rotation_radius_m": 3e-06,
+      "source": "observed_wine_bottle_range_expanded_by_mount_radius_for_full_yaw",
+      "x_uniform_max_m": 0.413346,
+      "x_uniform_min_m": 0.156951,
+      "y_uniform_max_m": -0.2409,
+      "y_uniform_min_m": -0.415637,
+      "z_fixed_m": 0.873999
     }
   },
   {
@@ -198,38 +261,52 @@
         "orientation_rpy_rad": [
           0.0,
           -1.570796,
-          -3.14158
+          -3.141592
         ],
         "position_xyz_m": [
-          -0.048746,
-          -0.559239,
-          0.087117
+          -0.048814,
+          -0.559235,
+          0.087118
         ],
         "quaternion_xyzw": [
-          0.707123,
-          1.9e-05,
-          -0.707091,
-          2.8e-05
+          0.707107,
+          -1.8e-05,
+          -0.707107,
+          -1.8e-05
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "wine_bottle",
       "world_offset_xyz_m": [
-        0.040339,
-        0.559909,
-        -0.087113
+        -0.018942,
+        0.561042,
+        -0.087118
       ]
     },
     "handle": 87,
     "hierarchy_path": "stack_wine/rack/rack_bottom",
     "name": "rack_bottom",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.246869,
+        0.217048,
+        0.786116
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.390079,
+      "x_min_m": 0.099191,
+      "y_max_m": 0.312819,
+      "y_min_m": 0.143229,
+      "z_max_m": 0.786116,
+      "z_min_m": 0.786116
+    },
     "parent": "rack",
     "parent_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
         0.0,
         -1.570451,
-        -0.0
+        0.0
       ],
       "position_xyz_m": [
         4e-06,
@@ -250,7 +327,7 @@
       "orientation_rpy_rad": [
         0.0,
         -1.570451,
-        -0.0
+        0.0
       ],
       "position_xyz_m": [
         0.050188,
@@ -269,20 +346,20 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -1.570959,
-        -1.411875,
-        -1.570958
+        -1.571282,
+        -1.517536,
+        -1.57128
       ],
       "position_xyz_m": [
-        0.214675,
-        0.242587,
+        0.350738,
+        0.173157,
         0.786116
       ],
       "quaternion_xyzw": [
-        -0.056129,
-        -0.704885,
-        -0.056127,
-        0.704867
+        -0.018829,
+        -0.706865,
+        -0.018828,
+        0.706847
       ],
       "source": "exact_after_one_rlbench_reset"
     },
@@ -292,7 +369,7 @@
       "x_uniform_max_m": 0.58144,
       "x_uniform_min_m": -0.11781,
       "y_uniform_max_m": 0.332759,
-      "y_uniform_min_m": 0.02301,
+      "y_uniform_min_m": 0.023006,
       "z_fixed_m": 0.786116
     }
   },
@@ -304,38 +381,52 @@
         "orientation_rpy_rad": [
           0.0,
           -1.570796,
-          -3.14158
+          -3.141592
         ],
         "position_xyz_m": [
-          -0.048741,
-          -0.55924,
-          0.016117
+          -0.048812,
+          -0.559235,
+          0.016118
         ],
         "quaternion_xyzw": [
-          0.707123,
-          1.9e-05,
-          -0.707091,
-          2.8e-05
+          0.707107,
+          -1.8e-05,
+          -0.707107,
+          -1.8e-05
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "wine_bottle",
       "world_offset_xyz_m": [
-        0.040339,
-        0.559909,
-        -0.016113
+        -0.018942,
+        0.561042,
+        -0.016118
       ]
     },
     "handle": 89,
     "hierarchy_path": "stack_wine/rack/rack_top",
     "name": "rack_top",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.246869,
+        0.217048,
+        0.857116
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.390079,
+      "x_min_m": 0.099191,
+      "y_max_m": 0.312819,
+      "y_min_m": 0.143229,
+      "z_max_m": 0.857116,
+      "z_min_m": 0.857116
+    },
     "parent": "rack",
     "parent_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
         0.0,
         -1.570451,
-        -0.0
+        0.0
       ],
       "position_xyz_m": [
         4e-06,
@@ -356,7 +447,7 @@
       "orientation_rpy_rad": [
         0.0,
         -1.570451,
-        -0.0
+        0.0
       ],
       "position_xyz_m": [
         0.050188,
@@ -375,20 +466,20 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -1.570959,
-        -1.411875,
-        -1.570958
+        -1.571282,
+        -1.517536,
+        -1.57128
       ],
       "position_xyz_m": [
-        0.214675,
-        0.242587,
+        0.350738,
+        0.173157,
         0.857116
       ],
       "quaternion_xyzw": [
-        -0.056129,
-        -0.704885,
-        -0.056127,
-        0.704867
+        -0.018829,
+        -0.706865,
+        -0.018828,
+        0.706847
       ],
       "source": "exact_after_one_rlbench_reset"
     },
@@ -398,7 +489,7 @@
       "x_uniform_max_m": 0.58144,
       "x_uniform_min_m": -0.11781,
       "y_uniform_max_m": 0.332759,
-      "y_uniform_min_m": 0.02301,
+      "y_uniform_min_m": 0.023006,
       "z_fixed_m": 0.857116
     }
   },
@@ -410,31 +501,45 @@
         "orientation_rpy_rad": [
           0.0,
           -1.570796,
-          -3.14158
+          -3.141592
         ],
         "position_xyz_m": [
-          -0.04526,
-          -0.559239,
-          0.085472
+          -0.045328,
+          -0.559235,
+          0.085473
         ],
         "quaternion_xyzw": [
-          0.70711,
-          1.9e-05,
-          -0.707104,
-          2.8e-05
+          0.707094,
+          -1.8e-05,
+          -0.70712,
+          -1.8e-05
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "wine_bottle",
       "world_offset_xyz_m": [
-        0.04378,
-        0.559358,
-        -0.085468
+        -0.015462,
+        0.560856,
+        -0.085474
       ]
     },
     "handle": 88,
     "hierarchy_path": "stack_wine/rack/rack_bottom/rack_bottom_visual",
     "name": "rack_bottom_visual",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.250293,
+        0.216776,
+        0.787761
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.393353,
+      "x_min_m": 0.102673,
+      "y_max_m": 0.312994,
+      "y_min_m": 0.142453,
+      "z_max_m": 0.787761,
+      "z_min_m": 0.787761
+    },
     "parent": "rack_bottom",
     "parent_local_location": {
       "kind": "exact",
@@ -470,7 +575,7 @@
         0.035761
       ],
       "quaternion_xyzw": [
-        -0.0,
+        0.0,
         -0.707129,
         0.0,
         0.707085
@@ -481,20 +586,20 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -1.571191,
-        -1.411875,
-        -1.571187
+        -1.571972,
+        -1.517536,
+        -1.57197
       ],
       "position_xyz_m": [
-        0.218117,
-        0.242035,
+        0.354219,
+        0.172971,
         0.787761
       ],
       "quaternion_xyzw": [
-        -0.05613,
-        -0.704898,
-        -0.056126,
-        0.704854
+        -0.018829,
+        -0.706878,
+        -0.018828,
+        0.706834
       ],
       "source": "exact_after_one_rlbench_reset"
     },
@@ -504,7 +609,7 @@
       "x_uniform_max_m": 0.583904,
       "x_uniform_min_m": -0.115346,
       "y_uniform_max_m": 0.333406,
-      "y_uniform_min_m": 0.020545,
+      "y_uniform_min_m": 0.020541,
       "z_fixed_m": 0.787761
     }
   },
@@ -516,31 +621,45 @@
         "orientation_rpy_rad": [
           0.0,
           -1.570796,
-          -3.14158
+          -3.141592
         ],
         "position_xyz_m": [
-          -0.045255,
-          -0.55924,
-          0.014472
+          -0.045326,
+          -0.559235,
+          0.014473
         ],
         "quaternion_xyzw": [
-          0.70711,
-          1.9e-05,
-          -0.707104,
-          2.8e-05
+          0.707094,
+          -1.8e-05,
+          -0.70712,
+          -1.8e-05
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "wine_bottle",
       "world_offset_xyz_m": [
-        0.04378,
-        0.559358,
-        -0.014468
+        -0.015462,
+        0.560856,
+        -0.014474
       ]
     },
     "handle": 90,
     "hierarchy_path": "stack_wine/rack/rack_top/rack_top_visual",
     "name": "rack_top_visual",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.250293,
+        0.216776,
+        0.858761
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.393353,
+      "x_min_m": 0.102673,
+      "y_max_m": 0.312994,
+      "y_min_m": 0.142453,
+      "z_max_m": 0.858761,
+      "z_min_m": 0.858761
+    },
     "parent": "rack_top",
     "parent_local_location": {
       "kind": "exact",
@@ -576,7 +695,7 @@
         0.106762
       ],
       "quaternion_xyzw": [
-        -0.0,
+        0.0,
         -0.707129,
         0.0,
         0.707085
@@ -587,20 +706,20 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -1.571191,
-        -1.411875,
-        -1.571187
+        -1.571972,
+        -1.517536,
+        -1.57197
       ],
       "position_xyz_m": [
-        0.218117,
-        0.242035,
+        0.354219,
+        0.172971,
         0.858761
       ],
       "quaternion_xyzw": [
-        -0.05613,
-        -0.704898,
-        -0.056126,
-        0.704854
+        -0.018829,
+        -0.706878,
+        -0.018828,
+        0.706834
       ],
       "source": "exact_after_one_rlbench_reset"
     },
@@ -610,7 +729,7 @@
       "x_uniform_max_m": 0.583904,
       "x_uniform_min_m": -0.115346,
       "y_uniform_max_m": 0.333406,
-      "y_uniform_min_m": 0.020545,
+      "y_uniform_min_m": 0.020541,
       "z_fixed_m": 0.858761
     }
   }

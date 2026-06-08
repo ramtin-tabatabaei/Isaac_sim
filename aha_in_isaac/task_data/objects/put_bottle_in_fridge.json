@@ -5,51 +5,65 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -0.000193,
-          2.8e-05,
-          -0.488443
+          -0.000186,
+          2.4e-05,
+          -0.48966
         ],
         "position_xyz_m": [
-          0.227901,
-          0.139637,
-          -0.075801
+          0.228089,
+          0.139369,
+          -0.075799
         ],
         "quaternion_xyzw": [
-          -9.7e-05,
-          -1e-05,
-          -0.241801,
-          0.970326
+          -9.3e-05,
+          -1.1e-05,
+          -0.242391,
+          0.970179
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "bottle",
       "world_offset_xyz_m": [
-        0.19179,
-        0.186169,
+        0.142225,
+        0.22633,
         -0.075768
       ]
     },
     "handle": 81,
     "hierarchy_path": "put_bottle_in_fridge/fridge_root",
     "name": "fridge_root",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.228104,
+        -0.051492,
+        0.752
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.295822,
+      "x_min_m": 0.165815,
+      "y_max_m": 0.220723,
+      "y_min_m": -0.26219,
+      "z_max_m": 0.752,
+      "z_min_m": 0.752
+    },
     "parent": "put_bottle_in_fridge",
     "parent_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
         0.0,
         0.0,
-        -0.267671
+        -0.028431
       ],
       "position_xyz_m": [
-        0.013355,
-        -0.268656,
+        -0.056598,
+        -0.065643,
         0.0
       ],
       "quaternion_xyzw": [
         0.0,
         0.0,
-        -0.133436,
-        0.991057
+        -0.014215,
+        0.999899
       ],
       "source": "exact_parent_local_offset"
     },
@@ -61,18 +75,18 @@
       "orientation_rpy_rad": [
         0.0,
         0.0,
-        -0.267671
+        -0.028431
       ],
       "position_xyz_m": [
-        0.263355,
-        -0.268656,
+        0.193402,
+        -0.065643,
         0.752
       ],
       "quaternion_xyzw": [
         0.0,
         0.0,
-        -0.133436,
-        0.991057
+        -0.014215,
+        0.999899
       ],
       "source": "exact_after_one_rlbench_reset"
     },
@@ -92,40 +106,54 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -8.1e-05,
-          -1.3e-05,
-          -0.488416
+          -7.4e-05,
+          -1.7e-05,
+          -0.489632
         ],
         "position_xyz_m": [
-          0.560807,
-          -0.037168,
-          0.400199
+          0.560778,
+          -0.037844,
+          0.400201
         ],
         "quaternion_xyzw": [
-          -3.8e-05,
-          -1.6e-05,
-          -0.241788,
-          0.970329
+          -3.4e-05,
+          -1.7e-05,
+          -0.242378,
+          0.970182
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "bottle",
       "world_offset_xyz_m": [
-        0.555341,
-        0.086464,
+        0.519047,
+        0.215613,
         0.400207
       ]
     },
     "handle": 82,
     "hierarchy_path": "put_bottle_in_fridge/fridge_root/fridge_base",
     "name": "fridge_base",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.573988,
+        0.020246,
+        1.227975
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.666475,
+      "x_min_m": 0.439067,
+      "y_max_m": 0.455485,
+      "y_min_m": -0.373612,
+      "z_max_m": 1.227975,
+      "z_min_m": 1.227975
+    },
     "parent": "fridge_root",
     "parent_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
         0.000118,
         1.7e-05,
-        2.8e-05
+        2.7e-05
       ],
       "position_xyz_m": [
         0.376975,
@@ -146,7 +174,7 @@
       "orientation_rpy_rad": [
         0.000118,
         1.7e-05,
-        2.8e-05
+        2.7e-05
       ],
       "position_xyz_m": [
         0.376975,
@@ -166,19 +194,19 @@
       "kind": "exact",
       "orientation_rpy_rad": [
         0.000118,
-        -1.5e-05,
-        -0.267644
+        1.3e-05,
+        -0.028404
       ],
       "position_xyz_m": [
-        0.626905,
-        -0.368361,
+        0.570225,
+        -0.07636,
         1.227975
       ],
       "quaternion_xyzw": [
         5.9e-05,
-        0.0,
-        -0.133423,
-        0.991059
+        7e-06,
+        -0.014201,
+        0.999899
       ],
       "source": "exact_after_one_rlbench_reset"
     },
@@ -198,33 +226,47 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -0.000179,
-          0.000105,
-          2.653141
+          -0.000172,
+          0.000101,
+          2.651925
         ],
         "position_xyz_m": [
-          0.541383,
-          -0.026848,
-          0.399857
+          0.541366,
+          -0.027501,
+          0.399859
         ],
         "quaternion_xyzw": [
-          2.9e-05,
-          9.9e-05,
-          0.970325,
-          0.241805
+          2.8e-05,
+          9.6e-05,
+          0.970178,
+          0.242395
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "bottle",
       "world_offset_xyz_m": [
-        0.534128,
-        0.092279,
-        0.399866
+        0.49706,
+        0.216236,
+        0.399867
       ]
     },
     "handle": 84,
     "hierarchy_path": "put_bottle_in_fridge/fridge_root/fridge_base/fridge_base_visual",
     "name": "fridge_base_visual",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.553807,
+        0.016058,
+        1.227634
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.644848,
+      "x_min_m": 0.423125,
+      "y_max_m": 0.441785,
+      "y_min_m": -0.365992,
+      "z_max_m": 1.227634,
+      "z_min_m": 1.227634
+    },
     "parent": "fridge_base",
     "parent_local_location": {
       "kind": "exact",
@@ -271,20 +313,20 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -3e-06,
-        7.9e-05,
-        2.873913
+        -2.2e-05,
+        7.6e-05,
+        3.113153
       ],
       "position_xyz_m": [
-        0.605692,
-        -0.362546,
+        0.548238,
+        -0.075737,
         1.227634
       ],
       "quaternion_xyzw": [
-        3.9e-05,
-        7e-06,
-        0.991057,
-        0.133441
+        3.8e-05,
+        1.1e-05,
+        0.999899,
+        0.014219
       ],
       "source": "exact_after_one_rlbench_reset"
     },
@@ -304,33 +346,47 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -0.000137,
-          -0.000117,
-          1.082356
+          -0.00013,
+          -0.00012,
+          1.081139
         ],
         "position_xyz_m": [
-          0.582974,
-          -0.048282,
-          0.600982
+          0.58293,
+          -0.048986,
+          0.600984
         ],
         "quaternion_xyzw": [
-          -8.9e-05,
-          -1.5e-05,
-          0.515146,
-          0.857103
+          -8.7e-05,
+          -1.8e-05,
+          0.514624,
+          0.857416
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "bottle",
       "world_offset_xyz_m": [
-        0.579406,
-        0.080434,
-        0.600988
+        0.543856,
+        0.215458,
+        0.600989
       ]
     },
     "handle": 96,
     "hierarchy_path": "put_bottle_in_fridge/fridge_root/fridge_base/shelf0",
     "name": "shelf0",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.596641,
+        0.025471,
+        1.428756
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.690762,
+      "x_min_m": 0.456667,
+      "y_max_m": 0.471362,
+      "y_min_m": -0.38169,
+      "z_max_m": 1.428756,
+      "z_min_m": 1.428756
+    },
     "parent": "fridge_base",
     "parent_local_location": {
       "kind": "exact",
@@ -377,20 +433,20 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        8.6e-05,
-        -0.000129,
-        1.303128
+        0.000114,
+        -0.000105,
+        1.542368
       ],
       "position_xyz_m": [
-        0.650971,
-        -0.37439,
+        0.595034,
+        -0.076515,
         1.428756
       ],
       "quaternion_xyzw": [
-        -5e-06,
+        5e-06,
         -7.7e-05,
-        0.606431,
-        0.795136
+        0.696985,
+        0.717086
       ],
       "source": "exact_after_one_rlbench_reset"
     },
@@ -405,56 +461,87 @@
     }
   },
   {
+    "analytical_task_root_yaw_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.416856,
+      "x_uniform_min_m": -0.108812,
+      "y_uniform_max_m": 0.275644,
+      "y_uniform_min_m": -0.609807,
+      "z_fixed_m": 0.827767
+    },
     "handle": 100,
     "hierarchy_path": "put_bottle_in_fridge/fridge_root/fridge_base/bottle",
+    "is_graspable": true,
     "name": "bottle",
+    "observed_spawn_yaw_range_rad": [
+      0.489055,
+      0.491502
+    ],
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.147383,
+        -0.288612,
+        0.82777
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.284482,
+      "x_min_m": -0.02601,
+      "y_max_m": -0.043983,
+      "y_min_m": -0.470513,
+      "z_max_m": 0.827774,
+      "z_min_m": 0.827765
+    },
     "parent": "fridge_base",
     "parent_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        6.6e-05,
-        4.9e-05,
-        0.488416
+        5.8e-05,
+        5e-05,
+        0.489632
       ],
       "position_xyz_m": [
-        -0.512696,
-        -0.230298,
-        -0.400188
+        -0.512708,
+        -0.230314,
+        -0.400189
       ],
       "quaternion_xyzw": [
-        3.8e-05,
-        1.6e-05,
-        0.241788,
-        0.970329
+        3.4e-05,
+        1.7e-05,
+        0.242378,
+        0.970182
       ],
       "source": "exact_parent_local_offset"
     },
     "placement_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.416853,
-      "x_uniform_min_m": -0.108792,
-      "y_uniform_max_m": 0.275647,
-      "y_uniform_min_m": -0.609787,
-      "z_fixed_m": 0.827768
+      "kind": "observed_over_rlbench_resets",
+      "n_resets_observed": 30,
+      "source": "observed_graspable_world_range_includes_spawn_translation_and_rotation",
+      "x_uniform_max_m": 0.284482,
+      "x_uniform_min_m": -0.02601,
+      "y_uniform_max_m": -0.043983,
+      "y_uniform_min_m": -0.470513,
+      "z_fixed_m": 0.82777,
+      "z_observed_max_m": 0.827774,
+      "z_observed_min_m": 0.827765
     },
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        0.000183,
+        0.000175,
         6.6e-05,
-        0.488443
+        0.48966
       ],
       "position_xyz_m": [
-        -0.135721,
-        -0.230265,
+        -0.135733,
+        -0.230282,
         0.075768
       ],
       "quaternion_xyzw": [
-        9.7e-05,
-        1e-05,
-        0.241801,
-        0.970326
+        9.3e-05,
+        1.1e-05,
+        0.242391,
+        0.970179
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -462,31 +549,34 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        0.000194,
-        1.5e-05,
-        0.220772
+        0.000177,
+        6.1e-05,
+        0.461228
       ],
       "position_xyz_m": [
-        0.071565,
-        -0.454825,
-        0.827768
+        0.051178,
+        -0.291973,
+        0.827767
       ],
       "quaternion_xyzw": [
-        9.7e-05,
-        -3e-06,
-        0.110162,
-        0.993914
+        9.3e-05,
+        1e-05,
+        0.228575,
+        0.973526
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.416853,
-      "x_uniform_min_m": -0.108792,
-      "y_uniform_max_m": 0.275647,
-      "y_uniform_min_m": -0.609787,
-      "z_fixed_m": 0.827768
+      "kind": "observed_over_rlbench_resets",
+      "n_resets_observed": 30,
+      "source": "observed_graspable_world_range_includes_spawn_translation_and_rotation",
+      "x_uniform_max_m": 0.284482,
+      "x_uniform_min_m": -0.02601,
+      "y_uniform_max_m": -0.043983,
+      "y_uniform_min_m": -0.470513,
+      "z_fixed_m": 0.82777,
+      "z_observed_max_m": 0.827774,
+      "z_observed_min_m": 0.827765
     }
   },
   {
@@ -495,33 +585,47 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -0.000331,
-          0.000123,
-          -0.488442
+          -0.000324,
+          0.000119,
+          -0.489658
         ],
         "position_xyz_m": [
-          0.42802,
-          0.031798,
-          0.136812
+          0.428076,
+          0.031285,
+          0.136815
         ],
         "quaternion_xyzw": [
-          -0.000175,
-          1.9e-05,
-          -0.2418,
-          0.970326
+          -0.000172,
+          1.8e-05,
+          -0.242391,
+          0.970179
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "bottle",
       "world_offset_xyz_m": [
-        0.41067,
-        0.124729,
-        0.13683
+        0.36943,
+        0.218507,
+        0.136831
       ]
     },
     "handle": 86,
     "hierarchy_path": "put_bottle_in_fridge/fridge_root/fridge_base/bottom_joint/door_bottom",
     "name": "door_bottom",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.43695,
+        -0.009479,
+        0.964598
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.519593,
+      "x_min_m": 0.331538,
+      "y_max_m": 0.361232,
+      "y_min_m": -0.323036,
+      "z_max_m": 0.964598,
+      "z_min_m": 0.964598
+    },
     "parent": "bottom_joint",
     "parent_local_location": {
       "kind": "exact",
@@ -568,20 +672,20 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.000156,
-        6.2e-05,
-        -0.26767
+        -0.000166,
+        2.4e-05,
+        -0.02843
       ],
       "position_xyz_m": [
-        0.482235,
-        -0.330096,
+        0.420608,
+        -0.073466,
         0.964598
       ],
       "quaternion_xyzw": [
-        -8.1e-05,
-        2e-05,
-        -0.133436,
-        0.991058
+        -8.3e-05,
+        1.1e-05,
+        -0.014215,
+        0.999899
       ],
       "source": "exact_after_one_rlbench_reset"
     },
@@ -601,33 +705,47 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          1.5e-05,
-          -6.1e-05,
-          -0.488444
+          2.2e-05,
+          -6.5e-05,
+          -0.48966
         ],
         "position_xyz_m": [
-          0.425168,
-          0.033415,
-          0.599516
+          0.425224,
+          0.032902,
+          0.599518
         ],
         "quaternion_xyzw": [
-          1.5e-05,
-          -2.8e-05,
-          -0.241801,
-          0.970326
+          1.9e-05,
+          -2.9e-05,
+          -0.242391,
+          0.970179
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "bottle",
       "world_offset_xyz_m": [
-        0.407541,
-        0.125592,
+        0.366185,
+        0.218603,
         0.599534
       ]
     },
     "handle": 89,
     "hierarchy_path": "put_bottle_in_fridge/fridge_root/fridge_base/top_joint/door_top",
     "name": "door_top",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.43397,
+        -0.010093,
+        1.427301
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.5164,
+      "x_min_m": 0.329182,
+      "y_max_m": 0.359213,
+      "y_min_m": -0.321907,
+      "z_max_m": 1.427302,
+      "z_min_m": 1.427301
+    },
     "parent": "top_joint",
     "parent_local_location": {
       "kind": "exact",
@@ -674,20 +792,20 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        0.000222,
-        -4.1e-05,
-        -0.267671
+        0.000226,
+        1.2e-05,
+        -0.028432
       ],
       "position_xyz_m": [
-        0.479105,
-        -0.329233,
+        0.417362,
+        -0.07337,
         1.427302
       ],
       "quaternion_xyzw": [
         0.000113,
-        -6e-06,
-        -0.133437,
-        0.991057
+        8e-06,
+        -0.014215,
+        0.999899
       ],
       "source": "exact_after_one_rlbench_reset"
     },
@@ -707,33 +825,47 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -0.000137,
-          -0.000117,
-          1.082356
+          -0.00013,
+          -0.00012,
+          1.081139
         ],
         "position_xyz_m": [
-          0.566722,
-          -0.041075,
-          0.298806
+          0.566688,
+          -0.041758,
+          0.298808
         ],
         "quaternion_xyzw": [
-          -8.9e-05,
-          -1.5e-05,
-          0.515146,
-          0.857103
+          -8.7e-05,
+          -1.8e-05,
+          0.514624,
+          0.857416
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "bottle",
       "world_offset_xyz_m": [
-        0.561966,
-        0.083966,
+        0.526076,
+        0.214756,
         0.298814
       ]
     },
     "handle": 97,
     "hierarchy_path": "put_bottle_in_fridge/fridge_root/fridge_base/shelf0/shelf1",
     "name": "shelf1",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.580582,
+        0.020985,
+        1.126582
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.673526,
+      "x_min_m": 0.444629,
+      "y_max_m": 0.459361,
+      "y_min_m": -0.376671,
+      "z_max_m": 1.126582,
+      "z_min_m": 1.126582
+    },
     "parent": "shelf0",
     "parent_local_location": {
       "kind": "exact",
@@ -780,20 +912,20 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        8.6e-05,
-        -0.000129,
-        1.303128
+        0.000114,
+        -0.000105,
+        1.542368
       ],
       "position_xyz_m": [
-        0.633531,
-        -0.370859,
+        0.577253,
+        -0.077217,
         1.126582
       ],
       "quaternion_xyzw": [
-        -5e-06,
+        5e-06,
         -7.7e-05,
-        0.606431,
-        0.795136
+        0.696985,
+        0.717086
       ],
       "source": "exact_after_one_rlbench_reset"
     },
@@ -813,33 +945,47 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -0.000137,
-          -0.000117,
-          1.082356
+          -0.00013,
+          -0.00012,
+          1.081139
         ],
         "position_xyz_m": [
-          0.56671,
-          -0.04114,
-          -0.041207
+          0.566677,
+          -0.04182,
+          -0.041205
         ],
         "quaternion_xyzw": [
-          -8.9e-05,
-          -1.5e-05,
-          0.515146,
-          0.857103
+          -8.7e-05,
+          -1.8e-05,
+          0.514624,
+          0.857416
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "bottle",
       "world_offset_xyz_m": [
-        0.561963,
-        0.083966,
-        -0.0412
+        0.526073,
+        0.214756,
+        -0.041199
       ]
     },
     "handle": 98,
     "hierarchy_path": "put_bottle_in_fridge/fridge_root/fridge_base/shelf0/shelf2",
     "name": "shelf2",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.58058,
+        0.020984,
+        0.786568
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.673523,
+      "x_min_m": 0.444628,
+      "y_max_m": 0.459359,
+      "y_min_m": -0.37667,
+      "z_max_m": 0.786569,
+      "z_min_m": 0.786568
+    },
     "parent": "shelf0",
     "parent_local_location": {
       "kind": "exact",
@@ -886,27 +1032,27 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        8.6e-05,
-        -0.000129,
-        1.303128
+        0.000114,
+        -0.000105,
+        1.542368
       ],
       "position_xyz_m": [
-        0.633528,
-        -0.370859,
+        0.57725,
+        -0.077217,
         0.786568
       ],
       "quaternion_xyzw": [
-        -5e-06,
+        5e-06,
         -7.7e-05,
-        0.606431,
-        0.795136
+        0.696985,
+        0.717086
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
       "kind": "range",
       "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.734022,
+      "x_uniform_max_m": 0.734023,
       "x_uniform_min_m": 0.42108,
       "y_uniform_max_m": 0.61358,
       "y_uniform_min_m": -0.61451,
@@ -914,6 +1060,15 @@
     }
   },
   {
+    "analytical_task_root_yaw_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.416851,
+      "x_uniform_min_m": -0.10881,
+      "y_uniform_max_m": 0.275649,
+      "y_uniform_min_m": -0.609804,
+      "z_fixed_m": 0.825219
+    },
     "fixed_relation_to_nearest_graspable": {
       "has_separate_position_range": false,
       "reference_local_location": {
@@ -938,14 +1093,30 @@
       },
       "reference_object": "bottle",
       "world_offset_xyz_m": [
-        -1e-06,
+        -2e-06,
         5e-06,
         -0.002549
       ]
     },
     "handle": 103,
     "hierarchy_path": "put_bottle_in_fridge/fridge_root/fridge_base/bottle/bottle_visual",
+    "mounted_note": "Rigidly mounted on graspable 'bottle'. RLBench re-places 'bottle' each episode at a random position within its spawn region and a random yaw (RLBench default +/-pi). This object sits ~0.0 m from 'bottle' rotation axis, so its absolute world position sweeps a wide ring; its pose relative to 'bottle' is fixed.",
+    "mounted_on_graspable": "bottle",
     "name": "bottle_visual",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.14738,
+        -0.288608,
+        0.825221
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.284477,
+      "x_min_m": -0.02601,
+      "y_max_m": -0.04398,
+      "y_min_m": -0.470508,
+      "z_max_m": 0.825225,
+      "z_min_m": 0.825217
+    },
     "parent": "bottle",
     "parent_local_location": {
       "kind": "exact",
@@ -968,23 +1139,24 @@
       "source": "exact_parent_local_offset"
     },
     "placement_range": null,
+    "rotation_radius_from_graspable_m": 6e-06,
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        0.000282,
+        0.000274,
         0.000119,
-        -2.653151
+        -2.651935
       ],
       "position_xyz_m": [
-        -0.135724,
-        -0.23026,
+        -0.135736,
+        -0.230277,
         0.073219
       ],
       "quaternion_xyzw": [
-        2.4e-05,
-        -0.000151,
-        0.970326,
-        -0.2418
+        2.5e-05,
+        -0.000147,
+        0.970179,
+        -0.24239
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -992,34 +1164,46 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        0.000303,
-        4e-05,
-        -2.920823
+        0.000277,
+        0.000112,
+        -2.680366
       ],
       "position_xyz_m": [
-        0.071564,
-        -0.454819,
+        0.051175,
+        -0.291968,
         0.825219
       ],
       "quaternion_xyzw": [
-        3e-06,
-        -0.000153,
-        0.993914,
-        -0.110161
+        2.3e-05,
+        -0.000148,
+        0.973526,
+        -0.228575
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.416847,
-      "x_uniform_min_m": -0.10879,
-      "y_uniform_max_m": 0.275653,
-      "y_uniform_min_m": -0.609784,
-      "z_fixed_m": 0.825219
+      "kind": "mounted_on_graspable_envelope",
+      "mounted_on_graspable": "bottle",
+      "n_resets_observed": 30,
+      "rotation_radius_m": 6e-06,
+      "source": "observed_bottle_range_expanded_by_mount_radius_for_full_yaw",
+      "x_uniform_max_m": 0.284488,
+      "x_uniform_min_m": -0.026016,
+      "y_uniform_max_m": -0.043977,
+      "y_uniform_min_m": -0.470519,
+      "z_fixed_m": 0.825221
     }
   },
   {
+    "analytical_task_root_yaw_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.416984,
+      "x_uniform_min_m": -0.108873,
+      "y_uniform_max_m": 0.275516,
+      "y_uniform_min_m": -0.609899,
+      "z_fixed_m": 0.901075
+    },
     "fixed_relation_to_nearest_graspable": {
       "has_separate_position_range": false,
       "reference_local_location": {
@@ -1044,14 +1228,30 @@
       },
       "reference_object": "bottle",
       "world_offset_xyz_m": [
-        9e-06,
-        -0.000143,
+        4.3e-05,
+        -0.000136,
         0.073308
       ]
     },
     "handle": 104,
     "hierarchy_path": "put_bottle_in_fridge/fridge_root/fridge_base/bottle/cap_visual",
+    "mounted_note": "Rigidly mounted on graspable 'bottle'. RLBench re-places 'bottle' each episode at a random position within its spawn region and a random yaw (RLBench default +/-pi). This object sits ~0.0 m from 'bottle' rotation axis, so its absolute world position sweeps a wide ring; its pose relative to 'bottle' is fixed.",
+    "mounted_on_graspable": "bottle",
     "name": "cap_visual",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.147452,
+        -0.288726,
+        0.901078
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.284603,
+      "x_min_m": -0.026012,
+      "y_max_m": -0.044057,
+      "y_min_m": -0.470653,
+      "z_max_m": 0.901082,
+      "z_min_m": 0.901073
+    },
     "parent": "bottle",
     "parent_local_location": {
       "kind": "exact",
@@ -1074,23 +1274,24 @@
       "source": "exact_parent_local_offset"
     },
     "placement_range": null,
+    "rotation_radius_from_graspable_m": 0.000143,
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -1.570762,
-        0.754403,
-        -1.570834
+        -1.57077,
+        0.753187,
+        -1.570833
       ],
       "position_xyz_m": [
-        -0.135675,
-        -0.2304,
-        0.149076
+        -0.135686,
+        -0.230416,
+        0.149075
       ],
       "quaternion_xyzw": [
-        0.649,
-        0.28069,
-        0.64902,
-        -0.280689
+        0.64883,
+        0.281087,
+        0.648848,
+        -0.281081
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -1098,34 +1299,46 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -1.570748,
-        1.022074,
-        -1.570851
+        -1.570769,
+        0.781618,
+        -1.570835
       ],
       "position_xyz_m": [
-        0.071574,
-        -0.454968,
-        0.901076
+        0.051221,
+        -0.292109,
+        0.901075
       ],
       "quaternion_xyzw": [
-        0.68065,
-        0.19158,
-        0.68067,
-        -0.191576
+        0.65276,
+        0.271836,
+        0.652778,
+        -0.271829
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.416981,
-      "x_uniform_min_m": -0.108854,
-      "y_uniform_max_m": 0.275519,
-      "y_uniform_min_m": -0.60988,
-      "z_fixed_m": 0.901076
+      "kind": "mounted_on_graspable_envelope",
+      "mounted_on_graspable": "bottle",
+      "n_resets_observed": 30,
+      "rotation_radius_m": 0.000143,
+      "source": "observed_bottle_range_expanded_by_mount_radius_for_full_yaw",
+      "x_uniform_max_m": 0.284625,
+      "x_uniform_min_m": -0.026153,
+      "y_uniform_max_m": -0.04384,
+      "y_uniform_min_m": -0.470656,
+      "z_fixed_m": 0.901078
     }
   },
   {
+    "analytical_task_root_yaw_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.407125,
+      "x_uniform_min_m": -0.118262,
+      "y_uniform_max_m": 0.285376,
+      "y_uniform_min_m": -0.616777,
+      "z_fixed_m": 0.79361
+    },
     "fixed_relation_to_nearest_graspable": {
       "has_separate_position_range": false,
       "reference_local_location": {
@@ -1150,14 +1363,30 @@
       },
       "reference_object": "bottle",
       "world_offset_xyz_m": [
-        -0.013024,
-        0.003795,
+        -0.013553,
+        0.000584,
         -0.034157
       ]
     },
     "handle": 105,
     "hierarchy_path": "put_bottle_in_fridge/fridge_root/fridge_base/bottle/label",
+    "mounted_note": "Rigidly mounted on graspable 'bottle'. RLBench re-places 'bottle' each episode at a random position within its spawn region and a random yaw (RLBench default +/-pi). This object sits ~0.014 m from 'bottle' rotation axis, so its absolute world position sweeps a wide ring; its pose relative to 'bottle' is fixed.",
+    "mounted_on_graspable": "bottle",
     "name": "label",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.134901,
+        -0.291015,
+        0.793613
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.273851,
+      "x_min_m": -0.03867,
+      "y_max_m": -0.052278,
+      "y_min_m": -0.468366,
+      "z_max_m": 0.793616,
+      "z_min_m": 0.793608
+    },
     "parent": "bottle",
     "parent_local_location": {
       "kind": "exact",
@@ -1180,23 +1409,24 @@
       "source": "exact_parent_local_offset"
     },
     "placement_range": null,
+    "rotation_radius_from_graspable_m": 0.013565,
     "task_root_local_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        0.000244,
-        0.012348,
-        3.128598
+        0.000221,
+        0.012349,
+        3.129815
       ],
       "position_xyz_m": [
-        -0.149285,
-        -0.23005,
-        0.041611
+        -0.149297,
+        -0.230083,
+        0.04161
       ],
       "quaternion_xyzw": [
         0.006175,
-        -8.2e-05,
-        0.99996,
-        0.006496
+        -7.4e-05,
+        0.999964,
+        0.005888
       ],
       "source": "exact_task_root_local_offset"
     },
@@ -1204,31 +1434,34 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        0.003502,
-        0.011844,
-        2.860908
+        0.000572,
+        0.012337,
+        3.101381
       ],
       "position_xyz_m": [
-        0.058541,
-        -0.45103,
-        0.793611
+        0.037625,
+        -0.291389,
+        0.79361
       ],
       "quaternion_xyzw": [
-        0.006109,
-        -0.000905,
-        0.990151,
-        0.139869
+        0.006173,
+        -0.000162,
+        0.999779,
+        0.020102
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
-      "kind": "range",
-      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.40711,
-      "x_uniform_min_m": -0.11823,
-      "y_uniform_max_m": 0.285391,
-      "y_uniform_min_m": -0.616743,
-      "z_fixed_m": 0.793611
+      "kind": "mounted_on_graspable_envelope",
+      "mounted_on_graspable": "bottle",
+      "n_resets_observed": 30,
+      "rotation_radius_m": 0.013565,
+      "source": "observed_bottle_range_expanded_by_mount_radius_for_full_yaw",
+      "x_uniform_max_m": 0.298047,
+      "x_uniform_min_m": -0.039575,
+      "y_uniform_max_m": -0.030418,
+      "y_uniform_min_m": -0.484078,
+      "z_fixed_m": 0.793613
     }
   },
   {
@@ -1237,33 +1470,47 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -0.005284,
-          -0.009435,
-          -0.4677
+          -0.005289,
+          -0.009433,
+          -0.468916
         ],
         "position_xyz_m": [
-          0.429991,
-          0.030752,
-          0.141912
+          0.430045,
+          0.030237,
+          0.141915
         ],
         "quaternion_xyzw": [
-          -0.001477,
-          -0.005201,
-          -0.231709,
-          0.97277
+          -0.001476,
+          -0.005202,
+          -0.2323,
+          0.972629
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "bottle",
       "world_offset_xyz_m": [
-        0.412822,
-        0.124138,
-        0.14193
+        0.37166,
+        0.218443,
+        0.141931
       ]
     },
     "handle": 87,
     "hierarchy_path": "put_bottle_in_fridge/fridge_root/fridge_base/bottom_joint/door_bottom/door_bottom_visual",
     "name": "door_bottom_visual",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.438997,
+        -0.009055,
+        0.969698
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.521787,
+      "x_min_m": 0.333155,
+      "y_max_m": 0.362621,
+      "y_min_m": -0.32381,
+      "z_max_m": 0.969698,
+      "z_min_m": 0.969698
+    },
     "parent": "door_bottom",
     "parent_local_location": {
       "kind": "exact",
@@ -1310,20 +1557,20 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.002895,
-        -0.010348,
-        -0.246919
+        -0.000361,
+        -0.01074,
+        -0.007666
       ],
       "position_xyz_m": [
-        0.484387,
-        -0.330686,
+        0.422838,
+        -0.07353,
         0.969698
       ],
       "quaternion_xyzw": [
-        -0.0008,
-        -0.005313,
-        -0.123137,
-        0.992375
+        -0.00016,
+        -0.00537,
+        -0.003832,
+        0.999978
       ],
       "source": "exact_after_one_rlbench_reset"
     },
@@ -1331,7 +1578,7 @@
       "kind": "range",
       "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
       "x_uniform_max_m": 0.579571,
-      "x_uniform_min_m": 0.311365,
+      "x_uniform_min_m": 0.311366,
       "y_uniform_max_m": 0.503866,
       "y_uniform_min_m": -0.505791,
       "z_fixed_m": 0.969698
@@ -1343,33 +1590,47 @@
       "reference_local_location": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -0.005284,
-          -0.009435,
-          -0.4677
+          -0.005289,
+          -0.009433,
+          -0.468916
         ],
         "position_xyz_m": [
-          0.430853,
-          0.030402,
-          0.598272
+          0.430905,
+          0.029883,
+          0.598275
         ],
         "quaternion_xyzw": [
-          -0.001477,
-          -0.005201,
-          -0.231709,
-          0.97277
+          -0.001476,
+          -0.005202,
+          -0.2323,
+          0.972629
         ],
         "source": "exact_reference_local_relation"
       },
       "reference_object": "bottle",
       "world_offset_xyz_m": [
-        0.413747,
-        0.123897,
+        0.372616,
+        0.218428,
         0.59829
       ]
     },
     "handle": 90,
     "hierarchy_path": "put_bottle_in_fridge/fridge_root/fridge_base/top_joint/door_top/door_top_visual",
     "name": "door_top_visual",
+    "observed_world_position_range_over_resets": {
+      "mean_xyz_m": [
+        0.439872,
+        -0.008862,
+        1.426058
+      ],
+      "n_resets_observed": 30,
+      "x_max_m": 0.522724,
+      "x_min_m": 0.33384,
+      "y_max_m": 0.363226,
+      "y_min_m": -0.32413,
+      "z_max_m": 1.426058,
+      "z_min_m": 1.426057
+    },
     "parent": "door_top",
     "parent_local_location": {
       "kind": "exact",
@@ -1401,7 +1662,7 @@
       ],
       "position_xyz_m": [
         0.230523,
-        -0.001349,
+        -0.00135,
         0.674058
       ],
       "quaternion_xyzw": [
@@ -1416,27 +1677,27 @@
     "world_location": {
       "kind": "exact",
       "orientation_rpy_rad": [
-        -0.002895,
-        -0.010348,
-        -0.246919
+        -0.000361,
+        -0.01074,
+        -0.007666
       ],
       "position_xyz_m": [
-        0.485312,
-        -0.330927,
+        0.423793,
+        -0.073545,
         1.426058
       ],
       "quaternion_xyzw": [
-        -0.000799,
-        -0.005313,
-        -0.123137,
-        0.992375
+        -0.00016,
+        -0.00537,
+        -0.003832,
+        0.999978
       ],
       "source": "exact_after_one_rlbench_reset"
     },
     "world_position_range": {
       "kind": "range",
       "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
-      "x_uniform_max_m": 0.580526,
+      "x_uniform_max_m": 0.580527,
       "x_uniform_min_m": 0.31205,
       "y_uniform_max_m": 0.50455,
       "y_uniform_min_m": -0.506458,

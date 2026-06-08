@@ -1,0 +1,405 @@
+[
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.0,
+          -1.570308,
+          -1.862126
+        ],
+        "position_xyz_m": [
+          0.110898,
+          0.037963,
+          -0.006312
+        ],
+        "quaternion_xyzw": [
+          0.567347,
+          -0.422281,
+          -0.567213,
+          0.421978
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "wand",
+      "world_offset_xyz_m": [
+        -0.099545,
+        -0.059843,
+        -0.017
+      ]
+    },
+    "handle": 81,
+    "hierarchy_path": "beat_the_buzz/Cuboid",
+    "name": "Cuboid",
+    "parent": "beat_the_buzz",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570797,
+        0.017469,
+        3.141589
+      ],
+      "position_xyz_m": [
+        0.0,
+        0.0,
+        0.148501
+      ],
+      "quaternion_xyzw": [
+        0.006175,
+        0.70708,
+        0.70708,
+        0.006177
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.570797,
+        0.017469,
+        3.141589
+      ],
+      "position_xyz_m": [
+        0.0,
+        0.0,
+        0.148501
+      ],
+      "quaternion_xyzw": [
+        0.006175,
+        0.70708,
+        0.70708,
+        0.006177
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.5708,
+        1.331664,
+        3.141592
+      ],
+      "position_xyz_m": [
+        0.173526,
+        0.059108,
+        0.9005
+      ],
+      "quaternion_xyzw": [
+        0.436788,
+        0.556072,
+        0.55607,
+        0.43679
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.479758,
+      "x_uniform_min_m": 0.048006,
+      "y_uniform_max_m": 0.279152,
+      "y_uniform_min_m": -0.279152,
+      "z_fixed_m": 0.9005
+    }
+  },
+  {
+    "handle": 82,
+    "hierarchy_path": "beat_the_buzz/Cuboid/wand",
+    "name": "wand",
+    "parent": "Cuboid",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -1.571221,
+        -0.29133,
+        1.570906
+      ],
+      "position_xyz_m": [
+        0.034562,
+        0.017001,
+        0.110887
+      ],
+      "quaternion_xyzw": [
+        -0.567347,
+        0.422281,
+        0.567213,
+        0.421978
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.595906,
+      "x_uniform_min_m": -0.068142,
+      "y_uniform_max_m": 0.395301,
+      "y_uniform_min_m": -0.3953,
+      "z_fixed_m": 0.917501
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.005662,
+        0.291273,
+        -1.588924
+      ],
+      "position_xyz_m": [
+        -0.032619,
+        0.111474,
+        0.165501
+      ],
+      "quaternion_xyzw": [
+        0.10158,
+        -0.103681,
+        0.705643,
+        -0.693542
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.283571,
+        0.067689,
+        -2.911953
+      ],
+      "position_xyz_m": [
+        0.273072,
+        0.118951,
+        0.917501
+      ],
+      "quaternion_xyzw": [
+        0.017097,
+        -0.144138,
+        0.982336,
+        -0.118103
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.595906,
+      "x_uniform_min_m": -0.068142,
+      "y_uniform_max_m": 0.395301,
+      "y_uniform_min_m": -0.3953,
+      "z_fixed_m": 0.917501
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.016839,
+          -0.004914,
+          0.00467
+        ],
+        "position_xyz_m": [
+          0.00038,
+          0.000172,
+          0.105634
+        ],
+        "quaternion_xyzw": [
+          0.008414,
+          -0.002477,
+          0.002314,
+          0.999959
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "wand",
+      "world_offset_xyz_m": [
+        0.006815,
+        -0.029737,
+        0.101133
+      ]
+    },
+    "handle": 83,
+    "hierarchy_path": "beat_the_buzz/Cuboid/wand/wand_visual",
+    "name": "wand_visual",
+    "parent": "wand",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.016839,
+        -0.004914,
+        0.00467
+      ],
+      "position_xyz_m": [
+        0.00038,
+        0.000172,
+        0.105634
+      ],
+      "quaternion_xyzw": [
+        0.008414,
+        -0.002477,
+        0.002314,
+        0.999959
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.000241,
+        0.274522,
+        -1.582782
+      ],
+      "position_xyz_m": [
+        -0.002126,
+        0.110519,
+        0.266634
+      ],
+      "quaternion_xyzw": [
+        0.097248,
+        -0.096257,
+        0.70463,
+        -0.696258
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.266015,
+        0.06863,
+        -2.906129
+      ],
+      "position_xyz_m": [
+        0.279887,
+        0.089214,
+        1.018634
+      ],
+      "quaternion_xyzw": [
+        0.018202,
+        -0.135614,
+        0.983192,
+        -0.120872
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.590296,
+      "x_uniform_min_m": -0.062533,
+      "y_uniform_max_m": 0.389691,
+      "y_uniform_min_m": -0.389691,
+      "z_fixed_m": 1.018634
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.00015,
+          -0.000211,
+          -0.714144
+        ],
+        "position_xyz_m": [
+          0.000352,
+          0.000182,
+          -0.041022
+        ],
+        "quaternion_xyzw": [
+          3.4e-05,
+          0.000125,
+          0.349532,
+          -0.936924
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "wand",
+      "world_offset_xyz_m": [
+        -0.003075,
+        0.011198,
+        -0.039346
+      ]
+    },
+    "handle": 86,
+    "hierarchy_path": "beat_the_buzz/Cuboid/wand/wand_visual_sub",
+    "name": "wand_visual_sub",
+    "parent": "wand",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.00015,
+        -0.000211,
+        -0.714144
+      ],
+      "position_xyz_m": [
+        0.000352,
+        0.000182,
+        -0.041022
+      ],
+      "quaternion_xyzw": [
+        3.4e-05,
+        0.000125,
+        0.349532,
+        -0.936924
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.005444,
+        0.291427,
+        -2.303005
+      ],
+      "position_xyz_m": [
+        -0.044231,
+        0.111341,
+        0.126155
+      ],
+      "quaternion_xyzw": [
+        -0.131524,
+        0.061572,
+        -0.903533,
+        0.40316
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.28367,
+        0.067929,
+        2.657081
+      ],
+      "position_xyz_m": [
+        0.269996,
+        0.130149,
+        0.878155
+      ],
+      "quaternion_xyzw": [
+        -0.066527,
+        0.129089,
+        -0.961648,
+        -0.232687
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.599562,
+      "x_uniform_min_m": -0.071799,
+      "y_uniform_max_m": 0.398957,
+      "y_uniform_min_m": -0.398957,
+      "z_fixed_m": 0.878155
+    }
+  }
+]

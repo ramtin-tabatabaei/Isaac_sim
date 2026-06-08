@@ -1,0 +1,829 @@
+[
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.719258,
+          0.384766,
+          -0.006396
+        ],
+        "position_xyz_m": [
+          -0.08179,
+          0.036635,
+          0.016221
+        ],
+        "quaternion_xyzw": [
+          -0.346005,
+          0.177861,
+          -0.070226,
+          0.918539
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "clothes_hanger",
+      "world_offset_xyz_m": [
+        0.089071,
+        0.018773,
+        0.002983
+      ]
+    },
+    "handle": 81,
+    "hierarchy_path": "place_hanger_on_rack/hanger_holder",
+    "name": "hanger_holder",
+    "parent": "place_hanger_on_rack",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -2.753814
+      ],
+      "position_xyz_m": [
+        -0.034145,
+        -0.102708,
+        0.048
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.981262,
+        -0.192677
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -2.753814
+      ],
+      "position_xyz_m": [
+        -0.034145,
+        -0.102708,
+        0.048
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.981262,
+        -0.192677
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -2.753814
+      ],
+      "position_xyz_m": [
+        0.215855,
+        -0.102708,
+        0.8
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.981262,
+        -0.192677
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.132389,
+      "x_uniform_min_m": 0.095085,
+      "y_uniform_max_m": -0.081835,
+      "y_uniform_min_m": 0.111791,
+      "z_fixed_m": 0.8
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.719207,
+          0.384733,
+          2.747399
+        ],
+        "position_xyz_m": [
+          -0.439847,
+          0.139653,
+          0.04698
+        ],
+        "quaternion_xyzw": [
+          -0.107849,
+          -0.373768,
+          -0.887808,
+          -0.245892
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "clothes_hanger",
+      "world_offset_xyz_m": [
+        0.44902,
+        0.106503,
+        -0.047054
+      ]
+    },
+    "handle": 89,
+    "hierarchy_path": "place_hanger_on_rack/clothes_rack",
+    "name": "clothes_rack",
+    "parent": "place_hanger_on_rack",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -5.6e-05,
+        1.2e-05,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.325804,
+        -0.014979,
+        -0.002037
+      ],
+      "quaternion_xyzw": [
+        -2.8e-05,
+        6e-06,
+        -0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -5.6e-05,
+        1.2e-05,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.325804,
+        -0.014979,
+        -0.002037
+      ],
+      "quaternion_xyzw": [
+        -2.8e-05,
+        6e-06,
+        -0.0,
+        1.0
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -5.6e-05,
+        1.2e-05,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.575804,
+        -0.014979,
+        0.749963
+      ],
+      "quaternion_xyzw": [
+        -2.8e-05,
+        6e-06,
+        -0.0,
+        1.0
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.350301,
+      "x_uniform_min_m": -0.122829,
+      "y_uniform_max_m": 0.136077,
+      "y_uniform_min_m": -0.106122,
+      "z_fixed_m": 0.749963
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.719258,
+          0.384766,
+          -0.006396
+        ],
+        "position_xyz_m": [
+          0.022187,
+          -0.023006,
+          -0.050619
+        ],
+        "quaternion_xyzw": [
+          -0.346005,
+          0.177861,
+          -0.070226,
+          0.918539
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "clothes_hanger",
+      "world_offset_xyz_m": [
+        -0.031277,
+        -0.030384,
+        -0.041017
+      ]
+    },
+    "handle": 82,
+    "hierarchy_path": "place_hanger_on_rack/hanger_holder/hanger_holder0",
+    "name": "hanger_holder0",
+    "parent": "hanger_holder",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.13,
+        0.0,
+        -0.044
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -2.753814
+      ],
+      "position_xyz_m": [
+        -0.154493,
+        -0.151866,
+        0.004
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.981262,
+        -0.192677
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -2.753814
+      ],
+      "position_xyz_m": [
+        0.095507,
+        -0.151866,
+        0.756
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.981262,
+        -0.192677
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.240789,
+      "x_uniform_min_m": -0.013315,
+      "y_uniform_max_m": 0.026566,
+      "y_uniform_min_m": 0.003392,
+      "z_fixed_m": 0.756
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -0.719258,
+          0.384766,
+          -0.006396
+        ],
+        "position_xyz_m": [
+          0.001513,
+          -0.003841,
+          -0.029026
+        ],
+        "quaternion_xyzw": [
+          -0.346005,
+          0.177861,
+          -0.070226,
+          0.918539
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "clothes_hanger",
+      "world_offset_xyz_m": [
+        -0.003504,
+        -0.01904,
+        -0.022017
+      ]
+    },
+    "handle": 83,
+    "hierarchy_path": "place_hanger_on_rack/hanger_holder/hanger_holder_visual",
+    "name": "hanger_holder_visual",
+    "parent": "hanger_holder",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -0.0
+      ],
+      "position_xyz_m": [
+        0.1,
+        0.0,
+        -0.025
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -2.753814
+      ],
+      "position_xyz_m": [
+        -0.12672,
+        -0.140522,
+        0.023
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.981262,
+        -0.192677
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.0,
+        0.0,
+        -2.753814
+      ],
+      "position_xyz_m": [
+        0.12328,
+        -0.140522,
+        0.775
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.981262,
+        -0.192677
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.213373,
+      "x_uniform_min_m": 0.0141,
+      "y_uniform_max_m": -0.000849,
+      "y_uniform_min_m": 0.030808,
+      "z_fixed_m": 0.775
+    }
+  },
+  {
+    "handle": 84,
+    "hierarchy_path": "place_hanger_on_rack/hanger_holder/clothes_hanger",
+    "name": "clothes_hanger",
+    "parent": "hanger_holder",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.758398,
+        -0.281866,
+        0.265559
+      ],
+      "position_xyz_m": [
+        0.089556,
+        -0.016301,
+        -0.002983
+      ],
+      "quaternion_xyzw": [
+        0.346005,
+        -0.177861,
+        0.070226,
+        0.918539
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.197185,
+      "x_uniform_min_m": 0.030289,
+      "y_uniform_max_m": -0.017039,
+      "y_uniform_min_m": 0.046995,
+      "z_fixed_m": 0.797017
+    },
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.799155,
+        0.007695,
+        -2.597955
+      ],
+      "position_xyz_m": [
+        -0.123216,
+        -0.121482,
+        0.045017
+      ],
+      "quaternion_xyzw": [
+        0.107862,
+        0.373791,
+        0.887797,
+        -0.245891
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.799155,
+        0.007695,
+        -2.597955
+      ],
+      "position_xyz_m": [
+        0.126784,
+        -0.121482,
+        0.797017
+      ],
+      "quaternion_xyzw": [
+        0.107862,
+        0.373791,
+        0.887797,
+        -0.245891
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.197185,
+      "x_uniform_min_m": 0.030289,
+      "y_uniform_max_m": -0.017039,
+      "y_uniform_min_m": 0.046995,
+      "z_fixed_m": 0.797017
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.556824,
+          -1.026769,
+          -2.312365
+        ],
+        "position_xyz_m": [
+          -0.885925,
+          -0.598921,
+          0.082114
+        ],
+        "quaternion_xyzw": [
+          -0.07368,
+          0.700682,
+          0.428772,
+          -0.565483
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "clothes_hanger",
+      "world_offset_xyz_m": [
+        0.449028,
+        0.733349,
+        -0.641003
+      ]
+    },
+    "handle": 90,
+    "hierarchy_path": "place_hanger_on_rack/clothes_rack/clothes_rack_sub2",
+    "name": "clothes_rack_sub2",
+    "parent": "clothes_rack",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570308,
+        1.588967
+      ],
+      "position_xyz_m": [
+        1.6e-05,
+        0.626879,
+        -0.593914
+      ],
+      "quaternion_xyzw": [
+        -0.50468,
+        -0.495308,
+        -0.504364,
+        -0.495566
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570796,
+        1.588911
+      ],
+      "position_xyz_m": [
+        0.325813,
+        0.611867,
+        -0.595986
+      ],
+      "quaternion_xyzw": [
+        -0.504669,
+        -0.495325,
+        -0.504347,
+        -0.495577
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570106,
+        1.588911
+      ],
+      "position_xyz_m": [
+        0.575813,
+        0.611867,
+        0.156014
+      ],
+      "quaternion_xyzw": [
+        -0.504669,
+        -0.495325,
+        -0.504347,
+        -0.495577
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.717357,
+      "x_uniform_min_m": -0.489884,
+      "y_uniform_max_m": 0.503131,
+      "y_uniform_min_m": -0.473179,
+      "z_fixed_m": 0.156014
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          -1.556824,
+          -1.02677,
+          -2.312365
+        ],
+        "position_xyz_m": [
+          -0.439471,
+          0.153043,
+          -0.816639
+        ],
+        "quaternion_xyzw": [
+          -0.07368,
+          0.700682,
+          0.428772,
+          -0.565483
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "clothes_hanger",
+      "world_offset_xyz_m": [
+        0.448978,
+        -0.520656,
+        -0.640931
+      ]
+    },
+    "handle": 91,
+    "hierarchy_path": "place_hanger_on_rack/clothes_rack/clothes_rack_sub3",
+    "name": "clothes_rack_sub3",
+    "parent": "clothes_rack",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570451,
+        1.588967
+      ],
+      "position_xyz_m": [
+        -3.4e-05,
+        -0.627126,
+        -0.593912
+      ],
+      "quaternion_xyzw": [
+        -0.50468,
+        -0.495308,
+        -0.504364,
+        -0.495566
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570796,
+        1.588911
+      ],
+      "position_xyz_m": [
+        0.325763,
+        -0.642138,
+        -0.595914
+      ],
+      "quaternion_xyzw": [
+        -0.504669,
+        -0.495325,
+        -0.504347,
+        -0.495577
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.0,
+        1.570796,
+        1.588911
+      ],
+      "position_xyz_m": [
+        0.575763,
+        -0.642138,
+        0.156086
+      ],
+      "quaternion_xyzw": [
+        -0.504669,
+        -0.495325,
+        -0.504347,
+        -0.495577
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.744192,
+      "x_uniform_min_m": -0.516723,
+      "y_uniform_max_m": 0.529969,
+      "y_uniform_min_m": -0.500015,
+      "z_fixed_m": 0.156086
+    }
+  },
+  {
+    "fixed_relation_to_nearest_graspable": {
+      "has_separate_position_range": false,
+      "reference_local_location": {
+        "kind": "exact",
+        "orientation_rpy_rad": [
+          0.111705,
+          -0.060209,
+          0.057787
+        ],
+        "position_xyz_m": [
+          0.019669,
+          0.031035,
+          -0.00366
+        ],
+        "quaternion_xyzw": [
+          0.054907,
+          -0.031653,
+          0.027152,
+          0.99762
+        ],
+        "source": "exact_reference_local_relation"
+      },
+      "reference_object": "clothes_hanger",
+      "world_offset_xyz_m": [
+        -0.000809,
+        -0.028235,
+        0.023782
+      ]
+    },
+    "handle": 85,
+    "hierarchy_path": "place_hanger_on_rack/hanger_holder/clothes_hanger/clothes_hanger_visual",
+    "name": "clothes_hanger_visual",
+    "parent": "clothes_hanger",
+    "parent_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        0.111705,
+        -0.060209,
+        0.057787
+      ],
+      "position_xyz_m": [
+        0.019669,
+        0.031035,
+        -0.00366
+      ],
+      "quaternion_xyzw": [
+        0.054907,
+        -0.031653,
+        0.027152,
+        0.99762
+      ],
+      "source": "exact_parent_local_offset"
+    },
+    "placement_range": null,
+    "task_root_local_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.925848,
+        0.001576,
+        -2.542947
+      ],
+      "position_xyz_m": [
+        -0.124024,
+        -0.149716,
+        0.0688
+      ],
+      "quaternion_xyzw": [
+        0.132354,
+        0.426502,
+        0.85507,
+        -0.263502
+      ],
+      "source": "exact_task_root_local_offset"
+    },
+    "type": "SHAPE",
+    "world_location": {
+      "kind": "exact",
+      "orientation_rpy_rad": [
+        -0.925848,
+        0.001576,
+        -2.542947
+      ],
+      "position_xyz_m": [
+        0.125976,
+        -0.149716,
+        0.820799
+      ],
+      "quaternion_xyzw": [
+        0.132354,
+        0.426502,
+        0.85507,
+        -0.263502
+      ],
+      "source": "exact_after_one_rlbench_reset"
+    },
+    "world_position_range": {
+      "kind": "range",
+      "source": "rlbench_uniform_task_root_sampling_with_yaw_bounds",
+      "x_uniform_max_m": 0.218566,
+      "x_uniform_min_m": 0.008905,
+      "y_uniform_max_m": 0.004345,
+      "y_uniform_min_m": 0.025613,
+      "z_fixed_m": 0.820799
+    }
+  }
+]

@@ -5,42 +5,61 @@
   },
   "tv_remote": {
     "type": "rigid",
-    "density": 80.0,
+    "density": 1000.0,
+    "static_friction": 1.5,
+    "dynamic_friction": 1.2,
+    "friction_combine_mode": "max",
     "uv": "auto"
   },
   "spawn_boundary": {
     "type": "kinematic",
     "uv": "auto"
   },
+  "_comment_buttons": "topPlateN are the pressable buttons: DYNAMIC rigid bodies with a collider, prismatic-jointed to tv_remote (see physics/change_channel.json joints) so they RIDE the remote and can be pressed in. Gravity is disabled so the spring-returned joint rests at 0 (no sag toward the 1.5mm success threshold). The wrapN caps + *_visual symbols ride the plate as cosmetic children (wrap via mount_on_parent, *_visual as render skins).",
   "target_button_topPlate0": {
-    "type": "kinematic",
+    "type": "rigid",
+    "collision": true,
+    "collider": "convexHull",
+    "mass": 0.0239,
+    "disable_gravity": true,
+    "static_friction": 0.7,
+    "dynamic_friction": 0.6,
     "uv": "auto"
   },
   "target_button_topPlate1": {
-    "type": "kinematic",
+    "type": "rigid",
+    "collision": true,
+    "collider": "convexHull",
+    "mass": 0.0239,
+    "disable_gravity": true,
+    "static_friction": 0.7,
+    "dynamic_friction": 0.6,
     "uv": "auto"
   },
   "target_button_topPlate2": {
-    "type": "kinematic",
+    "type": "rigid",
+    "collision": true,
+    "collider": "convexHull",
+    "mass": 0.0239,
+    "disable_gravity": true,
+    "static_friction": 0.7,
+    "dynamic_friction": 0.6,
     "uv": "auto"
   },
   "target_button_wrap0": {
-    "type": "kinematic",
-    "uv": "auto"
+    "type": "visual"
   },
   "power_visual": {
     "type": "visual"
   },
   "target_button_wrap1": {
-    "type": "kinematic",
-    "uv": "auto"
+    "type": "visual"
   },
   "plus_visual": {
     "type": "visual"
   },
   "target_button_wrap2": {
-    "type": "kinematic",
-    "uv": "auto"
+    "type": "visual"
   },
   "minus_visual": {
     "type": "visual"

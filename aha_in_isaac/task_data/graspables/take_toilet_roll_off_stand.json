@@ -2,61 +2,66 @@
   "graspable_objects": [
     {
       "fixed_offset_from_task_boundary_root_xyz_m": [
-        0.024533,
-        0.000399,
-        0.199387
+        0.024613,
+        0.0004,
+        0.199388
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
         -1.572534,
-        -5.8e-05,
-        -1.630422
+        -5.3e-05,
+        -1.630162
       ],
       "name": "toilet_roll",
+      "observed_spawn_yaw_range_rad": [
+        -1.634863,
+        -1.571146
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -1.572534,
-          -0.021484,
-          -1.630459
+          -1.573012,
+          0.669095,
+          -1.628788
         ],
         "position_xyz_m": [
-          0.1592,
-          0.170058,
-          0.951387
+          0.100539,
+          -0.259073,
+          0.951388
         ],
         "quaternion_xyzw": [
-          0.479733,
-          0.520312,
-          0.509001,
-          -0.489948
+          0.627571,
+          0.327145,
+          0.644753,
+          -0.288832
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.473335,
-        "x_uniform_min_m": -0.083163,
-        "y_uniform_max_m": 0.321191,
-        "y_uniform_min_m": -0.428067,
-        "z_fixed_m": 0.951387
+        "x_uniform_max_m": 0.405946,
+        "x_uniform_min_m": 0.011311,
+        "y_uniform_max_m": 0.344916,
+        "y_uniform_min_m": -0.376291,
+        "z_fixed_m": 0.951384
       }
     }
   ],
   "other_scene_objects": [
     {
       "fixed_offset_from_reference_local_xyz_m": [
-        -0.071427,
-        0.047843,
+        -0.07141,
+        0.047782,
         -0.002096
       ],
       "fixed_offset_from_reference_xyz_m": [
-        0.05205,
-        -0.001097,
-        -0.068445
+        0.039362,
+        -0.033951,
+        -0.068446
       ],
       "fixed_orientation_from_reference_rpy_rad": [
-        1.542473,
-        -1.511118,
-        -1.893576
+        1.542339,
+        -1.511376,
+        -1.893713
       ],
       "has_separate_distribution": false,
       "name": "stand_base",
@@ -64,26 +69,26 @@
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          3.141544,
-          -2.9e-05,
-          1.254807
+          3.141574,
+          -5.4e-05,
+          1.945382
         ],
         "position_xyz_m": [
-          0.21125,
-          0.168961,
+          0.139901,
+          -0.293025,
           0.882942
         ],
         "quaternion_xyzw": [
-          0.809554,
-          -0.587045,
-          2e-06,
+          0.563078,
+          -0.826404,
+          -7e-06,
           2.8e-05
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
         "x_uniform_max_m": 0.525367,
-        "x_uniform_min_m": -0.135199,
+        "x_uniform_min_m": -0.135274,
         "y_uniform_max_m": 0.356407,
         "y_uniform_min_m": -0.4801,
         "z_fixed_m": 0.882942
@@ -91,19 +96,19 @@
     },
     {
       "fixed_offset_from_reference_local_xyz_m": [
-        0.037622,
-        0.004283,
-        -0.002266
+        0.037628,
+        0.004193,
+        -0.002267
       ],
       "fixed_offset_from_reference_xyz_m": [
-        0.00208,
-        -0.002156,
-        0.037815
+        0.000167,
+        -0.002938,
+        0.037814
       ],
       "fixed_orientation_from_reference_rpy_rad": [
-        3.141344,
-        -0.001791,
-        -1.62992
+        3.14135,
+        -0.001792,
+        -1.62966
       ],
       "has_separate_distribution": false,
       "name": "toilet_roll_holder",
@@ -111,26 +116,26 @@
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          1.570861,
-          0.021342,
-          0.000501
+          1.57088,
+          -0.669232,
+          0.000554
         ],
         "position_xyz_m": [
-          0.16128,
-          0.167901,
+          0.100705,
+          -0.262012,
           0.989202
         ],
         "quaternion_xyzw": [
-          -0.707091,
-          -0.007368,
-          -0.007723,
-          -0.707042
+          -0.667852,
+          0.232394,
+          0.232043,
+          -0.667925
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
         "x_uniform_max_m": 0.475426,
-        "x_uniform_min_m": -0.085257,
+        "x_uniform_min_m": -0.085333,
         "y_uniform_max_m": 0.321073,
         "y_uniform_min_m": -0.430158,
         "z_fixed_m": 0.989202
@@ -145,20 +150,20 @@
   "task_boundary_root_world_pose_after_reset": {
     "kind": "exact",
     "orientation_rpy_rad": [
-      -0.0,
       0.0,
-      0.021426
+      0.0,
+      -0.669149
     ],
     "position_xyz_m": [
-      0.134681,
-      0.169133,
+      0.080985,
+      -0.244119,
       0.752
     ],
     "quaternion_xyzw": [
       0.0,
       0.0,
-      0.010713,
-      0.999943
+      -0.328367,
+      0.94455
     ],
     "source": "exact_after_one_rlbench_reset"
   },

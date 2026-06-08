@@ -27,6 +27,7 @@ modules (scene_builder / arm_motion / robot_*), which import Isaac Lab at load.
 from __future__ import annotations
 
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -89,7 +90,7 @@ import isaaclab.sim as sim_utils  # noqa: E402
 
 from arm_motion import _grasp_index, build_arm_motion  # noqa: E402
 from robot_arm import GRIPPER_CLOSED, GRIPPER_OPEN  # noqa: E402
-from robot_controller import FrankaWaypointController  # noqa: E402
+from robot_controller import EE_QUAT_DOWN, FrankaWaypointController, Waypoint  # noqa: E402
 from scene_builder import SceneBuilder, _prim_name, _render_base  # noqa: E402
 
 # Metres to lift the grasped wand straight up so the gripper/fingers clear the
@@ -135,6 +136,13 @@ def _graspable_object_name():
         if obj.get("placement_range"):
             return obj.get("name")
     return None
+
+
+def _dynamic_body_names() -> set:
+    """Names of all dynamic (graspable) physics bodies. Used by the pick_place_sequence
+    motion mode to decide which waypoints grasp an object (parent is a dynamic body)."""
+    physics = CONTEXT.report.get("physics") or {}
+    return {name for name, shape in (physics.get("shapes", {}) or {}).items() if (shape or {}).get("dynamic")}
 
 
 def _grasp_close_width(builder, graspable) -> float | None:
@@ -471,6 +479,263 @@ def _soften_rod_friction_for_slide(builder):
         api.CreateStaticFrictionAttr().Set(float(mu))
         api.CreateDynamicFrictionAttr().Set(float(mu))
         print(f"[SLIDE]: {name} friction -> {mu} so the ring slides along the rod.")
+
+
+def _install_grasp_height_watch(builder, controller, out_path):
+    """Diagnostic (env CC_GRASP_WATCH=<file>): record the graspable object's TRUE world-z
+    each step so we can tell, numerically, whether it is actually lifted and carried (the
+    GUI screenshot capture can freeze on a stale viewport frame and mislead). Reads the
+    body's pose via the same GPU-safe physics-tensor view as the collision watch, tracks the
+    resting height, the peak lift, and the height while the gripper is closed, and writes a
+    verdict file at the end (which survives app.close() dropping stdout)."""
+    grasped = _graspable_object_name() or _grasped_body_name(list(builder.body_prim_paths))
+    path = builder.body_prim_paths.get(grasped) if grasped else None
+    if not path:
+        print(f"[GRASP-WATCH] no graspable body found (grasped={grasped!r}); watch disabled.")
+        return
+    view = _wand_rigid_view(path)
+    if view is None:
+        print(f"[GRASP-WATCH] could not view '{grasped}'; watch disabled.")
+        return
+
+    state = {"start_zs": [], "max": (-1e9, -1, ""), "closed_max": (-1e9, ""), "last_z": None, "n": 0}
+    orig_step = controller._step
+
+    def _z():
+        t = view.get_transforms()
+        return float(t[0][2])
+
+    def stepped():
+        orig_step()
+        z = _z()
+        state["last_z"] = z
+        state["n"] += 1
+        if state["n"] <= 30:
+            state["start_zs"].append(z)
+        label = (getattr(controller, "_active_label", "") or "")
+        if z > state["max"][0]:
+            state["max"] = (z, state["n"], label)
+        grip = getattr(controller, "_current_grip", None)
+        # _current_grip is a finger WIDTH; treat "closed" as nearer the closed width than open.
+        is_closed = grip is not None and grip <= 0.5 * (controller.gripper_open + controller.gripper_closed)
+        if is_closed and z > state["closed_max"][0]:
+            state["closed_max"] = (z, label)
+
+    controller._step = stepped
+    print(f"[GRASP-WATCH] tracking '{grasped}' world-z -> verdict file {out_path}")
+
+    def finalize():
+        start_z = (sum(state["start_zs"]) / len(state["start_zs"])) if state["start_zs"] else float("nan")
+        max_z, max_step, max_label = state["max"]
+        cmax_z, cmax_label = state["closed_max"]
+        lift = (max_z - start_z) * 1000.0
+        closed_lift = (cmax_z - start_z) * 1000.0 if cmax_z > -1e8 else float("nan")
+        picked = closed_lift > 25.0  # lifted >2.5 cm while the gripper was closed = a real carry
+        lines = [
+            f"resting z (mean of first {len(state['start_zs'])} steps) = {start_z:.4f} m",
+            f"peak z = {max_z:.4f} m at step {max_step} ('{max_label}') -> lift {lift:.1f} mm",
+            f"peak z while gripper CLOSED = {cmax_z:.4f} m ('{cmax_label}') -> lift {closed_lift:.1f} mm",
+            f"end z = {state['last_z']:.4f} m  (steps={state['n']})",
+            f"VERDICT: {'PICKED UP & CARRIED' if picked else 'NOT LIFTED (grasp failed)'}",
+        ]
+        text = "\n".join(lines) + "\n"
+        try:
+            with open(out_path, "w") as f:
+                f.write(text)
+        except Exception as exc:
+            print(f"[GRASP-WATCH] could not write {out_path} ({exc})")
+        print("[GRASP-WATCH]\n" + text)
+
+    if not hasattr(controller, "_watch_finalizers"):
+        controller._watch_finalizers = []
+    controller._watch_finalizers.append(finalize)
+
+
+def _install_button_press_watch(builder, controller, out_path):
+    """Diagnostic (env CC_PRESS_WATCH=<file>): measure how far each pressable button
+    (target_button_topPlateN, prismatic-jointed to tv_remote) is depressed as the arm presses
+    it. The button rides the remote, so we measure its TRUE world-z RELATIVE to the remote's
+    world-z (subtracting the carry motion) and report the largest inward travel. RLBench's
+    success threshold is 1.5 mm on joint1 (plus) / joint2 (minus); the snapshot is variation 0,
+    so joint1/topPlate1 is the button being pressed. Writes a verdict file (survives app.close)."""
+    remote = _graspable_object_name() or "tv_remote"
+    remote_path = builder.body_prim_paths.get(remote)
+    if not remote_path:
+        print(f"[PRESS-WATCH] no remote body '{remote}'; watch disabled.")
+        return
+    remote_view = _wand_rigid_view(remote_path)
+    buttons = {}
+    for name in ("target_button_topPlate1", "target_button_topPlate2", "target_button_topPlate0"):
+        path = builder.body_prim_paths.get(name)
+        if not path:
+            continue
+        view = _wand_rigid_view(path)
+        if view is not None:
+            buttons[name] = view
+    if remote_view is None or not buttons:
+        print(f"[PRESS-WATCH] missing rigid views (remote={remote_view is not None}, "
+              f"buttons={list(buttons)}); watch disabled.")
+        return
+
+    state = {name: {"rest": [], "min_gap": 1e9, "label": "", "n": 0} for name in buttons}
+    THRESH = 0.0015  # RLBench JointCondition threshold (m)
+    orig_step = controller._step
+
+    def _z(view):
+        return float(view.get_transforms()[0][2])
+
+    def stepped():
+        orig_step()
+        rz = _z(remote_view)
+        label = (getattr(controller, "_active_label", "") or "")
+        for name, view in buttons.items():
+            gap = _z(view) - rz  # button height above the remote along world z
+            s = state[name]
+            s["n"] += 1
+            if s["n"] <= 30:
+                s["rest"].append(gap)
+            elif gap < s["min_gap"]:
+                s["min_gap"] = gap
+                s["label"] = label
+
+    controller._step = stepped
+    print(f"[PRESS-WATCH] tracking {list(buttons)} depression -> verdict file {out_path}")
+
+    def finalize():
+        lines, pressed_any = [], False
+        for name, s in state.items():
+            rest = (sum(s["rest"]) / len(s["rest"])) if s["rest"] else float("nan")
+            press = (rest - s["min_gap"]) if s["min_gap"] < 1e8 else 0.0
+            joint = name.replace("target_button_topPlate", "joint")
+            ok = press >= THRESH
+            pressed_any = pressed_any or (ok and name in ("target_button_topPlate1", "target_button_topPlate2"))
+            lines.append(f"{name} ({joint}): rest gap {rest*1000:.2f} mm, max press {press*1000:.2f} mm "
+                         f"('{s['label']}') {'>= 1.5mm PRESSED' if ok else '< 1.5mm'}")
+        lines.append(f"VERDICT: {'BUTTON PRESSED (joint1/2 >= 1.5mm: channel changed)' if pressed_any else 'NOT PRESSED'}")
+        text = "\n".join(lines) + "\n"
+        try:
+            with open(out_path, "w") as f:
+                f.write(text)
+        except Exception as exc:
+            print(f"[PRESS-WATCH] could not write {out_path} ({exc})")
+        print("[PRESS-WATCH]\n" + text)
+
+    if not hasattr(controller, "_watch_finalizers"):
+        controller._watch_finalizers = []
+    controller._watch_finalizers.append(finalize)
+
+
+def _press_capture(builder, press_cfg):
+    """Capture, before the motion, the rigid-body views + start origins of the press button and the
+    remote so the press phase can recover the button's TRUE world position from how far it actually
+    moved (origin_now - origin_start, added to the report's start world pose). The physics view
+    reports the body ORIGIN in the task-root frame (baked mesh carries a big internal offset), so we
+    track displacement, not absolute origin."""
+    obj_name = str(press_cfg.get("object", "target_button_topPlate1"))
+    remote_name = _graspable_object_name() or "tv_remote"
+
+    def _cap(name):
+        path = builder.body_prim_paths.get(name)
+        view = _wand_rigid_view(path) if path else None
+        obj = next((o for o in CONTEXT.report.get("objects", []) if o.get("name") == name), None)
+        rep = ((obj or {}).get("world_location") or {}).get("position_xyz_m")
+        if view is None or rep is None:
+            return None
+        t = view.get_transforms()[0]
+        return {"view": view, "origin0": (float(t[0]), float(t[1]), float(t[2])),
+                # quat WXYZ at capture (get_transforms gives XYZW): needed so the
+                # press phase can rotate the body-origin->button offset with the body
+                # as it is grasped/carried (and rides the yaw-rotated task root),
+                # instead of treating that offset as a fixed world vector.
+                "quat0": (float(t[6]), float(t[3]), float(t[4]), float(t[5])),
+                "report": tuple(float(v) for v in rep)}
+
+    return {"button": _cap(obj_name), "remote": _cap(remote_name), "obj_name": obj_name}
+
+
+def _press_live_world(cap):
+    """Button's CURRENT world position, tracking the body's FULL rigid motion
+    (translation AND rotation) since capture.
+
+    The button reference point (``report``, its world pose at capture) sits at a
+    fixed offset from the body origin IN THE BODY'S LOCAL FRAME. We freeze that
+    offset in the body frame at capture (``report - origin0`` un-rotated by the
+    start orientation), then re-apply it through the body's CURRENT orientation:
+
+        live = origin_now + R_now * R_start^-1 * (report - origin_start)
+
+    Using only the origin translation (the old ``report + (origin_now - origin0)``)
+    silently assumed the body never rotates. But the remote is top-down grasped and
+    carried (and rides a task root yaw-rotated ~-0.95 rad), so its frame DOES rotate;
+    the frozen world offset then points the wrong way and the arm presses off to the
+    side. Z is barely affected (the button stays on top), which is why lift/press-depth
+    still looked right while X/Y went the wrong direction. Reduces EXACTLY to the old
+    formula when the orientation is unchanged (R_now == R_start)."""
+    from scene_context import _qapply, _qinv
+
+    t = cap["view"].get_transforms()[0]
+    now = (float(t[0]), float(t[1]), float(t[2]))
+    quat_now = (float(t[6]), float(t[3]), float(t[4]), float(t[5]))  # XYZW -> WXYZ
+    off_world0 = tuple(cap["report"][i] - cap["origin0"][i] for i in range(3))
+    off_local = _qapply(_qinv(cap["quat0"]), off_world0)
+    off_now = _qapply(quat_now, off_local)
+    return tuple(now[i] + off_now[i] for i in range(3))
+
+
+def _run_button_press(controller, builder, press_cfg, press_cap):
+    """Live button-press phase (change_channel). The pressable button RIDES the remote, which the
+    task just relocated, so the recorded press waypoints (wp6/wp7, frozen at the remote's original
+    spawn) no longer point at the button. Read the button's ACTUAL world position now (start world +
+    measured displacement) and press straight down onto it - matching RLBench, whose press waypoint
+    is parented to the remote and tracks it live. Config: press_button = {object, approach_height_m,
+    press_depth_m, steps}."""
+    from arm_motion import _waypoint_world_quat
+
+    cap = (press_cap or {}).get("button")
+    if cap is None:
+        print("[PRESS]: no button capture; skipping press phase.")
+        return
+    controller.settle(int(press_cfg.get("settle_steps", 90)))  # let the placed remote come fully to rest
+    bx, by, bz = _press_live_world(cap)
+    # Diagnostics: where did the remote + button actually end up vs the recorded waypoints?
+    if (press_cap or {}).get("remote"):
+        rmt = _press_live_world(press_cap["remote"])
+        print(f"[PRESS]: remote live world {tuple(round(v, 3) for v in rmt)} "
+              f"(report {tuple(round(v, 3) for v in press_cap['remote']['report'])}).")
+    print(f"[PRESS]: button '{press_cap['obj_name']}' live world {tuple(round(v, 3) for v in (bx, by, bz))} "
+          f"(report {tuple(round(v, 3) for v in cap['report'])}).")
+    approach_h = float(press_cfg.get("approach_height_m", 0.07))
+    press_depth = float(press_cfg.get("press_depth_m", 0.006))
+    # Optional "press_gap_m": stop the tip this far ABOVE the button top instead of pressing
+    # press_depth_m INTO it (a hover/soft-touch over the button, no depression). When set it
+    # OVERRIDES press_depth_m. The Waypoint pos is a gripper-TIP target, and bz is the button
+    # top world z, so the tip is commanded to bz + gap.
+    press_gap = press_cfg.get("press_gap_m")
+    press_tip_z = (bz + float(press_gap)) if press_gap is not None else (bz - press_depth)
+    steps = int(press_cfg.get("steps", 160))
+    # Press with the gripper FULLY closed (fingers together) so it pokes the small button as one
+    # solid tip; the grasp's "closed" width (gripper_closed) leaves a finger gap that straddles the
+    # button. _grip_width clamps "closed" to controller.gripper_closed, so lower it for the press.
+    controller.gripper_closed = float(press_cfg.get("press_grip", 0.0))
+    wps = {w.get("name", f"waypoint{i}"): w for i, w in enumerate(CONTEXT.waypoints)}
+    press_n = press_cfg.get("press_waypoint", "waypoint7")
+    down_q = _waypoint_world_quat(wps[press_n], bool(getattr(args_cli, "ee_down", False))) \
+        if press_n in wps else EE_QUAT_DOWN
+    approach = Waypoint("Press approach", (bx, by, bz + approach_h), quat_w=down_q,
+                        gripper="closed", duration_steps=steps)
+    press = Waypoint("Press button", (bx, by, press_tip_z), quat_w=down_q,
+                     gripper="closed", duration_steps=steps)
+    if press_gap is not None:
+        print(f"[PRESS]: approach +{approach_h * 1000:.0f}mm, stop tip {float(press_gap) * 1000:.1f}mm ABOVE button top (gap, no push).")
+    else:
+        print(f"[PRESS]: approach +{approach_h * 1000:.0f}mm, press tip to {press_depth * 1000:.0f}mm below button top.")
+    b_before = _press_live_world(cap)
+    controller.follow([approach])
+    print(f"[PRESS]: after approach, gripper width={controller._current_grip:.4f} m; button z={_press_live_world(cap)[2]:.4f}")
+    controller.follow([press])
+    b_after = _press_live_world(cap)
+    print(f"[PRESS]: button z before={b_before[2]:.4f} after={b_after[2]:.4f} -> moved {(b_before[2]-b_after[2])*1000:.2f} mm down")
+    controller.settle(60)  # hold the button depressed so the contact (and the press watch) register
 
 
 def _install_screenshot_capture(controller, sim, out_dir, interval_s):
@@ -1243,7 +1508,11 @@ def _add_articulation_joints(builder):
     created = 0
     for name, entry in objects.items():
         parent = entry.get("parent") or ""
-        if not parent.endswith("_joint"):
+        # Accept a bare "_joint" (e.g. close_box's lid hinge) OR a numbered "_jointN" - RLBench
+        # names the change_channel button joints target_button_joint1 / _joint2, which the old
+        # endswith("_joint") test silently dropped (so the buttons were never jointed/pressable).
+        joint_tail = parent.rsplit("_joint", 1)
+        if len(joint_tail) != 2 or (joint_tail[1] and not joint_tail[1].isdigit()):
             continue
         phys_joint = physics_joints.get(parent) or {}
         if not phys_joint:
@@ -1471,6 +1740,111 @@ def _trim_lid_hinge_collider(builder):
         print(f"[INFO]: Applied hinge-collider trim to {trimmed_bodies} body(ies) before sim reset.")
 
 
+def _notch_base_hinge_rim(builder):
+    """Alternative to ``_trim_lid_hinge_collider`` that keeps the hinged child's collider FULL
+    (so it matches the child mesh) and instead NOTCHES the static base's hinge-side rim, so the
+    child's hinge edge no longer overlaps the base collider (the overlap that flings a lid open
+    when base<->child collision is enabled).
+
+    The base's VISUAL mesh is left intact; a hidden collision-only copy carries the lowered rim
+    and the visual mesh's own collider is disabled. Data-driven: a child shape spec with
+    ``"hinge_base_rim_clearance_m"`` opts in (the base is the child's joint base body, or
+    ``hinge_box``); the base's hinge-side rim is dropped to ``clearance`` below the child's
+    hinge edge so there is no contact there.
+    """
+    from pxr import Gf, Usd, UsdGeom, UsdPhysics, PhysxSchema, Vt
+
+    physics = CONTEXT.report.get("physics") or {}
+    shapes = physics.get("shapes", {}) or {}
+    pairs = getattr(builder, "jointed_pairs", {}) or {}
+    stage = sim_utils.get_current_stage()
+    notched_bodies = 0
+    for name, spec in shapes.items():
+        clearance = float((spec or {}).get("hinge_base_rim_clearance_m") or 0.0)
+        if clearance <= 0.0:
+            continue
+        child_path = builder.body_prim_paths.get(name)
+        base_name = (spec or {}).get("hinge_box") or pairs.get(name)
+        base_path = builder.body_prim_paths.get(base_name) if base_name else None
+        if not child_path or not base_path:
+            print(f"[WARN]: base-rim notch for '{name}': missing child/base body (base='{base_name}'); skipping.")
+            continue
+        base_pts = _mesh_world_points(base_path, max_pts=6000)
+        child_pts = _mesh_world_points(child_path, max_pts=2000)
+        if not base_pts or not child_pts:
+            continue
+        base_top = max(p[2] for p in base_pts)
+        bx_lo = (min(p[0] for p in base_pts), min(p[1] for p in base_pts))
+        bx_hi = (max(p[0] for p in base_pts), max(p[1] for p in base_pts))
+        # the child's hinge edge = child verts dipping below the base top, inside the base footprint
+        hinge = [p for p in child_pts
+                 if p[2] < base_top - 0.0005
+                 and bx_lo[0] - 0.01 <= p[0] <= bx_hi[0] + 0.01
+                 and bx_lo[1] - 0.01 <= p[1] <= bx_hi[1] + 0.01]
+        if not hinge:
+            print(f"[WARN]: base-rim notch for '{name}': no overlapping hinge verts; skipping.")
+            continue
+        hinge_z = min(p[2] for p in hinge)
+        target_z = hinge_z - clearance
+        prox = 0.03  # only lower base verts within 3 cm (XY) of the child's hinge edge
+        base_spec = shapes.get(base_name) or {}
+        approx_name = str(base_spec.get("collider", "convexDecomposition"))
+        approx_token = {
+            "convexHull": UsdPhysics.Tokens.convexHull,
+            "convexDecomposition": UsdPhysics.Tokens.convexDecomposition,
+            "boundingCube": UsdPhysics.Tokens.boundingCube,
+            "boundingSphere": UsdPhysics.Tokens.boundingSphere,
+            "none": UsdPhysics.Tokens.none,
+        }.get(approx_name, UsdPhysics.Tokens.none)
+
+        n_meshes = 0
+        for prim in Usd.PrimRange(stage.GetPrimAtPath(base_path)):
+            if not prim.IsA(UsdGeom.Mesh):
+                continue
+            mesh = UsdGeom.Mesh(prim)
+            pts = mesh.GetPointsAttr().Get()
+            if not pts:
+                continue
+            xf = UsdGeom.Xformable(prim).ComputeLocalToWorldTransform(Usd.TimeCode.Default())
+            inv = xf.GetInverse()
+            world = [xf.Transform(Gf.Vec3d(float(p[0]), float(p[1]), float(p[2]))) for p in pts]
+            new_pts = list(pts)
+            n_low = 0
+            for k, w in enumerate(world):
+                if w[2] <= target_z:              # already low enough
+                    continue
+                if w[2] < hinge_z - 0.001:         # below the hinge edge -> not blocking it
+                    continue
+                dmin = min(((w[0] - h[0]) ** 2 + (w[1] - h[1]) ** 2) ** 0.5 for h in hinge)
+                if dmin > prox:                    # not near the child's hinge edge
+                    continue
+                local = inv.Transform(Gf.Vec3d(w[0], w[1], target_z))
+                new_pts[k] = Gf.Vec3f(float(local[0]), float(local[1]), float(local[2]))
+                n_low += 1
+            if n_low == 0:
+                continue
+            if prim.HasAPI(UsdPhysics.CollisionAPI):
+                UsdPhysics.CollisionAPI(prim).GetCollisionEnabledAttr().Set(False)
+            coll = UsdGeom.Mesh.Define(stage, prim.GetPath().AppendChild("HingeRimNotchCollider"))
+            coll.CreatePointsAttr(Vt.Vec3fArray(new_pts))
+            coll.CreateFaceVertexCountsAttr(mesh.GetFaceVertexCountsAttr().Get())
+            coll.CreateFaceVertexIndicesAttr(mesh.GetFaceVertexIndicesAttr().Get())
+            UsdGeom.Imageable(coll).CreateVisibilityAttr(UsdGeom.Tokens.invisible)
+            UsdPhysics.CollisionAPI.Apply(coll.GetPrim())
+            UsdPhysics.MeshCollisionAPI.Apply(coll.GetPrim()).CreateApproximationAttr(approx_token)
+            if approx_name == "convexDecomposition":
+                PhysxSchema.PhysxConvexDecompositionCollisionAPI.Apply(coll.GetPrim())
+            elif approx_name == "convexHull":
+                PhysxSchema.PhysxConvexHullCollisionAPI.Apply(coll.GetPrim())
+            n_meshes += 1
+            print(f"[INFO]: Base-rim notch '{base_name}' for hinge of '{name}': lowered {n_low} rim vert(s) "
+                  f"to z={target_z:.4f} (clearance {clearance * 1000:.0f}mm below hinge); visual collider disabled.")
+        if n_meshes:
+            notched_bodies += 1
+    if notched_bodies:
+        print(f"[INFO]: Applied base-rim notch to {notched_bodies} body(ies) before sim reset.")
+
+
 def main():
     # A finer step + PhysX tuning are needed for a stable friction grasp; fall
     # back to the lighter inspect-only step when no robot/grasping is involved.
@@ -1497,10 +1871,12 @@ def main():
     # Hinge any RLBench *_joint child with a physics-joint entry. Created here,
     # after the prims exist but before sim.reset(), so PhysX parses the joint with the scene.
     _add_articulation_joints(builder)
-    # Trim a hinged lid's collider at the shared hinge edge so base<->lid collision can be ON
-    # without PhysX depenetrating the spawn overlap and flinging the lid open. Generic +
-    # data-driven: no-op unless a shape spec in the task's physics JSON sets hinge_collision_trim_m.
+    # Clear the shared hinge-edge overlap so base<->lid collision can be ON without PhysX
+    # depenetrating the spawn overlap and flinging the lid open. Two data-driven options (no-op
+    # unless the task's physics JSON opts in): trim the lid collider (hinge_collision_trim_m), or
+    # keep the lid collider full and notch the base's rim instead (hinge_base_rim_clearance_m).
     _trim_lid_hinge_collider(builder)
+    _notch_base_hinge_rim(builder)
     # beat_the_buzz: the ring is topologically CAPTIVE on the rod, so the recorded sideways carry
     # (waypoint3) is impossible - it tunnels/ejects the ring (the wand flies off). Default to
     # sliding the ring ALONG the rod instead, which keeps it threaded. Pass --slide-along-rod 0
@@ -1521,6 +1897,7 @@ def main():
         CONTEXT.waypoints, MOTION_CONFIG, force_down=args_cli.ee_down,
         curvy=curvy, carry_lift=carry_lift,
         graspable_name=_graspable_object_name(),
+        graspable_names=_dynamic_body_names(),
         slide_along_rod=slide_along_rod,
     )
     # The baked 5.0 friction makes the ring GRAB the rod, so the forced slide jerks it off. Lower
@@ -1588,14 +1965,30 @@ def main():
     )
     if getattr(args_cli, "screenshot_dir", None) is not None:
         _install_screenshot_capture(controller, sim, args_cli.screenshot_dir, args_cli.screenshot_interval)
+    if os.environ.get("CC_GRASP_WATCH"):
+        _install_grasp_height_watch(builder, controller, os.environ["CC_GRASP_WATCH"])
+    if os.environ.get("CC_PRESS_WATCH"):
+        _install_button_press_watch(builder, controller, os.environ["CC_PRESS_WATCH"])
     _install_driven_close(controller, builder)
     controller.reset_to_home()
 
     # The arm ALWAYS follows the RECORDED waypoints (the dots) - no wand tracking / no
     # re-targeting to wherever the wand settles. (settle_view/authored_wand_pose are kept only
     # for diagnostics; the grasp pose is the recorded waypoint regardless of wand placement.)
+    # change_channel (and any task that opts in): after placing+releasing the grasped object,
+    # press a button that RIDES it, targeting the button's live pose (its recorded waypoints are
+    # stale once the object has been relocated). Capture the button reference BEFORE the motion.
+    press_cfg = MOTION_CONFIG.get("press_button")
+    press_cap = _press_capture(builder, press_cfg) if press_cfg else None
     controller.follow(arm_waypoints)
+    if press_cfg:
+        _run_button_press(controller, builder, press_cfg, press_cap)
     print("[INFO]: Arm motion finished. Holding final pose.")
+    finalizers = getattr(controller, "_watch_finalizers", None)
+    if finalizers:
+        for fn in finalizers:
+            fn()
+        return  # diagnostic run: write the verdict(s) and exit (don't hold forever)
     if watch_state is not None:
         # After the gripper has released, step a little longer (arm parked) so the trace
         # captures the wand resting on the wire (it should stay threaded, kept off the base by

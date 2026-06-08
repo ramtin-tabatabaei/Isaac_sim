@@ -1,0 +1,47 @@
+{
+  "shapes": {
+    "wine_bottle": {
+      "dynamic": true,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.5427468419075012,
+      "friction": 0.5
+    },
+    "rack_bottom": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.5824607014656067,
+      "friction": 0.5
+    },
+    "rack_top": {
+      "dynamic": false,
+      "respondable": 1,
+      "collidable": 1,
+      "mass": 0.5824607014656067,
+      "friction": 0.5
+    },
+    "wine_bottle_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 2.0480000972747803,
+      "friction": 0.7099999785423279
+    },
+    "rack_bottom_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.00047185932635329664,
+      "friction": 0.7099999785423279
+    },
+    "rack_top_visual": {
+      "dynamic": false,
+      "respondable": 0,
+      "collidable": 1,
+      "mass": 0.00047185932635329664,
+      "friction": 0.7099999785423279
+    }
+  },
+  "joints": {}
+}

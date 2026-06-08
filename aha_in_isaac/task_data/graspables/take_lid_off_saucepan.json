@@ -2,42 +2,47 @@
   "graspable_objects": [
     {
       "fixed_offset_from_task_boundary_root_xyz_m": [
-        -0.026265,
-        0.02984,
-        0.101079
+        -0.026264,
+        0.029837,
+        0.101075
       ],
       "fixed_orientation_from_task_boundary_root_rpy_rad": [
-        -1e-05,
-        7e-05,
-        -1e-05
+        0.000113,
+        8.7e-05,
+        -8e-06
       ],
       "name": "saucepan_lid_grasp_point",
+      "observed_spawn_yaw_range_rad": [
+        -2e-05,
+        1e-06
+      ],
+      "range_source": "observed_over_resets",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          2e-06,
-          7.1e-05,
-          -0.16897
+          -0.000137,
+          -3.8e-05,
+          2.75637
         ],
         "position_xyz_m": [
-          0.348428,
-          -0.000243,
-          0.853079
+          0.205612,
+          -0.138608,
+          0.853075
         ],
         "quaternion_xyzw": [
-          -2e-06,
-          3.5e-05,
-          -0.084384,
-          0.996433
+          -3.2e-05,
+          6.4e-05,
+          0.981508,
+          0.191423
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_distribution": {
-        "x_uniform_max_m": 0.480629,
-        "x_uniform_min_m": 0.146081,
-        "y_uniform_max_m": 0.304548,
-        "y_uniform_min_m": -0.178638,
-        "z_fixed_m": 0.853079
+        "x_uniform_max_m": 0.351609,
+        "x_uniform_min_m": 0.15405,
+        "y_uniform_max_m": 0.254233,
+        "y_uniform_min_m": -0.274264,
+        "z_fixed_m": 0.853078
       }
     }
   ],
@@ -45,18 +50,18 @@
     {
       "fixed_offset_from_reference_local_xyz_m": [
         -0.041113,
-        -0.096054,
-        -0.056677
+        -0.096057,
+        -0.056661
       ],
       "fixed_offset_from_reference_xyz_m": [
-        -0.056685,
-        -0.087772,
-        -0.056673
+        0.074197,
+        0.073561,
+        -0.056669
       ],
       "fixed_orientation_from_reference_rpy_rad": [
-        -0.083594,
-        0.001946,
-        1.163613
+        -0.083717,
+        0.00193,
+        1.16361
       ],
       "has_separate_distribution": false,
       "name": "saucepan",
@@ -64,27 +69,27 @@
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          -0.08208,
-          0.016031,
-          0.995223
+          0.076746,
+          -0.033254,
+          -2.362006
         ],
         "position_xyz_m": [
-          0.291743,
-          -0.088015,
+          0.27981,
+          -0.065047,
           0.796406
         ],
         "quaternion_xyzw": [
-          -0.032229,
-          0.026621,
-          0.476622,
-          0.878114
+          -0.029944,
+          -0.029168,
+          0.924421,
+          -0.379075
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.535347,
+        "x_uniform_max_m": 0.535346,
         "x_uniform_min_m": 0.091363,
-        "y_uniform_max_m": 0.359266,
+        "y_uniform_max_m": 0.35927,
         "y_uniform_min_m": -0.233356,
         "z_fixed_m": 0.796406
       }
@@ -93,47 +98,55 @@
       "fixed_offset_from_reference_local_xyz_m": [
         6e-06,
         -4e-06,
-        -0.020032
+        -0.020031
       ],
       "fixed_offset_from_reference_xyz_m": [
-        4e-06,
-        -5e-06,
-        -0.020032
+        -4e-06,
+        3e-06,
+        -0.020031
       ],
       "fixed_orientation_from_reference_rpy_rad": [
-        1.570865,
-        -1.227477,
-        1.570856
+        1.570831,
+        -1.227478,
+        1.570832
       ],
       "has_separate_distribution": false,
+      "mounted_on_graspable": "saucepan_lid_grasp_point",
       "name": "saucepan_lid",
       "reference_graspable_object": "saucepan_lid_grasp_point",
+      "rotation_radius_from_graspable_m": 7e-06,
+      "spawn_rotation_note": "Mounted on graspable 'saucepan_lid_grasp_point', which RLBench randomly positions and yaw-rotates (+/-pi) each episode; world range is the 'saucepan_lid_grasp_point' observed envelope expanded by the mount radius.",
       "world_pose_after_reset": {
         "kind": "exact",
         "orientation_rpy_rad": [
-          1.57053,
-          -1.396448,
-          1.570515
+          1.570028,
+          1.528895,
+          1.571437
         ],
         "position_xyz_m": [
-          0.348431,
-          -0.000247,
-          0.833048
+          0.205609,
+          -0.138605,
+          0.833043
         ],
         "quaternion_xyzw": [
-          0.061569,
-          -0.704405,
-          0.061558,
-          0.704439
+          0.706941,
+          -0.014767,
+          0.706962,
+          0.014861
         ],
         "source": "exact_after_one_rlbench_reset"
       },
       "world_position_range_due_to_task_root_sampling": {
-        "x_uniform_max_m": 0.480623,
-        "x_uniform_min_m": 0.146087,
-        "y_uniform_max_m": 0.304542,
-        "y_uniform_min_m": -0.178632,
-        "z_fixed_m": 0.833048
+        "kind": "mounted_on_graspable_envelope",
+        "mounted_on_graspable": "saucepan_lid_grasp_point",
+        "n_resets_observed": 30,
+        "rotation_radius_m": 7e-06,
+        "source": "observed_saucepan_lid_grasp_point_range_expanded_by_mount_radius_for_full_yaw",
+        "x_uniform_max_m": 0.351616,
+        "x_uniform_min_m": 0.154043,
+        "y_uniform_max_m": 0.25424,
+        "y_uniform_min_m": -0.274271,
+        "z_fixed_m": 0.833047
       }
     }
   ],
@@ -145,20 +158,20 @@
   "task_boundary_root_world_pose_after_reset": {
     "kind": "exact",
     "orientation_rpy_rad": [
+      -0.0,
       0.0,
-      0.0,
-      -0.16896
+      2.756378
     ],
     "position_xyz_m": [
-      0.369301,
-      -0.034075,
+      0.192484,
+      -0.101089,
       0.752
     ],
     "quaternion_xyzw": [
       0.0,
       0.0,
-      -0.084379,
-      0.996434
+      0.981508,
+      0.191419
     ],
     "source": "exact_after_one_rlbench_reset"
   },
