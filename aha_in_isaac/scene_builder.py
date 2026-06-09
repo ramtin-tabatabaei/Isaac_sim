@@ -245,21 +245,6 @@ class SceneBuilder:
         center = (box.GetMin() + box.GetMax()) * 0.5
         return tuple(float(v) for v in center)
 
-    def _body_collision_world_center(self, name, body_prim):
-        """World-space centre of a body's OWN (collision) geometry: the body's USD-file bbox
-        centre mapped through the body's live world transform. Unlike a glued visual skin -
-        which can sit far from the body origin (e.g. a basket's backboard reaches well beyond
-        the ring's collision body) - this tracks the report's body-origin reference, so the
-        mover gate measures the body's real displacement instead of a body->skin offset.
-        Returns ``None`` when the body has no source USD to measure."""
-        usd_path = self.ctx.usd_paths.get(name)
-        if not usd_path:
-            return None
-        file_center = self._usd_bbox_center(usd_path)  # the body's local (baked) frame
-        l2w = UsdGeom.Xformable(body_prim).ComputeLocalToWorldTransform(Usd.TimeCode.Default())
-        world = l2w.Transform(Gf.Vec3d(*file_center))
-        return (float(world[0]), float(world[1]), float(world[2]))
-
     def _canonical_task_root_pos(self) -> tuple[float, float, float]:
         """Position of the task-root origin in the baked-USD frame. Every object is
         shifted by ``-canonical`` so the canonical task-root origin lands on the
@@ -684,18 +669,21 @@ class SceneBuilder:
             target = tuple(float(v) for v in target)
             # Tagged graspables/assemblies always snap (and may carry an orientation fix). A plain
             # body only snaps if the rigid task-root transform left it far from its report pose -
-            # i.e. it is an independently re-placed instance. Gate that on the body's OWN collision
-            # geometry, NOT the measured visible skin: the transform aligns the collision body (the
-            # report's reference) with the report, while a glued skin can sit far from the body
-            # origin (a basket's backboard reaches well past the ring's collision body). Measuring
-            # the skin reads that body->skin offset as a ~0.2 m misplacement and yanks the whole
-            # assembly. Snap the body by the same collision centre so its glued skin rides along.
+            # i.e. it is an independently re-placed instance. Compare LIKE WITH LIKE: when the
+            # measured visible geometry is a glued skin, gate against that SKIN's OWN reported pose,
+            # not the body origin's. A skin can legitimately sit far from the body origin (a basket's
+            # backboard skin reaches well beyond the ring's collision body); comparing the skin's
+            # centre to the body-origin report reads that offset as a ~0.2 m misplacement and yanks
+            # the whole assembly. Conversely it must NOT use the body's collision geometry, which on
+            # some tasks is baked displaced from the visible mesh (e.g. change_clock's clock collider
+            # lies flat ~0.26 m off) - that would drag the correctly-placed visible mesh with it.
             if name not in snap_names:
-                coll_center = self._body_collision_world_center(name, body_prim)
-                gate_center = coll_center if coll_center is not None else center
-                if max(abs(target[i] - gate_center[i]) for i in range(3)) < SNAP_MOVER_THRESHOLD_M:
+                if skin_name and measure_path != body_path:
+                    skin_report = (self.ctx.objects.get(skin_name, {}).get("world_location") or {}).get("position_xyz_m")
+                    if skin_report and len(skin_report) == 3:
+                        target = tuple(float(v) for v in skin_report)
+                if max(abs(target[i] - center[i]) for i in range(3)) < SNAP_MOVER_THRESHOLD_M:
                     continue
-                center = gate_center
             delta_world = tuple(target[i] - center[i] for i in range(3))
             displacement = max(abs(d) for d in delta_world)
             if displacement < 1e-5:

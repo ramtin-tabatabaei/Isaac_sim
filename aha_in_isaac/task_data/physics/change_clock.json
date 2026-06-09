@@ -1,8 +1,9 @@
 {
   "planner": "diffik",
+  "_comment_gripper": "closed raised from 0.01 -> 0.015 (per-finger; gap = 2x) so the fingers stop on the ~3 cm clock_needle_crank knob instead of driving through it (was closing too far).",
   "gripper": {
     "open": 0.04,
-    "closed": 0.01,
+    "closed": 0.02,
     "static_friction": 4.0,
     "dynamic_friction": 3.2
   },
@@ -66,8 +67,11 @@
       "cyclic": true,
       "lower": -180.00000500895632,
       "upper": 180.00000500895632,
-      "friction": 0.02,
-      "_comment": "clock (static base) <-> clock_needle_crank (dynamic). Light joint friction holds the hand where the gripper leaves it (a clock hand stays set) while staying turnable."
+      "drive_type": "force",
+      "target_velocity": 0.0,
+      "damping": 8.0,
+      "stiffness": 0.0,
+      "_comment": "clock (static base) <-> clock_needle_crank (dynamic). PhysX IGNORES joint 'friction' for non-articulation joints, so firmness comes from an angular DAMPING drive (target_velocity 0, no stiffness): it resists wobble/off-axis jitter and holds the hand where the gripper leaves it, yet a slow turn still overcomes it. Raise 'damping' if it still flops, lower it if the arm can't turn it."
     }
   }
 }
