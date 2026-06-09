@@ -16,8 +16,10 @@ DEFAULT_SCENE_CONTEXT = Path("/home/ramtin/AHA/portable_scene_reports/basketball
 DEFAULT_USD_DIR = Path(
     "/home/ramtin/Downloads/basketball_in_hoop_usd-20260529T125644Z-3-001/basketball_in_hoop_usd"
 )
-DEFAULT_MOTION_CONFIG = Path(__file__).with_name("task_motion_config.json")
-DEFAULT_APPEARANCE_CONFIG = Path(__file__).with_name("object_appearance_config.json")
+# Per-task config layout: one file per task (task_data/<kind>/<task>.json) + a shared default,
+# so editing one task never affects another. A legacy monolithic JSON is still accepted.
+DEFAULT_MOTION_CONFIG = Path(__file__).with_name("task_data") / "motion"
+DEFAULT_APPEARANCE_CONFIG = Path(__file__).with_name("task_data") / "appearance"
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -48,7 +50,7 @@ def build_parser() -> argparse.ArgumentParser:
         "--planner",
         choices=("diffik", "rmpflow", "curobo", "rrt"),
         default=None,
-        help="Arm controller. If omitted, uses the task's motion config planner, falling back to diffik. "
+        help="Arm controller. If omitted, uses the task's physics-config planner, falling back to diffik. "
         "'diffik' is straight-line differential IK, 'rmpflow' "
         "(reactive Lula avoidance), 'curobo' (global collision-free planner), or 'rrt' "
         "(AHA-style: EVERY segment is planned collision-free around the whole obstacle with "
@@ -64,13 +66,13 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--rrt-safety-margin",
         type=float,
-        default=0.05,
+        default=None,
         metavar="METRES",
         help="For --planner rrt: extra clearance the planner keeps from the obstacle (Cuboid). "
         "It inflates every obstacle sphere by this much, so the planned arm path stays further "
         "from the frame. If a segment can't be planned at this margin, the planner AUTO-REDUCES "
-        "it (down to 0) and only falls back to the straight line if even 0 fails. Default 0.05; "
-        "pass 0 to disable the margin.",
+        "it (down to 0) and only falls back to the straight line if even 0 fails. If omitted, uses "
+        "the task's physics-config 'rrt_safety_margin', falling back to 0.05; pass 0 to disable the margin.",
     )
     parser.add_argument(
         "--curobo-obstacles",
@@ -121,8 +123,7 @@ def build_parser() -> argparse.ArgumentParser:
         "obstacle (e.g. lift the wand's ring up and around the buzz-wire arch instead of "
         "dragging it through). When >0, the arm uses the recorded side grasp, lifts "
         "by DZ, follows a circular clearance arc around the Cuboid, then releases. "
-        "If omitted, beat_the_buzz automatically uses 0.35 m; pass 0 to force "
-        "the recorded path.",
+        "If omitted, uses carry_lift_m from the task's motion JSON (default 0).",
     )
     parser.add_argument(
         "--collision-watch",
@@ -150,7 +151,7 @@ def build_parser() -> argparse.ArgumentParser:
         "between the posts) by DIST metres instead of dragging it sideways off the frame (which "
         "is geometrically impossible for a captive ring and ejects/tunnels it). Keeps the ring "
         "threaded the whole time (the real 'beat the buzz' motion), forcing carry-lift 0. "
-        "Omitted = auto 0.12 m for beat_the_buzz; pass 0 to force the (broken) recorded carry.",
+        "If omitted, uses slide_along_rod_m from the task's motion JSON (default 0).",
     )
     parser.add_argument(
         "--pull-test", type=float, default=0.0, metavar="SPEED",
@@ -212,11 +213,12 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--match-graspable-to-report",
         action=argparse.BooleanOptionalAction,
-        default=True,
+        default=None,
         help=(
             "In task-root mode, move graspable objects (e.g. weights/peppers) onto the "
             "sampled world pose recorded in the scene-context report, instead of the pose "
-            "baked into their USD. Pass --no-match-graspable-to-report to keep the baked pose."
+            "baked into their USD. If omitted, uses motion config 'match_graspable_to_report' "
+            "(default true). Pass --no-match-graspable-to-report to keep the baked pose."
         ),
     )
     return parser

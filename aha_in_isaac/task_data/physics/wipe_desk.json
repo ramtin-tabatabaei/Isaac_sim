@@ -1,4 +1,18 @@
 {
+  "planner": "diffik",
+  "gripper": {
+    "open": 0.04,
+    "closed": 0.01,
+    "static_friction": 4.0,
+    "dynamic_friction": 3.2
+  },
+  "waypoint_steps": {
+    "waypoint0": 250,
+    "waypoint1": 220,
+    "waypoint2": 260,
+    "waypoint3": 750,
+    "waypoint4": 200
+  },
   "shapes": {
     "sponge": {
       "dynamic": true,

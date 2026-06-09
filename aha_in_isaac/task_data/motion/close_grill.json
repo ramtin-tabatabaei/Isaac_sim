@@ -1,0 +1,11 @@
+{
+  "follow_path_orientation": true,
+  "gripper_per_waypoint": {
+    "waypoint0": "open",
+    "waypoint1": "closed",
+    "waypoint2": "closed"
+  },
+  "release_after_last": true,
+  "retreat_xyz_m": [0.0, 0.0, 0.15],
+  "_comment": "Like close_box: the arm GRASPS the lid handle then physically swings it shut. close_grill's lid-close sweep is its LAST/lowest waypoint, so the automatic grasp-point picker would grasp AFTER the sweep - script it instead: open -> reach waypoint1 (on the handle, 2cm away) -> CLOSE (grasp the handle firmly; the lid's high static_friction + friction_combine_mode max in object_physics make the grip hold) -> sweep waypoint2's cartesian path with the closed gripper, reorienting the wrist GRADUALLY via follow_path_orientation, dragging the grasped lid shut on its revolute lid_joint (collision:false so the hinge edge does not catch; the joint 'friction' then holds it closed). Fully physical + GPU-safe - no joint drive. release_after_last+retreat_xyz_m: once the lid is swung shut, OPEN the gripper and lift the hand 15 cm straight up - the lid then settles closed under its hinge damper + gravity and the arm parks clear, instead of holding a closed grip on the lid forever (which made the arm jitter at the end). The handle (handle_visual) is a visual child of lid_visual; scene_builder now glues it onto the lid body via the nearest-non-render-ancestor walk, so it rides the lid shut instead of floating in place (the grasp itself is on the lid's convex-hull collider, which already spans up through the handle volume)."
+}

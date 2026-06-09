@@ -11,14 +11,18 @@
     "type": "visual"
   },
   "Shape1": {
-    "type": "rigid",
+    "type": "visual",
     "density": 80.0,
     "uv": "auto"
   },
   "lid": {
     "type": "rigid",
     "density": 80.0,
-    "uv": "auto"
+    "static_friction": 1.5,
+    "dynamic_friction": 1.2,
+    "friction_combine_mode": "max",
+    "uv": "auto",
+    "_comment": "High grip friction (overrides the real 0.5) + combine_mode 'max' so the lid's friction wins the gripper contact (the Franka finger pads are instanced, so a low object friction is dragged down by the finger material). close_grill has no gravity-assist (unlike close_box, whose lid falls shut once nudged), so the arm must GRIP the lid and swing it the full 60deg - a weak grip slips and the lid barely moves."
   },
   "lid_visual": {
     "type": "visual"

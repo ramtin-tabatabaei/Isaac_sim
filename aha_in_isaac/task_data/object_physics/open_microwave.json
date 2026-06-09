@@ -1,6 +1,6 @@
 {
   "boundary_root": {
-    "type": "kinematic",
+    "type": "visual",
     "uv": "auto"
   },
   "microwave_frame_resp": {
@@ -11,7 +11,7 @@
     "type": "visual"
   },
   "microwave_door_resp": {
-    "type": "kinematic",
+    "type": "rigid",
     "uv": "auto"
   },
   "microwave_door": {

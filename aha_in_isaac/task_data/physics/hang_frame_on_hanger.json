@@ -1,4 +1,12 @@
 {
+  "planner": "diffik",
+  "gripper": {
+    "open": 0.04,
+    "closed": 0.01,
+    "static_friction": 4.0,
+    "dynamic_friction": 3.2
+  },
+  "waypoint_steps": {},
   "shapes": {
     "frame": {
       "dynamic": true,
@@ -26,7 +34,8 @@
       "respondable": 0,
       "collidable": 0,
       "mass": 0.015999997034668922,
-      "friction": 0.5
+      "friction": 0.5,
+      "mount_on_parent": true
     },
     "Cuboid2": {
       "dynamic": false,

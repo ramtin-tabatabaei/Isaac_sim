@@ -1,4 +1,12 @@
 {
+  "planner": "diffik",
+  "gripper": {
+    "open": 0.04,
+    "closed": 0.01,
+    "static_friction": 4.0,
+    "dynamic_friction": 3.2
+  },
+  "waypoint_steps": {},
   "shapes": {
     "fridge_root": {
       "dynamic": false,
@@ -82,7 +90,8 @@
       "respondable": 0,
       "collidable": 0,
       "mass": 0.13558518886566162,
-      "friction": 0.7099999785423279
+      "friction": 0.7099999785423279,
+      "mount_on_parent": true
     },
     "door_bottom_visual": {
       "dynamic": false,

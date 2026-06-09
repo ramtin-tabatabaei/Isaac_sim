@@ -349,6 +349,23 @@ def build_arm_motion(
                 grip = target
             else:
                 _append_follow(index, grip)
+        # Optional stable ending (opt-in, generic): after the last scripted waypoint, OPEN the
+        # gripper in place to let go of the manipulated body, then RETREAT the hand clear. Without
+        # this the arm holds a closed grip on the object forever (hold()), fighting it - e.g.
+        # close_grill keeps gripping the lid against the hinge/gravity, so the arm jitters at the
+        # end. Releasing lets the lid settle (its hinge damper + gravity hold it shut) and the
+        # retreat parks the arm in free space. Opt in with motion_config "release_after_last":true
+        # (+ optional "retreat_xyz_m":[dx,dy,dz] world offset, default 15 cm straight up).
+        if motion_config.get("release_after_last") and listed:
+            last = listed[-1]
+            lname, lpos, lquat = names[last], positions[last], quats[last]
+            motion.append(Waypoint(f"Release at {lname}", lpos, quat_w=lquat, gripper="open",
+                                   duration_steps=RELEASE_DWELL_STEPS))
+            retreat = motion_config.get("retreat_xyz_m") or [0.0, 0.0, 0.15]
+            if len(retreat) == 3 and any(retreat):
+                rpos = (lpos[0] + float(retreat[0]), lpos[1] + float(retreat[1]), lpos[2] + float(retreat[2]))
+                motion.append(Waypoint("Retreat clear", rpos, quat_w=lquat, gripper="open",
+                                       duration_steps=int(motion_config.get("retreat_steps", DEFAULT_WAYPOINT_STEPS))))
         return motion
 
     # Approach + grasp: follow the recorded waypoints up to and including the grasp,

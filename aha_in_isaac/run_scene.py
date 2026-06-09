@@ -12,7 +12,9 @@ arm through the task's waypoints.
 Pipeline (one module per responsibility):
     cli.py            - command-line arguments
     scene_context.py  - parse the report; derive poses / table / robot base
-    motion_config.py  - load per-task step counts (task_motion_config.json)
+    motion_config.py  - load per-task motion policy (planner / gripper / waypoint
+                        steps are authored in task_data/physics/<task>.json and
+                        overlaid onto this config at load)
     scene_builder.py  - spawn floor / table / objects / waypoints / robot
     arm_motion.py     - build the waypoint list the robot follows
     robot_arm.py      - spawn the Franka articulation
@@ -44,6 +46,7 @@ for _package_dir in ("isaaclab", "isaaclab_assets", "isaaclab_tasks"):
 
 from isaaclab.app import AppLauncher  # noqa: E402
 
+from appearance_config import load_appearance_config  # noqa: E402
 from cli import build_parser  # noqa: E402
 from motion_config import load_motion_config  # noqa: E402
 from scene_context import SceneContext  # noqa: E402
@@ -55,6 +58,37 @@ args_cli = parser.parse_args()
 
 CONTEXT = SceneContext.load(args_cli)
 MOTION_CONFIG = load_motion_config(args_cli.motion_config, CONTEXT.task_name)
+
+
+def _overlay_physics_motion_fields(motion_config, physics):
+    """The motion-policy fields (planner, gripper open/close + friction, per-waypoint step
+    counts) live in the task's physics JSON so each physics file fully describes what the
+    task uses. Overlay them onto the motion config so every downstream reader (planner
+    resolution, gripper setup, arm_motion) keeps seeing a single merged dict. The physics
+    JSON wins; anything it omits keeps the code/motion default."""
+    if not physics:
+        return
+    if physics.get("planner") is not None:
+        motion_config["planner"] = physics["planner"]
+    if physics.get("rrt_safety_margin") is not None:
+        motion_config["rrt_safety_margin"] = physics["rrt_safety_margin"]
+    if physics.get("waypoint_steps") is not None:
+        motion_config["waypoint_steps"] = physics["waypoint_steps"]
+    gripper = physics.get("gripper") or {}
+    if "closed" in gripper:
+        motion_config["gripper_closed"] = gripper["closed"]
+    if "open" in gripper:
+        motion_config["gripper_open"] = gripper["open"]
+    if "static_friction" in gripper or "dynamic_friction" in gripper:
+        motion_config["gripper_physics"] = {
+            "static_friction": gripper.get("static_friction"),
+            "dynamic_friction": gripper.get("dynamic_friction"),
+        }
+
+
+_overlay_physics_motion_fields(MOTION_CONFIG, CONTEXT.report.get("physics") or {})
+if args_cli.match_graspable_to_report is None:
+    args_cli.match_graspable_to_report = bool(MOTION_CONFIG.get("match_graspable_to_report", True))
 if args_cli.planner is None:
     args_cli.planner = str(MOTION_CONFIG.get("planner", "diffik"))
 if args_cli.planner not in {"diffik", "rmpflow", "curobo", "rrt"}:
@@ -62,12 +96,11 @@ if args_cli.planner not in {"diffik", "rmpflow", "curobo", "rrt"}:
         f"Invalid planner '{args_cli.planner}' in {args_cli.motion_config} for task '{CONTEXT.task_name}'. "
         "Expected one of: diffik, rmpflow, curobo, rrt."
     )
+# RRT obstacle margin: CLI flag wins; else the task's physics-config value; else 0.05 m.
+if args_cli.rrt_safety_margin is None:
+    args_cli.rrt_safety_margin = float(MOTION_CONFIG.get("rrt_safety_margin", 0.05))
 print(f"[INFO]: Planner resolved to '{args_cli.planner}' for task '{CONTEXT.task_name}'.")
-APPEARANCE_CONFIG = (
-    json.loads(args_cli.appearance_config.read_text(encoding="utf-8"))
-    if args_cli.appearance_config.is_file()
-    else {}
-)
+APPEARANCE_CONFIG = load_appearance_config(args_cli.appearance_config, CONTEXT.task_name)
 
 # 2. Launch the simulator.
 app_launcher = AppLauncher(args_cli)
@@ -89,18 +122,10 @@ if args_cli.show_colliders:
 import isaaclab.sim as sim_utils  # noqa: E402
 
 from arm_motion import _grasp_index, build_arm_motion  # noqa: E402
-from robot_arm import GRIPPER_CLOSED, GRIPPER_OPEN  # noqa: E402
+from robot_arm import GRIPPER_CLOSED, GRIPPER_OPEN, configure_franka_gripper_friction  # noqa: E402
 from robot_controller import EE_QUAT_DOWN, FrankaWaypointController, Waypoint  # noqa: E402
 from scene_builder import SceneBuilder, _prim_name, _render_base  # noqa: E402
 
-# Metres to lift the grasped wand straight up so the gripper/fingers clear the
-# buzz-wire apex (~1.05 m world) during the over-the-top carry. 0.20 m puts the
-# fingers well above the wire and keeps every carry point within the arm's reach.
-BEAT_THE_BUZZ_AUTO_CARRY_LIFT = 0.20
-# Physics steps to let the wand drop from its authored placement and settle into a
-# stable resting contact on the rod (under real gravity, no pin) before the arm moves.
-# The settle probe shows it converges by ~60 steps; 150 leaves a comfortable margin.
-PREGRASP_SETTLE_STEPS = 150
 # Friction grasp: how far BELOW the handle half-thickness the fingers close, so they pinch
 # the handle (the drive force grips it) instead of just resting against it. The wand rides
 # the rod (rod bears the weight), so the grip only needs to guide/slide it, not hold it up.
@@ -130,8 +155,8 @@ def _grasped_body_name(body_names) -> str | None:
 
 def _graspable_object_name():
     """The graspable object = the one the report gives a placement range (the object
-    the arm picks up; for beat_the_buzz that is `wand`). Used to pick the grasp
-    waypoint (the one sitting on this object) instead of merely the lowest one."""
+    the arm picks up). Used to pick the grasp waypoint (the one sitting on this object)
+    instead of merely the lowest one."""
     for obj in CONTEXT.report.get("objects", []):
         if obj.get("placement_range"):
             return obj.get("name")
@@ -194,50 +219,18 @@ def _effective_carry_lift() -> float:
     """
     if args_cli.carry_lift is not None:
         return float(args_cli.carry_lift)
-    # The beat_the_buzz lift-over is a diff-IK sweep whose VIA POINTS trace an
-    # up-and-over arc; it only applies to the planner-free diff-IK path. Planners that
-    # plan to a goal pose (curobo) or do their own linear-first/RRT routing (rrt) handle
-    # obstacle clearance themselves and should follow the recorded waypoints (lift 0).
-    if CONTEXT.task_name == "beat_the_buzz" and args_cli.planner == "diffik":
-        print(
-            "[INFO]: Auto-enabling beat_the_buzz lift-over path: "
-            f"--carry-lift {BEAT_THE_BUZZ_AUTO_CARRY_LIFT:.2f} "
-            "(pass --carry-lift 0 to follow the recorded path)."
-        )
-        return BEAT_THE_BUZZ_AUTO_CARRY_LIFT
-    return 0.0
+    return float(MOTION_CONFIG.get("carry_lift_m", 0.0))
 
 
-def _grasped_protruding_skin_paths(builder, grasped, min_dist: float = 0.06):
-    """Prim paths of the grasped object's PROTRUDING render skins (e.g. the wand's
-    ring, which sticks up away from the handle), so the planner avoids driving the arm
-    through them on the way in. Skins sitting AT the grasp (the handle) are excluded so
-    they don't block the grasp itself.
+def _physics_diagnostics() -> dict:
+    """The task's optional ``diagnostics`` block from its physics JSON.
 
-    A skin qualifies when it belongs to the grasped body (render base == ``grasped``)
-    and its world position is more than ``min_dist`` from the grasp waypoint. For a
-    normally-grasped object (skin at the grasp) nothing qualifies, so other tasks are
-    unaffected; for beat_the_buzz the ring (wand_visual, ~0.12 m above the grasp) does."""
-    from scene_context import pose_from_world_location
-
-    skins = getattr(builder, "skin_prim_paths", {}) or {}
-    if not skins or not grasped:
-        return []
-    waypoints = CONTEXT.waypoints
-    objects = {o["name"]: o for o in CONTEXT.report.get("objects", [])}
-    positions = [tuple(float(v) for v in w["world_location"]["position_xyz_m"]) for w in waypoints]
-    grasp_pos = positions[_grasp_index(waypoints, positions, _graspable_object_name())]
-    extra = []
-    for skin_name, skin_path in skins.items():
-        if _render_base(skin_name) != grasped or skin_name not in objects:
-            continue
-        (px, py, pz), _ = pose_from_world_location(objects[skin_name])
-        dist = ((px - grasp_pos[0]) ** 2 + (py - grasp_pos[1]) ** 2 + (pz - grasp_pos[2]) ** 2) ** 0.5
-        if dist > min_dist:
-            extra.append(skin_path)
-            print(f"[INFO]: Treating grasped-object part '{skin_name}' as an obstacle "
-                  f"(d={dist:.3f} m from the grasp).")
-    return extra
+    It names the bodies/skins (and tuning) the headless probes operate on - the
+    ``--collision-watch`` / ``--settle-probe`` / ``--pull-test`` ring-on-rod probes and
+    the ``CC_PRESS_WATCH`` button-press probe - so this module hard-codes no task-specific
+    names. Returns ``{}`` when a task declares none, so a probe simply reports it is
+    unconfigured and disables itself."""
+    return (CONTEXT.report.get("physics") or {}).get("diagnostics") or {}
 
 
 def _mesh_world_points(prim_path, max_pts: int = 400):
@@ -459,26 +452,70 @@ def _load_franka_collision_spheres(robot, device):
     )
 
 
-def _soften_rod_friction_for_slide(builder):
-    """For the slide-along-rod motion, lower the wand+rod friction (on their baked
-    ``<root>/PhysicsMaterial``) so the captive ring SLIDES along the rod. The baked 5.0 is for a
-    stable resting grasp and makes the ring grab the rod; a real beat-the-buzz ring slides nearly
-    free. Wand stays high enough for the gripper to hold the handle; the rod is dropped low."""
-    from pxr import UsdPhysics
+_AXIS_VEC = {"X": (1.0, 0.0, 0.0), "Y": (0.0, 1.0, 0.0), "Z": (0.0, 0.0, 1.0)}
 
+
+def _install_configured_constraints(builder):
+    """Create the inter-object constraints declared in the task's physics JSON
+    (``CONTEXT.report["physics"]["constraints"]``), so a task can persist a synthetic joint that is
+    NOT one of RLBench's recorded ``*_joint`` hierarchies. Data-driven: no task name is hard-coded
+    here; a task opts in purely by listing a constraint. Must run after ``design_scene()`` and before
+    ``sim.reset()`` so PhysX parses the joint with the scene.
+
+    A ``prismatic`` constraint records its axis's unit WORLD direction on
+    ``builder.constraint_axis_world[<name>]`` so the arm motion can drive ALONG it even when
+    task-root randomises the scene rotation. Returns the number of constraints created."""
+    from pxr import Gf, Sdf, Usd, UsdGeom, UsdPhysics
+
+    constraints = ((CONTEXT.report.get("physics") or {}).get("constraints") or {})
+    if not constraints:
+        return 0
     stage = sim_utils.get_current_stage()
-    for name, mu in (("wand", 1.5), ("Cuboid", 0.2)):
-        root = builder.body_prim_paths.get(name)
-        if not root:
+    builder.constraint_axis_world = getattr(builder, "constraint_axis_world", {})
+    created = 0
+    for cname, spec in constraints.items():
+        child = (spec or {}).get("child")
+        parent = (spec or {}).get("parent")
+        child_path = builder.body_prim_paths.get(child)
+        base_path = builder.body_prim_paths.get(parent)
+        if not child_path or not base_path:
+            print(f"[CONSTRAINT]: '{cname}': missing body for child='{child}'/parent='{parent}'; skipped.")
             continue
-        mat = stage.GetPrimAtPath(root + "/PhysicsMaterial")
-        if not mat or not mat.IsValid():
-            print(f"[SLIDE]: no PhysicsMaterial under {root}; friction unchanged for {name}.")
-            continue
-        api = UsdPhysics.MaterialAPI.Apply(mat)
-        api.CreateStaticFrictionAttr().Set(float(mu))
-        api.CreateDynamicFrictionAttr().Set(float(mu))
-        print(f"[SLIDE]: {name} friction -> {mu} so the ring slides along the rod.")
+        m_base = UsdGeom.Xformable(stage.GetPrimAtPath(base_path)).ComputeLocalToWorldTransform(Usd.TimeCode.Default())
+        m_child = UsdGeom.Xformable(stage.GetPrimAtPath(child_path)).ComputeLocalToWorldTransform(Usd.TimeCode.Default())
+        ctype = str((spec or {}).get("type", "prismatic")).lower()
+        axis = str((spec or {}).get("axis", "Y")).upper()
+        # Joint frame: at the child's position, oriented like the PARENT, so the joint axis is the
+        # parent's local axis (e.g. the rod = Cuboid local Y) regardless of the scene rotation.
+        j_world = Gf.Matrix4d(1.0)
+        j_world.SetRotateOnly(m_base.ExtractRotationMatrix())
+        j_world.SetTranslateOnly(m_child.ExtractTranslation())
+        j_in_base = j_world * m_base.GetInverse()
+        j_in_child = j_world * m_child.GetInverse()
+        rot0, rot1 = j_in_base.ExtractRotationQuat(), j_in_child.ExtractRotationQuat()
+        joint_path = f"{base_path}/{_prim_name(cname)}"
+        joint_cls = UsdPhysics.PrismaticJoint if ctype == "prismatic" else UsdPhysics.RevoluteJoint
+        joint = joint_cls.Define(stage, Sdf.Path(joint_path))
+        joint.CreateBody0Rel().SetTargets([Sdf.Path(base_path)])
+        joint.CreateBody1Rel().SetTargets([Sdf.Path(child_path)])
+        joint.CreateAxisAttr(axis)
+        joint.CreateLocalPos0Attr(Gf.Vec3f(j_in_base.ExtractTranslation()))
+        joint.CreateLocalRot0Attr(Gf.Quatf(rot0.GetReal(), *(float(v) for v in rot0.GetImaginary())))
+        joint.CreateLocalPos1Attr(Gf.Vec3f(j_in_child.ExtractTranslation()))
+        joint.CreateLocalRot1Attr(Gf.Quatf(rot1.GetReal(), *(float(v) for v in rot1.GetImaginary())))
+        if (spec or {}).get("lower_limit") is not None:
+            joint.CreateLowerLimitAttr(float(spec["lower_limit"]))
+        if (spec or {}).get("upper_limit") is not None:
+            joint.CreateUpperLimitAttr(float(spec["upper_limit"]))
+        axis_world = m_base.TransformDir(Gf.Vec3d(*_AXIS_VEC.get(axis, _AXIS_VEC["Y"]))).GetNormalized()
+        builder.constraint_axis_world[cname] = (float(axis_world[0]), float(axis_world[1]), float(axis_world[2]))
+        created += 1
+        print(f"[CONSTRAINT]: '{cname}' {ctype} joint '{child}'<-'{parent}' axis={axis} "
+              f"(world≈{tuple(round(v, 3) for v in builder.constraint_axis_world[cname])}), "
+              f"limits [{spec.get('lower_limit', '-')},{spec.get('upper_limit', '-')}].")
+    if created:
+        print(f"[INFO]: Created {created} configured constraint joint(s) before sim reset.")
+    return created
 
 
 def _install_grasp_height_watch(builder, controller, out_path):
@@ -552,20 +589,27 @@ def _install_grasp_height_watch(builder, controller, out_path):
 
 
 def _install_button_press_watch(builder, controller, out_path):
-    """Diagnostic (env CC_PRESS_WATCH=<file>): measure how far each pressable button
-    (target_button_topPlateN, prismatic-jointed to tv_remote) is depressed as the arm presses
-    it. The button rides the remote, so we measure its TRUE world-z RELATIVE to the remote's
-    world-z (subtracting the carry motion) and report the largest inward travel. RLBench's
-    success threshold is 1.5 mm on joint1 (plus) / joint2 (minus); the snapshot is variation 0,
-    so joint1/topPlate1 is the button being pressed. Writes a verdict file (survives app.close)."""
-    remote = _graspable_object_name() or "tv_remote"
+    """Diagnostic (env CC_PRESS_WATCH=<file>): measure how far each pressable button is
+    depressed as the arm presses it. The buttons RIDE a carrier body, so we measure each
+    button's TRUE world-z RELATIVE to the carrier's world-z (subtracting the carry motion)
+    and report the largest inward travel. Data-driven from the physics JSON
+    ``diagnostics.press_watch`` (``buttons`` = the bodies to track; ``success_buttons`` =
+    those whose >=1.5 mm depression counts as success); the carrier is the report's
+    graspable. Writes a verdict file (survives app.close). No-op for tasks without the block."""
+    cfg = _physics_diagnostics().get("press_watch") or {}
+    button_names = list(cfg.get("buttons") or [])
+    success_buttons = set(cfg.get("success_buttons") or button_names)
+    remote = cfg.get("carrier_body") or _graspable_object_name()
+    if not remote or not button_names:
+        print("[PRESS-WATCH] no diagnostics.press_watch in physics JSON; watch disabled.")
+        return
     remote_path = builder.body_prim_paths.get(remote)
     if not remote_path:
-        print(f"[PRESS-WATCH] no remote body '{remote}'; watch disabled.")
+        print(f"[PRESS-WATCH] no carrier body '{remote}'; watch disabled.")
         return
     remote_view = _wand_rigid_view(remote_path)
     buttons = {}
-    for name in ("target_button_topPlate1", "target_button_topPlate2", "target_button_topPlate0"):
+    for name in button_names:
         path = builder.body_prim_paths.get(name)
         if not path:
             continue
@@ -573,7 +617,7 @@ def _install_button_press_watch(builder, controller, out_path):
         if view is not None:
             buttons[name] = view
     if remote_view is None or not buttons:
-        print(f"[PRESS-WATCH] missing rigid views (remote={remote_view is not None}, "
+        print(f"[PRESS-WATCH] missing rigid views (carrier={remote_view is not None}, "
               f"buttons={list(buttons)}); watch disabled.")
         return
 
@@ -589,7 +633,7 @@ def _install_button_press_watch(builder, controller, out_path):
         rz = _z(remote_view)
         label = (getattr(controller, "_active_label", "") or "")
         for name, view in buttons.items():
-            gap = _z(view) - rz  # button height above the remote along world z
+            gap = _z(view) - rz  # button height above the carrier along world z
             s = state[name]
             s["n"] += 1
             if s["n"] <= 30:
@@ -606,12 +650,11 @@ def _install_button_press_watch(builder, controller, out_path):
         for name, s in state.items():
             rest = (sum(s["rest"]) / len(s["rest"])) if s["rest"] else float("nan")
             press = (rest - s["min_gap"]) if s["min_gap"] < 1e8 else 0.0
-            joint = name.replace("target_button_topPlate", "joint")
             ok = press >= THRESH
-            pressed_any = pressed_any or (ok and name in ("target_button_topPlate1", "target_button_topPlate2"))
-            lines.append(f"{name} ({joint}): rest gap {rest*1000:.2f} mm, max press {press*1000:.2f} mm "
+            pressed_any = pressed_any or (ok and name in success_buttons)
+            lines.append(f"{name}: rest gap {rest*1000:.2f} mm, max press {press*1000:.2f} mm "
                          f"('{s['label']}') {'>= 1.5mm PRESSED' if ok else '< 1.5mm'}")
-        lines.append(f"VERDICT: {'BUTTON PRESSED (joint1/2 >= 1.5mm: channel changed)' if pressed_any else 'NOT PRESSED'}")
+        lines.append(f"VERDICT: {'BUTTON PRESSED (a success button >= 1.5mm)' if pressed_any else 'NOT PRESSED'}")
         text = "\n".join(lines) + "\n"
         try:
             with open(out_path, "w") as f:
@@ -631,8 +674,8 @@ def _press_capture(builder, press_cfg):
     moved (origin_now - origin_start, added to the report's start world pose). The physics view
     reports the body ORIGIN in the task-root frame (baked mesh carries a big internal offset), so we
     track displacement, not absolute origin."""
-    obj_name = str(press_cfg.get("object", "target_button_topPlate1"))
-    remote_name = _graspable_object_name() or "tv_remote"
+    obj_name = press_cfg.get("object")  # the pressed body, named in the task's motion JSON
+    remote_name = _graspable_object_name()  # the carrier the button rides = the report's graspable
 
     def _cap(name):
         path = builder.body_prim_paths.get(name)
@@ -665,10 +708,10 @@ def _press_live_world(cap):
         live = origin_now + R_now * R_start^-1 * (report - origin_start)
 
     Using only the origin translation (the old ``report + (origin_now - origin0)``)
-    silently assumed the body never rotates. But the remote is top-down grasped and
-    carried (and rides a task root yaw-rotated ~-0.95 rad), so its frame DOES rotate;
-    the frozen world offset then points the wrong way and the arm presses off to the
-    side. Z is barely affected (the button stays on top), which is why lift/press-depth
+    silently assumed the body never rotates. But the carrier is top-down grasped and
+    carried (and rides a yaw-rotated task root), so its frame DOES rotate; the frozen
+    world offset then points the wrong way and the arm presses off to the side. Z is
+    barely affected (the button stays on top), which is why lift/press-depth
     still looked right while X/Y went the wrong direction. Reduces EXACTLY to the old
     formula when the orientation is unchanged (R_now == R_start)."""
     from scene_context import _qapply, _qinv
@@ -683,12 +726,13 @@ def _press_live_world(cap):
 
 
 def _run_button_press(controller, builder, press_cfg, press_cap):
-    """Live button-press phase (change_channel). The pressable button RIDES the remote, which the
-    task just relocated, so the recorded press waypoints (wp6/wp7, frozen at the remote's original
-    spawn) no longer point at the button. Read the button's ACTUAL world position now (start world +
-    measured displacement) and press straight down onto it - matching RLBench, whose press waypoint
-    is parented to the remote and tracks it live. Config: press_button = {object, approach_height_m,
-    press_depth_m, steps}."""
+    """Live button-press phase. The pressable button RIDES the carrier the task just relocated,
+    so the recorded press waypoints (frozen at the carrier's original spawn) no longer point at
+    the button. Read the button's ACTUAL world position now (start world + measured displacement)
+    and press straight down onto it - matching RLBench, whose press waypoint is parented to the
+    carrier and tracks it live. Entirely data-driven from the task's motion JSON ``press_button``
+    block ({object, press_waypoint, approach_height_m, press_depth_m / press_gap_m, steps, ...});
+    no task name is hard-coded here, so it runs for any task that declares that block."""
     from arm_motion import _waypoint_world_quat
 
     cap = (press_cap or {}).get("button")
@@ -697,10 +741,10 @@ def _run_button_press(controller, builder, press_cfg, press_cap):
         return
     controller.settle(int(press_cfg.get("settle_steps", 90)))  # let the placed remote come fully to rest
     bx, by, bz = _press_live_world(cap)
-    # Diagnostics: where did the remote + button actually end up vs the recorded waypoints?
+    # Diagnostics: where did the carrier + button actually end up vs the recorded waypoints?
     if (press_cap or {}).get("remote"):
         rmt = _press_live_world(press_cap["remote"])
-        print(f"[PRESS]: remote live world {tuple(round(v, 3) for v in rmt)} "
+        print(f"[PRESS]: carrier live world {tuple(round(v, 3) for v in rmt)} "
               f"(report {tuple(round(v, 3) for v in press_cap['remote']['report'])}).")
     print(f"[PRESS]: button '{press_cap['obj_name']}' live world {tuple(round(v, 3) for v in (bx, by, bz))} "
           f"(report {tuple(round(v, 3) for v in cap['report'])}).")
@@ -718,7 +762,7 @@ def _run_button_press(controller, builder, press_cfg, press_cap):
     # button. _grip_width clamps "closed" to controller.gripper_closed, so lower it for the press.
     controller.gripper_closed = float(press_cfg.get("press_grip", 0.0))
     wps = {w.get("name", f"waypoint{i}"): w for i, w in enumerate(CONTEXT.waypoints)}
-    press_n = press_cfg.get("press_waypoint", "waypoint7")
+    press_n = press_cfg.get("press_waypoint")  # which recorded waypoint's orientation to press with
     down_q = _waypoint_world_quat(wps[press_n], bool(getattr(args_cli, "ee_down", False))) \
         if press_n in wps else EE_QUAT_DOWN
     approach = Waypoint("Press approach", (bx, by, bz + approach_h), quat_w=down_q,
@@ -784,7 +828,11 @@ def _install_screenshot_capture(controller, sim, out_dir, interval_s):
 
 
 def _install_driven_close(controller, builder):
-    """Switch data-configured joint drives when their configured waypoint is reached."""
+    """Switch data-configured joint drives on when their configured waypoint is reached.
+
+    Generic + data-driven: only fires for a joint whose physics-JSON spec sets
+    ``close_at_waypoint`` (+ a drive). No task-specific behaviour lives here.
+    """
     joints = getattr(builder, "driven_close_joints", None)
     if not joints:
         return
@@ -829,7 +877,10 @@ def _install_collision_watch(builder, robot, controller, csv_path):
     import torch
 
     device = robot.device
-    grasped = _grasped_body_name(list(builder.body_prim_paths)) or "wand"
+    diag = _physics_diagnostics()
+    grasped = (diag.get("graspable_body")
+               or _grasped_body_name(list(builder.body_prim_paths))
+               or _graspable_object_name())
 
     obs_pts: list = []
     for name, path in builder.body_prim_paths.items():
@@ -842,10 +893,11 @@ def _install_collision_watch(builder, robot, controller, csv_path):
     if grasped in builder.body_prim_paths:
         ring_pts += _mesh_world_points(builder.body_prim_paths[grasped])
 
-    # The ring LOOP only (top of the wand_visual skin), for the hole-frame PCA. Mixing the
-    # handle in (ring_pts above) skews the centroid/normal, so keep this set separate.
+    # The ring LOOP only (top of the ring skin named in the physics JSON), for the hole-frame
+    # PCA. Mixing the handle in (ring_pts above) skews the centroid/normal, so keep it separate.
     ring_loop_pts: list = []
-    loop_path = (getattr(builder, "skin_prim_paths", {}) or {}).get("wand_visual")
+    ring_skin = diag.get("ring_skin")
+    loop_path = (getattr(builder, "skin_prim_paths", {}) or {}).get(ring_skin) if ring_skin else None
     if loop_path:
         import numpy as _np
         lp = _mesh_world_points(loop_path, max_pts=600)
@@ -1189,21 +1241,24 @@ def _build_planner(builder):
 
 
 def _run_settle_probe(builder, n_steps, sim, csv_path):
-    """Step the sim ``n_steps`` under pure gravity (no pin, no grasp) and log the wand's
+    """Step the sim ``n_steps`` under pure gravity (no pin, no grasp) and log the graspable's
     TRUE rigid-body pose plus the min distance from its (moving) collider to the static
-    Cuboid collider each step. Tells us whether the ring settles and HANGS on the rod
+    obstacle collider each step. Tells us whether the ring settles and HANGS on the rod
     (z drops a little then holds, ring->rod distance -> ~0 and stable) or FALLS off (z
-    keeps dropping toward the table). Writes a CSV + .summary.txt and returns."""
+    keeps dropping toward the table). Body/skin names + the wire/base z-split come from the
+    physics JSON ``diagnostics`` block. Writes a CSV + .summary.txt and returns."""
     import csv
 
     import numpy as np
 
-    wand_root = builder.body_prim_paths.get("wand")
-    cuboid_root = builder.body_prim_paths.get("Cuboid")
+    diag = _physics_diagnostics()
+    wand_root = builder.body_prim_paths.get(diag.get("graspable_body"))
+    cuboid_root = builder.body_prim_paths.get(diag.get("obstacle_body"))
     view = _wand_rigid_view(wand_root) if wand_root else None
     cub_pts = np.array(_mesh_world_points(cuboid_root, max_pts=4000)) if cuboid_root else np.empty((0, 3))
     if view is None or cub_pts.size == 0:
-        print(f"[SETTLE-PROBE] cannot run (view={view is not None}, cuboid_pts={cub_pts.shape}).")
+        print(f"[SETTLE-PROBE] cannot run (view={view is not None}, obstacle_pts={cub_pts.shape}); "
+              "needs diagnostics.graspable_body + diagnostics.obstacle_body in the physics JSON.")
         return
 
     def _pose():
@@ -1225,14 +1280,18 @@ def _run_settle_probe(builder, n_steps, sim, csv_path):
     wand_local = (R0.T @ (wand_world0 - p0).T).T
 
     # Separate the two contacts that matter: the RING vs the WIRE, and the HANDLE vs the BASE.
-    # Ring = the wand_visual render skin; wire = upper Cuboid pts (z>0.95); base box = lower
-    # Cuboid pts (z<0.88) bounding box. Track ring->wire distance and how far the wand collider
+    # Ring = the ring render skin; wire = upper obstacle pts (z>wire_z_min); base box = lower
+    # obstacle pts (z<base_z_max) bounding box. Track ring->wire distance and how far the collider
     # PENETRATES the base box (points sunk inside it = the "wand inside the base" the user saw).
-    ring_root = (getattr(builder, "skin_prim_paths", {}) or {}).get("wand_visual")
+    # The two z-thresholds come from diagnostics.settle_probe (task-specific frame geometry).
+    settle_cfg = diag.get("settle_probe") or {}
+    wire_z_min = float(settle_cfg.get("wire_z_min", 0.95))
+    base_z_max = float(settle_cfg.get("base_z_max", 0.88))
+    ring_root = (getattr(builder, "skin_prim_paths", {}) or {}).get(diag.get("ring_skin"))
     ring_w0 = np.array(_mesh_world_points(ring_root, max_pts=300)) if ring_root else wand_world0
     ring_local = (R0.T @ (ring_w0 - p0).T).T
-    wire = cub_pts[cub_pts[:, 2] > 0.95]
-    base = cub_pts[cub_pts[:, 2] < 0.88]
+    wire = cub_pts[cub_pts[:, 2] > wire_z_min]
+    base = cub_pts[cub_pts[:, 2] < base_z_max]
     base_lo, base_hi = (base.min(0), base.max(0)) if len(base) else (np.zeros(3), np.zeros(3))
 
     def _metrics(p, R):
@@ -1308,27 +1367,29 @@ def _run_settle_probe(builder, n_steps, sim, csv_path):
 
 
 def _run_pull_test(builder, speed, sim, csv_path):
-    """Isolated COLLISION test (no robot). Settle the bare wand on the rod under gravity,
-    then drive the wand's rigid body along the RECORDED carry direction (grasp waypoint ->
+    """Isolated COLLISION test (no robot). Settle the bare graspable on the rod under gravity,
+    then drive its rigid body along the RECORDED carry direction (grasp waypoint ->
     last waypoint) at ``speed`` m/s and log, each step, whether the rod is still threaded
     through the ring's hole and the closest ring-tube<->rod surface distance.
 
     Interpretation: the recorded carry is ~0.2 m almost entirely PERPENDICULAR to the rod
     axis, so with real collision the rod cannot leave the ring's hole (it would have to pass
-    through the ring's solid tube) -> the wand should STALL, rod stays threaded. If instead
-    the wand sails the full distance and the rod leaves the hole, the ring TUNNELED through
-    the rod = a collider defect."""
+    through the ring's solid tube) -> the body should STALL, rod stays threaded. If instead
+    it sails the full distance and the rod leaves the hole, the ring TUNNELED through the rod
+    = a collider defect. Body/skin names come from the physics JSON ``diagnostics`` block."""
     import csv
 
     import numpy as np
     import torch
 
-    wand_root = builder.body_prim_paths.get("wand")
-    cuboid_root = builder.body_prim_paths.get("Cuboid")
+    diag = _physics_diagnostics()
+    wand_root = builder.body_prim_paths.get(diag.get("graspable_body"))
+    cuboid_root = builder.body_prim_paths.get(diag.get("obstacle_body"))
     view = _wand_rigid_view(wand_root) if wand_root else None
     cub_pts = np.array(_mesh_world_points(cuboid_root, max_pts=8000)) if cuboid_root else np.empty((0, 3))
     if view is None or cub_pts.size == 0:
-        print(f"[PULL-TEST] cannot run (view={view is not None}, cuboid_pts={cub_pts.shape}).")
+        print(f"[PULL-TEST] cannot run (view={view is not None}, obstacle_pts={cub_pts.shape}); "
+              "needs diagnostics.graspable_body + diagnostics.obstacle_body in the physics JSON.")
         return
 
     def _pose():
@@ -1358,10 +1419,10 @@ def _run_pull_test(builder, speed, sim, csv_path):
         sim.step()
     p0, R0 = _pose()
 
-    # Ring geometry (the wand_visual render skin = the loop). Build the hole frame by PCA:
-    # the ring is a flat loop, so its thinnest principal axis is the hole normal, the centroid
-    # is the hole center, and the min in-plane radius is the hole's inner radius.
-    ring_root = (getattr(builder, "skin_prim_paths", {}) or {}).get("wand_visual")
+    # Ring geometry (the ring render skin named in the physics JSON = the loop). Build the hole
+    # frame by PCA: the ring is a flat loop, so its thinnest principal axis is the hole normal,
+    # the centroid is the hole center, and the min in-plane radius is the hole's inner radius.
+    ring_root = (getattr(builder, "skin_prim_paths", {}) or {}).get(diag.get("ring_skin"))
     ring_w = np.array(_mesh_world_points(ring_root, max_pts=400)) if ring_root else np.array(_mesh_world_points(wand_root, max_pts=400))
     ring_local = (R0.T @ (ring_w - p0).T).T
     c_local = ring_local.mean(0)
@@ -1508,15 +1569,15 @@ def _add_articulation_joints(builder):
     created = 0
     for name, entry in objects.items():
         parent = entry.get("parent") or ""
-        # Accept a bare "_joint" (e.g. close_box's lid hinge) OR a numbered "_jointN" - RLBench
-        # names the change_channel button joints target_button_joint1 / _joint2, which the old
-        # endswith("_joint") test silently dropped (so the buttons were never jointed/pressable).
-        joint_tail = parent.rsplit("_joint", 1)
-        if len(joint_tail) != 2 or (joint_tail[1] and not joint_tail[1].isdigit()):
-            continue
-        phys_joint = physics_joints.get(parent) or {}
+        # An object is jointed to its grandparent body when its PARENT is a joint node. The
+        # authoritative list of joint nodes is the physics-joint table, so match on it directly
+        # rather than guessing from the name shape. RLBench names joints many ways - "_joint"
+        # (close_box lid), "_jointN" (change_channel buttons), "_joint_<word>" (open_drawer's
+        # drawer_joint_bottom/middle/top), a bare "joint" (close_laptop_lid / open_wine_bottle),
+        # or "JointN" (straighten_rope) - and the old name-pattern gate silently dropped every
+        # form but the first two, so those drawers/lids/switches were never jointed.
+        phys_joint = physics_joints.get(parent)
         if not phys_joint:
-            print(f"[INFO]: '{name}' has an RLBench '{parent}' but no physics-joint entry; leaving it unjointed.")
             continue
         spec = dict(phys_joint)
         if not spec.get("type"):
@@ -1846,9 +1907,14 @@ def _notch_base_hinge_rim(builder):
 
 
 def main():
-    # A finer step + PhysX tuning are needed for a stable friction grasp; fall
-    # back to the lighter inspect-only step when no robot/grasping is involved.
-    if args_cli.no_robot:
+    # A finer step + PhysX tuning are needed for a stable friction grasp AND for an honest
+    # collision: a coarse step blows an SDF ring off a thin rod that the real (fine) step holds.
+    # So use the real physics whenever we actually simulate - the robot run OR a --no-robot physics
+    # diagnostic (settle-probe / pull-test / collision-watch). Only a pure, no-physics inspection
+    # (--no-robot with none of those) falls back to the lighter inspect-only step.
+    _physics_diag = bool(getattr(args_cli, "settle_probe", 0) or getattr(args_cli, "pull_test", 0)
+                         or getattr(args_cli, "collision_watch", None))
+    if args_cli.no_robot and not _physics_diag:
         sim_cfg = sim_utils.SimulationCfg(
             dt=1.0 / 60.0,
             device=args_cli.device,
@@ -1868,6 +1934,13 @@ def main():
 
     builder = SceneBuilder(args_cli, CONTEXT, APPEARANCE_CONFIG)
     robot = builder.design_scene()
+    if robot is not None:
+        gripper_physics = MOTION_CONFIG.get("gripper_physics") or {}
+        configure_franka_gripper_friction(
+            "/World/DesignScene/Robot",
+            static_friction=float(gripper_physics["static_friction"]),
+            dynamic_friction=float(gripper_physics["dynamic_friction"]),
+        )
     # Hinge any RLBench *_joint child with a physics-joint entry. Created here,
     # after the prims exist but before sim.reset(), so PhysX parses the joint with the scene.
     _add_articulation_joints(builder)
@@ -1877,19 +1950,32 @@ def main():
     # keep the lid collider full and notch the base's rim instead (hinge_base_rim_clearance_m).
     _trim_lid_hinge_collider(builder)
     _notch_base_hinge_rim(builder)
-    # beat_the_buzz: the ring is topologically CAPTIVE on the rod, so the recorded sideways carry
-    # (waypoint3) is impossible - it tunnels/ejects the ring (the wand flies off). Default to
-    # sliding the ring ALONG the rod instead, which keeps it threaded. Pass --slide-along-rod 0
-    # to force the (broken) recorded carry.
-    beat = CONTEXT.task_name == "beat_the_buzz"
     slide_raw = getattr(args_cli, "slide_along_rod", None)
-    # Default OFF: the robot follows the RECORDED waypoints. Pass --slide-along-rod DIST to use the
-    # along-rod slide instead (the only motion that keeps the captive ring threaded).
+    if slide_raw is None:
+        slide_raw = MOTION_CONFIG.get("slide_along_rod_m", 0.0)
+    settle_probe = int(getattr(args_cli, "settle_probe", 0) or 0)
+    # Install any PERSISTED constraints a task declares in task_data/physics/<task>.json
+    # "constraints" (generic, data-driven; no-op when a task declares none). Skipped for --no-robot
+    # diagnostics so the settle-probe/pull-test always see FREE physics.
+    if robot is not None and settle_probe == 0:
+        _install_configured_constraints(builder)
+    # The robot FOLLOWS THE RECORDED WAYPOINTS with real wand<->rod collision (no slide re-task, no
+    # carry-lift). --slide-along-rod DIST opts into the alternate along-the-rod slide if ever wanted.
     slide_along_rod = 0.0 if slide_raw is None else float(slide_raw)
     carry_lift = 0.0 if slide_along_rod > 0.0 else _effective_carry_lift()
+    # If a constraint defines a slide axis for the graspable, follow the rod's true world direction;
+    # otherwise default to world -Y (only used when --slide-along-rod is explicitly requested).
+    slide_axis_w = (0.0, -1.0, 0.0)
+    rod_axis = None
+    for _cname, _cspec in ((CONTEXT.report.get("physics") or {}).get("constraints") or {}).items():
+        if (_cspec or {}).get("child") == _graspable_object_name():
+            rod_axis = getattr(builder, "constraint_axis_world", {}).get(_cname)
+            break
+    if rod_axis is not None:
+        slide_axis_w = (-rod_axis[0], -rod_axis[1], -rod_axis[2])
     if slide_along_rod > 0.0:
-        print(f"[INFO]: beat_the_buzz: sliding the captive ring {slide_along_rod * 1000:.0f} mm ALONG "
-              "the rod (the recorded sideways carry would eject the captive ring).")
+        print(f"[INFO]: Sliding the graspable {slide_along_rod * 1000:.0f} mm ALONG the constraint axis "
+              f"(axis≈{tuple(round(v, 3) for v in slide_axis_w)}).")
     # The linear-first/RRT planner needs STRAIGHT segments so its straight-line collision
     # check matches what executes (a curved Catmull-Rom path wouldn't), so force it off.
     curvy = (not args_cli.straight_path) and args_cli.planner != "rrt"
@@ -1898,17 +1984,14 @@ def main():
         curvy=curvy, carry_lift=carry_lift,
         graspable_name=_graspable_object_name(),
         graspable_names=_dynamic_body_names(),
-        slide_along_rod=slide_along_rod,
+        slide_along_rod=slide_along_rod, slide_axis_w=slide_axis_w,
     )
-    # The baked 5.0 friction makes the ring GRAB the rod, so the forced slide jerks it off. Lower
-    # it so the ring slides freely (now safe: CCD + the depenetration cap are baked). ONLY when the
-    # robot actually runs the slide - a --no-robot settle test keeps the high baked friction.
-    if slide_along_rod > 0.0 and robot is not None:
-        _soften_rod_friction_for_slide(builder)
-    settle_probe = int(getattr(args_cli, "settle_probe", 0) or 0)
-    beat = CONTEXT.task_name == "beat_the_buzz"
-    friction_grasp = beat and robot is not None and settle_probe == 0
-    on_grasp, on_release = None, None  # contact-only: no pin, no joint
+    friction_grasp = (
+        bool(MOTION_CONFIG.get("geometry_friction_grasp", False))
+        and robot is not None
+        and settle_probe == 0
+    )
+    on_grasp, on_release = None, None
     sim.reset()
     print(f"[INFO]: {CONTEXT.task_name} design scene is placed.")
 
@@ -1943,14 +2026,15 @@ def main():
     gripper_closed = MOTION_CONFIG.get("gripper_closed", GRIPPER_CLOSED)
     derived = _grasp_close_width(builder, _graspable_object_name()) if friction_grasp else None
     if friction_grasp and derived is not None:
-        gripper_closed = max(derived - FRICTION_GRASP_SQUEEZE, 0.0)
+        squeeze = float(MOTION_CONFIG.get("gripper_squeeze_m", FRICTION_GRASP_SQUEEZE))
+        gripper_closed = max(derived - squeeze, 0.0)
         print(f"[INFO]: Friction grasp close width {gripper_closed * 1000.0:.1f} mm (handle half "
-              f"~{derived * 1000.0:.1f} mm minus a {FRICTION_GRASP_SQUEEZE * 1000.0:.0f} mm squeeze; fingers grip).")
+              f"~{derived * 1000.0:.1f} mm minus a {squeeze * 1000.0:.0f} mm squeeze; fingers grip).")
     controller = FrankaWaypointController(
         robot,
         sim,
         simulation_app,
-        gripper_open=GRIPPER_OPEN,
+        gripper_open=MOTION_CONFIG.get("gripper_open", GRIPPER_OPEN),
         gripper_closed=gripper_closed,
         planner=planner,
         on_grasp_complete=on_grasp,
@@ -1958,7 +2042,6 @@ def main():
         obstacle_points=obstacle_points,
         obstacle_margin=args_cli.rrt_safety_margin,
     )
-    controller.apply_gripper_friction()
     watch_state = (
         _install_collision_watch(builder, robot, controller, args_cli.collision_watch)
         if args_cli.collision_watch else None
@@ -1972,12 +2055,13 @@ def main():
     _install_driven_close(controller, builder)
     controller.reset_to_home()
 
-    # The arm ALWAYS follows the RECORDED waypoints (the dots) - no wand tracking / no
-    # re-targeting to wherever the wand settles. (settle_view/authored_wand_pose are kept only
-    # for diagnostics; the grasp pose is the recorded waypoint regardless of wand placement.)
-    # change_channel (and any task that opts in): after placing+releasing the grasped object,
-    # press a button that RIDES it, targeting the button's live pose (its recorded waypoints are
-    # stale once the object has been relocated). Capture the button reference BEFORE the motion.
+    # The arm ALWAYS follows the RECORDED waypoints (the dots) - no graspable tracking / no
+    # re-targeting to wherever the graspable settles. (The grasp pose is the recorded waypoint
+    # regardless of where the graspable is placed.)
+    # Any task that declares a motion-JSON `press_button` block opts into a live press phase:
+    # after placing+releasing the grasped object, press a button that RIDES it, targeting the
+    # button's live pose (its recorded waypoints are stale once the object has been relocated).
+    # Capture the button reference BEFORE the motion.
     press_cfg = MOTION_CONFIG.get("press_button")
     press_cap = _press_capture(builder, press_cfg) if press_cfg else None
     controller.follow(arm_waypoints)
@@ -1990,13 +2074,10 @@ def main():
             fn()
         return  # diagnostic run: write the verdict(s) and exit (don't hold forever)
     if watch_state is not None:
-        # After the gripper has released, step a little longer (arm parked) so the trace
-        # captures the wand resting on the wire (it should stay threaded, kept off the base by
-        # the wand<->Cuboid collision, not clip through it or fall off).
-        if beat:
-            print(f"[INFO]: Post-release settle for {PREGRASP_SETTLE_STEPS} steps "
-                  "(confirming the wand stays on the wire, doesn't clip the base)...")
-            controller.settle(PREGRASP_SETTLE_STEPS)
+        post_release_settle = int(MOTION_CONFIG.get("post_release_settle_steps", 0) or 0)
+        if post_release_settle > 0:
+            print(f"[INFO]: Post-release settle for {post_release_settle} steps.")
+            controller.settle(post_release_settle)
         # Diagnostic run: write the trace and exit (don't hold forever) so the
         # measurement can be read back; hold() never returns under --headless.
         _report_collision_watch(watch_state, args_cli.collision_watch)

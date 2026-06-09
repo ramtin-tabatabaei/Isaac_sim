@@ -1,4 +1,12 @@
 {
+  "planner": "diffik",
+  "gripper": {
+    "open": 0.04,
+    "closed": 0.01,
+    "static_friction": 4.0,
+    "dynamic_friction": 3.2
+  },
+  "waypoint_steps": {},
   "shapes": {
     "grill_root": {
       "dynamic": false,
@@ -55,7 +63,14 @@
       "type": "revolute",
       "cyclic": false,
       "lower": 0.0,
-      "upper": 60.000001669652114
+      "upper": 60.000001669652114,
+      "collision": false,
+      "friction": 1.0,
+      "drive_type": "force",
+      "stiffness": 0.0,
+      "damping": 5.0,
+      "target_velocity": 0.0,
+      "_comment": "grill (static base) <-> lid hinge. The lid spawns OPEN (raised) and gravity makes it FALL SHUT (closing = the handle drops, same direction gravity pulls); without a hold the lid flops to the 60deg stop in ~0.5s. PhysX 'friction' (jointFriction) is INERT for this maximal static-base<->dynamic joint - cranking it to 50 still let the lid fully flop. The HOLD is instead an angular DAMPER: a velocity drive with stiffness:0, target_velocity:0, damping:5 (N*m*s/rad). The lid is near-BALANCED at spawn (tiny gravity torque there), so the damper pins it: under its own weight it drifts only ~0.34deg and then sits still indefinitely (verified _probe_lid_gravity_stability, 0.34deg flat over 720 steps; idle hold is the same 0.33-0.34deg for damping 5/10/20 - the value barely matters for the hold). The damper value DOES matter for the close: lower damping lets the arm drag the lid further before the grip slips, so damping:5 gives the fullest close (~41deg under the arm, settling to ~53deg and continuing toward the 60deg shut-stop as gravity finishes it - verified _probe_close_grill_motion; damping:10/20 only reach ~37deg, damping:40 BLOCKS the close at 0.6deg). With stiffness:0 there is NO spring-back, so the lid STAYS wherever it is left and gravity holds it closed. This is real-grill behaviour: propped open and stable until the arm pushes it past balance, then it falls shut. The arm GRASPS the lid handle and swings it along the recorded path (task_motion_config close_grill: gripper_per_waypoint grasps at waypoint1, then sweeps waypoint2 with the wrist reorienting gradually via follow_path_orientation). collision:false avoids a spawn-overlap fling at the hinge edge. GPU-safe: a static USD drive parsed at build time - no mid-sim DriveAPI changes, no dynamic_control writes. friction:1.0 kept as a harmless secondary."
     }
   }
 }

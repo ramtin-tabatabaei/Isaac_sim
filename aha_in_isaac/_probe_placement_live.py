@@ -18,6 +18,7 @@ for _pkg in ("isaaclab", "isaaclab_assets", "isaaclab_tasks"):
         sys.path.insert(0, str(_p))
 
 from isaaclab.app import AppLauncher
+from appearance_config import load_appearance_config
 from cli import build_parser
 from scene_context import SceneContext
 
@@ -28,10 +29,7 @@ args_cli = parser.parse_args()
 OUT = args_cli.probe_out
 
 CONTEXT = SceneContext.load(args_cli)
-APPEARANCE = (
-    json.loads(args_cli.appearance_config.read_text(encoding="utf-8"))
-    if args_cli.appearance_config.is_file() else {}
-)
+APPEARANCE = load_appearance_config(args_cli.appearance_config, CONTEXT.task_name)
 
 app_launcher = AppLauncher(args_cli)
 simulation_app = app_launcher.app

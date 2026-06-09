@@ -24,12 +24,10 @@ import math
 import numpy as np
 import torch
 
-import isaaclab.sim as sim_utils
 from isaaclab.assets import Articulation
 from isaaclab.controllers import DifferentialIKController, DifferentialIKControllerCfg
 from isaaclab.sim import SimulationContext
 from isaaclab.utils.math import quat_slerp, subtract_frame_transforms
-from pxr import UsdPhysics
 
 # End-effector pointing straight down at the table (wxyz).
 EE_QUAT_DOWN = (0.0, 1.0, 0.0, 0.0)
@@ -222,6 +220,10 @@ class FrankaWaypointController:
         self.robot.write_data_to_sim()
         self.sim.step()
         self.robot.update(self.sim.get_physics_dt())
+        # Per-step physics hooks (e.g. a velocity clamp on a free object so a stiff grip can't
+        # punch it through a thin collider). Registered on ``self._post_step_hooks`` by run_scene.
+        for hook in getattr(self, "_post_step_hooks", ()):
+            hook()
         # If the physics state goes NaN, the whole articulation (incl. the arm)
         # is corrupted - usually an unstable collider on some object. Warn once.
         if not self._nan_warned and torch.isnan(self.robot.data.joint_pos).any():
@@ -304,40 +306,6 @@ class FrankaWaypointController:
     # ------------------------------------------------------------------
     # Public API.
     # ------------------------------------------------------------------
-    def apply_gripper_friction(self, static_friction: float = 4.0, dynamic_friction: float = 3.2):
-        """Bind a high-friction physics material to the fingertip colliders.
-
-        Needed for a stable friction grip on a rigid object; call once after the
-        robot has been spawned (the finger prims must exist on the stage).
-        """
-        material_path = "/World/PhysicsMaterials/GripperHighFriction"
-        material_cfg = sim_utils.RigidBodyMaterialCfg(
-            static_friction=static_friction,
-            dynamic_friction=dynamic_friction,
-            restitution=0.0,
-            friction_combine_mode="max",
-            restitution_combine_mode="multiply",
-        )
-        material_cfg.func(material_path, material_cfg)
-
-        stage = sim_utils.get_current_stage()
-        bound = 0
-        for prim in stage.Traverse():
-            prim_path = str(prim.GetPath())
-            is_finger = "panda_leftfinger" in prim_path or "panda_rightfinger" in prim_path
-            # The CollisionAPI often lives on a child mesh, so also match the
-            # finger link by name / a "collision" path and let the binding (which
-            # is applied nested) propagate down to the actual collider prims.
-            looks_like_collision = (
-                prim.HasAPI(UsdPhysics.CollisionAPI)
-                or "collision" in prim_path.lower()
-                or prim.GetName() in {"panda_leftfinger", "panda_rightfinger"}
-            )
-            if is_finger and looks_like_collision:
-                sim_utils.bind_physics_material(prim_path, material_path)
-                bound += 1
-        print(f"[INFO]: Applied high-friction gripper material to {bound} fingertip prims.")
-
     def reset_to_home(self):
         """Snap the arm to its default posture, settle physics, reset the IK."""
         robot = self.robot
@@ -579,8 +547,9 @@ class FrankaWaypointController:
             # Measuring vs. the previous target leaves smooth tracking untouched and only clips a
             # genuine IK spike (the target jumping > MAX_JOINT_STEP in one step, e.g. at a
             # singularity), so the stiff arm can never snap/fly.
+            _max_step = getattr(self, "max_joint_step", MAX_JOINT_STEP)
             joint_pos_des = self._hold_arm_target + torch.clamp(
-                joint_pos_des - self._hold_arm_target, -MAX_JOINT_STEP, MAX_JOINT_STEP
+                joint_pos_des - self._hold_arm_target, -_max_step, _max_step
             )
             self._hold_arm_target = joint_pos_des.clone()
 

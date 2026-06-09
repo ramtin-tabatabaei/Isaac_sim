@@ -1,4 +1,12 @@
 {
+  "planner": "diffik",
+  "gripper": {
+    "open": 0.04,
+    "closed": 0.01,
+    "static_friction": 4.0,
+    "dynamic_friction": 3.2
+  },
+  "waypoint_steps": {},
   "shapes": {
     "Cuboid": {
       "dynamic": false,
@@ -29,5 +37,15 @@
       "friction": 0.7099999785423279
     }
   },
-  "joints": {}
+  "joints": {},
+  "_comment_diagnostics": "Body/skin names + tuning the headless --collision-watch / --settle-probe / --pull-test probes operate on, so run_scene.py holds no task-specific names. graspable_body = the moving body whose true pose is tracked; obstacle_body = the static frame it must clear; ring_skin = the captive-ring render skin used for the hole-frame PCA. settle_probe.wire_z_min / base_z_max split the obstacle's world points into the upper rod (ring rides it) and lower base box (penetration check).",
+  "diagnostics": {
+    "graspable_body": "wand",
+    "obstacle_body": "Cuboid",
+    "ring_skin": "wand_visual",
+    "settle_probe": {
+      "wire_z_min": 0.95,
+      "base_z_max": 0.88
+    }
+  }
 }

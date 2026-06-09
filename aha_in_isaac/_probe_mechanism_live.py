@@ -7,10 +7,10 @@ joint creation, settles under gravity, then writes a JSON verdict:
 
 Run: isaaclab.sh -p _probe_mechanism_live.py  (args are hard-set below via sys.argv)
 """
-import sys, json
+import sys, os, json
 from pathlib import Path
 
-TASK = "change_clock"
+TASK = os.environ.get("AHA_PROBE_TASK", "change_clock")
 CTX = f"/home/ramtin/AHA/portable_scene_reports/{TASK}.scene_context.md"
 USD = f"task_usds/{TASK}_physics"
 OUT = Path(f"/tmp/{TASK}_mechanism.json")

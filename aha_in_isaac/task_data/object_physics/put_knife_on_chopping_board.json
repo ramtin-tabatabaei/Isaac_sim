@@ -1,6 +1,6 @@
 {
   "chopping_board": {
-    "type": "rigid",
+    "type": "kinematic",
     "density": 400.0,
     "uv": "auto"
   },
@@ -9,7 +9,7 @@
     "uv": "auto"
   },
   "boundary": {
-    "type": "kinematic",
+    "type": "visual",
     "uv": "auto"
   },
   "chopping_board_visual": {

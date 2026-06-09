@@ -4,7 +4,7 @@
     "uv": "auto"
   },
   "task_wall": {
-    "type": "rigid",
+    "type": "kinematic",
     "density": 80.0,
     "uv": "auto"
   },
@@ -25,12 +25,12 @@
     "type": "visual"
   },
   "hole_visual1": {
-    "type": "rigid",
+    "type": "visual",
     "density": 80.0,
     "uv": "auto"
   },
   "hole_visual2": {
-    "type": "rigid",
+    "type": "visual",
     "density": 80.0,
     "uv": "auto"
   }

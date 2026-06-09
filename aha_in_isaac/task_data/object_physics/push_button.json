@@ -1,15 +1,15 @@
 {
   "push_button_target": {
-    "type": "rigid",
+    "type": "kinematic",
     "density": 200.0,
     "uv": "auto"
   },
   "target_button_topPlate": {
-    "type": "kinematic",
+    "type": "rigid",
     "uv": "auto"
   },
   "target_button_wrap": {
-    "type": "kinematic",
+    "type": "visual",
     "uv": "auto"
   }
 }

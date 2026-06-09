@@ -1,6 +1,6 @@
 {
   "frame": {
-    "type": "kinematic",
+    "type": "rigid",
     "uv": "auto"
   },
   "task_wall": {
@@ -11,22 +11,22 @@
     "type": "visual"
   },
   "frame_detector": {
-    "type": "rigid",
+    "type": "visual",
     "density": 400.0,
     "uv": "auto"
   },
   "head": {
-    "type": "rigid",
+    "type": "kinematic",
     "density": 80.0,
     "uv": "auto"
   },
   "picture": {
-    "type": "rigid",
+    "type": "kinematic",
     "density": 80.0,
     "uv": "auto"
   },
   "hanger": {
-    "type": "rigid",
+    "type": "kinematic",
     "density": 80.0,
     "uv": "auto"
   }

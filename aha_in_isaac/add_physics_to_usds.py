@@ -106,6 +106,10 @@ parser.add_argument(
 )
 parser.add_argument("--overwrite", action="store_true", help="Overwrite existing files in --output-dir.")
 parser.add_argument(
+    "--exclude", action="append", default=[],
+    help="Task name to skip in --batch-root mode (repeatable). Use to protect hand-curated tasks.",
+)
+parser.add_argument(
     "--no-import-physics", action="store_true",
     help="Ignore task_data/physics (CoppeliaSim mass/friction); use only the hand-authored config.",
 )
@@ -203,6 +207,8 @@ def _load_task_config(config_path: Path, task: str) -> tuple[dict, dict]:
             avail = ", ".join(sorted(p.stem for p in config_path.glob("*.json") if not p.stem.startswith("_"))) or "(none)"
             raise KeyError(f"Task '{task}' config not found at {task_path}. Available: {avail}")
         data = json.loads(task_path.read_text(encoding="utf-8")) or {}
+        if not data.get("_inherit_defaults", True):
+            defaults = {}
         task_block = {k: v for k, v in data.items() if not k.startswith("_")}
         return defaults, task_block
     if not config_path.is_file():
@@ -211,8 +217,9 @@ def _load_task_config(config_path: Path, task: str) -> tuple[dict, dict]:
     if task not in data:
         tasks = ", ".join(k for k in data if not k.startswith("_")) or "(none)"
         raise KeyError(f"Task '{task}' not in {config_path}. Available: {tasks}")
-    defaults = data.get("_defaults", {})
-    task_block = {k: v for k, v in data[task].items() if not k.startswith("_")}
+    task_data = data[task]
+    defaults = data.get("_defaults", {}) if task_data.get("_inherit_defaults", True) else {}
+    task_block = {k: v for k, v in task_data.items() if not k.startswith("_")}
     return defaults, task_block
 
 
@@ -255,8 +262,15 @@ def _config_spec(stem: str, defaults: dict, task_block: dict, physics: dict | No
     if physics:
         if physics.get("dynamic") is not None:
             spec["type"] = "rigid" if bool(physics["dynamic"]) else "kinematic"
-        if physics.get("collidable") is not None:
-            spec["collision"] = bool(physics["collidable"])
+        # A shape is a solid collider if CoppeliaSim marks it RESPONDABLE (it takes part in
+        # dynamic collision response) OR collidable. Using only 'collidable' wrongly dropped
+        # the collider from respondable static obstacles whose collidable flag is 0 - e.g. a
+        # chopping board (a knife placed on it then fell straight through), a saucepan, a lamp
+        # base. 'respondable or collidable' only ADDS colliders, never removes one, and an
+        # explicit "collision": false in the per-task config still wins below.
+        resp, coll = physics.get("respondable"), physics.get("collidable")
+        if resp is not None or coll is not None:
+            spec["collision"] = bool(resp) or bool(coll)
         friction = physics.get("friction")
         if friction is not None:
             spec["static_friction"] = float(friction)
@@ -273,8 +287,16 @@ def _config_spec(stem: str, defaults: dict, task_block: dict, physics: dict | No
         # hollow box / thin lid can get a CONCAVE-correct collider ('convexDecomposition' = the
         # walls/cavity as separate convex pieces) instead of the convex-hull default that fills the
         # cavity into a solid block. Per-task config still overrides these.
-        for _k in ("collider", "contact_offset", "rest_offset",
-                   "max_convex_hulls", "hull_vertex_limit", "voxel_resolution", "sdf_resolution"):
+        for _k in (
+            "collider",
+            "contact_offset",
+            "rest_offset",
+            "max_convex_hulls",
+            "hull_vertex_limit",
+            "voxel_resolution",
+            "sdf_resolution",
+            "sdf_margin",
+        ):
             if physics.get(_k) is not None:
                 spec[_k] = physics[_k]
     if best_key is not None:
@@ -371,19 +393,20 @@ def _bake_rigid(stage: Usd.Stage, spec: dict, kinematic: bool) -> int:
     # dynamic body (e.g. the wand handle) can tunnel through a face and then sit INSIDE it with
     # no contact to push it out. 'convexDecomposition' makes the base a solid hull while keeping
     # the thin bent wire as separate thin hulls (a plain convexHull would fill the wire's arch).
-    # Dynamic bodies need a convex/SDF collider.
+    # Dynamic bodies need a convex/SDF collider. Static bodies can also opt into SDF when an
+    # exact triangle shell is too thin and convex decomposition distorts concave geometry.
     if kinematic:
         collider = str(spec.get("collider", "none"))
     else:
         collider = str(spec.get("collider", "convexHull"))
-    # 'sdf' gives a DYNAMIC body an accurate *concave* collider via a signed-distance
-    # field: it keeps holes/cavities (e.g. a ring that must thread onto a rod), where
+    # 'sdf' gives a mesh an accurate *concave* collider via a signed-distance field: it keeps
+    # holes/cavities (e.g. a ring that must thread onto a rod), where
     # a convex hull would fill the hole and eject the body. The mesh collision
     # approximation attribute MUST be the 'sdf' token (PhysxSchema.Tokens.sdf); merely
     # applying PhysxSDFMeshCollisionAPI while leaving approximation 'none' makes PhysX
     # treat it as a raw triangle mesh, which is INVALID for a dynamic body and silently
     # falls back to convexHull (which fills the hole and ejects the grasped body).
-    use_sdf = collider == "sdf" and not kinematic and _HAS_PHYSX
+    use_sdf = collider == "sdf" and _HAS_PHYSX
     if use_sdf:
         approximation = PhysxSchema.Tokens.sdf
     else:
@@ -403,6 +426,8 @@ def _bake_rigid(stage: Usd.Stage, spec: dict, kinematic: bool) -> int:
                 if use_sdf:
                     sdf_api = PhysxSchema.PhysxSDFMeshCollisionAPI.Apply(prim)
                     sdf_api.CreateSdfResolutionAttr(int(spec.get("sdf_resolution", 256)))
+                    if spec.get("sdf_margin") is not None:
+                        sdf_api.CreateSdfMarginAttr(float(spec["sdf_margin"]))
                 elif collider == "convexHull" and not kinematic:
                     PhysxSchema.PhysxConvexHullCollisionAPI.Apply(prim)
                 elif collider == "convexDecomposition":
@@ -531,12 +556,17 @@ def _run_batch():
     if not root.is_dir():
         raise FileNotFoundError(f"--batch-root not found: {root}")
 
+    exclude = set(args_cli.exclude or [])
     task_dirs = [d for d in sorted(root.iterdir()) if d.is_dir() and not d.name.endswith(suffix)]
-    print(f"[INFO]: Batch baking under {root} ({len(task_dirs)} candidate task folder(s)).")
+    print(f"[INFO]: Batch baking under {root} ({len(task_dirs)} candidate task folder(s))"
+          f"{f'; excluding {sorted(exclude)}' if exclude else ''}.")
 
     baked, skipped, failed = [], [], []
     for task_dir in task_dirs:
         task = task_dir.name
+        if task in exclude:
+            skipped.append(f"{task} (excluded)")
+            continue
         output_dir = root / f"{task}{suffix}"
         if output_dir.is_dir() and any(output_dir.iterdir()) and not args_cli.overwrite:
             skipped.append(f"{task} (already baked)")

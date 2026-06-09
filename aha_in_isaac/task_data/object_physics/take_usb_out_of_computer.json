@@ -1,6 +1,6 @@
 {
   "usb": {
-    "type": "kinematic",
+    "type": "rigid",
     "uv": "auto"
   },
   "computer": {
@@ -12,7 +12,7 @@
     "type": "visual"
   },
   "tip": {
-    "type": "rigid",
+    "type": "visual",
     "density": 80.0,
     "uv": "auto"
   },
@@ -20,22 +20,22 @@
     "type": "visual"
   },
   "Plane": {
-    "type": "rigid",
+    "type": "kinematic",
     "density": 80.0,
     "uv": "auto"
   },
   "Plane0": {
-    "type": "rigid",
+    "type": "kinematic",
     "density": 80.0,
     "uv": "auto"
   },
   "Plane1": {
-    "type": "rigid",
+    "type": "kinematic",
     "density": 80.0,
     "uv": "auto"
   },
   "Plane2": {
-    "type": "rigid",
+    "type": "kinematic",
     "density": 80.0,
     "uv": "auto"
   }

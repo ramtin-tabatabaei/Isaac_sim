@@ -1,0 +1,47 @@
+{
+  "_README": [
+    "Per-task, per-object APPEARANCE config for scene_builder.py (applied at scene",
+    "build time, unlike task_data/object_physics/<task>.json which is baked offline).",
+    "Object keys match a file/object-name suffix; the longest matching key wins,",
+    "and each entry is merged over '_defaults'.",
+    "",
+    "Fields:",
+    "  visible  : false to hide the object's render (physics still applies).",
+    "  texture  : path to a .png/.jpg image. Absolute, or relative to this file's",
+    "             folder (e.g. 'textures/basketball.png'). Drop your images there.",
+    "             NOTE: these exported meshes have no UV coordinates, so a texture",
+    "             samples ~one color; 'color' is used as the fallback/ tint.",
+    "  color    : [r, g, b] in 0..1, used when there is no texture (or as fallback).",
+    "  roughness: 0 = glossy, 1 = matte.",
+    "  metallic : 0 = dielectric, 1 = metal."
+  ],
+  "_defaults": {
+    "texture": null,
+    "color": [
+      0.8,
+      0.8,
+      0.8
+    ],
+    "roughness": 0.8,
+    "metallic": 0.0
+  },
+  "_scene": {
+    "table": {
+      "texture": "textures/wood.png",
+      "color": [
+        0.45,
+        0.3,
+        0.16
+      ],
+      "roughness": 0.55
+    },
+    "floor": {
+      "color": [
+        0.08,
+        0.08,
+        0.08
+      ],
+      "roughness": 0.9
+    }
+  }
+}

@@ -1,14 +1,14 @@
 {
   "cup_distractor1": {
-    "type": "kinematic",
+    "type": "rigid",
     "uv": "auto"
   },
   "cup_distractor2": {
-    "type": "kinematic",
+    "type": "rigid",
     "uv": "auto"
   },
   "cup_target": {
-    "type": "rigid",
+    "type": "kinematic",
     "density": 200.0,
     "uv": "auto"
   },
@@ -18,20 +18,20 @@
     "uv": "auto"
   },
   "boundary": {
-    "type": "kinematic",
+    "type": "visual",
     "uv": "auto"
   },
   "cup_distractor0": {
-    "type": "kinematic",
+    "type": "rigid",
     "uv": "auto"
   },
   "cup_distractor_visual1": {
-    "type": "rigid",
+    "type": "visual",
     "density": 200.0,
     "uv": "auto"
   },
   "cup_distractor_visual2": {
-    "type": "rigid",
+    "type": "visual",
     "density": 200.0,
     "uv": "auto"
   },
@@ -42,7 +42,7 @@
     "type": "visual"
   },
   "cup_distractor_visual0": {
-    "type": "rigid",
+    "type": "visual",
     "density": 200.0,
     "uv": "auto"
   }

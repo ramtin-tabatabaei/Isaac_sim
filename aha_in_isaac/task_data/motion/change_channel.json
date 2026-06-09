@@ -1,0 +1,19 @@
+{
+  "grasp_z_offset_m": 0.008,
+  "_comment": "Grasp+carry+place the remote via wp0..wp5 (release at wp5), THEN press the button in a live phase: the button rides the relocated remote, so its recorded wp6/wp7 are stale. press_button reads the button's ACTUAL pose at runtime and presses straight down onto it.",
+  "gripper_per_waypoint": {
+    "waypoint0": "open",
+    "waypoint1": "closed",
+    "waypoint2": "closed",
+    "waypoint3": "closed",
+    "waypoint4": "open",
+    "waypoint5": "open"
+  },
+  "press_button": {
+    "object": "target_button_topPlate1",
+    "press_waypoint": "waypoint7",
+    "approach_height_m": 0.07,
+    "press_gap_m": 0.01,
+    "steps": 200
+  }
+}

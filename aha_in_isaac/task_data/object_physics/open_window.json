@@ -1,10 +1,10 @@
 {
   "boundary_root": {
-    "type": "kinematic",
+    "type": "visual",
     "uv": "auto"
   },
   "window_main": {
-    "type": "rigid",
+    "type": "kinematic",
     "density": 80.0,
     "uv": "auto"
   },
@@ -13,7 +13,7 @@
     "uv": "auto"
   },
   "window_wall0": {
-    "type": "rigid",
+    "type": "kinematic",
     "density": 80.0,
     "uv": "auto"
   },
@@ -24,11 +24,11 @@
     "type": "visual"
   },
   "left_frame": {
-    "type": "kinematic",
+    "type": "rigid",
     "uv": "auto"
   },
   "window_left": {
-    "type": "rigid",
+    "type": "kinematic",
     "density": 80.0,
     "uv": "auto"
   },

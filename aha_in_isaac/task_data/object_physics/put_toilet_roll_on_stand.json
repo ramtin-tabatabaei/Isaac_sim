@@ -1,6 +1,6 @@
 {
   "toilet_roll_box": {
-    "type": "kinematic",
+    "type": "rigid",
     "uv": "auto"
   },
   "stand_base": {
@@ -8,11 +8,11 @@
     "uv": "auto"
   },
   "boundary_roll": {
-    "type": "kinematic",
+    "type": "visual",
     "uv": "auto"
   },
   "boundary_stand": {
-    "type": "kinematic",
+    "type": "visual",
     "uv": "auto"
   },
   "toilet_roll": {

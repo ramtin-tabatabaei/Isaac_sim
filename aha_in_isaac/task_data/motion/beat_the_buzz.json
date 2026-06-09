@@ -1,0 +1,10 @@
+{
+  "_inherit_defaults": false,
+  "_comment": "Real physics, gravity ON. Keep the exported fixed wand-to-base transform; snapping the asymmetric wand's visual bounding-box center to its object origin misplaces its collider. The robot follows the recorded waypoints with real wand-to-rod collision.",
+  "match_graspable_to_report": false,
+  "geometry_friction_grasp": true,
+  "gripper_squeeze_m": 0.006,
+  "carry_lift_m": 0.0,
+  "slide_along_rod_m": 0.0,
+  "post_release_settle_steps": 150
+}

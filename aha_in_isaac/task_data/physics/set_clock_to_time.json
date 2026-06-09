@@ -1,4 +1,12 @@
 {
+  "planner": "diffik",
+  "gripper": {
+    "open": 0.04,
+    "closed": 0.01,
+    "static_friction": 4.0,
+    "dynamic_friction": 3.2
+  },
+  "waypoint_steps": {},
   "shapes": {
     "clock": {
       "dynamic": false,
@@ -40,7 +48,8 @@
       "respondable": 0,
       "collidable": 0,
       "mass": 3.000826835632324,
-      "friction": 0.7099999785423279
+      "friction": 0.7099999785423279,
+      "mount_on_parent": true
     },
     "clock_needle_crank_visual": {
       "dynamic": false,

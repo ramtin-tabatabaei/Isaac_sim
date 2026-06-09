@@ -20,15 +20,15 @@
     "uv": "auto"
   },
   "pepper2": {
-    "type": "kinematic",
+    "type": "rigid",
     "uv": "auto"
   },
   "pepper0": {
-    "type": "kinematic",
+    "type": "rigid",
     "uv": "auto"
   },
   "pepper1": {
-    "type": "kinematic",
+    "type": "rigid",
     "uv": "auto"
   },
   "scales_meter_pivot": {
@@ -36,17 +36,17 @@
     "uv": "auto"
   },
   "pepper_visual2": {
-    "type": "rigid",
+    "type": "visual",
     "density": 150.0,
     "uv": "auto"
   },
   "pepper_visual0": {
-    "type": "rigid",
+    "type": "visual",
     "density": 150.0,
     "uv": "auto"
   },
   "pepper_visual1": {
-    "type": "rigid",
+    "type": "visual",
     "density": 150.0,
     "uv": "auto"
   },
@@ -56,7 +56,7 @@
     "uv": "auto"
   },
   "scales_meter_needle": {
-    "type": "rigid",
+    "type": "kinematic",
     "density": 1200.0,
     "uv": "auto"
   },

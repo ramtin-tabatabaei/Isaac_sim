@@ -34,7 +34,7 @@ HERE = Path(__file__).resolve().parent
 REPORTS_DIR = Path("/home/ramtin/AHA/portable_scene_reports")
 TEXTURES_DIR = HERE / "textures"
 OBJECT_PHYSICS_DIR = HERE / "task_data" / "object_physics"  # per-task <task>.json (+ _defaults.json)
-APPEARANCE_CONFIG = HERE / "object_appearance_config.json"
+APPEARANCE_DIR = HERE / "task_data" / "appearance"  # per-task <task>.json (+ shared _shared.json)
 TEX_SIZE = 128
 # Hand-curated task blocks that the generator must never overwrite.
 CURATED = {"basketball_in_hoop", "wipe_desk", "beat_the_buzz"}
@@ -125,7 +125,7 @@ def _load(path: Path) -> dict:
 
 def main():
     OBJECT_PHYSICS_DIR.mkdir(parents=True, exist_ok=True)
-    appearance = _load(APPEARANCE_CONFIG)
+    APPEARANCE_DIR.mkdir(parents=True, exist_ok=True)
 
     reports = sorted(REPORTS_DIR.glob("*.scene_context.json"))
     print(f"[INFO]: {len(reports)} scene reports found.")
@@ -181,16 +181,15 @@ def main():
                 "metallic": 0.6 if style == "metal" else 0.0,
             }
 
-        # Write this task's object physics as its own file; CURATED tasks are skipped above so
-        # their hand-tuned files stay untouched. Appearance remains a single combined file.
+        # Write this task's object physics AND appearance as their own files; CURATED tasks are
+        # skipped above so their hand-tuned files stay untouched. One file per task = editing one
+        # task never touches another (the shared appearance _shared.json is hand-curated, untouched).
         (OBJECT_PHYSICS_DIR / f"{task}.json").write_text(json.dumps(physics_block, indent=2) + "\n", encoding="utf-8")
-        appearance[task] = appearance_block
+        (APPEARANCE_DIR / f"{task}.json").write_text(json.dumps(appearance_block, indent=2) + "\n", encoding="utf-8")
         added_tasks += 1
 
-    APPEARANCE_CONFIG.write_text(json.dumps(appearance, indent=2) + "\n", encoding="utf-8")
-    print(f"[INFO]: Wrote {added_tasks} per-task object-physics file(s) under {OBJECT_PHYSICS_DIR}; "
-          f"{tex_count} textures under {TEXTURES_DIR}.")
-    print(f"[INFO]: Updated {APPEARANCE_CONFIG.name}.")
+    print(f"[INFO]: Wrote {added_tasks} per-task object-physics + appearance file(s) under "
+          f"{OBJECT_PHYSICS_DIR} and {APPEARANCE_DIR}; {tex_count} textures under {TEXTURES_DIR}.")
 
 
 if __name__ == "__main__":

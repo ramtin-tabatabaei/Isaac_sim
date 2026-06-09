@@ -1,32 +1,53 @@
 {
+  "_inherit_defaults": false,
   "Cuboid": {
     "type": "kinematic",
+    "mass": 3.5510506629943848,
+    "density": 0.0,
     "collision": true,
-    "collider": "convexDecomposition",
-    "max_convex_hulls": 96,
-    "static_friction": 5.0,
-    "dynamic_friction": 5.0,
+    "static_friction": 0.5,
+    "dynamic_friction": 0.5,
+    "restitution": 0.0,
+    "friction_combine_mode": "average",
+    "compliant_stiffness": 0.0,
+    "compliant_damping": 0.0,
+    "collider": "sdf",
+    "sdf_resolution": 256,
+    "sdf_margin": 0.0,
+    "contact_offset": 0.001,
+    "rest_offset": 0.0,
+    "ccd": false,
     "uv": "auto"
   },
   "wand": {
     "type": "rigid",
-    "mass": 0.05,
+    "mass": 0.1,
     "density": 0.0,
+    "collision": true,
+    "static_friction": 0.7099999785423279,
+    "dynamic_friction": 0.7099999785423279,
+    "restitution": 0.0,
+    "friction_combine_mode": "average",
+    "compliant_stiffness": 0.0,
+    "compliant_damping": 0.0,
     "collider": "sdf",
     "sdf_resolution": 256,
-    "static_friction": 5.0,
-    "dynamic_friction": 5.0,
+    "sdf_margin": 0.0,
     "disable_gravity": false,
     "ccd": true,
     "max_depenetration_velocity": 3.0,
-    "contact_offset": 0.012,
+    "contact_offset": 0.001,
     "rest_offset": 0.0,
     "uv": "auto"
   },
   "wand_visual": {
-    "type": "visual"
+    "type": "visual",
+    "collision": false,
+    "uv": "none"
   },
   "wand_visual_sub": {
-    "type": "visual"
+    "type": "visual",
+    "collision": false,
+    "uv": "none"
   }
 }

@@ -4,7 +4,7 @@
     "uv": "auto"
   },
   "task_wall": {
-    "type": "rigid",
+    "type": "kinematic",
     "density": 80.0,
     "uv": "auto"
   },
@@ -21,16 +21,16 @@
     "uv": "auto"
   },
   "charger": {
-    "type": "kinematic",
+    "type": "rigid",
     "uv": "auto"
   },
   "hole_visual0": {
-    "type": "rigid",
+    "type": "visual",
     "density": 80.0,
     "uv": "auto"
   },
   "hole_visual1": {
-    "type": "rigid",
+    "type": "visual",
     "density": 80.0,
     "uv": "auto"
   },
@@ -38,12 +38,12 @@
     "type": "visual"
   },
   "detector1": {
-    "type": "rigid",
+    "type": "visual",
     "density": 80.0,
     "uv": "auto"
   },
   "detector2": {
-    "type": "rigid",
+    "type": "visual",
     "density": 80.0,
     "uv": "auto"
   }

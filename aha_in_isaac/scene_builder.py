@@ -120,7 +120,9 @@ class SceneBuilder:
         self.args = args
         self.ctx = ctx
         appearance_config = appearance_config or {}
-        self._appearance_dir = Path(args.appearance_config).resolve().parent
+        # Texture paths in the appearance config are relative to this package dir (where textures/
+        # lives), independent of where the appearance config files themselves are.
+        self._appearance_dir = Path(__file__).resolve().parent
         self._appearance_defaults = appearance_config.get("_defaults", {})
         self._appearance_scene = appearance_config.get("_scene", {})
         self._appearance_task = {
@@ -243,6 +245,21 @@ class SceneBuilder:
         center = (box.GetMin() + box.GetMax()) * 0.5
         return tuple(float(v) for v in center)
 
+    def _body_collision_world_center(self, name, body_prim):
+        """World-space centre of a body's OWN (collision) geometry: the body's USD-file bbox
+        centre mapped through the body's live world transform. Unlike a glued visual skin -
+        which can sit far from the body origin (e.g. a basket's backboard reaches well beyond
+        the ring's collision body) - this tracks the report's body-origin reference, so the
+        mover gate measures the body's real displacement instead of a body->skin offset.
+        Returns ``None`` when the body has no source USD to measure."""
+        usd_path = self.ctx.usd_paths.get(name)
+        if not usd_path:
+            return None
+        file_center = self._usd_bbox_center(usd_path)  # the body's local (baked) frame
+        l2w = UsdGeom.Xformable(body_prim).ComputeLocalToWorldTransform(Usd.TimeCode.Default())
+        world = l2w.Transform(Gf.Vec3d(*file_center))
+        return (float(world[0]), float(world[1]), float(world[2]))
+
     def _canonical_task_root_pos(self) -> tuple[float, float, float]:
         """Position of the task-root origin in the baked-USD frame. Every object is
         shifted by ``-canonical`` so the canonical task-root origin lands on the
@@ -361,6 +378,23 @@ class SceneBuilder:
         # base" pairing is only a fallback: it fails when an index trails the _visual token
         # (pepper_visual0 -> base "pepper", but the body is "pepper0"), which left the skin
         # unparented so it could not follow its body when the body moved or was grasped.
+        def _nearest_body_ancestor(start: str | None) -> str | None:
+            """Walk up the report parent chain from ``start`` to the nearest ancestor that is a
+            real (non-render) body. This lets a render mesh nested UNDER another render mesh glue
+            onto the moving body instead of being orphaned. close_grill's handle_visual has parent
+            lid_visual (itself a _visual skin), so the immediate-parent check below misses it and
+            it would spawn standalone - the visible handle then floats in place while the lid body
+            swings, which reads as a disconnected handle / fake motion. Walking lid_visual -> lid
+            glues the handle onto the lid so it rides the hinge with it."""
+            cur = start
+            seen: set[str] = set()
+            while cur and cur in objects and cur not in seen:
+                if not _is_render(cur):
+                    return cur
+                seen.add(cur)
+                cur = objects[cur].get("parent")
+            return None
+
         skin_to_body: dict[str, str] = {}
         for name, entry in objects.items():
             if not _is_render(name):
@@ -372,6 +406,14 @@ class SceneBuilder:
                 fallback = body_base_to_obj.get(_render_base(name))
                 if fallback:
                     skin_to_body[name] = fallback
+                else:
+                    # Last resort: a render mesh nested under another render mesh (so the two checks
+                    # above both miss) rides the nearest non-render ancestor body. Strictly additive -
+                    # it only rescues skins that would otherwise be orphaned (spawn standalone and not
+                    # follow their body), e.g. close_grill's handle_visual -> lid_visual -> lid.
+                    ancestor = _nearest_body_ancestor(parent)
+                    if ancestor is not None:
+                        skin_to_body[name] = ancestor
         body_to_skin: dict[str, str] = {}
         for skin, body in skin_to_body.items():
             body_to_skin.setdefault(body, skin)
@@ -637,15 +679,25 @@ class SceneBuilder:
             world_range = bbox.ComputeWorldBound(measure_prim).ComputeAlignedRange()
             if world_range.IsEmpty():
                 continue
-            center = world_range.GetMidpoint()
+            midpoint = world_range.GetMidpoint()
+            center = (float(midpoint[0]), float(midpoint[1]), float(midpoint[2]))
             target = tuple(float(v) for v in target)
+            # Tagged graspables/assemblies always snap (and may carry an orientation fix). A plain
+            # body only snaps if the rigid task-root transform left it far from its report pose -
+            # i.e. it is an independently re-placed instance. Gate that on the body's OWN collision
+            # geometry, NOT the measured visible skin: the transform aligns the collision body (the
+            # report's reference) with the report, while a glued skin can sit far from the body
+            # origin (a basket's backboard reaches well past the ring's collision body). Measuring
+            # the skin reads that body->skin offset as a ~0.2 m misplacement and yanks the whole
+            # assembly. Snap the body by the same collision centre so its glued skin rides along.
+            if name not in snap_names:
+                coll_center = self._body_collision_world_center(name, body_prim)
+                gate_center = coll_center if coll_center is not None else center
+                if max(abs(target[i] - gate_center[i]) for i in range(3)) < SNAP_MOVER_THRESHOLD_M:
+                    continue
+                center = gate_center
             delta_world = tuple(target[i] - center[i] for i in range(3))
             displacement = max(abs(d) for d in delta_world)
-            # Tagged graspables/assemblies always snap (and may carry an orientation
-            # fix); a plain body only snaps if the rigid transform left it far from its
-            # report pose - i.e. it is an independently re-placed instance.
-            if name not in snap_names and displacement < SNAP_MOVER_THRESHOLD_M:
-                continue
             if displacement < 1e-5:
                 continue
             # The body's translate op is expressed in the (rotated) TaskRoot frame.

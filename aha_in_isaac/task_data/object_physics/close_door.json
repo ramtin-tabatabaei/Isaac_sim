@@ -1,6 +1,6 @@
 {
   "boundary_root": {
-    "type": "kinematic",
+    "type": "visual",
     "uv": "auto"
   },
   "door_frame": {
@@ -8,20 +8,20 @@
     "uv": "auto"
   },
   "door_main": {
-    "type": "kinematic",
+    "type": "rigid",
     "uv": "auto"
   },
   "door_main_visible": {
-    "type": "rigid",
+    "type": "visual",
     "density": 400.0,
     "uv": "auto"
   },
   "open_door_handle": {
-    "type": "kinematic",
+    "type": "rigid",
     "uv": "auto"
   },
   "door_handle_visible": {
-    "type": "rigid",
+    "type": "visual",
     "density": 400.0,
     "uv": "auto"
   }

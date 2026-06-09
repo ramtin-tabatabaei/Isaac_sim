@@ -16,20 +16,20 @@
     "uv": "auto"
   },
   "lamp_screw": {
-    "type": "rigid",
+    "type": "kinematic",
     "density": 1200.0,
     "uv": "auto"
   },
   "bulb_phys1": {
-    "type": "kinematic",
+    "type": "rigid",
     "uv": "auto"
   },
   "bulb_phys0": {
-    "type": "kinematic",
+    "type": "rigid",
     "uv": "auto"
   },
   "light_bulb1": {
-    "type": "kinematic",
+    "type": "visual",
     "uv": "auto"
   },
   "light_bulb0": {
@@ -37,12 +37,12 @@
     "uv": "auto"
   },
   "bulb1": {
-    "type": "rigid",
+    "type": "visual",
     "density": 80.0,
     "uv": "auto"
   },
   "bulb0": {
-    "type": "rigid",
+    "type": "visual",
     "density": 80.0,
     "uv": "auto"
   }

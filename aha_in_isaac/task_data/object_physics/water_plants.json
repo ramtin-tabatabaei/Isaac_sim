@@ -1,11 +1,11 @@
 {
   "plant": {
-    "type": "rigid",
+    "type": "kinematic",
     "density": 80.0,
     "uv": "auto"
   },
   "waterer": {
-    "type": "kinematic",
+    "type": "rigid",
     "uv": "auto"
   },
   "base_visual": {
@@ -18,7 +18,7 @@
     "type": "visual"
   },
   "head": {
-    "type": "rigid",
+    "type": "visual",
     "density": 80.0,
     "uv": "auto"
   }

@@ -1,6 +1,6 @@
 {
   "Cuboid": {
-    "type": "kinematic",
+    "type": "rigid",
     "uv": "auto"
   },
   "computer": {
@@ -9,43 +9,43 @@
     "uv": "auto"
   },
   "usb": {
-    "type": "kinematic",
+    "type": "rigid",
     "uv": "auto"
   },
   "computer_visual": {
     "type": "visual"
   },
   "usb_visual0": {
-    "type": "kinematic",
+    "type": "visual",
     "uv": "auto"
   },
   "tip": {
-    "type": "rigid",
+    "type": "visual",
     "density": 80.0,
     "uv": "auto"
   },
   "Plane": {
-    "type": "rigid",
+    "type": "kinematic",
     "density": 80.0,
     "uv": "auto"
   },
   "Plane0": {
-    "type": "rigid",
+    "type": "kinematic",
     "density": 80.0,
     "uv": "auto"
   },
   "Plane1": {
-    "type": "rigid",
+    "type": "kinematic",
     "density": 80.0,
     "uv": "auto"
   },
   "Plane2": {
-    "type": "rigid",
+    "type": "kinematic",
     "density": 80.0,
     "uv": "auto"
   },
   "usb_visual1": {
-    "type": "rigid",
+    "type": "visual",
     "density": 80.0,
     "uv": "auto"
   }

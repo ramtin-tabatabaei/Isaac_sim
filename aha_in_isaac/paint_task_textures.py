@@ -38,7 +38,7 @@ from generate_task_configs import _is_visual, appearance_for_name
 
 HERE = Path(__file__).resolve().parent
 TEX = HERE / "textures"
-CONFIG = HERE / "object_appearance_config.json"
+APPEARANCE_DIR = HERE / "task_data" / "appearance"  # per-task <task>.json
 EXTENTS = TEX / "_usd_extents.json"
 SKIP_TASKS = {"change_channel"}     # already bespoke
 SS = 2                              # supersample factor
@@ -295,10 +295,10 @@ def res_and_aspect(ext):
 
 
 def main():
-    cfg = json.loads(CONFIG.read_text())
     ext_cache = json.loads(EXTENTS.read_text()) if EXTENTS.is_file() else {}
     only = set(sys.argv[1:])
-    tasks = [t for t in cfg if not t.startswith("_") and t not in SKIP_TASKS]
+    tasks = sorted(p.stem for p in APPEARANCE_DIR.glob("*.json")
+                   if not p.stem.startswith("_") and p.stem not in SKIP_TASKS)
     if only:
         tasks = [t for t in tasks if t in only]
 
@@ -306,7 +306,8 @@ def main():
     total = 0
     for task in tasks:
         task_ext = ext_cache.get(task, {})
-        for obj, spec in cfg[task].items():
+        task_cfg = json.loads((APPEARANCE_DIR / f"{task}.json").read_text())
+        for obj, spec in task_cfg.items():
             if obj.startswith("_"):
                 continue
             tex_rel = spec.get("texture")

@@ -8,22 +8,22 @@
     "uv": "auto"
   },
   "lampshade": {
-    "type": "rigid",
+    "type": "kinematic",
     "density": 80.0,
     "uv": "auto"
   },
   "push_button_target": {
-    "type": "rigid",
+    "type": "kinematic",
     "density": 200.0,
     "uv": "auto"
   },
   "cable": {
-    "type": "rigid",
+    "type": "kinematic",
     "density": 80.0,
     "uv": "auto"
   },
   "bulb_phys": {
-    "type": "kinematic",
+    "type": "rigid",
     "uv": "auto"
   },
   "light_bulb": {
@@ -31,11 +31,11 @@
     "uv": "auto"
   },
   "target_button_topPlate": {
-    "type": "kinematic",
+    "type": "rigid",
     "uv": "auto"
   },
   "bulb": {
-    "type": "rigid",
+    "type": "visual",
     "density": 80.0,
     "uv": "auto"
   },

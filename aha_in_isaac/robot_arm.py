@@ -16,7 +16,12 @@ This module imports Isaac Lab assets at import time, so it must only be imported
 
 from __future__ import annotations
 
+from pathlib import Path
+
+import isaaclab.sim as sim_utils
 from isaaclab.assets import Articulation
+from isaaclab.sim.utils import make_uninstanceable
+from pxr import Usd, UsdPhysics, UsdShade
 
 from isaaclab_assets import FRANKA_PANDA_HIGH_PD_CFG
 
@@ -33,6 +38,71 @@ GRIPPER_CLOSED = 0.02
 # (no RL controller is fighting gravity here), matching the reference task in
 # ``franka_basketball_in_hoop_no_failure.py``.
 DISABLE_GRAVITY_FOR_STABLE_IK = True
+LOCAL_FRANKA_USD = (
+    Path(__file__).resolve().parents[2]
+    / "source"
+    / "isaaclab_assets"
+    / "data"
+    / "Robots"
+    / "FrankaEmika"
+    / "panda_instanceable.usd"
+)
+
+
+def configure_franka_gripper_friction(
+    prim_path: str,
+    static_friction: float,
+    dynamic_friction: float,
+) -> int:
+    """Bind a real Coulomb-friction material to the editable finger colliders.
+
+    The bundled Franka references instanceable collision meshes. Material binding on
+    an instance proxy is ignored, so the finger subtrees must be made uninstanceable
+    before the first simulation reset, while PhysX is still reading the USD stage.
+    """
+    stage = sim_utils.get_current_stage()
+    material_path = f"{prim_path}/GripperPhysicsMaterial"
+    material_cfg = sim_utils.RigidBodyMaterialCfg(
+        static_friction=float(static_friction),
+        dynamic_friction=float(dynamic_friction),
+        restitution=0.0,
+        friction_combine_mode="max",
+        restitution_combine_mode="multiply",
+    )
+    material_cfg.func(material_path, material_cfg)
+    material = UsdShade.Material(stage.GetPrimAtPath(material_path))
+
+    for finger in ("panda_leftfinger", "panda_rightfinger"):
+        make_uninstanceable(f"{prim_path}/{finger}", stage=stage)
+
+    bound = 0
+    root = stage.GetPrimAtPath(prim_path)
+    for prim in Usd.PrimRange(root):
+        path = str(prim.GetPath())
+        if not (
+            ("panda_leftfinger" in path or "panda_rightfinger" in path)
+            and prim.HasAPI(UsdPhysics.CollisionAPI)
+        ):
+            continue
+        binding = UsdShade.MaterialBindingAPI.Apply(prim)
+        binding.Bind(
+            material,
+            bindingStrength=UsdShade.Tokens.strongerThanDescendants,
+            materialPurpose="physics",
+        )
+        targets = binding.GetDirectBindingRel("physics").GetTargets()
+        if material.GetPath() in targets:
+            bound += 1
+
+    if bound != 2:
+        raise RuntimeError(
+            f"Expected 2 Franka finger colliders under '{prim_path}', but bound material to {bound}."
+        )
+    print(
+        f"[INFO]: Bound gripper friction material to {bound} real finger colliders "
+        f"(static={static_friction:g}, dynamic={dynamic_friction:g})."
+    )
+    return bound
 
 
 def spawn_franka(
@@ -55,6 +125,8 @@ def spawn_franka(
         gripper_open: Finger joint opening (m) at spawn.
     """
     robot_cfg = FRANKA_PANDA_HIGH_PD_CFG.replace(prim_path=prim_path)
+    if LOCAL_FRANKA_USD.is_file():
+        robot_cfg.spawn.usd_path = str(LOCAL_FRANKA_USD)
     robot_cfg.spawn.rigid_props.disable_gravity = DISABLE_GRAVITY_FOR_STABLE_IK
     robot_cfg.spawn.articulation_props.solver_velocity_iteration_count = 2
     robot_cfg.init_state.pos = tuple(base_pos)

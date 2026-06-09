@@ -1,0 +1,692 @@
+{
+  "chess_board_base": {
+    "texture": "textures/setup_chess/chess_board_base.png",
+    "color": [
+      0.549,
+      0.369,
+      0.204
+    ],
+    "roughness": 0.5,
+    "metallic": 0.0
+  },
+  "chess_board_surface": {
+    "texture": "textures/setup_chess/chess_board_surface.png",
+    "color": [
+      0.549,
+      0.369,
+      0.204
+    ],
+    "roughness": 0.5,
+    "metallic": 0.0
+  },
+  "chess_board_base_visual": {
+    "texture": "textures/setup_chess/chess_board_base_visual.png",
+    "color": [
+      0.549,
+      0.369,
+      0.204
+    ],
+    "roughness": 0.5,
+    "metallic": 0.0
+  },
+  "white_squares": {
+    "texture": "textures/setup_chess/white_squares.png",
+    "color": [
+      0.749,
+      0.412,
+      0.6
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "black_squares": {
+    "texture": "textures/setup_chess/black_squares.png",
+    "color": [
+      0.749,
+      0.482,
+      0.412
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "white_queenside_knight_dynamic": {
+    "texture": "textures/setup_chess/white_queenside_knight_dynamic.png",
+    "color": [
+      0.663,
+      0.412,
+      0.749
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "white_kingside_knight_dynamic": {
+    "texture": "textures/setup_chess/white_kingside_knight_dynamic.png",
+    "color": [
+      0.749,
+      0.412,
+      0.686
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "white_pawn_a_dynamic": {
+    "texture": "textures/setup_chess/white_pawn_a_dynamic.png",
+    "color": [
+      0.412,
+      0.49,
+      0.749
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "white_pawn_b_dynamic": {
+    "texture": "textures/setup_chess/white_pawn_b_dynamic.png",
+    "color": [
+      0.424,
+      0.412,
+      0.749
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "white_pawn_c_dynamic": {
+    "texture": "textures/setup_chess/white_pawn_c_dynamic.png",
+    "color": [
+      0.412,
+      0.431,
+      0.749
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "white_pawn_d_dynamic": {
+    "texture": "textures/setup_chess/white_pawn_d_dynamic.png",
+    "color": [
+      0.471,
+      0.749,
+      0.412
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "white_pawn_e_dynamic": {
+    "texture": "textures/setup_chess/white_pawn_e_dynamic.png",
+    "color": [
+      0.749,
+      0.416,
+      0.412
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "white_pawn_f_dynamic": {
+    "texture": "textures/setup_chess/white_pawn_f_dynamic.png",
+    "color": [
+      0.443,
+      0.749,
+      0.412
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "white_pawn_g_dynamic": {
+    "texture": "textures/setup_chess/white_pawn_g_dynamic.png",
+    "color": [
+      0.639,
+      0.412,
+      0.749
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "white_pawn_h_dynamic": {
+    "texture": "textures/setup_chess/white_pawn_h_dynamic.png",
+    "color": [
+      0.412,
+      0.749,
+      0.541
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "white_queenside_rook_dynamic": {
+    "texture": "textures/setup_chess/white_queenside_rook_dynamic.png",
+    "color": [
+      0.749,
+      0.741,
+      0.412
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "white_kingside_rook_dynamic": {
+    "texture": "textures/setup_chess/white_kingside_rook_dynamic.png",
+    "color": [
+      0.412,
+      0.69,
+      0.749
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "white_queenside_bishop_dynamic": {
+    "texture": "textures/setup_chess/white_queenside_bishop_dynamic.png",
+    "color": [
+      0.412,
+      0.6,
+      0.749
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "white_kingside_bishop_dynamic": {
+    "texture": "textures/setup_chess/white_kingside_bishop_dynamic.png",
+    "color": [
+      0.502,
+      0.749,
+      0.412
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "white_queen_dynamic": {
+    "texture": "textures/setup_chess/white_queen_dynamic.png",
+    "color": [
+      0.749,
+      0.412,
+      0.439
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "white_king_dynamic": {
+    "texture": "textures/setup_chess/white_king_dynamic.png",
+    "color": [
+      0.725,
+      0.412,
+      0.749
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "black_queenside_knight_dynamic": {
+    "texture": "textures/setup_chess/black_queenside_knight_dynamic.png",
+    "color": [
+      0.412,
+      0.502,
+      0.749
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "black_kingside_knight_dynamic": {
+    "texture": "textures/setup_chess/black_kingside_knight_dynamic.png",
+    "color": [
+      0.412,
+      0.749,
+      0.62
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "black_pawn_f_dynamic": {
+    "texture": "textures/setup_chess/black_pawn_f_dynamic.png",
+    "color": [
+      0.569,
+      0.749,
+      0.412
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "black_pawn_a_dynamic": {
+    "texture": "textures/setup_chess/black_pawn_a_dynamic.png",
+    "color": [
+      0.749,
+      0.412,
+      0.741
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "black_pawn_b_dynamic": {
+    "texture": "textures/setup_chess/black_pawn_b_dynamic.png",
+    "color": [
+      0.722,
+      0.412,
+      0.749
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "black_pawn_c_dynamic": {
+    "texture": "textures/setup_chess/black_pawn_c_dynamic.png",
+    "color": [
+      0.412,
+      0.671,
+      0.749
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "black_pawn_d_dynamic": {
+    "texture": "textures/setup_chess/black_pawn_d_dynamic.png",
+    "color": [
+      0.722,
+      0.749,
+      0.412
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "black_pawn_e_dynamic": {
+    "texture": "textures/setup_chess/black_pawn_e_dynamic.png",
+    "color": [
+      0.749,
+      0.412,
+      0.612
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "black_pawn_g_dynamic": {
+    "texture": "textures/setup_chess/black_pawn_g_dynamic.png",
+    "color": [
+      0.412,
+      0.596,
+      0.749
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "black_pawn_h_dynamic": {
+    "texture": "textures/setup_chess/black_pawn_h_dynamic.png",
+    "color": [
+      0.749,
+      0.557,
+      0.412
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "black_queenside_rook_dynamic": {
+    "texture": "textures/setup_chess/black_queenside_rook_dynamic.png",
+    "color": [
+      0.702,
+      0.749,
+      0.412
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "black_kingside_rook_dynamic": {
+    "texture": "textures/setup_chess/black_kingside_rook_dynamic.png",
+    "color": [
+      0.647,
+      0.749,
+      0.412
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "black_queenside_bishop_dynamic": {
+    "texture": "textures/setup_chess/black_queenside_bishop_dynamic.png",
+    "color": [
+      0.412,
+      0.749,
+      0.596
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "black_kingside_bishop_dynamic": {
+    "texture": "textures/setup_chess/black_kingside_bishop_dynamic.png",
+    "color": [
+      0.651,
+      0.412,
+      0.749
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "black_king_dynamic": {
+    "texture": "textures/setup_chess/black_king_dynamic.png",
+    "color": [
+      0.412,
+      0.584,
+      0.749
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "black_queen_dynamic": {
+    "texture": "textures/setup_chess/black_queen_dynamic.png",
+    "color": [
+      0.749,
+      0.737,
+      0.412
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "white_queenside_knight": {
+    "texture": "textures/setup_chess/white_queenside_knight.png",
+    "color": [
+      0.596,
+      0.749,
+      0.412
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "white_kingside_knight": {
+    "texture": "textures/setup_chess/white_kingside_knight.png",
+    "color": [
+      0.412,
+      0.58,
+      0.749
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "white_pawn_a": {
+    "texture": "textures/setup_chess/white_pawn_a.png",
+    "color": [
+      0.412,
+      0.749,
+      0.722
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "white_pawn_b": {
+    "texture": "textures/setup_chess/white_pawn_b.png",
+    "color": [
+      0.412,
+      0.675,
+      0.749
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "white_pawn_c": {
+    "texture": "textures/setup_chess/white_pawn_c.png",
+    "color": [
+      0.412,
+      0.749,
+      0.663
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "white_pawn_d": {
+    "texture": "textures/setup_chess/white_pawn_d.png",
+    "color": [
+      0.749,
+      0.439,
+      0.412
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "white_pawn_e": {
+    "texture": "textures/setup_chess/white_pawn_e.png",
+    "color": [
+      0.749,
+      0.722,
+      0.412
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "white_pawn_f": {
+    "texture": "textures/setup_chess/white_pawn_f.png",
+    "color": [
+      0.749,
+      0.412,
+      0.463
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "white_pawn_g": {
+    "texture": "textures/setup_chess/white_pawn_g.png",
+    "color": [
+      0.545,
+      0.749,
+      0.412
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "white_pawn_h": {
+    "texture": "textures/setup_chess/white_pawn_h.png",
+    "color": [
+      0.412,
+      0.49,
+      0.749
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "white_queenside_rook": {
+    "texture": "textures/setup_chess/white_queenside_rook.png",
+    "color": [
+      0.412,
+      0.749,
+      0.62
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "white_kingside_rook": {
+    "texture": "textures/setup_chess/white_kingside_rook.png",
+    "color": [
+      0.749,
+      0.533,
+      0.412
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "white_queenside_bishop": {
+    "texture": "textures/setup_chess/white_queenside_bishop.png",
+    "color": [
+      0.412,
+      0.749,
+      0.541
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "white_kingside_bishop": {
+    "texture": "textures/setup_chess/white_kingside_bishop.png",
+    "color": [
+      0.412,
+      0.659,
+      0.749
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "white_queen": {
+    "texture": "textures/setup_chess/white_queen.png",
+    "color": [
+      0.749,
+      0.412,
+      0.529
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "white_king": {
+    "texture": "textures/setup_chess/white_king.png",
+    "color": [
+      0.749,
+      0.416,
+      0.412
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "black_queenside_knight": {
+    "texture": "textures/setup_chess/black_queenside_knight.png",
+    "color": [
+      0.749,
+      0.412,
+      0.482
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "black_kingside_knight": {
+    "texture": "textures/setup_chess/black_kingside_knight.png",
+    "color": [
+      0.412,
+      0.522,
+      0.749
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "black_pawn_f": {
+    "texture": "textures/setup_chess/black_pawn_f.png",
+    "color": [
+      0.592,
+      0.412,
+      0.749
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "black_pawn_a": {
+    "texture": "textures/setup_chess/black_pawn_a.png",
+    "color": [
+      0.749,
+      0.412,
+      0.6
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "black_pawn_b": {
+    "texture": "textures/setup_chess/black_pawn_b.png",
+    "color": [
+      0.749,
+      0.49,
+      0.412
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "black_pawn_c": {
+    "texture": "textures/setup_chess/black_pawn_c.png",
+    "color": [
+      0.749,
+      0.412,
+      0.443
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "black_pawn_d": {
+    "texture": "textures/setup_chess/black_pawn_d.png",
+    "color": [
+      0.698,
+      0.412,
+      0.749
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "black_pawn_e": {
+    "texture": "textures/setup_chess/black_pawn_e.png",
+    "color": [
+      0.573,
+      0.749,
+      0.412
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "black_pawn_g": {
+    "texture": "textures/setup_chess/black_pawn_g.png",
+    "color": [
+      0.749,
+      0.412,
+      0.49
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "black_pawn_h": {
+    "texture": "textures/setup_chess/black_pawn_h.png",
+    "color": [
+      0.412,
+      0.506,
+      0.749
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "black_queenside_rook": {
+    "texture": "textures/setup_chess/black_queenside_rook.png",
+    "color": [
+      0.412,
+      0.725,
+      0.749
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "black_kingside_rook": {
+    "texture": "textures/setup_chess/black_kingside_rook.png",
+    "color": [
+      0.749,
+      0.592,
+      0.412
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "black_queenside_bishop": {
+    "texture": "textures/setup_chess/black_queenside_bishop.png",
+    "color": [
+      0.412,
+      0.471,
+      0.749
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "black_kingside_bishop": {
+    "texture": "textures/setup_chess/black_kingside_bishop.png",
+    "color": [
+      0.412,
+      0.737,
+      0.749
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "black_king": {
+    "texture": "textures/setup_chess/black_king.png",
+    "color": [
+      0.749,
+      0.58,
+      0.412
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  },
+  "black_queen": {
+    "texture": "textures/setup_chess/black_queen.png",
+    "color": [
+      0.49,
+      0.412,
+      0.749
+    ],
+    "roughness": 0.85,
+    "metallic": 0.0
+  }
+}

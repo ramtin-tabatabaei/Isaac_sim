@@ -15,7 +15,7 @@
     "uv": "auto"
   },
   "bottle": {
-    "type": "kinematic",
+    "type": "rigid",
     "uv": "auto"
   },
   "door_bottom": {
@@ -29,12 +29,12 @@
     "uv": "auto"
   },
   "shelf1": {
-    "type": "rigid",
+    "type": "kinematic",
     "density": 400.0,
     "uv": "auto"
   },
   "shelf2": {
-    "type": "rigid",
+    "type": "kinematic",
     "density": 400.0,
     "uv": "auto"
   },
@@ -45,7 +45,7 @@
     "type": "visual"
   },
   "label": {
-    "type": "rigid",
+    "type": "visual",
     "density": 80.0,
     "uv": "auto"
   },

@@ -4,15 +4,15 @@
     "uv": "auto"
   },
   "dirt0": {
-    "type": "kinematic",
+    "type": "rigid",
     "uv": "auto"
   },
   "broom_holder": {
-    "type": "kinematic",
+    "type": "rigid",
     "uv": "auto"
   },
   "boundary_root": {
-    "type": "kinematic",
+    "type": "visual",
     "uv": "auto"
   },
   "dustpan_short": {
@@ -53,7 +53,7 @@
     "uv": "auto"
   },
   "Dustpan_5": {
-    "type": "rigid",
+    "type": "kinematic",
     "density": 1200.0,
     "uv": "auto"
   },
@@ -61,7 +61,7 @@
     "type": "visual"
   },
   "Dustpan_6": {
-    "type": "rigid",
+    "type": "kinematic",
     "density": 1200.0,
     "uv": "auto"
   }

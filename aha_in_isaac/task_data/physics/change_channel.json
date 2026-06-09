@@ -1,4 +1,12 @@
 {
+  "planner": "diffik",
+  "gripper": {
+    "open": 0.04,
+    "closed": 0.015,
+    "static_friction": 4.0,
+    "dynamic_friction": 3.2
+  },
+  "waypoint_steps": {},
   "shapes": {
     "tv_frame": {
       "dynamic": false,
@@ -122,6 +130,20 @@
       "stiffness": 40.0,
       "damping": 4.0,
       "target_position": 0.0
+    }
+  },
+  "_comment_diagnostics": "Bodies the headless CC_PRESS_WATCH press probe measures, so run_scene.py holds no task-specific names. The carrier (the body the buttons ride) is the report's graspable. buttons = the pressable bodies whose depression is tracked relative to the carrier; success_buttons = those whose >=1.5 mm depression counts as the task succeeding (RLBench joint1/joint2).",
+  "diagnostics": {
+    "press_watch": {
+      "buttons": [
+        "target_button_topPlate1",
+        "target_button_topPlate2",
+        "target_button_topPlate0"
+      ],
+      "success_buttons": [
+        "target_button_topPlate1",
+        "target_button_topPlate2"
+      ]
     }
   }
 }
